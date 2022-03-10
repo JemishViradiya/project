@@ -1,0 +1,24 @@
+{
+  "monday": "月曜日",
+  "tuesday": "火曜日",
+  "wednesday": "水曜日",
+  "thursday": "木曜日",
+  "friday": "金曜日",
+  "saturday": "土曜日",
+  "sunday": "日曜日",
+  "medium": {
+    "monday": "月曜日",
+    "tuesday": "火曜日",
+    "wednesday": "結婚した",
+    "thursday": "木",
+    "friday": "金曜日",
+    "saturday": "土曜日",
+    "sunday": "太陽"
+  },
+  "timePicker": {
+    "ampm": "本当",
+    "okLabel": "OK",
+    "cancelLabel": "キャンセル"
+  },
+  "timeRange": "({{from}}-{{to}})"
+}

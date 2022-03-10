@@ -1,0 +1,12 @@
+{
+  "name": "@ues/aws-translator",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@aws-sdk/client-translate": "^3.34.0",
+    "debug": "^4.3.2",
+    "resx": "^2.0.3"
+  }
+}

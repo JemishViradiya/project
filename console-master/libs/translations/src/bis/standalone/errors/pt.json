@@ -1,0 +1,15 @@
+{
+  "next": "Próximo",
+  "tenantID": "ID do inquilino",
+  "signIn": "Entrar",
+  "help": "Socorro",
+  "signedOut": "Desconectado",
+  "signedOutMessage": "Você foi desconectado.",
+  "sessionExpired": "Sessão expirada",
+  "sessionExpiredMessage": "Sua sessão expirou.",
+  "signInAgainLink": "Clique aqui para fazer login novamente.",
+  "tenantIdLabel": "Especifique seu ID de inquilino:",
+  "loadingSessionLabel": "Carregando sua sessão...",
+  "loadingTenantLabel": "Carregando seu inquilino...",
+  "noTenantLabel": "O inquilino “{{tenant}}” não pôde ser encontrado."
+}

@@ -1,0 +1,86 @@
+en,de,fr,es,it,ja,ko,pt
+About,Info,À propos,Acerca de,Informazioni,バージョン情報,관하여,Sobre
+Action History,Handlungs Verlauf,Historique des Actions,Historial de Acciones,Cronologia Azione,アクション履歴,작업 기록,Histórico de Ação
+Active Directory,Active Directory,Active Directory,Active Directory,Active Directory,Active Directory,Active Directory,Active Directory
+Advanced Query,Erweiterte Query,Requête Avancée,Consulta Avanzada,Query Avanzata,高度なクエリー,고급 쿼리,Consulta Avançada
+Agent Update,Agent-Update,Mise à jour de l'agent,Actualización de agente,Aggiornamento agent,Agent更新,Agent 업데이트,Atualização de agente
+Android,Android,Android,Android,Android,Android,Android,Android
+Application,Anwendung,Application,Aplicación,Applicazione,アプリケーション,애플리케이션,Aplicação
+Assets,Vermögenswerte,Inventaire,Bienes,Risorse,資産,자산,Ativas
+Audit Log,Überwachungsprotokoll,Journal d'audit,Registro de auditoría,Log di controllo,監査ログ,감사 로그,Registo de auditoria
+Avert,Avert,Avert,Avert,Avert,Avert,Avert,Avert
+Azure,Azure,Azure,Azure,Azure,Azure,Azure,Azure
+Azure Active Directory,Azure Active Directory,Azure Active Directory,Azure Active Directory,Azure Active Directory,Azure Active Directory,Azure Active Directory,Azure Active Directory
+Azure AD,Azure AD,Azure AD,Azure AD,Azure AD,Azure AD,Azure AD,Azure AD
+BlackBerry,BlackBerry,BlackBerry,BlackBerry,BlackBerry,BlackBerry,BlackBerry,BlackBerry
+BlackBerry Avert,BlackBerry Avert,BlackBerry Avert,BlackBerry Avert,BlackBerry Avert,BlackBerry Avert,BlackBerry Avert,BlackBerry Avert
+BlackBerry Connectivity Node,BlackBerry Connectivity Node,BlackBerry Connectivity Node,BlackBerry Connectivity Node,BlackBerry Connectivity Node,BlackBerry Connectivity Node,BlackBerry Connectivity Node,BlackBerry Connectivity Node
+BlackBerry Cyber,BlackBerry Cyber,BlackBerry Cyber,BlackBerry Cyber,BlackBerry Cyber,BlackBerry Cyber,BlackBerry Cyber,BlackBerry Cyber
+BlackBerry Gateway,BlackBerry Gateway,BlackBerry Gateway,BlackBerry Gateway,BlackBerry Gateway,BlackBerry Gateway,BlackBerry Gateway,BlackBerry Gateway
+BlackBerry Online,BlackBerry Online,BlackBerry Online,BlackBerry Online,BlackBerry Online,BlackBerry Online,BlackBerry Online,BlackBerry Online
+BlackBerry Optics,BlackBerry Optics,BlackBerry Optics,BlackBerry Optics,BlackBerry Optics,BlackBerry Optics,BlackBerry Optics,BlackBerry Optics
+BlackBerry Persona,BlackBerry Persona,BlackBerry Persona,BlackBerry Persona,BlackBerry Persona,BlackBerry Persona,BlackBerry Persona,BlackBerry Persona
+BlackBerry Persona Desktop,BlackBerry Persona Desktop,BlackBerry Persona Desktop,BlackBerry Persona Desktop,BlackBerry Persona Desktop,BlackBerry Persona Desktop,BlackBerry Persona Desktop,BlackBerry Persona Desktop
+BlackBerry Persona Mobile,BlackBerry Persona Mobile,BlackBerry Persona Mobile,BlackBerry Persona Mobile,BlackBerry Persona Mobile,BlackBerry Persona Mobile,BlackBerry Persona Mobile,BlackBerry Persona Mobile
+BlackBerry Protect,BlackBerry Protect,BlackBerry Protect,BlackBerry Protect,BlackBerry Protect,BlackBerry Protect,BlackBerry Protect,BlackBerry Protect
+BlackBerry Protect Desktop,BlackBerry Protect Desktop,BlackBerry Protect Desktop,BlackBerry Protect Desktop,BlackBerry Protect Desktop,BlackBerry Protect Desktop,BlackBerry Protect Desktop,BlackBerry Protect Desktop
+BlackBerry Protect Mobile,BlackBerry Protect Mobile,BlackBerry Protect Mobile,BlackBerry Protect Mobile,BlackBerry Protect Mobile,BlackBerry Protect Mobile,BlackBerry Protect Mobile,BlackBerry Protect Mobile
+CentOS,CentOS,CentOS,CentOS,CentOS,CentOS,CentOS,CentOS
+Certificates,Zertifikate,Certificats,Certificados,Certificati,証明書,인증서,Certificados
+Configurations,Konfigurationen,Configurations,Configuraciones,Configurazioni,構成,구성,Configurações
+Connectivity Node,Connectivity Node,Connectivity Node,Connectivity Node,Connectivity Node,Connectivity Node,Connectivity Node,Connectivity Node
+Cylance,Cylance,Cylance,Cylance,Cylance,Cylance,Cylance,Cylance
+Cylance Infinity,Cylance Infinity,Cylance Infinity,Cylance Infinity,Cylance Infinity,Cylance Infinity,Cylance Infinity,Cylance Infinity
+CylanceOptics,CylanceOptics,CylanceOptics,CylanceOptics,CylanceOptics,CylanceOptics,CylanceOptics,CylanceOptics
+CylancePersona,CylancePersona,CylancePersona,CylancePersona,CylancePersona,CylancePersona,CylancePersona,CylancePersona
+CylanceProtect,CylanceProtect,CylanceProtect,CylanceProtect,CylanceProtect,CylanceProtect,CylanceProtect,CylanceProtect
+Dashboard,Dashboard,Tableau de bord,Panel de mandos,Dashboard,ダッシュボード,대시보드,Painel de controlo
+Deployments,Downloads,Déploiements,Implementaciones,Impiego,デプロイ,배포,Implantações
+Detections,Erkennungen,Détections,Detecciones,Rilevamenti,検出,분류: 탐지기,Detecções
+Device,Gerät,Appareil,Dispositivo,Dispositivo,デバイス,장치,Dispositivo
+Device Management,Geräteverwaltung,Gestion d'appareils,Gestión de dispositivos,Gestione dei dispositivi,端末管理,장치 관리,Gerenciamento de dispositivo
+Device Policy,Geräterichtlinie,Politique des dispositifs,Política del dispositivo,Policy dispositivo,デバイスポリシー,장치 정책,Política de dispositivo
+Devices,Geräte,Dispositifs,Dispositivos,Dispositivi,デバイス,장치,Dispositivos
+Duo,Duo,Duo,Duo,Duo,Duo,Duo,Duo
+Focus Data,Fokus Daten,Données Focus,Datos de Enfoque,Dati Messa a Fuoco,データのフォーカス,포커스 데이터,Dados de Foco
+Gateway,Gateway,Gateway,Gateway,Gateway,Gateway,Gateway,Gateway
+Global List,Globale Liste,Liste globale,Lista global,Elenco globale,グローバルリスト,전체 목록,Lista global
+Help / FAQ,Hilfe/FAQ,Aide/FAQ,Ayuda/Preguntas frecuentes,Assistenza/FAQ,ヘルプ/FAQ,도움말/FAQ,Ajuda/Perguntas frequentes
+How-to Guide,Anleitung,Guide pratique,Guía de uso,Guida esplicativa,ハウツーガイド,사용 방법 안내,Guia de instruções
+InstaQuery,InstaQuery,InstaQuery,InstaQuery,InstaQuery,InstaQuery,InstaQuery,InstaQuery
+Integrations,Integrationen,Intégrations,Integraciones,Integrazioni,外部連携,통합,Integrações
+Intune,Intune,Intune,Intune,Intune,Intune,Intune,Intune
+iOS,iOS,iOS,iOS,iOS,iOS,iOS,iOS
+Linux,Linux,Linux,Linux,Linux,Linux,Linux,Linux
+macOS,macOS,macOS,macOS,macOS,macOS,macOS,macOS
+Microsoft Intune,Microsoft Intune,Microsoft Intune,Microsoft Intune,Microsoft Intune,Microsoft Intune,Microsoft Intune,Microsoft Intune
+Microsoft,Microsoft,Microsoft,Microsoft,Microsoft,Microsoft,Microsoft,Microsoft
+Microsoft Active Directory,Microsoft Active Directory,Microsoft Active Directory,Microsoft Active Directory,Microsoft Active Directory,Microsoft Active Directory,Microsoft Active Directory,Microsoft Active Directory
+Microsoft Azure,Microsoft Azure,Microsoft Azure,Microsoft Azure,Microsoft Azure,Microsoft Azure,Microsoft Azure,Microsoft Azure
+Mobile,Mobiltelefon,Mobile,Mobile,Mobile,モバイル,변하기 쉬운,Móbil
+My Account,Mein Konto,Mon compte,Mi cuenta,Il mio account,マイアカウント,내 계정,A minha conta
+Okta,Okta,Okta,Okta,Okta,Okta,Okta,Okta
+Optics,Optics,Optics,Optics,Optics,Optics,Optics,Optics
+Packages,Pakete,Paquets,Paquetes,Pacchetti,パッケージ,패키지,Pacotes
+Persona,Persona,Persona,Persona,Persona,Persona,Persona,Persona
+Persona Desktop,Persona Desktop,Persona Desktop,Persona Desktop,Persona Desktop,Persona Desktop,Persona Desktop,Persona Desktop
+Persona Mobile,Persona Mobile,Persona Mobile,Persona Mobile,Persona Mobile,Persona Mobile,Persona Mobile,Persona Mobile
+Ping,Ping,Ping,Ping,Ping,Ping,Ping,Ping
+Policy,Richtlinie,Politique,Política,Politica,ポリシー,정책,Política
+Policies,Richtlinien,Politiques,Políticas,Policy,ポリシー,방침,Políticas
+Protect,Protect,Protect,Protect,Protect,Protect,Protect,Protect
+Protect Desktop,Protect Desktop,Protect Desktop,Protect Desktop,Protect Desktop,Protect Desktop,Protect Desktop,Protect Desktop
+Protect Mobile,Protect Mobile,Protect Mobile,Protect Mobile,Protect Mobile,Protect Mobile,Protect Mobile,Protect Mobile
+Protection,Schutz,Protection,Protección,Protezione,保護,보호,Proteção
+Reports,Berichte,Rapports,Informes,Rapporti,レポート,보고서,Relatórios
+RHEL,RHEL,RHEL,RHEL,RHEL,RHEL,RHEL,RHEL
+Settings,Einstellungen,Paramètres,Ajustes,Impostazioni,設定,설정,Definições
+Sign Off,Abmelden,Déconnexion,Cerrar sesión,Disconnetti,サインオフ,로그아웃,Sair
+Support,Support,Support,Asistencia,Supporto,サポート,고객 지원,Assistência
+SUSE,SUSE,SUSE,SUSE,SUSE,SUSE,SUSE,SUSE
+User Management,Benutzerverwaltung,Gestion utilisateur,Gestión de usuarios,Gestione utenti,ユーザ管理,사용자 관리,Gestão de utilizadores
+User Policy,Benutzerrichtlinie,Politique d'utilisation,Política de usuario,Politica dell'utente,ユーザーポリシー,사용자 정책,Política do Usuário
+Users,Nutzer,Utilisateurs,Usuarios,Utenti,ユーザー,사용자,Utilizadores
+Windows,Windows,Windows,Windows,Windows,Windows,Windows,Windows
+You're signed in using ,Sie sind angemeldet mit ,Vous êtes connecté(e) par ,Ha iniciando sesión utilizando ,Hai eseguito l'accesso con ,サインインに使用しました: ,다음을 사용하여 로그인: ,Iniciou sessão como
+Zones,Zonen,Zones,Zonas,Zone,ゾーン,구역,Zonas

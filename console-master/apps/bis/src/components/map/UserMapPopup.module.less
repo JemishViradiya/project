@@ -1,0 +1,91 @@
+@import './MapMarkerPopup.module.less';
+
+@boxWidth: 354px;
+@borderSettings: 1px .mui.palette[ @divider];
+
+.box {
+  width: @boxWidth;
+  border-left: @borderSettings;
+  border-right: @borderSettings;
+  text-align: left;
+}
+
+.topBox {
+  .box;
+}
+
+.bottomBox {
+  .box;
+}
+
+.user {
+  display: flex;
+}
+
+.userAvatar {
+  margin: 16px;
+}
+
+.userData {
+  margin: 32px 16px 32px 0;
+  color: white;
+}
+
+.emptyRow {
+  height: 15px;
+}
+
+.riskContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.riskBox {
+  display: inline-block;
+  min-width: 120px;
+  max-width: @boxWidth - 32px;
+  margin-bottom: 6px;
+}
+
+.riskValue {
+  composes: .mui.typography[ @body1];
+  color: @colorRiskUnknown;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &[risk='CRITICAL'] {
+    color: @colorRiskCritical;
+  }
+
+  &[risk='HIGH'] {
+    color: @colorRiskHigh;
+  }
+
+  &[risk='MEDIUM'] {
+    color: @colorRiskMedium;
+  }
+
+  &[risk='LOW'] {
+    color: @colorRiskLow;
+  }
+}
+
+.actionTitle {
+  margin-top: 18px;
+  font-size: @fontSizeSubtitle;
+  line-height: 15px;
+  margin-bottom: 5px;
+}
+
+.buttonBar {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.closeButton {
+  color: .mui.palette[ @common-white];
+}

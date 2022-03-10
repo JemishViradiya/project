@@ -1,0 +1,35 @@
+{
+  "common": {
+    "settings": "설정"
+  },
+  "authentication": {
+    "title": "인증"
+  },
+  "adaptiveSecurity": {
+    "title": "적응형 보안",
+    "definedGeozones": {
+      "title": "정의된 지오존"
+    },
+    "behavioralRisk": {
+      "title": "행동 위험 모델 구성"
+    },
+    "generalSettings": {
+      "title": "일반 설정"
+    }
+  },
+  "directoryConnections": {
+    "title": "디렉터리 연결",
+    "connections": {
+      "title": "디렉터리 연결"
+    },
+    "connectivityNode": {
+      "title": "연결 노드"
+    }
+  },
+  "network": {
+    "title": "네트워크"
+  },
+  "protectGlobalListNew": {
+    "title": "글로벌 리스트 (모바일)"
+  }
+}

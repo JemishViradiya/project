@@ -1,0 +1,190 @@
+{
+  "authenticators": {
+    "title": "Autenticadores",
+    "add": "Agregar autenticador",
+    "type": "Tipo de autenticador",
+    "ENTERPRISE": "Empresa",
+    "OKTA": "Okta",
+    "PING": "Ping",
+    "summary": "Agregue autenticadores para administrar los tipos de autenticación que se pueden utilizar.",
+    "edit": "Editar autenticador",
+    "delete": "Eliminar autenticador",
+    "general": "Información general",
+    "signing_type": "algoritmo de firma de token ID",
+    "ES512": "ECDSA con curva P521 y SHA-512",
+    "ES256": "ECDSA con curva P256 y SHA-256",
+    "ES384": "ECDSA con curva P384 y SHA-384",
+    "name": "Nombre",
+    "identityproviderclient": "Cliente proveedor de identidad",
+    "discovery_url": "URL del documento de descubrimiento de OIDC",
+    "client_id": "ID de cliente",
+    "jwks": "Clave privada JWKS",
+    "DUO_MFA": "Dúo MFA",
+    "DUO": "Dúo",
+    "duomfaconfiguration": "Configuración de Duo MFA",
+    "auth_integration_key": "Clave de integración de autenticación",
+    "auth_secret_key": "Clave secreta de autenticación",
+    "auth_api_hostname": "Nombre de host de la API de autenticación",
+    "admin_api_hostname": "Nombre de host de API de administración",
+    "admin_secret_key": "Clave secreta del administrador",
+    "admin_integration_key": "Clave de integración de administrador",
+    "EMAIL": "Correo",
+    "USERNAME": "Nombre de usuario",
+    "username_format": "Formato de nombre de usuario",
+    "OKTA_MFA": "Okta MFA",
+    "oktamfaconfiguration": "Configuración de Okta MFA",
+    "auth_api_key": "Clave API de autenticación",
+    "auth_domain": "Dominio de autenticación",
+    "TOTP": "TOTP",
+    "totpconfiguration": "Configuración TOTP",
+    "window": "Ventana",
+    "windowHelperText": "Especifique la desviación de tiempo máxima que se permite entre el dispositivo y el servidor.",
+    "AD": "Active Directory",
+    "LDAP": "LDAP",
+    "CUR": "Cuenta en línea Blackberry",
+    "VENUE": "Cylance"
+  },
+  "common": {
+    "name": "Nombre",
+    "type": "Tipo",
+    "delete": "Borrar",
+    "deleteConfirm": "¿Desea eliminar el autenticador {{field}}?",
+    "add": "Añadir",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "saveAs": "Guardar como",
+    "success": {
+      "create": "Se ha añadido el autenticador.",
+      "update": "Se ha actualizado el autenticador.",
+      "delete": "Se ha eliminado el autenticador."
+    },
+    "failure": {
+      "create": "No se ha podido añadir el autenticador. Motivo: {{reason}}",
+      "update": "No se ha podido actualizar el autenticador. Motivo: {{reason}}",
+      "delete": "No se ha podido eliminar el autenticador. Motivo: {{reason}}",
+      "read": "No se han podido recuperar los datos. Motivo: {{reason}}"
+    },
+    "nodata": "Sin datos"
+  },
+  "authentication": {
+    "title": "Autentificación"
+  },
+  "policy": {
+    "list": {
+      "title": "Políticas de identidad empresarial",
+      "deleteSuccess": "Se han eliminado las políticas.",
+      "deleteError": "{{deleteErrorCount}} de {{deleteCount}} operaciones de eliminación fallaron",
+      "pageDescription": "Agregue una política para especificar los tipos de autenticación que los usuarios y los administradores deben completar para acceder a la consola, las aplicaciones o los servicios de UES."
+    },
+    "createPolicyPageTitle": "Agregar directiva de autenticación",
+    "updatePolicyPageTitle": "Autentificación",
+    "generalInformationLabel": "Información general",
+    "authenticationRulesLabel": "Reglas de autenticación",
+    "applicationExceptionLabel": "Administrar excepciones de aplicaciones",
+    "name": "Nombre",
+    "description": "Descripción",
+    "update": {
+      "tab": {
+        "settingsLabel": "Ajustes",
+        "usersAndGroupsLabel": "Usuarios y grupos asignados"
+      }
+    },
+    "nameHelperText": "Ya existe una política con este nombre.",
+    "nameHelperTextRequired": "Este campo es obligatorio.",
+    "createPolicyAssignConfirmationDialog": {
+      "title": "Asignar la política de autenticación",
+      "description": "Se ha creado la política. ¿Desea asignar usuarios o grupos a esta política?",
+      "cancelButton": "Ahora no",
+      "confirmButton": "Sí"
+    },
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Cambios no guardados",
+      "description": "¿Quieres salir de esta página? Los cambios no se han guardado.",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Abandonar página"
+    },
+    "batchDeletePolicyConflictErrorConfirmationDialog": {
+      "title": "Error al borrar",
+      "cancelButton": "Cerrar",
+      "description": "Las siguientes políticas no se pudieron eliminar porque están asignadas a usuarios o grupos:"
+    },
+    "batchDeletePolicyErrorConfirmationDialog": {
+      "title": "Error al borrar",
+      "description": "No se han podido eliminar las siguientes políticas:",
+      "cancelButton": "Cerrar"
+    },
+    "deletePolicyConfirmationDialog": {
+      "title": "Confirmación Eliminar",
+      "description": "¿Quieres eliminar la política de {{name}}?",
+      "deleteNote": "Debe quitar todos los usuarios y grupos asociados a una política antes de eliminarla.",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Borrar"
+    },
+    "serverError": {
+      "update": "No se han podido guardar los cambios.",
+      "delete": "No se ha podido eliminar la política.",
+      "deleteWithUsers": "No se ha podido eliminar la directiva porque está asignada a los usuarios.",
+      "deleteWithGroups": "No se ha podido eliminar la directiva porque está asignada a grupos.",
+      "deleteWithUsersAndGroups": "No se ha podido eliminar la directiva porque está asignada a usuarios y grupos.",
+      "deletePolicies": "No se han podido eliminar las directivas.",
+      "multipleInternalAuthErrorMsg": "No puede asignar más de un tipo de autenticador interno en una política."
+    },
+    "riskFactorsLabel": "Escenarios de riesgo",
+    "authenticatorsList": {
+      "addButton": "Agregar autenticador",
+      "deleteButton": "Borrar",
+      "orderButton": "Establecer orden",
+      "deleteSelectedMsg": "{{selectedCnt}} seleccionado",
+      "nameLabel": "Nombre",
+      "descriptionLabel": "Descripción",
+      "noData": "Haga clic en + para añadir artículos.",
+      "columns": {
+        "name": "Nombre",
+        "description": "Descripción"
+      }
+    },
+    "addAuthenticatorsDialog": {
+      "title": "Añadir autenticador",
+      "dropdownLabel": "Nombre del autenticador",
+      "cancelButton": "Cancelar",
+      "addButton": "Guardar"
+    },
+    "applicationExceptionButton": "Administrar excepciones de aplicaciones",
+    "selectManagedExceptionDialog": {
+      "title": "Administrar excepciones de aplicaciones",
+      "cancelButton": "Cancelar",
+      "addButton": "Guardar",
+      "listLabel": "Puede configurar los niveles de autenticación para los servicios seleccionados en las pestañas de la parte inferior de la página después de seleccionar los servicios.",
+      "rightLabel": "Apps seleccionadas",
+      "leftLabel": "Apps disponibles"
+    },
+    "applicationExceptionButtonGroup": "Excepciones de aplicaciones",
+    "formSubmitSnackBarError": "Corrija {{count}} errores",
+    "authenticatorsRequired": "Debe seleccionar al menos un autenticador",
+    "authenticatorsLoadingErrorMessage": "Error al cargar los autenticadores",
+    "firstLoginFromBrowserLabel": "Primer inicio de sesión desde el navegador",
+    "firstLoginFromBrowserNotSetLabel": "Ninguna",
+    "updatePolicyPageTitleHelperText": "Última actualización: {{date, datetime-short}}",
+    "updateFormCopyPolicyTooltip": "Crear una copia de esta política",
+    "updateFormDeletePolicyTooltip": "Eliminar política",
+    "savePolicyPriorToCopyMessage": "Guardar política antes de copiar",
+    "unexpectedErrorMessage": "No se ha podido procesar la solicitud.",
+    "unexpectedErrorWithHttpMessage": "No se ha podido procesar la solicitud. Estado HTTP devuelto: {{status}}",
+    "unexpectedErrorWithHttpSubcodeMessage": "No se ha podido procesar la solicitud. Estado HTTP devuelto: {{status}}, subcódigo: {{subcode}}",
+    "policyUpdatedMessage": "La política se ha actualizado.",
+    "policyDeletedMessage": "Se ha eliminado la política.",
+    "policyCreatedMessage": "Se ha creado la política.",
+    "policyDeleteErrorMessage": "No se ha podido eliminar la política.",
+    "policyUpdateErrorMessage": "No se ha podido actualizar la política.",
+    "policyCreateErrorMessage": "No se ha podido crear la política.",
+    "busyLoading": "Cargando política...",
+    "busyDeleting": "Borrando política...",
+    "busyUpdating": "Política de actualización...",
+    "busyCreating": "Creando política...",
+    "appsLoadErrorMesage": "No se ha podido procesar la solicitud.",
+    "swTemplateLoadErrorMesage": "No se ha podido procesar la solicitud.",
+    "authenticatorsLoadErrorMesage": "No se ha podido procesar la solicitud.",
+    "policyLoadErrorMesage": "No se ha podido procesar la solicitud.",
+    "applicationExceptionDescription": "Esta configuración invalidará cualquier política asignada a las aplicaciones cuando se asigne a usuarios o grupos. No se aplica si se asigna una política como política predeterminada de la aplicación."
+  }
+}

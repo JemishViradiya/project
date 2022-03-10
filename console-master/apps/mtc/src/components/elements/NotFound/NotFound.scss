@@ -1,0 +1,39 @@
+.notfound-container {
+  padding-bottom: 40px;
+}
+
+.notfound-box {
+  width: 544px;
+  height: 465px;
+  margin: 0 auto;
+  background: #fff;
+  margin-top: 80px;
+  padding-top: 80px;
+
+  h3 {
+    color: #9496a3;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 45px;
+  }
+
+  p {
+    color: #9496a3;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .ui.button {
+    margin: 0 auto;
+    display: block;
+    margin-top: 40px;
+  }
+}
+
+.notfound-svg {
+  width: 221px;
+  height: 94px;
+  background: url('../../../assets/icons/404-img.svg');
+  margin: 0 auto;
+}

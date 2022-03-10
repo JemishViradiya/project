@@ -1,0 +1,85 @@
+@import '../../theme/theme.less';
+
+.dropdown {
+  width: 95%;
+}
+
+.dropdownWrapper {
+  margin: 0;
+}
+
+.nextMonth {
+  position: absolute;
+  top: 13px;
+  right: 22px;
+}
+
+.prevMonth {
+  position: absolute;
+  top: 13px;
+  left: 22px;
+}
+
+.optionContainer {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0;
+  min-width: 203px;
+}
+
+.flipHorizontal {
+  transform: scaleX(-1);
+}
+
+:global {
+  .CalendarDay {
+    font-size: @fontSizeSubtitle;
+  }
+
+  .CalendarDay__selected_span {
+    background: @colorDatePickerFill;
+    color: @colorDatePickerText;
+    border: 1px double @colorDatePickerFill;
+    transition: color @animHoverDuration @animHoverTimingFn, background-color @animHoverDuration @animHoverTimingFn,
+      border @animHoverDuration @animHoverTimingFn;
+
+    &:hover {
+      background: @colorDatePickerHover;
+      color: @colorDatePickerText;
+      border: 1px double @colorDatePickerHover;
+    }
+  }
+
+  .CalendarDay__selected {
+    background-color: @colorDatePickerFill;
+    color: @colorDatePickerText;
+    transition: color @animHoverDuration @animHoverTimingFn, background-color @animHoverDuration @animHoverTimingFn;
+    border: 1px double @colorDatePickerFill;
+
+    &:hover {
+      background-color: @colorDatePickerHover;
+      color: @colorDatePickerText;
+      border: 1px double @colorDatePickerHover;
+    }
+  }
+
+  .CalendarDay__hovered_span,
+  .CalendarDay__hovered_span:hover {
+    background: @colorDatePickerHover;
+    color: @colorDatePickerText;
+    border: @colorDatePickerHover;
+  }
+
+  .CalendarMonth_caption {
+    padding-top: 12px;
+    padding-bottom: 24px;
+  }
+
+  .DayPicker_weekHeader {
+    top: 31px;
+  }
+}
+
+.CalendarMonth_caption {
+  composes: .mui.typography[ @body1];
+}

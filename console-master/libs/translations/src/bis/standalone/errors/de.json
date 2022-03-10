@@ -1,0 +1,15 @@
+{
+  "next": "Nächste",
+  "tenantID": "Mieter ID",
+  "signIn": "Anmelden",
+  "help": "Hilfe",
+  "signedOut": "Abgemeldet",
+  "signedOutMessage": "Du wurdest abgemeldet.",
+  "sessionExpired": "Sitzung ist abgelaufen",
+  "sessionExpiredMessage": "Ihre Sitzung ist abgelaufen.",
+  "signInAgainLink": "Klicken Sie hier um sich erneut anzumelden.",
+  "tenantIdLabel": "Bitte geben Sie Ihre Mieter-ID an:",
+  "loadingSessionLabel": "Lade deine Sitzung...",
+  "loadingTenantLabel": "Laden Sie Ihren Mieter...",
+  "noTenantLabel": "Der Mieter „{{tenant}}“ konnte nicht gefunden werden."
+}

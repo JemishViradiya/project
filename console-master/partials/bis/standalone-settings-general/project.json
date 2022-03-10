@@ -1,0 +1,22 @@
+{
+  "root": "partials/bis/standalone-settings-general",
+  "sourceRoot": "partials/bis/standalone-settings-general/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/bis/standalone-settings-general/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/bis/standalone-settings-general"],
+      "options": {
+        "jestConfig": "partials/bis/standalone-settings-general/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:partial", "scope:bis"]
+}

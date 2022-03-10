@@ -1,0 +1,22 @@
+{
+  "root": "libs/data/nav",
+  "sourceRoot": "libs/data/nav/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/data/nav/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/nav/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/libs/data/nav"]
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

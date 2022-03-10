@@ -1,0 +1,24 @@
+@import '../../theme/theme.less';
+
+.toast {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.25s linear;
+  z-index: @zIndexAppModal;
+  pointer-events: none;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}

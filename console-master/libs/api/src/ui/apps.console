@@ -1,0 +1,286 @@
+{
+  "publicPath": "/",
+  "navigation": [
+    {
+      "name": "dashboard",
+      "route": "/Dashboard",
+      "navigation": [
+        {
+          "name": "protect",
+          "route": "/Dashboard"
+        },
+        {
+          "name": "Network (Dev)",
+          "route": "/uc/console#/dashboard",
+          "match": "/uc/console#/dashboard*"
+        },
+        {
+          "name": "Protect (Dev)",
+          "route": "/uc/console#/static/protect",
+          "match": "/uc/console#/static/protect*"
+        },
+        {
+          "name": "Gateway (Dev)",
+          "route": "/uc/console#/static/gateway",
+          "match": "/uc/console#/static/gateway*"
+        },
+        {
+          "name": "BIS (Dev)",
+          "route": "/uc/console#/static/bis",
+          "match": "/uc/console#/static/bis*"
+        },
+        {
+          "name": "MTD (Dev)",
+          "route": "/uc/console#/static/mtd",
+          "match": "/uc/console#/static/mtd*"
+        },
+        {
+          "name": "DLP (Dev)",
+          "route": "/uc/console#/static/dlp",
+          "match": "/uc/console#/static/dlp*"
+        }
+      ]
+    },
+    {
+      "name": "protection",
+      "route": "/Threats",
+      "navigation": [
+        {
+          "name": "threats",
+          "route": "/Threats",
+          "match": "/Threats*"
+        },
+        {
+          "name": "scriptControl",
+          "route": "/Script-control",
+          "match": "/Script-control*"
+        },
+        {
+          "name": "memoryProtection",
+          "route": "/Memory-protection",
+          "match": "/Memory-protection*"
+        },
+        {
+          "name": "externalDevices",
+          "route": "/External-devices",
+          "match": "/External-devices*"
+        },
+        {
+          "name": "mobileAlerts",
+          "route": "/uc/console#/mobile-alerts",
+          "match": "/uc/console#/mobile-alerts*"
+        },
+        {
+          "name": "vulnerabilities",
+          "route": "/uc/console#/vulnerabilities",
+          "match": "/uc/console#/vulnerabilities*"
+        }
+      ]
+    },
+    {
+      "name": "protectZones",
+      "route": "/Zone",
+      "match": "/Zone*"
+    },
+    {
+      "name": "assets",
+      "route": "/Asset",
+      "navigation": [
+        {
+          "name": "devices",
+          "route": "/Asset"
+        },
+        {
+          "name": "mobileDevices",
+          "route": "/uc/console#/mobile-devices",
+          "match": "/uc/console#/mobile-devices*"
+        },
+        {
+          "name": "personaUsers",
+          "route": "/Asset/Users",
+          "match": "/Asset/Users*"
+        },
+        {
+          "name": "avertUsers",
+          "route": "/uc/info#/Users",
+          "match": "/uc/info#/Users*"
+        },        
+        {
+          "name": "users",
+          "route": "/uc/console#/users",
+          "match": "/uc/console#/users*"
+        },
+        {
+          "name": "userGroups",
+          "route": "/uc/console#/groups",
+          "match": "/uc/console#/groups*"
+        }
+      ]
+    },
+    {
+      "name": "optics",
+      "route": "/Optics",
+      "navigation": [
+        {
+          "name": "opticsDetect",
+          "route": "/Optics#/detect",
+          "match": "/Optics#/detect*"
+        },
+        {
+          "name": "instaQuery",
+          "route": "/Optics#/iq/create",
+          "match": "/Optics#/iq*"
+        },
+        {
+          "name": "advancedQuery",
+          "route": "/Optics/AdvancedQuery",
+          "match": "/Optics/AdvancedQuery*"
+        },
+        {
+          "name": "focusData",
+          "route": "/Optics#/focus",
+          "match": "/Optics#/focus*"
+        },
+        {
+          "name": "packages",
+          "route": "/Optics#/packages/deploy",
+          "match": "/Optics#/packages*"
+        },
+        {
+          "name": "devices",
+          "route": "/Optics#/devices",
+          "match": "/Optics#/devices*"
+        },
+        {
+          "name": "actionHistory",
+          "route": "/Optics#/actionHistory/remoteResponseLogs",
+          "match": "/Optics#/actionHistory*"
+        },
+        {
+          "name": "Configurations",
+          "route": "/Optics#/settings/detectOnboard",
+          "match": "/Optics#/settings*"
+        }
+      ]
+    },
+    {
+      "name": "persona",
+      "route": "/Persona"
+    },
+    {
+      "name": "gateway",
+      "route": "/uc/console#/alerts",
+      "navigation": [
+        {
+          "name": "alerts",
+          "route": "/uc/console#/alerts",
+          "match": "/uc/console#/alerts*"
+        },
+        {
+          "name": "events",
+          "route": "/uc/console#/events/gateway",
+          "match": "/uc/console#/events/gateway*"
+        }
+      ]
+    },
+    {
+      "name": "reporting",
+      "route": "/Reports"
+    },
+    {
+      "name": "policies",
+      "route": "/Policy/List",
+      "navigation": [
+        {
+          "name": "policyDevice",
+          "route": "/Policy/List",
+          "match": "/Policy/List*"
+        },
+        {
+          "name": "policyUser",
+          "route": "/uc/console#/list",
+          "match": "/uc/console#/list*"
+        }
+      ]
+    },
+    {
+      "name": "settings",
+      "route": "/Application",
+      "navigation": [
+        {
+          "name": "protectApplication",
+          "route": "/Application"
+        },
+        {
+          "name": "protectUser",
+          "route": "/User",
+          "match": "/User*"
+        },
+        {
+          "name": "protectGlobalList",
+          "route": "/GlobalList"
+        },
+        {
+          "name": "protectGlobalListNew",
+          "route": "/uc/console#/settings/global-list",
+          "match": "/uc/console#/settings/global-list*"
+        },
+        {
+          "name": "protectDeployment",
+          "route": "/Deployments"
+        },
+        {
+          "name": "protectAgentUpdate",
+          "route": "/AgentUpdate"
+        },
+        {
+          "name": "protectCertificateStorage",
+          "route": "/CertificateStorage"
+        },
+        {
+          "name": "protectIntegrations",
+          "route": "/Integrations"
+        },
+        {
+          "name": "deviceManagement",
+          "route": "/DeviceManagement"
+        },
+        {
+          "name": "personaForMobile",
+          "route": "/uc/console#/settings/adaptive-security",
+          "match": "/uc/console#/settings/adaptive-security*"
+        },
+        {
+          "name": "authentication",
+          "route": "/uc/console#/settings/authentication/authenticators",
+          "match": "/uc/console#/settings/authentication/authenticators*"
+        },
+        {
+          "name": "directoryConnections",
+          "route": "/uc/console#/settings/directory-connections",
+          "match": "/uc/console#/settings/directory-connections*"
+        },
+        {
+          "name": "emmConnections",
+          "route": "/uc/console#/settings/emm",
+          "match": "/uc/console#/settings/emm*"
+        },
+        {
+          "name": "network",
+          "route": "/uc/console#/settings/network",
+          "match": "/uc/console#/settings/network*"
+        },
+        {
+          "name": "info",
+          "route": "/uc/console#/settings/avert",
+          "match": "/uc/console#/settings/avert*"
+        },
+        {
+          "name": "activation",
+          "route": "/uc/console#/settings/activation",
+          "match": "/uc/console#/settings/activation*"
+        }
+      ]
+    }
+  ]
+}

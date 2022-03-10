@@ -1,0 +1,12 @@
+# Add files here to ignore them from prettier formatting
+
+/dist
+/coverage
+
+/apps/mssp/src/css
+
+/libs/pwa/assets
+
+/storybook-static
+
+.nyc_output

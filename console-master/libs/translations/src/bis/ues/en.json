@@ -1,0 +1,461 @@
+{
+  "settings": {
+    "comingSoonMessage": {
+      "title": "Coming Soon",
+      "description": "Adaptive security settings will be made available in an upcoming update of the UES console."
+    },
+    "operatingMode": {
+      "title": "Operating Mode",
+      "description": "Specify an operating mode. Passive mode is used to collect data and build risk models for individual users without taking any action. In Active mode, the response actions defined in policies are applied. Alerts are generated in both operating modes. When the first user is added to an adaptive response policy, a training period for the adaptive response risk model is started and lasts until the following conditions are met: 1000 events are collected for the user's tenant and 14 calendar days pass. Alerts are not generated during the training period.",
+      "options": {
+        "ACTIVE": "Active mode",
+        "PASSIVE": "Passive mode"
+      }
+    },
+    "riskEngines": {
+      "title": "Identity Risk Engine Setting",
+      "networkAnomaly": {
+        "title": "Network anomaly",
+        "description": "Specify the threshold for network anomaly events and whether they are treated as high or critical risk. Network anomaly events are detected when a Gateway user's network usage pattern is not consistent with past behavior.",
+        "riskFactor": "Network anomaly risk"
+      },
+      "tableHeader": {
+        "factor": "Risk",
+        "detection": "Detection",
+        "level": "Risk level"
+      }
+    },
+    "ipaddresses": {
+      "trusted": "Trusted IP addresses",
+      "untrusted": "Untrusted IP addresses",
+      "ipAddressConfiguration": "IP address configuration",
+      "name": "Name",
+      "detail": "Detail",
+      "noData": "No data",
+      "deleteItem": "Delete item",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "trustedAddModalLabel": "Add safe endpoint IP addresses",
+      "trustedEditModalLabel": "Edit safe endpoint IP addresses",
+      "trustedModalLabel": "Safe endpoint IP addresses",
+      "save": "Save",
+      "errorFieldRequired": "This field is required.",
+      "errorInvalidName": "This field is invalid.",
+      "sourceLabel": "Source",
+      "specifiedAddresses": "IP addresses, IP ranges or CIDRs",
+      "ipAddressesLabel": "IP addresses, IP ranges or CIDRs",
+      "ipAddressesSubLabel": "Enter IP addresses, IP ranges, or CIDRs (one per line)",
+      "addNew": "Add IP address",
+      "search": "Search",
+      "invalidFormat": "The format is invalid.",
+      "selectedAriaLabel": "Selected IP addresses",
+      "selectedItemsCount": "{{count}} selected",
+      "untrustedAddModalLabel": "Add restricted endpoint IP addresses",
+      "untrustedEditModalLabel": "Edit restricted endpoint IP addresses",
+      "untrustedModalLabel": "Restricted endpoint IP addresses",
+      "more": "{{count}} more",
+      "results": "{{count}} result",
+      "ipaddress": "IP address",
+      "results_plural": "{{count}} results",
+      "more_plural": "{{count}} more",
+      "deleteDialog": {
+        "title": "Delete confirmation",
+        "description": "Do you want to delete the selected IP addresses?",
+        "confirmButtonLabel": "Delete",
+        "cancelButtonLabel": "Cancel"
+      }
+    },
+    "ipAddress": {
+      "errorAddNew": "The IP address list could not be added",
+      "errorUpdate": "The IP address list could not be updated",
+      "errorDelete": "The IP address list could not be deleted"
+    }
+  },
+  "gatewayAlerts": {
+    "table": {
+      "headers": {
+        "risk": "Risk",
+        "type": "Type",
+        "detection": "Detection",
+        "response": "Response",
+        "device": "Device",
+        "user": "User",
+        "detectionTime": "Detection time",
+        "category": "Category",
+        "identityChallenge": "Identity challenge"
+      },
+      "toolbar": {
+        "totalResults": "{{total}} results"
+      },
+      "columnPicker": {
+        "title": "Table columns"
+      },
+      "noDataInTrainingMode": "Adaptive response uses a training period until the following conditions are met: 1000 events are collected for a user's tenant and 14 calendar days pass. Alerts are not generated during the training period.",
+      "noDataInTrainingModeDP": "Risk assessment policies use a training period until the following conditions are met: 1000 events are collected for a user's tenant and 14 calendar days pass. Alerts are not generated during the training period.",
+      "noDataPlaceholder": "No alerts were generated in the past 30 days.",
+      "noDataWithFilters": "No alerts were found with the selected filters."
+    },
+    "columns": {
+      "response": {
+        "overrideNetworkAccessPolicy": "Override network access control policy: {{name}}",
+        "passiveModePrefix": "Actions not executed: {{text}}",
+        "passiveModeTooltip": "Response actions are not applied to users in passive mode.",
+        "passiveModeTooltipArr": "Passive operating mode is turned on. Identity challenges are not sent in passive operating mode.",
+        "passiveModeTooltipAriaLabel": "Passive mode information",
+        "challengeState": {
+          "deny": "Identity challenge: Declined by user",
+          "failed": "Identity challenge: Error - Not completed",
+          "in_progress": "Identity challenge: In progress",
+          "no_mfa": "Identity challenge: Not enabled in policy",
+          "mfa_skipped": "Identity challenge: Bypassed",
+          "ok": "Identity challenge: Verified",
+          "timeout": "Identity challenge: Timed out",
+          "unknown": "Identity challenge: Error - Not completed",
+          "fraud": "Identity challenge: Fraud"
+        }
+      },
+      "identityChallenge": {
+        "challengeState": {
+          "deny": "Declined by user",
+          "failed": "Error - Not completed",
+          "in_progress": "In progress",
+          "no_mfa": "Not enabled in policy",
+          "mfa_skipped": "Bypassed",
+          "ok": "Verified",
+          "timeout": "Timed out",
+          "unknown": "Error - Not completed",
+          "fraud": "Fraud"
+        }
+      },
+      "detection": {
+        "networkAnomaly": "Network anomaly"
+      },
+      "risk": {
+        "tooltipText": "Click a row to view event details."
+      }
+    },
+    "alert": {
+      "passiveMode": {
+        "title": "Passive operating mode turned on",
+        "description": "Automatic response actions will not be taken in passive operating mode.",
+        "settingsLink": "Settings"
+      }
+    }
+  },
+  "gatewayEvents": {
+    "labelGateway": "Gateway",
+    "pageTitle": "Events",
+    "networkEvents": {
+      "label": "Network Events",
+      "pageTitle": "Network events"
+    },
+    "networkActivity": {
+      "label": "Network Activity"
+    }
+  },
+  "gatewayAlertDetails": {
+    "titles": {
+      "drawerTitle": "Network Anomaly",
+      "alertOverview": "Alert Overview",
+      "eventOverview": "Event Overview",
+      "affectedAssets": "Affected Assets",
+      "responseActions": "Response Actions",
+      "risk": "Risk",
+      "responseActionsSubtitle": "<0>by <1>{{policyName}}</1> Adaptive response policy</0>",
+      "identityChallenge": "Identity Challenge"
+    },
+    "labels": {
+      "assignedPolicy": "Overridden network access control policy",
+      "description": "Description",
+      "detectionTime": "Detection Time",
+      "device": "Device",
+      "eventDetails": "Event Details",
+      "eventId": "Event ID",
+      "type": "Type",
+      "user": "User",
+      "automaticResponseReduction": "Challenge status",
+      "userHyperlink": "View user details",
+      "deviceHyperlink": "View device details"
+    },
+    "values": {
+      "networkEvent": "Unusual network event detected",
+      "riskType": "Identity risk",
+      "viewDetails": "View details"
+    },
+    "actions": {
+      "noActions": "No actions were taken."
+    },
+    "labelGateway": "Gateway",
+    "pageTitle": "Alerts",
+    "pageTitleDpActor": "Network Behavior Alerts"
+  },
+  "risk": {
+    "common": {
+      "identityRisk": "Identity risk",
+      "identityRiskResponseActions": "Identity Risk Response Actions",
+      "networkAnomaly": "Network anomaly",
+      "generalInfo": "General Information",
+      "automaticRiskReduction": "Automatic risk reduction",
+      "automaticRiskReductionDescription": "If you want to allow users to lower their risk level by reauthenticating to verify their identity, turn on automatic risk reduction. You must configure multifactor authentication in the authentication policy that is assigned to users or groups before you can use automatic risk reduction.",
+      "riskChanged": "The risk level has changed from {{prevLevel}} to {{currentLevel}}."
+    }
+  },
+  "dashboard": {
+    "geozoneRiskAlertsWidgetTitle": "Geozone Risk Alerts",
+    "topActionsWidgetTitle": "Top Actions by Adaptive Response Policy",
+    "realTimeAlertsWidgetTitle": "Real-Time Alerts",
+    "combinedRiskAlertsWidgetTitle": "Identity Risk and Geozone Risk Alerts",
+    "combinedRiskAlertsIdentityTabTitle": "Identity",
+    "combinedRiskAlertsGeozoneTabTitle": "Geozone",
+    "totalEventsWidgetTitle": "Total Events",
+    "totalEventsWidgetDescription": "total events",
+    "totalUsersWidgetTitle": "Total Active Users",
+    "mapWidgetTitle": "Map",
+    "totalUsersWidgetDescription": "total active users",
+    "networkAnomalyAlertsWidgetTitle": "Network Anomaly Alerts",
+    "networkAlertSummaryWidget": {
+      "title": "Network Alert Summary",
+      "label": {
+        "high": "High Network Anomaly Alerts",
+        "critical": "Critical Network Anomaly Alerts",
+        "medium": "Medium Network Anomaly Alerts",
+        "low": "Low Network Anomaly Alerts",
+        "unknown": "Unknown Network Anomaly Alerts"
+      }
+    }
+  },
+  "actionType": {
+    "overrideNetworkAccessPolicy": "Override network access control policy"
+  },
+  "detectionPolicies": {
+    "common": {
+      "tooltips": {
+        "copyPolicy": "Copy",
+        "deletePolicy": "Delete"
+      }
+    },
+    "arr": {
+      "title": "Challenge identity for automatic risk reduction",
+      "description": "Applies only to Identity risk detections",
+      "selectLabel": "Minimum risk level"
+    },
+    "assessment": {
+      "info": {
+        "title": "Risk Assessment",
+        "paragraph": "Assign detections to risk levels to configure a risk posture for users. The risk level is used by policies to determine responses for events."
+      },
+      "buttons": {
+        "addDetections": "Add detections",
+        "detections": "Detections",
+        "useTemplate": "Use template"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "Add a policy to assign detections to risk levels to configure a risk posture for users. The risk level is used by policies to determine responses for events. If a user doesn't have a policy assigned, the default policy is used."
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Name",
+        "description": "Description"
+      },
+      "errorMessages": {
+        "required": "This field is required.",
+        "nameInvalid": "The name is invalid.",
+        "descriptionInvalid": "The description is invalid."
+      }
+    },
+    "columns": {
+      "name": "Policy name"
+    },
+    "tableHeader": {
+      "risk": "Risk",
+      "detection": "Detection"
+    },
+    "details": {
+      "title": "Risk Assessment",
+      "assignedUsersAndGroups": "Assigned User and Groups"
+    },
+    "create": {
+      "title": "Add risk assessment policy",
+      "copyTitle": "Copy risk assessment policy",
+      "successTitle": "The policy has been added",
+      "successDescription": "Would you like to assign users or groups to this risk assessment policy?",
+      "successReject": "Not now",
+      "successAccept": "Yes",
+      "error": "The policy could not be created.",
+      "policyConfirmationTitle": "Assign the risk assessment policy",
+      "policyConfirmationDescription": "The policy has been created. Do you want to assign users or groups to this policy?"
+    },
+    "delete": {
+      "deleteConfirmation": "Delete confirmation",
+      "deleteSingle": "Do you want to delete the {{name}} policy?",
+      "deleteNote": "You must remove all users and groups associated with a policy before you delete it."
+    },
+    "updatedAt": "Updated on {{date, M/D/YYYY h:mm A}} by {{updatedByUser}}",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Unsaved changes",
+      "description": "Do you want to leave this page? Your changes have not been saved.",
+      "cancelButton": "Cancel",
+      "confirmButton": "Leave page"
+    },
+    "snackbars": {
+      "successfulUpdate": "The policy was updated.",
+      "successfulCreation": "The policy was created.",
+      "successfulDeletion": "The policy was deleted."
+    },
+    "threats": {
+      "addDetectionsDrawer": {
+        "title": "Add detections",
+        "description": "Drag and drop detections to the risk level that you want to apply to them."
+      },
+      "categories": {
+        "labels": {
+          "identity": "Identity"
+        }
+      },
+      "labels": {
+        "behavioralRisk": "Behavioral risk",
+        "networkAnomaly": "Network anomaly"
+      }
+    }
+  },
+  "deviceRiskAssessment": {
+    "deviceRiskDetails": "Device risk details",
+    "appliedRiskPolicy": "Applied risk policy: {{riskPolicyName}}",
+    "error": {
+      "fetch": "The device risk information could not be retrieved."
+    }
+  },
+  "policies": {
+    "common": {
+      "adaptiveOverridesGatewayInfo": "Adaptive response policies override any network access control policies that are assigned to users or groups.",
+      "tooltips": {
+        "copyPolicy": "Copy",
+        "deletePolicy": "Delete"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "Create and assign adaptive response policies to specify the risk response actions that are applied to devices. $t(bis/ues:policies.common.adaptiveOverridesGatewayInfo)",
+        "link": "Adaptive response settings"
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Name",
+        "description": "Description"
+      },
+      "errorMessages": {
+        "required": "This field is required.",
+        "nameInvalid": "The name is invalid.",
+        "descriptionInvalid": "The description is invalid."
+      }
+    },
+    "columns": {
+      "name": "Policy name"
+    },
+    "tableHeader": {
+      "factor": "Risk",
+      "detection": "Detection",
+      "responseActions": "Response Actions"
+    },
+    "details": {
+      "title": "Adaptive response",
+      "assignedUsersAndGroups": "Assigned User and Groups",
+      "addCustomActionRiskFactors": "Specify the action to perform when a user's network usage patterns do not match past behavior. $t(bis/ues:policies.common.adaptiveOverridesGatewayInfo)"
+    },
+    "create": {
+      "title": "Add adaptive response policy",
+      "copyTitle": "Copy adaptive response policy",
+      "successTitle": "The policy has been added",
+      "successDescription": "Would you like to assign users or groups to this BlackBerry Persona Analytics policy?",
+      "successReject": "Not now",
+      "successAccept": "Yes",
+      "error": "The policy could not be created.",
+      "policyConfirmationTitle": "Assign the adaptive response policy",
+      "policyConfirmationDescription": "The policy has been created. Do you want to assign users or groups to this policy?"
+    },
+    "delete": {
+      "deleteConfirmation": "Delete confirmation",
+      "deleteSingle": "Do you want to delete the {{name}} policy?",
+      "deleteNote": "You must remove all users and groups associated with a policy before you delete it."
+    },
+    "updatedAt": "Updated on {{date, M/D/YYYY h:mm A}} by {{updatedByUser}}",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Unsaved changes",
+      "description": "Do you want to leave this page? Your changes have not been saved.",
+      "cancelButton": "Cancel",
+      "confirmButton": "Leave page"
+    },
+    "snackbars": {
+      "successfulUpdate": "The policy was updated.",
+      "successfulCreation": "The policy was created.",
+      "successfulDeletion": "The policy was deleted."
+    }
+  },
+  "actions": {
+    "options": {
+      "networkAccessPolicy": "Override network access control policy"
+    },
+    "assignNetworkAccessPolicy": {
+      "dialog": {
+        "label": "Select network access control policy",
+        "title": "Override network access control policy",
+        "noOptions": "No policy available"
+      },
+      "notAvailableError": "The override network access control policy action is currently unavailable. Please contact your administrator."
+    },
+    "selected": {
+      "networkAccessPolicy": {
+        "chip": "Override network access control policy: {{name}}",
+        "chipPolicyMissing": "Override network access control policy",
+        "errorChip": "Policy does not exist",
+        "errorSnackbar": "The policy for one of the assigned actions no longer exists."
+      }
+    }
+  },
+  "gatewayEvidence": {
+    "title": "Alert event details",
+    "eventTitle": "Network event details",
+    "tableTitle": "Alert detail"
+  },
+  "geozones": {
+    "table": {
+      "headers": {
+        "name": "Name",
+        "location": "Location",
+        "size": "Size"
+      },
+      "columnPicker": "Table columns",
+      "toolbar": {
+        "totalResults": "{{total}} results",
+        "totalSelected": "{{total}} selected"
+      },
+      "cells": {
+        "size": "{{value}} {{unit}}"
+      }
+    },
+    "deleteDialog": {
+      "singleTitle": "Remove Geozone",
+      "multiTitle": "Remove Geozones",
+      "singleMessage": "<0>Do you want to remove the <1>{{zone}}</1> geozone?</0>",
+      "multiMessage": "Do you want to remove the selected geozones?"
+    },
+    "operations": {
+      "update": {
+        "error": "The geozone could not be updated.",
+        "success": "The geozone was updated."
+      },
+      "create": {
+        "error": "The geozone could not be created.",
+        "success": "The geozone was created."
+      },
+      "delete": {
+        "error": "The geozone could not be deleted.",
+        "success": "The geozone was deleted."
+      }
+    }
+  }
+}

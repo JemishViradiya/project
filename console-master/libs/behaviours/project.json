@@ -1,0 +1,33 @@
+{
+  "root": "libs/behaviours",
+  "sourceRoot": "libs/behaviours/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/behaviours/**/*.js",
+          "libs/behaviours/**/*.jsx",
+          "libs/behaviours/**/*.ts",
+          "libs/behaviours/**/*.tsx",
+          "libs/behaviours/**/*.spec.ts",
+          "libs/behaviours/**/*.spec.tsx",
+          "libs/behaviours/**/*.spec.js",
+          "libs/behaviours/**/*.spec.jsx",
+          "libs/behaviours/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/behaviours/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:shared", "scope:cdn"],
+  "implicitDependencies": ["assets"]
+}

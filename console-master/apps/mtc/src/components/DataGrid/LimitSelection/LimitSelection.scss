@@ -1,0 +1,18 @@
+.limit-selection {
+  display: inline;
+  padding-top: 32px;
+  .ui.dropdown {
+    .text {
+      color: #9496a3;
+      font-weight: 400;
+      font-size: 14px;
+      overflow: initial;
+      width: auto;
+    }
+    & > .dropdown.icon {
+      margin: 0;
+      margin-left: 4px;
+      color: #9496a3;
+    }
+  }
+}

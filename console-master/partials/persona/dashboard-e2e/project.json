@@ -1,0 +1,29 @@
+{
+  "root": "partials/persona/dashboard-e2e",
+  "sourceRoot": "partials/persona/dashboard-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/persona/dashboard-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/persona/dashboard-e2e/cypress.json",
+        "tsConfig": "partials/persona/dashboard-e2e/tsconfig.json",
+        "devServerTarget": "persona/dashboard:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "persona/dashboard:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/persona/dashboard-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:persona"],
+  "implicitDependencies": ["persona/dashboard"]
+}

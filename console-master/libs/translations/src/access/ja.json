@@ -1,0 +1,66 @@
+{
+  "errors": {
+    "noPermission": {
+      "title": "許可なし",
+      "description": "このリソースを表示する権限がありません。"
+    },
+    "notFound": {
+      "title": "リソースが見つかりません",
+      "description": "申し訳ありませんが、お探しのリソースが見つからないか、表示する権限がありません。"
+    },
+    "internal": {
+      "title": "エラー",
+      "description": "申し訳ありませんが、リクエストの処理中にエラーが発生しました。"
+    },
+    "generic": {
+      "title": "何かが間違っていた",
+      "description": "申し訳ありませんが、エラーが発生しました。後でもう一度お試しください。"
+    },
+    "noServiceEnabled": {
+      "title": "サービスは利用できません",
+      "description": "このサービスはテナントに対して有効になっていません。"
+    }
+  },
+  "Ues_Big_ACL_Read": "ネットワークアクセスコントロールの表示",
+  "Ues_Big_GatewayAppProfile_Read": "ゲートウェイサービスポリシーの表示",
+  "Ues_Big_NetworkAccessControlProfile_Read": "ネットワークアクセスコントロールの表示",
+  "Ues_Big_NetworkServices_Read": "ネットワークアクセスコントロールの表示",
+  "Ues_Big_Reporting_Read": "ゲートウェイレポートの表示",
+  "Ues_Big_Tenant_Read": "ゲートウェイ設定の表示",
+  "Ues_Bip_Device_Read": "Avert デバイス識別子の表示",
+  "Ues_Bip_Event_Read": "デバイスイベントのAvert を表示する",
+  "Ues_Bip_FileContent_Read": "Avert ファイルの内容を表示する",
+  "Ues_Bip_FileSummary_Read": "機密ファイルのAvert の概要を表示する",
+  "Ues_Bip_Policy_Read": "Avert ポリシーを表示する",
+  "Ues_Bip_RiskScore_Read": "回避リスクスコアの表示",
+  "Ues_Bip_Settings_Read": "Avert 設定を表示する",
+  "Ues_Bis_Events_Read": "適応型リスクイベントの表示",
+  "Ues_Bis_EventsLocation_Read": "適応型リスクの場所イベントの表示",
+  "Ues_Bis_RiskProfile_Read": "適応型リスクポリシーの表示",
+  "Ues_Bis_Settings_Read": "適応型リスク設定の表示",
+  "Ues_Ecs_ActivationProfile_Read": "登録ポリシーの表示",
+  "Ues_Ecs_ActivationSettings_Read": "アクティベーション設定を表示する",
+  "Ues_Ecs_Bcn_Read": "Connectivity Nodeの表示",
+  "Ues_Ecs_Devices_Read": "モバイルデバイスを表示する",
+  "Ues_Ecs_Directory_Read": "ディレクトリ接続の表示",
+  "Ues_Ecs_Identity_Read": "認証コントロールの表示",
+  "Ues_Ecs_Mdm_Read": "EMM 接続の表示",
+  "Ues_Ecs_Mfa_Read": "Ues:Ecs:Mfa:Read",
+  "Ues_Ecs_Users_Read": "ユーザーとグループの表示",
+  "Ues_Ecs_Vulnerabilities_Read": "脆弱性の表示",
+  "Ues_Mtd_Events_Read": "Protect Mobile イベントの表示",
+  "Ues_Mtd_Policy_Read": "Protect Mobile ポリシーの表示",
+  "Ues_Venue_Dashboard_Read": "ダッシュボード",
+  "Ues_Venue_DesktopPolicy_Read": "デバイスポリシーの表示",
+  "Ues_Venue_DesktopReports_Read": "レポートを表示する",
+  "Ues_Venue_Devices_Read": "デバイスを表示する",
+  "Ues_Venue_SettingsCertificates_Read": "証明書の表示、作成、編集、削除",
+  "Ues_Venue_SettingsGlobalList_Read": "グローバルリストを見る",
+  "Ues_Venue_SettingsIntegrations_Read": "インテグレーションの表示、作成、編集、削除",
+  "Ues_Venue_SettingsUpdate_Read": "エージェントアップデート設定の表示、作成、編集、削除",
+  "Ues_Venue_ThreatProtection_Read": "脅威対策の表示",
+  "Ues_Venue_Zones_Read": "ゾーンの表示",
+  "service": {
+    "big_blackberry_com": "Gateway"
+  }
+}

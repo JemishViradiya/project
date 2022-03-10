@@ -1,0 +1,7 @@
+{
+  "loading": "Cargando...",
+  "signInLink": "Haz clic aquí para volver a iniciar sesión.",
+  "loginFailed": "No se pudo iniciar sesión",
+  "logoutFailed": "No se pudo cerrar sesión",
+  "errorMessage": "No se ha podido completar tu solicitud."
+}

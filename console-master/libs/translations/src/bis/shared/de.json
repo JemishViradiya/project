@@ -1,0 +1,69 @@
+{
+  "common": {
+    "save": "Sparen",
+    "cancel": "Stornieren",
+    "add": "Hinzufügen",
+    "errorPleaseContact": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder wenden Sie sich an Ihren Administrator.",
+    "description": "Beschreibung",
+    "risk": "Risiko",
+    "settings": "Einstellungen",
+    "delete": "löschen",
+    "descriptionInvalid": "Die Beschreibung muss {{max}} Zeichen oder weniger enthalten.",
+    "errorFieldRequired": "Dieses Feld ist ein Pflichtfeld",
+    "errorInvalidName": "Ungültiger Name",
+    "nameInvalid": "Der Name muss {{max}} Zeichen oder weniger enthalten.",
+    "automaticRiskReduction": "Automatische Risikominderung"
+  },
+  "risk": {
+    "common": {
+      "identityRisk": "Identitätsrisiko",
+      "identityRiskResponseActions": "Reaktionen auf Identitätsrisiken",
+      "networkAnomaly": "Netzwerk-Anomalie",
+      "generalInfo": "Allgemeine Informationen"
+    },
+    "label": {
+      "low": "Niedriges Risiko",
+      "medium": "Mittleres Risiko",
+      "high": "Hohes Risiko",
+      "critical": "Kritisches Risiko"
+    },
+    "level": {
+      "CRITICAL": "Kritisch",
+      "HIGH": "Hoch",
+      "MEDIUM": "Mittel",
+      "LOW": "Niedrig",
+      "TRAINING": "Schulung",
+      "UNKNOWN": "Unbekannt",
+      "UNTRUSTED": "Nicht vertrauenswürdig",
+      "UNDETECTED": "Unentdeckt",
+      "UNDEFINED": "Undefiniert",
+      "TRUSTED": "Vertrauenswürdig",
+      "AT_RISK": "Gefährdet",
+      "SAFE": "Sicher",
+      "SECURED": "Sicher"
+    }
+  },
+  "arr": {
+    "challengeState": {
+      "deny": "Vom Benutzer abgelehnt",
+      "failed": "Fehler - Nicht abgeschlossen",
+      "in_progress": "Im Gange",
+      "no_mfa": "In der Richtlinie nicht aktiviert",
+      "ok": "Verifiziert",
+      "timeout": "Zeitüberschreitet",
+      "unknown": "Fehler - Nicht abgeschlossen",
+      "mfa_skipped": "Umgangen",
+      "fraud": "Betrug"
+    }
+  },
+  "policies": {
+    "create": {
+      "error": "Die Richtlinie konnte nicht erstellt werden."
+    },
+    "details": {
+      "errorSave": "Die Richtlinie konnte nicht gespeichert werden.",
+      "errorDelete": "Die Richtlinie konnte nicht gelöscht werden.",
+      "errorServerNameAlreadyExists": "Eine Richtlinie mit diesem Namen existiert bereits."
+    }
+  }
+}

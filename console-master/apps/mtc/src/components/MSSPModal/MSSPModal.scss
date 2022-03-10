@@ -1,0 +1,28 @@
+.input-container .ui.input > div > span {
+  position: relative;
+  top: 0;
+}
+.mssp-modal {
+  label {
+    font-weight: 700;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .actions {
+    .MuiButton-root {
+      margin-right: 16px;
+    }
+    .MuiButton-root.confirm {
+      margin-right: 0px;
+    }
+  }
+}
+
+.selectable {
+  opacity: 1;
+  pointer-events: visible;
+}
+.not-selectable {
+  opacity: 0.5;
+  pointer-events: none;
+}

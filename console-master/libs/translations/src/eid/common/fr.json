@@ -1,0 +1,190 @@
+{
+  "authenticators": {
+    "title": "Authenticateurs",
+    "add": "Ajouter un authentificateur",
+    "type": "Type d'authentificateur",
+    "ENTERPRISE": "Entreprise",
+    "OKTA": "Okta",
+    "PING": "Ping",
+    "summary": "Ajoutez des authentificateurs pour gérer les types d'authentification pouvant être utilisés.",
+    "edit": "Modifier l'authentificateur",
+    "delete": "Supprimer l'authentificateur",
+    "general": "Informations générales",
+    "signing_type": "Algorithme de signature de jeton ID",
+    "ES512": "ECDSA utilisant P521 Curve et SHA-512",
+    "ES256": "ECDSA utilisant P256 Curve et SHA-256",
+    "ES384": "ECDSA utilisant P384 Curve et SHA-384",
+    "name": "Nom",
+    "identityproviderclient": "Client fournisseur d'identité",
+    "discovery_url": "URL du document de découverte OIDC",
+    "client_id": "ID client",
+    "jwks": "Clé privée JWKS",
+    "DUO_MFA": "Duo MFA",
+    "DUO": "Duo",
+    "duomfaconfiguration": "Configuration Duo MFA",
+    "auth_integration_key": "Clé d'intégration Auth",
+    "auth_secret_key": "Clé secrète d'authentification",
+    "auth_api_hostname": "Nom d'hôte de l'API Auth",
+    "admin_api_hostname": "Nom d'hôte de l'API Admin",
+    "admin_secret_key": "Clé secrète administrateur",
+    "admin_integration_key": "Clé d'intégration Admin",
+    "EMAIL": "E-mail",
+    "USERNAME": "Nom d'utilisateur",
+    "username_format": "Format du nom d'utilisateur",
+    "OKTA_MFA": "MFA Okta",
+    "oktamfaconfiguration": "Configuration d'Okta MFA",
+    "auth_api_key": "Clé API Auth",
+    "auth_domain": "Domaine Auth",
+    "TOTP": "HAUT",
+    "totpconfiguration": "Configuration TOTP",
+    "window": "Fenêtre",
+    "windowHelperText": "Spécifiez la dérive temporelle maximale autorisée entre l'appareil et le serveur.",
+    "AD": "Active Directory",
+    "LDAP": "LDAP",
+    "CUR": "Compte en ligne Blackberry",
+    "VENUE": "Cylance"
+  },
+  "common": {
+    "name": "Nom",
+    "type": "Type",
+    "delete": "Supprimer",
+    "deleteConfirm": "Voulez-vous supprimer l'authentificateur {{field}}?",
+    "add": "Ajouter",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "saveAs": "Enregistrer sous",
+    "success": {
+      "create": "L'authentificateur a été ajouté.",
+      "update": "L'authentificateur a été mis à jour.",
+      "delete": "L'authentificateur a été supprimé."
+    },
+    "failure": {
+      "create": "L'authentificateur n'a pas pu être ajouté. Raison: {{reason}}",
+      "update": "L'authentificateur n'a pas pu être mis à jour. Raison: {{reason}}",
+      "delete": "L'authentificateur n'a pas pu être supprimé. Raison: {{reason}}",
+      "read": "Les données n'ont pas pu être récupérées. Raison: {{reason}}"
+    },
+    "nodata": "Aucune donnée"
+  },
+  "authentication": {
+    "title": "authentification"
+  },
+  "policy": {
+    "list": {
+      "title": "Stratégies d'identité d'entreprise",
+      "deleteSuccess": "Les stratégies ont été supprimées.",
+      "deleteError": "Échec des opérations de suppression de {{deleteErrorCount}} sur {{deleteCount}}",
+      "pageDescription": "Ajoutez une stratégie pour spécifier les types d'authentification que les utilisateurs et les administrateurs doivent effectuer pour accéder à la console, aux applications ou aux services UES."
+    },
+    "createPolicyPageTitle": "Ajouter une stratégie d'authentification",
+    "updatePolicyPageTitle": "authentification",
+    "generalInformationLabel": "Informations générales",
+    "authenticationRulesLabel": "Règles d'authentification",
+    "applicationExceptionLabel": "Gérer les exceptions des applications",
+    "name": "Nom",
+    "description": "Description",
+    "update": {
+      "tab": {
+        "settingsLabel": "Paramètres",
+        "usersAndGroupsLabel": "Utilisateurs et groupes affectés"
+      }
+    },
+    "nameHelperText": "Une stratégie portant ce nom existe déjà.",
+    "nameHelperTextRequired": "Il s'agit d'un champ obligatoire.",
+    "createPolicyAssignConfirmationDialog": {
+      "title": "Attribuer la stratégie d'authentification",
+      "description": "La stratégie a été créée. Voulez-vous attribuer des utilisateurs ou des groupes à cette stratégie?",
+      "cancelButton": "Pas maintenant",
+      "confirmButton": "Oui"
+    },
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Modifications non enregistrées",
+      "description": "Voulez-vous quitter cette page? Vos modifications n'ont pas été enregistrées.",
+      "cancelButton": "Annuler",
+      "confirmButton": "Quitter la page"
+    },
+    "batchDeletePolicyConflictErrorConfirmationDialog": {
+      "title": "Échec de suppression",
+      "cancelButton": "Fermer",
+      "description": "Les stratégies suivantes n'ont pas pu être supprimées car elles sont attribuées à des utilisateurs ou des groupes :"
+    },
+    "batchDeletePolicyErrorConfirmationDialog": {
+      "title": "Échec de suppression",
+      "description": "Les stratégies suivantes n'ont pas pu être supprimées:",
+      "cancelButton": "Fermer"
+    },
+    "deletePolicyConfirmationDialog": {
+      "title": "confirmation de suppression",
+      "description": "Voulez-vous supprimer la stratégie {{name}}?",
+      "deleteNote": "Vous devez supprimer tous les utilisateurs et groupes associés à une stratégie avant de la supprimer.",
+      "cancelButton": "Annuler",
+      "confirmButton": "Supprimer"
+    },
+    "serverError": {
+      "update": "Les modifications n'ont pas pu être enregistrées.",
+      "delete": "La stratégie n'a pas pu être supprimée.",
+      "deleteWithUsers": "La stratégie n'a pas pu être supprimée car elle est attribuée aux utilisateurs.",
+      "deleteWithGroups": "La stratégie n'a pas pu être supprimée car elle est affectée à des groupes.",
+      "deleteWithUsersAndGroups": "La stratégie n'a pas pu être supprimée car elle est attribuée aux utilisateurs et aux groupes.",
+      "deletePolicies": "Les stratégies n'ont pas pu être supprimées.",
+      "multipleInternalAuthErrorMsg": "Vous ne pouvez pas attribuer plus d'un type d'authentificateur interne dans une stratégie."
+    },
+    "riskFactorsLabel": "Scénarios de risque",
+    "authenticatorsList": {
+      "addButton": "Ajouter un authentificateur",
+      "deleteButton": "Supprimer",
+      "orderButton": "Ordre des ensembles",
+      "deleteSelectedMsg": "{{selectedCnt}} sélectionné",
+      "nameLabel": "Nom",
+      "descriptionLabel": "Description",
+      "noData": "Cliquez sur + pour ajouter des éléments.",
+      "columns": {
+        "name": "Nom",
+        "description": "Description"
+      }
+    },
+    "addAuthenticatorsDialog": {
+      "title": "Ajouter un authentificateur",
+      "dropdownLabel": "Nom de l'authentificateur",
+      "cancelButton": "Annuler",
+      "addButton": "Enregistrer"
+    },
+    "applicationExceptionButton": "Gérer les exceptions des applications",
+    "selectManagedExceptionDialog": {
+      "title": "Gérer les exceptions des applications",
+      "cancelButton": "Annuler",
+      "addButton": "Enregistrer",
+      "listLabel": "Vous pouvez configurer les niveaux d'authentification pour les services sélectionnés dans les onglets en bas de la page après avoir sélectionné vos services.",
+      "rightLabel": "Applications sélectionnées",
+      "leftLabel": "Applications disponibles"
+    },
+    "applicationExceptionButtonGroup": "Exceptions relatives",
+    "formSubmitSnackBarError": "Veuillez corriger les erreurs {{count}}",
+    "authenticatorsRequired": "Vous devez sélectionner au moins un authentificateur",
+    "authenticatorsLoadingErrorMessage": "Erreur lors du chargement des authentificateurs",
+    "firstLoginFromBrowserLabel": "Première connexion depuis le navigateur",
+    "firstLoginFromBrowserNotSetLabel": "Aucun",
+    "updatePolicyPageTitleHelperText": "Dernière mise à jour: {{date, datetime-short}}",
+    "updateFormCopyPolicyTooltip": "Créez une copie de cette stratégie",
+    "updateFormDeletePolicyTooltip": "Supprimer la stratégie",
+    "savePolicyPriorToCopyMessage": "Enregistrer la stratégie avant de la copier",
+    "unexpectedErrorMessage": "La demande n'a pas pu être traitée.",
+    "unexpectedErrorWithHttpMessage": "La demande n'a pas pu être traitée. État HTTP renvoyé: {{status}}",
+    "unexpectedErrorWithHttpSubcodeMessage": "La demande n'a pas pu être traitée. État HTTP renvoyé: {{status}}, sous-code: {{subcode}}",
+    "policyUpdatedMessage": "La stratégie a été mise à jour.",
+    "policyDeletedMessage": "La stratégie a été supprimée.",
+    "policyCreatedMessage": "La stratégie a été créée.",
+    "policyDeleteErrorMessage": "La stratégie n'a pas pu être supprimée.",
+    "policyUpdateErrorMessage": "La stratégie n'a pas pu être mise à jour.",
+    "policyCreateErrorMessage": "La stratégie n'a pas pu être créée.",
+    "busyLoading": "Stratégie de chargement en cours...",
+    "busyDeleting": "Suppression de la stratégie...",
+    "busyUpdating": "Mise à jour des stratégies...",
+    "busyCreating": "Création d'une stratégie...",
+    "appsLoadErrorMesage": "La demande n'a pas pu être traitée.",
+    "swTemplateLoadErrorMesage": "La demande n'a pas pu être traitée.",
+    "authenticatorsLoadErrorMesage": "La demande n'a pas pu être traitée.",
+    "policyLoadErrorMesage": "La demande n'a pas pu être traitée.",
+    "applicationExceptionDescription": "Ce paramètre remplace toutes les stratégies attribuées aux applications lorsqu'il est affecté à des utilisateurs ou à des groupes. Elle ne s'applique pas si une stratégie est affectée en tant que stratégie par défaut d'application."
+  }
+}

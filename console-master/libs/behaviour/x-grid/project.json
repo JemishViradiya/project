@@ -1,0 +1,37 @@
+{
+  "root": "libs/behaviour/x-grid",
+  "sourceRoot": "libs/behaviour/x-grid/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/behaviour/x-grid/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/behaviour/x-grid"],
+      "options": {
+        "jestConfig": "libs/behaviour/x-grid/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "port": 4400,
+        "config": {
+          "configFolder": "libs/behaviour/x-grid/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  },
+  "tags": ["scope:behaviour", "scope:cdn"]
+}

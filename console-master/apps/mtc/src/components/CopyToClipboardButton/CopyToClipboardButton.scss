@@ -1,0 +1,12 @@
+.icon-container {
+  width: 30px;
+  .clipboard-icon {
+    svg {
+      cursor: pointer;
+      fill: #babbc0;
+      &:hover {
+        fill: #03a5ef;
+      }
+    }
+  }
+}

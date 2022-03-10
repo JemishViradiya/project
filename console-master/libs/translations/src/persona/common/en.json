@@ -1,0 +1,122 @@
+{
+  "dashboard": {
+    "title": "CylancePERSONA"
+  },
+  "users": {
+    "title": "Persona users",
+    "sectionTitles": {
+      "assets": "Assets",
+      "userInfo": "User Info",
+      "personaAlerts": "CylancePERSONA Alerts",
+      "associatedDevices": "Associated Device ({{count}})",
+      "associatedDevices_plural": "Associated Devices ({{count}})",
+      "userTrustScoreLog": "User's Trust Score Log",
+      "cylancePersonaStatus": "CylancePERSONA Status"
+    },
+    "actions": {
+      "remove": "Remove",
+      "removeUserDescription": "Do you want to remove the selected user?",
+      "removeUserDescription_plural": "Do you want to remove the {{count}} selected users?",
+      "resetModelsDescription": "Do you want to reset the scoring model? The data that has been collected will be deleted."
+    },
+    "columns": {
+      "userName": "Username",
+      "state": "State",
+      "lastOnline": "Last Online",
+      "zones": "Zones"
+    },
+    "noData": "None found",
+    "state": {
+      "online": "Online",
+      "offline": "Offline"
+    },
+    "notifications": {
+      "removeUsersSuccess": "The user was removed.",
+      "removeUsersSuccess_plural": "The users were removed.",
+      "removeUsersError": "The user could not be removed.",
+      "removeUsersError_plural": "The users could not be removed.",
+      "dataUnavailableError": "Data is not available. Please try again later."
+    },
+    "tabs": {
+      "activeAlerts": "Active Alerts",
+      "alertHistory": "Alert History"
+    },
+    "detailsTitle": "User details"
+  },
+  "dialogs": {
+    "actionConfirmation": "Action confirmation"
+  },
+  "button": {
+    "cancel": "Cancel",
+    "remove": "Remove"
+  },
+  "tableColumns": "Table Columns",
+  "loading": "Loading...",
+  "personaEvents": {
+    "LogonModelStatus": "Logon Model Status",
+    "MetaModelScore": "Meta Model Score",
+    "MetaModelStatus": "Meta Model Status",
+    "UserTrustScore": "User Trust Score",
+    "Successful2FALogon": "Successful 2FA Logon",
+    "Failed2FALogon": "Failed 2FA Logon",
+    "UserFailedLogon": "User Failed Logon",
+    "ForcedStepUpAuthentication": "Forced Step-Up Authentication",
+    "MaliciousRuleHit": "Malicious Rule Hit"
+  },
+  "alertStatus": {
+    "New": "New",
+    "InProgress": "In Progress",
+    "FalsePositive": "False Positive",
+    "Reviewed": "Reviewed"
+  },
+  "personaSeverity": {
+    "info": "Info",
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "critical": "Critical"
+  },
+  "noData": "No items to display",
+  "currentCTS": "Current CTS",
+  "AssociatedUserOffline": "AssociatedUserOffline",
+  "ResumeScoring": "ResumeScoring",
+  "PauseScoring": "PauseScoring",
+  "ResetScoring": "ResetScoring",
+  "ResumeScoringAll": "ResumeScoringAll",
+  "PauseScoringAll": "PauseScoringAll",
+  "ResetScoringAll": "ResetScoringAll",
+  "personaModelStatus": {
+    "Training": "Training",
+    "Scoring": "Scoring",
+    "Paused": "Paused",
+    "Processing": "Processing"
+  },
+  "personaModelTypes": {
+    "TrustScore": "User's Trust Score",
+    "Meta": "Meta Model",
+    "Conduct": "Conduct",
+    "Process": "Process",
+    "Keyboard": "Keyboard",
+    "Mouse": "Mouse",
+    "Network": "Network",
+    "Logon": "Logon"
+  },
+  "personaModelButton": {
+    "AssociatedUserOffline": "Control is disabled because the user is offline",
+    "ResumeScoring": "Resume scoring",
+    "ResumeScoringAll": "Resume scoring on all",
+    "PauseScoring": "Pause scoring",
+    "PauseScoringAll": "Pause scoring on all",
+    "ResetScoring": "Reset scoring",
+    "ResetScoringAll": "Reset scoring on all"
+  },
+  "LastNDays": "Last {{count}} Day",
+  "LastNDays_plural": "Last {{count}} Days",
+  "LastNHrs": "Last {{count}} Hr",
+  "LastNHrs_plural": "Last {{count}} Hrs",
+  "Time": "Time",
+  "Score": "Score",
+  "NA": "NA",
+  "scoreDataUnavailableError": "Trust Score data is not available. Please try again later.",
+  "unknown": "Unknown"
+}

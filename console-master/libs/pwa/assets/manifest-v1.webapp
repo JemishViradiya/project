@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "name": "UES Console",
+  "description": "BlackBerry Unified Endpoint Security Console",
+  "icons": {
+    "60": "images/firefox_app_60x60.png",
+    "128": "images/firefox_app_128x128.png",
+    "512": "images/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "BlackBerry <contact@blackberry.com>",
+    "url": "https://www.blackberry.com/us/en/products/blackberry-spark-suites/ues"
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "policy": {
+    "pageTitle": "Avert",
+    "tabTitle": {
+      "mobile": "Mobile",
+      "content": "Contenu"
+    },
+    "serverError": {
+      "retrievePolicies": "{{error}}",
+      "deletePolicies": "Les stratégies n'ont pas pu être supprimées."
+    },
+    "table": {
+      "columns": {
+        "name": "Nom",
+        "description": "Description",
+        "policyType": "Type Politique",
+        "userCount": "Utilisateurs",
+        "groupCount": "Groupes",
+        "added": "Ajouté",
+        "modified": "Modifié",
+        "rank": "Classement"
+      },
+      "tableColumns": "Colonnes de table",
+      "noData": "Aucune donnée",
+      "filter": {
+        "name": "Par nom",
+        "description": "Par description"
+      }
+    },
+    "dialogs": {
+      "setAsDefault": {
+        "title": "Confirmation Définir comme défaut",
+        "cancelBtn": "Annuler",
+        "confirmBtn": "Enregistrer",
+        "question": "Souhaitez-vous installer la stratégie par défaut ?"
+      }
+    },
+    "buttons": {
+      "add": "Ajouter une Politique",
+      "delete": "Supprimer",
+      "cancel": "Annuler",
+      "save": "Enregistrer",
+      "continue": "Continuer",
+      "addNew": "Ajouter",
+      "confirm": "Oui",
+      "rejectConfirm": "Pas maintenant",
+      "leavePage": "Quitter la page",
+      "resendMail": "Envoyer",
+      "cancelResendMail": "Non"
+    },
+    "search": {
+      "results": "Résultats de {{value}}",
+      "placeholder": "Rechercher des stratégies"
+    },
+    "sections": {
+      "requiredInput": "Ce champ est obligatoire.",
+      "general": {
+        "title": "Informations générales",
+        "policyName": "Nom Politique",
+        "description": "Description",
+        "setDefaultPolicy": "Définir la stratégie par défaut",
+        "type": {
+          "title": "Type Politique",
+          "regulatory": "Réglementation",
+          "organizational": "organisationnel"
+        },
+        "info": {
+          "description": "Spécifiez le type de stratégie que vous souhaitez créer. Les politiques organisationnelles peuvent être utilisées pour protéger les informations propriétaires de votre organisation. Les politiques réglementaires peuvent être utilisées pour protéger les informations sensibles liées aux réglementations de l'industrie ou du gouvernement.",
+          "regulatoryDesc": "Lorsque plusieurs politiques réglementaires entrent en conflit pour un utilisateur, BlackBerry réconcilie automatiquement ces politiques en appliquant les éléments les plus restrictifs de toutes les politiques. Le nombre minimum d'occurrences de données sera sélectionné et l'action corrective la plus restrictive sera appliquée.",
+          "organizationalDesc": "Lorsque plusieurs stratégies organisationnelles entrent en conflit pour un utilisateur, BlackBerry réconcilie automatiquement ces stratégies en appliquant les éléments les moins restrictifs de toutes les stratégies. Le nombre maximum d'occurrences de données sera sélectionné et l'action corrective la moins restrictive sera appliquée."
+        }
+      },
+      "conditions": {
+        "title": "Conditions",
+        "addFromTemplateDialog": {
+          "description": "Vous pouvez utiliser des modèles prédéfinis dans les paramètres pour configurer la protection des types de données.",
+          "searchText": "Rechercher des modèles",
+          "confirmation": {
+            "title": "confirmation du modèle",
+            "description": "L'ajout d'un nouveau modèle remplacera les conditions existantes."
+          },
+          "noTemplatesDescription": "Vous n'avez ajouté aucun modèle. Accédez aux <0>paramètres Avert</0> pour ajouter des modèles prédéfinis à votre liste.",
+          "title": "Ajouter depuis un modèle"
+        },
+        "table": {
+          "name": "Nom",
+          "description": "Description",
+          "region": "Région"
+        },
+        "builder": {
+          "title": "Constructeur de conditions",
+          "condition": {
+            "and": "Et",
+            "or": "ou"
+          },
+          "label": "avec des occurrences minimales de",
+          "buttons": {
+            "addRule": "Ajouter un article",
+            "addGroup": "Ajouter un groupe",
+            "deleteGroup": "Supprimer le groupe"
+          },
+          "select": {
+            "placeholderText": "Sélectionnez le nom du type de données",
+            "searchText": "Rechercher"
+          },
+          "occurrences": {
+            "rangeText": "La valeur doit être comprise entre 1 et 10."
+          }
+        },
+        "description": "Définissez les données sensibles que vous souhaitez protéger et les conditions qui déclencheront une violation de stratégie. Vous pouvez commencer par utiliser l'un des modèles que vous avez sélectionnés dans <0>les paramètres</0> Avert ou créer votre propre stratégie personnalisée.",
+        "addFromTemplate": "Ajouter depuis un modèle"
+      },
+      "whitelist": {
+        "title": "Domaines de la liste blanche",
+        "name": "Domaine",
+        "description": "Description",
+        "paragraph": "Spécifiez quels domaines de navigateur peuvent être approuvés pour télécharger des fichiers en toute sécurité à partir de la liste que vous avez créée dans <0>les paramètres Avert</0>. La stratégie ne sera pas appliquée aux domaines autorisés."
+      },
+      "emailSettings": {
+        "title": "Paramètres de messagerie",
+        "noneDescription": "Aucun (par défaut) > Politique sera appliquée à tous les domaines de messagerie (internes et externes)",
+        "internalDomainsDescription": "Domaines internes > Politique ne sera appliquée qu'aux domaines externes",
+        "allDomainsDescription": "Tous les domaines > Politique ne seront pas appliqués. Les données sensibles peuvent être partagées par e-mail",
+        "helperText": "Détectez le moment où du contenu sensible est partagé par e-mail.",
+        "recipients": {
+          "none": "Aucun",
+          "internal": "Destinataires internes uniquement",
+          "all": "Tous les destinataires"
+        },
+        "description": "Spécifiez les destinataires d'e-mail auxquels vous pouvez faire confiance lors du partage de données sensibles en fonction de la liste des domaines de messagerie internes autorisés que vous avez créée dans <0>les paramètres Avert</0>. "
+      },
+      "actions": {
+        "policyRules": {
+          "ACTION_TYPE_NONE": "Aucun",
+          "ACTION_TYPE_ALERT": "Signaler et avertir",
+          "ACTIVITY_TYPE_BROWSER_UPLOAD": "Navigateurs Web (HTTP, HTTPS)",
+          "ACTIVITY_TYPE_USB_EXFILTRATE": "Rangement amovible",
+          "ACTIVITY_TYPE_SCREEN_CAPTURE": "Capture d'écran",
+          "ACTIVITY_TYPE_EMAIL_CLIENTS": "Clients de messagerie"
+        },
+        "title": "Actions",
+        "description": "Lorem Ipsum"
+      },
+      "domains": {
+        "dialogs": {
+          "title": "Ajouter un domaine sur liste blanche",
+          "description": "Vous pouvez utiliser plusieurs domaines sur liste blanche qui sont utilisés à haute voix conformément à cette stratégie. La liste initiale est configurée dans <5>les paramètres</5>",
+          "searchText": "Rechercher des domaines"
+        },
+        "addDomain": "Cliquez sur + pour ajouter des éléments."
+      },
+      "sparkMobileSettings": {
+        "policyConfigNames": {
+          "CONFIG_TYPE_ALLOW_COPY_BB_APPS_INTO_NON_BB_APPS": "Autoriser la copie des données des applications BlackBerry Spark vers des applications autres que BlackBerry Spark",
+          "CONFIG_TYPE_ALLOW_COPY_NON_BB_APPS_INTO_BB_APPS": "Autoriser la copie de données entre les applications BlackBerry Spark",
+          "CONFIG_TYPE_ALLOW_DICTATION": "Autoriser la dictée",
+          "CONFIG_TYPE_ALLOW_INSECURE_VIDEO": "Autoriser la capture d'écran et la sortie vidéo non sécurisée",
+          "CONFIG_TYPE_ALLOW_SCREEN_RECORDING": "Autoriser l'enregistrement et le partage de capture d'écran",
+          "CONFIG_TYPE_ALLOW_KEYBOARDS": "Autoriser les claviers personnalisés",
+          "CONFIG_TYPE_ADD_WATERMARK": "Afficher le filigrane",
+          "CONFIG_TYPE_ALLOW_RESTRICTED_MODE": "Activer le mode restreint du clavier Android"
+        },
+        "supportedOsTypesText": "Types d'OS pris en charge - ",
+        "title": "Réglages Mobile"
+      },
+      "iosSpecificSettings": {
+        "title": "Paramètres spécifiques à iOS",
+        "allowText": "Autoriser",
+        "screenshotsInText": "captures d'écran dans",
+        "intervalText": "jours",
+        "rangeText": "La valeur doit être comprise entre 1 et 14 jours."
+      }
+    },
+    "error": {
+      "delete": "La stratégie n'a pas pu être supprimée.",
+      "update": "La stratégie n'a pas pu être mise à jour. Erreur: {{error}} ",
+      "create": "La stratégie n'a pas pu être créée. Erreur : {{error}} "
+    },
+    "success": {
+      "create": "La stratégie a été créée.",
+      "delete": "La stratégie a été supprimée.",
+      "update": "La stratégie a été mise à jour."
+    },
+    "updateFormDeletePolicyTooltip": "Supprimer la stratégie",
+    "deletePolicyConfirmationDialogTitle": "confirmation de suppression",
+    "deletePolicyConfirmationDialogDesc": "Voulez-vous supprimer cette stratégie?",
+    "deleteNote": "Vous devez supprimer tous les utilisateurs et groupes associés à une stratégie avant de la supprimer.",
+    "createContentPolicyConfirmationTitle": "Attribuer la stratégie de contenu",
+    "createMobilePolicyConfirmationTitle": "Attribuer la stratégie Mobile",
+    "createPolicyConfirmationDescription": "La stratégie a été créée. Voulez-vous attribuer des utilisateurs ou des groupes à cette stratégie?",
+    "updatePolicyConfirmationTitle": "Renvoyer un e-mail aux utilisateurs",
+    "updatePolicyConfirmationDescription": "Voulez-vous renvoyer l'e-mail de bienvenue?",
+    "detail": {
+      "updated": "Mise à jour le {{date, datetime}}",
+      "settings": "Paramètres",
+      "assignedUsersAndGroups": "Utilisateurs et groupes affectés"
+    },
+    "modifiedPolicyConfirmationDialogTitle": "Modifications non enregistrées",
+    "modifiedPolicyConfirmationDialogDesc": "Voulez-vous quitter cette page? Vos modifications n'ont pas été enregistrées.",
+    "addPolicyWithType": "Ajouter une stratégie de protection des informations"
+  },
+  "navigation": {
+    "adaptiveResponse": {
+      "label": "Étiquette",
+      "componentHeader": {
+        "link": "Plus d'infos",
+        "paragraph": "Les politiques de contenu d'Avert sont utilisées pour détecter les données sensibles de votre organisation et vous protéger contre les partages non autorisés. En cas de conflit entre plusieurs stratégies pour un utilisateur, BlackBerry procédera automatiquement à la réconciliation en fonction du type de stratégie."
+      }
+    },
+    "title": "Politiques",
+    "mobile": {
+      "componentHeader": {
+        "paragraph": "Les paramètres Mobile s'appliquent à tous les types d'appareils, sauf indication contraire. Si plusieurs stratégies sont attribuées à un utilisateur, la stratégie la mieux classée est appliquée."
+      }
+    }
+  }
+}

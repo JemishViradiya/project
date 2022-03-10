@@ -1,0 +1,25 @@
+.page-header-container {
+  background: #ffffff;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: sticky;
+  top: 72px;
+  z-index: 4;
+  & > * {
+    height: 64px;
+    border-bottom: 1px solid #cdd0db;
+    padding-left: 24px;
+  }
+  h1 {
+    color: #5c5d66;
+    font-size: 28px;
+    text-transform: initial;
+    padding-left: 11px;
+    margin-top: 12px;
+  }
+
+  .form-submit-header button {
+    margin-top: 12px;
+    margin-right: 10px;
+  }
+}

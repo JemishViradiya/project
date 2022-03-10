@@ -1,0 +1,741 @@
+{
+  "on": "Sobre",
+  "off": "Apagado",
+  "form": {
+    "to": "a",
+    "selectValue": "- Seleccione -",
+    "success": "Exitosa"
+  },
+  "navigation": {
+    "gateway": "Portal",
+    "assets": "Bienes"
+  },
+  "noData": "Sin datos",
+  "chosenItems": "Artículos elegidos",
+  "button": {
+    "addLabel": "Añadir conexión",
+    "downloadActivationFile": "Descargar archivo de activación",
+    "saveAndNew": "Guardar y nuevo",
+    "settings": "Ajustes"
+  },
+  "sideNav": {
+    "companyDirectory": "Directorio de empresas",
+    "intune": "Microsoft Intune",
+    "users": "Usuarios",
+    "settings": "Ajustes",
+    "groups": "Grupos"
+  },
+  "onlineStatus": {
+    "false": "Offline",
+    "true": "En línea"
+  },
+  "directory": {
+    "description": "Configure los ajustes de sincronización e incorporación para los directorios de su empresa conectados. También puede agregar conexiones a Microsoft Azure Active Directory aquí. Para agregar conexiones a un directorio LDAP o Microsoft Active Directory local, debe instalar una instancia local de BlackBerry Connectivity Node y agregar las conexiones en la configuración del nodo de conectividad.",
+    "noConnections": "No se han configurado conexiones",
+    "azureConnection": {
+      "add": {
+        "header": "Añadir una conexión de directorio",
+        "page": {
+          "title": "Información general",
+          "description": "Cree una conexión de Microsoft Azure Directory con sus credenciales."
+        }
+      },
+      "edit": "Editar conexión de directorios",
+      "remove": "Quitar la conexión de Microsoft Azure Directory",
+      "sync": "Iniciar sincronización"
+    },
+    "tableHeader": {
+      "connection": "Conexión a directorios",
+      "type": "Tipo",
+      "lastSync": "Última sincronización",
+      "sync": "Programa de sincronización"
+    },
+    "tableTitle": "Conexiones de directorio",
+    "emptyTableMessage": "Haga clic en + para añadir artículos.",
+    "type": {
+      "AD": "Conexión de Microsoft Active Directory",
+      "AZURE": "Conexión de Microsoft Azure Active Directory",
+      "ACTIVE_DIRECTORY": "Conexión de Microsoft Active Directory",
+      "LDAP": "LDAP"
+    },
+    "error": {
+      "duplicateName": "Ya existe una conexión con este nombre.",
+      "createConnection": "No se ha podido crear la conexión.",
+      "deleteConnection": "No se ha podido eliminar la conexión.",
+      "duplicateSchedule": "Ya existe una conexión con este programa.",
+      "retrieveConnections": "No se han podido recuperar las conexiones.",
+      "syncStatus": "No se ha podido recuperar el estado de sincronización de directorios.",
+      "syncConnection": "No se ha podido completar la sincronización.",
+      "syncConnectionPreview": "No se ha podido completar la vista previa.",
+      "updateConnection": "No se ha podido actualizar la conexión.",
+      "syncCancel": "No se ha podido cancelar la sincronización de directorios.",
+      "connectionNotFound": "No se ha encontrado la conexión de directorio",
+      "connectionIsBCNInstance": "No se ha podido eliminar la conexión de directorio porque está asociada a una o varias instancias de BlackBerry Connectivity Node.",
+      "connectionIsInvalid": "La conexión de directorios no es válida.",
+      "connectionIsNotEmpty": "Debe quitar todos los usuarios y grupos asociados a la conexión de directorio antes de eliminarla."
+    },
+    "success": {
+      "deleteConnection": "Se ha eliminado la conexión."
+    },
+    "connectionName": "Nombre",
+    "domain": "Dominio",
+    "clientId": "ID de cliente",
+    "clientKey": "Clave de cliente",
+    "removeConnection": "Eliminar conexión",
+    "deleteConnectionDialog": {
+      "confirm": "¿Desea eliminar la conexión {{connectionName}} del directorio de su empresa?",
+      "deleteNote": "Debe quitar todos los usuarios y grupos asociados a una conexión antes de eliminarla."
+    },
+    "sync": {
+      "action": {
+        "start": "Iniciar sincronización",
+        "cancel": "Cancelar sincronización"
+      },
+      "dialogTitle": "Sincronizar directorio",
+      "confirm": "¿Desea sincronizar usuarios de directorios y grupos vinculados a directorios? Selecciona el tipo de sincronización que aparece a continuación para continuar.",
+      "state": {
+        "RUNNING": "En progreso",
+        "CANCELED": "Cancelado",
+        "FAILED": "Falló",
+        "SUCCEEDED": "Sucedido"
+      }
+    },
+    "syncSettings": {
+      "tab": "Ajustes de sincronización",
+      "description": "Configure los ajustes de sincronización de los grupos de directorios de la empresa.",
+      "onboarding": "Incorporar directorios",
+      "forceSync": "Sincronización forzada",
+      "limit": "Sync",
+      "limitDescription": "Establecer límite de sincronización (0 = sin límite)",
+      "nestingLevel": "Nivel de anidamiento",
+      "nestingLevelDescription": "Establecer el nivel máximo de anidamiento de los grupos de directorios (-1 = sin límite)",
+      "offboardingTitle": "Desembarque",
+      "offboardingDescriptionDetail": "Seleccione las acciones de cumplimiento que se van a llevar a cabo cuando se quiten usuarios de todos los grupos de directorios de incorporación.",
+      "offboarding": "Eliminar usuario cuando se elimina al usuario de todos los grupos de directorios de incorporación",
+      "offboardingProtection": "Protección de desembarque",
+      "onboardingTitle": "Incorporados"
+    },
+    "syncSchedule": {
+      "title": "Programa de sincronización",
+      "description": "Configure el programa de sincronización.",
+      "add": "Añadir programación",
+      "addNew": "Añadir programación de sincronización",
+      "days": "Días",
+      "everyNumMinutes": "Cada {{minutes}} minutos",
+      "interval": {
+        "interval": "Intervalo",
+        "onceADay": "Una vez al día",
+        "noRecurrence": "Sin recurrencia"
+      },
+      "remove": "Eliminar programación de sincronización",
+      "recurrence": "Recurrencia",
+      "setTime": "Ajustar hora *",
+      "scheduledDay": "Día programado",
+      "scheduledDays": "Días programados",
+      "syncBetween": "Sincronizar entre (UTC) *",
+      "syncGroups": {
+        "all": "Todos los usuarios y grupos",
+        "onboarding": "Incorporar grupos",
+        "linked": "Grupos vinculados a directorios",
+        "userAttributes": "Atributos usuario"
+      },
+      "tab": "Programa de sincronización",
+      "time": "Hora (UTC)",
+      "type": "Tipo de sincronización",
+      "emptyTableMessage": "Haga clic en + para añadir artículos."
+    },
+    "actions": {
+      "add": "Añadir nueva conexión"
+    }
+  },
+  "signOut": "Cerrar sesión",
+  "myAccount": "Mi cuenta",
+  "help": "Ayudar",
+  "signInLink": "Haz clic aquí para volver a iniciar sesión.",
+  "signedOutMessage": "Se ha cerrado la sesión.",
+  "signedOutSummary": "Se ha cerrado sesión",
+  "requestCanceled": "Solicitud cancelada",
+  "users": {
+    "actions": {
+      "add": "Añadir usuarios",
+      "delete": "Eliminar usuarios",
+      "deleteUserDescription": "¿Quieres eliminar usuarios de {{userCount}}?",
+      "expirePasscode": "Caducar contraseña",
+      "resendInvitation": "Reenviar invitación",
+      "resendInvitationDescription": "¿Quieres volver a enviar la invitación a los usuarios de {{userCount}}?"
+    },
+    "grid": {
+      "allUsers": "Usuarios",
+      "displayName": "Nombre",
+      "emailAddress": "Dirección de correo electrónico",
+      "user": "Usuario",
+      "deleteUsersTitle": "Eliminar usuarios",
+      "resendInvitationTitle": "Reenviar invitación",
+      "dataSource": {
+        "header": "Fuente"
+      },
+      "devices": "Dispositivos",
+      "passcodeExpiry": "Caducidad del código de acceso",
+      "expired": "Caducado",
+      "selectedCount": "{{value}} seleccionado",
+      "resultsCount": "{{value}} resultados"
+    },
+    "add": {
+      "title": "Añadir usuarios",
+      "userDetails": "Detalles del usuario",
+      "additionalUserDetails": "Detalles adicionales del usuario",
+      "search": "Buscar",
+      "addNewUser": "Añadir un nuevo usuario manualmente",
+      "userFoundTitle": "Se ha encontrado al usuario.",
+      "selectUserNote": "Por favor, elige una de las siguientes opciones.",
+      "userCreatedMessage": "Se ha creado el usuario.",
+      "groups": {
+        "heading": "Grupos",
+        "subHeading": "Asignar usuarios a grupos.",
+        "available": "Grupos disponibles",
+        "selectedGroups": "Grupos seleccionados"
+      },
+      "input": {
+        "search": "Escriba un nombre o dirección de correo electrónico",
+        "firstName": "Nombre",
+        "lastName": "Apellidos",
+        "displayName": "Nombre para mostrar",
+        "emailAddress": "Dirección de correo electrónico",
+        "department": "Departamento",
+        "title": "Título",
+        "company": "Nombre de la organización",
+        "companyPhoneNumber": "Teléfono de trabajo",
+        "homePhoneNumber": "Teléfono residencial",
+        "mobilePhoneNumber": "Mobile móvil",
+        "street": "Dirección",
+        "poBox": "Apartado postal",
+        "city": "Ciudad",
+        "state": "Estado/provincia",
+        "postalCode": "Código postal",
+        "country": "País"
+      },
+      "dataSource": {
+        "cur": "BlackBerry Online",
+        "azure": "Microsoft Azure",
+        "ldap": "LDAP",
+        "active_directory": "Active Directory"
+      },
+      "directoryHelp": {
+        "link": "Más información sobre cómo añadir usuarios de directorios"
+      },
+      "displayName": "{{firstName}} {{lastName}}",
+      "unsaved": {
+        "title": "Cambios no guardados",
+        "content": "¿Quieres salir de esta página? Los cambios no se han guardado"
+      }
+    },
+    "message": {
+      "noUsersFound": "No se han encontrado usuarios",
+      "success": {
+        "create": "Se ha creado el usuario.",
+        "delete": "Se ha eliminado al usuario.",
+        "deletePlural": "Se han eliminado los usuarios.",
+        "resendInvitation": "Las invitaciones se volvieron a enviar.",
+        "resendInvitationPartial": "Las invitaciones se volvieron a enviar. La invitación no se ha podido entregar a algunos usuarios."
+      },
+      "error": {
+        "fetch": "No se ha podido recuperar a los usuarios.",
+        "submit": "Error al enviar usuario",
+        "conflict": "El usuario ya existe.",
+        "delete": "No se ha podido eliminar al usuario.",
+        "resend": "No se han podido volver a enviar las invitaciones."
+      }
+    },
+    "delete": {
+      "title": "Eliminar usuario",
+      "description": "¿Quieres eliminar {{user}}?"
+    },
+    "expirePasscodes": {
+      "title": "Caducar contraseña",
+      "description": "¿Desea caducar el código de acceso de los usuarios de {{userCount}}?",
+      "success": "Los códigos de acceso han caducado.",
+      "error": "Los códigos de acceso no han caducado.",
+      "errorWithCount": "No se han podido caducar los códigos de acceso {{count}}."
+    },
+    "userTabs": "Pestañas de usuario",
+    "alertsTabs": "Pestañas Alertas",
+    "eventsTabs": "Pestañas Eventos",
+    "details": {
+      "title": "Datos de usuario",
+      "actions": {
+        "title": "Acciones",
+        "viewUserDetails": "Ver detalles del usuario",
+        "editUserDetails": "Editar datos de usuario",
+        "manageAssignments": "Administrar asignaciones",
+        "manageDevices": "Administrar dispositivos",
+        "generateStatusReport": "Generar informe de estado",
+        "deleteUser": "Eliminar usuario",
+        "removeTOTPEnrollment": "Eliminar la inscripción de TOTP"
+      },
+      "panels": {
+        "alerts": "Alertas",
+        "events": "Eventos",
+        "devices": "Dispositivos",
+        "configuration": "Configuración"
+      },
+      "events": {
+        "tabs": {
+          "identity": "Identidad",
+          "network": "Red"
+        },
+        "networkActivityTitle": "Actividad de red",
+        "networkEventsTitle": "Eventos de red"
+      },
+      "devices": {
+        "title": "Dispositivos",
+        "label": "Detalles Dispositivo para {{deviceName}}",
+        "agent": "Agente: {{agent}}",
+        "agentBundleId": {
+          "com_blackberry_protect": "Protección BlackBerry",
+          "com_blackberry_big": "Escritorio BlackBerry Gateway",
+          "com_blackberry_big1": "Escritorio BlackBerry Gateway",
+          "com_blackberry_big2": "Escritorio BlackBerry Gateway",
+          "com_blackberry_big3": "Escritorio BlackBerry Gateway"
+        },
+        "enrollmentDateTime": "Inscripción: {{enrollmentDateTime}}",
+        "error": {
+          "fetch": "No se han podido recuperar los dispositivos.",
+          "remove": "No se ha podido eliminar el dispositivo."
+        },
+        "actions": {
+          "remove": "Eliminar dispositivo"
+        },
+        "dialogs": {
+          "remove": {
+            "title": "Eliminar dispositivo",
+            "description": "¿Desea eliminar este dispositivo? Si elimina el dispositivo, el agente de puerta de enlace se desactivará."
+          }
+        },
+        "success": {
+          "remove": "Se ha eliminado el dispositivo."
+        }
+      },
+      "edit": {
+        "title": "Editar datos de usuario",
+        "error": "No se ha podido editar el usuario.",
+        "success": "Se ha editado el usuario."
+      },
+      "configuration": {
+        "groups": {
+          "title": "Grupos de usuarios asignados",
+          "description": "Asigne usuarios a grupos locales o de directorios.",
+          "assignButton": "Asignar grupos de usuarios",
+          "userGroupName": "Nombre",
+          "type": "Tipo",
+          "directoryGroup": "Grupo de directorios vinculados",
+          "localGroup": "Grupo local",
+          "dialogs": {
+            "assign": {
+              "title": "Asignar grupos de usuarios",
+              "description": "Busca el grupo que quieres asignar al usuario.",
+              "searchText": "Nombre del grupo"
+            },
+            "unassign": {
+              "title": "Anular asignación de grupo",
+              "description": "¿Desea anular la asignación de {{groupName}} de {{displayName}}?"
+            }
+          },
+          "success": {
+            "unassign": "El grupo fue desasignado.",
+            "assign": {
+              "single": "El grupo fue asignado.",
+              "multiple": "Los grupos fueron asignados."
+            }
+          },
+          "errors": {
+            "fetchUser": "No se han podido recuperar los grupos de usuarios.",
+            "unassign": "No se ha podido anular la asignación del grupo.",
+            "assign": "No se han podido asignar los grupos.",
+            "search": "No se han podido recuperar los resultados de la búsqueda."
+          }
+        },
+        "policies": {
+          "title": "Políticas de usuario asignadas",
+          "description": "Asigne políticas a los usuarios. Puede asignar directivas a los usuarios directamente o a los grupos de los que el usuario sea miembro.",
+          "assignButton": "Asignar políticas de usuario",
+          "policyName": "Nombre",
+          "policyType": "Tipo",
+          "assignment": "Cesión",
+          "assignedViaGroup": "Asignado al grupo",
+          "assignedViaOverride": "Asignado por anulación",
+          "assignedToUser": "Asignado al usuario",
+          "dialogs": {
+            "assign": {
+              "title": "Asignar una política",
+              "replaceTitle": "Reemplazar política",
+              "description": "Busque la política que desea asignar al usuario.",
+              "searchText": "Nombre de la política"
+            },
+            "unassign": {
+              "title": "Política de anular asignación",
+              "description": "¿Desea anular la asignación de {{policyName}} de {{displayName}}?"
+            }
+          },
+          "success": {
+            "unassign": "Se ha anular la asignación de la política.",
+            "assign": {
+              "single": "Se asignaron la política.",
+              "multiple": "Se asignaron las políticas."
+            }
+          },
+          "errors": {
+            "fetchPolicies": "No se han podido recuperar las directivas de usuario asignadas.",
+            "fetchUser": "No se han podido recuperar las directivas de usuario.",
+            "fetchAll": "No se han podido recuperar los tipos de directivas.",
+            "unassign": "No se ha podido anular la asignación de la política.",
+            "assign": "No se han podido asignar las políticas."
+          }
+        }
+      },
+      "error": {
+        "fetch": "No se ha podido recuperar al usuario."
+      }
+    },
+    "totp": {
+      "fetchError": "No se pudo recuperar la información de inscripción del TOTP.",
+      "removeError": "No se pudo eliminar la inscripción al TOTP.",
+      "removeSuccess": "Se ha eliminado la inscripción al TOTP."
+    },
+    "remove": {
+      "title": "Eliminar la inscripción de TOTP",
+      "description": "¿Quieres eliminar la inscripción de TOTP para {{user}}?"
+    }
+  },
+  "itemsSelected": "artículos seleccionados",
+  "filter": "Filtro",
+  "export": "Exportar",
+  "apply": "Aplicar",
+  "Users": "Usuarios",
+  "Customize columns": "Personalizar columnas",
+  "Reset": "Restablecer",
+  "Unselect": "Deseleccionar",
+  "Unselect All": "Deseleccionar todo",
+  "Select all entries": "Selecciona todas las entradas",
+  "{{start}} - {{stop}} of {{total}}": "{{start}} - {{stop}} de {{total}}",
+  "companyDirectoryConnection": "Conexión al directorio de la empresa",
+  "companyDirectoryDescription": "Configure la conexión a Microsoft Active Directory o LDAP para importar usuarios de directorios y sincronizar grupos de directorios.",
+  "groups": {
+    "title": "Grupos de usuarios",
+    "enableOnboarding": "Habilitar incorporacion de usuarios",
+    "disableOnboarding": "Deshabilitar incorporacion de usuarios",
+    "confirmOnboarding": "¿Desea deshabilitar la incorporación?",
+    "generalInformation": "Información general",
+    "groupName": "Nombre del grupo",
+    "directorySource": "Origen del directorio",
+    "directoryGroupName": "Nombre del grupo de directorios",
+    "description": "Descripción",
+    "onboarding": "Incorporados",
+    "nestedDirectoryGroups": "Grupos de directorios anidados",
+    "tabs": {
+      "settings": "Ajustes",
+      "users": "Usuarios"
+    },
+    "table": {
+      "columnPickerTitle": "Columnas de tabla",
+      "optionsTitle": "Grupos",
+      "groupName": "Nombre",
+      "numUsers": "Usuarios",
+      "assignedProfiles": "Políticas asignadas",
+      "onboarding": "Incorporados",
+      "directoryLink": "Enlace de directorio",
+      "addGroup": "Añadir grupo",
+      "addLocalGroup": "Grupo local",
+      "addDirectoryGroup": "Grupo de directorios",
+      "selectedCount": "{{value}} seleccionado",
+      "groupLoadFailure": "No se han podido recuperar los grupos."
+    },
+    "export": {
+      "title": "Exportar",
+      "description": "La exportación se generará en segundo plano.",
+      "everything": "Todo",
+      "currentFilters": "Filtros actuales",
+      "id": "ID",
+      "name": "Nombre",
+      "isOnboardingEnabled": "Incorporados",
+      "directoryLink": "Enlace de directorio",
+      "userCount": "Usuarios",
+      "groupExportFailure": "No se han podido exportar los grupos."
+    },
+    "add": {
+      "local": {
+        "title": "Añadir un grupo local",
+        "required": "Este campo es obligatorio."
+      },
+      "directory": {
+        "title": "Agregar grupo de directorios",
+        "searchPlaceholder": "Buscar un grupo de directorios"
+      }
+    },
+    "delete": {
+      "titleSingle": "Eliminar grupo",
+      "title": "Eliminar grupos",
+      "messageSingle": "¿Quieres eliminar {{name}}?",
+      "messageMultiple": "¿Desea eliminar los siguientes grupos?",
+      "note": "Usuarios no se eliminarán.",
+      "successMessage": "Se ha eliminado el grupo.",
+      "errorMessage404": "El grupo ya se ha eliminado.",
+      "errorMessage": "No se ha podido eliminar el grupo."
+    },
+    "create": {
+      "successMessage": "Se ha creado el grupo.",
+      "errorMessage": "No se ha podido crear el grupo."
+    },
+    "policyAssign": {
+      "policies": "Políticas",
+      "replace": "Reemplazar política",
+      "assign": "Asignar política",
+      "addPolicy": "Añadir política",
+      "policy": "Política",
+      "notSelectedError": "Debe seleccionarse al menos una política.",
+      "name": "Nombre",
+      "typeColumn": "Tipo",
+      "description": "Descripción",
+      "placeholder": "Haga clic en + para añadir artículos.",
+      "removePolicy": "Quitar política",
+      "removePolicyNote": "¿Desea quitar la política {{name}} {{type}} del grupo?",
+      "type": {
+        "NetworkAccessControl": "Control de acceso a redes",
+        "MTD": "Protect Mobile",
+        "ENROLLMENT": "Inscripción",
+        "role": "Función",
+        "BisPolicy": "Respuesta adaptativa",
+        "ACTIVATION": "Activación",
+        "GatewayApp": "Servicio Gateway",
+        "PrivateInternet": "Internet privado",
+        "policy": "Autentificación",
+        "BisDetectionPolicy": "Evaluación de riesgos",
+        "DLP": "BlackBerry Avert",
+        "MOBILE": "Avert Mobile",
+        "CONTENT": "Contenido de Avert"
+      },
+      "errorAssignMessage": "No se han podido asignar las políticas.",
+      "errorUnassignMessage": "No se ha podido anular la asignación de las directivas."
+    },
+    "update": {
+      "successMessage": "Se ha actualizado el grupo.",
+      "errorMessage": "No se ha podido actualizar el grupo."
+    },
+    "usersTable": {
+      "displayName": "Nombre",
+      "emailAddress": "Correo",
+      "addUser": "Añadir usuario",
+      "loadFailure": "No se ha podido recuperar a los usuarios.",
+      "searchPlaceholder": "Nombre",
+      "addUserTitle": "Añadir usuarios a {{name}}",
+      "addUserSuccess": "Se han añadido los usuarios.",
+      "addUserError": "No se han podido añadir los usuarios al grupo.",
+      "delete": {
+        "title": "Eliminar usuarios",
+        "message": "¿Desea quitar del grupo a los siguientes usuarios?",
+        "successMessage": "Se han eliminado los usuarios.",
+        "errorMessage": "No se ha podido quitar a los usuarios del grupo."
+      }
+    },
+    "titleDetails": "Detalles del grupo de usuarios"
+  },
+  "activationProfile": {
+    "list": {
+      "title": "Política de inscripción",
+      "addProfile": "Añadir política",
+      "name": "Nombre de la política",
+      "description": "Descripción",
+      "users": "Usuarios aplicados",
+      "groups": "Grupos aplicados",
+      "deleteSingle": "¿Quieres eliminar la política de {{profile}}?",
+      "multipleDelete": "¿Desea eliminar estas políticas?",
+      "singleDeleteFailure": "No se ha podido eliminar la directiva porque tiene asignados usuarios o grupos.",
+      "deleteFailure": "No se ha podido eliminar la política.",
+      "multipleDeleteFailure": "No se han podido eliminar las siguientes directivas porque están asignadas a usuarios o grupos:",
+      "pageDescription": "Agregue una política para permitir a los usuarios activar la aplicación BlackBerry Protect en dispositivos móviles y el agente de BlackBerry Gateway en dispositivos Windows y macOS.",
+      "invalidEmailMessage": "El mensaje de bienvenida no es válido. Compruebe que el formato y la sintaxis del mensaje sean correctos."
+    },
+    "add": {
+      "title": "Agregar política de inscripción",
+      "successMessage": "Se ha creado la política."
+    },
+    "copy": {
+      "title": "Política de inscripción de copias"
+    },
+    "edit": {
+      "title": "Editar política de inscripción",
+      "successMessage": "La política se ha actualizado."
+    },
+    "assignments": {
+      "add": "Añadir usuario o grupo",
+      "name": "Nombre",
+      "email": "Correo"
+    },
+    "delete": {
+      "title": "Confirmación Eliminar",
+      "content": "¿Quieres eliminar la política de {{profile}}?",
+      "note": "Debe quitar todos los usuarios y grupos asociados a una política antes de eliminarla.",
+      "successMessage": "Se ha eliminado la política."
+    },
+    "form": {
+      "generalInfo": "Información general",
+      "name": "Nombre*",
+      "description": "Descripción",
+      "email": "Correo",
+      "mobileTab": "Móviles",
+      "gatewayTab": "Escritorio Gateway",
+      "allowedPlatforms": "Plataformas permitidas",
+      "mobileIos": "iOS",
+      "mobileAndroid": "Android",
+      "desktopWin": "Windows",
+      "desktopMac": "macOS",
+      "required": "Este campo es obligatorio.",
+      "nameExists": "Ya existe una política con este nombre.",
+      "subject": "Asunto*",
+      "message": "Mensaje*",
+      "mobileWelcomeLabel": "Correo de bienvenida de UES Mobile",
+      "desktopWelcomeLabel": "Correo electrónico de bienvenida",
+      "settings": "Ajustes"
+    },
+    "unsaved": {
+      "title": "Cambios no guardados",
+      "content": "¿Quieres salir de esta página? Los cambios no se han guardado.",
+      "submit": "Abandonar página"
+    },
+    "editResendEmailConfirmation": {
+      "title": "Reenviar correo electrónico a los usuarios",
+      "content": "¿Desea volver a enviar el correo de bienvenida?"
+    },
+    "assignCreatedPolicyConfirmation": {
+      "title": "Asignar la política de inscripción",
+      "description": "Se ha creado la política. ¿Desea asignar usuarios o grupos a esta política?",
+      "notNow": "Ahora no"
+    }
+  },
+  "addGroup": "Agregar grupo",
+  "addDirectoryGroup": "Agregar grupo de directorios",
+  "addLocalGroup": "Agregar grupo local",
+  "alerts": {
+    "title": "Portal",
+    "table": {
+      "title": "Alertas"
+    },
+    "gatewayAlertTitle": "Alertas",
+    "gatewayNetworkBehaviorAlertTitle": "Alertas de comportamiento de red",
+    "mtdPageTitle": "Alertas de Protect Mobile"
+  },
+  "bcn": {
+    "generate": {
+      "pageTitle": "Agregar un nodo de conectividad de BlackBerry",
+      "title": "Instalación de BlackBerry Connectivity Node",
+      "bcnStep1Title": "Paso 1: Descargue e instale BlackBerry Connectivity Node",
+      "bcnStep2Title": "Paso 2: Generar y descargar el archivo de activación",
+      "bcnStep2Description": "Genere las credenciales de activación para permitir la comunicación entre BlackBerry Connectivity Node y BlackBerry UES. Las credenciales de activación solo se pueden utilizar una vez y son válidas durante 60 minutos después de su creación.",
+      "bcnStep3Title": "Paso 3: Instalar y configurar BlackBerry Connectivity Node",
+      "bcnStep3Description": "Ejecute la aplicación de configuración de BlackBerry UES con la opción BlackBerry Connectivity Node. Una vez finalizado el proceso de instalación, abra y configure BlackBerry Connectivity Node."
+    },
+    "table": {
+      "serverName": "Nombre del servidor",
+      "activationDate": "Fecha de activación",
+      "service": "Servicio",
+      "status": "Estado",
+      "version": "Versión",
+      "tableDescription": "",
+      "removeServer": "Quitar servidor",
+      "removePopperText": "¿Desea eliminar el servidor {{serverName}}?",
+      "infrastructureStatus": "Estado de la infraestructura: {{numberOfActiveConnections}} de {{numberOfConnections}} activo",
+      "emptyMessage": "Haga clic en + para añadir artículos.",
+      "emptyServices": "Sin datos",
+      "description": "Agregue y administre instancias locales de BlackBerry Connectivity Node. Debe instalar BlackBerry Connectivity Node para agregar conexiones a un directorio LDAP o Microsoft Active Directory local. Después de agregar conexiones a un directorio local, configure la configuración de sincronización e incorporación del directorio en la configuración de Conexión de directorios.",
+      "buttons": {
+        "add": "Añadir nodo de conectividad",
+        "settings": "Ajustes"
+      },
+      "actions": {
+        "deleteButtonLabel": "Eliminar BlackBerry Connectivity Node"
+      },
+      "delete": {
+        "title": "Confirma la eliminación.",
+        "description": "Esta acción eliminará este BlackBerry Connectivity Node.",
+        "content": "¿Quieres eliminar {{name}}?"
+      },
+      "serviceStatus": {
+        "paused": "Pausa",
+        "running": "En ejecución"
+      }
+    },
+    "settings": {
+      "pageTitle": "Editar configuración del nodo Conectividad",
+      "pageViewTitle": "Ver configuración del nodo Conectividad",
+      "title": "Registro de nodos de conectividad",
+      "bcnLoggingDescription": "Especifique el nivel de registro, la información de Syslog y la información del archivo local para los eventos de BlackBerry Connectivity Node.",
+      "debugLevelInput": "Nivel de depuración del servidor",
+      "validation": {
+        "emptyField": "{{fieldName}} es obligatorio.",
+        "outOfRange": "El valor debe estar comprendido entre {{min}} y {{max}}.",
+        "invalidField": "{{fieldName}} no es válido.",
+        "noNumbers": "{{fieldName}} no puede contener números."
+      },
+      "debugLevels": {
+        "error": "Error",
+        "warn": "Advierte",
+        "info": "Información",
+        "debug": "Depurar",
+        "trace": "Traza"
+      },
+      "helperText": {
+        "host": "Especifique la dirección URL del servidor SysLog.",
+        "port": "Especifique el puerto del servidor SysLog.",
+        "maximumLogFileSize": "Especifique, en MB, el tamaño máximo del archivo de registro.",
+        "maximumServerLogFileAge": "Especifique, en días, la antigüedad máxima del archivo de registro del servidor."
+      },
+      "serverLogDebugLevels": "Niveles de depuración del registro del",
+      "sysLog": "SysLog",
+      "host": "Anfitrión",
+      "port": "Puerto",
+      "enableLocalFileDestination": "Habilitar destino de archivo local",
+      "maximumLogFileSize": "Tamaño máximo del archivo de registro",
+      "maximumServerLogFileAge": "Antigüedad máxima del archivo log del servidor",
+      "enableLoggingFolderCompression": "Habilitar compresión de carpetas de registro",
+      "pageDetailsTitle": "Detalles de BlackBerry Connectivity Node"
+    },
+    "errors": {
+      "errorGettingBCN": "No se ha podido conectar a BlackBerry Connectivity Node.",
+      "errorDeletingBCN": "No se ha podido eliminar BlackBerry Connectivity Node.",
+      "errorGettingBCNSettings": "No se ha podido recuperar BlackBerry Connectivity Node.",
+      "errorUpdatingSettings": "No se ha podido actualizar la configuración de BlackBerry Connectivity Node."
+    },
+    "success": {
+      "delete": "Se ha eliminado el nodo BlackBerry Connectivity."
+    }
+  },
+  "genericErrorMessage": "Se ha producido un error. Inténtalo de nuevo.",
+  "noPermission": "permiso denegado",
+  "noAccessMessage": "No tienes permiso para ver este recurso.",
+  "SettingsLabel": "Ajustes",
+  "activationSettings": {
+    "title": {
+      "settings": "Ajustes",
+      "activation": "Activación"
+    },
+    "subTitle": "Configuración de activación",
+    "passcodeTtl": {
+      "label": "Caducidad contraseña",
+      "helpLabel": "Especifique, en días, cuándo caduca la contraseña de activación. El período de caducidad debe estar comprendido entre {{min}} y {{max}} días.",
+      "error": {
+        "required": "Este campo es obligatorio.",
+        "outOfRange": "El valor debe estar comprendido entre {{min}} y {{max}}."
+      }
+    },
+    "success": {
+      "update": "Se ha actualizado la configuración de activación."
+    },
+    "error": {
+      "errorGettingPasscodeTtl": "No se ha podido recuperar la configuración de activación.",
+      "errorUpdatingPasscodeTtl": "No se ha podido actualizar la configuración de activación."
+    }
+  },
+  "message": {
+    "requestAccepted": "Es posible que su solicitud demore algún tiempo en procesarse en segundo plano. Puedes salir de esta página."
+  },
+  "companyDirectoryConnectionDetails": "Detalles de conexión del directorio de empresa"
+}

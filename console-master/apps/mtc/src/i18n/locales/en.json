@@ -1,0 +1,59 @@
+{
+  "global": {
+    "cancel": "Cancel"
+  },
+  "tenant": {
+    "activeTenant": "Active Tenants",
+    "pending": "Pending",
+    "shutdownList": "Shutdown List",
+    "tenantConversion": "Tenant Conversion",
+    "editTenant": {
+      "successMessage": "Tenant info successfully edited.",
+      "errorMessage": "Editing tenant info failed.",
+      "customDomainErrorMessage": "Custom Domain is not unique.",
+      "notUniqueErrorMessage": "Tenant Name is not unique."
+    }
+  },
+  "partnerAppForm": {
+    "helperText": {
+      "permissionAndName": "An application name and at least one permission is required.",
+      "permission": "At least one permission is required.",
+      "name": "An application name is required."
+    },
+    "tableData": {
+      "titles": {
+        "policyTemplate": "Policy Template",
+        "tenant": "Tenant",
+        "partnerUser": "Partner User",
+        "apiManagement": "Tenant API Management",
+        "reports": "Custom Reports"
+      },
+      "titlesColumn": {
+        "list": "LIST",
+        "details": "DETAILS",
+        "manage": "MANAGE",
+        "delete": "DELETE",
+        "read": "READ"
+      }
+    },
+    "buttonTitle": {
+      "finish": "Save & Finish",
+      "changes": "Save Changes",
+      "edit": "Edit",
+      "credientials": "Regenerate Credientials",
+      "cancel": "Cancel"
+    },
+    "pageTitle": {
+      "configure": "Configure Partner App",
+      "edit": "Edit Partner App",
+      "view": "View Partner App"
+    },
+    "name": "Application Name"
+  },
+  "optionTypeSelect": {
+    "menuItemTitle": "Select Type"
+  },
+  "selectionList": {
+    "noResult": "No Result"
+  }
+}

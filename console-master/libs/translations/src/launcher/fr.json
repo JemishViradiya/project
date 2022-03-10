@@ -1,0 +1,8 @@
+{
+  "sessionExpiredTitle": "La session a expiré",
+  "sessionExpiredMessage": "Votre session a expiré.",
+  "help": "Aidez-moi",
+  "tenant": "Locataire",
+  "sessionStartTitle": "Connectez-vous",
+  "sessionStartAction": "Connectez-vous"
+}

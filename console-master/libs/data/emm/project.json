@@ -1,0 +1,22 @@
+{
+  "root": "libs/data/emm",
+  "sourceRoot": "libs/data/emm/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/data/emm/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/data/emm"],
+      "options": {
+        "jestConfig": "libs/data/emm/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

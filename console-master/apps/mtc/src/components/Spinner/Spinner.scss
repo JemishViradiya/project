@@ -1,0 +1,18 @@
+.spinner {
+  display: flex;
+  margin-left: -12px;
+  .spinner-text {
+    display: flex;
+    margin: auto 0;
+    p {
+      font-size: 16px;
+      display: flex;
+    }
+  }
+  .MuiCircularProgress-root {
+    margin-top: -15px;
+  }
+  .warning-text {
+    color: #e10024;
+  }
+}

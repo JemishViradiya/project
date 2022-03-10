@@ -1,0 +1,69 @@
+{
+  "common": {
+    "save": "Salva",
+    "cancel": "Annulla",
+    "add": "Inserisci",
+    "errorPleaseContact": "Si è verificato un errore. Riprova o contatta l'amministratore.",
+    "description": "Descrizione",
+    "risk": "rischio",
+    "settings": "Impostazioni",
+    "delete": "Elimina",
+    "descriptionInvalid": "La descrizione deve essere di {{max}} caratteri o meno.",
+    "errorFieldRequired": "Questo campo è obbligatorio",
+    "errorInvalidName": "Nome non valido",
+    "nameInvalid": "Il nome deve essere di {{max}} caratteri o meno.",
+    "automaticRiskReduction": "Riduzione automatica del rischio"
+  },
+  "risk": {
+    "common": {
+      "identityRisk": "Rischio d'identità",
+      "identityRiskResponseActions": "Azioni di risposta al rischio identità",
+      "networkAnomaly": "Anomalia di rete",
+      "generalInfo": "Informazioni generali"
+    },
+    "label": {
+      "low": "Rischio basso",
+      "medium": "Rischio medio",
+      "high": "Rischio elevato",
+      "critical": "Rischio critico"
+    },
+    "level": {
+      "CRITICAL": "Critico",
+      "HIGH": "Alto",
+      "MEDIUM": "Medium",
+      "LOW": "Basso",
+      "TRAINING": "Allenamento",
+      "UNKNOWN": "Sconosciuto",
+      "UNTRUSTED": "Non attendibile",
+      "UNDETECTED": "Non rilevato",
+      "UNDEFINED": "Indefinito",
+      "TRUSTED": "Affidabile",
+      "AT_RISK": "A rischio",
+      "SAFE": "Sicuro",
+      "SECURED": "Sicuro"
+    }
+  },
+  "arr": {
+    "challengeState": {
+      "deny": "Rifinito dall'utente",
+      "failed": "Errore - Non completato",
+      "in_progress": "In corso",
+      "no_mfa": "Non abilitato nel criterio",
+      "ok": "Verificato",
+      "timeout": "Timeout",
+      "unknown": "Errore - Non completato",
+      "mfa_skipped": "Bypassato",
+      "fraud": "Frode"
+    }
+  },
+  "policies": {
+    "create": {
+      "error": "Non è stato possibile creare la politica."
+    },
+    "details": {
+      "errorSave": "Il criterio non può essere salvato.",
+      "errorDelete": "Non è stato possibile eliminare il criterio.",
+      "errorServerNameAlreadyExists": "Esiste già un criterio con questo nome."
+    }
+  }
+}

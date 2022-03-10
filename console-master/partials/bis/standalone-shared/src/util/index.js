@@ -1,0 +1,1 @@
+export { throwServerError } from './errorHelper'

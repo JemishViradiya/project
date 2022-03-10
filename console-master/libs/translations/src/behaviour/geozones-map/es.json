@@ -1,0 +1,39 @@
+{
+  "operationBar": {
+    "search": {
+      "input": "Buscar una ubicación",
+      "iconAriaLabel": "Buscar"
+    },
+    "draw": {
+      "circle": "Crear radio de geozona",
+      "polygon": "Crear forma de geozona"
+    }
+  },
+  "popupGeozone": {
+    "titleCircle": "Radio de geozona",
+    "titlePolygon": "Forma de geozona",
+    "inputName": "Nombre",
+    "inputRadius": "Radio",
+    "inputUnit": "Unidad",
+    "labelSize": "Tamaño: {{value}} {{unit}}",
+    "buttonRemoveAriaLabel": "Quitar",
+    "buttonCancel": "Cancelar",
+    "buttonSave": "Guardar",
+    "units": {
+      "km": "km",
+      "miles": "millas"
+    },
+    "errors": {
+      "invalidName": "Nombre no válido",
+      "invalidRadius": "Radio no válido"
+    }
+  },
+  "popupDrawOptions": {
+    "polygonOption": "Dibujar una forma de geozona",
+    "circleOption": "Dibujar un radio de geozona"
+  },
+  "marker": {
+    "zoneAriaLabel": "Marcador de zona: {{name}}",
+    "searchAriaLabel": "Pin de búsqueda: {{name}}"
+  }
+}

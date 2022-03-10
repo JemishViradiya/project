@@ -1,0 +1,52 @@
+.input-container {
+  & > div {
+    position: relative;
+  }
+
+  input {
+    white-space: nowrap;
+    margin-top: 0;
+    border-radius: 0;
+    height: 40px;
+    border: 1px solid #cdd0db;
+    min-width: 0;
+    min-height: 40px;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding-left: 8px;
+
+    &:disabled {
+      background: #f5f5f6;
+      border: 1px solid #cdd0db;
+      font-size: 14px;
+      color: #babbc0;
+      letter-spacing: 0;
+      line-height: 20px;
+      opacity: 1;
+    }
+  }
+
+  span.error {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 100%;
+    background: #e66a5e;
+    color: #fff;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  label {
+    font-size: 14px;
+    color: #5c5d66;
+    letter-spacing: 0;
+    line-height: 20px;
+    font-weight: 700;
+    padding-top: 8px;
+  }
+}

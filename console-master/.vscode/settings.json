@@ -1,0 +1,80 @@
+{
+  "files.exclude": {
+    "tmp": true,
+    "tsc-out": true,
+    "dist": true,
+    "prod": true,
+    "docs": true,
+    "pact": true,
+    "test-results": true,
+    "cypress-results": true,
+    "codeceptjs-results": true,
+    "**/node_modules": true,
+    "**/.nyc_output": true
+  },
+  "copyrighter.author": "BlackBerry Ltd",
+  "copyrighter.note": "BlackBerry Limited proprietary and confidential. \n *   Do not reproduce without permission in writing.",
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": false
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": false,
+  "eslint.lintTask.options": "--ignore-pattern node_modules .",
+  "eslint.nodeEnv": "development",
+  "eslint.packageManager": "yarn",
+  "eslint.runtime": "node",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.workingDirectories": [
+    {
+      "pattern": "apps/*"
+    },
+    {
+      "pattern": "libs/*"
+    },
+    {
+      "pattern": "libs/behaviour/*"
+    },
+    {
+      "pattern": "partials/*/*"
+    }
+  ],
+  "prettier.configPath": ".prettierrc",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "/dist/**": true,
+    "/prod/**": true,
+    "**/out-tsc/**": true,
+    "**/.nyc_output/**": true,
+    "/*-results/**": true,
+    "/pact": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "codetogether.backendUrl": "https://code-together-poc01.stack71.softwaretools.bblabs/",
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": false,
+  "javascript.inlayHints.enumMemberValues.enabled": false,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.check.npmIsInstalled": false,
+  "typescript.preferences.importModuleSpecifier": "project-relative"
+}

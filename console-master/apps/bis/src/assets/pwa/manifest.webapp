@@ -1,0 +1,14 @@
+{
+  "version": "3.1.0",
+  "name": "BlackBerry Persona Analytics",
+  "description": "client",
+  "icons": {
+    "60": "images/firefox_app_60x60.png",
+    "128": "images/firefox_app_128x128.png",
+    "512": "images/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "BlackBerry Inc.",
+    "url": "https://www.blackberry.com"
+  }
+}

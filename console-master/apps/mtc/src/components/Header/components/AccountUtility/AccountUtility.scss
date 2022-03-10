@@ -1,0 +1,64 @@
+#account-utility-menu-dropdown {
+  padding-top: 22px;
+  text-align: center;
+  border-left: 2px solid #3d4144;
+  border-top: none;
+  z-index: 1002;
+  height: 64px;
+  .icon-user {
+    color: #babbc0;
+    font-size: 24px;
+  }
+  i {
+    display: none;
+  }
+  .menu {
+    right: 0;
+    left: auto;
+    border-top: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #141618;
+    .item {
+      .text,
+      a {
+        list-style: none;
+        text-align: left;
+        font-size: 16px;
+        height: 24px;
+        font-weight: 300;
+        color: #fff;
+      }
+      &:hover:not(.username) {
+        background-color: #35393f;
+      }
+      &.username {
+        font-weight: 600;
+        color: #fff;
+        cursor: default;
+      }
+      a,
+      p {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0.78571429rem 1.14285714rem !important;
+      }
+    }
+  }
+  &.toggle-open {
+    background-color: #131618;
+    .menu {
+      display: block;
+    }
+    .icon-user {
+      color: #fff;
+    }
+  }
+  &.toggle-close {
+    .menu {
+      display: none !important;
+    }
+  }
+}

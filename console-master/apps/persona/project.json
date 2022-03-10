@@ -1,0 +1,94 @@
+{
+  "root": "apps/persona",
+  "sourceRoot": "apps/persona/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "options": {
+        "baseHref": "..",
+        "deployUrl": "uc/persona/",
+        "outputPath": "dist/uc/persona",
+        "index": "tools/index.html",
+        "main": "apps/persona/src/main.tsx",
+        "polyfills": "libs/behaviour/app-shell/src/polyfills.ts",
+        "tsConfig": "apps/persona/tsconfig.app.json",
+        "assets": [],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "tools/webpack/app",
+        "maxWorkers": 1,
+        "memoryLimit": 1024
+      },
+      "configurations": {
+        "production": {
+          "outputPath": "prod/persona",
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            }
+          ],
+          "maxWorkers": 1,
+          "memoryLimit": 2048
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "persona:build",
+        "hmr": true,
+        "ssl": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "persona:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/persona/**/*.js",
+          "apps/persona/**/*.jsx",
+          "apps/persona/**/*.ts",
+          "apps/persona/**/*.tsx",
+          "tools/nx/typings/image.d.ts",
+          "apps/persona/**/*.spec.ts",
+          "apps/persona/**/*.spec.tsx",
+          "apps/persona/**/*.spec.js",
+          "apps/persona/**/*.spec.jsx",
+          "apps/persona/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/persona/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/apps/persona"]
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/app.sh persona"
+      }
+    }
+  },
+  "tags": ["scope:app"],
+  "implicitDependencies": ["api", "pwa"]
+}

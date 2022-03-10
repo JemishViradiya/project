@@ -1,0 +1,6 @@
+{
+  "name": "@ues-data/persona",
+  "version": "0.0.1",
+  "sideEffects": true,
+  "module": "./src/index.ts"
+}

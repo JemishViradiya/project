@@ -1,0 +1,26 @@
+@import '../../theme/theme.less';
+
+.viewModeButton {
+  background: @backgroundLight;
+  border: 1px solid @colorButtonBorder;
+  font-size: @fontSizeIcon;
+  line-height: @fontSizeIcon;
+  margin: 5px 0 5px 5px;
+  box-sizing: content-box;
+  padding: 2px 8px;
+  cursor: pointer;
+  transition: color @animHoverDuration @animHoverTimingFn;
+
+  &:hover {
+    color: @colorLink;
+  }
+}
+
+.viewModeButton + .viewModeButton {
+  border-left: none;
+  margin-left: 0;
+}
+
+.active {
+  color: @colorLink;
+}

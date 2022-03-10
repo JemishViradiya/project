@@ -1,0 +1,27 @@
+{
+  "extends": ["../../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*", "node_modules/**"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "parserOptions": {
+        "project": ["partials/console-integration/integration/tsconfig.*?.json"]
+      },
+      "rules": {}
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {}
+    }
+  ],
+  "plugins": ["codeceptjs"],
+  "rules": {
+    "codeceptjs/no-pause-in-scenario": "error",
+    "codeceptjs/no-skipped-tests": "warn",
+    "react-hooks/rules-of-hooks": "off"
+  }
+}

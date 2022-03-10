@@ -1,0 +1,25 @@
+{
+  "root": "partials/mtd/dashboard",
+  "sourceRoot": "partials/mtd/dashboard/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/mtd/dashboard/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/mtd/dashboard"],
+      "options": {
+        "jestConfig": "partials/mtd/dashboard/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  },
+  "tags": ["scope:partial", "scope:mtd"]
+}

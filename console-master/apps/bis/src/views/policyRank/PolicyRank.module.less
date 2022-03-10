@@ -1,0 +1,56 @@
+@import '../../theme/theme.less';
+
+.tableContainer {
+  composes: .mui.typography[ @body1];
+  min-height: 0;
+  flex: 1 1 0;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: left;
+  border: solid 1px @colorButtonBorder;
+  padding: 32px;
+  margin: 32px 32px 20px;
+
+  & > p {
+    margin-bottom: 32px;
+  }
+}
+
+.rankTable {
+  overflow-y: auto;
+  border: solid 1px @colorButtonBorder;
+}
+
+.mainContent {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1;
+}
+
+.saveConfirmation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 24px;
+  font-weight: bold;
+}
+
+.successIcon {
+  color: @colorFontSuccess;
+}
+
+.failureIcon {
+  color: @colorFontError;
+}
+
+.successIcon,
+.failureIcon {
+  display: flex;
+  align-items: center;
+  font-size: @fontSizeIcon;
+  margin-right: 0.25em;
+}
+
+.invisible {
+  visibility: hidden;
+}

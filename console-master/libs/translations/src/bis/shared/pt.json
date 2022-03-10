@@ -1,0 +1,69 @@
+{
+  "common": {
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "add": "Adicionar",
+    "errorPleaseContact": "Ocorreu um erro. Tente novamente ou entre em contato com o administrador.",
+    "description": "Descrição",
+    "risk": "risco",
+    "settings": "Definições",
+    "delete": "Excluir",
+    "descriptionInvalid": "A descrição deve ter {{max}} caracteres ou menos.",
+    "errorFieldRequired": "Este campo é obrigatório",
+    "errorInvalidName": "Nome inválido",
+    "nameInvalid": "O nome deve ter {{max}} caracteres ou menos.",
+    "automaticRiskReduction": "Redução automática de riscos"
+  },
+  "risk": {
+    "common": {
+      "identityRisk": "Risco de identidade",
+      "identityRiskResponseActions": "Ações de resposta ao risco de identidade",
+      "networkAnomaly": "Anomalia de rede",
+      "generalInfo": "Informações gerais"
+    },
+    "label": {
+      "low": "Baixo risco",
+      "medium": "Risco médio",
+      "high": "Alto risco",
+      "critical": "Risco crítico"
+    },
+    "level": {
+      "CRITICAL": "Crítico",
+      "HIGH": "Alto",
+      "MEDIUM": "Médio",
+      "LOW": "Baixo",
+      "TRAINING": "Treinamento",
+      "UNKNOWN": "Desconhecido",
+      "UNTRUSTED": "Não confiável",
+      "UNDETECTED": "Não detectado",
+      "UNDEFINED": "Indefinido",
+      "TRUSTED": "Confiável",
+      "AT_RISK": "Em risco",
+      "SAFE": "Seguro",
+      "SECURED": "Seguro"
+    }
+  },
+  "arr": {
+    "challengeState": {
+      "deny": "Recusado pelo usuário",
+      "failed": "Erro - Não concluído",
+      "in_progress": "Em andamento",
+      "no_mfa": "Não habilitado na política",
+      "ok": "Verificado",
+      "timeout": "Tempo esgotado",
+      "unknown": "Erro - Não concluído",
+      "mfa_skipped": "Ignorado",
+      "fraud": "Fraude"
+    }
+  },
+  "policies": {
+    "create": {
+      "error": "A política não pôde ser criada."
+    },
+    "details": {
+      "errorSave": "A política não pôde ser salva.",
+      "errorDelete": "A política não pôde ser excluída.",
+      "errorServerNameAlreadyExists": "Já existe uma política com esse nome."
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "policy": {
+    "pageTitle": "Avert",
+    "tabTitle": {
+      "mobile": "モバイル",
+      "content": "コンテンツ"
+    },
+    "serverError": {
+      "retrievePolicies": "{{error}}",
+      "deletePolicies": "ポリシーを削除できませんでした。"
+    },
+    "table": {
+      "columns": {
+        "name": "表示名",
+        "description": "説明",
+        "policyType": "ポリシーータイプ",
+        "userCount": "ユーザー",
+        "groupCount": "グループ",
+        "added": "登録日時",
+        "modified": "修正日時",
+        "rank": "ランク"
+      },
+      "tableColumns": "テーブル列",
+      "noData": "データなし",
+      "filter": {
+        "name": "名前で",
+        "description": "説明による"
+      }
+    },
+    "dialogs": {
+      "setAsDefault": {
+        "title": "デフォルトの確認として設定",
+        "cancelBtn": "キャンセル",
+        "confirmBtn": "保存",
+        "question": "ポリシーを Default としてインストールしますか?"
+      }
+    },
+    "buttons": {
+      "add": "ポリシーの追加",
+      "delete": "削除",
+      "cancel": "キャンセル",
+      "save": "保存",
+      "continue": "続行",
+      "addNew": "追加",
+      "confirm": "はい",
+      "rejectConfirm": "今はない",
+      "leavePage": "ページを離れる",
+      "resendMail": "送信",
+      "cancelResendMail": "いいえ"
+    },
+    "search": {
+      "results": "{{value}} 件の結果",
+      "placeholder": "ポリシーを検索する"
+    },
+    "sections": {
+      "requiredInput": "このフィールドは、必修です。",
+      "general": {
+        "title": "一般情報",
+        "policyName": "ポリシー名",
+        "description": "説明",
+        "setDefaultPolicy": "デフォルトポリシーの設定",
+        "type": {
+          "title": "ポリシーータイプ",
+          "regulatory": "規制",
+          "organizational": "組織的"
+        },
+        "info": {
+          "description": "作成するポリシーのタイプを指定します。組織のポリシーは、組織の機密情報を保護するために使用できます。規制ポリシーは、業界や政府の規制に関連する機密情報を保護するために使用できます。",
+          "regulatoryDesc": "ユーザーに対して複数の規制ポリシーが競合する場合、BlackBerry はすべてのポリシーの中で最も制限の厳しい要素を適用して、これらのポリシーを自動的に調整します。最小数のデータオカレンスが選択され、最も制限の厳しい是正アクションが適用されます。",
+          "organizationalDesc": "ユーザーに対して複数の組織ポリシーが競合する場合、BlackBerry はすべてのポリシーの中で最も制限の少ない要素を適用して、これらのポリシーを自動的に調整します。データオカレンスの最大数が選択され、最も制限の少ない修復アクションが適用されます。"
+        }
+      },
+      "conditions": {
+        "title": "条件",
+        "addFromTemplateDialog": {
+          "description": "設定で定義済みのテンプレートを使用して、データ型の保護を構成できます。",
+          "searchText": "テンプレートを検索する",
+          "confirmation": {
+            "title": "テンプレートの確認",
+            "description": "新しいテンプレートを追加すると、既存の条件が上書きされます。"
+          },
+          "noTemplatesDescription": "テンプレートを追加していません。<0>Avert 設定に移動して</0>、定義済みのテンプレートをリストに追加します。",
+          "title": "テンプレートから追加"
+        },
+        "table": {
+          "name": "表示名",
+          "description": "説明",
+          "region": "リージョン"
+        },
+        "builder": {
+          "title": "条件ビルダー",
+          "condition": {
+            "and": "と",
+            "or": "または"
+          },
+          "label": "出現回数が最小限の場合",
+          "buttons": {
+            "addRule": "アイテムを追加",
+            "addGroup": "グループを追加",
+            "deleteGroup": "グループを削除"
+          },
+          "select": {
+            "placeholderText": "データ型名を選択",
+            "searchText": "検索"
+          },
+          "occurrences": {
+            "rangeText": "値は 1 から 10 の間でなければなりません。"
+          }
+        },
+        "description": "保護する機密データと、ポリシー違反を引き起こす条件を定義します。<0>Avert 設定から選択したテンプレートの</0> 1 つを使用するか、独自のカスタムポリシーを作成することから開始できます。",
+        "addFromTemplate": "テンプレートから追加"
+      },
+      "whitelist": {
+        "title": "ホワイトリストドメイン",
+        "name": "ドメイン",
+        "description": "説明",
+        "paragraph": "<0>Avert S設定</0>で作成したリストから、ファイルを安全にアップロードするために信頼できるブラウザードメインを指定します。このポリシーは、許可されたドメインには適用されません。"
+      },
+      "emailSettings": {
+        "title": "メール設定",
+        "noneDescription": "なし (デフォルト) > ポリシーはすべてのメールドメイン (内部および外部) に適用されます",
+        "internalDomainsDescription": "内部ドメイン > ポリシー外部ドメインにのみ適用されます",
+        "allDomainsDescription": "すべてのドメイン] > [ポリシー] は適用されません。機密データはメールで共有できる",
+        "helperText": "機密コンテンツがメールで共有されるタイミングを検出します。",
+        "recipients": {
+          "none": "なし",
+          "internal": "内部受信者のみ",
+          "all": "すべての受信者"
+        },
+        "description": "[<0>Avert 設定</0>] で作成した、許可された内部電子メールドメインの一覧に基づいて、機密データの共有時に信頼できる電子メール受信者を指定します。 "
+      },
+      "actions": {
+        "policyRules": {
+          "ACTION_TYPE_NONE": "なし",
+          "ACTION_TYPE_ALERT": "報告して警告する",
+          "ACTIVITY_TYPE_BROWSER_UPLOAD": "ウェブブラウザ (HTTP, HTTPS)",
+          "ACTIVITY_TYPE_USB_EXFILTRATE": "リムーバブルストレージ",
+          "ACTIVITY_TYPE_SCREEN_CAPTURE": "スクリーンキャプチャ",
+          "ACTIVITY_TYPE_EMAIL_CLIENTS": "メールクライアント"
+        },
+        "title": "アクション",
+        "description": "ロレム・イプサム"
+      },
+      "domains": {
+        "dialogs": {
+          "title": "ホワイトリスト登録済みドメインの追加",
+          "description": "このポリシーに従って、複数のホワイトリストに登録されたドメインを声に出して使用することができます。初期リストは <5>[設定]</5> で設定されます。",
+          "searchText": "ドメインを検索する"
+        },
+        "addDomain": "＋をクリックしてアイテムを追加"
+      },
+      "sparkMobileSettings": {
+        "policyConfigNames": {
+          "CONFIG_TYPE_ALLOW_COPY_BB_APPS_INTO_NON_BB_APPS": "BlackBerry Spark アプリから BlackBerry Spark 以外のアプリへのデータのコピーを許可する",
+          "CONFIG_TYPE_ALLOW_COPY_NON_BB_APPS_INTO_BB_APPS": "BlackBerry Spark アプリ間でのデータのコピーを許可する",
+          "CONFIG_TYPE_ALLOW_DICTATION": "ディクテーションを許可",
+          "CONFIG_TYPE_ALLOW_INSECURE_VIDEO": "画面キャプチャと安全でないビデオ出力を許可する",
+          "CONFIG_TYPE_ALLOW_SCREEN_RECORDING": "画面キャプチャの録画と共有を許可する",
+          "CONFIG_TYPE_ALLOW_KEYBOARDS": "カスタムキーボードを許可する",
+          "CONFIG_TYPE_ADD_WATERMARK": "ウォーターマークを表示",
+          "CONFIG_TYPE_ALLOW_RESTRICTED_MODE": "Android キーボード制限モードを有効にする"
+        },
+        "supportedOsTypesText": "サポートされている OS タイプ- ",
+        "title": "モバイル設定"
+      },
+      "iosSpecificSettings": {
+        "title": "iOS 固有の設定",
+        "allowText": "許可",
+        "screenshotsInText": "のスクリーンショット",
+        "intervalText": "日々",
+        "rangeText": "値は 1 ～ 14 日の間でなければなりません。"
+      }
+    },
+    "error": {
+      "delete": "ポリシーを削除できませんでした。",
+      "update": "ポリシーを更新できませんでした。エラー:{{error}} ",
+      "create": "ポリシーを作成できませんでした。エラー:{{error}} "
+    },
+    "success": {
+      "create": "ポリシーが作成されました。",
+      "delete": "ポリシーが削除されました。",
+      "update": "ポリシーが更新されました。"
+    },
+    "updateFormDeletePolicyTooltip": "ポリシーの削除",
+    "deletePolicyConfirmationDialogTitle": "削除の確認",
+    "deletePolicyConfirmationDialogDesc": "このポリシーを削除しますか?",
+    "deleteNote": "ポリシーを削除する前に、ポリシーに関連付けられているすべてのユーザーおよびグループを削除する必要があります。",
+    "createContentPolicyConfirmationTitle": "コンテンツポリシーを割り当てる",
+    "createMobilePolicyConfirmationTitle": "モバイルポリシーを割り当てる",
+    "createPolicyConfirmationDescription": "ポリシーが作成されました。このポリシーにユーザーまたはグループを割り当てますか?",
+    "updatePolicyConfirmationTitle": "ユーザーにメールを再送信する",
+    "updatePolicyConfirmationDescription": "ようこそメールを再送信しますか？",
+    "detail": {
+      "updated": "{{date, datetime}} に更新されました",
+      "settings": "設定",
+      "assignedUsersAndGroups": "割り当てられたユーザーグループ"
+    },
+    "modifiedPolicyConfirmationDialogTitle": "保存されていない変更",
+    "modifiedPolicyConfirmationDialogDesc": "このページから退出しますか？変更内容は保存されていません。",
+    "addPolicyWithType": "情報保護ポリシーを追加する"
+  },
+  "navigation": {
+    "adaptiveResponse": {
+      "label": "ラベル",
+      "componentHeader": {
+        "link": "詳細情報",
+        "paragraph": "Avert Content Policy は、組織の機密データを検出し、不正な共有から保護するために使用されます。1 人のユーザーに対して複数のポリシーが競合する場合、BlackBerry はポリシータイプに基づいて自動的に調整します。"
+      }
+    },
+    "title": "ポリシー",
+    "mobile": {
+      "componentHeader": {
+        "paragraph": "モバイル設定は、特に指定のない限り、すべてのデバイスタイプに適用されます。1 人のユーザーに複数のポリシーが割り当てられている場合、最もランクの高いポリシーが適用されます。"
+      }
+    }
+  }
+}

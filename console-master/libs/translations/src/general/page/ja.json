@@ -1,0 +1,7 @@
+{
+  "companyName": {
+    "blackBerry": "ブラックベリー UES",
+    "cylance": "サイランスの保護"
+  },
+  "title": "{{pageTitle}} | {{companyName}}"
+}

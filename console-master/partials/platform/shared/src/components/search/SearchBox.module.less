@@ -1,0 +1,22 @@
+.searchContainer {
+  display: flex;
+  align-items: center;
+}
+
+.searchButton {
+  // background-color: @backgroundDefault;
+  z-index: 100;
+}
+
+.search {
+  width: 200px;
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  transition-property: transform, width;
+  overflow: hidden;
+}
+
+.hideSearch {
+  transform: translateX(100%);
+  width: 0;
+}

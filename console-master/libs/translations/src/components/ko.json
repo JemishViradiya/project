@@ -1,0 +1,103 @@
+{
+  "transferList": {
+    "selectedCount": "{{selectedCount}} 중 {{totalCount}} 개 선택",
+    "selectAllLeftLabel": "선택되지 않은 모든 항목 선택",
+    "selectAllRightLabel": "선택한 모든 항목 선택",
+    "transferItemsLeftLabel": "선택한 항목 제거",
+    "transferItemsRightLabel": "선택한 항목 추가"
+  },
+  "pickers": {
+    "time": {
+      "invalidMessage": "시간이 잘못되었습니다.",
+      "currentTime": "현재 시간"
+    }
+  },
+  "fileUpload": {
+    "browseFilesButton": "파일 찾아보기"
+  },
+  "progressButton": {
+    "buttonText": "클릭하여 불러오기"
+  },
+  "button": {
+    "goBackText": "뒤로 가기"
+  },
+  "drawer": {
+    "formButtonPanel": "양식 단추 패널"
+  },
+  "quickSearchFilter": {
+    "minimumCharactersRequired": "최소 3자를 입력해야 합니다.",
+    "settings": "검색 필터의 설정"
+  },
+  "inputGroups": {
+    "buttonAdd": "행 추가"
+  },
+  "maps": {
+    "common": {
+      "map": "지도"
+    },
+    "terrain": "터레인",
+    "satellite": "위성",
+    "toggleMapTypes": "맵 유형 표시/숨기기",
+    "label": "라벨"
+  },
+  "helpLink": {
+    "helpLinkText": "도움말"
+  },
+  "riskSlider": {
+    "ariaLabelSliderMin": "리스크 슬라이더-최소",
+    "ariaLabelSliderMax": "위험 슬라이더-맥스",
+    "step": {
+      "0-0": "보안",
+      "0-1": "보안 - 낮음",
+      "0-2": "보안 - 미디엄",
+      "0-3": "보안 - 높음",
+      "1-1": "낮음",
+      "1-2": "낮음 - 중간",
+      "1-3": "낮음 - 높음",
+      "2-2": "미디엄",
+      "2-3": "중간 - 높음",
+      "3-3": "높음"
+    }
+  },
+  "enhancedSearch": {
+    "and": "과",
+    "applyButton": "대다",
+    "chipDefinition": "{{label}} {{operator}} {{value}}",
+    "clearButton": "명확한",
+    "enterDate": "날짜 입력",
+    "noOptionsText": "일치 항목 없음",
+    "comparisons": {
+      "contains": "다음을 포함합니다",
+      "doesNotContain": "포함하지 않음",
+      "endsWith": "다음으로 끝남",
+      "greater": "다음보다 큼",
+      "greaterOrEqual": "보다 크거나 같음",
+      "less": "보다 작음",
+      "lessOrEqual": "보다 작거나 같음",
+      "startsWith": "다음으로 시작"
+    }
+  },
+  "risk": {
+    "secured": "보안",
+    "low": "낮음",
+    "medium": "미디엄",
+    "high": "높음"
+  },
+  "autocompleteTags": {
+    "newTag": "새 태그",
+    "tagAlreadyExist": "이 태그는 이미 추가되어 있습니다"
+  },
+  "timeZonePicker": {
+    "searchPlaceholder": "국가, 도시 또는 약어로 검색",
+    "timeZone": "시간대"
+  },
+  "tabPanel": {
+    "ariaLabel": "{{name}} 탭 패널"
+  },
+  "Creating": "만들기",
+  "Fetching": "페칭",
+  "Updating": "업데이트 중",
+  "Deleting": "삭제하기",
+  "Loading": "로드 중",
+  "Clear": "클리어"
+}

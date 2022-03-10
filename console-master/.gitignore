@@ -1,0 +1,74 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/prod
+/tmp
+/out-tsc
+/*.env
+/docs
+/public
+/coverage
+/cypress-results
+/codeceptjs-results
+/codeceptjs-profiles
+/nycscan-results
+/coverage-report
+.nyc_output
+.nyc_scan
+.merge
+
+# dependencies
+node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/vsCodeNewTerminal.png
+!.vscode/vsCodeRemoteWSL.png
+
+# misc
+/.sass-cache
+/connect.lock
+/test-results
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+.yarn-cache
+yarn-audit.log
+.eslintcache
+.dsm
+.dsmrc
+.node-cache-list
+.pull-stamp
+/libs/assets/dsm/style-data-raw.json
+/agent-nodejs.sha
+/storybook-static
+.nyc_output
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Gitlab
+.gitlab-ci.yml-e
+
+# Pact Files
+/pact
+
+# local env files
+local-proxy.conf.json

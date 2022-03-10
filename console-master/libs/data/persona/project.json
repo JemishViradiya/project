@@ -1,0 +1,30 @@
+{
+  "root": "libs/data/persona",
+  "sourceRoot": "libs/data/persona/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/persona/**/*.js",
+          "libs/data/persona/**/*.jsx",
+          "libs/data/persona/**/*.ts",
+          "libs/data/persona/**/*.tsx",
+          "libs/data/persona/**/*.spec.ts",
+          "libs/data/persona/**/*.spec.tsx",
+          "libs/data/persona/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/data/persona"],
+      "options": {
+        "jestConfig": "libs/data/persona/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

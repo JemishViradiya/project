@@ -1,0 +1,21 @@
+@import '../../../../theme/theme.less';
+
+.name-link {
+  composes: .mui.typography[ @body1];
+  color: @colorLink;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.removeRowButtonContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}

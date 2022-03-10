@@ -1,0 +1,1084 @@
+{
+  "EMMConnections": {
+    "ConnectionsList": [
+      {
+        "type": "INTUNE",
+        "activationType": "MDM",
+        "enableSetRiskLevel": true,
+        "configuration": {
+          "aadTenantId": "84f373e8-8167-43cb-afff-f11bf93e421c",
+          "azureCloud": "GLOBAL",
+          "clientId": "e2d52e0c-77da-41c1-9f1f-bbaee2df2498"
+        }
+      },
+      {
+        "type": "UEM",
+        "activationType": "MDM",
+        "configuration": {
+          "bcpUrl": "bcp://ca.bcp.bblabs.rim.net:443",
+          "created": "2021-09-15T06:06:00Z",
+          "environment": "STAGE",
+          "isCloud": true,
+          "isServicesEnabled": true,
+          "organizationId": "6115242553",
+          "state": "ACTIVE",
+          "tenantType": "UEM",
+          "uemDisplayName": "testuem0714004;;testuser004",
+          "uemTenantId": "L63224054",
+          "updated": "2021-09-15T06:08:37Z",
+          "version": "12.15.0"
+        }
+      }
+    ]
+  },
+  "TwoConnectionAndUEMFailed": {
+    "responses": [
+      {
+        "status": 200,
+        "body": {
+          "type": "INTUNE",
+          "activationType": "MDM",
+          "configuration": {
+            "aadTenantId": "84f373e8-8167-43cb-afff-f11bf93e421c",
+            "azureCloud": "GLOBAL",
+            "clientId": "e2d52e0c-77da-41c1-9f1f-bbaee2df2498"
+          }
+        }
+      },
+      {
+        "status": 500,
+        "body": {
+          "type": "UEM"
+        },
+        "error": {
+          "subStatusCode": 1234,
+          "message": "some message",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/1234"
+        }
+      }
+    ]
+  },
+  "TwoConnectionAndINTUNEFailed": {
+    "responses": [
+      {
+        "status": 200,
+        "body": {
+          "type": "UEM",
+          "activationType": "MDM",
+          "configuration": {
+            "bcpUrl": "bcp://ca.bcp.bblabs.rim.net:443",
+            "created": "2021-09-15T06:06:00Z",
+            "environment": "STAGE",
+            "isCloud": true,
+            "isServicesEnabled": true,
+            "organizationId": "6115242553",
+            "state": "ACTIVE",
+            "tenantType": "UEM",
+            "uemDisplayName": "testuem0714004;;testuser004",
+            "uemTenantId": "L63224054",
+            "updated": "2021-09-15T06:08:37Z",
+            "version": "12.15.0"
+          }
+        }
+      },
+      {
+        "status": 500,
+        "body": {
+          "type": "INTUNE"
+        },
+        "error": {
+          "subStatusCode": 1234,
+          "message": "some message",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/1234"
+        }
+      }
+    ]
+  },
+  "TwoConnectionBothFailed": {
+    "responses": [
+      {
+        "status": 500,
+        "body": {
+          "type": "INTUNE"
+        },
+        "error": {
+          "subStatusCode": 1234,
+          "message": "some message",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/1234"
+        }
+      },
+      {
+        "status": 500,
+        "body": {
+          "type": "UEM"
+        },
+        "error": {
+          "subStatusCode": 1234,
+          "message": "some message",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/1234"
+        }
+      }
+    ]
+  },
+  "OneConnectionAndOneFailed": {
+    "responses": [
+      {
+        "status": 500,
+        "body": {
+          "type": "UEM"
+        },
+        "error": {
+          "subStatusCode": 1234,
+          "message": "some message",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/1234"
+        }
+      }
+    ]
+  },
+  "NoConnectionError": {
+    "subStatusCode": 12001,
+    "message": "EMM Activation not found",
+    "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/2001"
+  },
+  "DeleteConnectionError": {
+    "subStatusCode": 13001,
+    "message": "Credential not found",
+    "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/2001"
+  },
+  "DeleteConnectionPermissionError": {
+    "subStatusCode": 13006,
+    "message": "The permission not granted to access this Intune resource",
+    "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/13006"
+  },
+  "AddIntuneConnection": [
+    {
+      "type": "INTUNE",
+      "activationType": "MDM",
+      "enableSetRiskLevel": true,
+      "configuration": {
+        "azureCloud": "Global",
+        "aadTenantId": "84f373e8-8167-43cb-afff-f11bf93e421c"
+      }
+    }
+  ],
+  "AddConnectionWithInvalidTenantID": {
+    "responses": [
+      {
+        "status": 401,
+        "error": {
+          "subStatusCode": 11004,
+          "message": "Used credentials is not valid",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/11004"
+        }
+      }
+    ]
+  },
+  "AddConnectionFailedDueToDataSync": {
+    "responses": [
+      {
+        "status": 500,
+        "body": {
+          "type": "INTUNE"
+        },
+        "error": {
+          "subStatusCode": 500,
+          "message": "Failed to check on data sync completed",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/500"
+        }
+      }
+    ]
+  },
+  "AddConnectionIncompleteError": {
+    "responses": [
+      {
+        "status": 500,
+        "body": {
+          "type": "INTUNE"
+        },
+        "error": {
+          "subStatusCode": 500,
+          "message": "Upload initiated, but not completed",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/500"
+        }
+      }
+    ]
+  },
+  "AddConnectionWhenTenantIsWithoutIntuneLicense": {
+    "responses": [
+      {
+        "status": 401,
+        "error": {
+          "subStatusCode": 11031,
+          "message": "Invalid Intune licenses",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/11031"
+        }
+      }
+    ]
+  },
+  "AddConnectionWhenAuthCodeisInvalid": {
+    "responses": [
+      {
+        "body": {
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/7002",
+          "subStatusCode": 7002,
+          "message": "Invalid auth code"
+        },
+        "status": 403
+      }
+    ]
+  },
+  "addUemConnection": {
+    "activationType": "MDM",
+    "configuration": {
+      "azureCloud": "Global",
+      "uemTenantId": "L63224054"
+    },
+    "enableSetRiskLevel": true,
+    "type": "UEM"
+  },
+  "connectionAlreadyExist": {
+    "responses": [
+      {
+        "status": 409,
+        "error": {
+          "subStatusCode": 13002,
+          "message": "Emm Activation already exist",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/13002"
+        }
+      }
+    ]
+  },
+  "uemTenantAlreadyAssociated": {
+    "responses": [
+      {
+        "status": 400,
+        "error": {
+          "subStatusCode": 31003,
+          "message": "The UEM tenant is already associated.",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/31003"
+        }
+      }
+    ]
+  },
+  "UEMUnknownFailure": {
+    "responses": [
+      {
+        "status": 500,
+        "error": {
+          "subStatusCode": 31500,
+          "message": "Unknown Internal Error",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/31500"
+        }
+      }
+    ]
+  },
+  "UEMIntersectFailure": {
+    "responses": [
+      {
+        "status": 500,
+        "error": {
+          "subStatusCode": 31510,
+          "message": "Intersect Failure",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/31510"
+        }
+      }
+    ]
+  },
+  "UEMPCEFailure": {
+    "responses": [
+      {
+        "status": 500,
+        "error": {
+          "subStatusCode": 31520,
+          "message": "PCE Failure",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/31520"
+        }
+      }
+    ]
+  },
+  "UEMTenantServiceFailure": {
+    "responses": [
+      {
+        "status": 500,
+        "error": {
+          "subStatusCode": 31530,
+          "message": "Tenant service failure",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/31530"
+        }
+      }
+    ]
+  },
+  "UEMTenantListNotAvailable": {
+    "subStatusCode": 404,
+    "message": "The UEM tenants are not available.",
+    "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/404"
+  },
+  "UEMTenantListIntersectFailure": {
+    "subStatusCode": 31510,
+    "message": "Intersect failure",
+    "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/31510"
+  },
+  "UEMTenantListRetrievalFailure": {
+    "subStatusCode": 31500,
+    "message": "The UEM tenants could not be retrieved.",
+    "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/31500"
+  },
+  "UEMTenantListTenantsServiceFailure": {
+    "subStatusCode": 31530,
+    "message": "Tenant Service Failure",
+    "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/31530"
+  },
+  "thirtyUemTenants": {
+    "organizationId": "6115242553",
+    "uemTenants": [
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "uemtest03;;UEMUSER",
+        "uemTenantId": "L63224054-1",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-2",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-3",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-4",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-5",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-6",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-7",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-8",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-9",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-10",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-11",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-12",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-13",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-14",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-15",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-16",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "uemtest03;;UEMUSER",
+        "uemTenantId": "L63224054-17",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-18",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-19",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-20",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-21",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-22",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-23",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-24",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-25",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-26",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-27",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-28",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-29",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L63224054-30",
+        "version": "12.14.0"
+      }
+    ]
+  },
+  "uemConnectionAlreadyExist": {
+    "responses": [
+      {
+        "error": {
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/13002",
+          "message": "The UEM connection already exists",
+          "subStatusCode": 13002
+        },
+        "status": 409
+      }
+    ]
+  },
+  "UemTenants": {
+    "organizationId": "6115242553",
+    "uemTenants": [
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "uemtest03;;UEMUSER",
+        "uemTenantId": "L63224054",
+        "version": "12.14.0"
+      },
+      {
+        "isCloud": true,
+        "tenantType": "UEM",
+        "uemDisplayName": "test0628;;mockuser111",
+        "uemTenantId": "L55567273",
+        "version": "12.14.0"
+      }
+    ]
+  },
+  "groups": {
+    "pageHint": "LTE2OTk4NDYxNTIjTDg4MDkyNTU1",
+    "groups": [
+      {
+        "id": "45e6c2cb-c8e5-41f6-94de-3666222de3b5",
+        "displayName": "group_1"
+      },
+      {
+        "id": "febb2322-527d-42a3-b3af-deedc64f96e6",
+        "displayName": "group_2"
+      },
+      {
+        "id": "88fdfc8d-2e97-4521-accd-45f874049c64",
+        "displayName": "group_3"
+      },
+      {
+        "id": "febb2322-527d-42a3-b3af-deedc64f96e1",
+        "displayName": "group_4"
+      },
+      {
+        "id": "febb2322-527d-42a3-b3af-deedc64faccd",
+        "displayName": "group_123"
+      }
+    ]
+  },
+  "SearchedGroups": {
+    "pageHint": "LTE2OTk4NDYxNTIjTDg4MDkyNTU1",
+    "groups": [
+      {
+        "id": "febb2322-527d-42a3-b3af-deedc64f96e7",
+        "displayName": "group_123"
+      }
+    ]
+  },
+  "ErrorForDeleteConnection": {
+    "subStatusCode": 31400,
+    "message": "UEM External Failure",
+    "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/31400"
+  },
+
+  "UEMConnectionStatus": {
+    "UEMConnectionList": [
+      {
+        "type": "UEM",
+        "activationType": "MDM",
+        "configuration": {
+          "uemTenantId": "L63224054",
+          "bcpUrl": "bcp://ca.bcp.bblabs.rim.net:443",
+          "tenantType": "UEM",
+          "isCloud": true,
+          "version": "12.15.0",
+          "state": "INITIALIZED",
+          "environment": "STAGE",
+          "isServicesEnabled": true,
+          "created": "2021-10-04T20:11:09Z",
+          "organizationId": "6074061883",
+          "uemDisplayName": "tanya135;;tanya135",
+          "updated": "2021-10-04T20:13:45Z"
+        }
+      },
+      {
+        "type": "UEM",
+        "activationType": "MDM",
+        "configuration": {
+          "uemTenantId": "L63224054",
+          "bcpUrl": "bcp://ca.bcp.bblabs.rim.net:443",
+          "tenantType": "UEM",
+          "isCloud": true,
+          "version": "12.15.0",
+          "state": "AUTHORIZED",
+          "environment": "STAGE",
+          "isServicesEnabled": true,
+          "created": "2021-10-04T20:11:09Z",
+          "organizationId": "6074061883",
+          "uemDisplayName": "tanya135;;tanya135",
+          "updated": "2021-10-04T20:13:45Z"
+        }
+      },
+      {
+        "type": "UEM",
+        "activationType": "MDM",
+        "configuration": {
+          "uemTenantId": "L63224054",
+          "bcpUrl": "bcp://ca.bcp.bblabs.rim.net:443",
+          "tenantType": "UEM",
+          "isCloud": true,
+          "version": "12.15.0",
+          "state": "ACTIVE",
+          "environment": "STAGE",
+          "isServicesEnabled": true,
+          "created": "2021-10-04T20:11:09Z",
+          "organizationId": "6074061883",
+          "uemDisplayName": "tanya135;;tanya135",
+          "updated": "2021-10-04T20:13:45Z"
+        }
+      },
+      {
+        "type": "UEM",
+        "activationType": "MDM",
+        "configuration": {
+          "uemTenantId": "L63224054",
+          "bcpUrl": "bcp://ca.bcp.bblabs.rim.net:443",
+          "tenantType": "UEM",
+          "isCloud": true,
+          "version": "12.15.0",
+          "state": "ERROR",
+          "errorState": "FAILURE_TO_AUTHORIZE_OIDC_CLIENT",
+          "environment": "STAGE",
+          "isServicesEnabled": true,
+          "created": "2021-10-04T20:11:09Z",
+          "organizationId": "6074061883",
+          "uemDisplayName": "tanya135;;tanya135",
+          "updated": "2021-10-04T20:13:45Z"
+        }
+      },
+      {
+        "type": "UEM",
+        "activationType": "MDM",
+        "configuration": {
+          "uemTenantId": "L63224054",
+          "bcpUrl": "bcp://ca.bcp.bblabs.rim.net:443",
+          "tenantType": "UEM",
+          "isCloud": true,
+          "version": "12.15.0",
+          "state": "ERROR",
+          "errorState": "FAILURE_TO_ENABLE_CONNECTION_WITHIN_UEM",
+          "environment": "STAGE",
+          "isServicesEnabled": true,
+          "created": "2021-10-04T20:11:09Z",
+          "organizationId": "6074061883",
+          "uemDisplayName": "tanya135;;tanya135",
+          "updated": "2021-10-04T20:13:45Z"
+        }
+      },
+      {
+        "type": "UEM",
+        "activationType": "MDM",
+        "configuration": {
+          "uemTenantId": "L63224054",
+          "bcpUrl": "bcp://ca.bcp.bblabs.rim.net:443",
+          "tenantType": "UEM",
+          "isCloud": true,
+          "version": "12.15.0",
+          "state": "ERROR",
+          "errorState": "FAILURE_TO_ENABLE_UES_SERVICES",
+          "environment": "STAGE",
+          "isServicesEnabled": true,
+          "created": "2021-10-04T20:11:09Z",
+          "organizationId": "6074061883",
+          "uemDisplayName": "tanya135;;tanya135",
+          "updated": "2021-10-04T20:13:45Z"
+        }
+      }
+    ]
+  },
+  "GroupsErrorForInvalidPageHint": {
+    "subStatusCode": 14002,
+    "message": "Invalid pageHint. The current tenant not authorized to access groups from other tenants",
+    "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/14002"
+  },
+  "addAppConfig": {
+    "appConfigurationPolicyForBoth": {
+      "results": [
+        {
+          "status": 200,
+          "request": {
+            "devicePlatform": "IOS",
+            "appConfigdisplayName": "BlackBerry Protect for iOS",
+            "description": "This configuration is set from the Blackberry UES System. Please don’t update",
+            "managedApp": {
+              "appName": "BlackBerry Protect",
+              "appId": null
+            },
+            "configSettings": null,
+            "groups": {
+              "includedGroups": [],
+              "excludedGroups": []
+            },
+            "authCode": null
+          }
+        },
+        {
+          "status": 200,
+          "request": {
+            "devicePlatform": "ANDROID",
+            "appConfigdisplayName": "BlackBerry Protect for Android",
+            "description": "This configuration is set from the Blackberry UES System. Please don’t update",
+            "managedApp": {
+              "appName": "BlackBerry Protect",
+              "appId": null
+            },
+            "configSettings": null,
+            "groups": {
+              "includedGroups": [],
+              "excludedGroups": []
+            },
+            "authCode": "0.AXcAsOm65R9Y9kO6cSv62rgDGqbsR6SGqT9NmDhYYr9Qd2x3AAA.AQABAAIAAAD--DLA3VO7QrddgJg7WevrZO1etDA_1VMnDnPti62G9q4mdO_vYV7-dz-cPPvQhU5A2W1_ldyiXjpVmgM5ZyNyVvet_r8V_pTtcY8XZFVXhS7KLNOonct5cm6TUaFsWjJJZ-chX8N4EaLBVm44KuVhNw1GtTZdwbN9lBU9AWHOdkjnN_AHBesA2BCBtNxpEJ-l5c9uLeDiLUT31rykBf6a0qJrbREwcYCEdQRaJrtcVbw5D8pnxo8gzQnUNnnm6krdl-GXgwyHW8SEFHtUH3xz6LMiw3ok6SGNWNeMu_kWMcNwUPcsPJ9rAqFHG1ZwMzJT4kjR-GzRRQHc1MbTY9PJE12o94ZKJYzKWmW6IxlEuoe6tC5bOIO--BdH8n7LyvIZBWPK7QjkhcCcAHdBSNJ7or763RmNHB-nVuhTKisZhsfkX1xqd8N-QpPBFuKdHNwQ7sYWzBzu-3Ld_8do_YO-tzOKqu8tIP4II07tpkuHtwqSkzV4__abCqWCGQ48-YUx3yAQcvEOxk1mqA_69S_pT8LOh1-4E7Vl0cGtLl2ra8s55z7Rr32UDQc_ke0Y79yyYswHKBlPZRgsnGUk8ZVLIAA"
+          }
+        }
+      ]
+    },
+    "appConfigPoliciesForIos": {
+      "results": [
+        {
+          "status": 200,
+          "request": {
+            "devicePlatform": "IOS",
+            "appConfigdisplayName": "BlackBerry Protect for iOS",
+            "description": "This configuration is set from the Blackberry UES System. Please don’t update",
+            "managedApp": {
+              "appName": "BlackBerry Protect",
+              "appId": null
+            },
+            "configSettings": null,
+            "groups": {
+              "includedGroups": [],
+              "excludedGroups": []
+            },
+            "authCode": null
+          }
+        }
+      ]
+    },
+    "AppConfigPliciesForAndroid": {
+      "results": [
+        {
+          "status": 200,
+          "request": {
+            "devicePlatform": "ANDROID",
+            "appConfigdisplayName": "BlackBerry Protect for Android",
+            "description": "This configuration is set from the Blackberry UES System. Please don’t update",
+            "managedApp": {
+              "appName": "BlackBerry Protect",
+              "appId": null
+            },
+            "configSettings": null,
+            "groups": {
+              "includedGroups": [],
+              "excludedGroups": []
+            },
+            "authCode": "0.AXcAsOm65R9Y9kO6cSv62rgDGqbsR6SGqT9NmDhYYr9Qd2x3AAA.AQABAAIAAAD--DLA3VO7QrddgJg7WevrZO1etDA_1VMnDnPti62G9q4mdO_vYV7-dz-cPPvQhU5A2W1_ldyiXjpVmgM5ZyNyVvet_r8V_pTtcY8XZFVXhS7KLNOonct5cm6TUaFsWjJJZ-chX8N4EaLBVm44KuVhNw1GtTZdwbN9lBU9AWHOdkjnN_AHBesA2BCBtNxpEJ-l5c9uLeDiLUT31rykBf6a0qJrbREwcYCEdQRaJrtcVbw5D8pnxo8gzQnUNnnm6krdl-GXgwyHW8SEFHtUH3xz6LMiw3ok6SGNWNeMu_kWMcNwUPcsPJ9rAqFHG1ZwMzJT4kjR-GzRRQHc1MbTY9PJE12o94ZKJYzKWmW6IxlEuoe6tC5bOIO--BdH8n7LyvIZBWPK7QjkhcCcAHdBSNJ7or763RmNHB-nVuhTKisZhsfkX1xqd8N-QpPBFuKdHNwQ7sYWzBzu-3Ld_8do_YO-tzOKqu8tIP4II07tpkuHtwqSkzV4__abCqWCGQ48-YUx3yAQcvEOxk1mqA_69S_pT8LOh1-4E7Vl0cGtLl2ra8s55z7Rr32UDQc_ke0Y79yyYswHKBlPZRgsnGUk8ZVLIAA"
+          }
+        }
+      ]
+    }
+  },
+  "addAppConfigInvalidValues": {
+    "InvalidValuesForAndroidOrBoth": {
+      "results": [
+        {
+          "error": {
+            "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/24010",
+            "message": "Could not find targeted mobile application.",
+            "subStatusCode": 24010
+          },
+          "request": {
+            "appConfigdisplayName": "BlackBerry Protect for Android",
+            "authCode": null,
+            "configSettings": null,
+            "description": "This configuration is set from the Blackberry UES System. Please don’t update",
+            "devicePlatform": "ANDROID",
+            "groups": {
+              "excludedGroups": [],
+              "includedGroups": []
+            },
+            "managedApp": {
+              "appId": null,
+              "appName": "BlackBerry Test"
+            }
+          },
+          "status": 400
+        }
+      ]
+    },
+    "InvalidValuesForIos": {
+      "results": [
+        {
+          "status": 400,
+          "error": {
+            "subStatusCode": 24010,
+            "message": "Could not find targeted mobile application.",
+            "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/24010"
+          },
+          "request": {
+            "devicePlatform": "IOS",
+            "appConfigdisplayName": "BlackBerry Protect for iOS",
+            "description": "This configuration is set from the Blackberry UES System. Please don’t update",
+            "managedApp": {
+              "appName": "BlackBerry Test",
+              "appId": null
+            },
+            "configSettings": null,
+            "groups": {
+              "includedGroups": [],
+              "excludedGroups": []
+            },
+            "authCode": null
+          }
+        }
+      ]
+    }
+  },
+  "TooManyAppConfigError": {
+    "results": [
+      {
+        "status": 409,
+        "error": {
+          "subStatusCode": 24014,
+          "message": "There are too many app configuration policies with same name.",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/24014"
+        },
+        "request": {
+          "devicePlatform": "IOS",
+          "appConfigdisplayName": "test",
+          "description": "This configuration is set from the Blackberry UES System. Please don’t update",
+          "managedApp": {
+            "appName": "test",
+            "appId": null
+          },
+          "configSettings": null,
+          "groups": null
+        }
+      },
+      {
+        "status": 409,
+        "error": {
+          "subStatusCode": 24014,
+          "message": "There are too many app configuration policies with same name.",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/24014"
+        },
+        "request": {
+          "devicePlatform": "ANDROID",
+          "appConfigdisplayName": "test",
+          "description": "This configuration is set from the Blackberry UES System. Please don’t update",
+          "managedApp": {
+            "appName": "test",
+            "appId": null
+          },
+          "configSettings": null,
+          "groups": null
+        }
+      }
+    ]
+  },
+  "addAppConfigError1": {
+    "results": [
+      {
+        "status": 403,
+        "error": {
+          "subStatusCode": 27001,
+          "message": "The permission not granted to access this Intune resource",
+          "documentationUrl": null
+        },
+        "request": {
+          "devicePlatform": "ANDROID",
+          "appConfigdisplayName": "test",
+          "description": "This configuration is set from the Blackberry UES System. Please don’t update",
+          "managedApp": {
+            "appName": "test",
+            "appId": null
+          },
+          "configSettings": null,
+          "groups": {
+            "includedGroups": [],
+            "excludedGroups": []
+          }
+        }
+      }
+    ]
+  },
+  "ErrorOnAddAppConfig": {
+    "results": [
+      {
+        "status": 500,
+        "error": {
+          "subStatusCode": 24015,
+          "message": "There is an error while creating an application configuration policy.",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/24015"
+        },
+        "request": {
+          "devicePlatform": "IOS",
+          "appConfigdisplayName": "test",
+          "description": "This configuration is set from the Blackberry UES System. Please don’t update",
+          "managedApp": {
+            "appName": "test",
+            "appId": null
+          },
+          "configSettings": null,
+          "groups": null
+        }
+      },
+      {
+        "status": 500,
+        "error": {
+          "subStatusCode": 24015,
+          "message": "There is an error while creating an application configuration policy.",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/24015"
+        },
+        "request": {
+          "devicePlatform": "ANDROID",
+          "appConfigdisplayName": "test",
+          "description": "This configuration is set from the Blackberry UES System. Please don’t update",
+          "managedApp": {
+            "appName": "test",
+            "appId": null
+          },
+          "configSettings": null,
+          "groups": null
+        }
+      }
+    ]
+  },
+  "NoIntuneConnectionForAppConfig": {
+    "subStatusCode": 23001,
+    "message": "Credential not found",
+    "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/23001"
+  },
+  "NoPermissionForIntuneResource": {
+    "subStatusCode": 13006,
+    "message": "The permission not granted to access this Intune resource",
+    "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/13006"
+  },
+  "lengthySearchText": {
+    "subStatusCode": 11019,
+    "message": "The display name query length cannot exceed more than 120 characters",
+    "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/11019"
+  },
+  "FailedUEMConnection": [
+    {
+      "type": "UEM",
+      "activationType": "MDM",
+      "configuration": {
+        "uemTenantId": "L36662767",
+        "bcpUrl": "bcp://ca.bcp.bblabs.rim.net:443",
+        "tenantType": "UEM",
+        "isCloud": true,
+        "version": "12.15.0",
+        "state": "ERROR",
+        "errorState": "FAILURE_TO_ENABLE_CONNECTION_WITHIN_UEM",
+        "environment": "STAGE",
+        "isServicesEnabled": false,
+        "created": "2021-10-04T20:00:26Z",
+        "organizationId": "6115242553",
+        "uemDisplayName": "testuem01;;mockusertest01",
+        "updated": "2021-10-05T11:09:40Z"
+      }
+    }
+  ],
+  "forceDeleteFailed418_1": {
+    "responses": [
+      {
+        "status": 418,
+        "error": {
+          "subStatusCode": 4100,
+          "message": "UEM External Failure",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/4100"
+        }
+      }
+    ]
+  },
+  "forceDeleteFailed418_2": {
+    "responses": [
+      {
+        "status": 418,
+        "error": {
+          "subStatusCode": 4101,
+          "message": "UEM JWT Failure",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/4101"
+        }
+      }
+    ]
+  },
+  "forceDeleteFailed500": {
+    "responses": [
+      {
+        "status": 500,
+        "error": {
+          "subStatusCode": 5100,
+          "message": "Unknown Internal Error",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/5100"
+        }
+      }
+    ]
+  },
+  "defaultErrorForCheck": {
+    "results": [
+      {
+        "status": 500,
+        "error": {
+          "subStatusCode": 24003,
+          "message": "There are too many app configuration policies with same name.",
+          "documentationUrl": "https://www.blackberry.com/graph/v1/subStatusCode/24014"
+        },
+        "request": {
+          "devicePlatform": "IOS",
+          "appConfigdisplayName": "test",
+          "description": "This configuration is set from the Blackberry UES System. Please don’t update",
+          "managedApp": {
+            "appName": "test",
+            "appId": null
+          },
+          "configSettings": null,
+          "groups": null
+        }
+      }
+    ]
+  }
+}

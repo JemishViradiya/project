@@ -1,0 +1,30 @@
+{
+  "root": "partials/bis/geozones-e2e",
+  "sourceRoot": "partials/bis/geozones-e2e/src",
+  "projectType": "library",
+  "tags": ["scope:partial", "scope:bis"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["partials/bis/geozones-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/bis/geozones-e2e/cypress.json",
+        "tsConfig": "partials/bis/geozones-e2e/tsconfig.json",
+        "devServerTarget": "bis/geozones:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "bis/geozones:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/bis/geozones-e2e"]
+    }
+  },
+  "implicitDependencies": ["bis/geozones"]
+}

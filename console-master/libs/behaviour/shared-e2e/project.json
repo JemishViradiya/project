@@ -1,0 +1,40 @@
+{
+  "root": "libs/behaviour/shared-e2e",
+  "sourceRoot": "libs/behaviour/shared-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/behaviour/shared-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/behaviour/shared-e2e/cypress.json",
+        "tsConfig": "libs/behaviour/shared-e2e/tsconfig.json"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "behaviour/shared-e2e:storybook:ci"
+        }
+      },
+      "outputs": ["cypress-results/libs/behaviour/shared-e2e"]
+    },
+    "integration": {
+      "executor": "./tools/executors/codeceptjs:run",
+      "options": {
+        "headless": false,
+        "tsConfig": "libs/behaviour/shared-e2e/tsconfig.integration.json"
+      },
+      "configurations": {
+        "ci": {
+          "headless": true
+        }
+      },
+      "outputs": ["codeceptjs-results/behaviour/shared-e2e"]
+    }
+  },
+  "tags": ["scope:behaviour", "scope:cdn"]
+}

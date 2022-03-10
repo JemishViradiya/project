@@ -1,0 +1,77 @@
+{
+  "projectType": "application",
+  "root": "apps/mtc",
+  "sourceRoot": "apps/mtc/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "options": {
+        "assets": ["apps/mtc/src/assets"],
+        "baseHref": "",
+        "index": "apps/mtc/src/index.html",
+        "main": "apps/mtc/src/index.js",
+        "outputPath": "dist/mtc",
+        "polyfills": "apps/mtc/src/polyfills.js",
+        "scripts": [],
+        "styles": ["apps/mtc/src/styles.scss"],
+        "tsConfig": "apps/mtc/tsconfig.app.json",
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "outputPath": "prod/mtc",
+          "extractLicenses": true,
+          "fileReplacements": [
+            {
+              "replace": "apps/mtc/src/environments/environment.js",
+              "with": "apps/mtc/src/environments/environment.prod.js"
+            }
+          ],
+          "namedChunks": false,
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "vendorChunk": false
+        }
+      },
+
+      "outputs": ["{options.outputPath}"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/mtc/**/*.{ts,tsx,js,jsx}"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "serve": {
+      "configurations": {
+        "production": {
+          "buildTarget": "mtc:build:production",
+          "hmr": false
+        }
+      },
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "mtc:build",
+        "hmr": true,
+        "proxyConfig": "apps/mtc/proxy.conf.json"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/mtc/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["coverage/apps/mtc"]
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/mtc.sh mtc console"
+      }
+    }
+  }
+}

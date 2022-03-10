@@ -1,0 +1,101 @@
+{
+  "root": "apps/user-policies",
+  "sourceRoot": "apps/user-policies/src",
+  "projectType": "application",
+  "generators": {},
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "options": {
+        "baseHref": "..",
+        "deployUrl": "uc/user-policies/",
+        "outputPath": "dist/uc/user-policies",
+        "index": "tools/index.html",
+        "main": "apps/user-policies/src/main.tsx",
+        "polyfills": "libs/behaviour/app-shell/src/polyfills.ts",
+        "tsConfig": "apps/user-policies/tsconfig.app.json",
+        "assets": [],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "tools/webpack/app",
+        "maxWorkers": 1,
+        "memoryLimit": 1024
+      },
+      "configurations": {
+        "production": {
+          "outputPath": "prod/user-policies",
+          "fileReplacements": [
+            {
+              "replace": "apps/user-policies/src/environments/environment.ts",
+              "with": "apps/user-policies/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            }
+          ],
+          "maxWorkers": 1,
+          "memoryLimit": 2048
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "user-policies:build",
+        "hmr": true,
+        "ssl": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "user-policies:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/user-policies/**/*.js",
+          "apps/user-policies/**/*.jsx",
+          "apps/user-policies/**/*.ts",
+          "apps/user-policies/**/*.tsx",
+          "tools/nx/typings/image.d.ts",
+          "apps/user-policies/**/*.spec.ts",
+          "apps/user-policies/**/*.spec.tsx",
+          "apps/user-policies/**/*.spec.js",
+          "apps/user-policies/**/*.spec.jsx",
+          "apps/user-policies/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/user-policies/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/apps/user-policies"]
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/app.sh user-policies"
+      }
+    }
+  },
+  "tags": ["scope:app"],
+  "implicitDependencies": ["api", "pwa"]
+}

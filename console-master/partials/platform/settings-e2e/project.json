@@ -1,0 +1,31 @@
+{
+  "root": "partials/platform/settings-e2e",
+  "sourceRoot": "partials/platform/settings-e2e/src",
+  "projectType": "library",
+  "tags": ["scope:partial", "scope:platform"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["partials/platform/settings-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/platform/settings-e2e/cypress.json",
+        "tsConfig": "partials/platform/settings-e2e/tsconfig.json",
+        "devServerTarget": "platform/settings:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "platform/settings:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/platform/settings-e2e"]
+    }
+  },
+  "type": "e2e",
+  "implicitDependencies": ["platform/settings"]
+}

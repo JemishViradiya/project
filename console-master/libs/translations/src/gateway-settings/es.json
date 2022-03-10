@@ -1,0 +1,20 @@
+{
+  "authentication": "Autentificación",
+  "connectivityNode": "Nodo de conectividad",
+  "directoryConnection": "Conexión de directorios",
+  "networkSettings": "Ajustes de red",
+  "adaptiveResponse": "Respuesta adaptativa",
+  "labelGateway": "Portal",
+  "labelSettings": "Ajustes",
+  "directory": {
+    "actions": {
+      "add": "Añadir conexión"
+    },
+    "syncSchedule": {
+      "add": "Añadir programación"
+    }
+  },
+  "form": {
+    "to": "a"
+  }
+}

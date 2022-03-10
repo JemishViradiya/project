@@ -1,0 +1,103 @@
+{
+  "transferList": {
+    "selectedCount": "{{selectedCount}} di {{totalCount}} selezionato",
+    "selectAllLeftLabel": "Seleziona tutti gli elementi non selezionati",
+    "selectAllRightLabel": "Seleziona tutti gli elementi selezionati",
+    "transferItemsLeftLabel": "Rimuovi gli elementi selezionati",
+    "transferItemsRightLabel": "Aggiungi elementi selezionati"
+  },
+  "pickers": {
+    "time": {
+      "invalidMessage": "L'ora non è valida.",
+      "currentTime": "Ora attuale"
+    }
+  },
+  "fileUpload": {
+    "browseFilesButton": "Sfoglia i file"
+  },
+  "progressButton": {
+    "buttonText": "Clicca per caricare"
+  },
+  "button": {
+    "goBackText": "Torna indietro"
+  },
+  "drawer": {
+    "formButtonPanel": "Pannello pulsanti Modulo"
+  },
+  "quickSearchFilter": {
+    "minimumCharactersRequired": "È necessario immettere almeno 3 caratteri.",
+    "settings": "Impostazioni nel filtro di ricerca"
+  },
+  "inputGroups": {
+    "buttonAdd": "Aggiungi riga"
+  },
+  "maps": {
+    "common": {
+      "map": "Mappa"
+    },
+    "terrain": "Terreno",
+    "satellite": "Satellite",
+    "toggleMapTypes": "Mostra/Nascondi tipi di mappa",
+    "label": "Etichetta"
+  },
+  "helpLink": {
+    "helpLinkText": "Aiuto"
+  },
+  "riskSlider": {
+    "ariaLabelSliderMin": "risk-slider-min",
+    "ariaLabelSliderMax": "risk-slider-max",
+    "step": {
+      "0-0": "Protetto",
+      "0-1": "Protetto - Basso",
+      "0-2": "Protetto - Medium",
+      "0-3": "Protetto - Alto",
+      "1-1": "Basso",
+      "1-2": "Bassa - Media",
+      "1-3": "Basso - Alto",
+      "2-2": "Medium",
+      "2-3": "Medio-alto",
+      "3-3": "Alto"
+    }
+  },
+  "enhancedSearch": {
+    "and": "E",
+    "applyButton": "APPLICARE",
+    "chipDefinition": "{{label}} {{operator}} {{value}}",
+    "clearButton": "RIMUOVERE",
+    "enterDate": "Inserisci la data",
+    "noOptionsText": "Nessuna corrispondenza",
+    "comparisons": {
+      "contains": "Contiene",
+      "doesNotContain": "Non contiene",
+      "endsWith": "Termina con",
+      "greater": "Maggiore di",
+      "greaterOrEqual": "Maggiore o uguale a",
+      "less": "Meno di",
+      "lessOrEqual": "Minore o uguale a",
+      "startsWith": "Inizia con"
+    }
+  },
+  "risk": {
+    "secured": "Sicuro",
+    "low": "Basso",
+    "medium": "Media",
+    "high": "Alta"
+  },
+  "autocompleteTags": {
+    "newTag": "nuovo tag",
+    "tagAlreadyExist": "Questo tag è già stato aggiunto"
+  },
+  "timeZonePicker": {
+    "searchPlaceholder": "Cerca per paese, città o abbreviazione",
+    "timeZone": "Fuso orario"
+  },
+  "tabPanel": {
+    "ariaLabel": "Pannello a schede {{name}}"
+  },
+  "Creating": "Creare",
+  "Fetching": "Recuperare",
+  "Updating": "Aggiornamento",
+  "Deleting": "Eliminazione",
+  "Loading": "Caricamento",
+  "Clear": "Chiaro"
+}

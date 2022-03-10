@@ -1,0 +1,557 @@
+{
+  "settings": {
+    "operatingMode": {
+      "title": "Modo de operação",
+      "description": "Especifique um modo operacional. O modo passivo é usado para coletar dados e criar modelos de risco para usuários individuais sem tomar nenhuma ação. No modo Ativo, as ações de resposta definidas nas políticas são aplicadas. Os alertas são gerados nos dois modos de operação. Quando o primeiro usuário é adicionado a uma política de resposta adaptável, um período de treinamento para o modelo de risco de resposta adaptativa é iniciado e dura até que as seguintes condições sejam atendidas: 1000 eventos são coletados para o locatário do usuário e 14 dias corridos se passam. Os alertas não são gerados durante o período de treinamento.",
+      "options": {
+        "ACTIVE": "Modo ativo",
+        "PASSIVE": "Modo passivo"
+      }
+    },
+    "riskEngines": {
+      "title": "Configuração do mecanismo de risco de identidade",
+      "networkAnomaly": {
+        "title": "Anomalia de rede",
+        "description": "Especifique o limite para eventos de anomalias de rede e se eles são tratados como risco alto ou crítico. Eventos de anomalia de rede são detectados quando o padrão de uso de rede de um usuário do Gateway não é consistente com o comportamento anterior.",
+        "riskFactor": "Risco de anomalia na rede"
+      },
+      "tableHeader": {
+        "factor": "Risco",
+        "detection": "Detecção",
+        "level": "Nível de risco"
+      }
+    },
+    "ipaddresses": {
+      "trusted": "Endereços IP confiáveis",
+      "untrusted": "Endereços IP não confiáveis",
+      "ipAddressConfiguration": "Configuração de endereço IP",
+      "name": "Nome",
+      "detail": "Detalhe",
+      "noData": "Sem dados",
+      "deleteItem": "Excluir item",
+      "cancel": "Cancelar",
+      "delete": "Excluir",
+      "trustedAddModalLabel": "Adicionar endereços IP de endpoint seguros",
+      "trustedEditModalLabel": "Editar endereços IP de endpoint seguros",
+      "save": "Salvar",
+      "errorFieldRequired": "Esse campo é obrigatório.",
+      "errorInvalidName": "Esse campo é inválido.",
+      "sourceLabel": "Fonte",
+      "specifiedAddresses": "Endereços IP, intervalos de IP ou CIDRs",
+      "ipAddressesLabel": "Endereços IP, intervalos de IP ou CIDRs",
+      "addNew": "Adicionar endereço IP",
+      "search": "Pesquisar",
+      "invalidFormat": "O formato é inválido.",
+      "selectedAriaLabel": "Endereços IP selecionados",
+      "selectedItemsCount": "{{count}} selecionado",
+      "untrustedAddModalLabel": "Adicionar endereços IP de endpoint restritos",
+      "untrustedEditModalLabel": "Editar endereços IP de endpoint restritos",
+      "more": "{{count}} mais",
+      "results": "{{count}} resultado",
+      "ipaddress": "Endereço IP",
+      "results_plural": "{{count}} resultados",
+      "more_plural": "{{count}} mais",
+      "deleteDialog": {
+        "title": "Excluir confirmação",
+        "description": "Deseja excluir os endereços IP selecionados?",
+        "confirmButtonLabel": "Excluir",
+        "cancelButtonLabel": "Cancelar"
+      },
+      "trustedModalLabel": "Endereços IP de endpoint seguros",
+      "untrustedModalLabel": "Endereços IP de endpoint restritos",
+      "ipAddressesSubLabel": "Insira endereços IP, intervalos de IP ou CIDRs (um por linha)"
+    },
+    "ipAddress": {
+      "errorAddNew": "A lista de endereços IP não pôde ser adicionada",
+      "errorUpdate": "A lista de endereços IP não pôde ser atualizada",
+      "errorDelete": "A lista de endereços IP não pôde ser excluída"
+    },
+    "comingSoonMessage": {
+      "title": "Em breve",
+      "description": "As configurações de segurança adaptáveis serão disponibilizadas em uma próxima atualização do console UES."
+    }
+  },
+  "gatewayAlerts": {
+    "table": {
+      "headers": {
+        "risk": "Risco",
+        "type": "Tipo",
+        "detection": "Detecção",
+        "response": "Resposta",
+        "device": "Dispositivo",
+        "user": "Usuário",
+        "detectionTime": "Tempo de detecção",
+        "category": "Categoria",
+        "identityChallenge": "desafio de identidade"
+      },
+      "filters": {
+        "risk": "Filtro de risco",
+        "user": "Filtro de usuário",
+        "detection": "Filtro de detecção",
+        "detectionTime": "Filtro de tempo de detecção"
+      },
+      "toolbar": {
+        "totalResults": "{{total}} resultados"
+      },
+      "columnPicker": {
+        "title": "Colunas de tabela"
+      },
+      "noDataInTrainingMode": "A resposta adaptativa usa um período de treinamento até que as seguintes condições sejam atendidas: 1000 eventos são coletados para o locatário de um usuário e 14 dias corridos se passam. Os alertas não são gerados durante o período de treinamento.",
+      "noDataPlaceholder": "Nenhum alerta foi gerado nos últimos 30 dias.",
+      "noDataWithFilters": "Nenhum alerta foi encontrado com os filtros selecionados.",
+      "noDataInTrainingModeDP": "As políticas de avaliação de risco usam um período de treinamento até que as seguintes condições sejam atendidas: 1000 eventos são coletados para o locatário de um usuário e passam 14 dias corridos. Os alertas não são gerados durante o período de treinamento."
+    },
+    "columns": {
+      "response": {
+        "overrideNetworkAccessPolicy": "Substituir política de controle de acesso à rede: {{name}}",
+        "passiveModePrefix": "Ações não executadas: {{text}}",
+        "passiveModeTooltip": "As ações de resposta não são aplicadas aos usuários no modo passivo.",
+        "passiveModeTooltipArr": "O modo operacional passivo está ativado. Os desafios de identidade não são enviados no modo operacional passivo.",
+        "passiveModeTooltipAriaLabel": "Informações sobre o modo passivo",
+        "challengeState": {
+          "deny": "Desafio de identidade: recusado pelo usuário",
+          "failed": "Desafio de identidade: Erro — Não concluído",
+          "in_progress": "Desafio de identidade: Em andamento",
+          "no_mfa": "Desafio de identidade: Não habilitado na política",
+          "mfa_skipped": "Desafio de identidade: contornado",
+          "ok": "Desafio de identidade: Verific",
+          "timeout": "Desafio de identidade: Tempo esgotado",
+          "unknown": "Desafio de identidade: Erro — Não concluído",
+          "fraud": "Desafio de identidade: fraude"
+        }
+      },
+      "detection": {
+        "networkAnomaly": "Anomalia de rede"
+      },
+      "identityChallenge": {
+        "challengeState": {
+          "deny": "Recusado pelo usuário",
+          "failed": "Erro - Não concluído",
+          "in_progress": "Em andamento",
+          "no_mfa": "Não habilitado na política",
+          "mfa_skipped": "IgNORADO",
+          "ok": "verificado",
+          "timeout": "Tempo esgotado",
+          "unknown": "Erro - Não concluído",
+          "fraud": "Fraude"
+        }
+      },
+      "risk": {
+        "tooltipText": "Clique em uma linha para ver os detalhes do evento."
+      }
+    },
+    "alert": {
+      "passiveMode": {
+        "title": "Modo operacional passivo ativado",
+        "description": "Ações de resposta automática não serão executadas no modo operacional passivo.",
+        "settingsLink": "Definições"
+      }
+    }
+  },
+  "gatewayAlertDetails": {
+    "titles": {
+      "drawerTitle": "Anomalia de rede",
+      "alertOverview": "Visão geral do alerta",
+      "affectedAssets": "Ativas afetados",
+      "responseActions": "Ações de resposta",
+      "risk": "Risco",
+      "responseActionsSubtitle": "<0>by <1>{{policyName}}</1> Política de resposta adaptável</0>",
+      "identityChallenge": "Desafio identidade",
+      "eventOverview": "Visão geral do evento"
+    },
+    "labels": {
+      "assignedPolicy": "Política de controle de acesso à rede substituída",
+      "description": "Descrição",
+      "detectionTime": "Tempo de detecção",
+      "device": "Dispositivo",
+      "eventDetails": "Detalhes do evento",
+      "eventId": "ID do evento",
+      "type": "Tipo",
+      "user": "Usuário",
+      "automaticResponseReduction": "Status do desafio",
+      "userHyperlink": "Ir para os detalhes do usuário",
+      "deviceHyperlink": "Exibir detalhes do dispositivo"
+    },
+    "values": {
+      "networkEvent": "Evento de rede incomum detectado",
+      "riskType": "Risco de identidade",
+      "viewDetails": "Exibir detalhes"
+    },
+    "actions": {
+      "noActions": "Nenhuma ação foi tomada no momento"
+    },
+    "labelGateway": "Gateway",
+    "pageTitle": "Alertas",
+    "pageTitleDpActor": "Alertas de comportamento de rede"
+  },
+  "risk": {
+    "common": {
+      "identityRisk": "Risco de identidade",
+      "identityRiskResponseActions": "Ações de resposta ao risco de identidade",
+      "networkAnomaly": "Anomalia de rede",
+      "generalInfo": "Informações gerais",
+      "automaticRiskReduction": "Redução automática de riscos",
+      "automaticRiskReductionDescription": "Se você quiser permitir que os usuários reduzam o nível de risco autenticando novamente para verificar sua identidade, ative a redução automática de riscos. Você deve configurar a autenticação multifator na política de autenticação atribuída a usuários ou grupos antes de usar a redução automática de riscos.",
+      "riskChanged": "O nível de risco mudou de {{prevLevel}} para {{currentLevel}}."
+    }
+  },
+  "dashboard": {
+    "alertSummaryWidgetTitle": "Resumo de alertas",
+    "identityRiskAlertsWidgetTitle": "Alertas de risco de identidade",
+    "geozoneRiskAlertsWidgetTitle": "Alertas de risco de zona geográfica",
+    "topActionsWidgetTitle": "Principais ações por política de resposta adaptável",
+    "realTimeAlertsWidgetTitle": "Alertas em tempo real",
+    "combinedRiskAlertsWidgetTitle": "Alertas de risco de identidade e risco de zona geográfica",
+    "combinedRiskAlertsIdentityTabTitle": "Identidade",
+    "combinedRiskAlertsGeozoneTabTitle": "Zona geográfica",
+    "totalEventsWidgetTitle": "Total de eventos",
+    "totalEventsWidgetDescription": "total de eventos",
+    "totalUsersWidgetTitle": "Total de Utilizadores ativos",
+    "totalUsersWidgetDescription": "total de usuários ativos",
+    "networkAnomalyAlertsWidgetTitle": "Alertas de anomalias de rede",
+    "networkAlertSummaryWidget": {
+      "title": "Resumo de alertas de rede",
+      "label": {
+        "high": "Alertas de anomalias de alta rede",
+        "critical": "Alertas críticos de anomalias de rede",
+        "medium": "Alertas de anomalia de rede média",
+        "low": "Alertas de anomalia de rede baixa",
+        "unknown": "Alertas de anomalias de rede desconhecidas"
+      }
+    },
+    "mapWidgetTitle": "Mapa"
+  },
+  "actionType": {
+    "overrideNetworkAccessPolicy": "Substituir política de controle de acesso à rede"
+  },
+  "riskPolicies": {
+    "common": {
+      "tooltips": {
+        "copyPolicy": "Copiar",
+        "deletePolicy": "Excluir"
+      }
+    },
+    "assessment": {
+      "info": {
+        "title": "Detecções de risco",
+        "paragraph": "Atribua detecções aos níveis de risco para configurar uma postura de risco para os usuários. O nível de risco é usado pelas políticas para determinar respostas para eventos."
+      },
+      "buttons": {
+        "addDetections": "Adicionar detecções",
+        "useTemplate": "Usar modelo"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "Adicione uma política para atribuir detecções aos níveis de risco para configurar uma postura de risco para os usuários. O nível de risco é usado pelas políticas para determinar respostas para eventos. Se um usuário não tiver uma política atribuída, a política padrão será usada."
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Nome",
+        "description": "Descrição"
+      },
+      "errorMessages": {
+        "required": "Esse campo é obrigatório.",
+        "nameInvalid": "O nome é inválido.",
+        "descriptionInvalid": "A descrição é inválida."
+      }
+    },
+    "columns": {
+      "name": "Nome da política"
+    },
+    "tableHeader": {
+      "risk": "Risco",
+      "detection": "Detecção"
+    },
+    "details": {
+      "title": "Detecção de riscos",
+      "assignedUsersAndGroups": "Usuários e grupos atribuídos"
+    },
+    "create": {
+      "title": "Adicionar política de detecção de riscos",
+      "copyTitle": "Política de detecção de riscos de cópia",
+      "successTitle": "A política foi adicionada",
+      "successDescription": "Você gostaria de atribuir usuários ou grupos a essa política de detecção de riscos?",
+      "successReject": "Agora não",
+      "successAccept": "sim",
+      "error": "A política não pôde ser criada.",
+      "policyConfirmationTitle": "Atribua a política de detecção de riscos",
+      "policyConfirmationDescription": "A política foi criada. Deseja atribuir usuários ou grupos a essa política?"
+    },
+    "delete": {
+      "deleteConfirmation": "Excluir confirmação",
+      "deleteSingle": "Deseja excluir a política {{name}}?",
+      "deleteNote": "Você deve remover todos os usuários e grupos associados a uma política antes de excluí-la."
+    },
+    "updatedAt": "Atualizado em {{date, M/D/YYYY h:mm A}} por {{updatedByUser}}",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Alterações não salvas",
+      "description": "Você quer sair desta página? Suas alterações não foram salvas.",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Sair da página"
+    },
+    "snackbars": {
+      "successfulUpdate": "A política foi atualizada.",
+      "successfulCreation": "A política foi criada.",
+      "successfulDeletion": "A política foi excluída."
+    },
+    "threats": {
+      "addDetectionsDrawer": {
+        "title": "Adicionar detecções",
+        "description": "Arraste e solte detecções para o nível de risco que você deseja aplicar a elas."
+      },
+      "categories": {
+        "labels": {
+          "identity": "Identidade"
+        }
+      },
+      "labels": {
+        "behavioralRisk": "Risco comportamental",
+        "networkAnomaly": "Anomalia de rede"
+      }
+    }
+  },
+  "policies": {
+    "common": {
+      "adaptiveOverridesGatewayInfo": "As políticas de resposta adaptável substituem todas as políticas de controle de acesso à rede atribuídas a usuários ou grupos.",
+      "tooltips": {
+        "copyPolicy": "Copiar",
+        "deletePolicy": "Excluir"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "Crie e atribua políticas de resposta adaptáveis para especificar as ações de resposta ao risco aplicadas aos dispositivos. $ t (bis/usa: Policies.Common.Adaptive OverridesGatewayInfo)",
+        "link": "Configurações de resposta adaptativa"
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Nome",
+        "description": "Descrição"
+      },
+      "errorMessages": {
+        "required": "Esse campo é obrigatório.",
+        "nameInvalid": "O nome é inválido.",
+        "descriptionInvalid": "A descrição é inválida."
+      }
+    },
+    "columns": {
+      "name": "Nome da política"
+    },
+    "tableHeader": {
+      "factor": "Risco",
+      "detection": "Detecção",
+      "responseActions": "Ações de resposta"
+    },
+    "details": {
+      "title": "Resposta adaptativa",
+      "assignedUsersAndGroups": "Usuários e grupos atribuídos",
+      "addCustomActionRiskFactors": "Especifique a ação a ser executada quando os padrões de uso da rede de um usuário não corresponderem ao comportamento anterior. $ t (bis/usa: Policies.Common.Adaptive OverridesGatewayInfo)"
+    },
+    "create": {
+      "title": "Adicionar política de resposta adaptável",
+      "copyTitle": "Copiar política de resposta adaptável",
+      "successTitle": "A política foi adicionada",
+      "successDescription": "Você gostaria de atribuir usuários ou grupos a esta política do BlackBerry Persona Analytics?",
+      "successReject": "Agora não",
+      "successAccept": "sim",
+      "error": "A política não pôde ser criada.",
+      "policyConfirmationTitle": "Atribua a política de resposta adaptável",
+      "policyConfirmationDescription": "A política foi criada. Deseja atribuir usuários ou grupos a essa política?"
+    },
+    "delete": {
+      "deleteConfirmation": "Excluir confirmação",
+      "deleteSingle": "Deseja excluir a política {{name}}?",
+      "deleteNote": "Você deve remover todos os usuários e grupos associados a uma política antes de excluí-la."
+    },
+    "updatedAt": "Atualizado em {{date, M/D/YYYY h:mm A}} por {{updatedByUser}}",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Alterações não salvas",
+      "description": "Você quer sair desta página? Suas alterações não foram salvas.",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Sair da página"
+    },
+    "snackbars": {
+      "successfulUpdate": "A política foi atualizada.",
+      "successfulCreation": "A política foi criada.",
+      "successfulDeletion": "A política foi excluída."
+    }
+  },
+  "actions": {
+    "options": {
+      "networkAccessPolicy": "Substituir política de controle de acesso à rede"
+    },
+    "assignNetworkAccessPolicy": {
+      "dialog": {
+        "label": "Selecione a política de controle de acesso à rede",
+        "title": "Substituir política de controle de acesso à rede",
+        "noOptions": "Nenhuma política disponível"
+      },
+      "notAvailableError": "A ação de substituição da política de controle de acesso à rede não está disponível no momento. Entre em contato com o administrador."
+    },
+    "selected": {
+      "networkAccessPolicy": {
+        "chip": "Substituir política de controle de acesso à rede: {{name}}",
+        "chipPolicyMissing": "Substituir política de controle de acesso à rede",
+        "errorChip": "A política não existe",
+        "errorSnackbar": "A política para uma das ações atribuídas não existe mais."
+      }
+    }
+  },
+  "gatewayEvidence": {
+    "title": "Detalhes do evento de alerta",
+    "tableTitle": "Detalhes do alerta",
+    "eventTitle": "Detalhes do evento de rede"
+  },
+  "detectionPolicies": {
+    "common": {
+      "tooltips": {
+        "copyPolicy": "Copiar",
+        "deletePolicy": "Excluir"
+      }
+    },
+    "arr": {
+      "title": "Desafie a identidade para redução automática de riscos",
+      "description": "Aplica-se somente a detecções de risco de identidade",
+      "selectLabel": "Nível de risco mínimo"
+    },
+    "assessment": {
+      "info": {
+        "title": "Avaliação de risco",
+        "paragraph": "Atribua detecções aos níveis de risco para configurar uma postura de risco para os usuários. O nível de risco é usado pelas políticas para determinar respostas para eventos."
+      },
+      "buttons": {
+        "addDetections": "Adicionar detecções",
+        "useTemplate": "Usar modelo",
+        "detections": "Detecções"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "Adicione uma política para atribuir detecções aos níveis de risco para configurar uma postura de risco para os usuários. O nível de risco é usado pelas políticas para determinar respostas para eventos. Se um usuário não tiver uma política atribuída, a política padrão será usada."
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Nome",
+        "description": "Descrição"
+      },
+      "errorMessages": {
+        "required": "Esse campo é obrigatório.",
+        "nameInvalid": "O nome é inválido.",
+        "descriptionInvalid": "A descrição é inválida."
+      }
+    },
+    "columns": {
+      "name": "Nome da política"
+    },
+    "tableHeader": {
+      "risk": "Risco",
+      "detection": "Detecção"
+    },
+    "details": {
+      "title": "Avaliação de risco",
+      "assignedUsersAndGroups": "Usuários e grupos atribuídos"
+    },
+    "create": {
+      "title": "Adicionar política de avaliação de riscos",
+      "copyTitle": "Política de avaliação de riscos de cópia",
+      "successTitle": "A política foi adicionada",
+      "successDescription": "Você gostaria de atribuir usuários ou grupos a essa política de avaliação de riscos?",
+      "successReject": "Agora não",
+      "successAccept": "sim",
+      "error": "A política não pôde ser criada.",
+      "policyConfirmationTitle": "Atribua a política de avaliação de riscos",
+      "policyConfirmationDescription": "A política foi criada. Deseja atribuir usuários ou grupos a essa política?"
+    },
+    "delete": {
+      "deleteConfirmation": "Excluir confirmação",
+      "deleteSingle": "Deseja excluir a política {{name}}?",
+      "deleteNote": "Você deve remover todos os usuários e grupos associados a uma política antes de excluí-la."
+    },
+    "updatedAt": "Atualizado em {{date, M/D/YYYY h:mm A}} por {{updatedByUser}}",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Alterações não salvas",
+      "description": "Você quer sair desta página? Suas alterações não foram salvas.",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Sair da página"
+    },
+    "snackbars": {
+      "successfulUpdate": "A política foi atualizada.",
+      "successfulCreation": "A política foi criada.",
+      "successfulDeletion": "A política foi excluída."
+    },
+    "threats": {
+      "addDetectionsDrawer": {
+        "title": "Adicionar detecções",
+        "description": "Arraste e solte detecções para o nível de risco que você deseja aplicar a elas."
+      },
+      "categories": {
+        "labels": {
+          "identity": "Identidade"
+        }
+      },
+      "labels": {
+        "behavioralRisk": "Risco comportamental",
+        "networkAnomaly": "Anomalia de rede"
+      }
+    }
+  },
+  "gatewayEvents": {
+    "labelGateway": "Gateway",
+    "pageTitle": "Eventos",
+    "networkEvents": {
+      "label": "Eventos de rede",
+      "pageTitle": "Eventos de rede"
+    },
+    "networkActivity": {
+      "label": "Atividade de rede"
+    }
+  },
+  "deviceRiskAssessment": {
+    "deviceRiskDetails": "Detalhes de risco do Dispositivo",
+    "appliedRiskPolicy": "Política de risco aplicado: {{riskPolicyName}}",
+    "error": {
+      "fetch": "As informações de risco do dispositivo não puderam ser recuperadas."
+    }
+  },
+  "geozones": {
+    "table": {
+      "headers": {
+        "name": "Nome",
+        "location": "Localização",
+        "size": "Tamanho"
+      },
+      "columnPicker": "Colunas de tabela",
+      "toolbar": {
+        "totalResults": "{{total}} resultados",
+        "totalSelected": "{{total}} selecionado"
+      },
+      "cells": {
+        "size": "{{value}} {{unit}}"
+      }
+    },
+    "deleteDialog": {
+      "singleTitle": "Remover Geozone",
+      "multiTitle": "Remover Geozones",
+      "singleMessage": "<0>Deseja remover a zona geográfica <1>{{zone}}</1>? </0>",
+      "multiMessage": "Deseja remover os geozones selecionados?"
+    },
+    "operations": {
+      "update": {
+        "error": "A zona geográfica não pôde ser atualizada.",
+        "success": "A zona geográfica foi atualizada."
+      },
+      "create": {
+        "error": "A zona geográfica não pôde ser criada.",
+        "success": "A zona geográfica foi criada."
+      },
+      "delete": {
+        "error": "A zona geográfica não pôde ser excluída.",
+        "success": "A zona geográfica foi excluída."
+      }
+    }
+  }
+}

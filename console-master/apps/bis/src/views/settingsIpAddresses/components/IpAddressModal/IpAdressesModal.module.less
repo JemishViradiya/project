@@ -1,0 +1,34 @@
+@import '../../../../theme/theme.less';
+
+.modal-input-container {
+  display: flex;
+  flex-flow: column;
+  margin-top: 16px;
+}
+
+.textareaWrapper {
+  position: relative;
+}
+
+.outerTextField {
+  width: 100%;
+  background-color: @backgroundDefault;
+}
+
+.innerTextField {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.textarea {
+  background: transparent;
+  z-index: 1;
+
+  &:not(:placeholder-shown) {
+    background: @backgroundDefault;
+  }
+}
+
+.input {
+  max-width: 20rem !important;
+}

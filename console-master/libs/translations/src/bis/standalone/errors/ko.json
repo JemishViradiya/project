@@ -1,0 +1,15 @@
+{
+  "next": "다음",
+  "tenantID": "테넌트ID",
+  "signIn": "로그인",
+  "help": "도움말",
+  "signedOut": "로그아웃됨",
+  "signedOutMessage": "로그아웃되었습니다.",
+  "sessionExpired": "세션이 만료됨",
+  "sessionExpiredMessage": "세션이 만료되었습니다.",
+  "signInAgainLink": "다시 로그인하려면 여기를 클릭하십시오.",
+  "tenantIdLabel": "테넌트 ID를 지정하십시오.",
+  "loadingSessionLabel": "세션을 로드하는 중...",
+  "loadingTenantLabel": "테넌트 로드 중...",
+  "noTenantLabel": "“{{tenant}}” 테넌트를 찾을 수 없습니다."
+}

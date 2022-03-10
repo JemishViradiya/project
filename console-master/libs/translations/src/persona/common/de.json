@@ -1,0 +1,122 @@
+{
+  "dashboard": {
+    "title": "CylancePERSONA"
+  },
+  "users": {
+    "title": "Persona Users",
+    "sectionTitles": {
+      "assets": "Assets",
+      "userInfo": "User Info",
+      "personaAlerts": "CylancePERSONA Alerts",
+      "associatedDevices": "Zugehöriges Gerät ({{count}})",
+      "associatedDevices_plural": "Zugehörige Geräte ({{count}})",
+      "userTrustScoreLog": "Vertrauens-Score-Protokoll des Benutzers",
+      "cylancePersonaStatus": "CylancePersona Status"
+    },
+    "actions": {
+      "remove": "Remove",
+      "removeUserDescription": "Are you sure you want to remove the selected user?",
+      "removeUserDescription_plural": "Are you sure you want to remove the {{count}} selected users?",
+      "resetModelsDescription": "Sind Sie sicher, dass Sie das Punktemodell zurücksetzen möchten? Dadurch werden die gesammelten Daten gelöscht."
+    },
+    "columns": {
+      "userName": "Username",
+      "state": "State",
+      "lastOnline": "Last Online",
+      "zones": "Zones"
+    },
+    "noData": "No users found.",
+    "state": {
+      "online": "Online",
+      "offline": "Offline"
+    },
+    "notifications": {
+      "removeUsersSuccess": "Successfully removed {{count}} user!",
+      "removeUsersSuccess_plural": "Successfully removed {{count}} users!",
+      "removeUsersError": "Failed to remove user. Try again.",
+      "removeUsersError_plural": "Failed to remove users. Try again.",
+      "dataUnavailableError": "Daten sind nicht verfügbar. Bitte versuchen Sie es später noch einmal."
+    },
+    "tabs": {
+      "activeAlerts": "Active Alerts",
+      "alertHistory": "Alert History"
+    },
+    "detailsTitle": "Angaben zum Nutzer"
+  },
+  "dialogs": {
+    "actionConfirmation": "Action Confirmation"
+  },
+  "button": {
+    "cancel": "Cancel",
+    "remove": "Remove"
+  },
+  "tableColumns": "Table Columns",
+  "loading": "Loading...",
+  "personaEvents": {
+    "LogonModelStatus": "Logon Model Status",
+    "MetaModelScore": "Meta Model Score",
+    "MetaModelStatus": "Meta Model Status",
+    "UserTrustScore": "User Trust Score",
+    "Successful2FALogon": "Successful 2FA Logon",
+    "Failed2FALogon": "Failed 2FA Logon",
+    "UserFailedLogon": "User Failed Logon",
+    "ForcedStepUpAuthentication": "Forced Step-Up Authentication",
+    "MaliciousRuleHit": "Böswilliger Regelschlag"
+  },
+  "alertStatus": {
+    "New": "New",
+    "InProgress": "In Progress",
+    "FalsePositive": "False Positive",
+    "Reviewed": "Reviewed"
+  },
+  "personaSeverity": {
+    "info": "Info",
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "critical": "Critical"
+  },
+  "noData": "No items to display",
+  "currentCTS": "Aktueller CTS",
+  "AssociatedUserOffline": "Assoziierter Benutzer offline",
+  "ResumeScoring": "Begleitung fortsetzen",
+  "PauseScoring": "Begleitung pausieren",
+  "ResetScoring": "Scoring zurücksetzen",
+  "ResumeScoringAll": "Alle Scoring fortsetzen",
+  "PauseScoringAll": "Alle Ecoring pausieren",
+  "ResetScoringAll": "Alle Ergebnisse zurücksetzen",
+  "personaModelStatus": {
+    "Training": "Schulung",
+    "Scoring": "Wertung",
+    "Paused": "Pausiert",
+    "Processing": "Verarbeitung"
+  },
+  "personaModelTypes": {
+    "TrustScore": "Vertrauens-Score des Benutzers",
+    "Meta": "Meta-Modell",
+    "Conduct": "Verhalten",
+    "Process": "Prozess",
+    "Keyboard": "Tastatur",
+    "Mouse": "Maus",
+    "Network": "Netzwerk",
+    "Logon": "Anmelden"
+  },
+  "personaModelButton": {
+    "AssociatedUserOffline": "Die Steuerung ist deaktiviert, da der Benutzer offline ist",
+    "ResumeScoring": "Scoring fortsetzen",
+    "ResumeScoringAll": "Scoring für alle fortsetzen",
+    "PauseScoring": "Punktestand pausieren",
+    "PauseScoringAll": "Pausieren Sie das Scoring für alle",
+    "ResetScoring": "Scoring zurücksetzen",
+    "ResetScoringAll": "Setzen Sie die Punktzahl für alle zurück"
+  },
+  "LastNDays": "Letzter {{count}} Tag",
+  "LastNDays_plural": "Letzte {{count}} Tage",
+  "LastNHrs": "Letzte {{count}} Hr",
+  "LastNHrs_plural": "Letzte {{count}} Stunden",
+  "Time": "Zeit",
+  "Score": "Ergebnis",
+  "NA": "NA",
+  "scoreDataUnavailableError": "Trust Score-Daten sind nicht verfügbar. Bitte versuchen Sie es später noch einmal.",
+  "unknown": "Unbekannt"
+}

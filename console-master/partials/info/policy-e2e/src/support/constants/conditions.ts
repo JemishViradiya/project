@@ -1,0 +1,16 @@
+export enum CONDITIONS {
+  BE_VISIBLE = 'be.visible',
+  EXIST = 'exist',
+  NOT_BE_VESIBLE = 'not.be.visible',
+  NOT_EXIST = 'not.exist',
+  BE_EMPTY = 'be.empty',
+  HAVE_LENGTH = 'have.length',
+  NOT_HAVE_LENGTH = 'not.have.length',
+  MATCH = 'match',
+  CONTAIN = 'contain',
+  EQUAL = 'equal',
+  BE_SELECTED = 'be.selected',
+  BE_DISABLED = 'be.disabled',
+  HAVE_ATTRIBUTE = 'have.attr',
+  HAVE_TEXT = 'have.text',
+}

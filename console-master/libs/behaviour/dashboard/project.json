@@ -1,0 +1,37 @@
+{
+  "root": "libs/behaviour/dashboard",
+  "sourceRoot": "libs/behaviour/dashboard/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/behaviour/dashboard/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/behaviour/dashboard"],
+      "options": {
+        "jestConfig": "libs/behaviour/dashboard/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "port": 4400,
+        "config": {
+          "configFolder": "libs/behaviour/dashboard/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  },
+  "tags": ["scope:behaviour", "scope:cdn"]
+}

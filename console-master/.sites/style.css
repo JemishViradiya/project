@@ -1,0 +1,61 @@
+body {
+  font-family: sans-serif;
+  margin: auto;
+  max-width: 1280px;
+}
+
+nav {
+  background-color: #313236;
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+nav a {
+  color: #aaa;
+  display: inline-block;
+  font-size: 15px;
+  padding: 10px 15px 10px 12px;
+  font-weight: 400;
+  border-right: 1px solid #aaa;
+}
+nav a:first-of-type {
+  border-left: 1px solid #aaa;
+}
+
+nav :not(a) + a {
+  border-left: 1px solid #aaa;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+main {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+a {
+  text-decoration: none;
+  color: #1475dc;
+}
+
+.flex-grow {
+  flex: 1 0 auto;
+}
+
+a > h3 {
+  color: #1475dc;
+  font-weight: 500;
+  margin-top: 32px;
+}
+
+caption {
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.47);
+}

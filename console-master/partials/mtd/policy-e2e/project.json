@@ -1,0 +1,29 @@
+{
+  "root": "partials/mtd/policy-e2e",
+  "sourceRoot": "partials/mtd/policy-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/mtd/policy-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/mtd/policy-e2e/cypress.json",
+        "tsConfig": "partials/mtd/policy-e2e/tsconfig.json",
+        "devServerTarget": "mtd/policy:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "mtd/policy:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/mtd/policy-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:mtd"],
+  "implicitDependencies": ["mtd/policy"]
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "outDir": "../../../dist/out-tsc",
+    "allowJs": true,
+    "types": ["cypress", "node", "@testing-library/cypress", "webpack-env"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.js"],
+  "files": [
+    "../../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
+    "../../../tools/nx/typings/image.d.ts",
+    "../../../tools/nx/typings/cypress.d.ts"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "common": {
+    "save": "保存",
+    "cancel": "キャンセル",
+    "add": "追加",
+    "errorPleaseContact": "エラーが発生しました。もう一度試すか、管理者に連絡してください。",
+    "description": "説明",
+    "risk": "リスク",
+    "settings": "設定",
+    "delete": "削除",
+    "descriptionInvalid": "説明は {{max}} 文字以下でなければなりません。",
+    "errorFieldRequired": "このフィールドは必須です",
+    "errorInvalidName": "名前が無効です",
+    "nameInvalid": "名前は {{max}} 文字以下でなければなりません。",
+    "automaticRiskReduction": "自動リスク軽減"
+  },
+  "risk": {
+    "common": {
+      "identityRisk": "アイデンティティリスク",
+      "identityRiskResponseActions": "アイデンティティーリスクレスポンスアクション",
+      "networkAnomaly": "ネットワーク異常",
+      "generalInfo": "一般情報"
+    },
+    "label": {
+      "low": "低リスク",
+      "medium": "中リスク",
+      "high": "ハイリスク",
+      "critical": "クリティカルリスク"
+    },
+    "level": {
+      "CRITICAL": "クリティカル",
+      "HIGH": "高い",
+      "MEDIUM": "ミディアム",
+      "LOW": "低い",
+      "TRAINING": "トレーニング",
+      "UNKNOWN": "不明",
+      "UNTRUSTED": "信頼できない",
+      "UNDETECTED": "検出されない",
+      "UNDEFINED": "未定義",
+      "TRUSTED": "信頼できる",
+      "AT_RISK": "危険にさらされた",
+      "SAFE": "セーフ",
+      "SECURED": "セキュア"
+    }
+  },
+  "arr": {
+    "challengeState": {
+      "deny": "ユーザーによって拒否されました",
+      "failed": "エラー-未完了",
+      "in_progress": "進行中",
+      "no_mfa": "ポリシーでは有効になっていない",
+      "ok": "検証済み",
+      "timeout": "タイムアウトしました",
+      "unknown": "エラー-未完了",
+      "mfa_skipped": "バイパス",
+      "fraud": "不正行為"
+    }
+  },
+  "policies": {
+    "create": {
+      "error": "ポリシーを作成できませんでした。"
+    },
+    "details": {
+      "errorSave": "ポリシーを保存できませんでした。",
+      "errorDelete": "ポリシーを削除できませんでした。",
+      "errorServerNameAlreadyExists": "この名前のポリシーは既に存在します。"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "@ues-behaviour/shared-e2e",
+  "version": "0.0.1",
+  "sideEffects": true,
+  "module": "./src/index.ts"
+}

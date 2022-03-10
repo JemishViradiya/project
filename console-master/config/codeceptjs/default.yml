@@ -1,0 +1,49 @@
+runner:
+  loglevel: warn
+  # debug: pw:api
+  codecept:
+    timeout:
+      navigation: 25000
+      interaction: 1000
+      implicitWait: 5
+    plugin: Playwright
+    browser: chromium
+    show: false
+    slow: false
+    keepBrowserState: true
+    keepCookies: true
+    restart: false
+    windowSize: 1440x1024
+    # writeScreenshots: true
+    Playwright:
+      idleBrowserTimeout: 30000
+      # getPageTimeout: 30000
+      chromium:
+        args:
+          - --disable-dev-shm-usage
+    WebDriver:
+      # smartWait: 1000
+
+      runner: local
+      browser: chrome
+
+      # hostname: '10.158.237.247'
+      port: 4444
+      # path: /wd/hub/
+      protocol: http
+
+target: e2e
+e2e:
+  path: './e2e'
+  config: {}
+  runner: 'codecept'
+  # suites: true
+  # suites:
+  #   User Login: true
+  #   Dashboard: true
+  #   User Dashboard:
+  #     - Can sort list Events
+  #   Event Dashboard:
+  #     - Can sort list Events
+  #   Policies: true
+  #   Risk Engine: true

@@ -1,0 +1,59 @@
+# syntax=docker/dockerfile:experimental
+
+ARG base_image=ues-pipeline-su.devlab2k.testnet.rim.net/enterprise/ues/console/ci-agent:b3acc772e6c6
+
+## Development-install
+FROM ${base_image} as build
+
+WORKDIR /base/builds/enterprise/UES/console/
+
+VOLUME /usr/local/share/.cache
+
+ADD . ./
+
+ENV CI=true \
+  XDG_CACHE_HOME=/usr/local/share/.cache \
+  CACHE_DIR=/usr/local/share/.cache \
+  CYPRESS_CACHE_FOLDER=/usr/local/share/Cypress \
+  npm_config_devdir=/usr/local/share/.cache/dev \
+  NODE_EXTRA_CA_CERTS=/base/builds/enterprise/UES/console/.yarn-registry.crt \
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+
+RUN --mount=id=yarn,type=cache,sharing=private,target=/usr/local/share/.cache/yarn \
+  mv .yarnrc.ci .yarnrc && \
+  env NODE_ENV=development yarn install --ci --frozen-lockfile --prefer-offline && \
+  rm package.json yarn.lock apps/*/package.json libs/*/package.json && \
+  touch /base/builds/agent-nodejs.stamp
+
+FROM external-docker.ebnexus.sw.rim.net/cypress/browsers:node14.17.0-chrome91-ff89 as cypress
+RUN --mount=type=bind,from=build,target=/mnt/build \
+  mkdir -p /base/builds/enterprise/UES/ /usr/local/share/ && \
+  cp -a /mnt/build/base/builds/enterprise/UES/console/ /base/builds/enterprise/UES/console/ && \
+  cp -a /mnt/build/usr/local/share/Cypress /usr/local/share/Cypress
+
+WORKDIR /base/builds/enterprise/UES/console/
+RUN sed -i -e 's|api_url:.*$|api_url: "http://ebsorcyp01.devlab2k.testnet.rim.net:1234/"|g' /usr/local/share/Cypress/*/Cypress/resources/app/packages/server/config/app.yml
+
+## Development-install
+FROM mcr.microsoft.com/playwright:focal as codeceptjs
+
+WORKDIR /base/builds/enterprise/UES/console/
+
+VOLUME /usr/local/share/.cache
+
+ADD . ./
+
+ENV CI=true \
+  XDG_CACHE_HOME=/usr/local/share/.cache \
+  CACHE_DIR=/usr/local/share/.cache \
+  CYPRESS_CACHE_FOLDER=/usr/local/share/Cypress \
+  npm_config_devdir=/usr/local/share/.cache/dev \
+  NODE_EXTRA_CA_CERTS=/base/builds/enterprise/UES/console/.yarn-registry.crt \
+  PLAYWRIGHT_BROWSERS_PATH=/usr/local/share/playwright
+
+RUN --mount=id=yarn,type=cache,sharing=private,target=/usr/local/share/.cache/yarn \
+  mv .yarnrc.ci .yarnrc && \
+  env NODE_ENV=development yarn install --ci --frozen-lockfile --prefer-offline && \
+  npx playwright install && \
+  rm package.json yarn.lock apps/*/package.json libs/*/package.json && \
+  touch /base/builds/agent-nodejs.stamp

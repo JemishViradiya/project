@@ -1,0 +1,23 @@
+{
+  "$id": "partial-e2e",
+  "type": "object",
+  "properties": {
+    "group": {
+      "type": "string",
+      "description": "Group name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "name": {
+      "type": "string",
+      "description": "Partial name",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      }
+    }
+  },
+  "required": ["name", "group"]
+}

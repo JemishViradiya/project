@@ -1,0 +1,24 @@
+.filter-menu-container {
+  padding: 6px;
+
+  .menu-item {
+    margin: 12px 12px;
+  }
+  .filter-menu-form-control {
+    margin-bottom: 6px;
+    position: sticky;
+    width: 100%;
+  }
+  .menu-item-list-container {
+    height: 90%;
+    overflow-y: scroll;
+  }
+  .MuiInputLabel-shrink,
+  .MuiFormLabel-focused.MuiInputLabel-shrink {
+    color: #03a5ef;
+  }
+  .empty-filter-menu {
+    margin-top: 24px;
+    text-align: center;
+  }
+}

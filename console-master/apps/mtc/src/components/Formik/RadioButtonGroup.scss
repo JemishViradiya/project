@@ -1,0 +1,11 @@
+.borderless-fieldset {
+  border: none;
+  &.row {
+    & > label {
+      display: block;
+    }
+    & > div {
+      display: inline-block;
+    }
+  }
+}

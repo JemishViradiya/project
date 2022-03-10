@@ -1,0 +1,39 @@
+{
+  "operationBar": {
+    "search": {
+      "input": "Suche nach einem Standort",
+      "iconAriaLabel": "Suche"
+    },
+    "draw": {
+      "circle": "Erstellen eines Geozonen-Radius",
+      "polygon": "Erstellen von Geozon-Shape"
+    }
+  },
+  "popupGeozone": {
+    "titleCircle": "Radius der Geozone",
+    "titlePolygon": "Geozone-Form",
+    "inputName": "Name",
+    "inputRadius": "Radius",
+    "inputUnit": "Einheit",
+    "labelSize": "Größe: {{value}} {{unit}}",
+    "buttonRemoveAriaLabel": "entfernen",
+    "buttonCancel": "Stornieren",
+    "buttonSave": "Sparen",
+    "units": {
+      "km": "km",
+      "miles": "Meilen"
+    },
+    "errors": {
+      "invalidName": "Ungültiger Name",
+      "invalidRadius": "Ungültiger Radi"
+    }
+  },
+  "popupDrawOptions": {
+    "polygonOption": "Zeichnen einer Geozone Shape",
+    "circleOption": "Zeichnen Sie einen Geozonen-Radius"
+  },
+  "marker": {
+    "zoneAriaLabel": "Zonenmarkierung - {{name}}",
+    "searchAriaLabel": "Suche Pin - {{name}}"
+  }
+}

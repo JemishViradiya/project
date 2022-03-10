@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "../../dist/out-tsc",
+    "types": ["cypress", "cypress-storybook/cypress", "node", "@testing-library/cypress"]
+  },
+  "exclude": ["src/storybook/**"],
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+  "files": [
+    "../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
+    "../../tools/nx/typings/image.d.ts",
+    "../../tools/nx/typings/cypress.d.ts"
+  ]
+}

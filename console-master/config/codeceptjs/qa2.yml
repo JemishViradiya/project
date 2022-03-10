@@ -1,0 +1,33 @@
+runner:
+  mode: default
+  loglevel: debug
+  delay:
+    startup: 0
+  codecept:
+    show: true
+    writeScreenshots: true
+
+e2e:
+  config:
+    baseUrl: https://qa2-protect.cylance.com
+
+    # see https://wikis.rim.net/pages/viewpage.action?pageId=909575392
+    users:
+      admin:
+        email: UCAdminQA2Adm2@ahem.sw.rim.net
+        password: 'UCp@$$11'
+      rbac-admin:
+        email: UC_RBAC_Admin_QA2@ahem.sw.rim.net
+        password: 'Passw0rd'
+      rbac-read-only:
+        email: UC_RBAC_ReadOnly_QA2@ahem.sw.rim.net
+        password: 'Passw0rd'
+      rbac-user:
+        email: UC_RBAC_User_QA2@ahem.sw.rim.net
+        password: 'Passw0rd'
+      rbac-zone-manager:
+        email: UC_RBAC_ZoneManager_QA2@ahem.sw.rim.net
+        password: 'Passw0rd'
+      rbac-custom:
+        email: UC_RBAC_CustomRole_QA2@ahem.sw.rim.net
+        password: 'Passw0rd'

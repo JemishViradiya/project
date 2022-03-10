@@ -1,0 +1,8 @@
+{
+  "selectAtLeastOneValue": "Selecciona al menos un valor.",
+  "emptyField": "{{fieldName}} es obligatorio.",
+  "outOfRange": "El valor debe estar comprendido entre {{min}} y {{max}}.",
+  "invalidField": "{{fieldName}} no es válido.",
+  "noNumbers": "{{fieldName}} no puede contener números.",
+  "maxLength": "{{fieldName}} debe tener {{max}} caracteres o menos."
+}

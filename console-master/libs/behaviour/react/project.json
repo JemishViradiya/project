@@ -1,0 +1,22 @@
+{
+  "root": "libs/behaviour/react",
+  "sourceRoot": "libs/behaviour/react/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/behaviour/react/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/behaviour/react"],
+      "options": {
+        "jestConfig": "libs/behaviour/react/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:behaviour", "scope:cdn"]
+}

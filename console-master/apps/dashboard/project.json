@@ -1,0 +1,101 @@
+{
+  "root": "apps/dashboard",
+  "sourceRoot": "apps/dashboard/src",
+  "projectType": "application",
+  "generators": {},
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "options": {
+        "baseHref": "..",
+        "deployUrl": "uc/dashboard/",
+        "outputPath": "dist/uc/dashboard",
+        "index": "tools/index.html",
+        "main": "apps/dashboard/src/main.tsx",
+        "polyfills": "libs/behaviour/app-shell/src/polyfills.ts",
+        "tsConfig": "apps/dashboard/tsconfig.app.json",
+        "assets": ["apps/dashboard/src/assets"],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "tools/webpack/app",
+        "maxWorkers": 1,
+        "memoryLimit": 1024
+      },
+      "configurations": {
+        "production": {
+          "outputPath": "prod/dashboard",
+          "fileReplacements": [
+            {
+              "replace": "apps/dashboard/src/environments/environment.ts",
+              "with": "apps/dashboard/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            }
+          ],
+          "maxWorkers": 1,
+          "memoryLimit": 2048
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "hmr": true,
+        "buildTarget": "dashboard:build",
+        "ssl": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "dashboard:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/dashboard/**/*.js",
+          "apps/dashboard/**/*.jsx",
+          "apps/dashboard/**/*.ts",
+          "apps/dashboard/**/*.tsx",
+          "tools/nx/typings/image.d.ts",
+          "apps/dashboard/**/*.spec.ts",
+          "apps/dashboard/**/*.spec.tsx",
+          "apps/dashboard/**/*.spec.js",
+          "apps/dashboard/**/*.spec.jsx",
+          "apps/dashboard/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/dashboard/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/apps/dashboard"]
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/dashboard.sh dashboard"
+      }
+    }
+  },
+  "tags": ["scope:app"],
+  "implicitDependencies": ["api", "pwa"]
+}

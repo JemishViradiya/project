@@ -1,0 +1,18 @@
+{
+  "projectId": "mtd/policy-e2e",
+  "fileServerFolder": ".",
+  "fixturesFolder": "./src/fixtures",
+  "integrationFolder": "./src/integration",
+  "modifyObstructiveCode": false,
+  "pluginsFile": "../../../tools/cypress/plugins",
+  "supportFile": "./src/support/index.ts",
+  "video": false,
+  "videosFolder": "../../../dist/cypress/partials/mtd/policy-e2e/videos",
+  "screenshotsFolder": "../../../dist/cypress/partials/mtd/policy-e2e/screenshots",
+  "chromeWebSecurity": false,
+  "retries": 2,
+  "viewportWidth": 1440,
+  "env": {
+    "coverage": false
+  }
+}

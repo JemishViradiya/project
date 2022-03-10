@@ -1,0 +1,27 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../dist/out-tsc",
+    "types": ["cypress", "node", "@testing-library/cypress"]
+  },
+  "files": [
+    "../../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
+    "../../../tools/nx/typings/image.d.ts",
+    "../../../tools/nx/typings/cypress.d.ts"
+  ],
+  "exclude": [
+    "types/codecept*",
+    "src/codeceptjs/**/*.ts",
+    "src/codeceptjs/**/*.js",
+    "types/codeceptjs.d.ts",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.stories.ts",
+    "**/*.stories.js",
+    "docs/**",
+    "node_modules/**",
+    "**/*.stories.jsx",
+    "**/*.stories.tsx"
+  ],
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
+}

@@ -1,0 +1,25 @@
+{
+  "responses": {
+    "list": {
+      "empty": {
+        "totals": {
+          "pages": 1,
+          "elements": 0
+        },
+        "navigation": {
+          "next": "next",
+          "previous": "prev"
+        },
+        "count": 0,
+        "elements": []
+      }
+    },
+    "create": {
+      "duplicateHash": {
+        "subStatusCode": 210,
+        "message": "Hash value already exists.",
+        "params": ["SomeHashValue"]
+      }
+    }
+  }
+}

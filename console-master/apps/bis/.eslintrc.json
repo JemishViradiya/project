@@ -1,0 +1,55 @@
+{
+  "extends": ["../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*", "node_modules/**", "src/service-worker/worker/**"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "parserOptions": {
+        "project": ["apps/bis/tsconfig.*?.json"]
+      },
+      "rules": {}
+    },
+    {
+      "files": ["*.test.ts", "*.test.js", "*.test.tsx", "*.test.jsx", "tests/**", "**/__mocks__/**/*", "**/__fixtures__/**/*"],
+      "rules": {
+        "sonarjs/cognitive-complexity": "off",
+        "sonarjs/no-all-duplicated-branches": "off",
+        "sonarjs/no-collapsible-if": "off",
+        "sonarjs/no-duplicate-string": "off",
+        "sonarjs/no-identical-conditions": "off",
+        "sonarjs/no-identical-functions": "off",
+        "sonarjs/no-identical-expressions": "off",
+        "sonarjs/no-inverted-boolean-check": "warn",
+        "sonarjs/no-same-line-conditional": "warn",
+        "sonarjs/no-use-of-empty-return-value": "warn",
+        "sonarjs/no-useless-catch": "warn",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-var-requires": "off"
+      },
+      "env": {
+        "node": true,
+        "jest": true
+      }
+    },
+    {
+      "files": ["src/theme/theme-less.js"],
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
+  "rules": {
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "@typescript-eslint/no-empty-function": "warn"
+  },
+  "globals": {
+    "self": "readonly",
+    "setImmediate": "readonly"
+  }
+}

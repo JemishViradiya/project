@@ -1,0 +1,57 @@
+@import '../../components/map/MapMarkerPopup.module.less';
+
+@boxWidth: 278px;
+@borderSettings: 1px .mui.palette[ @divider];
+
+.box {
+  min-width: @boxWidth;
+  border-left: @borderSettings;
+  border-right: @borderSettings;
+  text-align: left;
+}
+
+.topBox {
+  .box;
+
+  padding: 32px 16px;
+  border-top: @borderSettings;
+  color: .mui.palette[ @common-white];
+}
+
+.bottomBox {
+  .box;
+
+  padding: 16px;
+  border-bottom: @borderSettings;
+}
+
+.title {
+  composes: .mui.typography[ @h2];
+  color: #fff;
+  max-width: @boxWidth;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.description {
+  font-size: @fontSizeSubtitle;
+  color: #fff;
+}
+
+.body {
+  composes: .mui.typography[ @body1];
+  min-height: 48px;
+}
+
+.footer {
+  composes: .mui.typography[ @body1];
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  cursor: pointer;
+  transition: color @animHoverDuration @animHoverTimingFn;
+}

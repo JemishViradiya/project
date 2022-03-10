@@ -1,0 +1,238 @@
+{
+  "emm": {
+    "page": {
+      "error": {
+        "deleteConnection": "No se ha podido eliminar la conexión {{connectionName}}.",
+        "retrieveConnections": "No se han podido recuperar las conexiones.",
+        "retrieveConnection": "No se ha podido recuperar la conexión {{type}}.",
+        "default": "Error"
+      },
+      "title": "Conexiones EMM",
+      "connection": {
+        "name": {
+          "intune": "inquilino de Intune",
+          "uem": "Inquilino de UEM"
+        },
+        "type": {
+          "uem": "BlackBerry UEM",
+          "intune": "Microsoft Intune"
+        },
+        "add": "Añadir conexión",
+        "generateAppConfigButton": "Generar configuración de aplicaciones"
+      },
+      "removeConnection": "Confirmación Eliminar",
+      "deleteConnectionDialog": {
+        "confirm": "¿Desea eliminar esta conexión?"
+      },
+      "forceDeleteConnectionDialog": {
+        "title": "Forzar confirmación de eliminación",
+        "confirm": "No se pudo eliminar la conexión. ¿Reintentar usar la eliminación forzada?"
+      },
+      "description": "Configure las conexiones de Microsoft Intune.",
+      "menu": {
+        "uem": "BlackBerry UEM",
+        "intune": "Microsoft Intune"
+      }
+    },
+    "table": {
+      "tenant": "Inquilino",
+      "type": "Tipo de conexión",
+      "status": "Estado de conexión",
+      "data": {
+        "state": {
+          "success": "Exitosa",
+          "inProgress": "En progreso",
+          "error": {
+            "default": "Error",
+            "message": {
+              "FAILURE_TO_AUTHORIZE_OIDC_CLIENT": "No se ha podido autorizar la conexión UEM ({{uemTenantId}}).",
+              "FAILURE_TO_ENABLE_CONNECTION_WITHIN_UEM": "No se ha podido establecer la conexión con el servidor de UEM ({{uemTenantId}}).",
+              "FAILURE_TO_ENABLE_UES_SERVICES": "No se ha podido completar la conexión con el servidor de UEM ({{uemTenantId}})."
+            }
+          },
+          "retry": "Intenta de nuevo"
+        }
+      }
+    },
+    "intune": {
+      "add": {
+        "error": {
+          "consentError": "Error de consentimiento del administrador: {{error}}",
+          "consentFailed": "Error en el consentimiento del administrador",
+          "connectionExist": "La conexión ya existe para un inquilino determinado",
+          "setAppConfigError": "Error al establecer la configuración de la aplicación",
+          "setAppConfigErrorWithCause": "Error al establecer la configuración de la aplicación: {{cause}}",
+          "azureLoginFailure": "Error al iniciar sesión en Azure",
+          "invalidTargetApp": "La aplicación de destino no es válida",
+          "submit": "Error al agregar la conexión intune",
+          "appConfigPolicyExist": "La política de configuración de aplicaciones ya existe con el mismo nombre"
+        },
+        "title": "Agregar conexión Microsoft Intune",
+        "azureInfoTitle": "Información de Azure",
+        "azureInfoDescription": "Introduzca el ID de inquilino de Azure. El ID de inquilino no se puede cambiar una vez creada la conexión.",
+        "adminConsent": "Consentimiento del administrador",
+        "integration": "Integración con Intune",
+        "integrationDescription": "Esta opción solo está disponible cuando se crea una conexión. Esta configuración no se puede cambiar.",
+        "success": "Se ha añadido la conexión.",
+        "azureUserLogin": "Acceso de usuario de Azure",
+        "tenantId": "ID de inquilino de Azure",
+        "mdmIntegration": "Use Intune para administrar los dispositivos y sus aplicaciones (Intune es el proveedor de MDM)",
+        "mamIntegration": "Usar Intune para administrar solo las aplicaciones del dispositivo (Intune es el proveedor de MAM)"
+      }
+    },
+    "delete": {
+      "success": "Se ha eliminado la conexión."
+    },
+    "uem": {
+      "title": "Agregar conexión BlackBerry UEM",
+      "add": {
+        "tenantTitle": "Información del inquil",
+        "tenantDescription": "Agregue información del inquilino de UEM.",
+        "srpid": "SRP ID",
+        "authKey": "Clave de autenticación"
+      },
+      "success": "Se ha añadido la conexión."
+    },
+    "appConfig": {
+      "error": {
+        "submit": "No se han podido añadir las directivas de configuración de la aplicación.",
+        "invalidTenant": "La identificación del inquilino no es válida.",
+        "loadGroup": "Error al cargar grupos MDM",
+        "loadGroupInvalidQuery": "La consulta de búsqueda de grupo {{searchQuery}} tiene caracteres no admitidos"
+      },
+      "title": "Agregar políticas de configuración de aplicaciones Microsoft Intune",
+      "heading": "Políticas de configuración de aplicaciones",
+      "description": "Añade políticas de configuración de aplicaciones para iOS y Android. Esta configuración es opcional y solo se aplica a los dispositivos administrados por Intune.",
+      "androidCheckBoxLabel": "Android",
+      "androidAppName": "Nombre",
+      "iosCheckBoxLabel": "iOS",
+      "androidTargetedApp": "Aplicación dirigida",
+      "iosTargetedApp": "Aplicación dirigida",
+      "iosAppName": "Nombre",
+      "success": "Se han añadido políticas de configuración de aplicaciones.",
+      "groupAssignmentTitle": "Asignar a grupos",
+      "groupSwitchTitle": "Todos los grupos",
+      "groupLeftList": "Grupos disponibles",
+      "groupRightList": "Grupos seleccionados",
+      "multiStatusSuccess": "Se han añadido políticas de configuración de aplicaciones para {{DEVICE_TYPE}}.",
+      "table": {
+        "group": "Nombre del grupo"
+      },
+      "groupAssignment": {
+        "title": "Añadir un grupo",
+        "description": "Seleccionar grupos para añadir a la configuración de la aplicación",
+        "searchText": "Búsqueda de grupos",
+        "list": {
+          "noResults": "Sin resultados"
+        },
+        "cancelButton": "CANCELAR",
+        "addButton": "AÑADIR"
+      }
+    },
+    "validation": {
+      "emptyField": "Este campo es obligatorio."
+    }
+  },
+  "SettingsLabel": "Ajustes",
+  "noData": "Sin datos",
+  "noItem": "Sin artículo",
+  "button": {
+    "cancel": "Cancelar",
+    "submit": "Enviar",
+    "delete": "Borrar",
+    "save": "Guardar",
+    "next": "Próximo",
+    "yes": "Sí",
+    "no": "No"
+  },
+  "server": {
+    "error": {
+      "default": "Se ha producido un error.",
+      "retry": {
+        "default": "Error al reintentar.",
+        "addFailed": "La conexión se elimina a la fuerza, pero no se puede crear una nueva. Intente añadir una nueva conexión"
+      },
+      "intune": {
+        "add": {
+          "400": "La solicitud de conexión no es válida.",
+          "500": "No se ha podido añadir la conexión.",
+          "7002": "Código de autenticación no válido.",
+          "11003": "Debe introducir las credenciales.",
+          "11004": "El ID de inquilino de Azure no es válido.",
+          "11006": "La solicitud de conexión de Intune no es válida.",
+          "11013": "Se han detectado varios tipos de autenticación.",
+          "11014": "La identificación del inquilino no es válida.",
+          "11021": "El tipo EMM no es válido.",
+          "11023": "No se admiten solicitudes con varias conexiones al mismo tipo de EMM.",
+          "11024": "El tipo de activación no es válido.",
+          "11031": "Licencia de Intune no válida.",
+          "13001": "No se ha encontrado el ID de inquilino de Azure.",
+          "13002": "La conexión de Intune ya existe.",
+          "13003": "La conexión de Intune ya existe."
+        },
+        "addAppConfig": {
+          "500": "No se han podido añadir las directivas de configuración de la aplicación.",
+          "11019": "La longitud de la consulta de búsqueda de grupo no puede superar los 120 caracteres",
+          "21005": "No tienes permiso para acceder a este recurso de Intune.",
+          "21016": "Hay uno o más grupos en los grupos incluidos y excluidos.",
+          "23001": "No se ha encontrado la conexión de Intune.",
+          "24010": "No se ha encontrado la aplicación.",
+          "24014": "Ya existe una política con este nombre.",
+          "24015": "No se ha podido crear la directiva de aplicación.",
+          "27001": "No tienes permiso para acceder a este recurso de Intune."
+        }
+      },
+      "uem": {
+        "add": {
+          "500": "No se ha podido añadir la conexión.",
+          "11003": "Debe introducir las credenciales.",
+          "11004": "El ID de inquilino de UEM no es válido.",
+          "11006": "La solicitud de conexión de UEM no es válida.",
+          "11013": "Se han detectado varios tipos de autenticación.",
+          "11014": "La identificación del inquilino no es válida.",
+          "11021": "El tipo EMM no es válido",
+          "11023": "No se admiten solicitudes con varias conexiones al mismo tipo de EMM.",
+          "11024": "El tipo de activación no es válido.",
+          "13002": "La conexión de UEM ya existe.",
+          "13003": "La conexión de UEM ya existe.",
+          "15001": "El identificador de inquilino de UEM no está disponible en PCE para la organización solicitada.",
+          "31000": "No se ha encontrado el identificador de inquilino de UEM.",
+          "31001": "El arrendatario y la organización de UEM no coinciden.",
+          "31002": "El inquilino o la clave de autenticación de UEM no son válidos.",
+          "31003": "El arrendatario de UEM ya está asociado.",
+          "31004": "El inquilino ya no existe.",
+          "31500": "Error interno desconocido",
+          "31510": "Fallo de intersección",
+          "31520": "Fallo de PCE",
+          "31530": "Falla en el servicio de"
+        }
+      },
+      "tenantlist": {
+        "404": "Los inquilinos de UEM no están disponibles.",
+        "500": "No se han podido recuperar los inquilinos de UEM.",
+        "31500": "No se han podido recuperar los inquilinos de UEM.",
+        "31510": "Fallo de intersección",
+        "31530": "Falla en el servicio de"
+      }
+    }
+  },
+  "PolicyAndIpAddress": {
+    "title": "Política y dirección IP",
+    "button": {
+      "policy": "Política de actualización",
+      "tenantPolicy": "Actualizar política de inquil",
+      "addIpaddressList": "Agregar lista de direcciones IP",
+      "updateIpaddressList": "Actualizar lista de direcciones IP"
+    }
+  },
+  "emmConnection": {
+    "title": "Conexión EMM",
+    "registrationStatusMessage": {
+      "pending": "Pendiente de activación de {{emmType}}",
+      "error": "Activación de {{emmType}} incompleta"
+    },
+    "error": {
+      "fetch": "No se pudo recuperar la conexión EMM."
+    }
+  }
+}

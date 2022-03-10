@@ -1,0 +1,24 @@
+{
+  "monday": "Lunedì",
+  "tuesday": "martedì",
+  "wednesday": "Mercoledì",
+  "thursday": "Giovedì",
+  "friday": "Venerdì",
+  "saturday": "Sabato",
+  "sunday": "Domenica",
+  "medium": {
+    "monday": "Lunedì",
+    "tuesday": "mar",
+    "wednesday": "mer",
+    "thursday": "giovedì",
+    "friday": "ven",
+    "saturday": "sab",
+    "sunday": "Sun"
+  },
+  "timePicker": {
+    "ampm": "vero",
+    "okLabel": "OK",
+    "cancelLabel": "Annulla"
+  },
+  "timeRange": "({{from}} - {{to}})"
+}

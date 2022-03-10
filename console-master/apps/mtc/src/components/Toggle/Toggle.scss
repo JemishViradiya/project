@@ -1,0 +1,18 @@
+.toggle {
+  display: flex;
+  margin-left: -12px;
+  .toggle-text {
+    display: flex;
+    margin: auto 0;
+    p {
+      font-size: 16px;
+      display: flex;
+    }
+  }
+  .MuiSwitch-root {
+    margin-top: -15px;
+  }
+  .warning-text {
+    color: #e10024;
+  }
+}

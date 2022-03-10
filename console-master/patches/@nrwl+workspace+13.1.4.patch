@@ -1,0 +1,22 @@
+diff --git a/node_modules/@nrwl/workspace/src/tasks-runner/cache.js b/node_modules/@nrwl/workspace/src/tasks-runner/cache.js
+index a8f2286..e84e769 100644
+--- a/node_modules/@nrwl/workspace/src/tasks-runner/cache.js
++++ b/node_modules/@nrwl/workspace/src/tasks-runner/cache.js
+@@ -48,7 +48,7 @@ class Cache {
+             // didn't find it locally but we have a remote cache
+             if (!res && this.options.remoteCache) {
+                 // attempt remote cache
+-                yield this.options.remoteCache.retrieve(task.hash, this.cachePath);
++                yield this.options.remoteCache.retrieve(task, this.cachePath);
+                 // try again from local cache
+                 return this.getFromLocalDir(task);
+             }
+@@ -86,7 +86,7 @@ class Cache {
+                 yield fs_extra_1.writeFile(path_1.join(td, 'code'), code.toString());
+                 yield fs_extra_1.writeFile(tdCommit, 'true');
+                 if (this.options.remoteCache) {
+-                    yield this.options.remoteCache.store(task.hash, this.cachePath);
++                    yield this.options.remoteCache.store(task, this.cachePath);
+                 }
+                 yield this.recordOutputsHash(outputs, task.hash);
+                 if (terminalOutput) {

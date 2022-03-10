@@ -1,0 +1,557 @@
+{
+  "settings": {
+    "operatingMode": {
+      "title": "Betriebsmodus",
+      "description": "Geben Sie eine Betriebsart an. Der passive Modus wird verwendet, um Daten zu sammeln und Risikomodelle für einzelne Benutzer zu erstellen, ohne Maßnahmen zu ergreifen. Im aktiven Modus werden die in Richtlinien definierten Antwortaktionen angewendet. In beiden Betriebsarten werden Warnungen generiert. Wenn der erste Benutzer zu einer Richtlinie für adaptive Antworten hinzugefügt wird, wird eine Schulungszeit für das Risikomodell der adaptiven Reaktion gestartet und dauert, bis die folgenden Bedingungen erfüllt sind: 1000 Ereignisse werden für den Mieter des Benutzers gesammelt und 14 Kalendertage vergehen. Während des Schulungszeitraums werden keine Warnungen generiert.",
+      "options": {
+        "ACTIVE": "Aktiver Modus",
+        "PASSIVE": "Passiver Modus"
+      }
+    },
+    "riskEngines": {
+      "title": "Einstellung Identitätsrisiko Engine",
+      "networkAnomaly": {
+        "title": "Netzwerk-Anomalie",
+        "description": "Geben Sie den Schwellenwert für Netzwerkanomalieereignisse an und geben Sie an, ob sie als hohes oder kritisches Risiko behandelt werden. Netzwerkanomalieereignisse werden erkannt, wenn das Netzwerknutzungsmuster eines Gateway-Benutzers nicht mit dem früheren Verhalten übereinstimmt.",
+        "riskFactor": "Risiko von Netzwerkanomalien"
+      },
+      "tableHeader": {
+        "factor": "Risiko",
+        "detection": "Entdeckung",
+        "level": "Risiko-Niveau"
+      }
+    },
+    "ipaddresses": {
+      "trusted": "Vertrauenswürdige IP-Adressen",
+      "untrusted": "Nicht vertrauenswürdige IP-Adressen",
+      "ipAddressConfiguration": "Konfiguration von IP-Adressen",
+      "name": "Name",
+      "detail": "Einzelheiten",
+      "noData": "Keine Daten",
+      "deleteItem": "Artikel löschen",
+      "cancel": "Stornieren",
+      "delete": "löschen",
+      "trustedAddModalLabel": "Fügen Sie sichere Endpunkt-IP-Adressen hinzu",
+      "trustedEditModalLabel": "Bearbeiten Sie sichere Endpunkt-IP-Adressen",
+      "save": "Sparen",
+      "errorFieldRequired": "Dieses Feld ist ein Pflichtfeld.",
+      "errorInvalidName": "Dieses Feld ist ungültig.",
+      "sourceLabel": "Quelle",
+      "specifiedAddresses": "IP-Adressen, IP-Bereiche oder CIDRs",
+      "ipAddressesLabel": "IP-Adressen, IP-Bereiche oder CIDRs",
+      "addNew": "IP-Adresse hinzufügen",
+      "search": "Suche",
+      "invalidFormat": "Das Format ist ungültig.",
+      "selectedAriaLabel": "Ausgewählte IP-Adressen",
+      "selectedItemsCount": "{{count}} ausgewählt",
+      "untrustedAddModalLabel": "Fügen Sie eingeschränkte Endpunkt-IP-Adressen hinzu",
+      "untrustedEditModalLabel": "Bearbeiten Sie eingeschränkte Endpunkt-IP-Adressen",
+      "more": "{{count}} mehr",
+      "results": "{{count}} Ergebnis",
+      "ipaddress": "IP Adresse",
+      "results_plural": "{{count}} Ergebnisse",
+      "more_plural": "{{count}} mehr",
+      "deleteDialog": {
+        "title": "Bestätigung löschen",
+        "description": "Möchten Sie die ausgewählten IP-Adressen löschen?",
+        "confirmButtonLabel": "löschen",
+        "cancelButtonLabel": "Stornieren"
+      },
+      "trustedModalLabel": "Sichere Endpunkt-IP-Adressen",
+      "untrustedModalLabel": "Beschränkte Endpunkt-IP-Adressen",
+      "ipAddressesSubLabel": "Geben Sie IP-Adressen, IP-Bereiche oder CIDRs ein (eine pro Zeile)"
+    },
+    "ipAddress": {
+      "errorAddNew": "Die IP-Adressliste konnte nicht hinzugefügt werden",
+      "errorUpdate": "Die IP-Adressliste konnte nicht aktualisiert werden",
+      "errorDelete": "Die IP-Adressliste konnte nicht gelöscht werden"
+    },
+    "comingSoonMessage": {
+      "title": "Kommt bald",
+      "description": "Adaptive Sicherheitseinstellungen werden in einem bevorstehenden Update der UES-Konsole verfügbar gemacht."
+    }
+  },
+  "gatewayAlerts": {
+    "table": {
+      "headers": {
+        "risk": "Risiko",
+        "type": "Typ",
+        "detection": "Entdeckung",
+        "response": "Antwort",
+        "device": "Gerät",
+        "user": "User",
+        "detectionTime": "Zeit der Entdeckung",
+        "category": "Kategorie",
+        "identityChallenge": "Herausforderung der Identität"
+      },
+      "filters": {
+        "risk": "Risiko-Filter",
+        "user": "Benutzer-Filter",
+        "detection": "Entdeckungsfilter",
+        "detectionTime": "Erkennungszeit-Filter"
+      },
+      "toolbar": {
+        "totalResults": "{{total}} Ergebnisse"
+      },
+      "columnPicker": {
+        "title": "Tabellen-Spalten"
+      },
+      "noDataInTrainingMode": "Bei der adaptiven Antwort wird eine Schulungszeit verwendet, bis die folgenden Bedingungen erfüllt sind: 1000 Ereignisse werden für den Mieter eines Benutzers gesammelt und 14 Kalendertage vergehen. Während des Schulungszeitraums werden keine Warnungen generiert.",
+      "noDataPlaceholder": "In den letzten 30 Tagen wurden keine Warnungen generiert.",
+      "noDataWithFilters": "Bei den ausgewählten Filtern wurden keine Warnungen gefunden.",
+      "noDataInTrainingModeDP": "Richtlinien zur Risikobewertung verwenden einen Schulungszeitraum, bis die folgenden Bedingungen erfüllt sind: 1000 Ereignisse werden für den Mieter eines Benutzers gesammelt und 14 Kalendertage vergehen. Während des Schulungszeitraums werden keine Warnungen generiert."
+    },
+    "columns": {
+      "response": {
+        "overrideNetworkAccessPolicy": "Richtlinie zur Netzwerkzugriffssteuerung außer Kraft setzen: {{name}}",
+        "passiveModePrefix": "Aktionen nicht ausgeführt: {{text}}",
+        "passiveModeTooltip": "Reaktionsaktionen werden im passiven Modus nicht auf Benutzer angewendet.",
+        "passiveModeTooltipArr": "Passiver Betriebsmodus ist eingeschaltet. Identitätsprobleme werden im passiven Betriebsmodus nicht gesendet.",
+        "passiveModeTooltipAriaLabel": "Informationen zum passiven Modus",
+        "challengeState": {
+          "deny": "Identitätsherausforderung: Vom Benutzer abgelehnt",
+          "failed": "Identity Challenge: Fehler - Nicht abgeschlossen",
+          "in_progress": "Identitätsherausforderung: In Bearbeitung",
+          "no_mfa": "Identitätsherausforderung: In Richtlinie nicht aktiviert",
+          "mfa_skipped": "Identitätsherausforderung: Umgangen",
+          "ok": "Identitäts-Herausforderung: Verifiziert",
+          "timeout": "Identitätsherausforderung: Zeitüberschreitung",
+          "unknown": "Identity Challenge: Fehler - Nicht abgeschlossen",
+          "fraud": "Identitäts-Herausforderung: Betrug"
+        }
+      },
+      "detection": {
+        "networkAnomaly": "Netzwerk-Anomalie"
+      },
+      "identityChallenge": {
+        "challengeState": {
+          "deny": "Vom Benutzer abgelehnt",
+          "failed": "Fehler — Nicht abgeschlossen",
+          "in_progress": "Im Gange",
+          "no_mfa": "In der Richtlinie nicht aktiviert",
+          "mfa_skipped": "Umgangen",
+          "ok": "Überprüft",
+          "timeout": "Zeitüberschreitung",
+          "unknown": "Fehler — Nicht abgeschlossen",
+          "fraud": "Betrug"
+        }
+      },
+      "risk": {
+        "tooltipText": "Klicken Sie auf eine Zeile, um die Ereignisdetails anzuzeigen."
+      }
+    },
+    "alert": {
+      "passiveMode": {
+        "title": "Passiver Betriebsmodus eingeschaltet",
+        "description": "Im passiven Betriebsmodus werden keine automatischen Reaktionsmaßnahmen ergriffen.",
+        "settingsLink": "Einstellungen"
+      }
+    }
+  },
+  "gatewayAlertDetails": {
+    "titles": {
+      "drawerTitle": "Netzwerk-Anomalie",
+      "alertOverview": "Übersicht über Warnungen",
+      "affectedAssets": "Betroffene Vermögenswerte",
+      "responseActions": "Response-Aktionen",
+      "risk": "Risiko",
+      "responseActionsSubtitle": "<0>von <1>{{policyName}}</1> Richtlinie für adaptive Antworten</0>",
+      "identityChallenge": "Herausforderung der Identität",
+      "eventOverview": "Überblick über die Veranstaltung"
+    },
+    "labels": {
+      "assignedPolicy": "Richtlinie zur Netzwerkzugriffskontrolle außer Kraft gesetzt",
+      "description": "Beschreibung",
+      "detectionTime": "Zeit der Entdeckung",
+      "device": "Gerät",
+      "eventDetails": "Einzelheiten zur Veranstaltung",
+      "eventId": "Ereignis-ID",
+      "type": "Typ",
+      "user": "User",
+      "automaticResponseReduction": "Herausforderungsstatus",
+      "userHyperlink": "Gehe zu Benutzerdetails",
+      "deviceHyperlink": "Gerätedetails anzeigen"
+    },
+    "values": {
+      "networkEvent": "Ungewöhnliches Netzwerk-Ereignis festgestellt",
+      "riskType": "Identitätsrisiko",
+      "viewDetails": "Einzelheiten anzeigen"
+    },
+    "actions": {
+      "noActions": "Zu diesem Zeitpunkt wurden keine Maßnahmen ergriffen"
+    },
+    "labelGateway": "Gateway",
+    "pageTitle": "Alarme",
+    "pageTitleDpActor": "Warnungen zum Netzwerkverhalten"
+  },
+  "risk": {
+    "common": {
+      "identityRisk": "Identitätsrisiko",
+      "identityRiskResponseActions": "Reaktionen auf Identitätsrisiken",
+      "networkAnomaly": "Netzwerk-Anomalie",
+      "generalInfo": "Allgemeine Informationen",
+      "automaticRiskReduction": "Automatische Risikominderung",
+      "automaticRiskReductionDescription": "Wenn Sie Benutzern ermöglichen möchten, ihr Risiko zu senken, indem Sie sich erneut authentifizieren, um ihre Identität zu überprüfen, aktivieren Sie die automatische Risikominderung. Sie müssen die Multi-Faktor-Authentifizierung in der Authentifizierungsrichtlinie konfigurieren, die Benutzern oder Gruppen zugewiesen ist, bevor Sie die automatische Risikominderung verwenden können.",
+      "riskChanged": "Die Risikostufe hat sich von {{prevLevel}} auf {{currentLevel}} geändert."
+    }
+  },
+  "dashboard": {
+    "alertSummaryWidgetTitle": "Zusammenfassung der Warnungen",
+    "identityRiskAlertsWidgetTitle": "Warnungen zu Identitätsrisiken",
+    "geozoneRiskAlertsWidgetTitle": "Geozone Risikowarnungen",
+    "topActionsWidgetTitle": "Top-Maßnahmen nach Richtlinie für adaptive Reaktion",
+    "realTimeAlertsWidgetTitle": "Benachrichtigungen in Echtzeit",
+    "combinedRiskAlertsWidgetTitle": "Identitätsrisiko- und Geozone-Risikowarnungen",
+    "combinedRiskAlertsIdentityTabTitle": "Identity",
+    "combinedRiskAlertsGeozoneTabTitle": "Geozone",
+    "totalEventsWidgetTitle": "Gesamtzahl der Ereignisse",
+    "totalEventsWidgetDescription": "Gesamtzahl der Ereignisse",
+    "totalUsersWidgetTitle": "Gesamtzahl der aktiven Nutzer",
+    "totalUsersWidgetDescription": "Gesamtzahl der aktiven Benutzer",
+    "networkAnomalyAlertsWidgetTitle": "Warnungen bei Netzwerkanomalien",
+    "networkAlertSummaryWidget": {
+      "title": "Zusammenfassung der Netzwerkwarnung",
+      "label": {
+        "high": "Warnungen bei hoher Netzwerkanomalie",
+        "critical": "Warnungen bei kritischen Netzwerkanomalien",
+        "medium": "Warnungen bei mittlerer Netzwerkanomalie",
+        "low": "Warnungen bei niedriger Netzwerkanomalie",
+        "unknown": "Warnungen bei unbekannten Netzwerkanomalien"
+      }
+    },
+    "mapWidgetTitle": "Karte"
+  },
+  "actionType": {
+    "overrideNetworkAccessPolicy": "Richtlinie zur Netzwerkzugriffssteuerung außer Kraft setzen"
+  },
+  "riskPolicies": {
+    "common": {
+      "tooltips": {
+        "copyPolicy": "Kopie",
+        "deletePolicy": "löschen"
+      }
+    },
+    "assessment": {
+      "info": {
+        "title": "Risikoerkennungen",
+        "paragraph": "Weisen Sie Entdeckungen Risikostufen zu, um eine Risikohaltung für Benutzer zu konfigurieren. Die Risikostufe wird von Richtlinien verwendet, um Antworten auf Ereignisse zu ermitteln."
+      },
+      "buttons": {
+        "addDetections": "Erkennungen hinzufügen",
+        "useTemplate": "Vorlage verwenden"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "Fügen Sie eine Richtlinie hinzu, um Entdeckungen zu Risikostufen zuzuweisen, um eine Risikohaltung für Benutzer zu konfigurieren. Die Risikostufe wird von Richtlinien verwendet, um Antworten auf Ereignisse zu ermitteln. Wenn einem Benutzer keine Richtlinie zugewiesen ist, wird die Standardrichtlinie verwendet."
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Name",
+        "description": "Beschreibung"
+      },
+      "errorMessages": {
+        "required": "Dieses Feld ist ein Pflichtfeld.",
+        "nameInvalid": "Der Name ist ungültig.",
+        "descriptionInvalid": "Die Beschreibung ist ungültig."
+      }
+    },
+    "columns": {
+      "name": "Name der Richtlinie"
+    },
+    "tableHeader": {
+      "risk": "Risiko",
+      "detection": "Entdeckung"
+    },
+    "details": {
+      "title": "Erkennung von Risiken",
+      "assignedUsersAndGroups": "Zugewiesener Benutzer und Gruppen"
+    },
+    "create": {
+      "title": "Richtlinie zur Risikoerkennung hinzufügen",
+      "copyTitle": "Richtlinie zur Risikoerkennung kopieren",
+      "successTitle": "Die Richtlinie wurde hinzugefügt",
+      "successDescription": "Möchten Sie dieser Risikoerkennungsrichtlinie Benutzer oder Gruppen zuweisen?",
+      "successReject": "Jetzt nicht",
+      "successAccept": "Ja",
+      "error": "Die Richtlinie konnte nicht erstellt werden.",
+      "policyConfirmationTitle": "Zuweisen der Richtlinie zur Risikoerkennung",
+      "policyConfirmationDescription": "Die Richtlinie wurde erstellt. Möchten Sie dieser Richtlinie Benutzer oder Gruppen zuweisen?"
+    },
+    "delete": {
+      "deleteConfirmation": "Bestätigung löschen",
+      "deleteSingle": "Möchten Sie die Richtlinie {{name}} löschen?",
+      "deleteNote": "Sie müssen alle mit einer Richtlinie verknüpften Benutzer und Gruppen entfernen, bevor Sie sie löschen."
+    },
+    "updatedAt": "Aktualisiert am {{date, M/D/YYYY h:mm A}} von {{updatedByUser}}",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Ungespeicherte Änderungen",
+      "description": "Willst du diese Seite verlassen? Ihre Änderungen wurden nicht gespeichert.",
+      "cancelButton": "Stornieren",
+      "confirmButton": "Seite verlassen"
+    },
+    "snackbars": {
+      "successfulUpdate": "Die Richtlinie wurde aktualisiert.",
+      "successfulCreation": "Die Richtlinie wurde erstellt.",
+      "successfulDeletion": "Die Richtlinie wurde gelöscht."
+    },
+    "threats": {
+      "addDetectionsDrawer": {
+        "title": "Erkennungen hinzufügen",
+        "description": "Ziehen Sie Entdeckungen per Drag & Drop auf die Risikostufe, die Sie auf sie anwenden möchten."
+      },
+      "categories": {
+        "labels": {
+          "identity": "Identity"
+        }
+      },
+      "labels": {
+        "behavioralRisk": "Verhaltensrisiko",
+        "networkAnomaly": "Netzwerk-Anomalie"
+      }
+    }
+  },
+  "policies": {
+    "common": {
+      "adaptiveOverridesGatewayInfo": "Richtlinien für adaptive Antworten setzen alle Netzwerkzugriffssteuerungsrichtlinien außer Kraft, die Benutzern oder Gruppen zugewiesen sind.",
+      "tooltips": {
+        "copyPolicy": "Kopie",
+        "deletePolicy": "löschen"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "Erstellen und weisen Sie Richtlinien für adaptive Reaktionen zu, um die Risikoreaktionsaktionen festzulegen, die auf Geräte angewendet werden. $t (bis/ues: policies.common.adaptive überschreibt GatewayInfo)",
+        "link": "Einstellungen für adaptive Reaktion"
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Name",
+        "description": "Beschreibung"
+      },
+      "errorMessages": {
+        "required": "Dieses Feld ist ein Pflichtfeld.",
+        "nameInvalid": "Der Name ist ungültig.",
+        "descriptionInvalid": "Die Beschreibung ist ungültig."
+      }
+    },
+    "columns": {
+      "name": "Name der Richtlinie"
+    },
+    "tableHeader": {
+      "factor": "Risiko",
+      "detection": "Entdeckung",
+      "responseActions": "Response-Aktionen"
+    },
+    "details": {
+      "title": "Adaptive Antwort",
+      "assignedUsersAndGroups": "Zugewiesener Benutzer und Gruppen",
+      "addCustomActionRiskFactors": "Geben Sie die Aktion an, die ausgeführt werden soll, wenn die Netzwerknutzungsmuster eines Benutzers nicht mit dem bisherigen Verhalten übereinstimmen. $t (bis/ues: policies.common.adaptive überschreibt GatewayInfo)"
+    },
+    "create": {
+      "title": "Richtlinie für adaptive Antworten hinzufügen",
+      "copyTitle": "Kopieren der Richtlinie für adaptive Antworten",
+      "successTitle": "Die Richtlinie wurde hinzugefügt",
+      "successDescription": "Möchten Sie dieser BlackBerry Persona Analytics-Richtlinie Benutzer oder Gruppen zuweisen?",
+      "successReject": "Jetzt nicht",
+      "successAccept": "Ja",
+      "error": "Die Richtlinie konnte nicht erstellt werden.",
+      "policyConfirmationTitle": "Weisen Sie die Richtlinie für adaptive Antworten zu",
+      "policyConfirmationDescription": "Die Richtlinie wurde erstellt. Möchten Sie dieser Richtlinie Benutzer oder Gruppen zuweisen?"
+    },
+    "delete": {
+      "deleteConfirmation": "Bestätigung löschen",
+      "deleteSingle": "Möchten Sie die Richtlinie {{name}} löschen?",
+      "deleteNote": "Sie müssen alle mit einer Richtlinie verknüpften Benutzer und Gruppen entfernen, bevor Sie sie löschen."
+    },
+    "updatedAt": "Aktualisiert am {{date, M/D/YYYY h:mm A}} von {{updatedByUser}}",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Ungespeicherte Änderungen",
+      "description": "Willst du diese Seite verlassen? Ihre Änderungen wurden nicht gespeichert.",
+      "cancelButton": "Stornieren",
+      "confirmButton": "Seite verlassen"
+    },
+    "snackbars": {
+      "successfulUpdate": "Die Richtlinie wurde aktualisiert.",
+      "successfulCreation": "Die Richtlinie wurde erstellt.",
+      "successfulDeletion": "Die Richtlinie wurde gelöscht."
+    }
+  },
+  "actions": {
+    "options": {
+      "networkAccessPolicy": "Richtlinie zur Netzwerkzugriffssteuerung außer Kraft setzen"
+    },
+    "assignNetworkAccessPolicy": {
+      "dialog": {
+        "label": "Richtlinie zur Netzwerkzugriffssteuerung wählen",
+        "title": "Richtlinie zur Netzwerkzugriffssteuerung außer Kraft setzen",
+        "noOptions": "Keine Richtlinie verfügbar"
+      },
+      "notAvailableError": "Die Aktion „Netzwerkzugriffssteuerung außer Kraft setzen“ ist derzeit nicht verfügbar. Bitte wenden Sie sich an Ihren Administrator."
+    },
+    "selected": {
+      "networkAccessPolicy": {
+        "chip": "Richtlinie zur Netzwerkzugriffssteuerung außer Kraft setzen: {{name}}",
+        "chipPolicyMissing": "Richtlinie zur Netzwerkzugriffssteuerung außer Kraft setzen",
+        "errorChip": "Richtlinie existiert nicht",
+        "errorSnackbar": "Die Richtlinie für eine der zugewiesenen Aktionen existiert nicht mehr."
+      }
+    }
+  },
+  "gatewayEvidence": {
+    "title": "Details zum Alarm-Ereignis",
+    "tableTitle": "Einzelheiten der Warnung",
+    "eventTitle": "Details zum Netzwerk-Ereignis"
+  },
+  "detectionPolicies": {
+    "common": {
+      "tooltips": {
+        "copyPolicy": "Kopie",
+        "deletePolicy": "löschen"
+      }
+    },
+    "arr": {
+      "title": "Herausforderungsidentität für automatische Risikomin",
+      "description": "Gilt nur für Erkennungen von Identitätsrisiken",
+      "selectLabel": "Minimales Risiko"
+    },
+    "assessment": {
+      "info": {
+        "title": "Risikobewertung",
+        "paragraph": "Weisen Sie Entdeckungen Risikostufen zu, um eine Risikohaltung für Benutzer zu konfigurieren. Die Risikostufe wird von Richtlinien verwendet, um Antworten auf Ereignisse zu ermitteln."
+      },
+      "buttons": {
+        "addDetections": "Erkennungen hinzufügen",
+        "useTemplate": "Vorlage verwenden",
+        "detections": "Erkennungen"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "Fügen Sie eine Richtlinie hinzu, um Entdeckungen zu Risikostufen zuzuweisen, um eine Risikohaltung für Benutzer zu konfigurieren. Die Risikostufe wird von Richtlinien verwendet, um Antworten auf Ereignisse zu ermitteln. Wenn einem Benutzer keine Richtlinie zugewiesen ist, wird die Standardrichtlinie verwendet."
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Name",
+        "description": "Beschreibung"
+      },
+      "errorMessages": {
+        "required": "Dieses Feld ist ein Pflichtfeld.",
+        "nameInvalid": "Der Name ist ungültig.",
+        "descriptionInvalid": "Die Beschreibung ist ungültig."
+      }
+    },
+    "columns": {
+      "name": "Name der Richtlinie"
+    },
+    "tableHeader": {
+      "risk": "Risiko",
+      "detection": "Entdeckung"
+    },
+    "details": {
+      "title": "Risikobewertung",
+      "assignedUsersAndGroups": "Zugewiesener Benutzer und Gruppen"
+    },
+    "create": {
+      "title": "Richtlinie zur Risikobewertung hinzufügen",
+      "copyTitle": "Kopieren der Richtlinie zur Risikobewertung",
+      "successTitle": "Die Richtlinie wurde hinzugefügt",
+      "successDescription": "Möchten Sie dieser Risikobewertungsrichtlinie Benutzer oder Gruppen zuweisen?",
+      "successReject": "Jetzt nicht",
+      "successAccept": "Ja",
+      "error": "Die Richtlinie konnte nicht erstellt werden.",
+      "policyConfirmationTitle": "Weisen Sie die Richtlinie zur Risikobewertung",
+      "policyConfirmationDescription": "Die Richtlinie wurde erstellt. Möchten Sie dieser Richtlinie Benutzer oder Gruppen zuweisen?"
+    },
+    "delete": {
+      "deleteConfirmation": "Bestätigung löschen",
+      "deleteSingle": "Möchten Sie die Richtlinie {{name}} löschen?",
+      "deleteNote": "Sie müssen alle mit einer Richtlinie verknüpften Benutzer und Gruppen entfernen, bevor Sie sie löschen."
+    },
+    "updatedAt": "Aktualisiert am {{date, M/D/YYYY h:mm A}} von {{updatedByUser}}",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Ungespeicherte Änderungen",
+      "description": "Willst du diese Seite verlassen? Ihre Änderungen wurden nicht gespeichert.",
+      "cancelButton": "Stornieren",
+      "confirmButton": "Seite verlassen"
+    },
+    "snackbars": {
+      "successfulUpdate": "Die Richtlinie wurde aktualisiert.",
+      "successfulCreation": "Die Richtlinie wurde erstellt.",
+      "successfulDeletion": "Die Richtlinie wurde gelöscht."
+    },
+    "threats": {
+      "addDetectionsDrawer": {
+        "title": "Erkennungen hinzufügen",
+        "description": "Ziehen Sie Entdeckungen per Drag & Drop auf die Risikostufe, die Sie auf sie anwenden möchten."
+      },
+      "categories": {
+        "labels": {
+          "identity": "Identity"
+        }
+      },
+      "labels": {
+        "behavioralRisk": "Verhaltensrisiko",
+        "networkAnomaly": "Netzwerk-Anomalie"
+      }
+    }
+  },
+  "gatewayEvents": {
+    "labelGateway": "Gateway",
+    "pageTitle": "Ereignisse",
+    "networkEvents": {
+      "label": "Netzwerk-Events",
+      "pageTitle": "Netzwerk-Events"
+    },
+    "networkActivity": {
+      "label": "Netzwerk-Aktivität"
+    }
+  },
+  "deviceRiskAssessment": {
+    "deviceRiskDetails": "Risikodetails für Gerät",
+    "appliedRiskPolicy": "Angewendete Risikorichtlinie: {{riskPolicyName}}",
+    "error": {
+      "fetch": "Die Geräterisikoinformationen konnten nicht abgerufen werden."
+    }
+  },
+  "geozones": {
+    "table": {
+      "headers": {
+        "name": "Name",
+        "location": "Standort",
+        "size": "Größe"
+      },
+      "columnPicker": "Spalten der Tabelle",
+      "toolbar": {
+        "totalResults": "{{total}} Ergebnisse",
+        "totalSelected": "{{total}} ausgewählt"
+      },
+      "cells": {
+        "size": "{{value}} {{unit}}"
+      }
+    },
+    "deleteDialog": {
+      "singleTitle": "Geozone entfernen",
+      "multiTitle": "Geozone entfernen",
+      "singleMessage": "<0>Möchten Sie die Geozone <1>{{zone}}</1> entfernen? </0>",
+      "multiMessage": "Möchten Sie die ausgewählten Geozonen entfernen?"
+    },
+    "operations": {
+      "update": {
+        "error": "Die Geozone konnte nicht aktualisiert werden.",
+        "success": "Die Geozone wurde aktualisiert."
+      },
+      "create": {
+        "error": "Die Geozone konnte nicht erstellt werden.",
+        "success": "Die Geozone wurde geschaffen."
+      },
+      "delete": {
+        "error": "Die Geozone konnte nicht gelöscht werden.",
+        "success": "Die Geozone wurde gelöscht."
+      }
+    }
+  }
+}

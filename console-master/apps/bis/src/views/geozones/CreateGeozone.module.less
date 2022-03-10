@@ -1,0 +1,49 @@
+@import '../../theme/theme.less';
+
+@controlWidth: 250px;
+@controlHeight: 28px;
+
+.dialog {
+  padding: 36px 16px 16px 16px;
+  position: relative;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.formGroup {
+  display: flex;
+  margin-bottom: 8px;
+
+  & > :not(:last-child) {
+    margin-right: 4px;
+  }
+}
+
+.riskLevelOption {
+  width: @controlWidth;
+  height: @controlHeight;
+
+  &:focus {
+    border-color: @colorLink;
+  }
+}
+
+.largeInput {
+  min-width: 14rem !important;
+  max-width: 14rem !important;
+}
+
+.smallInput {
+  min-width: 7rem !important;
+  max-width: 7rem !important;
+}
+
+.hr {
+  height: 1px;
+  background: @colorButtonBorder;
+  margin-bottom: 16px;
+}

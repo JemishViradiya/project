@@ -1,0 +1,40 @@
+{
+  "root": "libs/translations",
+  "sourceRoot": "libs/translations/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "assets": ["libs/translations/src/*"],
+        "outputPath": "dist/uc/cdn/translations",
+        "output": "dist/uc/cdn/translations",
+        "commands": [
+          {
+            "command": "set -x; rm -rf {args.output}; mkdir -v -p {args.output} && cp -v -f -r {args.assets} {args.output}/; echo build complete"
+          }
+        ]
+      },
+      "configurations": {
+        "production": {
+          "outputPath": "prod/translations",
+          "output": "prod/translations",
+          "commands": [
+            {
+              "command": "set -x; mkdir -p {args.output} && rsync -vrltDuh {args.assets} {args.output}/ && node libs/translations/tools/buildProd.js {args.output} && echo build complete"
+            }
+          ]
+        }
+      }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/assets.sh cdn/translations translations"
+      }
+    }
+  },
+  "tags": ["scope:shared", "scope:cdn"],
+  "implicitDependencies": []
+}

@@ -1,0 +1,55 @@
+@import '../../theme/theme.less';
+
+.placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graphic {
+  width: 120px;
+  height: 70px;
+  margin: 8px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+}
+
+.heading {
+  composes: .mui.typography[ @h4];
+  padding: 12px 0;
+}
+
+.description {
+  composes: .mui.typography[ @subtitle2];
+  color: .mui.palette[ @text-primary];
+}
+
+.wide {
+  display: flex;
+  flex-flow: row nowrap;
+  text-align: left;
+
+  & .graphic {
+    margin-right: 35px;
+  }
+}
+
+.tall {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  align-items: center;
+
+  & .graphic {
+    margin-bottom: 0;
+  }
+}
+
+.space {
+  display: flex;
+  flex-grow: 1;
+}

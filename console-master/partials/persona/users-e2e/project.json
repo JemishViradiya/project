@@ -1,0 +1,29 @@
+{
+  "root": "partials/persona/users-e2e",
+  "sourceRoot": "partials/persona/users-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/persona/users-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/persona/users-e2e/cypress.json",
+        "tsConfig": "partials/persona/users-e2e/tsconfig.json",
+        "devServerTarget": "persona:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "persona/users:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partial/persona/users-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:persona"],
+  "implicitDependencies": ["persona/users"]
+}

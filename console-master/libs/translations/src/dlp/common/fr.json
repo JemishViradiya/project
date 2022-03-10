@@ -1,0 +1,646 @@
+{
+  "setting": {
+    "mainSection": {
+      "pageTitle": "Paramètres de protection contre la perte de données",
+      "tabTitle": {
+        "dataCollection": "La collecte de données",
+        "whitelisting": "Domaines sécurisés",
+        "templates": "Modèles",
+        "dataTypes": "Types de données",
+        "trustedCertificates": "Certificats de confiance",
+        "notifications": "Notifications"
+      }
+    },
+    "buttons": {
+      "save": "Enregistrer",
+      "edit": "Éditer",
+      "enable": "Activer",
+      "disable": "Désactiver",
+      "cancel": "Annuler",
+      "delete": "Supprimer"
+    },
+    "list": {
+      "noData": "Aucune donnée"
+    },
+    "search": {
+      "region": "Région",
+      "infoType": "Type d'informations"
+    },
+    "popover": {
+      "header": "Colonnes de table"
+    },
+    "template": {
+      "columns": {
+        "templateName": "Nom du modèle",
+        "description": "Description",
+        "source": "Source",
+        "type": "Source",
+        "status": "Statut",
+        "regions": "Région",
+        "informationType": "Type d'informations",
+        "infoTypes": "Type d'informations",
+        "dataTypesIncluded": "Types de données inclus",
+        "dataEntities": "Types de données inclus",
+        "created": "Créé",
+        "updated": "Mise à jour",
+        "guid": "IDENTIFIANT"
+      },
+      "filter": {
+        "regions": "Filtre de région",
+        "infoTypes": "Filtre des types d'informations",
+        "dataEntities": "Filtre d'entités de données",
+        "name": "Filtre de nom de modèle",
+        "description": "Filtre de description des modèles",
+        "source": "Filtre source",
+        "status": "Filtre source",
+        "inUse": "En cours d'utilisation",
+        "dateCreated": "Filtre de date de création",
+        "dateModified": "Filtre de date de modification"
+      },
+      "buttons": {
+        "newTemplate": "Nouveau modèle",
+        "addToYourList": "Ajouter à votre liste",
+        "duplicate": "Dupliquer",
+        "removeFromYourList": "Supprimer de votre liste",
+        "delete": "Supprimer"
+      },
+      "dialogs": {
+        "removeFromYourList": {
+          "title": "Supprimer le modèle {{count}}",
+          "title_plural": "Supprimer les modèles {{count}}",
+          "cancelBtn": "Annuler",
+          "confirmBtn": "Supprimer",
+          "remove": {
+            "can_be_remove": "'{{name}}' sera supprimé de votre liste.",
+            "can_not_be_remove": "'{{name}}' ne figurait pas dans la liste.",
+            "custom_can_not_be_remove": "'{{name}}' est un modèle personnalisé qui ne peut pas être supprimé de votre liste. Il ne peut être supprimé que définitivement."
+          },
+          "remove_singular": {
+            "can_be_remove": "'{{name}}' sera supprimé de votre liste. Voulez-vous continuer?"
+          },
+          "remove_plural": {
+            "can_not_be_remove": "{{count}} d'autres ne figuraient pas dans la liste:",
+            "can_be_remove": "Les modèles {{count}} seront supprimés de votre liste :",
+            "custom_can_not_be_remove": "Les modèles personnalisés {{count}} ne peuvent pas être supprimés de votre liste. Ils ne peuvent être supprimés que définitivement."
+          }
+        },
+        "addToYourList": {
+          "title": "Ajouter un modèle {{count}}",
+          "title_plural": "Ajouter des modèles {{count}}",
+          "cancelBtn": "Annuler",
+          "confirmBtn": "Ajouter",
+          "add": {
+            "can_be_add": "'{{name}}' sera ajouté à votre liste.",
+            "can_not_be_add": "'{{name}}' figure déjà dans la liste.",
+            "custom_can_not_be_add": "'{{name}}' est un modèle personnalisé qui existe déjà."
+          },
+          "add_singular": {
+            "can_be_add": "'{{name}}' sera ajouté à votre liste. Voulez-vous continuer?"
+          },
+          "add_plural": {
+            "can_not_be_add": "{{count}} d'autres sont déjà là:",
+            "can_be_add": "{{count}} nouveaux modèles seront ajoutés à votre liste :",
+            "custom_can_not_be_add": "{{count}} modèles personnalisés existent déjà :"
+          }
+        },
+        "duplicate": {
+          "title": "Dupliquer",
+          "cancelBtn": "Annuler",
+          "confirmBtn": "Continuer",
+          "singleItem": "{{count}} unique",
+          "multipleItems": "À dupliquer: {{name}}"
+        },
+        "delete": {
+          "title": "Supprimer le modèle {{count}}",
+          "title_plural": "Supprimer les modèles {{count}}",
+          "cancelBtn": "Annuler",
+          "confirmBtn": "Supprimer",
+          "delete_one": "« {{name}} » sera supprimé. Cette action ne peut pas être annulée. Voulez-vous continuer ?",
+          "delete_allowed": "Le modèle personnalisé {{name}} sera supprimé.",
+          "delete_allowed_plural": "Les modèles personnalisés de {{count}} seront supprimés :",
+          "delete_protected": "Le modèle système {{name}} ne peut être supprimé à aucun moment.",
+          "delete_protected_plural": "Les modèles de système {{count}} ne peuvent à aucun moment être supprimés :"
+        },
+        "confirmation": {
+          "question": "Voulez-vous continuer?"
+        }
+      },
+      "error": {
+        "listview": "Erreur de récupération de la liste des modèles",
+        "delete": "Le modèle n'a pas pu être supprimé.",
+        "addToYourList": "L'opération n'a pas pu être terminée.",
+        "removeFromYourList": "L'opération n'a pas pu être terminée."
+      },
+      "success": {
+        "delete": "Le modèle a été supprimé.",
+        "addToYourList": "L'opération est terminée.",
+        "removeFromYourList": "L'opération est terminée."
+      }
+    },
+    "deleteConfirmationDialog": {
+      "title": "Supprimer",
+      "cancelButton": "Annuler",
+      "confirmButton": "Supprimer"
+    },
+    "createdConfirmationDialog": {
+      "title": "Créer",
+      "description": "Voulez-vous partir? Vos modifications n'ont pas été enregistrées.",
+      "cancelButton": "Annuler",
+      "confirmButton": "Confirmer"
+    },
+    "modifiedConfirmationDialog": {
+      "title": "Modifier",
+      "description": "Voulez-vous partir? Vos modifications n'ont pas été enregistrées.",
+      "cancelButton": "Annuler",
+      "confirmButton": "Confirmer"
+    },
+    "disableConfirmationDialog": {
+      "title": "Désactiver",
+      "cancelButton": "Annuler",
+      "confirmButton": "Désactiver"
+    },
+    "enableConfirmationDialog": {
+      "title": "Activer",
+      "cancelButton": "Annuler",
+      "confirmButton": "Activer"
+    },
+    "general": {
+      "domain": {
+        "title": "Domaines de navigation sécurisés",
+        "description": "Spécifiez quels domaines peuvent être utilisés pour télécharger des fichiers en toute sécurité. Lorsque vous créez des stratégies pour analyser les téléchargements de fichiers sensibles, les domaines sélectionnés ne déclenchent pas de violations de stratégie.",
+        "enabled": {
+          "tableTitle": "Domaines activés"
+        },
+        "dialog": {
+          "title": {
+            "newDomain": "Ajouter un domaine sécurisé",
+            "edit": "Modifier le domaine sécurisé",
+            "delete": "Supprimer le domaine {{count}}",
+            "delete_plural": "Supprimer les domaines {{count}}",
+            "disable": "Désactiver le domaine {{count}}",
+            "disable_plural": "Désactiver les domaines {{count}}",
+            "enable": "Activer le domaine {{count}}",
+            "enable_plural": "Activer les domaines {{count}}"
+          },
+          "warning": {
+            "delete_zero": "Voulez-vous continuer?",
+            "delete_one": "Souhaitez-vous supprimer ce domaine? Ce domaine est actuellement utilisé par {{count}} stratégies Avert.",
+            "delete_many": "Souhaitez-vous supprimer ce domaine? Ces domaines sont actuellement utilisés par {{count}} stratégies Avert."
+          },
+          "success": {
+            "create": "La création de BrowserDomain a réussi",
+            "delete": "La suppression de BrowserDomain a réussi",
+            "edit": "L'édition a réussi"
+          },
+          "error": {
+            "create": "Échec de la création du domaine du navigateur",
+            "delete": "Échec de la suppression du domaine du navigateur",
+            "edit": "Échec de la"
+          }
+        },
+        "disabled": {
+          "tableTitle": "Domaines désactivés"
+        },
+        "buttons": {
+          "addNewDomain": "Ajouter un nouveau domaine",
+          "verify": "Vérifier",
+          "edit": "Éditer",
+          "enable": "Activer",
+          "disable": "Désactiver",
+          "delete": "Supprimer",
+          "save": "Enregistrer",
+          "cancel": "Annuler",
+          "add": "Ajouter"
+        },
+        "columns": {
+          "guid": "IDENTIFIANT",
+          "domainName": "Nom de domaine",
+          "description": "Description",
+          "policiesAssigned": "Politiques attribuées",
+          "enabled": "Activé",
+          "disabled": "Désactivé",
+          "created": "Créé",
+          "updated": "Mise à jour"
+        },
+        "filter": {
+          "name": "Filtre de nom de domaine",
+          "description": "Filtre de description de domaine",
+          "policies": "Filtre Politiques"
+        },
+        "validation": {
+          "invalidDomainName": "Le nom de domaine n'est pas valide",
+          "fileCARequired": "Un fichier CA est requis",
+          "verificationToolTip": "Pour vérifier si ce domaine utilise un certificat approuvé existant, cliquez sur Vérifier. Vous pouvez ajouter d'autres certificats dans Paramètres > Certificats approuvés.",
+          "verificationFailedText": "La vérification n'a pas pu être terminée.",
+          "unreachableDomainText": "Le domaine n'est pas disponible.",
+          "unknownError": "Erreur inconnue",
+          "verificationSuccessText": "Vérifié le {{date}}",
+          "nameRequired": "Un nom de domaine est requis",
+          "verificationText": "Vous pouvez vérifier si le serveur utilise l'autorité de certification racine"
+        },
+        "enabledSwitcher": "Domaine activé"
+      },
+      "whitelistEmailDomains": {
+        "title": "Domaines de messagerie sécurisés",
+        "description": "Spécifiez vos domaines de messagerie internes. Tous les autres domaines seront considérés comme externes. Lorsque vous créez des stratégies pour analyser les données sensibles, les domaines que vous ajoutez sont considérés comme sûrs.",
+        "helperText": "Utilisez des virgules pour séparer plusieurs domaines",
+        "placeholder": "blackberry.com",
+        "invalidValue": "Le nom de domaine n'est pas valide."
+      },
+      "dataCollectionSettings": {
+        "title": "Paramètres de collecte des données",
+        "maxUploadLabel": "Chargement maximal",
+        "ui_tenant_setting_isSnippetReported": {
+          "heading": "Snippets de fichiers",
+          "title": "Générer des extraits de fichier",
+          "description": "Incluez des extraits de fichier contenant le contenu sensible dans le cadre de tout événement d'exfiltration de données. Ce contenu sera visible dans les événements Avert de votre organisation par les utilisateurs disposant des autorisations d'affichage du résumé des fichiers sensibles."
+        },
+        "ui_tenant_setting_uploadEvidenceFile": {
+          "title": "Activer la collecte de fichiers de preuves",
+          "description": "Une copie complète des données qui ont déclenché un incident de sécurité peut être collectée et stockée à des fins d'audit lorsqu'elle est activée via une stratégie. Gérer les paramètres de collecte de données:",
+          "heading": "Collection de fichiers de preuves"
+        },
+        "ui_tenant_setting_tempFileFolderSize": {
+          "description": "Pourcentage de disque utilisé pour le dossier temporaire dans lequel les fichiers sont mis en file d'attente pour le téléchargement"
+        },
+        "ui_tenant_setting_uploadOnMobileNetwork": {
+          "title": "Chargez des fichiers lorsque vous êtes connecté à un réseau Wi-Fi ou filaire uniquement",
+          "description": "N'autorisez pas le téléchargement de fichiers sur le réseau mobile."
+        },
+        "ui_tenant_setting_bandwidthLimit": {
+          "title": "Limitation de la bande passante pour le téléchargement",
+          "description": "Configurer la limite de bande passante pour limiter le taux de transfert",
+          "bandwidthLimit": "Utilisation de bande passante"
+        },
+        "ui_tenant_setting_transferWindowStartTime": {
+          "from": "À partir de",
+          "title": "Temps de transfert des données",
+          "description": "Planifiez le moment où les téléchargements de données doivent avoir lieu. Notez que si vous ne spécifiez que certaines heures, les fichiers associés à des événements d'exfiltration de données ne seront pas accessibles à vos administrateurs tant que vous n'aurez pas spécifié. Toutes les heures sont exprimées en local sur l'appareil qui télécharge les fichiers."
+        },
+        "ui_tenant_setting_transferWindowEndTime": {
+          "to": "À"
+        },
+        "validation": {
+          "percentValue": "La valeur doit être comprise entre 0 et 100."
+        },
+        "ui_tenant_setting_uploadDirectlyToS3": {
+          "heading": "Téléchargement de fichiers",
+          "description": "Sélectionnez la méthode à utiliser pour le téléchargement des fichiers de preuves",
+          "s3_cloud_method": "Cloud S3",
+          "title": "Méthode de téléchargement de fichiers",
+          "local_dlp_file_service_method": "Proxy via BlackBerry"
+        },
+        "ui_file_setting_evidenceFileRetentionPeriod": {
+          "heading": "Conservation des données",
+          "description": "Configurez la durée de stockage des données impliquées dans un incident de sécurité",
+          "title": "Conservation des données",
+          "30_days": "30 jours",
+          "60_days": "60 jours",
+          "90_days": "90 jours"
+        },
+        "description": "Configurez les preuves à collecter pour les événements d'exfiltration de données.",
+        "diskSpaceLabel": "Espace disque"
+      }
+    },
+    "unexpectedErrorMessage": "Une erreur inattendue s'est produite",
+    "domainNameErrorMessage": "Un domaine portant ce nom existe déjà.",
+    "table": {
+      "list": {
+        "noData": "Aucune donnée",
+        "searchPlaceholder": "Saisissez quelque chose pour la recherche"
+      }
+    },
+    "dataTypes": {
+      "columns": {
+        "name": "Nom du type de données",
+        "keywords": "Mots clés",
+        "informationType": "Type d'informations",
+        "region": "Région",
+        "source": "La source"
+      },
+      "filter": {
+        "name": "Filtre de nom de type de données",
+        "keywords": "Filtre de mots clés",
+        "infoTypes": "Filtre de type d'informations",
+        "regions": "Filtre de région",
+        "inUse": "En cours d'utilisation",
+        "source": "Filtre de source"
+      },
+      "buttons": {
+        "addToYourList": "Ajouter à votre liste",
+        "removeFromYourList": "Supprimer de votre liste",
+        "newDataType": "Nouveau type de données"
+      },
+      "dialogs": {
+        "addToYourList": {
+          "cancelBtn": "Annuler",
+          "confirmBtn": "Ajouter",
+          "add_one": "'{{name}}' sera ajouté à votre liste. Voulez-vous continuer?",
+          "title": "Ajouter un type de données {{count}}",
+          "title_plural": "Ajouter des types de données {{count}}",
+          "add_new": "{{count}} nouveau type de données sera ajouté à votre liste :",
+          "add_new_plural": "{{count}} de nouveaux types de données seront ajoutés à votre liste :",
+          "add_existing": "{{count}} d'autres existent déjà :"
+        },
+        "removeFromYourList": {
+          "cancelBtn": "Annuler",
+          "confirmBtn": "Supprimer",
+          "remove": "'{{name}}' sera supprimé de votre liste. Voulez-vous continuer?",
+          "title": "Supprimer le type de données {{count}}",
+          "title_plural": "Supprimer les types de données {{count}}",
+          "remove_plural": "Les types de données suivants seront supprimés de votre liste :"
+        },
+        "confirmation": {
+          "question": "Voulez-vous continuer?"
+        },
+        "delete": {
+          "title": "Supprimer les types de données {{count}}",
+          "title_plural": "Supprimer les types de données {{count}}",
+          "delete_one": "« {{name}} » sera supprimé. Cette action ne peut pas être annulée. Voulez-vous continuer ?",
+          "delete_allowed": "Le type de données personnalisé {{name}} sera supprimé.",
+          "delete_allowed_plural": "{{count}} types de données personnalisés seront supprimés.",
+          "delete_protected": "Le type de données système {{name}} ne peut être supprimé à aucun moment :",
+          "delete_protected_plural": "Les types de données système {{count}} ne peuvent être supprimés à aucun moment :"
+        }
+      }
+    },
+    "dataType": {
+      "columns": {
+        "keywords": "Mots clés",
+        "status": "Statut",
+        "regions": "Régions",
+        "infoTypes": "Types d'informations",
+        "parameters": "Setting.DataTYPE.Columns.Parameters",
+        "type": "Setting.DataType.Columns.Type"
+      },
+      "name": "Nom",
+      "description": "Description",
+      "region": "Région",
+      "infoTypes": "Type d'informations",
+      "algorithm": "Méthode de recherche",
+      "keywords": "Mots clés",
+      "regex": "Regex",
+      "addDataType": "Ajouter un nouveau type de données",
+      "buttons": {
+        "create": "Créer",
+        "cancel": "Annuler"
+      },
+      "error": {
+        "create": "Le type de données n'a pas pu être créé. Erreur: {{error}}",
+        "update": "Le type de données n'a pas pu être mis à jour. Erreur: {{error}}",
+        "remove": "Le type de données n'a pas pu être supprimé de la liste des favoris. Erreur : {{error}}",
+        "add": "Le type de données n'a pas pu être ajouté à la liste des favoris. Erreur : {{error}}"
+      },
+      "success": {
+        "create": "Le type de données a été créé.",
+        "update": "Le type de données a été mis à jour.",
+        "remove": "Le type de données a été supprimé de la liste des favoris",
+        "add": "Le type de données a été ajouté à la liste des favoris"
+      },
+      "detail": {
+        "updated": "Mis à jour le {{date}}"
+      }
+    },
+    "trustedCertificates": {
+      "columns": {
+        "subject": "Objet",
+        "issuer": "Émetteur",
+        "addedDate": "Date d'ajout",
+        "expirationDate": "Date d'expiration"
+      },
+      "buttons": {
+        "addNew": "Ajouter un certificat",
+        "delete": "Supprimer"
+      },
+      "dialogs": {
+        "addToYourList": {
+          "title": "Ajouter un certificat",
+          "subTitle": "Sélectionnez un fichier à télécharger",
+          "cancelBtn": "Annuler",
+          "confirmBtn": "Ajouter"
+        },
+        "removeFromYourList": {
+          "title": "Supprimer le certificat",
+          "cancelBtn": "Annuler",
+          "confirmBtn": "Supprimer",
+          "title_plural": "Voulez-vous supprimer {{count}} certificats du référentiel et de toute liste sûre qui les utilise ?"
+        }
+      },
+      "error": {
+        "delete": "Le certificat n'a pas pu être supprimé.",
+        "addToYourList": "Le certificat n'a pas pu être ajouté."
+      },
+      "success": {
+        "delete": "Le certificat a été supprimé.",
+        "addToYourList": "Le certificat a été ajouté."
+      },
+      "title": "Certificats de confiance",
+      "description": "Les certificats approuvés sont utilisés pour vérifier les domaines autorisés que vous avez ajoutés dans les paramètres d'Avert."
+    },
+    "notifications": {
+      "title": "Notifications",
+      "switcherLabel": "Activer les notifications par e-mail",
+      "switcherDescription": "Recevez une notification lorsque des données sensibles qui entrent en conflit avec la stratégie de l'entreprise sont partagées",
+      "emailRecipients": "Destinataires des e-mails",
+      "emailRecipientsHelperText": "Utilisez des virgules pour séparer plusieurs adresses e-mail",
+      "success": "Les paramètres de notification ont été mis à jour.",
+      "invalid": "La valeur des destinataires du message n'est pas valide."
+    },
+    "unexpectedErrorWithHttpMessage": "La demande n'a pas pu être traitée. État HTTP renvoyé : {{status}}"
+  },
+  "tableColumns": "Colonnes de table",
+  "noData": "Aucune donnée",
+  "modifiedConfirmationDialog": {
+    "title": "Titre",
+    "cancelButton": "Annuler",
+    "description": "description",
+    "confirmButton": "Confirmer"
+  },
+  "enterField": "Ce champ est obligatoire.",
+  "selected": "{{count}} sélectionné",
+  "pickers": {
+    "time": {
+      "invalidMessage": "L'heure n'est pas valide."
+    }
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "policiesTab": "Politique",
+    "usersTab": "Utilisateurs",
+    "devicesTab": "Dispositifs",
+    "dataTypesTab": "Types de données",
+    "infoTypesTab": "Types d'informations",
+    "fileTypesTab": "Types de fichiers",
+    "allTab": "Tous",
+    "filesTab": "Fichiers",
+    "totalSensitiveData": "fichiers sensibles détectés",
+    "exfiltrationEventTypes": {
+      "EMAIL": "E-mail",
+      "BROWSER": "Navigateur",
+      "REMOVABLE_MEDIA": "Supports amovibles"
+    },
+    "dataEntities": "Types de données",
+    "emailTab": "Domaines Web",
+    "browserTab": "Domaines de messagerie",
+    "usbTab": "Supports amovibles",
+    "evidenceLockerFiles": "fichiers dans Evidence Locker",
+    "connectedUsers": "Utilisateurs Avert connectés",
+    "connectedDevices": "Dispositifs Avert connectés",
+    "exfiltrationEventsByWidgetTitle": "Événements d'exfiltration d'informations",
+    "exfiltrationEventsByDestination": "Principaux événements d'exfiltration par lieu",
+    "topEventsByWidgetTitle": "Principaux événements d'exfiltration par catégorie",
+    "sensitiveDataEndpoints": "Inventaire des fichiers par catégorie",
+    "evidenceLockerFilesTitle": "Casier de preuves",
+    "totalSensitiveDataTitle": "Inventaire des fichiers"
+  },
+  "events": {
+    "title": "Événements Avert",
+    "columns": {
+      "detectionTime": "Heure de détection",
+      "device": "Appareil",
+      "user": "Utilisateur",
+      "activity": "Activité",
+      "location": "Emplacement",
+      "file": "Dossier",
+      "policy": "Politique",
+      "dataEntityCount": "Type de données",
+      "noUserName": "Sans nom"
+    },
+    "filter": {
+      "detectionTime": "Filtre de temps de détection",
+      "device": "Filtre de nom d'appareil",
+      "user": "Filtre de nom d'utilisateur",
+      "activity": "Filtre d'activité",
+      "location": "Filtre de localisation",
+      "file": "Filtre de nom de fichier",
+      "policy": "Filtre de nom de stratégie",
+      "dataType": "Filtre de nom de type de données"
+    },
+    "drawer": {
+      "accordion": {
+        "eventOverview": "Aperçu de l'événement",
+        "eventUserDetails": "Détails de l'utilisateur",
+        "eventUserDetailsName": "Chargement de {{name}}",
+        "eventFilesDetails": "Détails du fichier ({{count}})",
+        "eventPolicyViolations": "Violations de Politique ({{count}})",
+        "fileDetails": "Détails du fichier",
+        "userName": "Nom",
+        "userEmail": "E-mail",
+        "userTitle": "Titre",
+        "userDepartment": "Département",
+        "typeLabel": "Type",
+        "detectionTimeLabel": "Heure de détection",
+        "deviceLabel": "Appareil",
+        "locationLabel": "Emplacement"
+      },
+      "fileSection": {
+        "sensitiveData": "Types de données sensibles (nombre d'occurrences)",
+        "contentSnippets": "Contenu des extraits de code",
+        "emptySnippets": "La liste de contenu des extraits de code est vide",
+        "downloadFile": {
+          "error": "Le fichier n'a pas pu être téléchargé."
+        },
+        "txtFileFormat": "Document texte",
+        "doc(x)FileFormat": "Document Microsoft Word",
+        "xlsxFileFormat": "Document Microsoft Excel",
+        "pdfFileFormat": "Document PDF Microsoft",
+        "defaultFileFormat": "Document {{format}}"
+      },
+      "eventDetailsTitle": "Détails de l'événement",
+      "downloadEvidenceFile": "téléchargez tout"
+    },
+    "serverError": {
+      "retrieveEvents": "La liste des événements n'a pas pu être récupérée."
+    }
+  },
+  "fileInventory": {
+    "title": "Inventaire des fichiers",
+    "columns": {
+      "fileName": "Nom du fichier",
+      "fileSize": "Taille du fichier",
+      "infoTypes": "Types d'informations",
+      "dataTypes": "Types de données",
+      "users": "Utilisateurs",
+      "devices": "Dispositifs",
+      "policies": "Politiques"
+    },
+    "filter": {
+      "fileName": "Nom du fichier",
+      "infoTypes": "Type d'informations"
+    },
+    "error": {
+      "listview": "La liste d'inventaire des fichiers n'a pas pu être récupérée."
+    },
+    "drawer": {
+      "fileDetails": {
+        "title": "Détails du fichier",
+        "fileSize": "Taille du fichier",
+        "fileType": "Type de fichier",
+        "evidenceFile": "Dossier de preuves"
+      },
+      "users": {
+        "title": "Utilisateurs ayant accès au fichier"
+      },
+      "devices": {
+        "title": "Dispositifs avec accès au fichier"
+      },
+      "dataTypes": {
+        "title": "Types de données",
+        "occurrences": "{{name}} ({{occurrences}})"
+      },
+      "policyViolations": {
+        "title": "Violations Politique"
+      },
+      "seeMore": "Voir + {{count}} de plus"
+    }
+  },
+  "infoTypesValue": {
+    "privacy": "Confidentialité",
+    "finance": "Finance",
+    "custom": "Personnalisé",
+    "health": "Santé",
+    "personal": "Personnel"
+  },
+  "labelDlp": "Protection des informations",
+  "evidenceLocker": {
+    "title": "Casier à preuves",
+    "columns": {
+      "created": "Heure ajoutée",
+      "fileName": "Nom du fichier",
+      "size": "Taille du fichier",
+      "events": "Evénements associés",
+      "download": "Télécharger"
+    },
+    "filter": {
+      "fileName": "Filtre de nom de fichier",
+      "created": "Filtre de temps ajouté",
+      "size": "Filtre de taille de fichier"
+    },
+    "selected": "{{count}} sélectionné",
+    "sensitiveFilesStorage": {
+      "serverError": "{{error}}"
+    },
+    "memoryUsed": "{{totals}} fichiers sensibles/ {{used}} sur {{remains}} est utilisé"
+  },
+  "users": {
+    "mainTitle": {
+      "assets": "Inventaire",
+      "users": "Utilisateurs"
+    },
+    "buttons": {
+      "manageUsers": "Gérer les utilisateurs"
+    },
+    "columns": {
+      "name": "Nom",
+      "emailAddress": "Adresse e-mail",
+      "devices": "Dispositifs"
+    },
+    "error": {
+      "listView": "La liste des utilisateurs n'a pas pu être récupérée."
+    },
+    "devices": {
+      "agentVersion": "Version de l'agent Avert : {{version}}",
+      "osVersion": "{{name}} {{version}}"
+    }
+  }
+}

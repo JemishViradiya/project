@@ -1,0 +1,217 @@
+{
+  "policy": {
+    "pageTitle": "Avert",
+    "tabTitle": {
+      "mobile": "Mobile",
+      "content": "Contenuto"
+    },
+    "serverError": {
+      "retrievePolicies": "{{error}}",
+      "deletePolicies": "I criteri non possono essere eliminati."
+    },
+    "table": {
+      "columns": {
+        "name": "Nome",
+        "description": "Descrizione",
+        "policyType": "Tipo Politica",
+        "userCount": "Utenti",
+        "groupCount": "Gruppi",
+        "added": "Aggiunto",
+        "modified": "Modificato",
+        "rank": "Rango"
+      },
+      "tableColumns": "Colonne tabella",
+      "noData": "Nessun dato",
+      "filter": {
+        "name": "Per nome",
+        "description": "Per descrizione"
+      }
+    },
+    "dialogs": {
+      "setAsDefault": {
+        "title": "Imposta come conferma predefinita",
+        "cancelBtn": "Annulla",
+        "confirmBtn": "Salva",
+        "question": "Vuoi installare la policy come Default?"
+      }
+    },
+    "buttons": {
+      "add": "Aggiungi Politica",
+      "delete": "Elimina",
+      "cancel": "Annulla",
+      "save": "Salva",
+      "continue": "Continua",
+      "addNew": "Inserisci",
+      "confirm": "sì",
+      "rejectConfirm": "Non ora",
+      "leavePage": "Lascia pagina",
+      "resendMail": "Invia",
+      "cancelResendMail": "No"
+    },
+    "search": {
+      "results": "{{value}} risultati",
+      "placeholder": "Cerca le politiche"
+    },
+    "sections": {
+      "requiredInput": "Questo campo è obbligatorio.",
+      "general": {
+        "title": "Informazioni generali",
+        "policyName": "Nome Politica",
+        "description": "Descrizione",
+        "setDefaultPolicy": "Impostazione del criterio predefinito",
+        "type": {
+          "title": "Tipo Politica",
+          "regulatory": "Normativa",
+          "organizational": "Organizzativo"
+        },
+        "info": {
+          "description": "Specificare il tipo di politica che si desidera creare. Le politiche organizzative possono essere utilizzate per proteggere le informazioni proprietarie della tua organizzazione. Le politiche normative possono essere utilizzate per proteggere le informazioni sensibili relative a normative di settore o governative.",
+          "regulatoryDesc": "Quando più criteri normativi entrano in conflitto per un utente, BlackBerry riconcilierà automaticamente questi criteri applicando gli elementi più restrittivi di tutti i criteri. Verrà selezionato il numero minimo di occorrenze di dati e verrà applicata l'azione di correzione più restrittiva.",
+          "organizationalDesc": "Quando più criteri organizzativi entrano in conflitto per un utente, BlackBerry riconcilierà automaticamente questi criteri applicando gli elementi meno restrittivi di tutti i criteri. Verrà selezionato il numero massimo di occorrenze di dati e verrà applicata l'azione di correzione meno restrittiva."
+        }
+      },
+      "conditions": {
+        "title": "Condizioni",
+        "addFromTemplateDialog": {
+          "description": "È possibile utilizzare modelli predefiniti nelle impostazioni per configurare la protezione per i tipi di dati.",
+          "searchText": "Cerca modelli",
+          "confirmation": {
+            "title": "Conferma del modello",
+            "description": "L'aggiunta di un nuovo modello sostituirà le condizioni esistenti."
+          },
+          "noTemplatesDescription": "Non hai aggiunto alcun modello. Vai alle <0>impostazioni di Avert</0> per aggiungere modelli predefiniti all'elenco.",
+          "title": "Aggiungi da modello"
+        },
+        "table": {
+          "name": "Nome",
+          "description": "Descrizione",
+          "region": "Regione"
+        },
+        "builder": {
+          "title": "Costruttore di condizioni",
+          "condition": {
+            "and": "E",
+            "or": "o"
+          },
+          "label": "con occorrenze minime di",
+          "buttons": {
+            "addRule": "Aggiungi articolo",
+            "addGroup": "Aggiungi gruppo",
+            "deleteGroup": "Elimina gruppo"
+          },
+          "select": {
+            "placeholderText": "Seleziona il nome del tipo di dati",
+            "searchText": "Cerca"
+          },
+          "occurrences": {
+            "rangeText": "Il valore deve essere compreso tra 1 e 10."
+          }
+        },
+        "description": "Definire i dati sensibili che si desidera proteggere e le condizioni che determineranno una violazione delle norme. Puoi iniziare utilizzando uno dei modelli selezionati dalle <0>impostazioni di Avert</0> o creare la tua politica personalizzata.",
+        "addFromTemplate": "Aggiungi da modello"
+      },
+      "whitelist": {
+        "title": "Domini whitelist",
+        "name": "Dominio",
+        "description": "Descrizione",
+        "paragraph": "Specificare quali domini del browser possono essere considerati attendibili per caricare in modo sicuro i file dall'elenco creato in <0>Impostazioni Avert</0>. La politica non verrà applicata ai domini consentiti."
+      },
+      "emailSettings": {
+        "title": "Impostazioni e-mail",
+        "noneDescription": "Nessuno (impostazione predefinita) > La politica verrà applicata a tutti i domini di posta elettronica (interni ed esterni)",
+        "internalDomainsDescription": "Domini interni > La politica verrà applicata solo ai domini esterni",
+        "allDomainsDescription": "Tutti i domini > Politica non verranno applicati. I dati sensibili possono essere condivisi via e-mail",
+        "helperText": "Rileva quando i contenuti sensibili vengono condivisi tramite e-mail.",
+        "recipients": {
+          "none": "Nessuno",
+          "internal": "Solo destinatari interni",
+          "all": "Tutti i destinatari"
+        },
+        "description": "Specificare quali destinatari di posta elettronica possono essere considerati attendibili quando si condividono dati sensibili in base all'elenco di domini di posta elettronica interni consentiti creato <0>Avert Impostazioni di avviso</0>. "
+      },
+      "actions": {
+        "policyRules": {
+          "ACTION_TYPE_NONE": "Nessuno",
+          "ACTION_TYPE_ALERT": "Segnalare e avvisare",
+          "ACTIVITY_TYPE_BROWSER_UPLOAD": "Browser Web (HTTP, HTTPS)",
+          "ACTIVITY_TYPE_USB_EXFILTRATE": "Deposito rimovibile",
+          "ACTIVITY_TYPE_SCREEN_CAPTURE": "Acquisizione schermo",
+          "ACTIVITY_TYPE_EMAIL_CLIENTS": "Client email"
+        },
+        "title": "Azioni",
+        "description": "Lorem ipsum"
+      },
+      "domains": {
+        "dialogs": {
+          "title": "Aggiungi dominio in whitelist",
+          "description": "È possibile utilizzare diversi domini nella whitelist che sono ad alta voce per l'utilizzo in base a questa politica. L'elenco iniziale è configurato in <5>Impostazioni</5>",
+          "searchText": "Cerca domini"
+        },
+        "addDomain": "Fare clic su + per aggiungere articoli."
+      },
+      "sparkMobileSettings": {
+        "policyConfigNames": {
+          "CONFIG_TYPE_ALLOW_COPY_BB_APPS_INTO_NON_BB_APPS": "Consentire la copia di dati dalle app BlackBerry Spark alle app non BlackBerry Spark",
+          "CONFIG_TYPE_ALLOW_COPY_NON_BB_APPS_INTO_BB_APPS": "Consentire la copia di dati tra app BlackBerry Spark",
+          "CONFIG_TYPE_ALLOW_DICTATION": "Consenti dettatura",
+          "CONFIG_TYPE_ALLOW_INSECURE_VIDEO": "Consenti la cattura dello schermo e l'uscita video non sicura",
+          "CONFIG_TYPE_ALLOW_SCREEN_RECORDING": "Consenti la registrazione e la condivisione dello schermo",
+          "CONFIG_TYPE_ALLOW_KEYBOARDS": "Consenti tastiere personalizzate",
+          "CONFIG_TYPE_ADD_WATERMARK": "Visualizza filigrana",
+          "CONFIG_TYPE_ALLOW_RESTRICTED_MODE": "Abilita la modalità con restrizioni della tastiera Android"
+        },
+        "supportedOsTypesText": "Tipi di sistemi operativi supportati - ",
+        "title": "Impostazioni Mobile"
+      },
+      "iosSpecificSettings": {
+        "title": "Impostazioni specifiche per iOS",
+        "allowText": "Consenti",
+        "screenshotsInText": "screenshot in",
+        "intervalText": "giorni",
+        "rangeText": "Il valore deve essere compreso tra 1 e 14 giorni."
+      }
+    },
+    "error": {
+      "delete": "Non è stato possibile eliminare il criterio.",
+      "update": "Non è stato possibile aggiornare la politica. Errore: {{error}} ",
+      "create": "La politica non può essere creata. Errore: {{error}} "
+    },
+    "success": {
+      "create": "La politica è stata creata.",
+      "delete": "Il criterio è stato eliminato.",
+      "update": "La politica è stata aggiornata."
+    },
+    "updateFormDeletePolicyTooltip": "Elimina politica",
+    "deletePolicyConfirmationDialogTitle": "Elimina conferma",
+    "deletePolicyConfirmationDialogDesc": "Eliminare questa politica?",
+    "deleteNote": "È necessario rimuovere tutti gli utenti e i gruppi associati a un criterio prima di eliminarlo.",
+    "createContentPolicyConfirmationTitle": "Assegnazione della politica sui contenuti",
+    "createMobilePolicyConfirmationTitle": "Assegnazione del criterio Mobile",
+    "createPolicyConfirmationDescription": "La politica è stata creata. Assegnare utenti o gruppi a questo criterio?",
+    "updatePolicyConfirmationTitle": "Invia di nuovo email agli utenti",
+    "updatePolicyConfirmationDescription": "Vuoi inviare di nuovo l'email di benvenuto?",
+    "detail": {
+      "updated": "Aggiornato il {{date, datetime}}",
+      "settings": "Impostazioni",
+      "assignedUsersAndGroups": "Utenti e gruppi assegnati"
+    },
+    "modifiedPolicyConfirmationDialogTitle": "Modifiche non salvate",
+    "modifiedPolicyConfirmationDialogDesc": "Vuoi uscire da questa pagina? Le modifiche non sono state salvate.",
+    "addPolicyWithType": "Aggiungi politica di protezione delle informazioni"
+  },
+  "navigation": {
+    "adaptiveResponse": {
+      "label": "Etichetta",
+      "componentHeader": {
+        "link": "maggiori informazioni",
+        "paragraph": "Le policy sui contenuti di Avert vengono utilizzate per rilevare i dati sensibili della tua organizzazione e proteggerli dalla condivisione non autorizzata. Se più criteri sono in conflitto per un utente, BlackBerry eseguirà automaticamente la riconciliazione in base al tipo di criterio."
+      }
+    },
+    "title": "Policy",
+    "mobile": {
+      "componentHeader": {
+        "paragraph": "Le impostazioni Mobile si applicano a tutti i tipi di dispositivi se non diversamente specificato. Se a un utente viene assegnato più di un criterio, viene applicato il criterio classificato più alto."
+      }
+    }
+  }
+}

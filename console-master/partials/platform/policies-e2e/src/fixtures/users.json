@@ -1,0 +1,105 @@
+{
+  "userDetails": {
+    "cur": {
+      "data": {
+        "id": "dXNlcklkLTE=",
+        "ecoId": "138c20ca-566b-40cb-a110-e93581462dd1",
+        "displayName": "Pauly Thwaites",
+        "username": "pthwaites0",
+        "emailAddress": "pthwaites0@blackhole.sw.rim.net",
+        "dataSource": "cur",
+        "firstName": "Pauly",
+        "lastName": "Thwaites",
+        "tenantId": "mock",
+        "created": "2020-12-19T21:15:09.070Z",
+        "updated": "2022-01-01T15:15:00.150Z"
+      }
+    },
+    "activeDirectory": {
+      "data": {
+        "id": "dXNlcklkLTM=",
+        "ecoId": "a80bf740-7dc3-4815-8572-265bf0065d48",
+        "displayName": "Siana Reboulet",
+        "username": "sreboulet2",
+        "emailAddress": "sreboulet2@blackhole.sw.rim.net",
+        "dataSourceConnectionId": "7dd91eb6-ccc8-49ab-8c90-352896d1e40b",
+        "dataSource": "active_directory",
+        "firstName": "Siana",
+        "lastName": "Reboulet",
+        "tenantId": "mock",
+        "created": "2019-12-19T21:15:09.070Z",
+        "updated": "2022-01-03T15:15:00.150Z"
+      }
+    }
+  },
+  "users": {
+    "data": [
+      {
+        "id": "dXNlcklkLTE=",
+        "ecoId": "138c20ca-566b-40cb-a110-e93581462dd1",
+        "displayName": "Pauly Thwaites",
+        "username": "pthwaites0",
+        "emailAddress": "pthwaites0@blackhole.sw.rim.net",
+        "dataSource": "cur"
+      },
+      {
+        "id": "dXNlcklkLTI=",
+        "ecoId": "c5fab0ca-b94b-4ae7-91d1-3c4dbdec99b0",
+        "displayName": "Joleen Cardno",
+        "username": "jcardno1",
+        "emailAddress": "jcardno1@blackhole.sw.rim.net",
+        "dataSource": "cur"
+      },
+      {
+        "id": "dXNlcklkLTM=",
+        "ecoId": "a80bf740-7dc3-4815-8572-265bf0065d48",
+        "displayName": "Siana Reboulet",
+        "username": "sreboulet2",
+        "emailAddress": "sreboulet2@blackhole.sw.rim.net",
+        "dataSourceConnectionId": "7dd91eb6-ccc8-49ab-8c90-352896d1e40b",
+        "dataSource": "active_directory"
+      },
+      {
+        "id": "dXNlcklkLTQ=",
+        "ecoId": "75e06191-a30e-476d-acbc-ad0e780996d4",
+        "displayName": "Timofei Borthram",
+        "username": "tborthram",
+        "emailAddress": "tborthram3@blackhole.sw.rim.net",
+        "dataSource": "cur"
+      },
+      {
+        "id": "dXNlcklkLTU=",
+        "ecoId": "c9d10182-fca2-46a0-bede-c9def8896d38",
+        "displayName": "Gwen Turfs",
+        "username": "gturfs4",
+        "emailAddress": "gturfs4@blackhole.sw.rim.net",
+        "dataSource": "ldap"
+      },
+      {
+        "id": "dXNlcklkLTY=",
+        "ecoId": "be0b9722-5a46-4a20-b4ef-168a561370f1",
+        "displayName": "Jourdain Jeaneau",
+        "username": "jjeaneau5",
+        "emailAddress": "jjeaneau5@blackhole.sw.rim.net",
+        "dataSource": "cur"
+      },
+      {
+        "id": "dXNlcklkLTc=",
+        "ecoId": "ae5c56a0-763c-41e9-b5f3-eb2ca2103082",
+        "displayName": "Rudolfo Woodes",
+        "username": "rwoodes6",
+        "emailAddress": "rwoodes6@blackhole.sw.rim.net",
+        "dataSource": "azure",
+        "dataSourceConnectionId": "7dd91eb6-ccc8-49ab-8c90-352896d1e40b"
+      },
+      {
+        "id": "dXNlcklkLTg=",
+        "ecoId": "c9d101a2-fba2-40a0-bede-c9defab96d38",
+        "displayName": "Neo Zero",
+        "username": "neozero",
+        "emailAddress": "neozero@blackhole.sw.rim.net",
+        "dataSource": "cur"
+      }
+    ]
+  }
+}

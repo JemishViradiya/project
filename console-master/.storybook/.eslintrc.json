@@ -1,0 +1,18 @@
+{
+  "extends": ["../.eslintrc.json", "../tools/eslint/react.eslintrc.js"],
+  "ignorePatterns": ["!**/*"],
+  "rules": {
+    "@typescript-eslint/no-var-requires": "off",
+    "sonarjs/no-duplicate-string": "off",
+    "sonarjs/cognitive-complexity": "off"
+  },
+  "overrides": [
+    {
+      "files": ["main.js", "webpack.config.js"],
+      "env": {
+        "node": true,
+        "commonjs": true
+      }
+    }
+  ]
+}

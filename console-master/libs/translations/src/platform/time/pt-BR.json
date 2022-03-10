@@ -1,0 +1,24 @@
+{
+  "monday": "Segunda-feira",
+  "tuesday": "terça",
+  "wednesday": "Quarta-feira",
+  "thursday": "Quinta-feira",
+  "friday": "Sexta-feira",
+  "saturday": "sábado",
+  "sunday": "domingo",
+  "medium": {
+    "monday": "seg",
+    "tuesday": "Ter",
+    "wednesday": "qua",
+    "thursday": "Qui",
+    "friday": "sex",
+    "saturday": "Sáb",
+    "sunday": "Sol"
+  },
+  "timePicker": {
+    "ampm": "verdade",
+    "okLabel": "OK",
+    "cancelLabel": "Cancelar"
+  },
+  "timeRange": "({{from}} - {{to}})"
+}

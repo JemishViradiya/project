@@ -1,0 +1,12 @@
+runner:
+  mode: default
+  loglevel: debug
+  delay:
+    startup: 0
+  codecept:
+    show: true
+    writeScreenshots: true
+
+e2e:
+  config:
+    baseUrl: https://r00-ues.cylance.com:4200

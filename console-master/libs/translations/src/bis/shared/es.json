@@ -1,0 +1,69 @@
+{
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "add": "Añadir",
+    "errorPleaseContact": "Se ha producido un error. Vuelve a intentarlo o ponte en contacto con tu administrador.",
+    "description": "Descripción",
+    "risk": "riesgo",
+    "settings": "Ajustes",
+    "delete": "Borrar",
+    "descriptionInvalid": "La descripción debe tener {{max}} caracteres o menos.",
+    "errorFieldRequired": "Este campo es obligatorio",
+    "errorInvalidName": "Nombre no válido",
+    "nameInvalid": "El nombre debe tener {{max}} caracteres o menos.",
+    "automaticRiskReduction": "Reducción automática de riesgos"
+  },
+  "risk": {
+    "common": {
+      "identityRisk": "Riesgo identidad",
+      "identityRiskResponseActions": "Medidas de respuesta al riesgo de identidad",
+      "networkAnomaly": "Anomalía de red",
+      "generalInfo": "Información general"
+    },
+    "label": {
+      "low": "Bajo riesgo",
+      "medium": "Riesgo medio",
+      "high": "Alto riesgo",
+      "critical": "riesgo crítico"
+    },
+    "level": {
+      "CRITICAL": "Crítica",
+      "HIGH": "Alto",
+      "MEDIUM": "Mediano",
+      "LOW": "Bajo",
+      "TRAINING": "Formación",
+      "UNKNOWN": "Desconocido",
+      "UNTRUSTED": "No confiable",
+      "UNDETECTED": "No detectado",
+      "UNDEFINED": "Indefinido",
+      "TRUSTED": "Confianza",
+      "AT_RISK": "En riesgo",
+      "SAFE": "Seguro",
+      "SECURED": "Asegurado"
+    }
+  },
+  "arr": {
+    "challengeState": {
+      "deny": "Rechazado por el usuario",
+      "failed": "Error: no se ha completado",
+      "in_progress": "En progreso",
+      "no_mfa": "No habilitado en la política",
+      "ok": "Verificado",
+      "timeout": "Tiempo agotado",
+      "unknown": "Error: no se ha completado",
+      "mfa_skipped": "Pasado por alto",
+      "fraud": "Fraude"
+    }
+  },
+  "policies": {
+    "create": {
+      "error": "No se ha podido crear la política."
+    },
+    "details": {
+      "errorSave": "No se ha podido guardar la política.",
+      "errorDelete": "No se ha podido eliminar la política.",
+      "errorServerNameAlreadyExists": "Ya existe una política con este nombre."
+    }
+  }
+}

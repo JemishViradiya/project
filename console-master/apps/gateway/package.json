@@ -1,0 +1,9 @@
+{
+  "name": "@ues/gateway",
+  "version": "0.0.1",
+  "description": "Management Console",
+  "private": true,
+  "scripts": {},
+  "author": "",
+  "license": "ISC"
+}

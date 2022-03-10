@@ -1,0 +1,42 @@
+.selection-list {
+  overflow: hidden;
+  .selection-list-body {
+    height: 80%;
+    overflow-y: scroll;
+    label:not(.MuiFormControlLabel-root),
+    .MuiFormControlLabel-root .MuiFormControlLabel-label {
+      display: inline-block;
+      cursor: pointer;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 80%;
+      overflow: hidden;
+      line-height: 48px;
+    }
+    .no-selection-control {
+      line-height: 48px;
+    }
+    .selection-list-item {
+      height: 48px;
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      & > div {
+        height: 48px;
+      }
+    }
+  }
+  .selection-list-filter {
+    height: 20%;
+    margin-bottom: 10px;
+  }
+  .MuiRadio-root {
+    padding-left: 0;
+    vertical-align: top;
+  }
+  .MuiFormLabel-root {
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 400;
+    line-height: 1.46429em;
+  }
+}

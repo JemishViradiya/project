@@ -1,0 +1,270 @@
+.variables: &variables
+  PROJECT_DIR: /builds/${CI_PROJECT_PATH}
+  GIT_CHECKOUT: 'false'
+  BUILD_DIR: /base$CI_BUILDS_DIR/$CI_PROJECT_PATH
+  PACT_BROKER_URL: https://ebpact01.devlab2k.testnet.rim.net/
+  PACT_CONSUMER_TAG: branch/${CI_DEFAULT_BRANCH}
+
+.before_script: &before_script
+  - export PROJECT_DIR=$PWD BUILD_DIR=/base/builds/enterprise/UES/console &&
+    ln -s ${PROJECT_DIR}/.git ${BUILD_DIR}/.git &&
+    cd ${BUILD_DIR} &&
+    git checkout --quiet --force -B refs/pipelines/${CI_PIPELINE_ID} FETCH_HEAD &&
+    git clean ${GIT_CLEAN_FLAGS} &&
+    git show --no-patch HEAD
+  - make ci-before-hook
+
+.eslint-cache: &eslint-cache
+  key: 007-${CI_BUILD_NAME}-${CI_PROJECT_PATH_SLUG}-${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/.cache/eslint
+
+.nx_retry: &nx_retry
+  max: 2
+  when:
+    - runner_system_failure
+    - stuck_or_timeout_failure
+
+.nx_rules: &nx_rules
+  - if: $CI_COMMIT_BRANCH == 'production'
+    when: never
+  - if: $CI_TRIGGER_TARGET != 'none'
+    when: never
+  - when: always
+
+.nodejs_job:
+  interruptible: true
+  needs: ['ci-agent-nodejs']
+  before_script: *before_script
+  variables: *variables
+  retry: *nx_retry
+  rules: *nx_rules
+
+build:
+  extends: .nodejs_job
+  stage: build
+  script:
+    - make build affected.env release-metadata
+    - rm -rf ${PROJECT_DIR}/prod && mkdir -p prod && mv prod affected.env ${PROJECT_DIR}/ || true
+  artifacts:
+    name: site
+    paths:
+      - prod
+    reports:
+      dotenv: affected.env
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - when: always
+
+lint:
+  extends: .nodejs_job
+  cache: *eslint-cache
+  stage: test
+  script:
+    - make audit workspace-lint formatcheck
+    - mv yarn-audit.* ${PROJECT_DIR}/ || true
+  artifacts:
+    paths:
+      - yarn-audit.log
+
+scan:
+  extends: .nodejs_job
+  cache: *eslint-cache
+  stage: test
+  parallel: 2
+  script:
+    - make lint
+
+test-unit:
+  extends: .nodejs_job
+  stage: test
+  tags:
+    - exeone
+  variables:
+    NODE_ENV: test
+    JEST_PARALLEL: 2
+  script:
+    - mount | grep cache
+    - node -e 'console.log("nCPU", os.cpus().length)'
+    - time make test
+    - time rm -rf ${PROJECT_DIR}/test-results && mkdir -p test-results && mv test-results ${PROJECT_DIR}/ || true
+  artifacts:
+    when: always
+    name: '$CI_JOB_STAGE-$CI_COMMIT_REF_NAME-artifacts'
+    paths:
+      - test-results
+      - cobertura-aggregated-report.xml
+    reports:
+      junit: test-results/**/junit.xml
+      cobertura: test-results/**/cobertura-coverage.xml
+
+test-pact:
+  extends: .nodejs_job
+  stage: test
+  script:
+    - make test-pact
+    - if [ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]; then make publish-pact NX_ARGS="--consumerTag=${PACT_CONSUMER_TAG} --consumerVersion=${CI_COMMIT_SHORT_SHA} --brokerUrl=${PACT_BROKER_URL}"; fi
+    - rm -rf ${PROJECT_DIR}/test-results && mkdir -p test-results && mv test-results ${PROJECT_DIR}/ || true
+  artifacts:
+    when: always
+    name: '$CI_JOB_STAGE-$CI_COMMIT_REF_NAME-artifacts'
+    paths:
+      - test-results
+    reports:
+      junit: test-results/**/junit.xml
+      cobertura: test-results/**/cobertura-coverage.xml
+
+.test-cypress:
+  extends: .nodejs_job
+  needs: ['ci-agent-nodejs']
+  image: ${CYPRESS_CI_IMAGE}
+  tags:
+    - exeone
+  stage: test
+  variables:
+    CYPRESS_CI_TESTING: 'true'
+  script:
+    - rm -rf cypress-results ${PROJECT_DIR}/cypress-results/; mkdir -p cypress-results
+    - SUCCESS=0
+    - make test-cypress BROWSER="chrome" DEBUG="nx:distributed-cache,cypress:server:util:process_profiler" || SUCCESS=$?
+    - cp --recursive cypress-results ${PROJECT_DIR}/cypress-results || true
+    - cp --recursive dist/cypress ${PROJECT_DIR}/cypress-artifacts || true
+    - exit ${SUCCESS}
+  artifacts:
+    when: always
+    name: '$CI_JOB_STAGE-$CI_COMMIT_REF_NAME-artifacts'
+    paths:
+      - cypress-results
+      - dist/cypress
+    reports:
+      junit: cypress-results/**/test-results-*.xml
+      cobertura: cypress-results/**/cobertura-coverage.xml
+  retry:
+    max: 2
+    when:
+      - runner_system_failure
+      - archived_failure
+      - unmet_prerequisites
+      - scheduler_failure
+      - data_integrity_failure
+      - api_failure
+      - unknown_failure
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'production'
+      when: never
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_COMMIT_BRANCH == 'master' || $CI_COMMIT_BRANCH =~ /^epic\//
+      when: manual
+      allow_failure: true
+    - when: always
+
+test-cypress:
+  extends: .test-cypress
+  allow_failure: false
+  parallel: 6
+  variables:
+    CYPRESS_TARGET: e2e
+
+test-cypress-pending:
+  extends: .test-cypress
+  allow_failure: true
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - when: manual
+  variables:
+    CYPRESS_TARGET: e2e-pending
+
+storybook:
+  extends: .nodejs_job
+  stage: build
+  # parallel: 3
+  script:
+    - make storybook affected.env
+    - rm -rf ${PROJECT_DIR}/docs && mkdir -p docs && mv docs affected.env ${PROJECT_DIR}/ || true
+  artifacts:
+    paths:
+      - docs
+    reports:
+      dotenv: affected.env
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_COMMIT_BRANCH == 'production'
+      when: never
+    - when: always
+
+dep-graph:
+  extends: .nodejs_job
+  stage: build
+  script:
+    - make build-depgraph-docs
+    - rm -rf ${PROJECT_DIR}/graph && mkdir -p graph && mv graph ${PROJECT_DIR}/ || true
+  artifacts:
+    paths:
+      - graph
+
+.test-codeceptjs:
+  extends: .nodejs_job
+  needs: ['ci-agent-codeceptjs']
+  image: ${CODECEPTJS_CI_IMAGE}
+  tags:
+    - ebu-vmwcyl
+  stage: test
+  variables:
+    CODECEPTJS_CI_TESTING: 'true'
+    PLAYWRIGHT_PROFILES_DIR: 'codeceptjs-profiles'
+    CI_ENVIRONMENT_TIER: other
+    BROWSER: chrome
+  timeout: 15 minutes
+  script:
+    - export CI_ENVIRONMENT_NAME=${CI_ENVIRONMENT_NAME#staging-}
+    - find ${PROJECT_DIR}/codeceptjs-results -type f -name '*.png' -delete || true
+    - cp -a ${PROJECT_DIR}/codeceptjs-results ${PROJECT_DIR}/${PLAYWRIGHT_PROFILES_DIR} ./ || true
+    - SUCCESS=0
+    - make test-codeceptjs DEBUG=nx:distributed-cache || SUCCESS=$?
+    - cp -a codeceptjs-results ${PLAYWRIGHT_PROFILES_DIR} ${PROJECT_DIR}/ || true
+    - exit ${SUCCESS}
+  artifacts:
+    when: always
+    name: '$CI_JOB_STAGE-$CI_COMMIT_REF_NAME-artifacts'
+    paths:
+      - codeceptjs-results/**/*.log
+      - codeceptjs-results/**/*.xml
+      - codeceptjs-results/**/*.png
+    reports:
+      junit: codeceptjs-results/**/junit-report.xml
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'codeceptjs'
+      when: never
+    - if: $CI_ENVIRONMENT_TIER == 'production' && ( $CI_COMMIT_BRANCH != 'production' && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME != 'production' )
+      when: never
+    - if: $CI_ENVIRONMENT_TIER == 'staging' && ( $CI_COMMIT_BRANCH == 'production' && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == 'production' )
+      when: never
+    - when: always
+  cache:
+    key: ${CI_ENVIRONMENT_NAME}
+    paths:
+      - codeceptjs-results/**/*_session.json
+      - codeceptjs-profiles
+
+review-coverage:
+  interruptible: true
+  variables: *variables
+  retry: *nx_retry
+  rules: *nx_rules
+  before_script: *before_script
+  stage: review
+  script:
+    - bash .gitlab/ci/scripts/code-coverage.sh
+    - cp -a coverage-report ${PROJECT_DIR}/ || true
+  artifacts:
+    when: always
+    expose_as: 'Coverage Report'
+    name: '$CI_JOB_STAGE-$CI_COMMIT_REF_NAME-artifacts'
+    paths:
+      - coverage-report
+    reports:
+      cobertura: coverage-report/cobertura-coverage.xml

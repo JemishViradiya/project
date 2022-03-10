@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "gitlab.gitlab-workflow",
+    "msjsdiag.debugger-for-chrome",
+    "nrwl.angular-console",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode-remote.remote-wsl",
+    "firsttris.vscode-jest-runner",
+    "bierner.markdown-mermaid"
+  ],
+  "unwantedRecommendations": []
+}

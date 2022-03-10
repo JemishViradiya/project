@@ -1,0 +1,190 @@
+{
+  "authenticators": {
+    "title": "Autenticatori",
+    "add": "Aggiungi autenticatore",
+    "type": "Tipo di autenticatore",
+    "ENTERPRISE": "Enterprise",
+    "OKTA": "Okta",
+    "PING": "Ping",
+    "summary": "Aggiungi autenticatori per gestire i tipi di autenticazione che è possibile utilizzare.",
+    "edit": "Modifica autenticatore",
+    "delete": "Elimina autenticatore",
+    "general": "Informazioni generali",
+    "signing_type": "Algoritmo di firma del token ID",
+    "ES512": "ECDSA che utilizza la curva P521 e SHA-512",
+    "ES256": "ECDSA che utilizza la curva P256 e SHA-256",
+    "ES384": "ECDSA che utilizza la curva P384 e SHA-384",
+    "name": "Nome",
+    "identityproviderclient": "Client del provider di identità",
+    "discovery_url": "URL del documento di rilevamento OIDC",
+    "client_id": "ID cliente",
+    "jwks": "Chiave privata JWKS",
+    "DUO_MFA": "Duo MFA",
+    "DUO": "Duo",
+    "duomfaconfiguration": "Configurazione Duo MFA",
+    "auth_integration_key": "Chiave di integrazione di autenticazione",
+    "auth_secret_key": "Chiave segreta di autenticazione",
+    "auth_api_hostname": "Nome host API di autenticazione",
+    "admin_api_hostname": "Nome host dell'API di amministrazione",
+    "admin_secret_key": "Chiave segreta amministratore",
+    "admin_integration_key": "Chiave di integrazione dell'amministratore",
+    "EMAIL": "E-mail",
+    "USERNAME": "Nome utente",
+    "username_format": "Formato nome utente",
+    "OKTA_MFA": "Okta MFA",
+    "oktamfaconfiguration": "Configurazione Okta MFA",
+    "auth_api_key": "Chiave API di autenticazione",
+    "auth_domain": "Dominio di autenticazione",
+    "TOTP": "TOP",
+    "totpconfiguration": "Configurazione TOTP",
+    "window": "Finestra",
+    "windowHelperText": "Specificare la deriva temporale massima consentita tra il dispositivo e il server.",
+    "AD": "Active Directory",
+    "LDAP": "LDAP",
+    "CUR": "Account online Blackberry",
+    "VENUE": "Cylance"
+  },
+  "common": {
+    "name": "Nome",
+    "type": "Tipo",
+    "delete": "Elimina",
+    "deleteConfirm": "Vuoi eliminare l'autenticatore {{field}}?",
+    "add": "Inserisci",
+    "cancel": "Annulla",
+    "save": "Salva",
+    "saveAs": "Salva con nome",
+    "success": {
+      "create": "L'autenticatore è stato aggiunto.",
+      "update": "L'autenticatore è stato aggiornato.",
+      "delete": "L'autenticatore è stato eliminato."
+    },
+    "failure": {
+      "create": "Impossibile aggiungere l'autenticatore. Motivo: {{reason}}",
+      "update": "Impossibile aggiornare l'autenticatore. Motivo: {{reason}}",
+      "delete": "Impossibile eliminare l'autenticatore. Motivo: {{reason}}",
+      "read": "I dati non possono essere recuperati. Motivo: {{reason}}"
+    },
+    "nodata": "Nessun dato"
+  },
+  "authentication": {
+    "title": "Autenticazione"
+  },
+  "policy": {
+    "list": {
+      "title": "Politiche di Enterprise Identity",
+      "deleteSuccess": "I criteri sono stati eliminati.",
+      "deleteError": "{{deleteErrorCount}} fuori dalle operazioni di eliminazione di {{deleteCount}} non riuscite",
+      "pageDescription": "Aggiungere un criterio per specificare i tipi di autenticazione che gli utenti e gli amministratori devono completare per accedere alla console, alle app o ai servizi UES."
+    },
+    "createPolicyPageTitle": "Aggiungi criterio di autenticazione",
+    "updatePolicyPageTitle": "Autenticazione",
+    "generalInformationLabel": "Informazioni generali",
+    "authenticationRulesLabel": "Regole di autenticazione",
+    "applicationExceptionLabel": "Gestisci le eccezioni delle app",
+    "name": "Nome",
+    "description": "Descrizione",
+    "update": {
+      "tab": {
+        "settingsLabel": "Impostazioni",
+        "usersAndGroupsLabel": "Utenti e gruppi assegnati"
+      }
+    },
+    "nameHelperText": "Esiste già un criterio con questo nome.",
+    "nameHelperTextRequired": "Questo campo è obbligatorio.",
+    "createPolicyAssignConfirmationDialog": {
+      "title": "Assegna il criterio di autenticazione",
+      "description": "La politica è stata creata. Assegnare utenti o gruppi a questo criterio?",
+      "cancelButton": "Non ora",
+      "confirmButton": "sì"
+    },
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Modifiche non salvate",
+      "description": "Vuoi uscire da questa pagina? Le modifiche non sono state salvate.",
+      "cancelButton": "Annulla",
+      "confirmButton": "Lascia pagina"
+    },
+    "batchDeletePolicyConflictErrorConfirmationDialog": {
+      "title": "Errore di eliminazione",
+      "cancelButton": "Chiudi",
+      "description": "Non è stato possibile eliminare i seguenti criteri perché assegnati a utenti o gruppi:"
+    },
+    "batchDeletePolicyErrorConfirmationDialog": {
+      "title": "Errore di eliminazione",
+      "description": "Non è stato possibile eliminare i seguenti criteri:",
+      "cancelButton": "Chiudi"
+    },
+    "deletePolicyConfirmationDialog": {
+      "title": "Elimina conferma",
+      "description": "Vuoi eliminare la politica di {{name}}?",
+      "deleteNote": "È necessario rimuovere tutti gli utenti e i gruppi associati a un criterio prima di eliminarlo.",
+      "cancelButton": "Annulla",
+      "confirmButton": "Elimina"
+    },
+    "serverError": {
+      "update": "Le modifiche non possono essere salvate.",
+      "delete": "Non è stato possibile eliminare il criterio.",
+      "deleteWithUsers": "Impossibile eliminare il criterio perché assegnato agli utenti.",
+      "deleteWithGroups": "Impossibile eliminare il criterio perché è assegnato ai gruppi.",
+      "deleteWithUsersAndGroups": "Impossibile eliminare il criterio perché è assegnato a utenti e gruppi.",
+      "deletePolicies": "I criteri non possono essere eliminati.",
+      "multipleInternalAuthErrorMsg": "Non è possibile assegnare più di un tipo di autenticatore interno a un criterio."
+    },
+    "riskFactorsLabel": "Scenari di rischio",
+    "authenticatorsList": {
+      "addButton": "Aggiungi autenticatore",
+      "deleteButton": "Elimina",
+      "orderButton": "Imposta ordine",
+      "deleteSelectedMsg": "{{selectedCnt}} selezionato",
+      "nameLabel": "Nome",
+      "descriptionLabel": "Descrizione",
+      "noData": "Fare clic su + per aggiungere articoli.",
+      "columns": {
+        "name": "Nome",
+        "description": "Descrizione"
+      }
+    },
+    "addAuthenticatorsDialog": {
+      "title": "Aggiungi autenticatore",
+      "dropdownLabel": "Nome dell'autenticatore",
+      "cancelButton": "Annulla",
+      "addButton": "Salva"
+    },
+    "applicationExceptionButton": "Gestisci le eccezioni delle app",
+    "selectManagedExceptionDialog": {
+      "title": "Gestisci le eccezioni delle app",
+      "cancelButton": "Annulla",
+      "addButton": "Salva",
+      "listLabel": "È possibile configurare i livelli di autenticazione per i servizi selezionati nelle schede nella parte inferiore della pagina dopo aver selezionato i servizi.",
+      "rightLabel": "App selezionate",
+      "leftLabel": "App disponibili"
+    },
+    "applicationExceptionButtonGroup": "Eccezioni per le app",
+    "formSubmitSnackBarError": "Correggi gli errori {{count}}",
+    "authenticatorsRequired": "È necessario selezionare almeno un autenticatore",
+    "authenticatorsLoadingErrorMessage": "Errore durante il caricamento degli autenticatori",
+    "firstLoginFromBrowserLabel": "Primo accesso dal browser",
+    "firstLoginFromBrowserNotSetLabel": "Nessuno",
+    "updatePolicyPageTitleHelperText": "Ultimo aggiornamento: {{date, datetime-short}}",
+    "updateFormCopyPolicyTooltip": "Crea una copia di questo criterio",
+    "updateFormDeletePolicyTooltip": "Elimina politica",
+    "savePolicyPriorToCopyMessage": "Salva criterio prima di copiare",
+    "unexpectedErrorMessage": "La richiesta non può essere elaborata.",
+    "unexpectedErrorWithHttpMessage": "La richiesta non può essere elaborata. Stato HTTP restituito: {{status}}",
+    "unexpectedErrorWithHttpSubcodeMessage": "La richiesta non può essere elaborata. Stato HTTP restituito: {{status}}, sottocodice: {{subcode}}",
+    "policyUpdatedMessage": "La politica è stata aggiornata.",
+    "policyDeletedMessage": "Il criterio è stato eliminato.",
+    "policyCreatedMessage": "La politica è stata creata.",
+    "policyDeleteErrorMessage": "Non è stato possibile eliminare il criterio.",
+    "policyUpdateErrorMessage": "Non è stato possibile aggiornare la politica.",
+    "policyCreateErrorMessage": "Non è stato possibile creare la politica.",
+    "busyLoading": "Politica di caricamento...",
+    "busyDeleting": "Eliminazione del criterio...",
+    "busyUpdating": "Aggiornamento della politica in corso...",
+    "busyCreating": "Creazione di criteri in corso...",
+    "appsLoadErrorMesage": "La richiesta non può essere elaborata.",
+    "swTemplateLoadErrorMesage": "La richiesta non può essere elaborata.",
+    "authenticatorsLoadErrorMesage": "La richiesta non può essere elaborata.",
+    "policyLoadErrorMesage": "La richiesta non può essere elaborata.",
+    "applicationExceptionDescription": "Questa impostazione sostituirà qualsiasi criterio assegnato alle app quando è assegnato a utenti o gruppi. Non si applica se un criterio viene assegnato come criterio predefinito dell'app."
+  }
+}

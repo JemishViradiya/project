@@ -1,0 +1,107 @@
+{
+  "navigation": {
+    "gateway": "게이트웨이",
+    "policies": "방침",
+    "title": "사용자 정책",
+    "user": "사용자",
+    "activation": {
+      "label": "등록"
+    },
+    "mobileDeviceThreats": {
+      "label": "Protect Mobile"
+    },
+    "networkAccessControl": {
+      "label": "네트워크 액세스 제어"
+    },
+    "gatewayService": {
+      "label": "게이트웨이 서비스"
+    },
+    "enterpriseIdentity": {
+      "label": "인증"
+    },
+    "adaptiveResponse": {
+      "label": "적응형 응답"
+    },
+    "riskDetection": {
+      "label": "위험 분류: 탐지기"
+    },
+    "dlpMobileThreads": {
+      "label": "Avert 변하기 쉬운"
+    },
+    "dlpContentThreads": {
+      "label": "정보 보호"
+    }
+  },
+  "policy": {
+    "cancelButton": "취소",
+    "deleteButton": "삭제",
+    "saveButton": "저장",
+    "addButton": "추가",
+    "removeButton": "제거",
+    "list": {
+      "add": "정책 추가",
+      "results": "{{value}} 개의 결과",
+      "rank": "순위",
+      "searchPlaceholder": "정책 검색",
+      "noData": "데이터 없음",
+      "columns": {
+        "rank": "순위",
+        "name": "정책 이름",
+        "description": "설명",
+        "userCount": "사용자",
+        "groupCount": "사용자 그룹",
+        "added": "추가됨",
+        "modified": "수정됨"
+      },
+      "columnPicker": "테이블 열",
+      "selected": "{{count}} 개 선택됨"
+    },
+    "delete": {
+      "title": "삭제 확인",
+      "deleteSingle": "{{profile}} 정책을 삭제하시겠습니까?",
+      "multipleDelete": "이러한 정책을 삭제하시겠습니까?",
+      "note": "정책을 삭제하려면 먼저 정책과 연결된 모든 사용자 및 그룹을 제거해야 합니다.",
+      "successMessage": "정책이 삭제되었습니다."
+    },
+    "rank": {
+      "successfulUpdate": "순위가 업데이트되었습니다."
+    },
+    "detail": {
+      "updated": "{{date, datetime}} 에 업데이트되었습니다.",
+      "appliedUsersAndGroups": "할당된 사용자 및 그룹",
+      "settings": "설정",
+      "device": "장치 정책 세부 정보",
+      "user": "사용자 정책 세부 정보"
+    },
+    "assignment": {
+      "columns": {
+        "name": "이름",
+        "email": "이메일"
+      },
+      "add": "사용자 또는 그룹 추가",
+      "searchPlaceholder": "사용자 및 그룹 검색",
+      "userCount": "{{count}} 명의 사용자",
+      "dialog": {
+        "title": "사용자 또는 그룹 추가",
+        "description": "사용자 또는 그룹을 검색합니다.동일한 정책에 여러 사용자 및 그룹을 할당할 수 있습니다.",
+        "searchText": "사용자 또는 그룹 검색",
+        "list": {
+          "noResults": "결과 없음"
+        }
+      },
+      "unassign": {
+        "title": "사용자 또는 그룹 제거",
+        "content": "다음 항목을 제거하시겠습니까?"
+      },
+      "successfulAssignment": "사용자 또는 그룹이 정책에 추가되었습니다.",
+      "successfulUnassignment": "사용자 또는 그룹이 정책에서 제거되었습니다."
+    },
+    "defaultPolicyName": "기본값"
+  },
+  "policies": {
+    "deletePoliciesSuccessMessage": "정책이 삭제되었습니다.",
+    "deletePoliciesErrorMessage": "정책을 삭제할 수 없습니다.",
+    "deletePolicyErrorMessage": "정책을 삭제할 수 없습니다.",
+    "deleteMultiplePoliciesErrorDescription": "다음 정책은 사용자 또는 그룹에 할당되었으므로 삭제할 수 없습니다."
+  }
+}

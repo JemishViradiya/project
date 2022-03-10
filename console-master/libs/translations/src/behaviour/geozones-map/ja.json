@@ -1,0 +1,39 @@
+{
+  "operationBar": {
+    "search": {
+      "input": "場所を検索する",
+      "iconAriaLabel": "検索"
+    },
+    "draw": {
+      "circle": "ジオゾーン半径の作成",
+      "polygon": "ジオゾーンシェープの作成"
+    }
+  },
+  "popupGeozone": {
+    "titleCircle": "ジオゾーン半径",
+    "titlePolygon": "ジオゾーンシェイプ",
+    "inputName": "表示名",
+    "inputRadius": "半径",
+    "inputUnit": "単位",
+    "labelSize": "サイズ:{{value}} {{unit}}",
+    "buttonRemoveAriaLabel": "削除",
+    "buttonCancel": "キャンセル",
+    "buttonSave": "保存",
+    "units": {
+      "km": "キロ",
+      "miles": "マイル"
+    },
+    "errors": {
+      "invalidName": "名前が無効です",
+      "invalidRadius": "半径が無効です"
+    }
+  },
+  "popupDrawOptions": {
+    "polygonOption": "ジオゾーンシェープを描画する",
+    "circleOption": "ジオゾーンの半径を描画する"
+  },
+  "marker": {
+    "zoneAriaLabel": "ゾーンマーカー-{{name}}",
+    "searchAriaLabel": "検索ピン-{{name}}"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "dashboard": {
+    "title": "CylancePERSONA"
+  },
+  "users": {
+    "title": "페르소나 사용자",
+    "sectionTitles": {
+      "assets": "자산",
+      "userInfo": "사용자 정보",
+      "personaAlerts": "사일랜스페르소나 얼러트",
+      "associatedDevices": "연결된 장치 ({{count}})",
+      "associatedDevices_plural": "연결된 장치 ({{count}})",
+      "userTrustScoreLog": "사용자 신뢰 점수 로그",
+      "cylancePersonaStatus": "사일랜스페르소나 상태"
+    },
+    "actions": {
+      "remove": "제거",
+      "removeUserDescription": "선택한 사용자를 제거하시겠습니까?",
+      "removeUserDescription_plural": "{{count}} 개의 선택된 사용자를 제거하시겠습니까?",
+      "resetModelsDescription": "점수 산정 모델을 재설정하시겠습니까?이렇게 하면 수집된 데이터가 지워집니다."
+    },
+    "columns": {
+      "userName": "사용자 이름",
+      "state": "상태",
+      "lastOnline": "라스트 온라인",
+      "zones": "구역"
+    },
+    "noData": "사용자를 찾을 수 없습니다.",
+    "state": {
+      "online": "온라인",
+      "offline": "오프라인"
+    },
+    "notifications": {
+      "removeUsersSuccess": "{{count}} 사용자를 성공적으로 제거했습니다!",
+      "removeUsersSuccess_plural": "{{count}} 명의 사용자를 성공적으로 제거했습니다!",
+      "removeUsersError": "사용자를 제거하지 못했습니다.다시 시도해 보세요.",
+      "removeUsersError_plural": "사용자를 제거하지 못했습니다.다시 시도해 보세요.",
+      "dataUnavailableError": "데이터를 사용할 수 없습니다.나중에 다시 시도하십시오."
+    },
+    "tabs": {
+      "activeAlerts": "활성 알림",
+      "alertHistory": "알림 기록"
+    },
+    "detailsTitle": "사용자 세부 정보"
+  },
+  "dialogs": {
+    "actionConfirmation": "조치 확인"
+  },
+  "button": {
+    "cancel": "취소",
+    "remove": "제거"
+  },
+  "tableColumns": "테이블 열",
+  "loading": "로드 중...",
+  "personaEvents": {
+    "LogonModelStatus": "로그온 모델 상태",
+    "MetaModelScore": "메타 모델 점수",
+    "MetaModelStatus": "메타 모델 상태",
+    "UserTrustScore": "사용자 신뢰 점수",
+    "Successful2FALogon": "성공적인 2FA 로그온",
+    "Failed2FALogon": "2FA 로그온 실패",
+    "UserFailedLogon": "사용자 로그온 실패",
+    "ForcedStepUpAuthentication": "강제 스텝업 인증",
+    "MaliciousRuleHit": "악성 규칙 적중"
+  },
+  "alertStatus": {
+    "New": "신규",
+    "InProgress": "진행 중",
+    "FalsePositive": "거짓 긍정",
+    "Reviewed": "검토 완료"
+  },
+  "personaSeverity": {
+    "info": "정보",
+    "low": "낮음",
+    "medium": "미디엄",
+    "high": "높음",
+    "critical": "중요"
+  },
+  "noData": "표시할 항목 없음",
+  "currentCTS": "현재 CTS",
+  "AssociatedUserOffline": "관련 사용자오프라인",
+  "ResumeScoring": "이력서 스코링",
+  "PauseScoring": "일시 정지에스코링",
+  "ResetScoring": "리셋채점",
+  "ResumeScoringAll": "이력서스코링전체",
+  "PauseScoringAll": "일시 정지에스코링올",
+  "ResetScoringAll": "리셋스코링올",
+  "personaModelStatus": {
+    "Training": "교육",
+    "Scoring": "채점",
+    "Paused": "일시 중지됨",
+    "Processing": "프로세싱"
+  },
+  "personaModelTypes": {
+    "TrustScore": "사용자 신뢰 점수",
+    "Meta": "메타 모델",
+    "Conduct": "행동",
+    "Process": "프로세스",
+    "Keyboard": "키보드",
+    "Mouse": "마우스",
+    "Network": "네트워크",
+    "Logon": "로그온"
+  },
+  "personaModelButton": {
+    "AssociatedUserOffline": "사용자가 오프라인이기 때문에 컨트롤이 비활성화됨",
+    "ResumeScoring": "이력서 채점",
+    "ResumeScoringAll": "모두 점수 재개",
+    "PauseScoring": "채점 일시 중지",
+    "PauseScoringAll": "모두 점수 매기기 일시 중지",
+    "ResetScoring": "채점 재설정",
+    "ResetScoringAll": "모두 점수 재설정"
+  },
+  "LastNDays": "마지막 {{count}} 일",
+  "LastNDays_plural": "지난 {{count}} 일",
+  "LastNHrs": "마지막 {{count}} Hr",
+  "LastNHrs_plural": "마지막 {{count}} 시간",
+  "Time": "시간",
+  "Score": "점수",
+  "NA": "NA",
+  "scoreDataUnavailableError": "신뢰 점수 데이터를 사용할 수 없습니다.나중에 다시 시도하십시오.",
+  "unknown": "알려지지 않음"
+}

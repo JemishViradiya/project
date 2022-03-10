@@ -1,0 +1,122 @@
+{
+  "dashboard": {
+    "title": "CylancePERSONA"
+  },
+  "users": {
+    "title": "ペルソナユーザー",
+    "sectionTitles": {
+      "assets": "資産",
+      "userInfo": "ユーザー情報",
+      "personaAlerts": "CylancePersona アラート",
+      "associatedDevices": "関連付けられたデバイス ({{count}})",
+      "associatedDevices_plural": "関連デバイス ({{count}})",
+      "userTrustScoreLog": "ユーザーの信頼スコアログ",
+      "cylancePersonaStatus": "CylancePersona ステータス"
+    },
+    "actions": {
+      "remove": "削除",
+      "removeUserDescription": "選択したユーザーを削除してもよろしいですか?",
+      "removeUserDescription_plural": "選択したユーザー {{count}} 人を削除してもよろしいですか？",
+      "resetModelsDescription": "スコアリングモデルをリセットしてもよろしいですか?これにより、収集されたデータがクリアされます。"
+    },
+    "columns": {
+      "userName": "ユーザー名",
+      "state": "状態",
+      "lastOnline": "最終オンライン",
+      "zones": "ゾーン"
+    },
+    "noData": "ユーザーが見つかりませんでした。",
+    "state": {
+      "online": "オンライン",
+      "offline": "オフライン"
+    },
+    "notifications": {
+      "removeUsersSuccess": "{{count}} ユーザーを正常に削除しました！",
+      "removeUsersSuccess_plural": "{{count}} 人のユーザーを正常に削除しました！",
+      "removeUsersError": "ユーザーの削除に失敗しました。もう一度やり直してください。",
+      "removeUsersError_plural": "ユーザーの削除に失敗しました。もう一度やり直してください。",
+      "dataUnavailableError": "データは利用できません。後でもう一度お試しください。"
+    },
+    "tabs": {
+      "activeAlerts": "アクティブアラート",
+      "alertHistory": "アラート履歴"
+    },
+    "detailsTitle": "ユーザー詳細"
+  },
+  "dialogs": {
+    "actionConfirmation": "アクションの確認"
+  },
+  "button": {
+    "cancel": "キャンセル",
+    "remove": "削除"
+  },
+  "tableColumns": "テーブルカラム",
+  "loading": "ロード中...",
+  "personaEvents": {
+    "LogonModelStatus": "ログオンモデルのステータス",
+    "MetaModelScore": "メタモデルのスコア",
+    "MetaModelStatus": "メタモデルのステータス",
+    "UserTrustScore": "ユーザ信頼スコア",
+    "Successful2FALogon": "2FA ログオンが成功しました",
+    "Failed2FALogon": "2FA ログオンに失敗しました",
+    "UserFailedLogon": "ユーザーのログオン失敗",
+    "ForcedStepUpAuthentication": "強制ステップアップ認証",
+    "MaliciousRuleHit": "悪意のあるルールヒット"
+  },
+  "alertStatus": {
+    "New": "新規",
+    "InProgress": "進行中",
+    "FalsePositive": "偽陽性",
+    "Reviewed": "レビュー済み"
+  },
+  "personaSeverity": {
+    "info": "情報",
+    "low": "低い",
+    "medium": "ミディアム",
+    "high": "高い",
+    "critical": "クリティカル"
+  },
+  "noData": "表示するアイテムはありません",
+  "currentCTS": "現在のCTS",
+  "AssociatedUserOffline": "関連付けられたユーザーオフライン",
+  "ResumeScoring": "再開スコリング",
+  "PauseScoring": "PauseSescoring",
+  "ResetScoring": "スコアリングをリセット",
+  "ResumeScoringAll": "すべてエスコリングを再開",
+  "PauseScoringAll": "EscortingAll を一時停止",
+  "ResetScoringAll": "すべてスコアリングをリセット",
+  "personaModelStatus": {
+    "Training": "トレーニング",
+    "Scoring": "得点",
+    "Paused": "一時停止",
+    "Processing": "処理中"
+  },
+  "personaModelTypes": {
+    "TrustScore": "ユーザーの信頼スコア",
+    "Meta": "メタモデル",
+    "Conduct": "行動",
+    "Process": "プロセス",
+    "Keyboard": "キーボード",
+    "Mouse": "マウス",
+    "Network": "ネットワーク",
+    "Logon": "ログオン"
+  },
+  "personaModelButton": {
+    "AssociatedUserOffline": "ユーザーがオフラインであるためコントロールが無効になっている",
+    "ResumeScoring": "スコアリングを再開する",
+    "ResumeScoringAll": "全員のスコアリングを再開する",
+    "PauseScoring": "スコアリングを一時停止する",
+    "PauseScoringAll": "全員のスコアリングを一時停止",
+    "ResetScoring": "スコアリングをリセット",
+    "ResetScoringAll": "すべてのスコアをリセットする"
+  },
+  "LastNDays": "最後の {{count}} 日",
+  "LastNDays_plural": "過去 {{count}} 日間",
+  "LastNHrs": "最後の {{count}} 時間",
+  "LastNHrs_plural": "最後の {{count}} 時間",
+  "Time": "時間",
+  "Score": "スコア",
+  "NA": "ナ",
+  "scoreDataUnavailableError": "トラストスコアデータは利用できません。後でもう一度お試しください。",
+  "unknown": "不明"
+}

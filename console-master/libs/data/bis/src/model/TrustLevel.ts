@@ -1,0 +1,6 @@
+export enum TrustLevel {
+  UNTRUSTED = 'UNTRUSTED',
+  UNDETECTED = 'UNDETECTED',
+  UNDEFINED = 'UNDEFINED',
+  TRUSTED = 'TRUSTED',
+}

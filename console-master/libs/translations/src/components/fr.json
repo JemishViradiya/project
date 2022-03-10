@@ -1,0 +1,103 @@
+{
+  "transferList": {
+    "selectedCount": "{{selectedCount}} sur {{totalCount}} sélectionné",
+    "selectAllLeftLabel": "Sélectionnez tous les éléments non sélectionnés",
+    "selectAllRightLabel": "Sélectionnez tous les articles sélectionnés",
+    "transferItemsLeftLabel": "Supprimer les éléments sélectionnés",
+    "transferItemsRightLabel": "Ajouter les articles sélectionnés"
+  },
+  "pickers": {
+    "time": {
+      "invalidMessage": "L'heure n'est pas valide.",
+      "currentTime": "Heure actuelle"
+    }
+  },
+  "fileUpload": {
+    "browseFilesButton": "Parcourir les fichiers"
+  },
+  "progressButton": {
+    "buttonText": "Cliquez pour charger"
+  },
+  "button": {
+    "goBackText": "Revenez en arrière"
+  },
+  "drawer": {
+    "formButtonPanel": "Panneau de boutons Formulaire"
+  },
+  "quickSearchFilter": {
+    "minimumCharactersRequired": "Vous devez entrer au moins 3 caractères.",
+    "settings": "Paramètres du filtre de recherche"
+  },
+  "inputGroups": {
+    "buttonAdd": "Ajouter une ligne"
+  },
+  "maps": {
+    "common": {
+      "map": "Carte"
+    },
+    "terrain": "Terrain",
+    "satellite": "Satellite",
+    "toggleMapTypes": "Afficher ou masquer les types de carte",
+    "label": "Étiquette"
+  },
+  "helpLink": {
+    "helpLinkText": "Aide"
+  },
+  "riskSlider": {
+    "ariaLabelSliderMin": "risk-slider-min",
+    "ariaLabelSliderMax": "risk-slider-max",
+    "step": {
+      "0-0": "Sécurisé",
+      "0-1": "Sécurisé - Faible",
+      "0-2": "Sécurisé - Moyen",
+      "0-3": "Sécurisé - Élevé",
+      "1-1": "Faible",
+      "1-2": "Faible - Moyen",
+      "1-3": "Faible - Élevé",
+      "2-2": "Moyen",
+      "2-3": "Moyen - Élevé",
+      "3-3": "Élevé"
+    }
+  },
+  "enhancedSearch": {
+    "and": "ET",
+    "applyButton": "APPLIQUER",
+    "chipDefinition": "{{label}} {{operator}} {{value}}",
+    "clearButton": "CLAIR",
+    "enterDate": "Entrez la date",
+    "noOptionsText": "Aucune correspondance",
+    "comparisons": {
+      "contains": "Contient",
+      "doesNotContain": "Ne contient pas",
+      "endsWith": "Se termine par",
+      "greater": "Supérieur à",
+      "greaterOrEqual": "Supérieur ou égal à",
+      "less": "Inférieur à",
+      "lessOrEqual": "Inférieur ou égal à",
+      "startsWith": "Commence par"
+    }
+  },
+  "risk": {
+    "secured": "Secure",
+    "low": "Faible",
+    "medium": "Moyen",
+    "high": "Élevé"
+  },
+  "autocompleteTags": {
+    "newTag": "nouveau tag",
+    "tagAlreadyExist": "Ce tag est déjà ajouté"
+  },
+  "timeZonePicker": {
+    "searchPlaceholder": "Recherche par pays, ville ou abréviation",
+    "timeZone": "Fuseau horaire"
+  },
+  "tabPanel": {
+    "ariaLabel": "Onglet {{name}}"
+  },
+  "Creating": "Création",
+  "Fetching": "Récupération",
+  "Updating": "Actualisation",
+  "Deleting": "Suppression",
+  "Loading": "Chargement",
+  "Clear": "Clair"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@ues/behaviours",
+  "version": "0.0.1",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "sideEffects": [
+    "./.storybook/i18n/i18n.js"
+  ],
+  "dependencies": {
+    "@juggle/resize-observer": "^3.2.0"
+  }
+}

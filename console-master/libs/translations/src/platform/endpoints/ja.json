@@ -1,0 +1,122 @@
+{
+  "endpoints": {
+    "sectionTitle": "資産",
+    "title": "モバイルデバイス",
+    "grid": {
+      "all": "ユーザーデバイス",
+      "actions": {
+        "removeMultiple": "モバイルデバイスを削除する",
+        "removeEndpointsDescription": "{{count}} 台のモバイルデバイスを削除しますか？",
+        "remove": {
+          "success": "デバイスは削除されました。",
+          "error": "デバイスを削除できませんでした。",
+          "errorWithCount": "{{count}} 個のデバイスを削除できませんでした。"
+        }
+      }
+    },
+    "details": {
+      "error": {
+        "fetch": "デバイスを取得できませんでした。"
+      }
+    }
+  },
+  "endpoint": {
+    "details": {
+      "agent": "エージェント",
+      "agentBundleId": {
+        "com_blackberry_protect": "BlackBerry Protect",
+        "com_blackberry_big": "BlackBerry Gateway デスクトップ",
+        "com_blackberry_big1": "BlackBerry Gateway デスクトップ",
+        "com_blackberry_big2": "BlackBerry Gateway デスクトップ",
+        "com_blackberry_big3": "BlackBerry Gateway デスクトップ"
+      },
+      "enrollment": "エンロールメント",
+      "error": {
+        "fetch": "デバイスを取得できませんでした。",
+        "notFound": "デバイスは削除されました。",
+        "fetchUser": "ユーザーを取得できませんでした。"
+      },
+      "lastOnline": "最終オンライン",
+      "panels": {
+        "alerts": "アラート",
+        "events": "イベント",
+        "responseActions": "コンプライアンス"
+      },
+      "securityPatch": "セキュリティパッチ",
+      "title": "デバイス詳細",
+      "actions": {
+        "deleteEndpoint": "デバイスを削除する",
+        "title": "アクション"
+      },
+      "button": {
+        "more": "デバイスの詳細情報",
+        "less": "デバイスの詳細が少ない"
+      }
+    },
+    "fields": {
+      "riskLevelStatus": "リスクステータス",
+      "device": "デバイス",
+      "userName": "ユーザー",
+      "userEmail": "電子メール",
+      "os": "OS",
+      "osVersion": "OSバージョン",
+      "agent": "エージェント",
+      "enrollment": "エンロールメント",
+      "application": "アプリケーション",
+      "platform": "プラットフォーム",
+      "allEndpoints": "エンドポイント",
+      "manufacturer": "製造元",
+      "userId": "ユーザー ID",
+      "endpointId": "エンドポイント ID",
+      "displayName": "表示名",
+      "emailAddress": "メールアドレス",
+      "osSecurityPatch": "OS セキュリティパッチ",
+      "emmConnections": "EMM 接続"
+    },
+    "columnPickerTitle": "テーブル列",
+    "resultsCount": "{{value}} 件の結果",
+    "selectedCount": "{{value}} が選択されました",
+    "os": {
+      "ios": "iOS",
+      "android": "Android",
+      "windows": "Windows",
+      "macos": "macOS"
+    },
+    "risk": {
+      "HIGH": "高い",
+      "MEDIUM": "ミディアム",
+      "SECURED": "セキュア",
+      "UNKNOWN": "不明",
+      "LOW": "低"
+    },
+    "events": {
+      "networkConnections": "ネットワーク接続",
+      "networkTraffic": "ネットワークトラフィック",
+      "networkAnomaly": "ネットワーク異常"
+    },
+    "page": {
+      "title": "モバイルデバイスの詳細"
+    },
+    "responseActions": {
+      "title": "Protect Mobile コンプライアンス"
+    },
+    "threats": {
+      "mobileDevice": "Protect Mobile アラート"
+    },
+    "export": {
+      "emmConnections": "({{status}}) {{name}}"
+    }
+  },
+  "emmConnection": {
+    "type": {
+      "INTUNE": "Intune",
+      "UEM": "UEM",
+      "NULL": "定義なし"
+    },
+    "status": {
+      "PENDING": "保留中",
+      "ERROR": "エラー"
+    },
+    "statusAriaLabel": "EMM 接続ステータス:{{status}}"
+  }
+}

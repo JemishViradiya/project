@@ -1,0 +1,31 @@
+{
+  "root": "libs/data/eid",
+  "sourceRoot": "libs/data/eid/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/eid/**/*.js",
+          "libs/data/eid/**/*.jsx",
+          "libs/data/eid/**/*.ts",
+          "libs/data/eid/**/*.tsx",
+          "libs/data/eid/**/*.spec.ts",
+          "libs/data/eid/**/*.spec.tsx",
+          "libs/data/eid/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/eid/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/libs/data/eid"]
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

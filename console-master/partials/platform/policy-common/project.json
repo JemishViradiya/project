@@ -1,0 +1,26 @@
+{
+  "root": "partials/platform/policy-common",
+  "sourceRoot": "partials/platform/policy-common/src",
+  "projectType": "library",
+  "tags": ["scope:partial", "scope:platform"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["partials/platform/policy-common/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/platform/policy-common"],
+      "options": {
+        "jestConfig": "partials/platform/policy-common/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  }
+}

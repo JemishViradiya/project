@@ -1,0 +1,31 @@
+{
+  "root": "libs/data/bis",
+  "sourceRoot": "libs/data/bis/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/bis/**/*.js",
+          "libs/data/bis/**/*.jsx",
+          "libs/data/bis/**/*.ts",
+          "libs/data/bis/**/*.tsx",
+          "libs/data/bis/**/*.spec.ts",
+          "libs/data/bis/**/*.spec.tsx",
+          "libs/data/bis/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/bis/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/libs/data/bis"]
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

@@ -1,0 +1,29 @@
+{
+  "root": "partials/bis/ip-address-e2e",
+  "sourceRoot": "partials/bis/ip-address-e2e/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/bis/ip-address-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/bis/ip-address-e2e/cypress.json",
+        "tsConfig": "partials/bis/ip-address-e2e/tsconfig.json",
+        "devServerTarget": "bis/ip-address:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "bis/ip-address:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/bis/ip-address-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:bis"],
+  "implicitDependencies": ["bis/ip-address"]
+}

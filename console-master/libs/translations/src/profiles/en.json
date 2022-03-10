@@ -1,0 +1,107 @@
+{
+  "navigation": {
+    "activation": {
+      "label": "Enrollment"
+    },
+    "adaptiveResponse": {
+      "label": "Adaptive Response"
+    },
+    "dlpContentThreads": {
+      "label": "Information Protection"
+    },
+    "dlpMobileThreads": {
+      "label": "Avert Mobile"
+    },
+    "enterpriseIdentity": {
+      "label": "Authentication"
+    },
+    "gateway": "Gateway",
+    "gatewayService": {
+      "label": "Gateway Service"
+    },
+    "mobileDeviceThreats": {
+      "label": "Protect Mobile"
+    },
+    "networkAccessControl": {
+      "label": "Network Access Control"
+    },
+    "policies": "Policies",
+    "riskDetection": {
+      "label": "Risk Assessment"
+    },
+    "title": "User policy",
+    "user": "User"
+  },
+  "policies": {
+    "deletePoliciesSuccessMessage": "The policies were deleted.",
+    "deletePoliciesErrorMessage": "The policies could not be deleted.",
+    "deletePolicyErrorMessage": "The policy could not be deleted.",
+    "deleteMultiplePoliciesErrorDescription": "The following policies could not be deleted because they are assigned to users or groups:"
+  },
+  "policy": {
+    "addButton": "Add",
+    "assignment": {
+      "add": "Add user or group",
+      "columns": {
+        "email": "Email",
+        "name": "Name"
+      },
+      "dialog": {
+        "description": "Search for users or groups. You can assign multiple users and groups to the same policy.",
+        "list": {
+          "noResults": "No results"
+        },
+        "searchText": "Search for users or groups",
+        "title": "Add a user or group"
+      },
+      "searchPlaceholder": "Search for users and groups",
+      "successfulAssignment": "The users or groups were added to the policy.",
+      "successfulUnassignment": "The users or groups were removed from the policy.",
+      "unassign": {
+        "content": "Do you want to remove the following items?",
+        "title": "Remove users or groups"
+      },
+      "userCount": "{{count}} users"
+    },
+    "cancelButton": "Cancel",
+    "delete": {
+      "deleteSingle": "Do you want to delete the {{profile}} policy?",
+      "multipleDelete": "Do you want to delete these policies?",
+      "note": "You must remove all users and groups associated with a policy before you delete it.",
+      "successMessage": "The policy was deleted.",
+      "title": "Delete confirmation"
+    },
+    "deleteButton": "Delete",
+    "detail": {
+      "appliedUsersAndGroups": "Assigned users and groups",
+      "device": "Device policy details",
+      "settings": "Settings",
+      "updated": "Updated on {{date, datetime}}",
+      "user": "User policy details"
+    },
+    "list": {
+      "add": "Add policy",
+      "columnPicker": "Table columns",
+      "columns": {
+        "added": "Added",
+        "description": "Description",
+        "groupCount": "User groups",
+        "modified": "Modified",
+        "name": "Policy name",
+        "rank": "Rank",
+        "userCount": "Users"
+      },
+      "noData": "No data",
+      "rank": "Rank",
+      "results": "{{value}} results",
+      "searchPlaceholder": "Search for policies",
+      "selected": "{{count}} selected"
+    },
+    "rank": {
+      "successfulUpdate": "The ranking was updated."
+    },
+    "removeButton": "Remove",
+    "saveButton": "Save",
+    "defaultPolicyName": "Default"
+  }
+}

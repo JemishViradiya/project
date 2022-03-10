@@ -1,0 +1,33 @@
+@import '../../theme/theme.less';
+
+.topBox {
+  background: @colorRiskUnknown;
+
+  &[risk='CRITICAL'] {
+    background: @colorRiskCritical;
+  }
+
+  &[risk='HIGH'] {
+    background: @colorRiskHigh;
+  }
+
+  &[risk='MEDIUM'] {
+    background: @colorRiskMedium;
+  }
+
+  &[risk='LOW'] {
+    background: @colorRiskLow;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.bottomBox {
+  background: @backgroundDefault;
+  padding: 16px;
+}

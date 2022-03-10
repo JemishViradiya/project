@@ -1,0 +1,25 @@
+{
+  "root": "partials/dashboard/ajax",
+  "sourceRoot": "partials/dashboard/ajax/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/dashboard/ajax/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/dashboard/ajax"],
+      "options": {
+        "jestConfig": "partials/dashboard/ajax/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  },
+  "tags": ["scope:partial", "scope:dashboard"]
+}

@@ -1,0 +1,17 @@
+custom:
+  Map:
+    backgroundColor: 'var(--mui-palette-background-paper2)'
+
+light:
+  custom:
+    Map:
+      icon:
+        hightlight:
+          fill: '#c5c5c5'
+
+dark:
+  custom:
+    Map:
+      icon:
+        hightlight:
+          fill: '#4a4a49'

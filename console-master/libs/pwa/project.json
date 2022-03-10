@@ -1,0 +1,92 @@
+{
+  "root": "libs/pwa",
+  "sourceRoot": "libs/pwa/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "options": {
+        "baseHref": "..",
+        "deployUrl": "pwa/",
+        "outputPath": "dist/pwa",
+        "index": "tools/index.html",
+        "generateIndexHtml": false,
+        "main": "libs/pwa/src/main.ts",
+        "tsConfig": "libs/pwa/tsconfig.lib.json",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "libs/pwa/assets",
+            "output": "/"
+          }
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "libs/pwa/tools/webpack.config",
+        "maxWorkers": 1,
+        "memoryLimit": 1024
+      },
+      "configurations": {
+        "production": {
+          "outputPath": "prod/pwa",
+          "fileReplacements": [
+            {
+              "replace": "libs/pwa/src/environments/environment.ts",
+              "with": "libs/pwa/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            }
+          ],
+          "maxWorkers": 1,
+          "memoryLimit": 2048
+        }
+      },
+      "outputs": ["{options.outputPath}", "{options.outputPath}/../sw.js", "{options.outputPath}/../sw.js.map"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/pwa/**/*.js",
+          "libs/pwa/**/*.jsx",
+          "libs/pwa/**/*.ts",
+          "libs/pwa/**/*.tsx",
+          "tools/nx/typings/image.d.ts",
+          "libs/pwa/**/*.spec.ts",
+          "libs/pwa/**/*.spec.tsx",
+          "libs/pwa/**/*.spec.js",
+          "libs/pwa/**/*.spec.jsx",
+          "libs/pwa/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/pwa/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/pwa.sh"
+      }
+    }
+  },
+  "tags": ["scope:shared", "scope:pwa"],
+  "implicitDependencies": ["api"]
+}

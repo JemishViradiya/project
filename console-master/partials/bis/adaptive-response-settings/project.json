@@ -1,0 +1,25 @@
+{
+  "root": "partials/bis/adaptive-response-settings",
+  "sourceRoot": "partials/bis/adaptive-response-settings/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/bis/adaptive-response-settings/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/bis/adaptive-response-settings"],
+      "options": {
+        "jestConfig": "partials/bis/adaptive-response-settings/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  },
+  "tags": ["scope:partial", "scope:bis"]
+}

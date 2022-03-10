@@ -1,0 +1,7 @@
+{
+  "loading": "Loading...",
+  "signInLink": "Click here to sign in again.",
+  "errorMessage": "Your request could not be completed.",
+  "loginFailed": "Sign-in failed",
+  "logoutFailed": "Sign-out failed"
+}

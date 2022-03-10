@@ -1,0 +1,29 @@
+{
+  "root": "partials/gateway/events-e2e",
+  "sourceRoot": "partials/gateway/events-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/gateway/events-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/gateway/events-e2e/cypress.json",
+        "tsConfig": "partials/gateway/events-e2e/tsconfig.json",
+        "devServerTarget": "gateway:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "gateway:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/gateway/events-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:gateway"],
+  "implicitDependencies": ["gateway/events"]
+}

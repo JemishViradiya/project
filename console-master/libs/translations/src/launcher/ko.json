@@ -1,0 +1,8 @@
+{
+  "sessionExpiredTitle": "세션 만료됨",
+  "sessionExpiredMessage": "세션이 만료되었습니다.",
+  "help": "도움",
+  "tenant": "테넌트",
+  "sessionStartTitle": "로그인",
+  "sessionStartAction": "로그인"
+}

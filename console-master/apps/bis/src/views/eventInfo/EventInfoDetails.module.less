@@ -1,0 +1,45 @@
+@import '../../theme/theme.less';
+
+.info {
+  padding: 78px 32px 32px;
+}
+
+.mainHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftBox {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.userName {
+  composes: .mui.typography[ @h2];
+  display: flex;
+  align-items: center;
+}
+
+.riskLevel {
+  composes: .mui.typography[ @h5];
+  margin-left: 12px;
+}
+
+.subHead {
+  composes: .mui.typography[ @h5];
+  display: flex;
+  margin-left: 50px;
+  overflow-wrap: break-word;
+}
+
+.body {
+  composes: .mui.typography[ @body2];
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.collapsible {
+  margin-top: 40px;
+}

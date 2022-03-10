@@ -1,0 +1,16 @@
+@import '../../styles/_colors';
+@import '../../styles/_utility';
+
+.form-header {
+  > div h1 {
+    float: left;
+  }
+  > div > div:last-child {
+    float: right;
+    margin-right: 24px;
+    margin-top: 12px;
+  }
+  .cancel {
+    margin-right: 16px;
+  }
+}

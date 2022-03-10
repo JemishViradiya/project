@@ -1,0 +1,69 @@
+{
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "add": "Ajouter",
+    "errorPleaseContact": "Une erreur est survenue. Veuillez réessayer ou contacter votre administrateur.",
+    "description": "Description",
+    "risk": "risque",
+    "settings": "Paramètres",
+    "delete": "Supprimer",
+    "descriptionInvalid": "La description doit comporter {{max}} caractères ou moins.",
+    "errorFieldRequired": "Ce champ est obligatoire",
+    "errorInvalidName": "Nom non valide",
+    "nameInvalid": "Le nom doit comporter {{max}} caractères ou moins.",
+    "automaticRiskReduction": "Réduction automatique des risques"
+  },
+  "risk": {
+    "common": {
+      "identityRisk": "Risque d'identité",
+      "identityRiskResponseActions": "Mesures de réponse au risque d'identité",
+      "networkAnomaly": "Anomalie du réseau",
+      "generalInfo": "Informations générales"
+    },
+    "label": {
+      "low": "Faible risque",
+      "medium": "Risque moyen",
+      "high": "Risque élevé",
+      "critical": "Risque critique"
+    },
+    "level": {
+      "CRITICAL": "Critique",
+      "HIGH": "Élevé",
+      "MEDIUM": "Moyen",
+      "LOW": "Faible",
+      "TRAINING": "Formations",
+      "UNKNOWN": "Inconnu",
+      "UNTRUSTED": "Non fiable",
+      "UNDETECTED": "Non détecté",
+      "UNDEFINED": "Non défini",
+      "TRUSTED": "Fiable",
+      "AT_RISK": "À risque",
+      "SAFE": "Sûr",
+      "SECURED": "Sécurisé"
+    }
+  },
+  "arr": {
+    "challengeState": {
+      "deny": "Décliné par l'utilisateur",
+      "failed": "Erreur - Non terminé",
+      "in_progress": "En cours",
+      "no_mfa": "Non activé dans la stratégie",
+      "ok": "Vérifié",
+      "timeout": "A expiré",
+      "unknown": "Erreur - Non terminé",
+      "mfa_skipped": "contourné",
+      "fraud": "Fraude"
+    }
+  },
+  "policies": {
+    "create": {
+      "error": "La stratégie n'a pas pu être créée."
+    },
+    "details": {
+      "errorSave": "La stratégie n'a pas pu être enregistrée.",
+      "errorDelete": "La stratégie n'a pas pu être supprimée.",
+      "errorServerNameAlreadyExists": "Une stratégie portant ce nom existe déjà."
+    }
+  }
+}

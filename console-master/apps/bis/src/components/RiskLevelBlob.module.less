@@ -1,0 +1,44 @@
+@import '../theme/theme.less';
+
+.blob {
+  border-radius: 15px;
+  padding: 5px 10px;
+  text-align: center;
+  margin: 4px 16px 4px 4px;
+}
+
+.icon {
+  font-size: 1rem;
+  vertical-align: bottom;
+  margin: -1px -4px -1px -6px;
+}
+
+.CRITICAL {
+  composes: blob;
+  color: .mui.palette.bis[ @table-riskForeground-critical];
+  background-color: .mui.palette.bis[ @table-riskBackground-critical];
+}
+
+.HIGH {
+  composes: blob;
+  color: .mui.palette.bis[ @table-riskForeground-high];
+  background-color: .mui.palette.bis[ @table-riskBackground-high];
+}
+
+.MEDIUM {
+  composes: blob;
+  color: .mui.palette.bis[ @table-riskForeground-medium];
+  background-color: .mui.palette.bis[ @table-riskBackground-medium];
+}
+
+.LOW {
+  composes: blob;
+  color: .mui.palette.bis[ @table-riskForeground-low];
+  background-color: .mui.palette.bis[ @table-riskBackground-low];
+}
+
+.UNKNOWN {
+  composes: blob;
+  color: .mui.palette.bis[ @risk-unknown];
+  background-color: .mui.palette.bis[ @table-riskBackground-unknown];
+}

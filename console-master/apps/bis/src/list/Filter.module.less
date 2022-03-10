@@ -1,0 +1,124 @@
+@import '../theme/theme.less';
+
+.filterContainer {
+  composes: .mui.typography[ @h5];
+  margin: 20px 0 0 0;
+  text-align: left;
+}
+
+.activeButton {
+  color: @backgroundDefault;
+  border-color: transparent;
+  padding-right: 6px;
+}
+
+.filterLink {
+  user-select: none;
+  cursor: pointer;
+  color: @colorLink;
+  white-space: nowrap;
+  display: inline-block;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+
+.filterLink:hover {
+  text-decoration: underline;
+}
+
+.menuContainer {
+  composes: .mui.typography[ @subtitle1];
+  user-select: none;
+  margin-top: 4px;
+  padding: 8px;
+  border: 1px solid @colorButtonBorder;
+  background: @backgroundDefault;
+  z-index: 100;
+  box-shadow: 1px 1px 2px @colorButtonBorder;
+
+  .row {
+    cursor: pointer;
+    height: calc(1rem + 8px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: -6px;
+  }
+
+  .checkbox {
+    flex: 0 0 auto;
+    padding: 4px;
+  }
+
+  .label {
+    text-align: initial;
+    font-size: @fontSizeSubtitle;
+    flex-grow: 1;
+  }
+
+  .apply {
+    margin: 25px 5px 5px 120px;
+  }
+}
+
+.count {
+  composes: .mui.typography[ @caption];
+  line-height: 1.1;
+  background: @colorFilterBackground;
+  padding: 0.5ex 1ex;
+  border-radius: 1px;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.expanderRow {
+  composes: .mui.typography[ @h5];
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color @animHoverDuration @animHoverTimingFn;
+}
+
+.allOptions {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .expanderOption {
+    padding: 8px;
+    min-width: 230px;
+  }
+
+  .expanderRow:hover,
+  .expanderOpen {
+    color: @colorLink;
+  }
+}
+
+.expander {
+  composes: .mui.typography[ @h2];
+  margin-top: -1px;
+  pointer-events: none;
+}
+
+.bottomControls {
+  composes: .mui.typography[ @body1];
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 9px;
+
+  .clearLink {
+    margin-right: 60px;
+    padding-top: 7px;
+  }
+
+  .clearLink:hover {
+    text-decoration: underline;
+  }
+
+  .showButton {
+    padding: 7px 22px;
+  }
+}

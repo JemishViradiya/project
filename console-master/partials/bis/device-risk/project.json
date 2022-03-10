@@ -1,0 +1,24 @@
+{
+  "root": "partials/bis/device-risk",
+  "sourceRoot": "partials/bis/device-risk/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/bis/device-risk/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/bis/device-risk"],
+      "options": {
+        "jestConfig": "partials/bis/device-risk/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+#data-table-column-selection {
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 5px;
+  position: relative;
+  z-index: 2;
+  .icon-columns {
+    color: #9496a3;
+    cursor: pointer;
+    &:hover,
+    &.open {
+      color: #03a5ef;
+    }
+  }
+  .checkbox-dropdown {
+    position: absolute;
+    top: 22px;
+    right: -10px;
+    background: #fff;
+    padding: 31px 24px;
+    border: 1px solid #cdd0db;
+    box-shadow: 0 1px 4px 0 rgba(61, 65, 68, 0.24);
+    border-radius: 3px;
+    h3 {
+      font-size: 14px;
+      color: #5c5d66;
+      letter-spacing: 0;
+      line-height: 21px;
+      font-weight: 700;
+      white-space: nowrap;
+      text-transform: initial;
+    }
+    .ui.checkbox {
+      margin-bottom: 16px;
+      label {
+        font-size: 14px;
+        color: #5c5d66;
+        line-height: 24px;
+        padding-left: 32px;
+        &:before,
+        &:after {
+          width: 24px;
+          height: 24px;
+        }
+        &:after {
+          color: #5c5d66;
+          font-size: 20px;
+        }
+      }
+    }
+    &.open {
+      display: block;
+    }
+    &.closed {
+      display: none;
+    }
+  }
+}

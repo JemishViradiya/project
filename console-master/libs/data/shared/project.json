@@ -1,0 +1,61 @@
+{
+  "root": "libs/data/shared",
+  "sourceRoot": "libs/data/shared/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/shared/**/*.js",
+          "libs/data/shared/**/*.jsx",
+          "libs/data/shared/**/*.ts",
+          "libs/data/shared/**/*.tsx",
+          "libs/data/shared/**/*.spec.ts",
+          "libs/data/shared/**/*.spec.tsx",
+          "libs/data/shared/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/shared/jest.config.js"
+      },
+      "outputs": ["test-results/libs/data/shared"]
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "port": 4400,
+        "config": {
+          "configFolder": "libs/data/shared/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "outputPath": "docs/data",
+        "config": {
+          "configFolder": "libs/data/shared/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

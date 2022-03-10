@@ -1,0 +1,29 @@
+{
+  "$id": "partial-integration",
+  "type": "object",
+  "properties": {
+    "scope": {
+      "type": "string",
+      "enum": ["app", "lib", "partial"],
+      "description": "Project scope: app | lib | partial",
+      "$default": "partial"
+    },
+    "group": {
+      "type": "string",
+      "description": "Group name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "name": {
+      "type": "string",
+      "description": "Partial name",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      }
+    }
+  },
+  "required": ["group"]
+}

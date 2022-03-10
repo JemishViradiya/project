@@ -1,0 +1,11 @@
+.MuiInput-root {
+  &.MuiInput-underline {
+    &:after {
+      border-bottom: '1px solid #03A5EF';
+    }
+  }
+}
+.MuiInputLabel-shrink,
+.MuiFormLabel-focused.MuiInputLabel-shrink {
+  color: #03a5ef;
+}

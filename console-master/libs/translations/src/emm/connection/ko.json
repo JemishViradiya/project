@@ -1,0 +1,238 @@
+{
+  "emm": {
+    "page": {
+      "error": {
+        "deleteConnection": "{{connectionName}} 연결을 삭제할 수 없습니다.",
+        "retrieveConnections": "연결을 검색할 수 없습니다.",
+        "retrieveConnection": "{{type}} 연결을 검색할 수 없습니다.",
+        "default": "오류"
+      },
+      "title": "EMM 연결",
+      "connection": {
+        "name": {
+          "intune": "인튠 테넌트",
+          "uem": "UEM 테넌트"
+        },
+        "type": {
+          "uem": "블랙베리 UEM",
+          "intune": "마이크로소프트 인튠"
+        },
+        "add": "연결 추가",
+        "generateAppConfigButton": "앱 구성 생성"
+      },
+      "removeConnection": "삭제 확인",
+      "deleteConnectionDialog": {
+        "confirm": "이 연결을 삭제하시겠습니까?"
+      },
+      "forceDeleteConnectionDialog": {
+        "title": "강제 삭제 확인",
+        "confirm": "연결을 삭제할 수 없습니다.강제 삭제를 사용하여 다시 시도하시겠습니까?"
+      },
+      "description": "마이크로소프트 인튠 연결을 구성합니다.",
+      "menu": {
+        "uem": "블랙베리 UEM",
+        "intune": "마이크로소프트 인튠"
+      }
+    },
+    "table": {
+      "tenant": "테넌트",
+      "type": "연결 유형",
+      "status": "연결 상태",
+      "data": {
+        "state": {
+          "success": "성공적",
+          "inProgress": "진행 중",
+          "error": {
+            "default": "오류",
+            "message": {
+              "FAILURE_TO_AUTHORIZE_OIDC_CLIENT": "UEM 연결을 인증할 수 없습니다 ({{uemTenantId}}).",
+              "FAILURE_TO_ENABLE_CONNECTION_WITHIN_UEM": "UEM 서버에 대한 연결을 설정할 수 없습니다 ({{uemTenantId}}).",
+              "FAILURE_TO_ENABLE_UES_SERVICES": "UEM 서버에 대한 연결을 완료할 수 없습니다 ({{uemTenantId}})."
+            }
+          },
+          "retry": "다시 시도하기"
+        }
+      }
+    },
+    "intune": {
+      "add": {
+        "error": {
+          "consentError": "관리자 동의 오류 - {{error}}",
+          "consentFailed": "관리자 동의 실패",
+          "connectionExist": "지정된 테넌트에 대한 연결이 이미 있습니다.",
+          "setAppConfigError": "앱 구성을 설정하지 못했습니다.",
+          "setAppConfigErrorWithCause": "애플리케이션 구성을 설정하지 못했습니다. {{cause}}",
+          "azureLoginFailure": "Azure 로그인 실패",
+          "invalidTargetApp": "Target 앱이 유효하지 않습니다.",
+          "submit": "intune 연결을 추가하지 못했습니다.",
+          "appConfigPolicyExist": "이름이 같은 앱 구성 정책이 이미 있습니다."
+        },
+        "title": "마이크로소프트 인튠 연결 추가",
+        "azureInfoTitle": "Azure 정보",
+        "azureInfoDescription": "Azure 테넌트 ID를 입력합니다.연결을 만든 후에는 테넌트 ID를 변경할 수 없습니다.",
+        "tenantId": "Azure 테넌트 ID",
+        "adminConsent": "관리자 동의",
+        "integration": "인튠 통합",
+        "integrationDescription": "이 옵션은 연결이 생성된 경우에만 사용할 수 있습니다.이러한 설정은 변경할 수 없습니다.",
+        "success": "연결이 추가되었습니다.",
+        "azureUserLogin": "Azure 사용자 로그인",
+        "mdmIntegration": "Intune을 사용하여 장치 및 해당 앱 관리 (Intune MDM 공급자 임)",
+        "mamIntegration": "Intune을 사용하여 장치 앱만 관리합니다 (Intune MAM 공급자입니다)."
+      }
+    },
+    "delete": {
+      "success": "연결이 삭제되었습니다."
+    },
+    "uem": {
+      "title": "블랙베리 UEM 연결 추가",
+      "add": {
+        "tenantTitle": "테넌트 정보",
+        "tenantDescription": "UEM 테넌트 정보를 추가합니다.",
+        "srpid": "SRP 아이디",
+        "authKey": "인증 키"
+      },
+      "success": "연결이 추가되었습니다."
+    },
+    "appConfig": {
+      "error": {
+        "submit": "앱 구성 정책을 추가할 수 없습니다.",
+        "invalidTenant": "테넌트 ID가 잘못되었습니다.",
+        "loadGroup": "MDM 그룹을 로드하지 못했습니다.",
+        "loadGroupInvalidQuery": "그룹 검색 쿼리 {{searchQuery}} 에 지원되지 않는 문자가 있습니다."
+      },
+      "title": "마이크로소프트 인튠 앱 구성 정책 추가",
+      "heading": "앱 구성 방침",
+      "description": "iOS 및 Android용 앱 구성 정책을 추가합니다.이 설정은 선택 사항이며 Intune 관리 장치에만 적용됩니다.",
+      "androidCheckBoxLabel": "기계적 인조 인간",
+      "androidAppName": "이름",
+      "iosCheckBoxLabel": "iOS",
+      "androidTargetedApp": "타겟팅 앱",
+      "iosTargetedApp": "타겟팅 앱",
+      "iosAppName": "이름",
+      "success": "앱 구성 정책이 추가되었습니다.",
+      "groupAssignmentTitle": "그룹에 할당",
+      "groupSwitchTitle": "모든 그룹",
+      "groupLeftList": "사용 가능한 그룹",
+      "groupRightList": "선택된 그룹",
+      "multiStatusSuccess": "{{DEVICE_TYPE}} 에 대한 앱 구성 정책이 추가되었습니다.",
+      "table": {
+        "group": "그룹 이름"
+      },
+      "groupAssignment": {
+        "title": "그룹 추가",
+        "description": "앱 구성에 추가할 그룹 선택",
+        "searchText": "그룹 검색",
+        "list": {
+          "noResults": "결과 없음"
+        },
+        "cancelButton": "취소",
+        "addButton": "추가"
+      }
+    },
+    "validation": {
+      "emptyField": "이 필드는 필수입니다."
+    }
+  },
+  "SettingsLabel": "설정",
+  "noData": "데이터 없음",
+  "noItem": "항목 없음",
+  "button": {
+    "cancel": "취소",
+    "submit": "제출",
+    "delete": "삭제",
+    "save": "저장",
+    "next": "다음",
+    "yes": "예",
+    "no": "아니요"
+  },
+  "server": {
+    "error": {
+      "default": "오류가 발생했습니다.",
+      "retry": {
+        "default": "재시도가 실패했습니다.",
+        "addFailed": "연결이 강제로 삭제되지만 새 연결을 만들 수는 없습니다.새 연결을 추가해 보십시오."
+      },
+      "intune": {
+        "add": {
+          "400": "연결 요청이 잘못되었습니다.",
+          "500": "연결을 추가할 수 없습니다.",
+          "7002": "인증 코드가 잘못되었습니다.",
+          "11003": "자격 증명을 입력해야 합니다.",
+          "11004": "Azure 테넌트 ID가 잘못되었습니다.",
+          "11006": "Intune 연결 요청이 잘못되었습니다.",
+          "11013": "여러 인증 유형이 감지되었습니다.",
+          "11014": "테넌트 ID가 잘못되었습니다.",
+          "11021": "EMM 유형이 잘못되었습니다.",
+          "11023": "동일한 EMM 유형에 대한 여러 연결이 있는 요청은 지원되지 않습니다.",
+          "11024": "활성화 유형이 잘못되었습니다.",
+          "11031": "Intune 라이선스가 잘못되었습니다.",
+          "13001": "Azure 테넌트 ID를 찾을 수 없습니다.",
+          "13002": "Intune 연결이 이미 존재합니다.",
+          "13003": "Intune 연결이 이미 존재합니다."
+        },
+        "addAppConfig": {
+          "500": "앱 구성 정책을 추가할 수 없습니다.",
+          "11019": "그룹 검색 쿼리 길이는 120자를 초과할 수 없습니다.",
+          "21005": "이 Intune 리소스에 액세스할 수 있는 권한이 없습니다.",
+          "21016": "포함된 그룹과 제외된 그룹 모두에 하나 이상의 그룹이 있습니다.",
+          "23001": "Intune 연결을 찾을 수 없습니다.",
+          "24010": "앱을 찾을 수 없습니다.",
+          "24014": "이 이름의 정책이 이미 있습니다.",
+          "24015": "응용 프로그램 정책을 만들 수 없습니다.",
+          "27001": "이 Intune 리소스에 액세스할 수 있는 권한이 없습니다."
+        }
+      },
+      "uem": {
+        "add": {
+          "500": "연결을 추가할 수 없습니다.",
+          "11003": "자격 증명을 입력해야 합니다.",
+          "11004": "UEM 테넌트 ID가 잘못되었습니다.",
+          "11006": "UEM 연결 요청이 잘못되었습니다.",
+          "11013": "여러 인증 유형이 감지되었습니다.",
+          "11014": "테넌트 ID가 잘못되었습니다.",
+          "11021": "EMM 유형이 잘못되었습니다.",
+          "11023": "동일한 EMM 유형에 대한 여러 연결이 있는 요청은 지원되지 않습니다.",
+          "11024": "활성화 유형이 잘못되었습니다.",
+          "13002": "UEM 연결이 이미 존재합니다.",
+          "13003": "UEM 연결이 이미 존재합니다.",
+          "15001": "요청된 조직의 PCE 내에서 UEM 테넌트 ID를 사용할 수 없습니다.",
+          "31000": "UEM 테넌트 식별자를 찾을 수 없습니다.",
+          "31001": "UEM 테넌트와 조직이 일치하지 않습니다.",
+          "31002": "UEM 테넌트 또는 인증 키가 잘못되었습니다.",
+          "31003": "UEM 테넌트가 이미 연결되어 있습니다.",
+          "31004": "테넌트가 더 이상 존재하지 않습니다.",
+          "31500": "알 수 없는 내부 오류",
+          "31510": "교차 실패",
+          "31520": "PCE 장애",
+          "31530": "테넌트 서비스 장애"
+        }
+      },
+      "tenantlist": {
+        "404": "UEM 테넌트를 사용할 수 없습니다.",
+        "500": "UEM 테넌트를 검색할 수 없습니다.",
+        "31500": "UEM 테넌트를 검색할 수 없습니다.",
+        "31510": "교차 실패",
+        "31530": "테넌트 서비스 장애"
+      }
+    }
+  },
+  "PolicyAndIpAddress": {
+    "title": "정책 및 IP 주소",
+    "button": {
+      "policy": "업데이트 정책",
+      "tenantPolicy": "테넌트 정책 업데이트",
+      "addIpaddressList": "IP 주소 목록 추가",
+      "updateIpaddressList": "IP 주소 목록 업데이트"
+    }
+  },
+  "emmConnection": {
+    "title": "EMM 연결",
+    "registrationStatusMessage": {
+      "pending": "{{emmType}} 활성화 보류 중",
+      "error": "{{emmType}} 활성화가 완료되지 않았습니다."
+    },
+    "error": {
+      "fetch": "EMM 연결을 검색할 수 없습니다."
+    }
+  }
+}

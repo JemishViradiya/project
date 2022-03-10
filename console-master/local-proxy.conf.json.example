@@ -1,0 +1,24 @@
+[
+  {
+    "logLevel": "info",
+    "context": [
+      "/local/api/platform/v1/bff/platform"
+    ],
+    "target": "http://localhost:4560/",
+    "secure": false,
+    "pathRewrite": {
+      "^/local/api/platform/v1/bff/platform/": ""
+    }
+  },
+  {
+    "logLevel": "info",
+    "context": [
+      "/local/api/platform/v1/bff/dashboard"
+    ],
+    "target": "http://localhost:4560/",
+    "secure": false,
+    "pathRewrite": {
+      "^/local/api/platform/v1/bff/dashboard/": ""
+    }
+  }
+]

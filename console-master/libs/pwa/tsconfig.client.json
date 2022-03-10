@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "rootDir": ".",
+    "outDir": "../../out-tsc",
+    "types": ["webpack-env"]
+  },
+  "files": ["../../node_modules/@nrwl/react/typings/cssmodule.d.ts", "../../tools/nx/typings/image.d.ts"],
+  "exclude": ["**/*.spec.ts", "**/*.spec.tsx"],
+  "include": ["src/client/**/*.js", "src/client/**/*.jsx", "src/client/**/*.ts", "src/client/**/*.tsx"]
+}

@@ -1,0 +1,182 @@
+{
+  "TestData": [
+    {
+      "id": "AWblI8du9IdZoby47RKQ",
+      "assessment": {
+        "behavioralRiskLevel": "HIGH",
+        "geozoneRiskLevel": "MEDIUM",
+        "location": {
+          "lat": 37.40203728638555,
+          "lon": -122.05186152904757,
+          "geohash": "9q9hy8ud9mpf"
+        },
+        "datetime": 1541442619254,
+        "ipAddress": "157.120.151.151",
+        "eEcoId": "u4",
+        "mappings": {
+          "behavioral": {
+            "score": 49
+          },
+          "definedgeozone": {}
+        }
+      },
+      "operatingMode": "ACTIVE",
+      "sisActions": {
+        "policyGuid": "123",
+        "policyName": "Policy-123",
+        "actions": [
+          {
+            "type": "assignGroup",
+            "groupId": "12345",
+            "groupName": "name 12345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AWcN6BCkbqhPxVmeGZGC",
+      "assessment": {
+        "behavioralRiskLevel": "HIGH",
+        "geozoneRiskLevel": "MEDIUM",
+        "location": {
+          "lat": -33.87054868784895,
+          "lon": 151.20875000307086,
+          "geohash": "r3gx2f4cg0pg"
+        },
+        "datetime": 1542726380954,
+        "ipAddress": "33.40.172.20",
+        "eEcoId": "u4",
+        "mappings": {
+          "behavioral": {
+            "score": 58
+          },
+          "definedgeozone": {},
+          "appAnomalyDetection": {
+            "riskScore": 3.184354802314239
+          }
+        }
+      },
+      "operatingMode": "ACTIVE",
+      "sisActions": {
+        "policyGuid": "123",
+        "policyName": "Policy-123",
+        "actions": [
+          {
+            "type": "assignGroup",
+            "groupId": "12345",
+            "groupName": "name 12345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AWcN9r9sbqhPxVmeG0Fv",
+      "assessment": {
+        "behavioralRiskLevel": "CRITICAL",
+        "geozoneRiskLevel": "HIGH",
+        "location": {
+          "lat": -34.90290182037353,
+          "lon": -56.1615236094348,
+          "geohash": "6cb16n07vesb"
+        },
+        "datetime": 1542740982578,
+        "ipAddress": "224.172.228.77",
+        "mappings": {
+          "behavioral": {
+            "score": 98
+          },
+          "definedgeozone": {}
+        }
+      },
+      "sisActions": {
+        "policyGuid": "123",
+        "policyName": "Policy-123",
+        "actions": [
+          {
+            "type": "assignGroup",
+            "groupId": "12345",
+            "groupName": "name 12345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AWcxqHtqfQecNOuangE6",
+      "assessment": {
+        "behavioralRiskLevel": "CRITICAL",
+        "geozoneRiskLevel": "HIGH",
+        "location": {
+          "lat": -33.872017138628955,
+          "lon": 151.21202112686404,
+          "geohash": "r3gx2cv1pqr5"
+        },
+        "datetime": 1542736384515,
+        "ipAddress": "214.12.79.187",
+        "eEcoId": "u51",
+        "mappings": {
+          "behavioral": {
+            "score": 91
+          },
+          "definedgeozone": {}
+        }
+      },
+      "sisActions": {
+        "policyGuid": "123",
+        "policyName": "Policy-123",
+        "actions": [
+          {
+            "type": "assignGroup",
+            "groupId": "12345",
+            "groupName": "name 12345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AWcN6BCkbqhPxVmeGZGC",
+      "assessment": {
+        "behavioralRiskLevel": "HIGH",
+        "geozoneRiskLevel": "MEDIUM",
+        "location": {
+          "lat": -33.87054868784895,
+          "lon": 151.20875000307086,
+          "geohash": "r3gx2f4cg0pg"
+        },
+        "datetime": 1542726380954,
+        "ipAddress": "33.40.172.20",
+        "eEcoId": "u4",
+        "mappings": {
+          "behavioral": {
+            "score": 58
+          },
+          "definedgeozone": {},
+          "networkAnomalyDetection": {
+            "riskScore": 3.184354802314239
+          }
+        }
+      },
+      "operatingMode": "ACTIVE",
+      "sisActions": {
+        "policyGuid": "123",
+        "policyName": "Policy-123",
+        "actions": [
+          {
+            "type": "assignGroup",
+            "groupId": "12345",
+            "groupName": "name 12345"
+          }
+        ]
+      }
+    }
+  ],
+
+  "TestUserInfo": {
+    "avatar": "https://local.cc.altus.bblabs:5001/avatar/uifaces/faces/twitter/jodytaggart/128.jpg",
+    "displayName": "Sanford Stroman",
+    "department": "Software",
+    "givenName": "Sanford",
+    "familyName": "Stroman",
+    "primaryEmail": "sanford.stroman@hotmail.com",
+    "title": "Human Communications Specialist"
+  }
+}

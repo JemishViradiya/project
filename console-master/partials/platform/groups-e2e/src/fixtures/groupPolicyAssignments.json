@@ -1,0 +1,32 @@
+{
+  "local": {
+    "totals": {
+      "pages": 1,
+      "elements": 1
+    },
+    "count": 1,
+    "elements": [
+      {
+        "groupId": "e9a2b066-d37c-4890-94c0-7953e717e636",
+        "serviceId": "big.blackberry.com",
+        "entityId": "138c20ca-566b-40cb-a110-e93581462dd1",
+        "created": "2021-08-09T16:00:22Z"
+      }
+    ]
+  },
+  "directory": {
+    "totals": {
+      "pages": 1,
+      "elements": 1
+    },
+    "count": 1,
+    "elements": [
+      {
+        "groupId": "e9a2b066-d37c-4890-94c0-7953e717e635",
+        "serviceId": "big.blackberry.com",
+        "entityId": "138c20ca-566b-40cb-a110-e93581462dd1",
+        "created": "2021-08-09T16:00:22Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "authentication": "Authentication",
+  "connectivityNode": "Connectivity Node",
+  "directoryConnection": "Directory Connection",
+  "networkSettings": "Network Settings",
+  "adaptiveResponse": "Adaptive Response",
+  "labelGateway": "Gateway",
+  "labelSettings": "Settings",
+  "directory": {
+    "actions": {
+      "add": "Add connection"
+    },
+    "syncSchedule": {
+      "add": "Add schedule"
+    }
+  },
+  "form": {
+    "to": "to"
+  }
+}

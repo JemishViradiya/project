@@ -1,0 +1,122 @@
+{
+  "dashboard": {
+    "title": "CylancePERSONA"
+  },
+  "users": {
+    "title": "Utenti Persona",
+    "sectionTitles": {
+      "assets": "Risorse",
+      "userInfo": "Informazioni utente",
+      "personaAlerts": "Avvisi Cylance Persona",
+      "associatedDevices": "Dispositivo associato ({{count}})",
+      "associatedDevices_plural": "Dispositivi associati ({{count}})",
+      "userTrustScoreLog": "Registro del punteggio di fiducia dell'utente",
+      "cylancePersonaStatus": "Stato CylancePersona"
+    },
+    "actions": {
+      "remove": "Rimuovi",
+      "removeUserDescription": "Sei sicuro di voler rimuovere l'utente selezionato?",
+      "removeUserDescription_plural": "Sei sicuro di voler rimuovere gli utenti selezionati di {{count}}?",
+      "resetModelsDescription": "Sei sicuro di voler reimpostare il modello di punteggio? In questo modo verranno cancellati i dati raccolti."
+    },
+    "columns": {
+      "userName": "Nome utente",
+      "state": "Stato",
+      "lastOnline": "Ultimo online",
+      "zones": "Zone"
+    },
+    "noData": "Nessun utente trovato.",
+    "state": {
+      "online": "Online",
+      "offline": "Offline"
+    },
+    "notifications": {
+      "removeUsersSuccess": "Utente {{count}} rimosso con successo!",
+      "removeUsersSuccess_plural": "Utenti {{count}} rimossi con successo!",
+      "removeUsersError": "Impossibile rimuovere l'utente. Riprova.",
+      "removeUsersError_plural": "Impossibile rimuovere gli utenti. Riprova.",
+      "dataUnavailableError": "I dati non sono disponibili. Riprova più tardi."
+    },
+    "tabs": {
+      "activeAlerts": "Avvisi attivi",
+      "alertHistory": "Cronologia avvisi"
+    },
+    "detailsTitle": "Dettagli utente"
+  },
+  "dialogs": {
+    "actionConfirmation": "Conferma dell'azione"
+  },
+  "button": {
+    "cancel": "Annulla",
+    "remove": "Rimuovi"
+  },
+  "tableColumns": "Colonne tabella",
+  "loading": "Caricamento...",
+  "personaEvents": {
+    "LogonModelStatus": "Stato del modello di accesso",
+    "MetaModelScore": "Punteggio Meta Model",
+    "MetaModelStatus": "Stato del meta modello",
+    "UserTrustScore": "Punteggio di fiducia degli utenti",
+    "Successful2FALogon": "Accesso 2FA riuscito",
+    "Failed2FALogon": "Accesso 2FA non riuscito",
+    "UserFailedLogon": "Accesso utente non riuscito",
+    "ForcedStepUpAuthentication": "Autenticazione step-up forzata",
+    "MaliciousRuleHit": "Hit delle regole dannose"
+  },
+  "alertStatus": {
+    "New": "Nuovo",
+    "InProgress": "In corso",
+    "FalsePositive": "Falso positivo",
+    "Reviewed": "Recensito"
+  },
+  "personaSeverity": {
+    "info": "Informazioni",
+    "low": "Basso",
+    "medium": "Medium",
+    "high": "Alto",
+    "critical": "Critico"
+  },
+  "noData": "Nessun elemento da visualizzare",
+  "currentCTS": "CTS attuale",
+  "AssociatedUserOffline": "Utente associato offline",
+  "ResumeScoring": "Riprendi il punteggio",
+  "PauseScoring": "Pausa Scoring",
+  "ResetScoring": "Ripristina punteggio",
+  "ResumeScoringAll": "Riprendi a segnare tutto",
+  "PauseScoringAll": "Pausa che segnano tutti",
+  "ResetScoringAll": "Ripristina punteggio tutto",
+  "personaModelStatus": {
+    "Training": "Allenamento",
+    "Scoring": "Punteggio",
+    "Paused": "Pausa",
+    "Processing": "Elaborazione"
+  },
+  "personaModelTypes": {
+    "TrustScore": "Punteggio di fiducia dell'utente",
+    "Meta": "Meta modello",
+    "Conduct": "Condotta",
+    "Process": "Processo",
+    "Keyboard": "Tastiera",
+    "Mouse": "Mouse",
+    "Network": "Rete",
+    "Logon": "Accedere"
+  },
+  "personaModelButton": {
+    "AssociatedUserOffline": "Il controllo è disabilitato perché l'utente non è in linea",
+    "ResumeScoring": "Riprendi il punteggio",
+    "ResumeScoringAll": "Riprendi il punteggio su tutti",
+    "PauseScoring": "Sospendi il punteggio",
+    "PauseScoringAll": "Metti in pausa il punteggio su tutti",
+    "ResetScoring": "Ripristina punteggio",
+    "ResetScoringAll": "Ripristina il punteggio su tutti"
+  },
+  "LastNDays": "Ultimo giorno {{count}}",
+  "LastNDays_plural": "Ultimi {{count}} giorni",
+  "LastNHrs": "Ultime {{count}} Hr",
+  "LastNHrs_plural": "Ultime {{count}} ore",
+  "Time": "Ora",
+  "Score": "Punteggio",
+  "NA": "NA",
+  "scoreDataUnavailableError": "I dati del Trust Score non sono disponibili. Riprova più tardi.",
+  "unknown": "Sconosciuto"
+}

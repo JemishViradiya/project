@@ -1,0 +1,26 @@
+{
+  "root": "partials/emm/device-emm-connection",
+  "sourceRoot": "partials/emm/device-emm-connection/src",
+  "projectType": "library",
+  "tags": ["scope:partial", "scope:emm"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["partials/emm/device-emm-connection/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/emm/device-emm-connection"],
+      "options": {
+        "jestConfig": "partials/emm/device-emm-connection/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  }
+}

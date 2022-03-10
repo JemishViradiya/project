@@ -1,0 +1,114 @@
+# Multiple codeowners can be specified, separated by spaces or tabs
+# In the following case the CODEOWNERS file from the root of the repo
+# has N code owners (eg: @multiple @code @owners)
+
+# Code Owners section:
+[Nx.dev]
+/.*                          @teams/merlot
+/*.js*                       @teams/merlot
+/yarn.lock                   @teams/merlot
+/Dockerfile*                 @teams/merlot
+tools/                       @teams/merlot
+.storybook/                  @teams/merlot
+
+[Documentation]
+/*.md                        @teams/cabernet @teams/merlot @teams/verdelho
+/.gitlab/merge_request_templates/ @teams/cabernet @teams/merlot @teams/verdelho
+/.gitlab/merge_request_templates/Storybook.md @shewitt @igordezky @fmalik @rfoushee
+/.gitlab/merge_request_templates/Production Release.md @gsiddique @igordezky @fmalik @rfoushee
+
+[PWA]
+/libs/pwa/                   @teams/merlot @jinzhang @gsiddique
+
+[SessionManager]
+libs/pwa/assets/session/     @teams/merlot @dkulkarni
+
+[Assets]
+/libs/assets/                @teams/verdelho
+/libs/assets/**/dashboard/   @teams/phoenix @teams/merlot
+/libs/assets/**/gateway/     @teams/alaska @teams/merlot
+/libs/assets/**/bis/         @teams/aviato @teams/merlot
+/libs/assets/**/platform/    @teams/merlot @teams/atlas @teams/helix
+/libs/assets/**/eid/         @teams/kronos @teams/merlot @teams/atlas
+/libs/assets/**/mtd/         @teams/atlas @teams/merlot @teams/phoenix
+/libs/assets/**/info/        @teams/merlot @teams/syrah
+
+[Behaviours]
+/libs/behaviours/            @teams/verdelho
+/libs/behaviour/             @teams/verdelho
+
+[Data]
+/libs/data/shared/           @teams/merlot
+
+[Dashboard]
+/apps/dashboard/             @teams/verdelho @teams/merlot
+/libs/data/dashboard/        @teams/merlot
+/libs/data/dashboard-config/ @teams/merlot
+
+[Protect]
+/apps/deployments/           @teams/merlot @teams/cylanceui @teams/epp-cloud-dev
+/libs/data/epp               @teams/merlot @teams/cylanceui @teams/epp-cloud-dev @teams/mtcui
+/partials/protect/           @teams/merlot @teams/cylanceui @teams/epp-cloud-dev @teams/mtcui
+
+[MTC]
+/apps/mtc/                   @teams/merlot @teams/mtcui
+/apps/mtc-e2e/               @teams/merlot @teams/mtcui
+
+[EPP]
+
+
+## Apps
+[Gateway]
+/apps/gateway/               @teams/alaska @teams/merlot
+/partials/gateway/           @teams/alaska @teams/merlot
+/libs/data/gateway/          @teams/alaska @teams/merlot
+
+[BIS]
+/apps/bis/                   @teams/aviato @teams/merlot
+/partials/bis/               @teams/aviato @teams/merlot
+/libs/data/bis/              @teams/aviato @teams/merlot
+
+[ECS]
+/apps/platform/              @teams/merlot @teams/atlas @teams/avatar @teams/helix
+/partials/platform/          @teams/merlot @teams/atlas @teams/avatar @teams/helix
+/libs/data/platform/         @teams/merlot @teams/atlas @teams/avatar @teams/helix
+
+[EID]
+/partials/eid/               @teams/kronos @teams/merlot @teams/atlas
+/libs/data/eid/              @teams/kronos @teams/merlot @teams/atlas
+
+[MTD]
+/apps/mtd/                   @teams/atlas @teams/merlot @teams/phoenix @teams/avatar
+/partials/mtd/               @teams/atlas @teams/merlot @teams/phoenix @teams/avatar
+/libs/data/mtd/              @teams/atlas @teams/merlot @teams/phoenix @teams/avatar
+/libs/data/reporting/        @teams/merlot @teams/atlas
+
+[DLP]
+/apps/info/                  @teams/merlot @teams/syrah
+/partials/info/              @teams/merlot @teams/syrah
+/libs/data/dlp/              @teams/merlot @teams/syrah
+
+[EMM]
+/partials/emm/               @teams/merlot @teams/san-diego
+/libs/data/emm/              @teams/merlot @teams/san-diego
+
+[Nx.dev]
+package.json                 @teams/merlot
+.babelrc                     @teams/merlot
+.browserslistrc              @teams/merlot
+.eslintrc                    @teams/merlot
+babel-jest.config.json       @teams/merlot
+apps/*/tools/                @teams/merlot
+jest.*.js                    @teams/merlot
+
+[Gitlab Pipelines]
+/.gitlab-ci.yml              @teams/merlot
+/.gitlab/ci/                 @teams/merlot
+
+[Translations]
+/libs/translations/src/                       @teams/worldwide
+libs/assets/src/i18n/translations-version.ts  @teams/worldwide
+/libs/translations/src/**/dev.json            @teams/verdelho @teams/merlot @teams/aviato @teams/alaska @teams/atlas @teams/avatar @teams/cylanceui @teams/helix @teams/kronos @teams/phoenix @teams/san-diego @teams/syrah
+
+[CODEOWNERS]
+CODEOWNERS                   @teams/merlot

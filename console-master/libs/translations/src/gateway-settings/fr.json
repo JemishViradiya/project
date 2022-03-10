@@ -1,0 +1,20 @@
+{
+  "authentication": "authentification",
+  "connectivityNode": "nœud de connectivité",
+  "directoryConnection": "Connexion à un répertoire",
+  "networkSettings": "Paramètres réseau",
+  "adaptiveResponse": "Réponse adaptative",
+  "labelGateway": "Passerelle",
+  "labelSettings": "Paramètres",
+  "directory": {
+    "actions": {
+      "add": "Ajouter une connexion"
+    },
+    "syncSchedule": {
+      "add": "Ajouter un calendrier"
+    }
+  },
+  "form": {
+    "to": "pour"
+  }
+}

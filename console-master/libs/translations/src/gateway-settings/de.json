@@ -1,0 +1,20 @@
+{
+  "authentication": "Authentifizierung",
+  "connectivityNode": "Knoten Konnektivität",
+  "directoryConnection": "Directory-Verbindung",
+  "networkSettings": "Netzwerk-Einstellungen",
+  "adaptiveResponse": "Adaptive Antwort",
+  "labelGateway": "Gateway",
+  "labelSettings": "Einstellungen",
+  "directory": {
+    "actions": {
+      "add": "Verbindung hinzufügen"
+    },
+    "syncSchedule": {
+      "add": "Zeitplan hinzufügen"
+    }
+  },
+  "form": {
+    "to": "zu"
+  }
+}

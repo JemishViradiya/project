@@ -1,0 +1,11 @@
+{
+  "common": {
+    "map": "地図"
+  },
+  "terrain": "地形",
+  "satellite": "サテライト",
+  "toggleMapTypes": "マップタイプの表示/非表示",
+  "label": "ラベル",
+  "enterFullscreen": "マップを展開",
+  "leaveFullscreen": "マップの最小化"
+}

@@ -1,0 +1,101 @@
+@import '../theme/theme.less';
+
+@pointyTipHeight: 11px;
+
+/* The popup bubble styling.
+  * taken more-or-less from the google maps api documentation
+  * https://developers.google.com/maps/documentation/javascript/examples/overlay-popup */
+
+.popup-bubble {
+  /* Position the bubble centered-above its parent. */
+  position: absolute;
+  top: 1px;
+  left: 0;
+  transform: translate(0, -100%);
+
+  /* Style the bubble. */
+  background-color: @backgroundDefault;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* The parent of the bubble. A zero-height div at the top of the tip. */
+.popup-bubble-anchor {
+  /* Position the div a fixed distance above the tip. */
+  position: absolute;
+  width: 220px;
+  bottom: @pointyTipHeight;
+  left: 0;
+}
+
+/* This element draws the tip. */
+.popup-bubble-anchor::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* The tip is a https://css-tricks.com/snippets/css/css-triangle/ */
+  width: 0;
+  height: 0;
+
+  /* The tip is @pointyTipHeight high, and 8px wide. */
+  border-right: 8px solid transparent;
+  border-top: @pointyTipHeight solid @backgroundDefault;
+}
+
+.privacy-mode-on {
+  margin-top: 25px;
+}
+
+.inverted {
+  .popup-bubble {
+    transform: translate(0, @pointyTipHeight - 1px);
+  }
+
+  .popup-bubble-anchor {
+    bottom: initial;
+    top: calc(@pointyTipHeight * 2);
+  }
+
+  &.positioned {
+    .popup-bubble-anchor {
+      top: 0;
+    }
+  }
+
+  .popup-bubble-anchor::after {
+    border-top: none;
+    border-bottom: @pointyTipHeight solid @backgroundDefault;
+  }
+
+  .popup-bubble-anchor[risk='UNKNOWN']::after {
+    border-bottom-color: @colorRiskUnknown;
+  }
+
+  .popup-bubble-anchor[risk='CRITICAL']::after {
+    border-bottom-color: @colorRiskCritical;
+  }
+
+  .popup-bubble-anchor[risk='HIGH']::after {
+    border-bottom-color: @colorRiskHigh;
+  }
+
+  .popup-bubble-anchor[risk='MEDIUM']::after {
+    border-bottom-color: @colorRiskMedium;
+  }
+
+  .popup-bubble-anchor[risk='LOW']::after {
+    border-bottom-color: @colorRiskLow;
+  }
+}
+
+/* JavaScript will position this div at the bottom of the popup tip. */
+.popup-container {
+  cursor: auto;
+  height: 0;
+  position: absolute;
+
+  /* The max width of the info window. */
+  width: 100px;
+}

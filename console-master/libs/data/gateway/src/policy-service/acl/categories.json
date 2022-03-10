@@ -1,0 +1,732 @@
+{
+  "data": [
+    {
+      "id": "10",
+      "name": "Unknown",
+      "subcategories": [
+        {
+          "id": "11",
+          "name": "New Domain"
+        },
+        {
+          "id": "12",
+          "name": "Not resolved"
+        },
+        {
+          "id": "13",
+          "name": "Unknown"
+        },
+        {
+          "id": "14",
+          "name": "Miscellaneous"
+        }
+      ]
+    },
+    {
+      "id": "100",
+      "name": "Adult",
+      "subcategories": [
+        {
+          "id": "101",
+          "name": "Adult"
+        },
+        {
+          "id": "102",
+          "name": "Alcohol and Tobacco"
+        },
+        {
+          "id": "103",
+          "name": "Dating"
+        },
+        {
+          "id": "104",
+          "name": "Gambling"
+        },
+        {
+          "id": "105",
+          "name": "Swimsuits and Intimate Apparel"
+        },
+        {
+          "id": "106",
+          "name": "Nudity"
+        },
+        {
+          "id": "107",
+          "name": "Obscene Language"
+        },
+        {
+          "id": "108",
+          "name": "Personal and Dating"
+        },
+        {
+          "id": "109",
+          "name": "Porn"
+        },
+        {
+          "id": "110",
+          "name": "Sex Toys"
+        },
+        {
+          "id": "111",
+          "name": "Weapons"
+        }
+      ]
+    },
+    {
+      "id": "200",
+      "name": "Bandwidth Consuming",
+      "subcategories": [
+        {
+          "id": "201",
+          "name": "Application Software Download"
+        },
+        {
+          "id": "202",
+          "name": "Download Sites"
+        },
+        {
+          "id": "203",
+          "name": "Online Storage and Backup"
+        },
+        {
+          "id": "204",
+          "name": "Internet Communications and Telephony"
+        },
+        {
+          "id": "205",
+          "name": "Streaming Media"
+        },
+        {
+          "id": "206",
+          "name": "Media Sharing"
+        },
+        {
+          "id": "207",
+          "name": "Parked Domains"
+        },
+        {
+          "id": "208",
+          "name": "Peer-to-Peer"
+        },
+        {
+          "id": "209",
+          "name": "Personal Network Storage and Backup"
+        },
+        {
+          "id": "210",
+          "name": "Photo Galleries"
+        },
+        {
+          "id": "211",
+          "name": "Shareware and Freeware"
+        },
+        {
+          "id": "212",
+          "name": "Spam"
+        },
+        {
+          "id": "213",
+          "name": "Surveillance"
+        },
+        {
+          "id": "214",
+          "name": "Video Hosting"
+        },
+        {
+          "id": "215",
+          "name": "VVOIP"
+        }
+      ]
+    },
+    {
+      "id": "300",
+      "name": "Computer and Information Technnology",
+      "subcategories": [
+        {
+          "id": "301",
+          "name": "Computer and Internet Information"
+        },
+        {
+          "id": "302",
+          "name": "Content Delivery Networks"
+        },
+        {
+          "id": "303",
+          "name": "Dialer Sites"
+        },
+        {
+          "id": "304",
+          "name": "DoH"
+        },
+        {
+          "id": "305",
+          "name": "Email"
+        },
+        {
+          "id": "306",
+          "name": "Internet"
+        },
+        {
+          "id": "307",
+          "name": "Web Hosting"
+        },
+        {
+          "id": "308",
+          "name": "Information Technology"
+        },
+        {
+          "id": "309",
+          "name": "Internet Portals"
+        },
+        {
+          "id": "310",
+          "name": "Online Services"
+        },
+        {
+          "id": "311",
+          "name": "Remote Access"
+        },
+        {
+          "id": "312",
+          "name": "Remote Control"
+        },
+        {
+          "id": "313",
+          "name": "Search Engines"
+        },
+        {
+          "id": "314",
+          "name": "Update Sites"
+        },
+        {
+          "id": "315",
+          "name": "URL Shortner"
+        },
+        {
+          "id": "316",
+          "name": "VPN Sites"
+        },
+        {
+          "id": "317",
+          "name": "Web Applications"
+        },
+        {
+          "id": "318",
+          "name": "Web Collaboration"
+        },
+        {
+          "id": "320",
+          "name": "Web Infrastructure"
+        },
+        {
+          "id": "321",
+          "name": "Web-based Email"
+        },
+        {
+          "id": "322",
+          "name": "URL Redirector"
+        },
+        {
+          "id": "323",
+          "name": "Technology and Computing"
+        }
+      ]
+    },
+    {
+      "id": "400",
+      "name": "General Interest - Business",
+      "subcategories": [
+        {
+          "id": "401",
+          "name": "Banking"
+        },
+        {
+          "id": "402",
+          "name": "Bitcoin"
+        },
+        {
+          "id": "403",
+          "name": "Stock Advice and Tools"
+        },
+        {
+          "id": "404",
+          "name": "Business and Economy"
+        },
+        {
+          "id": "405",
+          "name": "Business Applications"
+        },
+        {
+          "id": "406",
+          "name": "Financial Services"
+        },
+        {
+          "id": "407",
+          "name": "Business"
+        },
+        {
+          "id": "408",
+          "name": "Non-Profit Organizations"
+        },
+        {
+          "id": "409",
+          "name": "Professional Organizations"
+        },
+        {
+          "id": "410",
+          "name": "Online Payment"
+        }
+      ]
+    },
+    {
+      "id": "500",
+      "name": "General Interest - Personal",
+      "subcategories": [
+        {
+          "id": "501",
+          "name": "Accommodation"
+        },
+        {
+          "id": "502",
+          "name": "Advice"
+        },
+        {
+          "id": "503",
+          "name": "Advocacy"
+        },
+        {
+          "id": "504",
+          "name": "Religion and Philosophy"
+        },
+        {
+          "id": "505",
+          "name": "Arts and Culture"
+        },
+        {
+          "id": "506",
+          "name": "Astrology"
+        },
+        {
+          "id": "507",
+          "name": "Auctions"
+        },
+        {
+          "id": "508",
+          "name": "Blogs and Forums"
+        },
+        {
+          "id": "509",
+          "name": "Blogs and Wikis"
+        },
+        {
+          "id": "510",
+          "name": "Cartoons"
+        },
+        {
+          "id": "511",
+          "name": "Celebrity"
+        },
+        {
+          "id": "512",
+          "name": "Cooking"
+        },
+        {
+          "id": "513",
+          "name": "Cult"
+        },
+        {
+          "id": "514",
+          "name": "Education and Reference"
+        },
+        {
+          "id": "515",
+          "name": "Educational Institutions"
+        },
+        {
+          "id": "516",
+          "name": "Entertainment"
+        },
+        {
+          "id": "517",
+          "name": "Entertainment and Arts"
+        },
+        {
+          "id": "518",
+          "name": "Fashion and Beauty"
+        },
+        {
+          "id": "519",
+          "name": "Food and Drink"
+        },
+        {
+          "id": "520",
+          "name": "Games"
+        },
+        {
+          "id": "521",
+          "name": "Health and Medicine"
+        },
+        {
+          "id": "522",
+          "name": "Recreation and Hobbies"
+        },
+        {
+          "id": "523",
+          "name": "Home and Garden"
+        },
+        {
+          "id": "524",
+          "name": "Humor and Satire"
+        },
+        {
+          "id": "525",
+          "name": "Hunting and Fishing"
+        },
+        {
+          "id": "526",
+          "name": "Institutions"
+        },
+        {
+          "id": "527",
+          "name": "Internet Auctions"
+        },
+        {
+          "id": "528",
+          "name": "Job Search"
+        },
+        {
+          "id": "529",
+          "name": "Kids"
+        },
+        {
+          "id": "530",
+          "name": "Lifestyle"
+        },
+        {
+          "id": "531",
+          "name": "Mobile Communications"
+        },
+        {
+          "id": "532",
+          "name": "MobilePhone"
+        },
+        {
+          "id": "533",
+          "name": "Motor Vehicles"
+        },
+        {
+          "id": "534",
+          "name": "Music"
+        },
+        {
+          "id": "535",
+          "name": "News"
+        },
+        {
+          "id": "536",
+          "name": "Occult"
+        },
+        {
+          "id": "537",
+          "name": "Opinion"
+        },
+        {
+          "id": "538",
+          "name": "Pay to Surf"
+        },
+        {
+          "id": "539",
+          "name": "Personal"
+        },
+        {
+          "id": "540",
+          "name": "Personal Sites and Blogs"
+        },
+        {
+          "id": "541",
+          "name": "Pharmacy"
+        },
+        {
+          "id": "542",
+          "name": "Philosophy and Political Advocacy"
+        },
+        {
+          "id": "543",
+          "name": "Political"
+        },
+        {
+          "id": "544",
+          "name": "Press"
+        },
+        {
+          "id": "545",
+          "name": "Professional Association"
+        },
+        {
+          "id": "546",
+          "name": "Professional Networking"
+        },
+        {
+          "id": "547",
+          "name": "Public Information"
+        },
+        {
+          "id": "548",
+          "name": "Real Estate"
+        },
+        {
+          "id": "550",
+          "name": "Reference and Research"
+        },
+        {
+          "id": "551",
+          "name": "Restaurants and Food"
+        },
+        {
+          "id": "552",
+          "name": "Sect"
+        },
+        {
+          "id": "553",
+          "name": "Shopping"
+        },
+        {
+          "id": "554",
+          "name": "Sports"
+        },
+        {
+          "id": "555",
+          "name": "Internet Shopping"
+        },
+        {
+          "id": "556",
+          "name": "Social Networking"
+        },
+        {
+          "id": "557",
+          "name": "Society"
+        },
+        {
+          "id": "558",
+          "name": "Suggested"
+        },
+        {
+          "id": "559",
+          "name": "Tabloids"
+        },
+        {
+          "id": "560",
+          "name": "Training and Tools"
+        },
+        {
+          "id": "561",
+          "name": "Translation"
+        },
+        {
+          "id": "562",
+          "name": "Travel"
+        },
+        {
+          "id": "563",
+          "name": "General Organizations"
+        }
+      ]
+    },
+    {
+      "id": "600",
+      "name": "Government",
+      "subcategories": [
+        {
+          "id": "601",
+          "name": "Government"
+        },
+        {
+          "id": "602",
+          "name": "Government Business"
+        },
+        {
+          "id": "603",
+          "name": "Legal"
+        },
+        {
+          "id": "604",
+          "name": "Military"
+        }
+      ]
+    },
+    {
+      "id": "700",
+      "name": "Potentially Liable",
+      "subcategories": [
+        {
+          "id": "701",
+          "name": "Proxy Avoidance and Anonymizers"
+        },
+        {
+          "id": "702",
+          "name": "Cheating Exam"
+        },
+        {
+          "id": "703",
+          "name": "Copyright Infringement"
+        },
+        {
+          "id": "704",
+          "name": "Crime"
+        },
+        {
+          "id": "705",
+          "name": "Cryptojacking"
+        },
+        {
+          "id": "706",
+          "name": "Dangerous Material"
+        },
+        {
+          "id": "707",
+          "name": "Drugs"
+        },
+        {
+          "id": "708",
+          "name": "Extremism"
+        },
+        {
+          "id": "709",
+          "name": "Fraud"
+        },
+        {
+          "id": "710",
+          "name": "Hate and Discrimination"
+        },
+        {
+          "id": "711",
+          "name": "Illegal"
+        },
+        {
+          "id": "712",
+          "name": "Marijuana"
+        },
+        {
+          "id": "713",
+          "name": "Narcotics"
+        },
+        {
+          "id": "714",
+          "name": "Questionable"
+        },
+        {
+          "id": "715",
+          "name": "Suicide"
+        },
+        {
+          "id": "716",
+          "name": "Violence"
+        }
+      ]
+    },
+    {
+      "id": "800",
+      "name": "Productivity",
+      "subcategories": [
+        {
+          "id": "801",
+          "name": "Advertisements and Analytics"
+        },
+        {
+          "id": "802",
+          "name": "Marketing and Advertising"
+        },
+        {
+          "id": "803",
+          "name": "Chat and IM"
+        },
+        {
+          "id": "804",
+          "name": "Insufficient Content"
+        },
+        {
+          "id": "805",
+          "name": "Productivity Application"
+        },
+        {
+          "id": "806",
+          "name": "Web Advertisements"
+        },
+        {
+          "id": "807",
+          "name": "Web and Email Marketing"
+        }
+      ]
+    },
+    {
+      "id": "900",
+      "name": "Security Risk",
+      "subcategories": [
+        {
+          "id": "901",
+          "name": "Bot Networks"
+        },
+        {
+          "id": "902",
+          "name": "Command and Control"
+        },
+        {
+          "id": "903",
+          "name": "Compromized Websites"
+        },
+        {
+          "id": "904",
+          "name": "DDoS"
+        },
+        {
+          "id": "905",
+          "name": "Dynamic DNS"
+        },
+        {
+          "id": "906",
+          "name": "Grey Sites"
+        },
+        {
+          "id": "907",
+          "name": "Hacking"
+        },
+        {
+          "id": "908",
+          "name": "Malware"
+        },
+        {
+          "id": "909",
+          "name": "Mixed Content"
+        },
+        {
+          "id": "910",
+          "name": "Potentially Harmful"
+        },
+        {
+          "id": "911",
+          "name": "Phishing"
+        },
+        {
+          "id": "912",
+          "name": "Potentially Unwanted Software"
+        },
+        {
+          "id": "913",
+          "name": "Suspicious Website"
+        },
+        {
+          "id": "914",
+          "name": "Unauthorized Marketplace"
+        },
+        {
+          "id": "915",
+          "name": "Warez"
+        },
+        {
+          "id": "916",
+          "name": "Spyware"
+        }
+      ]
+    }
+  ]
+}

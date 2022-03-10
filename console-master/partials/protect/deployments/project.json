@@ -1,0 +1,25 @@
+{
+  "root": "partials/protect/deployments",
+  "sourceRoot": "partials/protect/deployments/src",
+  "projectType": "library",
+  "tags": ["scope:partial", "scope:protect"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/protect/deployments/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/protect/deployments"],
+      "options": {
+        "jestConfig": "partials/protect/deployments/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  }
+}

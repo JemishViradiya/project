@@ -1,0 +1,86 @@
+{
+  "root": "apps/session-mgr",
+  "sourceRoot": "apps/session-mgr/src",
+  "projectType": "application",
+  "tags": ["scope:app"],
+  "implicitDependencies": ["api", "pwa"],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "deployUrl": "uc/session-mgr/",
+        "outputPath": "dist/uc/session-mgr",
+        "index": "apps/session-mgr/src/index.html",
+        "main": "apps/session-mgr/src/main.tsx",
+        "polyfills": "libs/behaviour/app-shell/src/polyfills.ts",
+        "tsConfig": "apps/session-mgr/tsconfig.app.json",
+        "assets": [],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "tools/webpack/app",
+        "maxWorkers": 1,
+        "memoryLimit": 1024
+      },
+      "configurations": {
+        "production": {
+          "outputPath": "prod/session-mgr",
+          "fileReplacements": [
+            {
+              "replace": "apps/session-mgr/src/environments/environment.ts",
+              "with": "apps/session-mgr/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "session-mgr:build",
+        "hmr": true,
+        "ssl": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "session-mgr:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/session-mgr/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/session-mgr"],
+      "options": {
+        "jestConfig": "apps/session-mgr/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/app.sh session-mgr"
+      }
+    }
+  }
+}

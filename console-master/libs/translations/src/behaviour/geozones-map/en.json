@@ -1,0 +1,39 @@
+{
+  "operationBar": {
+    "search": {
+      "input": "Search for a location",
+      "iconAriaLabel": "Search"
+    },
+    "draw": {
+      "circle": "Create Geozone Radius",
+      "polygon": "Create Geozone Shape"
+    }
+  },
+  "popupGeozone": {
+    "titleCircle": "Geozone Radius",
+    "titlePolygon": "Geozone Shape",
+    "inputName": "Name",
+    "inputRadius": "Radius",
+    "inputUnit": "Unit",
+    "labelSize": "Size: {{value}} {{unit}}",
+    "buttonRemoveAriaLabel": "Remove",
+    "buttonCancel": "Cancel",
+    "buttonSave": "Save",
+    "units": {
+      "km": "km",
+      "miles": "miles"
+    },
+    "errors": {
+      "invalidName": "Invalid name",
+      "invalidRadius": "Invalid radius"
+    }
+  },
+  "popupDrawOptions": {
+    "polygonOption": "Draw a Geozone Shape",
+    "circleOption": "Draw a Geozone Radius"
+  },
+  "marker": {
+    "zoneAriaLabel": "Zone marker - {{name}}",
+    "searchAriaLabel": "Search pin - {{name}}"
+  }
+}

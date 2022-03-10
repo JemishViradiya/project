@@ -1,0 +1,37 @@
+{
+  "datetime": {
+    "short": "YYYY-MM-DD HH:mm"
+  },
+  "fileSizes": {
+    "bytes": {
+      "abbreviation": "{{size}} B"
+    },
+    "eksaBytes": {
+      "abbreviation": "{{size}} EB"
+    },
+    "gigaBytes": {
+      "abbreviation": "{{size}} GB"
+    },
+    "kiloBytes": {
+      "abbreviation": "{{size}} KB"
+    },
+    "megaBytes": {
+      "abbreviation": "{{size}} MB"
+    },
+    "petaBytes": {
+      "abbreviation": "{{size}} PB"
+    },
+    "teraBytes": {
+      "abbreviation": "{{size}} TB"
+    },
+    "yottaBytes": {
+      "abbreviation": "{{size}} YB"
+    },
+    "zettaBytes": {
+      "abbreviation": "{{size}} ZB"
+    }
+  },
+  "time": {
+    "24hour": true
+  }
+}

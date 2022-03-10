@@ -1,0 +1,7 @@
+{
+  "loading": "ロード中...",
+  "signInLink": "ここをクリックして再度サインインしてください。",
+  "loginFailed": "サインインに失敗",
+  "logoutFailed": "サインアウト失敗",
+  "errorMessage": "リクエストを完了できませんでした。"
+}

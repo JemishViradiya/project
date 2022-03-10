@@ -1,0 +1,97 @@
+{
+  "transferList": {
+    "selectedCount": "{{selectedCount}} of {{totalCount}} selected",
+    "selectAllLeftLabel": "Select all unselected items",
+    "selectAllRightLabel": "Select all selected items",
+    "transferItemsLeftLabel": "Remove selected items",
+    "transferItemsRightLabel": "Add selected items"
+  },
+  "pickers": {
+    "time": {
+      "currentTime": "Current time",
+      "invalidMessage": "The time is invalid."
+    }
+  },
+  "fileUpload": {
+    "browseFilesButton": "Browse files"
+  },
+  "progressButton": {
+    "buttonText": "Click to load"
+  },
+  "button": {
+    "goBackText": "Go back"
+  },
+  "drawer": {
+    "formButtonPanel": "Form button panel"
+  },
+  "quickSearchFilter": {
+    "minimumCharactersRequired": "You must enter at least 3 characters.",
+    "settings": "Settings in search filter"
+  },
+  "inputGroups": {
+    "buttonAdd": "Add row"
+  },
+  "maps": {
+    "common": {
+      "map": "Map"
+    },
+    "terrain": "Terrain",
+    "satellite": "Satellite",
+    "toggleMapTypes": "Show/Hide Map Types",
+    "label": "Label"
+  },
+  "helpLink": {
+    "helpLinkText": "Help"
+  },
+  "risk": {
+    "secured": "Secure",
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High"
+  },
+  "riskSlider": {
+    "ariaLabelSliderMin": "risk-slider-min",
+    "ariaLabelSliderMax": "risk-slider-max",
+    "step": {
+      "0-0": "Secure",
+      "0-1": "Secure - Low",
+      "0-2": "Secure - Medium",
+      "0-3": "Secure - High",
+      "1-1": "Low",
+      "1-2": "Low - Medium",
+      "1-3": "Low - High",
+      "2-2": "Medium",
+      "2-3": "Medium - High",
+      "3-3": "High"
+    }
+  },
+  "autocompleteTags": {
+    "newTag": "new tag",
+    "tagAlreadyExist": "This tag is already added"
+  },
+  "enhancedSearch": {
+    "and": "AND",
+    "applyButton": "APPLY",
+    "clearButton": "CLEAR",
+    "enterDate": "Enter date",
+    "noOptionsText": "No match",
+    "comparisons": {
+      "contains": "Contains",
+      "doesNotContain": "Does not contain",
+      "endsWith": "Ends with",
+      "greater": "Greater than",
+      "greaterOrEqual": "Greater than or equal to",
+      "less": "Less than",
+      "lessOrEqual": "Less than or equal to",
+      "startsWith": "Starts with"
+    }
+  },
+  "tabPanel": {
+    "ariaLabel": "{{name}} tab panel"
+  },
+  "timeZonePicker": {
+    "searchPlaceholder": "Search by country, city or abbreviation",
+    "timeZone": "Time zone"
+  },
+  "Clear": "Clear"
+}

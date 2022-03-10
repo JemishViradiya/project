@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "lib": ["es2017", "webworker"],
+    "types": ["webpack-env"]
+  },
+  "files": ["../../node_modules/@nrwl/react/typings/cssmodule.d.ts", "../../tools/nx/typings/image.d.ts"],
+  "exclude": ["**/*.spec.ts", "**/*.spec.tsx"],
+  "include": ["src/service-worker/worker/**/*.js", "src/service-worker/worker/**/*.ts"]
+}

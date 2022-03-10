@@ -1,0 +1,26 @@
+{
+  "root": "partials/bis/integration",
+  "sourceRoot": "partials/bis/integration/src",
+  "projectType": "integration",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/bis/integration/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "integration": {
+      "executor": "./tools/executors/codeceptjs:run",
+      "options": {
+        "headless": false
+      },
+      "configurations": {
+        "ci": {
+          "headless": true
+        }
+      },
+      "outputs": ["codeceptjs-results/partials/bis/integration"]
+    }
+  },
+  "tags": ["scope:partial", "scope:bis", "type:codeceptjs"]
+}

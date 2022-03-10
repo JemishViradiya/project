@@ -1,0 +1,25 @@
+{
+  "policies": [
+    {
+      "appliedGroups": 0,
+      "appliedUsers": 0,
+      "description": "High risk group policy",
+      "name": "High Risk Policy",
+      "id": "754ffcad-6ee4-456c-a8f4-b8889ea1d514"
+    },
+    {
+      "appliedGroups": 6,
+      "appliedUsers": 3,
+      "description": "Low risk group policy",
+      "name": "Low Risk Policy",
+      "id": "bfbdab4c-ecfa-4c66-8b06-feabe423c237"
+    },
+    {
+      "appliedGroups": 0,
+      "appliedUsers": 3,
+      "description": "This is my first policy.",
+      "name": "My Test One",
+      "id": "d792c82b-4700-4a68-9817-3e5c9db672dc"
+    }
+  ]
+}

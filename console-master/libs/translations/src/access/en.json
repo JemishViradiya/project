@@ -1,0 +1,66 @@
+{
+  "errors": {
+    "noPermission": {
+      "title": "No permission",
+      "description": "You do not have permission to view this resource."
+    },
+    "notFound": {
+      "title": "Resource Not Found",
+      "description": "Sorry, but the resource you are looking for cannot be found or you do not have permission to view it."
+    },
+    "internal": {
+      "title": "Error",
+      "description": "Sorry, an error occurred while processing your request."
+    },
+    "generic": {
+      "title": "Something went wrong",
+      "description": "Sorry, an error occurred. Please try again later."
+    },
+    "noServiceEnabled": {
+      "title": "Service unavailable",
+      "description": "This service has not been enabled for your tenant."
+    }
+  },
+  "Ues_Big_ACL_Read": "View network access controls",
+  "Ues_Big_GatewayAppProfile_Read": "View Gateway service policies",
+  "Ues_Big_NetworkAccessControlProfile_Read": "View network access controls",
+  "Ues_Big_NetworkServices_Read": "View network access controls",
+  "Ues_Big_Reporting_Read": "View Gateway reporting",
+  "Ues_Big_Tenant_Read": "View Gateway settings",
+  "Ues_Bip_Device_Read": "View Avert device identifier",
+  "Ues_Bip_Event_Read": "View Avert device events",
+  "Ues_Bip_FileContent_Read": "View Avert file content",
+  "Ues_Bip_FileSummary_Read": "View Avert sensitive file summary",
+  "Ues_Bip_Policy_Read": "View Avert policies",
+  "Ues_Bip_RiskScore_Read": "View Avert risk scores",
+  "Ues_Bip_Settings_Read": "View Avert settings",
+  "Ues_Bis_Events_Read": "View adaptive risk events",
+  "Ues_Bis_EventsLocation_Read": "View adaptive risk location events",
+  "Ues_Bis_RiskProfile_Read": "View adaptive risk policies",
+  "Ues_Bis_Settings_Read": "View adaptive risk settings",
+  "Ues_Ecs_ActivationProfile_Read": "View enrollment policies",
+  "Ues_Ecs_ActivationSettings_Read": "View activation settings",
+  "Ues_Ecs_Bcn_Read": "View connectivity node",
+  "Ues_Ecs_Devices_Read": "View mobile devices",
+  "Ues_Ecs_Directory_Read": "View directory connections",
+  "Ues_Ecs_Identity_Read": "View authentication controls",
+  "Ues_Ecs_Mdm_Read": "View EMM connections",
+  "Ues_Ecs_Mfa_Read": "Ues:Ecs:Mfa:Read",
+  "Ues_Ecs_Users_Read": "View users and groups",
+  "Ues_Ecs_Vulnerabilities_Read": "View vulnerabilities",
+  "Ues_Mtd_Events_Read": "View Protect Mobile events",
+  "Ues_Mtd_Policy_Read": "View Protect Mobile policies",
+  "Ues_Venue_Dashboard_Read": "Dashboard",
+  "Ues_Venue_DesktopPolicy_Read": "View device policies",
+  "Ues_Venue_DesktopReports_Read": "View reports",
+  "Ues_Venue_Devices_Read": "View devices",
+  "Ues_Venue_SettingsCertificates_Read": "View, create, edit, delete certificates",
+  "Ues_Venue_SettingsGlobalList_Read": "View global list",
+  "Ues_Venue_SettingsIntegrations_Read": "View, create, edit, delete integrations",
+  "Ues_Venue_SettingsUpdate_Read": "View, create, edit, delete agent update settings",
+  "Ues_Venue_ThreatProtection_Read": "View threat protection",
+  "Ues_Venue_Zones_Read": "View zones",
+  "service": {
+    "big_blackberry_com": "Gateway"
+  }
+}

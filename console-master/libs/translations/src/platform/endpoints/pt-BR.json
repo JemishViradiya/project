@@ -1,0 +1,122 @@
+{
+  "endpoints": {
+    "sectionTitle": "Ativas",
+    "title": "Dispositivos móveis",
+    "grid": {
+      "all": "Dispositivos do usuário",
+      "actions": {
+        "removeMultiple": "Remover dispositivos móveis",
+        "removeEndpointsDescription": "Deseja excluir {{count}} dispositivos móveis?",
+        "remove": {
+          "success": "Os dispositivos foram excluídos.",
+          "error": "Os dispositivos não puderam ser excluídos.",
+          "errorWithCount": "{{count}} dispositivos não puderam ser excluídos."
+        }
+      }
+    },
+    "details": {
+      "error": {
+        "fetch": "Os dispositivos não puderam ser recuperados."
+      }
+    }
+  },
+  "endpoint": {
+    "details": {
+      "agent": "Agente",
+      "agentBundleId": {
+        "com_blackberry_protect": "BlackBerry Protect",
+        "com_blackberry_big": "BlackBerry Gateway",
+        "com_blackberry_big1": "BlackBerry Gateway",
+        "com_blackberry_big2": "BlackBerry Gateway",
+        "com_blackberry_big3": "BlackBerry Gateway"
+      },
+      "enrollment": "Inscrição",
+      "error": {
+        "fetch": "O dispositivo não pôde ser recuperado.",
+        "notFound": "O dispositivo foi excluído.",
+        "fetchUser": "O usuário não pôde ser recuperado."
+      },
+      "lastOnline": "Último online",
+      "panels": {
+        "alerts": "Alertas",
+        "events": "Eventos",
+        "responseActions": "Conformidade"
+      },
+      "securityPatch": "Patch de segurança",
+      "title": "Detalhes Dispositivo",
+      "actions": {
+        "deleteEndpoint": "Excluir dispositivo",
+        "title": "Ações"
+      },
+      "button": {
+        "more": "Mais detalhes do dispositivo",
+        "less": "Menos detalhes do dispositivo"
+      }
+    },
+    "fields": {
+      "riskLevelStatus": "Status de risco",
+      "device": "Dispositivo",
+      "userName": "Usuário",
+      "userEmail": "E-mail",
+      "os": "SO",
+      "osVersion": "Versão do SO",
+      "agent": "Agente",
+      "enrollment": "Inscrição",
+      "application": "Aplicação",
+      "platform": "Plataforma",
+      "allEndpoints": "Endpoints",
+      "manufacturer": "Fabricante",
+      "userId": "ID do usuário",
+      "endpointId": "ID de endpoint",
+      "displayName": "Nome de exibição",
+      "emailAddress": "Endereço de e-mail",
+      "osSecurityPatch": "Patch de segurança do SO",
+      "emmConnections": "Conexões EMM"
+    },
+    "columnPickerTitle": "Colunas de tabela",
+    "resultsCount": "{{value}} resultados",
+    "selectedCount": "{{value}} selecionado",
+    "os": {
+      "ios": "iOS",
+      "android": "Android",
+      "windows": "Windows",
+      "macos": "macOS"
+    },
+    "risk": {
+      "HIGH": "Alto",
+      "MEDIUM": "Médio",
+      "SECURED": "Seguro",
+      "UNKNOWN": "Desconhecido",
+      "LOW": "Baixo"
+    },
+    "events": {
+      "networkConnections": "Conexões de rede",
+      "networkTraffic": "Tráfego de rede",
+      "networkAnomaly": "Anomalia de rede"
+    },
+    "page": {
+      "title": "Detalhes do dispositivo Móbil"
+    },
+    "responseActions": {
+      "title": "Conformidade Protect Mobile"
+    },
+    "threats": {
+      "mobileDevice": "Alertas Protect Mobile"
+    },
+    "export": {
+      "emmConnections": "({{status}}) {{name}}"
+    }
+  },
+  "emmConnection": {
+    "type": {
+      "INTUNE": "Intune",
+      "UEM": "UEM",
+      "NULL": "Nenhum definido"
+    },
+    "status": {
+      "PENDING": "Pendente",
+      "ERROR": "Erro"
+    },
+    "statusAriaLabel": "Status da conexão EMM: {{status}}"
+  }
+}

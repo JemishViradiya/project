@@ -1,0 +1,213 @@
+{
+  "policy": {
+    "pageTitle": "Avert",
+    "tabTitle": {
+      "mobile": "Mobile",
+      "content": "Content"
+    },
+    "serverError": {
+      "retrievePolicies": "{{error}}",
+      "deletePolicies": "The policies could not be deleted."
+    },
+    "table": {
+      "columns": {
+        "name": "Name",
+        "description": "Description",
+        "policyType": "Policy Type",
+        "userCount": "Users",
+        "groupCount": "Groups",
+        "added": "Added",
+        "modified": "Modified",
+        "rank": "Rank"
+      },
+      "tableColumns": "Table columns",
+      "noData": "No Data",
+      "filter": {
+        "name": "By name",
+        "description": "By description"
+      }
+    },
+    "dialogs": {
+      "setAsDefault": {
+        "title": "Set as Default confirmation",
+        "cancelBtn": "Cancel",
+        "confirmBtn": "Save",
+        "question": "Do you want to install the policy as Default?"
+      }
+    },
+    "buttons": {
+      "add": "Add Policy",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "save": "Save",
+      "continue": "Continue",
+      "addNew": "Add",
+      "confirm": "Yes",
+      "rejectConfirm": "Not now",
+      "leavePage": "Leave page",
+      "resendMail": "Send",
+      "cancelResendMail": "No"
+    },
+    "search": {
+      "results": "{{value}} results",
+      "placeholder": "Search for policies"
+    },
+    "addPolicyWithType": "Add information protection policy",
+    "sections": {
+      "requiredInput": "This field is required.",
+      "general": {
+        "title": "General information",
+        "info": {
+          "description": "Specify the type of policy you that want to create.  Organizational policies can be used to protect your organization's proprietary information. Regulatory policies can be used to protect sensitive information related to industry or government regulations.",
+          "regulatoryDesc": "When multiple regulatory policies conflict for a user, BlackBerry will automatically reconcile these policies by applying the most restrictive elements of all policies. The minimum number of data occurrences will be selected and the most restrictive remediation action will be applied.",
+          "organizationalDesc": "When multiple organizational policies conflict for a user, BlackBerry will automatically reconcile these policies by applying the least restrictive elements of all policies. The maximum number of data occurrences will be selected, and the least restrictive remediation action will be applied."
+        },
+        "policyName": "Policy name",
+        "description": "Description",
+        "setDefaultPolicy": "Set default policy",
+        "type": {
+          "title": "Policy type",
+          "regulatory": "Regulatory",
+          "organizational": "Organizational"
+        }
+      },
+      "conditions": {
+        "title": "Conditions",
+        "description": "Define the sensitive data that you want to protect and the conditions that will trigger a policy violation.  You can start by using one of the templates you selected from the <0>Avert settings</0> or create your own custom policy.",
+        "addFromTemplate": "Add from template",
+        "addFromTemplateDialog": {
+          "title": "Add from template",
+          "description": "Select a template from the list below to automatically add the sensitive data you want to protect.",
+          "noTemplatesDescription": "You have not added any templates.  Go to the <0>Avert settings</0> to add predefined templates to your list.",
+          "searchText": "Search for templates",
+          "confirmation": {
+            "title": "Template confirmation",
+            "description": "Adding a new template will override existing conditions."
+          }
+        },
+        "table": {
+          "name": "Name",
+          "description": "Description",
+          "region": "Region"
+        },
+        "builder": {
+          "title": "Conditions builder",
+          "condition": {
+            "and": "And",
+            "or": "or"
+          },
+          "label": "with minimum occurrences of",
+          "buttons": {
+            "addRule": "Add item",
+            "addGroup": "Add group",
+            "deleteGroup": "Delete group"
+          },
+          "select": {
+            "placeholderText": "Select data type name",
+            "searchText": "Search"
+          },
+          "occurrences": {
+            "rangeText": "The value must be between 1 and 10."
+          }
+        }
+      },
+      "whitelist": {
+        "title": "Allowed Domains",
+        "name": "Domain",
+        "description": "Description",
+        "paragraph": "Specify which browser domains can be trusted to safely upload files from the list you created in <0>Avert Settings</0>. The policy will not be applied to allowed domains."
+      },
+      "emailSettings": {
+        "title": "Allowed Email Domains",
+        "description": "Specify which email recipients can be trusted when sharing sensitive data based on the list of allowed internal email domains you created in the <0>Avert Settings</0>. ",
+        "helperText": "Detect when sensitive content is shared by email.",
+        "recipients": {
+          "none": "None (default)",
+          "internal": "Internal recipients",
+          "all": "All recipients"
+        }
+      },
+      "actions": {
+        "policyRules": {
+          "ACTION_TYPE_NONE": "None",
+          "ACTION_TYPE_ALERT": "Report and warn",
+          "ACTIVITY_TYPE_BROWSER_UPLOAD": "Web browsers (HTTP, HTTPS)",
+          "ACTIVITY_TYPE_USB_EXFILTRATE": "Removable storage",
+          "ACTIVITY_TYPE_SCREEN_CAPTURE": "Screen capture",
+          "ACTIVITY_TYPE_EMAIL_CLIENTS": "Email"
+        },
+        "title": "Actions",
+        "description": "Specify what action to take when the policy conditions are detected."
+      },
+      "domains": {
+        "dialogs": {
+          "title": "Add Allowed Domains",
+          "searchText": "Search for domains"
+        },
+        "addDomain": "Click + to add items."
+      },
+      "sparkMobileSettings": {
+        "title": "Mobile settings",
+        "policyConfigNames": {
+          "CONFIG_TYPE_ALLOW_COPY_BB_APPS_INTO_NON_BB_APPS": "Allow copying data from BlackBerry Spark apps to non BlackBerry Spark apps",
+          "CONFIG_TYPE_ALLOW_COPY_NON_BB_APPS_INTO_BB_APPS": "Allow copying data between BlackBerry Spark apps",
+          "CONFIG_TYPE_ALLOW_DICTATION": "Allow dictation",
+          "CONFIG_TYPE_ALLOW_INSECURE_VIDEO": "Allow screen capture and insecure video output",
+          "CONFIG_TYPE_ALLOW_SCREEN_RECORDING": "Allow screen capture recording and sharing",
+          "CONFIG_TYPE_ALLOW_KEYBOARDS": "Allow custom keyboards",
+          "CONFIG_TYPE_ADD_WATERMARK": "Display watermark",
+          "CONFIG_TYPE_ALLOW_RESTRICTED_MODE": "Enable Android keyboard restricted mode"
+        },
+        "supportedOsTypesText": "Supported OS types - "
+      },
+      "iosSpecificSettings": {
+        "title": "iOS specific settings",
+        "allowText": "Allow",
+        "screenshotsInText": "screenshots in",
+        "intervalText": "days",
+        "rangeText": "The value must be between 1 and 14 days."
+      }
+    },
+    "error": {
+      "create": "The policy could not be created. Error: {{error}} ",
+      "delete": "The policy could not be deleted.",
+      "update": "The policy could not be updated. Error: {{error}} "
+    },
+    "success": {
+      "create": "The policy was created.",
+      "delete": "The policy was deleted.",
+      "update": "The policy was updated."
+    },
+    "updateFormDeletePolicyTooltip": "Delete policy",
+    "deletePolicyConfirmationDialogTitle": "Delete confirmation",
+    "deletePolicyConfirmationDialogDesc": "Do you want to delete this policy?",
+    "deleteNote": "You must remove all users and groups associated with a policy before you delete it.",
+    "createContentPolicyConfirmationTitle": "Assign the Content policy",
+    "createMobilePolicyConfirmationTitle": "Assign the Mobile policy",
+    "createPolicyConfirmationDescription": "The policy has been created. Do you want to assign users or groups to this policy?",
+    "updatePolicyConfirmationTitle": "Resend email to users",
+    "updatePolicyConfirmationDescription": "Do you want to resend the welcome email?",
+    "detail": {
+      "updated": "Updated on {{date, datetime}}",
+      "settings": "Settings",
+      "assignedUsersAndGroups": "Assigned Users and Groups"
+    },
+    "modifiedPolicyConfirmationDialogTitle": "Unsaved changes",
+    "modifiedPolicyConfirmationDialogDesc": "Do you want to leave this page? Your changes have not been saved."
+  },
+  "navigation": {
+    "adaptiveResponse": {
+      "label": "Label",
+      "componentHeader": {
+        "paragraph": "Avert content policies are used to detect your organization's sensitive data and protect against unauthorized sharing. If multiple policies conflict for a user, BlackBerry will automatically reconcile based on policy type.",
+        "link": "more info"
+      }
+    },
+    "title": "Policies",
+    "mobile": {
+      "componentHeader": {
+        "paragraph": "Mobile settings apply to all device types unless otherwise specified. If more than one policy is assigned to a user, the highest ranked policy is applied."
+      }
+    }
+  }
+}

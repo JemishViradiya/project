@@ -1,0 +1,8 @@
+{
+  "testConfig": {
+    "ipAddressName": "AutomationIPAddressList",
+    "ipAddress": "111.222.223.117",
+    "ipAddressNameUpdated": "AutomationIPAddressListUpdated",
+    "ipAddressUpdated": "11.12.13.14-79"
+  }
+}

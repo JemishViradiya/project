@@ -1,0 +1,22 @@
+[
+  {
+    "logLevel": "debug",
+    "target": true,
+    "context": ["/local/"],
+    "changeOrigin": true,
+    "ws": true,
+    "pathRewrite": {
+      "^/local/": "/"
+    },
+    "router": {
+      "local-dev-ues.cylance.com:4200": "https://api.dev.ues.labs.blackberry.com/1db7e16b-a231-4495-be1a-90ef391f6ac8",
+      "local-staging-ues.cylance.com:4200": "https://qa2-uesapi.cylance.com/1db7e16b-a231-4495-be1a-90ef391f6ac8",
+      "r00-ues.cylance.com:4200": "https://api.dev.ues.labs.blackberry.com/1db7e16b-a231-4495-be1a-90ef391f6ac8",
+      "qa2-ues.cylance.com:4200": "https://qa2-uesapi.cylance.com/1db7e16b-a231-4495-be1a-90ef391f6ac8",
+      "ues.cylance.com:4200": "https://us1-uesapi.cylance.com/1db7e16b-a231-4495-be1a-90ef391f6ac8",
+      "ues-euc1.cylance.com:4200": "https://eu1-uesapi.cylance.com/1db7e16b-a231-4495-be1a-90ef391f6ac8",
+      "ues-apne1.cylance.com:4200": "https://jp1-uesapi.cylance.com/1db7e16b-a231-4495-be1a-90ef391f6ac8",
+      "ues-sae1.cylance.com:4200": "https://br1-uesapi.cylance.com/1db7e16b-a231-4495-be1a-90ef391f6ac8"
+    }
+  }
+]

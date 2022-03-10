@@ -1,0 +1,31 @@
+@import '../../theme/theme.less';
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header,
+.subHeader {
+  composes: .mui.typography[ @h1];
+}
+
+.desc {
+  composes: .mui.typography[ @body1];
+}
+
+.title {
+  composes: .mui.typography[ @h2];
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+
+  &.spaceBetween {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+}

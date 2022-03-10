@@ -1,0 +1,43 @@
+@import '../theme/theme.less';
+
+.list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: -6px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color @animHoverDuration @animHoverTimingFn;
+  min-height: 43px;
+
+  &:hover {
+    color: @colorLink;
+  }
+}
+
+.name {
+  composes: .mui.typography[ @body2];
+  text-align: left;
+  max-width: 75%;
+  // UX: maximum 2 lines for text display.
+  max-height: 32px;
+  margin-right: 10px;
+
+  // Currently, Firefox and Edge do not support those -webkit-* properties
+  // and they will not display ellipsis at the end of overflowed text.
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.value {
+  composes: .mui.typography[ @h2];
+  margin-right: 2px;
+}

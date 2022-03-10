@@ -1,0 +1,9 @@
+{
+  "executors": {
+    "run": {
+      "implementation": "./run.impl",
+      "schema": "./schema.json",
+      "description": "Run CodeceptJS e2e tests"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "dashboard": {
+    "title": "CylancePERSONA"
+  },
+  "users": {
+    "title": "Utilisateurs Persona",
+    "sectionTitles": {
+      "assets": "Inventaire",
+      "userInfo": "Informations sur l'utilisateur",
+      "personaAlerts": "Alertes CylancePersona",
+      "associatedDevices": "Appareil associé ({{count}})",
+      "associatedDevices_plural": "Dispositifs associés ({{count}})",
+      "userTrustScoreLog": "Journal du score de confiance de l'utilisateur",
+      "cylancePersonaStatus": "Statut CylancePersona"
+    },
+    "actions": {
+      "remove": "Supprimer",
+      "removeUserDescription": "Voulez-vous vraiment supprimer l'utilisateur sélectionné?",
+      "removeUserDescription_plural": "Voulez-vous vraiment supprimer les {{count}} utilisateurs sélectionnés?",
+      "resetModelsDescription": "Voulez-vous vraiment réinitialiser le modèle de notation? Cela effacera les données collectées."
+    },
+    "columns": {
+      "userName": "Nom d'utilisateur",
+      "state": "État",
+      "lastOnline": "Dernière mise en ligne",
+      "zones": "Zones"
+    },
+    "noData": "Aucun utilisateur n'a été trouvé.",
+    "state": {
+      "online": "En ligne",
+      "offline": "Hors ligne"
+    },
+    "notifications": {
+      "removeUsersSuccess": "L'utilisateur {{count}} a été supprimé avec succès!",
+      "removeUsersSuccess_plural": "Les utilisateurs {{count}} ont été supprimés avec succès!",
+      "removeUsersError": "Impossible de supprimer l'utilisateur. Essayez à nouveau.",
+      "removeUsersError_plural": "Impossible de supprimer des utilisateurs. Essayez à nouveau.",
+      "dataUnavailableError": "Les données ne sont pas disponibles. Veuillez réessayer ultérieurement."
+    },
+    "tabs": {
+      "activeAlerts": "Alertes actives",
+      "alertHistory": "Historique des alertes"
+    },
+    "detailsTitle": "Détails de l'utilisateur"
+  },
+  "dialogs": {
+    "actionConfirmation": "confirmation de l'action"
+  },
+  "button": {
+    "cancel": "Annuler",
+    "remove": "Supprimer"
+  },
+  "tableColumns": "Colonnes de table",
+  "loading": "Chargement...",
+  "personaEvents": {
+    "LogonModelStatus": "État du modèle d'ouverture de session",
+    "MetaModelScore": "Score Meta Model",
+    "MetaModelStatus": "Statut du méta-modèle",
+    "UserTrustScore": "Score de confiance des utilisateurs",
+    "Successful2FALogon": "Ouverture de session 2FA réussie",
+    "Failed2FALogon": "Ouverture de session 2FA échouée",
+    "UserFailedLogon": "Échec de la connexion de l'utilisateur",
+    "ForcedStepUpAuthentication": "Authentification renforcée forcée",
+    "MaliciousRuleHit": "Hit de règle malveillante"
+  },
+  "alertStatus": {
+    "New": "Nouveau",
+    "InProgress": "En cours",
+    "FalsePositive": "Faux positifs",
+    "Reviewed": "Examiné"
+  },
+  "personaSeverity": {
+    "info": "Info",
+    "low": "Faible",
+    "medium": "Moyen",
+    "high": "Élevé",
+    "critical": "Critique"
+  },
+  "noData": "Aucun article à afficher",
+  "currentCTS": "CTS actuel",
+  "AssociatedUserOffline": "Hors connexion de l'usateurassocié",
+  "ResumeScoring": "Scoring de résumés",
+  "PauseScoring": "Suspauser le scoring",
+  "ResetScoring": "Réinitialiser le score",
+  "ResumeScoringAll": "Tous les résultats de la cotes de cœurs",
+  "PauseScoringAll": "Suspauser le scoring tout",
+  "ResetScoringAll": "Réinitialiser tous les scores",
+  "personaModelStatus": {
+    "Training": "Formations",
+    "Scoring": "Scoring",
+    "Paused": "Pause",
+    "Processing": "Traitement"
+  },
+  "personaModelTypes": {
+    "TrustScore": "Score de confiance de l'utilisateur",
+    "Meta": "Modèle Meta",
+    "Conduct": "Conduite",
+    "Process": "Processus",
+    "Keyboard": "Clavier",
+    "Mouse": "Souris",
+    "Network": "Réseau",
+    "Logon": "Ouverture de session"
+  },
+  "personaModelButton": {
+    "AssociatedUserOffline": "Le contrôle est désactivé car l'utilisateur est hors ligne",
+    "ResumeScoring": "Scoring de CV",
+    "ResumeScoringAll": "Reprendre la notation sur tous les",
+    "PauseScoring": "Pause de la notation",
+    "PauseScoringAll": "Mettre en pause le score sur tous les",
+    "ResetScoring": "Réinitialiser le score",
+    "ResetScoringAll": "Réinitialiser le score sur tous"
+  },
+  "LastNDays": "Dernier jour {{count}}",
+  "LastNDays_plural": "{{count}} derniers jours",
+  "LastNHrs": "Dernière {{count}} heure",
+  "LastNHrs_plural": "Les dernières {{count}} heures",
+  "Time": "Heure",
+  "Score": "Partition",
+  "NA": "NA",
+  "scoreDataUnavailableError": "Les données de Trust Score ne sont pas disponibles. Veuillez réessayer ultérieurement.",
+  "unknown": "Inconnu"
+}

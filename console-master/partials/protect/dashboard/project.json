@@ -1,0 +1,25 @@
+{
+  "root": "partials/protect/dashboard",
+  "sourceRoot": "partials/protect/dashboard/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/protect/dashboard/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/protect/dashboard"],
+      "options": {
+        "jestConfig": "partials/protect/dashboard/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  },
+  "tags": ["scope:partial", "scope:protect"]
+}

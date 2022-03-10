@@ -1,0 +1,87 @@
+{
+  "transferList": {
+    "selectedCount": "{{selectedCount}} de {{totalCount}} selecionado",
+    "selectAllLeftLabel": "Selecione todos os itens não selecionados",
+    "selectAllRightLabel": "Selecione todos os itens selecionados",
+    "transferItemsLeftLabel": "Remover itens selecionados",
+    "transferItemsRightLabel": "Adicionar itens selecionados"
+  },
+  "pickers": {
+    "time": {
+      "invalidMessage": "A hora é inválida.",
+      "currentTime": "Hora atual"
+    }
+  },
+  "fileUpload": {
+    "browseFilesButton": "Procurar arquivos"
+  },
+  "progressButton": {
+    "buttonText": "Clique para carregar"
+  },
+  "button": {
+    "goBackText": "Volte"
+  },
+  "drawer": {
+    "formButtonPanel": "Painel de botões Formulário"
+  },
+  "quickSearchFilter": {
+    "minimumCharactersRequired": "Você deve inserir pelo menos 3 caracteres.",
+    "settings": "Definições no filtro de pesquisa"
+  },
+  "inputGroups": {
+    "buttonAdd": "Adicionar linha"
+  },
+  "maps": {
+    "common": {
+      "map": "Mapa"
+    },
+    "terrain": "Terreno",
+    "satellite": "Satélite",
+    "toggleMapTypes": "Mostrar/ocultar tipos de mapa",
+    "label": "Etiqueta"
+  },
+  "helpLink": {
+    "helpLinkText": "Socorro"
+  },
+  "riskSlider": {
+    "ariaLabelSliderMin": "risco-slider-min",
+    "ariaLabelSliderMax": "risco-slider-max",
+    "step": {
+      "0-0": "Protegido",
+      "0-1": "Protegido - Baixo",
+      "0-2": "Protegido - Médio",
+      "0-3": "Protegido - Alto",
+      "1-1": "Baixo",
+      "1-2": "Baixo - Médio",
+      "1-3": "Baixo - Alto",
+      "2-2": "Médio",
+      "2-3": "Médio - Alto",
+      "3-3": "Alto"
+    }
+  },
+  "enhancedSearch": {
+    "and": "E",
+    "applyButton": "APLIQUE",
+    "chipDefinition": "{{label}} {{operator}} {{value}}",
+    "clearButton": "CLARO",
+    "enterDate": "Insira a data",
+    "noOptionsText": "Sem correspondência"
+  },
+  "risk": {
+    "secured": "Seguro",
+    "low": "Baixo",
+    "medium": "Médio",
+    "high": "Alto"
+  },
+  "autocompleteTags": {
+    "newTag": "nova tag",
+    "tagAlreadyExist": "Essa tag já foi adicionada"
+  },
+  "timeZonePicker": {
+    "searchPlaceholder": "Pesquise por país, cidade ou abreviatura",
+    "timeZone": "Fuso horário"
+  },
+  "tabPanel": {
+    "ariaLabel": "painel de guias {{name}}"
+  }
+}

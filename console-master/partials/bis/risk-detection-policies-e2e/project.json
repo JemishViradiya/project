@@ -1,0 +1,29 @@
+{
+  "root": "partials/bis/risk-detection-policies-e2e",
+  "sourceRoot": "partials/bis/risk-detection-policies-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/bis/risk-detection-policies-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/bis/risk-detection-policies-e2e/cypress.json",
+        "tsConfig": "partials/bis/risk-detection-policies-e2e/tsconfig.json",
+        "devServerTarget": "bis/risk-detection-policies:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "bis/risk-detection-policies:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/bis/risk-detection-policies-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:bis"],
+  "implicitDependencies": ["bis/gateway-alerts"]
+}

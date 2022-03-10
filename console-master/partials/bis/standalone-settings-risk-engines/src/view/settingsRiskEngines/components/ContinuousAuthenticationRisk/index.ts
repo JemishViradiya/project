@@ -1,0 +1,3 @@
+import ContinuousAuthenticationRisk from './ContinuousAuthenticationRisk'
+
+export default ContinuousAuthenticationRisk

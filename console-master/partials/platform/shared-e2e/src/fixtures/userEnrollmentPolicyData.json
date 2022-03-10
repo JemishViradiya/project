@@ -1,0 +1,116 @@
+{
+  "policyTC01": [
+    {
+      "policyType": "enrollment",
+      "generalInformation": [
+        {
+          "name": "Enrollment Policy 01 iOS & Android allowed",
+          "description": "Description for enrollment policy 01"
+        }
+      ],
+      "settings": [
+        {
+          "isMobile": true,
+          "isGatewayDesktop": false,
+          "isAllowedPlatforms": true,
+          "platforms": [
+            {
+              "iOS": true,
+              "android": true,
+              "windows": false,
+              "macOS": false
+            }
+          ]
+        }
+      ],
+      "welcomeEmail": [
+        {
+          "subject": "BlackBerry Activation Profile 01 Assigned",
+          "emailBody": "You can now enroll your mobile device"
+        }
+      ],
+      "isSave": false
+    }
+  ],
+
+  "policyTC02": [
+    {
+      "policyType": "enrollment",
+      "generalInformation": [
+        {
+          "name": "Enrollment Policy 02 Windows & MAC allowed",
+          "description": "Description for enrollment policy 02"
+        }
+      ],
+      "settings": [
+        {
+          "isMobile": false,
+          "isGatewayDesktop": true,
+          "isAllowedPlatforms": true,
+          "platforms": [
+            {
+              "iOS": false,
+              "android": false,
+              "windows": true,
+              "macOS": true
+            }
+          ]
+        }
+      ],
+      "welcomeEmail": [
+        {
+          "subject": "BlackBerry Activation Profile 02 Assigned",
+          "emailBody": "You can now enroll your Gateway Desktop"
+        }
+      ],
+      "isSave": true
+    }
+  ],
+
+  "policyTC03": [
+    {
+      "policyType": "enrollment",
+      "generalInformation": [
+        {
+          "name": "",
+          "description": ""
+        }
+      ],
+      "isSave": false
+    }
+  ],
+
+  "policyTC04": [
+    {
+      "policyType": "enrollment",
+      "generalInformation": [
+        {
+          "name": "Policy B",
+          "description": "Description for enrollment policy 04"
+        }
+      ],
+      "settings": [
+        {
+          "isMobile": true,
+          "isGatewayDesktop": false,
+          "isAllowedPlatforms": true,
+          "platforms": [
+            {
+              "iOS": true,
+              "android": true,
+              "windows": false,
+              "macOS": false
+            }
+          ]
+        }
+      ],
+      "welcomeEmail": [
+        {
+          "subject": "BlackBerry Activation Profile 04 Assigned",
+          "emailBody": "You can now enroll your mobile or Gateway Desktop device"
+        }
+      ],
+      "isSave": true
+    }
+  ]
+}

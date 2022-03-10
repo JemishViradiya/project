@@ -1,0 +1,10 @@
+{
+  "testConfig": {
+    "startIpAddress": "1.2.3.4",
+    "endIpAddress": "1.2.4.6",
+    "description": "Added via Automation Code",
+    "startIpAddressUpdated": "111.222.113.224",
+    "endIpAddressUpdated": "119.230.120.230",
+    "descriptionUpdated": "Description is updated as a part of testing the IpAddressList Edit Functionality."
+  }
+}

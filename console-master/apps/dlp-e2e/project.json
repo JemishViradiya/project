@@ -1,0 +1,29 @@
+{
+  "root": "apps/dlp-e2e",
+  "sourceRoot": "apps/dlp-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "e2e-pending": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/dlp-e2e/cypress.json",
+        "tsConfig": "apps/dlp-e2e/tsconfig.e2e.json",
+        "devServerTarget": "info:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "info:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/apps/dlp-e2e"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/dlp-e2e/src/**/*.ts", "apps/dlp-e2e/src/**/*.js"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["info"]
+}

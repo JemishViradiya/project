@@ -1,0 +1,12 @@
+runner:
+  mode: default
+  loglevel: debug
+  delay:
+    startup: 0
+  codecept:
+    show: true
+    writeScreenshots: true
+
+e2e:
+  config:
+    baseUrl: http://localhost:3344

@@ -1,0 +1,55 @@
+/* Disable initial animation on grid (see https://github.com/STRML/react-grid-layout/issues/103 but it doesn't work) */
+.react-grid-item {
+  transition-duration: 1ms !important;
+}
+
+.mdi-set {
+  display: inline-block;
+  line-height: 1;
+  width: 1em;
+  height: 1em;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+:focus {
+  outline: none;
+}
+
+::placeholder {
+  font-family: inherit;
+}
+
+.ReactTable .rt-noData {
+  padding: 10px 20px;
+}
+
+dialog {
+  background-color: var(--mui-palette-background-default, #fefefe);
+  color: var(--mui-palette-text-primary, #213241);
+}
+
+input {
+  font-family: inherit;
+  border: 1px solid var(--mui-palette-border-paper, #ddd);
+  background-color: inherit;
+  color: var(--mui-palette-text-primary, #213241);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

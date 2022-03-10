@@ -1,0 +1,24 @@
+{
+  "monday": "Montag",
+  "tuesday": "Dienstag",
+  "wednesday": "Mittwoch",
+  "thursday": "Donnerstag",
+  "friday": "Freitag",
+  "saturday": "Samstag",
+  "sunday": "Sonntag",
+  "medium": {
+    "monday": "Mon",
+    "tuesday": "Di",
+    "wednesday": "Mi",
+    "thursday": "Do",
+    "friday": "Fr",
+    "saturday": "Sa",
+    "sunday": "Sonne"
+  },
+  "timePicker": {
+    "ampm": "wahr",
+    "okLabel": "OKAY",
+    "cancelLabel": "Stornieren"
+  },
+  "timeRange": "({{from}} - {{to}})"
+}

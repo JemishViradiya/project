@@ -1,0 +1,7 @@
+{
+  "name": "@ues-data/shared",
+  "types": "./src/types/index.ts",
+  "version": "0.0.1",
+  "sideEffects": true,
+  "module": "./src/index.ts"
+}

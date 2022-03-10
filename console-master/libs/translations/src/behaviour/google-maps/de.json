@@ -1,0 +1,11 @@
+{
+  "common": {
+    "map": "Landkarte"
+  },
+  "terrain": "Terrain",
+  "satellite": "Satellit",
+  "toggleMapTypes": "Map-Typen ein-/ausblenden",
+  "label": "etikett",
+  "enterFullscreen": "Karte erweitern",
+  "leaveFullscreen": "Map minimieren"
+}

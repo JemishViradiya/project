@@ -1,0 +1,197 @@
+@import '../../theme/theme.less';
+
+.info {
+  min-width: 300px;
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.navBar {
+  margin: 0 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: @fontSizeIcon;
+}
+
+.leftBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.user {
+  margin-left: 15px;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.userData {
+  margin-left: 12px;
+  min-height: 60px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  .userInfo {
+    font-size: @fontSizeSubtitle;
+    color: .mui.palette[ @text-primary];
+    fill: .mui.palette[ @text-primary];
+    line-height: 15px;
+  }
+}
+
+.userName {
+  composes: .mui.typography[ @h2];
+  display: flex;
+  align-items: center;
+  line-height: 28px;
+  cursor: pointer;
+  outline: none;
+  transition: color @animHoverDuration @animHoverTimingFn;
+
+  &:hover {
+    color: @colorLink;
+  }
+}
+
+.userIcon {
+  composes: .mui.typography[ @subtitle1];
+  margin-left: 10px;
+}
+
+.chart {
+  margin-top: 15px;
+}
+
+.chartInfo {
+  composes: .mui.typography[ @subtitle1];
+  margin: 20px 32px 0 32px;
+  padding: 20px;
+  background: @backgroundDefault;
+  border-left-style: solid;
+  border-left-width: 3px;
+}
+
+.riskInfo {
+  margin: 10px 10px;
+  flex-grow: 2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.riskSummary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.riskDetails {
+  composes: .mui.typography[ @body2];
+  margin-top: 30px;
+}
+
+.infoTitle {
+  margin-bottom: 10px;
+  font-weight: normal;
+  color: .mui.palette[ @text-primary];
+  fill: .mui.palette[ @text-primary];
+}
+
+.riskInfoBlock {
+  margin: 10px 20px 0 0;
+
+  .riskInfoIcon {
+    font-size: @fontSizeIcon;
+    margin-left: -5px;
+    margin-right: 8px;
+  }
+}
+
+.riskInfoDesc {
+  composes: .mui.typography[ @h2];
+  display: flex;
+  line-height: 20px;
+  align-items: center;
+}
+
+.infoEntry {
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+}
+
+.entryText {
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.actionText {
+  composes: .mui.typography[ @body2];
+  display: block;
+  transition: opacity @animHoverDuration @animHoverTimingFn;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.critical {
+  color: @colorRiskCritical;
+}
+
+.high {
+  color: @colorRiskHigh;
+}
+
+.medium {
+  color: @colorRiskMedium;
+}
+
+.low {
+  color: @colorRiskLow;
+}
+
+.unknown {
+  color: @colorRiskUnknown;
+}
+
+.border_critical {
+  border-left-color: @colorRiskCritical;
+}
+
+.border_high {
+  border-left-color: @colorRiskHigh;
+}
+
+.border_medium {
+  border-left-color: @colorRiskMedium;
+}
+
+.border_low {
+  border-left-color: @colorRiskLow;
+}
+
+.border_unknown {
+  border-left-color: @colorRiskUnknown;
+}
+
+.passive {
+  opacity: 0.5;
+}
+
+.eventPolicy {
+  composes: .mui.typography[ @body2];
+}

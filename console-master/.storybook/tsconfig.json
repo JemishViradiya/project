@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  },
+  "exclude": [],
+  "include": ["./**/*"],
+  "files": ["../node_modules/@nrwl/react/typings/cssmodule.d.ts", "../tools/nx/typings/image.d.ts"]
+}

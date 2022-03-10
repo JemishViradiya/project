@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`convertToMeters should throw error matching snapshot when value is 6345 and unit is undefined 1`] = `"Unable to make conversion to meters. Input: value=6345, unit=undefined."`;
+
+exports[`convertToMeters should throw error matching snapshot when value is 31232 and unit is SOME_OTHER_UNIT 1`] = `"Unable to make conversion to meters. Input: value=31232, unit=SOME_OTHER_UNIT."`;
+
+exports[`convertToMeters should throw error matching snapshot when value is null and unit is null 1`] = `"Unable to make conversion to meters. Input: value=null, unit=null."`;
+
+exports[`convertToMeters should throw error matching snapshot when value is undefined and unit is miles 1`] = `"Unable to make conversion to meters. Input: value=undefined, unit=miles."`;
+
+exports[`convertToMeters should throw error matching snapshot when value is undefined and unit is undefined 1`] = `"Unable to make conversion to meters. Input: value=undefined, unit=undefined."`;

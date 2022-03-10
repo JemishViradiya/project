@@ -1,0 +1,31 @@
+{
+  "root": "libs/data/export",
+  "sourceRoot": "libs/data/export/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/export/**/*.js",
+          "libs/data/export/**/*.jsx",
+          "libs/data/export/**/*.ts",
+          "libs/data/export/**/*.tsx",
+          "libs/data/export/**/*.spec.ts",
+          "libs/data/export/**/*.spec.tsx",
+          "libs/data/export/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/export/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/libs/data/export"]
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

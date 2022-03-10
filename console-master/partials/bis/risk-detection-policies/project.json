@@ -1,0 +1,25 @@
+{
+  "root": "partials/bis/risk-detection-policies",
+  "sourceRoot": "partials/bis/risk-detection-policies/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/bis/risk-detection-policies/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/bis/risk-detection-policies"],
+      "options": {
+        "jestConfig": "partials/bis/risk-detection-policies/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  },
+  "tags": ["scope:partial", "scope:bis"]
+}

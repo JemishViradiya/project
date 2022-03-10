@@ -1,0 +1,28 @@
+# syntax=docker/dockerfile:labs
+
+# Build the code in an appropriately versioned environment
+FROM ebnexus02.devlab2k.testnet.rim.net:8216/library/node:14-alpine AS build
+
+USER root
+
+RUN \
+    --mount=type=cache,target=/var/cache/ \
+    <<END_RUN
+  GLIBC_VERSION=2.32-r0
+  apk add rsync curl jq docker-cli bash findutils \
+    git python3 make g++ libc6-compat tar xz
+  sed -i -e 's;/bin/ash;/bin/bash;g' /etc/passwd
+  mkdir -p /cache
+  echo yarn global add node-gyp-cache
+  echo yarn config set node_gyp node-gyp-cache
+
+	apk del libc6-compat
+	wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub
+	wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-${GLIBC_VERSION}.apk
+	apk add glibc-${GLIBC_VERSION}.apk
+	rm glibc-${GLIBC_VERSION}.apk
+END_RUN
+
+FROM build as precache
+
+WORKDIR /workdir/UES/console

@@ -1,0 +1,14 @@
+{
+  "projectId": "behaviour/shared-e2e",
+  "fileServerFolder": "./assets/webpage",
+  "fixturesFolder": "./src/cypress/fixtures",
+  "integrationFolder": "./src/cypress/integration",
+  "modifyObstructiveCode": false,
+  "pluginsFile": "../../../tools/cypress/plugins",
+  "supportFile": "./src/cypress/support/index.ts",
+  "video": false,
+  "videosFolder": "../../../dist/cypress/libs/behaviour/shared-e2e/videos",
+  "screenshotsFolder": "../../../dist/cypress/libs/behaviour/shared-e2e/screenshots",
+  "chromeWebSecurity": false,
+  "retries": 2
+}

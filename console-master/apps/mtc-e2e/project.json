@@ -1,0 +1,29 @@
+{
+  "root": "apps/mtc-e2e",
+  "sourceRoot": "apps/mtc-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/mtc-e2e/cypress.json",
+        "tsConfig": "apps/mtc-e2e/tsconfig.e2e.json",
+        "devServerTarget": "mtc:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "mtc:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/apps/mtc-e2e"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/mtc-e2e/src/**/*.ts", "apps/mtc-e2e/src/**/*.js", "apps/mtc-e2e/**/*.ts", "apps/mtc-e2e/**/*.js"]
+      }
+    }
+  },
+  "tags": ["scope:app"],
+  "implicitDependencies": ["mtc"]
+}

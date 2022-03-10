@@ -1,0 +1,217 @@
+{
+  "policy": {
+    "pageTitle": "Avert",
+    "tabTitle": {
+      "mobile": "Mobile",
+      "content": "Inhalt"
+    },
+    "serverError": {
+      "retrievePolicies": "{{error}}",
+      "deletePolicies": "Die Richtlinien konnten nicht gelöscht werden."
+    },
+    "table": {
+      "columns": {
+        "name": "Name",
+        "description": "Beschreibung",
+        "policyType": "Policy-Typ",
+        "userCount": "Nutzer",
+        "groupCount": "Gruppen",
+        "added": "hinzugefügt",
+        "modified": "Geändert",
+        "rank": "Rang"
+      },
+      "tableColumns": "Tabellen-Spalten",
+      "noData": "Keine Daten",
+      "filter": {
+        "name": "Nach Namen",
+        "description": "Nach Beschreibung"
+      }
+    },
+    "dialogs": {
+      "setAsDefault": {
+        "title": "Als Standardbestätigung festlegen",
+        "cancelBtn": "Stornieren",
+        "confirmBtn": "Sparen",
+        "question": "Möchten Sie die Richtlinie als Standard installieren?"
+      }
+    },
+    "buttons": {
+      "add": "Richtlinie hinzufügen",
+      "delete": "löschen",
+      "cancel": "Stornieren",
+      "save": "Sparen",
+      "continue": "Weiter",
+      "addNew": "Hinzufügen",
+      "confirm": "Ja",
+      "rejectConfirm": "Jetzt nicht",
+      "leavePage": "Seite verlassen",
+      "resendMail": "Senden",
+      "cancelResendMail": "Nein"
+    },
+    "search": {
+      "results": "{{value}} Ergebnisse",
+      "placeholder": "Suche nach Richtlinien"
+    },
+    "sections": {
+      "requiredInput": "Dieses Feld ist ein Pflichtfeld.",
+      "general": {
+        "title": "Allgemeine Informationen",
+        "policyName": "Name der Richtlinie",
+        "description": "Beschreibung",
+        "setDefaultPolicy": "Standardrichtlinie festlegen",
+        "type": {
+          "title": "Policy-Typ",
+          "regulatory": "Regulatorische",
+          "organizational": "Organisatorisch"
+        },
+        "info": {
+          "description": "Geben Sie den Richtlinientyp an, den Sie erstellen möchten. Unternehmensrichtlinien können verwendet werden, um die proprietären Informationen Ihres Unternehmens zu schützen. Regulatorische Richtlinien können verwendet werden, um sensible Informationen im Zusammenhang mit Branchen- oder behördlichen Vorschriften zu schützen.",
+          "regulatoryDesc": "Wenn mehrere regulatorische Richtlinien für einen Benutzer in Konflikt geraten, stimmt BlackBerry diese Richtlinien automatisch ab, indem es die restriktivsten Elemente aller Richtlinien anwendet. Die Mindestanzahl von Datenvorkommen wird ausgewählt und die restriktivste Behebungsmaßnahme wird angewendet.",
+          "organizationalDesc": "Wenn mehrere Organisationsrichtlinien für einen Benutzer in Konflikt geraten, stimmt BlackBerry diese Richtlinien automatisch ab, indem es die am wenigsten restriktiven Elemente aller Richtlinien anwendet. Die maximale Anzahl von Datenvorkommen wird ausgewählt, und die am wenigsten restriktive Behebungsmaßnahme wird angewendet."
+        }
+      },
+      "conditions": {
+        "title": "Bedingungen",
+        "addFromTemplateDialog": {
+          "description": "Sie können vordefinierte Vorlagen in den Einstellungen verwenden, um den Schutz für Datentypen zu konfigurieren.",
+          "searchText": "Suche nach Vorlagen",
+          "confirmation": {
+            "title": "Template-Bestätigung",
+            "description": "Durch das Hinzufügen einer neuen Vorlage werden bestehende Bedingungen außer Kraft gesetzt."
+          },
+          "noTemplatesDescription": "Sie haben keine Vorlagen hinzugefügt. Gehen Sie zu den <0>Einstellungen für Avert</0>, um vordefinierte Vorlagen zu Ihrer Liste hinzuzufügen.",
+          "title": "Aus Vorlage hinzufügen"
+        },
+        "table": {
+          "name": "Name",
+          "description": "Beschreibung",
+          "region": "Region"
+        },
+        "builder": {
+          "title": "Bedingungen Builder",
+          "condition": {
+            "and": "Und",
+            "or": "oder"
+          },
+          "label": "mit minimalen Vorkommen von",
+          "buttons": {
+            "addRule": "Artikel hinzufügen",
+            "addGroup": "Gruppe hinzufügen",
+            "deleteGroup": "Gruppe löschen"
+          },
+          "select": {
+            "placeholderText": "Wählen Sie den Datentypnamen",
+            "searchText": "Suche"
+          },
+          "occurrences": {
+            "rangeText": "Der Wert muss zwischen 1 und 10 liegen."
+          }
+        },
+        "description": "Definieren Sie die sensiblen Daten, die Sie schützen möchten, und die Bedingungen, die einen Richtlinienverstoß auslösen. Sie können zunächst eine der Vorlagen verwenden, die Sie in den <0>Avert-Einstellungen</0> ausgewählt haben, oder Ihre eigene benutzerdefinierte Richtlinie erstellen.",
+        "addFromTemplate": "Aus Vorlage hinzufügen"
+      },
+      "whitelist": {
+        "title": "Whitelist-Domains",
+        "name": "Domäne",
+        "description": "Beschreibung",
+        "paragraph": "Geben Sie aus der in den <0>Avert-Einstellungen erstellten Liste an, welchen Browserdomänen vertraut werden kann, um</0> Dateien sicher hochzuladen. Die Richtlinie wird nicht auf zulässige Domänen angewendet."
+      },
+      "emailSettings": {
+        "title": "E-Mail Einstellungen",
+        "noneDescription": "Keine (Standard) > Richtlinie wird auf alle E-Mail-Domains (intern und extern) angewendet",
+        "internalDomainsDescription": "Interne Domains > Richtlinie werden nur auf externe Domains angewendet",
+        "allDomainsDescription": "Alle Domains > Richtlinie werden nicht angewendet. Sensible Daten können per E-Mail geteilt werden",
+        "helperText": "Erkennen Sie, wenn vertrauliche Inhalte per E-Mail geteilt werden.",
+        "recipients": {
+          "none": "Keine",
+          "internal": "Nur interne Empfänger",
+          "all": "Alle Empfänger"
+        },
+        "description": "Geben Sie basierend auf der Liste der zulässigen internen E-Mail-Domänen an, die Sie in den <0>Avert-Einstellungen</0> erstellt haben, welchen E-Mail-Empfängern bei der Freigabe vertraulicher Daten vertraut werden kann. "
+      },
+      "actions": {
+        "policyRules": {
+          "ACTION_TYPE_NONE": "Keine",
+          "ACTION_TYPE_ALERT": "Melden und warnen",
+          "ACTIVITY_TYPE_BROWSER_UPLOAD": "Webbrowser (HTTP, HTTPS)",
+          "ACTIVITY_TYPE_USB_EXFILTRATE": "Herausnehmbarer Speicher",
+          "ACTIVITY_TYPE_SCREEN_CAPTURE": "Bildschirmaufnahme",
+          "ACTIVITY_TYPE_EMAIL_CLIENTS": "E-Mail Clients"
+        },
+        "title": "Aktionen",
+        "description": "Lorem ipsum"
+      },
+      "domains": {
+        "dialogs": {
+          "title": "Domain auf der Whitelist hinzufügen",
+          "description": "Sie können mehrere Whitelist-Domains verwenden, die gemäß dieser Richtlinie zur Verwendung laut sind. Die ursprüngliche Liste ist in den <5>Einstellungen</5> konfiguriert",
+          "searchText": "Suche nach Domains"
+        },
+        "addDomain": "Klicken Sie auf +, um Artikel hinzuzufügen."
+      },
+      "sparkMobileSettings": {
+        "policyConfigNames": {
+          "CONFIG_TYPE_ALLOW_COPY_BB_APPS_INTO_NON_BB_APPS": "Erlauben Sie das Kopieren von Daten von BlackBerry Spark-Apps in Nicht-BlackBerry Spark-Apps",
+          "CONFIG_TYPE_ALLOW_COPY_NON_BB_APPS_INTO_BB_APPS": "Erlauben Sie das Kopieren von Daten zwischen BlackBerry Spark-Apps",
+          "CONFIG_TYPE_ALLOW_DICTATION": "Diktat erlauben",
+          "CONFIG_TYPE_ALLOW_INSECURE_VIDEO": "Erlaube Bildschirmaufnahme und unsichere Videoausgabe",
+          "CONFIG_TYPE_ALLOW_SCREEN_RECORDING": "Aufnahme und Freigabe von Bildschirmaufnahmen zulassen",
+          "CONFIG_TYPE_ALLOW_KEYBOARDS": "Benutzerdefinierte Tastaturen zulassen",
+          "CONFIG_TYPE_ADD_WATERMARK": "Wasserzeichen anzeigen",
+          "CONFIG_TYPE_ALLOW_RESTRICTED_MODE": "Aktivieren Sie den eingeschränkten Modus für Android"
+        },
+        "supportedOsTypesText": "Unterstützte Betriebssystemtypen - ",
+        "title": "Einstellungen Mobiltelefon"
+      },
+      "iosSpecificSettings": {
+        "title": "iOS-spezifische Einstellungen",
+        "allowText": "Erlauben",
+        "screenshotsInText": "Bildschirmfotos in",
+        "intervalText": "Tage",
+        "rangeText": "Der Wert muss zwischen 1 und 14 Tagen liegen."
+      }
+    },
+    "error": {
+      "delete": "Die Richtlinie konnte nicht gelöscht werden.",
+      "update": "Die Richtlinie konnte nicht aktualisiert werden. Fehler: {{error}} ",
+      "create": "Die Richtlinie konnte nicht erstellt werden. Fehler: {{error}} "
+    },
+    "success": {
+      "create": "Die Richtlinie wurde erstellt.",
+      "delete": "Die Richtlinie wurde gelöscht.",
+      "update": "Die Richtlinie wurde aktualisiert."
+    },
+    "updateFormDeletePolicyTooltip": "Richtlinie löschen",
+    "deletePolicyConfirmationDialogTitle": "Bestätigung löschen",
+    "deletePolicyConfirmationDialogDesc": "Möchten Sie diese Richtlinie löschen?",
+    "deleteNote": "Sie müssen alle mit einer Richtlinie verknüpften Benutzer und Gruppen entfernen, bevor Sie sie löschen.",
+    "createContentPolicyConfirmationTitle": "Weisen Sie die Inhaltsrichtlinie",
+    "createMobilePolicyConfirmationTitle": "Weisen Sie die Mobile-Richtlinie",
+    "createPolicyConfirmationDescription": "Die Richtlinie wurde erstellt. Möchten Sie dieser Richtlinie Benutzer oder Gruppen zuweisen?",
+    "updatePolicyConfirmationTitle": "E-Mail erneut an Benutzer senden",
+    "updatePolicyConfirmationDescription": "Möchten Sie die Willkommens-E-Mail erneut senden?",
+    "detail": {
+      "updated": "Aktualisiert am {{date, datetime}}",
+      "settings": "Einstellungen",
+      "assignedUsersAndGroups": "Zugewiesene Nutzer und Gruppen"
+    },
+    "modifiedPolicyConfirmationDialogTitle": "Ungespeicherte Änderungen",
+    "modifiedPolicyConfirmationDialogDesc": "Willst du diese Seite verlassen? Ihre Änderungen wurden nicht gespeichert.",
+    "addPolicyWithType": "Richtlinie zum Schutz von Informationen hinzufügen"
+  },
+  "navigation": {
+    "adaptiveResponse": {
+      "label": "etikett",
+      "componentHeader": {
+        "link": "mehr Info",
+        "paragraph": "Avert-Inhaltsrichtlinien werden verwendet, um sensible Daten Ihres Unternehmens zu erkennen und vor unbefugtem Teilen zu schützen. Wenn mehrere Richtlinien für einen Benutzer in Konflikt geraten, stimmt BlackBerry automatisch basierend auf dem Richtlinientyp ab."
+      }
+    },
+    "title": "Richtlinien",
+    "mobile": {
+      "componentHeader": {
+        "paragraph": "Die Mobiltelefon Einstellungen gelten für alle Gerätetypen, sofern nicht anders angegeben. Wenn einem Benutzer mehr als eine Richtlinie zugewiesen ist, wird die Richtlinie mit dem höchsten Rang angewendet."
+      }
+    }
+  }
+}

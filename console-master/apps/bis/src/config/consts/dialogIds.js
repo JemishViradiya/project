@@ -1,0 +1,21 @@
+const dialogPrefix = 'bis.'
+
+export const NEW_FEATURES_BUGFIXES = `${dialogPrefix}newFeaturesBugfixes`
+export const RISK_REDUCTION = `${dialogPrefix}riskReduction`
+export const POLICY_APPLIED_USERS_GROUPS = `${dialogPrefix}policyAppliedUsersGroups`
+export const POLICY_ACTION_BLOCK_ALL = `${dialogPrefix}policyActionBlockAll`
+export const POLICY_ACTION_BLOCK_REQUESTING = `${dialogPrefix}policyActionBlockRequesting`
+export const POLICY_ACTION_LOCK_WORKSPACE = `${dialogPrefix}policyActionLockWorkspace`
+export const POLICY_ACTION_LOCK_DEVICE = `${dialogPrefix}policyActionLockDevice`
+export const POLICY_ACTION_DISABLE_WORKSPACE = `${dialogPrefix}policyActionDisableWorkspace`
+export const CONFIRM_POLICY_REDIRECT = `${dialogPrefix}confirmPolicyRedirect`
+export const CONFIRM_PRIVACY_SETTING = `${dialogPrefix}confirmPrivacySetting`
+export const EDIT_TRUSTED_IP_ADDRESSES = `${dialogPrefix}editTrustedIpAddresses`
+export const EDIT_UNTRUSTED_IP_ADDRESSES = `${dialogPrefix}editUntrustedIpAddresses`
+export const CONFIRM_DELETE_TRUSTED_IP_ADDRESSES = `${dialogPrefix}confirmDeleteTrustedIpAddresses`
+export const CONFIRM_DELETE_UNTRUSTED_IP_ADDRESSES = `${dialogPrefix}confirmDeleteUntrustedIpAddresses`
+export const CONFIRM_DELETE_GEOZONE_POPUP = `${dialogPrefix}confirmDeleteGeozonePopup`
+export const CONFIRM_DELETE_GEOZONE_LIST_ITEM = `${dialogPrefix}confirmDeleteGeozoneListItem`
+export const CONFIRM_DELETE_POLICY_FROM_LIST = `${dialogPrefix}confirmDeletePolicyFromList`
+export const CONFIRM_DELETE_POLICY_FROM_DETAILS = `${dialogPrefix}confirmDeletePolicyFromDetails`
+export const CONFIRM_DELETE_POLICY_APPLIED_USERS_GROUPS = `${dialogPrefix}confirmDeletePolicyAppliedUsersGroups`

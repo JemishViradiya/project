@@ -1,0 +1,29 @@
+{
+  "root": "partials/eid/policy-e2e",
+  "sourceRoot": "partials/eid/policy-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/eid/policy-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/eid/policy-e2e/cypress.json",
+        "tsConfig": "partials/eid/policy-e2e/tsconfig.json",
+        "devServerTarget": "eid/policy:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "eid/policy:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/eid/policy-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:eid"],
+  "implicitDependencies": ["eid/policy"]
+}

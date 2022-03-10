@@ -1,0 +1,27 @@
+{
+  "widget": {
+    "runningThreats": "脅威の実行",
+    "autoRunThreats": "自動実行脅威",
+    "quarantinedThreats": "隔離された脅威",
+    "uniqueToCylance": "サイランスに特有の",
+    "totalAnalyzedFiles": "分析済みファイルの総数",
+    "threatProtection": "脅威対保護",
+    "deviceProtection": "デバイス保護",
+    "threatEvents": "脅威イベント",
+    "threatsByPriority": "優先度別の脅威",
+    "topTenLists": "トップ 10 リスト",
+    "threatClassifications": "脅威分類"
+  },
+  "topTenLists": {
+    "Threats": "脅威",
+    "Devices": "デバイス",
+    "Zones": "ゾーン",
+    "Threatsfoundonthemostdevices": "ほとんどのデバイスで検出される脅威",
+    "NoThreatsfound": "脅威は見つかりませんでした",
+    "Deviceswiththemostthreats": "脅威が最も多いデバイス",
+    "NoDevicesfound": "デバイスが見つかりません",
+    "Zoneswiththemostthreats": "脅威が最も多いゾーン",
+    "NoZonesfound": "ゾーンが見つかりません"
+  },
+  "protectDashboard": "ダッシュボード Protect"
+}

@@ -1,0 +1,15 @@
+{
+  "next": "Next",
+  "tenantID": "TenantID",
+  "signIn": "Sign in",
+  "help": "Help",
+  "signedOut": "Signed out",
+  "signedOutMessage": "You have been signed out.",
+  "sessionExpired": "Session expired",
+  "sessionExpiredMessage": "Your session has expired.",
+  "signInAgainLink": "Click here to sign in again.",
+  "tenantIdLabel": "Please specify your tenant ID:",
+  "loadingSessionLabel": "Loading your session ...",
+  "loadingTenantLabel": "Loading your tenant ...",
+  "noTenantLabel": "The tenant \"{{tenant}}\" could not be found."
+}

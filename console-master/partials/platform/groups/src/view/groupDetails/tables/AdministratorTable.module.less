@@ -1,0 +1,29 @@
+@import '~theme.main';
+
+.tableRow > td {
+  font-size: 14px;
+  border-bottom: 1px solid .mui.palette[ @border-paper];
+  padding-left: 0;
+}
+
+.tableHead > tr > th {
+  color: .mui.palette[ @text04];
+  border-bottom: 1px solid .mui.palette[ @border-paper];
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 5px;
+  font-size: @fontSizeIcon;
+
+  &:hover {
+    color: @colorLink;
+    cursor: pointer;
+  }
+}

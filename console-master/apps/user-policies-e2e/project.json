@@ -1,0 +1,29 @@
+{
+  "root": "apps/user-policies-e2e",
+  "sourceRoot": "apps/user-policies-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/user-policies-e2e/cypress.json",
+        "tsConfig": "apps/user-policies-e2e/tsconfig.e2e.json",
+        "devServerTarget": "user-policies:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "user-policies:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/apps/user-policies-e2e"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/user-policies-e2e/src/**/*.ts", "apps/user-policies-e2e/src/**/*.js"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["user-policies"]
+}

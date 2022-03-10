@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "module": "commonjs",
+    "types": ["jest", "node"]
+  },
+  "files": ["../../tools/nx/typings/image.d.ts"],
+  "include": [
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.spec.js",
+    "**/*.spec.jsx",
+    "**/*.d.ts",
+    "jest.config.js",
+    "**/*.stories.ts",
+    "**/*.stories.js",
+    "**/*.stories.tsx",
+    "**/*.stories.jsx",
+    ".storybook/**/*.js",
+    ".storybook/**/*.ts",
+    ".storybook/**/*.tsx",
+    ".storybook/**/*.jsx"
+  ],
+  "exclude": ["tools/**"]
+}

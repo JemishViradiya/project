@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "outDir": "../../dist/out-tsc",
+    "types": ["node", "webpack-env"]
+  },
+  "files": [
+    "../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
+    "../../tools/nx/typings/image.d.ts",
+    "../../tools/nx/typings/webpack-loader.d.ts"
+  ],
+  "exclude": [],
+  "include": [
+    "src/storybook/**/*.js",
+    "src/storybook/**/*.jsx",
+    "src/storybook/**/*.ts",
+    "src/storybook/**/*.tsx",
+    ".storybook/**/*.js"
+  ]
+}

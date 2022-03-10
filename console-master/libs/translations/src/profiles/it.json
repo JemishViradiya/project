@@ -1,0 +1,107 @@
+{
+  "navigation": {
+    "gateway": "portale",
+    "policies": "Policy",
+    "title": "Politica per l'utente",
+    "user": "Utente",
+    "activation": {
+      "label": "Iscrizione"
+    },
+    "mobileDeviceThreats": {
+      "label": "Protect Mobile"
+    },
+    "networkAccessControl": {
+      "label": "Controllo dell'accesso alla rete"
+    },
+    "gatewayService": {
+      "label": "Servizio gateway"
+    },
+    "enterpriseIdentity": {
+      "label": "Autenticazione"
+    },
+    "adaptiveResponse": {
+      "label": "Risposta adattiva"
+    },
+    "riskDetection": {
+      "label": "Rilevamenti dei rischi"
+    },
+    "dlpMobileThreads": {
+      "label": "Avert Mobile"
+    },
+    "dlpContentThreads": {
+      "label": "Protezione delle informazioni"
+    }
+  },
+  "policy": {
+    "cancelButton": "Annulla",
+    "deleteButton": "Elimina",
+    "saveButton": "Salva",
+    "addButton": "Inserisci",
+    "removeButton": "Rimuovi",
+    "list": {
+      "add": "Aggiungi criterio",
+      "results": "{{value}} risultati",
+      "rank": "Rango",
+      "searchPlaceholder": "Cerca le politiche",
+      "noData": "Nessun dato",
+      "columns": {
+        "rank": "Rango",
+        "name": "Nome Politica",
+        "description": "Descrizione",
+        "userCount": "Utenti",
+        "groupCount": "Gruppi di utenti",
+        "added": "Aggiunto",
+        "modified": "Modificato"
+      },
+      "columnPicker": "Colonne tabella",
+      "selected": "{{count}} selezionato"
+    },
+    "delete": {
+      "title": "Elimina conferma",
+      "deleteSingle": "Vuoi eliminare la politica di {{profile}}?",
+      "multipleDelete": "Eliminare queste norme?",
+      "note": "È necessario rimuovere tutti gli utenti e i gruppi associati a un criterio prima di eliminarlo.",
+      "successMessage": "Il criterio è stato eliminato."
+    },
+    "rank": {
+      "successfulUpdate": "La classifica è stata aggiornata."
+    },
+    "detail": {
+      "updated": "Aggiornato il {{date, datetime}}",
+      "appliedUsersAndGroups": "Utenti e gruppi assegnati",
+      "settings": "Impostazioni",
+      "device": "Dettagli sulla politica del Dispositivo",
+      "user": "Dettagli della politica dell'utente"
+    },
+    "assignment": {
+      "columns": {
+        "name": "Nome",
+        "email": "E-mail"
+      },
+      "add": "Aggiungi utente o gruppo",
+      "searchPlaceholder": "Cerca utenti e gruppi",
+      "userCount": "{{count}} utenti",
+      "dialog": {
+        "title": "Aggiungere un utente o un gruppo",
+        "description": "Cerca utenti o gruppi. È possibile assegnare più utenti e gruppi allo stesso criterio.",
+        "searchText": "Cerca utenti o gruppi",
+        "list": {
+          "noResults": "Nessun risultato"
+        }
+      },
+      "unassign": {
+        "title": "Rimozione di utenti o gruppi",
+        "content": "Vuoi rimuovere i seguenti articoli?"
+      },
+      "successfulAssignment": "Gli utenti o i gruppi sono stati aggiunti al criterio.",
+      "successfulUnassignment": "Gli utenti o i gruppi sono stati rimossi dal criterio."
+    },
+    "defaultPolicyName": "Predefinito"
+  },
+  "policies": {
+    "deletePoliciesSuccessMessage": "I criteri sono stati eliminati.",
+    "deletePoliciesErrorMessage": "I criteri non possono essere eliminati.",
+    "deletePolicyErrorMessage": "Non è stato possibile eliminare il criterio.",
+    "deleteMultiplePoliciesErrorDescription": "Non è stato possibile eliminare i seguenti criteri perché assegnati a utenti o gruppi:"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "publicPath": "/",
+  "navigation": [
+    {
+      "name": "dashboard",
+      "route": "/Dashboard"
+    },
+    {
+      "name": "protection",
+      "route": "/Threats",
+      "match": "/Threats*"
+    },
+    {
+      "name": "protectZones",
+      "route": "/Zone",
+      "match": "/Zone*"
+    },
+    {
+      "name": "assets",
+      "route": "/Asset",
+      "match": "/Asset*"
+    },
+    {
+      "name": "optics",
+      "route": "/Optics",
+      "navigation": [
+        {
+          "name": "opticsDetect",
+          "route": "/Optics#/detect",
+          "match": "/Optics#/detect*"
+        },
+        {
+          "name": "instaQuery",
+          "route": "/Optics#/iq/create",
+          "match": "/Optics#/iq*"
+        },
+        {
+          "name": "advancedQuery",
+          "route": "/Optics/AdvancedQuery",
+          "match": "/Optics/AdvancedQuery*"
+        },
+        {
+          "name": "focusData",
+          "route": "/Optics#/focus",
+          "match": "/Optics#/focus*"
+        },
+        {
+          "name": "packages",
+          "route": "/Optics#/packages/deploy",
+          "match": "/Optics#/packages*"
+        },
+        {
+          "name": "devices",
+          "route": "/Optics#/devices",
+          "match": "/Optics#/devices*"
+        },
+        {
+          "name": "actionHistory",
+          "route": "/Optics#/actionHistory/remoteResponseLogs",
+          "match": "/Optics#/actionHistory*"
+        },
+        {
+          "name": "Configurations",
+          "route": "/Optics#/settings/detectOnboard",
+          "match": "/Optics#/settings*"
+        }
+      ]
+    },
+    {
+      "name": "persona",
+      "route": "/Persona"
+    },
+    {
+      "name": "gateway",
+      "route": "/uc/dashboard#/dashboard",
+      "navigation": [
+        {
+          "name": "dashboard",
+          "route": "/uc/dashboard#/dashboard",
+          "match": "/uc/dashboard#*"
+        },
+        {
+          "name": "alerts",
+          "route": "/uc/platform#/alerts",
+          "match": "/uc/platform#/alerts*"
+        },
+        {
+          "name": "events",
+          "route": "/uc/gateway#/events",
+          "match": "/uc/gateway#/events*"
+        },
+        {
+          "name": "users",
+          "route": "/uc/platform#/users",
+          "match": "/uc/platform#/users*"
+        },
+        {
+          "name": "groups",
+          "route": "/uc/platform#/groups",
+          "match": "/uc/platform#/groups*"
+        },
+        {
+          "name": "policies",
+          "route": "/uc/user-policies",
+          "match": "/uc/user-policies*"
+        },
+        {
+          "name": "settings",
+          "route": "/uc/gateway-settings",
+          "match": "/uc/gateway-settings*"
+        }
+      ]
+    },
+    {
+      "name": "reporting",
+      "route": "/Reports"
+    },
+    {
+      "name": "settings",
+      "route": "/Application",
+      "navigation": [
+        {
+          "name": "protectApplication",
+          "route": "/Application"
+        },
+        {
+          "name": "protectUser",
+          "route": "/User",
+          "match": "/User*"
+        },
+        {
+          "name": "policy",
+          "route": "/Policy/List",
+          "match": "/Policy*"
+        },
+        {
+          "name": "protectGlobalList",
+          "route": "/GlobalList"
+        },
+        {
+          "name": "protectDeployment",
+          "route": "/Deployment"
+        },
+        {
+          "name": "protectAgentUpdate",
+          "route": "/AgentUpdate"
+        },
+        {
+          "name": "protectCertificateStorage",
+          "route": "/CertificateStorage"
+        },
+        {
+          "name": "protectIntegrations",
+          "route": "/Integrations"
+        },
+        {
+          "name": "deviceManagement",
+          "route": "/DeviceManagement"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "root": "partials/gateway/settings-e2e",
+  "sourceRoot": "partials/gateway/settings-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/gateway/settings-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/gateway/settings-e2e/cypress.json",
+        "tsConfig": "partials/gateway/settings-e2e/tsconfig.json",
+        "devServerTarget": "gateway/settings:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "gateway/settings:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/gateway/settings-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:gateway"],
+  "implicitDependencies": ["gateway/settings"]
+}

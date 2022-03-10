@@ -1,0 +1,62 @@
+{
+  "responses": {
+    "list": {
+      "empty": {
+        "totals": {
+          "pages": 1,
+          "elements": 0
+        },
+        "navigation": {
+          "next": "next",
+          "previous": "prev"
+        },
+        "count": 0,
+        "elements": []
+      },
+      "default": {
+        "totals": {
+          "pages": 1,
+          "elements": 2
+        },
+        "navigation": {
+          "next": "next",
+          "previous": "prev"
+        },
+        "count": 2,
+        "elements": [
+          {
+            "guid": "e9a2b066-d37c-4890-94c0-7953e717e535",
+            "name": "Facebook as restricted",
+            "platform": "IOS",
+            "type": "RESTRICTED",
+            "tenantGuid": "3d55abd2-c00e-4f5f-abcf-01c92ac777b1",
+            "identifier": "e9a2b066-d37c-4890-94c0-7953e717e535",
+            "subject": "Mock restricted subject 1",
+            "issuer": "Mock restricted issuer 1",
+            "description": "Lorem Ipsum is simply dummy text of the printing some other",
+            "source": "MANUAL",
+            "created": "2020-11-04T07:18:54.825"
+          },
+          {
+            "guid": "e4b1c014-d37c-4890-94c0-7953e717a128",
+            "name": "Gmail as restricted",
+            "platform": "ANDROID",
+            "type": "RESTRICTED",
+            "tenantGuid": "3d55abd2-c00e-4f5f-abcf-01c92ac777b1",
+            "identifier": "e4b1c014-d37c-4890-94c0-7953e717a128",
+            "subject": "Mock restricted subject 2",
+            "issuer": "Mock restricted issuer 2",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+            "source": "MANUAL",
+            "created": "2020-10-02T03:17:54.825"
+          }
+        ]
+      }
+    },
+    "create": {
+      "success": {
+        "name": "Facebook"
+      }
+    }
+  }
+}

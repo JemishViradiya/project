@@ -1,0 +1,7 @@
+{
+  "name": "@ues/behaviours-e2e",
+  "version": "0.0.1",
+  "sideEffects": [
+    "./.storybook/i18n/i18n.js"
+  ]
+}

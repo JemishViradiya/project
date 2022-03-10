@@ -1,0 +1,22 @@
+@import '../../../../theme/theme.less';
+
+.modalInput {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+  position: relative;
+}
+
+.input-label {
+  composes: .mui.typography[ @h6];
+  display: block;
+  color: .mui.palette[ @text-primary];
+
+  > input[type='number'] {
+    margin: 4px 0;
+    padding: 7px 4px;
+    font-size: 12px;
+    border: 2px solid @colorButtonBorder;
+    min-width: 8ch;
+  }
+}

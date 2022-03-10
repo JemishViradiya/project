@@ -1,0 +1,12 @@
+{
+  "audit": "0.6",
+  "auth": "0.21",
+  "billing": "0.1",
+  "devices": "0.10",
+  "partners": "0.18",
+  "policies": "0.6",
+  "tenant-users": "0.12",
+  "tenants": "0.18",
+  "threats": "0.1",
+  "zones": "0.9"
+}

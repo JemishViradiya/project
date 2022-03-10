@@ -1,0 +1,15 @@
+{
+  "next": "Suivant",
+  "tenantID": "ID de locataire",
+  "signIn": "Connectez-vous",
+  "help": "Aide",
+  "signedOut": "Déconnecté",
+  "signedOutMessage": "Vous avez été déconnecté.",
+  "sessionExpired": "La session a expiré",
+  "sessionExpiredMessage": "Votre session a expiré.",
+  "signInAgainLink": "Cliquez ici pour vous connecter à nouveau.",
+  "tenantIdLabel": "Veuillez spécifier votre ID de locataire:",
+  "loadingSessionLabel": "Chargement de votre session...",
+  "loadingTenantLabel": "Chargement de votre locataire...",
+  "noTenantLabel": "Le locataire « {{tenant}} » est introuvable."
+}

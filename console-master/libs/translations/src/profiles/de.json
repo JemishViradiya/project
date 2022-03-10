@@ -1,0 +1,107 @@
+{
+  "navigation": {
+    "gateway": "Gateway",
+    "policies": "Richtlinien",
+    "title": "Benutzer-Richtlinie",
+    "user": "User",
+    "activation": {
+      "label": "Einschreibung"
+    },
+    "mobileDeviceThreats": {
+      "label": "Protect Mobile"
+    },
+    "networkAccessControl": {
+      "label": "Netzwerkzugriffskontrolle"
+    },
+    "gatewayService": {
+      "label": "Gateway Dienst"
+    },
+    "enterpriseIdentity": {
+      "label": "Authentifizierung"
+    },
+    "adaptiveResponse": {
+      "label": "Adaptive Antwort"
+    },
+    "riskDetection": {
+      "label": "Risikoerkennungen"
+    },
+    "dlpMobileThreads": {
+      "label": "Avert Mobiltelefon"
+    },
+    "dlpContentThreads": {
+      "label": "Schutz von Informationen"
+    }
+  },
+  "policy": {
+    "cancelButton": "Stornieren",
+    "deleteButton": "löschen",
+    "saveButton": "Sparen",
+    "addButton": "Hinzufügen",
+    "removeButton": "entfernen",
+    "list": {
+      "add": "Richtlinie hinzufügen",
+      "results": "{{value}} Ergebnisse",
+      "rank": "Rang",
+      "searchPlaceholder": "Suche nach Richtlinien",
+      "noData": "Keine Daten",
+      "columns": {
+        "rank": "Rang",
+        "name": "Name der Richtlinie",
+        "description": "Beschreibung",
+        "userCount": "Nutzer",
+        "groupCount": "Benutzergruppen",
+        "added": "hinzugefügt",
+        "modified": "Geändert"
+      },
+      "columnPicker": "Tabellen-Spalten",
+      "selected": "{{count}} ausgewählt"
+    },
+    "delete": {
+      "title": "Bestätigung löschen",
+      "deleteSingle": "Möchten Sie die Richtlinie {{profile}} löschen?",
+      "multipleDelete": "Möchten Sie diese Richtlinien löschen?",
+      "note": "Sie müssen alle mit einer Richtlinie verknüpften Benutzer und Gruppen entfernen, bevor Sie sie löschen.",
+      "successMessage": "Die Richtlinie wurde gelöscht."
+    },
+    "rank": {
+      "successfulUpdate": "Das Ranking wurde aktualisiert."
+    },
+    "detail": {
+      "updated": "Aktualisiert am {{date, datetime}}",
+      "appliedUsersAndGroups": "Zugewiesene Benutzer und Gruppen",
+      "settings": "Einstellungen",
+      "device": "Details zur Geräterichtlinie",
+      "user": "Angaben zu Benutzerrichtlinien"
+    },
+    "assignment": {
+      "columns": {
+        "name": "Name",
+        "email": "E-mail"
+      },
+      "add": "Benutzer oder Gruppe hinzufügen",
+      "searchPlaceholder": "Suche nach Benutzern und Gruppen",
+      "userCount": "{{count}} Benutzer",
+      "dialog": {
+        "title": "Einen Benutzer oder eine Gruppe hinzufügen",
+        "description": "Suche nach Benutzern oder Gruppen. Sie können derselben Richtlinie mehrere Benutzer und Gruppen zuweisen.",
+        "searchText": "Suche nach Benutzern oder Gruppen",
+        "list": {
+          "noResults": "Keine Ergebnisse"
+        }
+      },
+      "unassign": {
+        "title": "Benutzer oder Gruppen entfernen",
+        "content": "Möchten Sie die folgenden Artikel entfernen?"
+      },
+      "successfulAssignment": "Die Benutzer oder Gruppen wurden der Richtlinie hinzugefügt.",
+      "successfulUnassignment": "Die Benutzer oder Gruppen wurden aus der Richtlinie entfernt."
+    },
+    "defaultPolicyName": "Standard"
+  },
+  "policies": {
+    "deletePoliciesSuccessMessage": "Die Richtlinien wurden gelöscht.",
+    "deletePoliciesErrorMessage": "Die Richtlinien konnten nicht gelöscht werden.",
+    "deletePolicyErrorMessage": "Die Richtlinie konnte nicht gelöscht werden.",
+    "deleteMultiplePoliciesErrorDescription": "Die folgenden Richtlinien konnten nicht gelöscht werden, da sie Benutzern oder Gruppen zugewiesen sind:"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@ues/service-worker",
+  "version": "0.0.1",
+  "module": "./src/client/index.ts",
+  "dependencies": {
+    "workbox-window": "5.1.3"
+  },
+  "devDependencies": {
+    "@types/workbox-sw": "^4.3.1"
+  }
+}

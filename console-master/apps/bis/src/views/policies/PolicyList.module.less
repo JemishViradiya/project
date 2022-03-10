@@ -1,0 +1,21 @@
+@import '../../theme/theme.less';
+
+.riskLevel {
+  display: flex;
+  align-items: center;
+}
+
+.riskLevelLabel {
+  padding-left: 10px;
+}
+
+.policyLink {
+  display: block;
+  color: @colorLink;
+  text-decoration: none;
+  line-height: 35px;
+}
+
+:global(.ReactVirtualized__Table__rowColumn:hover) .policyLink {
+  text-decoration: underline;
+}

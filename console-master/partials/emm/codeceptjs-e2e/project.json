@@ -1,0 +1,25 @@
+{
+  "root": "partials/emm/codeceptjs-e2e",
+  "sourceRoot": "partials/emm/codeceptjs-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/emm/codeceptjs-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "integration": {
+      "executor": "./tools/executors/codeceptjs:run",
+      "options": {
+        "headless": false
+      },
+      "configurations": {
+        "ci": {
+          "headless": true
+        }
+      },
+      "outputs": ["codeceptjs-results/partials/emm/codeceptjs-e2e"]
+    }
+  }
+}

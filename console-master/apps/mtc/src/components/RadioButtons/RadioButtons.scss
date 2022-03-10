@@ -1,0 +1,42 @@
+.radio-container {
+  position: relative;
+  .field .checkbox label {
+    font-size: 14px;
+    color: #5c5d66;
+    padding-top: 5px;
+    padding-left: 35px;
+    font-weight: 400;
+  }
+}
+.ui.radio.checkbox {
+  &:hover {
+    label {
+      color: #03a5ef;
+      &:before {
+        border-color: #03a5ef;
+      }
+      &:after {
+        color: #03a5ef;
+      }
+    }
+  }
+}
+.ui.radio.checkbox .box:before,
+.ui.radio.checkbox label:before {
+  width: 26px;
+  height: 26px;
+}
+.ui.radio.checkbox .box:before,
+.ui.radio.checkbox label:after {
+  width: 26px;
+  height: 26px;
+}
+.ui.checkbox input[type='checkbox'],
+.ui.checkbox input[type='radio'] {
+  width: 26px;
+  height: 26px;
+}
+.ui.radio.checkbox input:checked ~ .box:after,
+.ui.radio.checkbox input:checked ~ label:after {
+  background-color: #5c5d66;
+}

@@ -1,0 +1,96 @@
+#authentication-settings {
+  position: relative;
+  z-index: 2;
+
+  .input-container,
+  .textarea-input-container {
+    display: flex;
+    margin-bottom: 0;
+    height: 40px;
+    &.error {
+      margin-bottom: 28px;
+    }
+    input,
+    p,
+    textarea {
+      flex: 7;
+      font-size: 14px;
+      color: #5c5d66;
+      letter-spacing: 0;
+      line-height: 20px;
+    }
+    .badge {
+      position: relative;
+      top: 7px;
+      margin-left: 0;
+    }
+    > div {
+      flex: 7;
+      position: relative;
+    }
+    p {
+      padding-top: 8px;
+    }
+    .dropdown.ui.selection {
+      width: 100%;
+    }
+    label {
+      flex: 3;
+    }
+    .ui.selection.disabled {
+      background: #f5f5f6;
+      border: 1px solid #cdd0db;
+      font-size: 14px;
+      color: #babbc0;
+      letter-spacing: 0;
+      line-height: 20px;
+      opacity: 1;
+    }
+
+    span.icon-info-circle {
+      left: 90px;
+    }
+  }
+
+  .textarea-input-container {
+    height: initial;
+  }
+
+  &.edit {
+    .textarea-input-container {
+      height: initial;
+      textarea {
+        resize: vertical;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        word-break: break-all;
+        height: 135px;
+      }
+    }
+  }
+
+  .sso-enabled-config {
+    &--show {
+      transition: max-height 0.25s, opacity 0.25s;
+      max-height: 10000px;
+      opacity: 1;
+    }
+    &--hide {
+      transition: max-height 0.25s, opacity 0.25s;
+      overflow: hidden;
+      max-height: 0px;
+      opacity: 0;
+    }
+  }
+  .MuiIconButton-root:hover {
+    background: none;
+  }
+
+  .x509-cert,
+  .login-url {
+    &__value {
+      word-break: break-all;
+      vertical-align: middle;
+    }
+  }
+}

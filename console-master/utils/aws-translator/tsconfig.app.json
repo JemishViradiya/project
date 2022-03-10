@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "ts-node": {
+    "files": true,
+    "transpileOnly": true
+  },
+  "compilerOptions": {
+    "target": "ES2018",
+    "lib": ["es2018", "es2017", "DOM"],
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "strictNullChecks": true,
+    "outDir": "../../dist/out-tsc",
+    "types": ["node"]
+  },
+  "files": [],
+  "exclude": ["**/*.spec.ts", "**/*.spec.tsx"],
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
+}

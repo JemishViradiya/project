@@ -1,0 +1,154 @@
+@import '../theme/theme.less';
+
+.filterButton {
+  user-select: none;
+  padding: 7px 8px 7px 10px;
+  border-radius: 1px;
+  margin-right: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color @animHoverDuration @animHoverTimingFn, color @animHoverDuration @animHoverTimingFn;
+}
+
+.close {
+  font-size: 16px;
+  vertical-align: middle;
+  margin: -4px 0 -4px 6px;
+  overflow: hidden;
+  transition: color @animHoverDuration @animHoverTimingFn;
+}
+
+.closeSingleSelection {
+  pointer-events: all;
+
+  &:hover {
+    color: @colorLink;
+    cursor: pointer;
+  }
+}
+
+.suggestion {
+  border: 1px solid @colorFilterEmptyBorder;
+  background-color: @colorFilterEmptyFill;
+  color: @colorFilterEmptyColor;
+  transition: background-color 300ms ease, border-color 220ms ease, color 220ms ease;
+
+  &:hover {
+    color: @colorFilterEmptyColorHover;
+    border-color: @colorFilterEmptyBorderHover;
+
+    > .close {
+      color: black;
+    }
+  }
+
+  &:active,
+  &.selected {
+    border-color: transparent;
+    background-color: @colorLink;
+    color: white;
+  }
+}
+
+.filterButtonLevel(@type) {
+  background-color: var(~'--mui-palette-bis-filter-@{type}-default-fill');
+  color: var(~'--mui-palette-bis-filter-@{type}-default-color');
+  border: 1px solid var(~'--mui-palette-bis-filter-@{type}-default-border');
+
+  > .close {
+    color: var(~'--mui-palette-bis-filter-@{type}-default-button');
+  }
+
+  &:hover {
+    border-color: var(
+      ~'--mui-palette-bis-filter-@{type}-default-borderHover',
+      var(~'--mui-palette-bis-filter-@{type}-default-buttonHover', transparent)
+    );
+
+    > .close {
+      color: var(
+        ~'--mui-palette-bis-filter-@{type}-default-buttonHover',
+        var(~'--mui-palette-bis-filter-@{type}-default-borderHover', transparent)
+      );
+    }
+  }
+
+  &.selected,
+  &:active {
+    background-color: var(~'--mui-palette-bis-filter-@{type}-selected-fill');
+    color: var(~'--mui-palette-bis-filter-@{type}-selected-color');
+
+    > .close {
+      color: var(~'--mui-palette-bis-filter-@{type}-selected-button');
+    }
+
+    &:hover {
+      border-color: transparent;
+
+      > .close {
+        color: var(~'--mui.palette.bis.filter.@{type}.selected.buttonHover', transparent);
+      }
+    }
+  }
+}
+
+.singleSelection {
+  composes: .mui.typography[ @button];
+  user-select: none;
+  color: @colorFilterEmptyColor;
+  border: 1px solid @colorFilterEmptyBorder;
+
+  &:disabled {
+    transition: none;
+    cursor: default;
+  }
+}
+
+.empty {
+  .filterButtonLevel(empty);
+}
+
+.critical {
+  .filterButtonLevel(critical);
+}
+
+.high {
+  .filterButtonLevel(high);
+}
+
+.medium {
+  .filterButtonLevel(medium);
+}
+
+.low {
+  .filterButtonLevel(low);
+}
+
+.unknown {
+  .filterButtonLevel(unknown);
+}
+
+.singleSelection[disabled] {
+  pointer-events: none;
+  transition: none;
+  cursor: default;
+}
+
+.suggestionSingleSelection {
+  background-color: @colorFilterEmptyFill;
+  color: @colorFilterEmptyColor;
+
+  &:hover {
+    color: @colorFilterEmptyColorHover;
+    border-color: @colorFilterEmptyBorderHover;
+  }
+
+  &:active,
+  &.selected {
+    background-color: @colorLink;
+    color: white;
+  }
+}

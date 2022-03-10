@@ -1,0 +1,30 @@
+{
+  "extends": "./tsconfig.json",
+  "ts-node": {
+    "transpileOnly": true,
+    "log-error": true,
+    "files": true
+  },
+  "compilerOptions": {
+    "target": "ES2018",
+    "lib": ["es2018", "es2017", "ESNext.AsyncIterable", "ESNext.Intl", "ESNext.BigInt"],
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "strictNullChecks": true,
+    "types": ["codeceptjs", "webdriverio/async", "node", "chai"],
+    "outDir": "../../../dist/out-tsc"
+  },
+  "files": ["./types/codeceptjs.d.ts"],
+  "include": ["src/codeceptjs/**/*.js", "src/codeceptjs/**/*.ts", "types/codecept*", "codecept.conf.js"],
+  "exclude": [
+    "src/cypress/**/*.ts",
+    "src/cypress/**/*.tsx",
+    "**/*.stories.ts",
+    "**/*.stories.js",
+    "output/**",
+    "docs/**",
+    "node_modules/**"
+  ]
+}

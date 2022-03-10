@@ -1,0 +1,99 @@
+@import '../../theme/theme.less';
+
+.metadata {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: stretch;
+}
+
+.metadata-input-name {
+  flex: 1 0 120px;
+  margin-right: 16px !important;
+}
+
+.metadata-input-description {
+  flex: 4 1 10px;
+}
+
+.metadata-input {
+  border-top-color: transparent !important;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  border-width: 1px;
+  padding: 13px 0;
+  min-width: 100%;
+  background: none;
+  font-size: 0.8125rem;
+
+  &:not(:focus) {
+    color: grey;
+  }
+}
+
+.risk-engine-table-box {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  justify-content: stretch;
+}
+
+.risk-engine-table-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.risk-engine-table-title {
+  composes: .mui.typography[ @h3];
+  flex: 1 1 auto;
+  text-align: start;
+  margin-bottom: 18px;
+}
+
+.risk-engine-table-subtitle {
+  composes: .mui.typography[ @body2];
+  text-align: left;
+  padding-top: 2px;
+  padding-bottom: 6px;
+}
+
+.risk-engine-table-settings {
+  text-decoration: none;
+  color: @colorLink;
+  cursor: pointer;
+  user-select: none;
+}
+
+.risk-engine-table-icon {
+  align-self: flex-end;
+  transform: scaleY(-1);
+
+  &[aria-expanded='false'] {
+    transform: scaleY(1);
+  }
+}
+
+.description {
+  composes: .mui.typography[ @subtitle1];
+  color: .mui.palette[ @text-primary];
+}
+
+.text {
+  height: 25%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  padding-bottom: 32px;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.graphic {
+  width: 270px;
+  align-self: center;
+}

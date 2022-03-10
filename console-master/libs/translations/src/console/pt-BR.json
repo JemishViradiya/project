@@ -1,0 +1,35 @@
+{
+  "common": {
+    "settings": "Definições"
+  },
+  "authentication": {
+    "title": "Autenticação"
+  },
+  "adaptiveSecurity": {
+    "title": "Segurança adaptável",
+    "definedGeozones": {
+      "title": "Geozones definidos"
+    },
+    "behavioralRisk": {
+      "title": "Configuração do modelo de risco comportamental"
+    },
+    "generalSettings": {
+      "title": "Definições gerais"
+    }
+  },
+  "directoryConnections": {
+    "title": "Conexões de diretório",
+    "connections": {
+      "title": "Conexões de diretório"
+    },
+    "connectivityNode": {
+      "title": "Nó de conectividade"
+    }
+  },
+  "network": {
+    "title": "Rede"
+  },
+  "protectGlobalListNew": {
+    "title": "Lista global (Móbil)"
+  }
+}

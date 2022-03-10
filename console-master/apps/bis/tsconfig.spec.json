@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "module": "commonjs",
+    "types": ["jest", "node"]
+  },
+  "include": [
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.spec.js",
+    "**/*.spec.jsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.test.js",
+    "**/*.test.jsx",
+    "**/*.d.ts",
+    "tests/*.js",
+    "jest.config.js",
+    "jest.setup.js"
+  ],
+  "files": ["../../node_modules/@nrwl/react/typings/cssmodule.d.ts", "../../tools/nx/typings/image.d.ts"]
+}

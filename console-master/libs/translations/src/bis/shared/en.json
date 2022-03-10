@@ -1,0 +1,69 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "add": "Add",
+    "errorPleaseContact": "An error has occurred. Please try again or contact your administrator.",
+    "description": "Description",
+    "risk": "risk",
+    "settings": "Settings",
+    "delete": "Delete",
+    "descriptionInvalid": "The description must be {{max}} characters or less.",
+    "errorFieldRequired": "This field is required",
+    "errorInvalidName": "Invalid name",
+    "nameInvalid": "The name must be {{max}} characters or less.",
+    "automaticRiskReduction": "Automatic risk reduction"
+  },
+  "risk": {
+    "common": {
+      "identityRisk": "Identity risk",
+      "identityRiskResponseActions": "Identity Risk Response Actions",
+      "networkAnomaly": "Network anomaly",
+      "generalInfo": "General Information"
+    },
+    "label": {
+      "low": "Low risk",
+      "medium": "Medium risk",
+      "high": "High risk",
+      "critical": "Critical risk"
+    },
+    "level": {
+      "CRITICAL": "Critical",
+      "HIGH": "High",
+      "MEDIUM": "Medium",
+      "LOW": "Low",
+      "TRAINING": "Training",
+      "UNKNOWN": "Unknown",
+      "UNTRUSTED": "Untrusted",
+      "UNDETECTED": "Undetected",
+      "UNDEFINED": "Undefined",
+      "TRUSTED": "Trusted",
+      "AT_RISK": "At risk",
+      "SAFE": "Safe",
+      "SECURED": "Secure"
+    }
+  },
+  "arr": {
+    "challengeState": {
+      "deny": "Declined by user",
+      "failed": "Error - Not completed",
+      "in_progress": "In progress",
+      "no_mfa": "Not enabled in policy",
+      "ok": "Verified",
+      "timeout": "Timed out",
+      "unknown": "Error - Not completed",
+      "mfa_skipped": "Bypassed",
+      "fraud": "Fraud"
+    }
+  },
+  "policies": {
+    "create": {
+      "error": "The policy could not be created."
+    },
+    "details": {
+      "errorSave": "The policy could not be saved.",
+      "errorDelete": "The policy could not be deleted.",
+      "errorServerNameAlreadyExists": "A policy with this name already exists."
+    }
+  }
+}

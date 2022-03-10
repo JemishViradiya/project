@@ -1,0 +1,108 @@
+#create-edit-user-form {
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-left: 24px;
+  > div {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .add-another-user {
+    font-size: 16px;
+    line-height: 24px;
+    color: #2b99db;
+    font-weight: 400;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .user-row {
+    margin-bottom: 32px;
+    > div:not(:first-child) {
+      margin-left: -6px !important;
+    }
+  }
+  .ui.input {
+    display: block;
+    margin-top: 0;
+  }
+  .card {
+    padding-left: 24px !important;
+  }
+
+  .ui.search.dropdown {
+    width: 100%;
+    border: 1px solid #cdd0db;
+    height: 40px;
+    & > .text,
+    input[type='text'],
+    .default.text {
+      width: auto;
+      padding: 0.67857143em 1em;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 100%;
+    }
+    .dropdown.icon {
+      position: absolute;
+      width: auto;
+      height: auto;
+      line-height: 1.21428571em;
+      top: 0.78571429em;
+      right: 1em;
+      z-index: 3;
+      margin: -0.78571429em;
+      padding: 0.78571429em;
+      opacity: 0.8;
+    }
+    .menu {
+      min-width: 0;
+      width: 100%;
+    }
+    &.loading .dropdown.icon {
+      top: 15px;
+    }
+  }
+  .Select {
+    height: 40px;
+    border-radius: 0;
+  }
+  .Select-control,
+  .Select-input {
+    height: 38px;
+    border-radius: 0;
+
+    input {
+      border: none;
+    }
+  }
+
+  .Select-placeholder {
+    line-height: 40px;
+    font-weight: 400;
+  }
+  .Select-arrow {
+    border-style: solid;
+    border-width: 7px 6px 0 6px;
+    border-color: #000000 transparent transparent transparent;
+  }
+  .Select-arrow-zone {
+    width: 45px;
+  }
+  .Select-clear-zone {
+    padding-top: 5px;
+  }
+
+  .Select--single > .Select-control .Select-value {
+    line-height: 40px;
+    max-width: 80%;
+  }
+
+  .Select-option {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}

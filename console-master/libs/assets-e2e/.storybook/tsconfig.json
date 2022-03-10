@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "emitDecoratorMetadata": true,
+    "outDir": ""
+  },
+  "exclude": ["../**/*.spec.ts", "../**/*.spec.js", "../**/*.spec.tsx", "../**/*.spec.jsx"],
+  "include": ["../src/storybook/**/*", "./*.js"],
+  "files": [
+    "../../../tools/nx/typings/webpack-loader.d.ts",
+    "../../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
+    "../../../tools/nx/typings/image.d.ts",
+    "../../../node_modules/@nrwl/react/typings/styled-jsx.d.ts"
+  ]
+}

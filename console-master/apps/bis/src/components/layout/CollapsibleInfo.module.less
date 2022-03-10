@@ -1,0 +1,33 @@
+@import '../../theme/theme.less';
+
+.info {
+  composes: .mui.typography[ @body2];
+}
+
+.titleBar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  transition: color @animHoverDuration @animHoverTimingFn;
+
+  &:hover {
+    color: @colorLink;
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  composes: .mui.typography[ @subtitle1];
+}
+
+.title {
+  composes: .mui.typography[ @subtitle1];
+  margin-left: 2px;
+  font-weight: 700;
+}
+
+.content {
+  margin-top: 20px;
+}

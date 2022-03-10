@@ -1,0 +1,1 @@
+For more information, see <a href="https://www.i18next.com/translation-function/formatting" target="_blank">i18next translation formatting</a> and <a href="https://www.i18next.com/translation-function/interpolation" target="_blank">i18next interpolation syntax</a>.

@@ -1,0 +1,27 @@
+{
+  "widget": {
+    "runningThreats": "Amenazas corrientes",
+    "autoRunThreats": "Amenazas de ejecución automática",
+    "quarantinedThreats": "Amenazas en cuarentena",
+    "uniqueToCylance": "Exclusivo de Cylance",
+    "totalAnalyzedFiles": "Total de archivos analizados",
+    "threatProtection": "Protección frente a amenazas",
+    "deviceProtection": "Protección Dispositivo",
+    "threatEvents": "Eventos de amenazas",
+    "threatsByPriority": "Amenazas por prioridad",
+    "topTenLists": "Diez listas principales",
+    "threatClassifications": "Clasificaciones de amenazas"
+  },
+  "topTenLists": {
+    "Threats": "Amenazas",
+    "Devices": "Dispositivos",
+    "Zones": "Zonas",
+    "Threatsfoundonthemostdevices": "Amenazas encontradas en la mayoría de dispositivos",
+    "NoThreatsfound": "No se han encontrado amenazas",
+    "Deviceswiththemostthreats": "Dispositivos con la mayor cantidad de amenazas",
+    "NoDevicesfound": "No se han encontrado dispositivos",
+    "Zoneswiththemostthreats": "Zonas con más amenazas",
+    "NoZonesfound": "No se han encontrado zonas"
+  },
+  "protectDashboard": "Protect Panel de mandos"
+}

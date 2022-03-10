@@ -1,0 +1,641 @@
+{
+  "labelDlp": "Information protection",
+  "setting": {
+    "mainSection": {
+      "pageTitle": "Settings",
+      "tabTitle": {
+        "dataCollection": "Data collection",
+        "whitelisting": "Allowed Domains",
+        "templates": "Templates",
+        "dataTypes": "Data types",
+        "trustedCertificates": "Trusted certificates",
+        "notifications": "Notifications"
+      }
+    },
+    "buttons": {
+      "save": "Save",
+      "edit": "Edit",
+      "enable": "Enable",
+      "disable": "Disable",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    },
+    "list": {
+      "noData": "No data"
+    },
+    "search": {
+      "region": "Region",
+      "infoType": "Information type"
+    },
+    "popover": {
+      "header": "Table columns"
+    },
+    "template": {
+      "columns": {
+        "guid": "ID",
+        "templateName": "Template name",
+        "description": "Description",
+        "source": "Source",
+        "type": "Source",
+        "status": "Status",
+        "regions": "Region",
+        "informationType": "Information type",
+        "infoTypes": "Information type",
+        "dataTypesIncluded": "Data types included",
+        "dataEntities": "Data types included",
+        "created": "Created",
+        "updated": "Updated"
+      },
+      "filter": {
+        "regions": "Region filter",
+        "infoTypes": "Information types filter",
+        "dataEntities": "Data entities filter",
+        "name": "Template name filter",
+        "description": "Template description filter",
+        "source": "Source filter",
+        "status": "Source filter",
+        "inUse": "In use",
+        "dateCreated": "Date created filter",
+        "dateModified": "Date modified filter"
+      },
+      "buttons": {
+        "newTemplate": "New Template",
+        "addToYourList": "Add to Your List",
+        "duplicate": "Duplicate",
+        "removeFromYourList": "Remove from Your List",
+        "delete": "Delete"
+      },
+      "dialogs": {
+        "removeFromYourList": {
+          "title": "Remove {{count}} Template",
+          "title_plural": "Remove {{count}} Templates",
+          "cancelBtn": "Cancel",
+          "confirmBtn": "Remove",
+          "remove": {
+            "can_be_remove": "'{{name}}' will be removed from your list.",
+            "can_not_be_remove": "'{{name}}' was not in the list.",
+            "custom_can_not_be_remove": "'{{name}}' is a custom template and cannot be removed from your list. It can only be deleted permanently."
+          },
+          "remove_singular": {
+            "can_be_remove": "'{{name}}' will be removed from your list, do you want to proceed?"
+          },
+          "remove_plural": {
+            "can_be_remove": "{{count}} templates will be removed from your list:",
+            "can_not_be_remove": "{{count}} more were not in the list:",
+            "custom_can_not_be_remove": "{{count}} custom templates cannot be removed from your list. They can only be deleted permanently."
+          }
+        },
+        "addToYourList": {
+          "title": "Add {{count}} Template",
+          "title_plural": "Add {{count}} Templates",
+          "cancelBtn": "Cancel",
+          "confirmBtn": "Add",
+          "add": {
+            "can_be_add": "'{{name}}' will be added to your list.",
+            "can_not_be_add": "'{{name}}' is already in the list.",
+            "custom_can_not_be_add": "'{{name}}' is a custom template and already exists."
+          },
+          "add_singular": {
+            "can_be_add": "'{{name}}' will be added to your list, do you want to proceed?"
+          },
+          "add_plural": {
+            "can_be_add": "{{count}} new templates will be added to your list:",
+            "can_not_be_add": "{{count}} more are already there:",
+            "custom_can_not_be_add": "{{count}} custom templates already exist:"
+          }
+        },
+        "duplicate": {
+          "title": "Duplicate",
+          "cancelBtn": "Cancel",
+          "confirmBtn": "Proceed",
+          "singleItem": "single {{count}}",
+          "multipleItems": "To be duplicated: {{name}}"
+        },
+        "delete": {
+          "title": "Delete {{count}} Template",
+          "title_plural": "Delete {{count}} Templates",
+          "cancelBtn": "Cancel",
+          "confirmBtn": "Delete",
+          "delete_one": "'{{name}}' will be deleted. This action cannot be undone. Do you want to proceed?",
+          "delete_allowed": "{{name}} custom template will be deleted.",
+          "delete_allowed_plural": "{{count}} custom templates will be deleted:",
+          "delete_protected": "{{name}} system template cannot be deleted at any time.",
+          "delete_protected_plural": "{{count}} system templates cannot be deleted at any times:"
+        },
+        "confirmation": {
+          "question": "Do you want to proceed?"
+        }
+      },
+      "error": {
+        "listview": "Templates list retrieval error",
+        "delete": "The template could not be deleted.",
+        "addToYourList": "The operation could not be completed.",
+        "removeFromYourList": "The operation could not be completed."
+      },
+      "success": {
+        "delete": "The template was deleted.",
+        "addToYourList": "The operation was completed.",
+        "removeFromYourList": "The operation was completed."
+      }
+    },
+    "deleteConfirmationDialog": {
+      "title": "Delete",
+      "cancelButton": "Cancel",
+      "confirmButton": "Delete"
+    },
+    "createdConfirmationDialog": {
+      "title": "Create",
+      "description": "Do you want to leave? Your changes have not been saved.",
+      "cancelButton": "Cancel",
+      "confirmButton": "Confirm"
+    },
+    "modifiedConfirmationDialog": {
+      "title": "Modify",
+      "description": "Do you want to leave? Your changes have not been saved.",
+      "cancelButton": "Cancel",
+      "confirmButton": "Confirm"
+    },
+    "disableConfirmationDialog": {
+      "title": "Disable",
+      "cancelButton": "Cancel",
+      "confirmButton": "Disable"
+    },
+    "enableConfirmationDialog": {
+      "title": "Enable",
+      "cancelButton": "Cancel",
+      "confirmButton": "Enable"
+    },
+    "general": {
+      "domain": {
+        "title": "Allowed Domains",
+        "description": "Specify which browser domains can be trusted to safely upload files. When you create policies to scan for sensitive file uploads, the selected domains will not trigger policy violations.",
+        "enabled": {
+          "tableTitle": "Enabled domains"
+        },
+        "dialog": {
+          "title": {
+            "newDomain": "Add allowed domain",
+            "edit": "Edit safe domain",
+            "delete": "Delete {{count}} domain",
+            "delete_plural": "Delete {{count}} domains",
+            "disable": "Disable {{count}} domain",
+            "disable_plural": "Disable {{count}} domains",
+            "enable": "Enable {{count}} domain",
+            "enable_plural": "Enable {{count}} domains"
+          },
+          "warning": {
+            "delete_zero": "Do you want to continue?",
+            "delete_one": "Do you want to delete this domain? This domain is currently being used by {{count}} Avert policies.",
+            "delete_many": "Do you want to delete this domain? These domains are currently being used by {{count}} Avert policies."
+          },
+          "success": {
+            "create": "Create allowed domain succeeded",
+            "delete": "Delete allowed domain succeeded",
+            "edit": "Edit succeeded"
+          },
+          "error": {
+            "create": "Create allowed domain failed",
+            "delete": "Delete allowed domain failed",
+            "edit": "Edit failed"
+          }
+        },
+        "disabled": {
+          "tableTitle": "Disabled domains"
+        },
+        "buttons": {
+          "addNewDomain": "Add new domain",
+          "verify": "Verify",
+          "edit": "Edit",
+          "enable": "Enable",
+          "disable": "Disable",
+          "delete": "Delete",
+          "save": "Save",
+          "cancel": "Cancel",
+          "add": "Add"
+        },
+        "columns": {
+          "guid": "ID",
+          "domainName": "Domain name",
+          "description": "Description",
+          "policiesAssigned": "Policies Assigned",
+          "enabled": "Enabled",
+          "disabled": "Disabled",
+          "created": "Created",
+          "updated": "Updated"
+        },
+        "filter": {
+          "name": "Domain name filter",
+          "description": "Domain description filter",
+          "policies": "Policies filter"
+        },
+        "validation": {
+          "nameRequired": "A domain name is required",
+          "invalidDomainName": "The domain name is invalid",
+          "fileCARequired": "A CA file is required",
+          "verificationText": "You can verify if the server is using the root CA",
+          "verificationToolTip": "To check whether this domain uses an existing trusted certificate, click Verify. You can add more certificates in Settings > Trusted certificates.",
+          "verificationFailedText": "Verification could not be completed.",
+          "unreachableDomainText": "The domain is unavailable.",
+          "unknownError": "Unknown error",
+          "verificationSuccessText": "Verified {{date}}"
+        },
+        "enabledSwitcher": "Enable domain for use in policy"
+      },
+      "whitelistEmailDomains": {
+        "title": "Allowed Email Domains",
+        "description": "Specify your internal email domains. When you create policies to scan for sensitive data, the domains that you add will be considered safe.",
+        "helperText": "Use commas to separate multiple domains",
+        "placeholder": "blackberry.com",
+        "invalidValue": "The domain name is invalid."
+      },
+      "dataCollectionSettings": {
+        "title": "Data Collection",
+        "description": "Configure what evidence should be collected for data exfiltration events.",
+        "diskSpaceLabel": "Disk space",
+        "ui_tenant_setting_isSnippetReported": {
+          "heading": "File Snippets",
+          "title": "Generate File Snippets",
+          "description": "Include file snippets that contain the sensitive content as part of any data exfiltration events. This content will be viewable in the Avert Events in your organization by users with the sensitive file summary viewing permissions."
+        },
+        "ui_tenant_setting_uploadEvidenceFile": {
+          "heading": "Evidence File Collection",
+          "title": "Enable evidence file collection",
+          "description": "Save a full copy of files that are involved in data exfiltration events. These files will be saved in your evidence locker and accessible to users in your organization that have sensitive file content permissions."
+        },
+        "ui_tenant_setting_tempFileFolderSize": {
+          "description": "Evidence files can be cached for a period of time on remote devices before they are uploaded to your evidence locker. This setting specifies the maximum amount of free disk space that is allocated to this cache."
+        },
+        "ui_tenant_setting_uploadOnMobileNetwork": {
+          "title": "Allow file uploads on mobile network",
+          "description": "For enabled devices, allow file uploads on mobile networks in addition to Wi-Fi and wired networks."
+        },
+        "ui_tenant_setting_bandwidthLimit": {
+          "title": "Limit bandwidth for file upload",
+          "description": "Devices may upload large amounts of data if there are very large evidence files. You can limit the amount of bandwidth available for upload to not impact performance.",
+          "bandwidthLimit": "Bandwidth usage"
+        },
+        "ui_tenant_setting_transferWindowStartTime": {
+          "title": "Data Transfer Time",
+          "description": "Schedule when data uploads should occur. Note that if you specify only certain hours, files associated with data exfiltration events will not be accessible to your administrators until the times that you specify.  All times are local to the device that uploads the files.",
+          "from": "From"
+        },
+        "ui_tenant_setting_transferWindowEndTime": {
+          "to": "To"
+        },
+        "validation": {
+          "percentValue": "The value must be from 0 to 100."
+        },
+        "ui_tenant_setting_uploadDirectlyToS3": {
+          "heading": "File upload",
+          "description": "Select Direct if devices on your network can upload files directly to your evidence locker. Select BlackBerry Proxy Service if direct access to your evidence locker is blocked (for example, by your firewall), and BlackBerry will upload the files through its cloud.",
+          "s3_cloud_method": "Direct",
+          "local_dlp_file_service_method": "Proxy through BlackBerry",
+          "title": "File Upload Method"
+        },
+        "ui_file_setting_evidenceFileRetentionPeriod": {
+          "heading": "Evidence file retention",
+          "description": "Configure how long evidence files should be stored in your evidence locker. Files will be removed automatically after the specified time.",
+          "title": "Data retention",
+          "30_days": "30 days",
+          "60_days": "60 days",
+          "90_days": "90 days"
+        }
+      }
+    },
+    "unexpectedErrorWithHttpMessage": "The request could not be processed. Returned HTTP status: {{status}}",
+    "unexpectedErrorMessage": "An unexpected error occurred",
+    "domainNameErrorMessage": "A domain with this name already exists.",
+    "table": {
+      "list": {
+        "noData": "No data",
+        "searchPlaceholder": "Type something for search"
+      }
+    },
+    "dataTypes": {
+      "columns": {
+        "name": "Data type name",
+        "keywords": "Keywords",
+        "informationType": "Information Type",
+        "region": "Region",
+        "source": "Source"
+      },
+      "filter": {
+        "name": "Data type name filter",
+        "keywords": "Keywords filter",
+        "infoTypes": "Information type filter",
+        "regions": "Region filter",
+        "source": "Source filter",
+        "inUse": "In Use"
+      },
+      "buttons": {
+        "newDataType": "New data type",
+        "addToYourList": "Add to your list",
+        "removeFromYourList": "Remove from your list"
+      },
+      "dialogs": {
+        "addToYourList": {
+          "title": "Add {{count}} data type",
+          "title_plural": "Add {{count}} data types",
+          "cancelBtn": "Cancel",
+          "confirmBtn": "Add",
+          "add_one": "'{{name}}' will be added to your list, do you want to proceed?",
+          "add_new": "{{count}} new data type will be added to your list:",
+          "add_new_plural": "{{count}} new data types will be added to your list:",
+          "add_existing": "{{count}} more already exist:"
+        },
+        "removeFromYourList": {
+          "title": "Remove {{count}} data type",
+          "title_plural": "Remove {{count}} data types",
+          "cancelBtn": "Cancel",
+          "confirmBtn": "Remove",
+          "remove": "'{{name}}' will be removed from your list, do you want to proceed?",
+          "remove_plural": "The following data types will be removed from your list:"
+        },
+        "delete": {
+          "title": "Delete {{count}} data types",
+          "title_plural": "Delete {{count}} data types",
+          "delete_one": "'{{name}}' will be deleted. This action cannot be undone. Do you want to proceed?",
+          "delete_allowed": "{{name}} custom data type will be deleted.",
+          "delete_allowed_plural": "{{count}} custom data types will be deleted.",
+          "delete_protected": "{{name}} system data type cannot be deleted at any time:",
+          "delete_protected_plural": "{{count}} system data types cannot be deleted at any time:"
+        },
+        "confirmation": {
+          "question": "Do you want to proceed?"
+        }
+      }
+    },
+    "dataType": {
+      "detail": {
+        "updated": "Updated on {{date}}"
+      },
+      "columns": {
+        "keywords": "Keywords",
+        "status": "Status",
+        "regions": "Regions",
+        "infoTypes": "Information types",
+        "parameters": "setting.dataType.columns.parameters",
+        "type": "setting.dataType.columns.type"
+      },
+      "name": "Name",
+      "description": "Description",
+      "region": "Region",
+      "infoTypes": "Information type",
+      "algorithm": "Search method",
+      "keywords": "Keywords",
+      "regex": "Regex",
+      "addDataType": "Add new data type",
+      "error": {
+        "create": "The data type could not be created. Error: {{error}}",
+        "update": "The data type could not be updated. Error: {{error}}",
+        "remove": "The data type could not be removed from favorites list. Error: {{error}}",
+        "add": "The data type could not be added to favorites list. Error: {{error}}"
+      },
+      "success": {
+        "create": "The data type was created.",
+        "update": "The data type was updated.",
+        "remove": "The data type was removed from favorite list",
+        "add": "The data type was added to favorite list"
+      }
+    },
+    "trustedCertificates": {
+      "title": "Trusted Certificates",
+      "description": "Trusted certificates are used to verify the allowed domains you have added in the Avert Settings.",
+      "columns": {
+        "subject": "Subject",
+        "issuer": "Issuer",
+        "addedDate": "Date added",
+        "expirationDate": "Expiration date"
+      },
+      "buttons": {
+        "addNew": "Add certificate",
+        "delete": "Delete"
+      },
+      "dialogs": {
+        "addToYourList": {
+          "title": "Add certificate",
+          "subTitle": "Upload certificate file (.pem)",
+          "cancelBtn": "Cancel",
+          "confirmBtn": "Add"
+        },
+        "removeFromYourList": {
+          "title": "Delete certificate",
+          "title_plural": "Do you want to delete {{count}} certificates from the repository and from any safe list that use them?",
+          "cancelBtn": "Cancel",
+          "confirmBtn": "Delete"
+        }
+      },
+      "error": {
+        "delete": "The certificate could not be deleted.",
+        "addToYourList": "The certificate could not be added."
+      },
+      "success": {
+        "delete": "The certificate was deleted.",
+        "addToYourList": "The certificate was added."
+      }
+    },
+    "notifications": {
+      "title": "Notifications",
+      "switcherLabel": "Enable email notifications",
+      "switcherDescription": "Get notified when sensetive data that conflicts with company policy is shared",
+      "emailRecipients": "Email recipients",
+      "emailRecipientsHelperText": "Use commas to separate multiple email addresses",
+      "success": "The notification settings were updated.",
+      "invalid": "The email recipients value is invalid."
+    }
+  },
+  "tableColumns": "Table columns",
+  "noData": "No data",
+  "modifiedConfirmationDialog": {
+    "title": "Title",
+    "cancelButton": "Cancel",
+    "description": "description",
+    "confirmButton": "Confirm"
+  },
+  "enterField": "This field is required.",
+  "selected": "{{count}} selected",
+  "pickers": {
+    "time": {
+      "invalidMessage": "The time is invalid."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "exfiltrationEventsByWidgetTitle": "Information Exfiltration Events",
+    "exfiltrationEventsByDestination": "Top Exfiltration Events by Location",
+    "topEventsByWidgetTitle": "Top Exfiltration Events by Category",
+    "policiesTab": "Policy",
+    "usersTab": "Users",
+    "devicesTab": "Devices",
+    "dataEntities": "Data Types",
+    "dataTypesTab": "Data types",
+    "infoTypesTab": "Info types",
+    "fileTypesTab": "File types",
+    "allTab": "All",
+    "emailTab": "Web domains",
+    "browserTab": "Email domains",
+    "usbTab": "Removable media",
+    "filesTab": "Files",
+    "totalSensitiveData": "sensitive files detected",
+    "sensitiveDataEndpoints": "File Inventory by Category",
+    "evidenceLockerFiles": "files in evidence locker",
+    "evidenceLockerFilesTitle": "Evidence Locker",
+    "connectedUsers": "connected information protection users",
+    "connectedDevices": "information protection devices",
+    "totalSensitiveDataTitle": "File Inventory",
+    "exfiltrationEventTypes": {
+      "EMAIL": "Email",
+      "BROWSER": "Browser",
+      "REMOVABLE_MEDIA": "Removable media"
+    }
+  },
+  "events": {
+    "title": "Avert events",
+    "columns": {
+      "detectionTime": "Detection time",
+      "device": "Device",
+      "user": "User",
+      "activity": "Activity",
+      "location": "Location",
+      "file": "File",
+      "policy": "Policy",
+      "dataEntityCount": "Data type",
+      "noUserName": "No name"
+    },
+    "serverError": {
+      "retrieveEvents": "Failed to retrieve event list"
+    },
+    "filter": {
+      "detectionTime": "Detection time filter",
+      "device": "Device name filter",
+      "user": "User name filter",
+      "activity": "Activity filter",
+      "location": "Location filter",
+      "file": "File name filter",
+      "policy": "Policy name filter",
+      "dataType": "Data type name filter"
+    },
+    "drawer": {
+      "accordion": {
+        "eventOverview": "Event Overview",
+        "eventUserDetails": "User Details",
+        "eventUserDetailsName": "{{name}} upload",
+        "eventFilesDetails": "File Details",
+        "eventPolicyViolations": "Policy Violations",
+        "fileDetails": "File Details",
+        "userName": "Name",
+        "userEmail": "Email",
+        "userTitle": "Title",
+        "userDepartment": "Department",
+        "typeLabel": "Type",
+        "detectionTimeLabel": "Detection time",
+        "deviceLabel": "Device",
+        "locationLabel": "Location"
+      },
+      "fileSection": {
+        "downloadFile": {
+          "error": "The file could not be downloaded."
+        },
+        "sensitiveData": "Sensitive data types (# of occurrences)",
+        "contentSnippets": "Snippets content",
+        "emptySnippets": "The snippets list is empty.",
+        "txtFileFormat": "Text document",
+        "doc(x)FileFormat": "Microsoft Word document",
+        "xlsxFileFormat": "Microsoft Excel document",
+        "pdfFileFormat": "Microsoft PDF document",
+        "defaultFileFormat": "{{format}} document"
+      },
+      "eventDetailsTitle": "Event details",
+      "downloadEvidenceFile": "download all"
+    }
+  },
+  "fileInventory": {
+    "title": "File inventory",
+    "columns": {
+      "fileName": "File name",
+      "fileSize": "File size",
+      "infoTypes": "Info types",
+      "dataTypes": "Data types",
+      "users": "Users",
+      "devices": "Devices",
+      "policies": "Policies"
+    },
+    "filter": {
+      "fileName": "File name",
+      "infoTypes": "Information type"
+    },
+    "error": {
+      "listview": "The file inventory list could not be retrieved."
+    },
+    "drawer": {
+      "fileDetails": {
+        "title": "File Details",
+        "fileSize": "File size",
+        "fileType": "File type",
+        "evidenceFile": "Evidence file"
+      },
+      "users": {
+        "title": "Users With Access To File"
+      },
+      "devices": {
+        "title": "Devices With Access To File"
+      },
+      "dataTypes": {
+        "title": "Data Types",
+        "occurrences": "{{name}} ({{occurrences}})"
+      },
+      "policyViolations": {
+        "title": "Policy Violations"
+      },
+      "seeMore": "See +{{count}} more"
+    }
+  },
+  "evidenceLocker": {
+    "title": "Evidence locker",
+    "columns": {
+      "created": "Time added",
+      "fileName": "File name",
+      "size": "File size",
+      "events": "Events associated",
+      "download": "Download"
+    },
+    "filter": {
+      "fileName": "File name filter",
+      "created": "Time added filter",
+      "size": "File size filter"
+    },
+    "selected": "{{count}} selected",
+    "sensitiveFilesStorage": {
+      "serverError": "{{error}}"
+    },
+    "memoryUsed": "{{totals}} sensitive files / {{used}} of {{remains}} is used"
+  },
+  "infoTypesValue": {
+    "privacy": "privacy",
+    "finance": "finance",
+    "custom": "custom",
+    "health": "health",
+    "personal": "personal"
+  },
+  "users": {
+    "mainTitle": {
+      "assets": "Assets",
+      "users": "Users"
+    },
+    "buttons": {
+      "manageUsers": "Manage users"
+    },
+    "columns": {
+      "name": "Name",
+      "emailAddress": "Email address",
+      "devices": "Devices"
+    },
+    "error": {
+      "listView": "The users list could not be retrieved."
+    },
+    "devices": {
+      "agentVersion": "Avert agent version: {{version}}",
+      "osVersion": "{{name}} {{version}}"
+    }
+  }
+}

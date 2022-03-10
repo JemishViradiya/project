@@ -1,0 +1,29 @@
+{
+  "root": "partials/platform/entities-e2e",
+  "sourceRoot": "partials/platform/entities-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/platform/entities-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/platform/entities-e2e/cypress.json",
+        "tsConfig": "partials/platform/entities-e2e/tsconfig.json",
+        "devServerTarget": "platform/entities:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "platform/entities:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/platform/entities-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:platform"],
+  "implicitDependencies": ["assets", "platform/entities"]
+}

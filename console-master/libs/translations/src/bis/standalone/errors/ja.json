@@ -1,0 +1,15 @@
+{
+  "next": "次へ",
+  "tenantID": "tenantiID",
+  "signIn": "サインイン",
+  "help": "ヘルプ",
+  "signedOut": "サインアウト",
+  "signedOutMessage": "サインアウトしました。",
+  "sessionExpired": "セッションの有効期限切れ",
+  "sessionExpiredMessage": "セッションの有効期限が切れました。",
+  "signInAgainLink": "ここをクリックして、もう一度サインインしてください。",
+  "tenantIdLabel": "テナント ID を指定してください:",
+  "loadingSessionLabel": "セッションを読み込んでいます...",
+  "loadingTenantLabel": "テナントを読み込んでいます...",
+  "noTenantLabel": "テナント「{{tenant}}」が見つかりませんでした。"
+}

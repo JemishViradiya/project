@@ -1,0 +1,28 @@
+{
+  "all": true,
+  "cache": true,
+  "exclude": [
+    "**/node_modules/**",
+    "**/*.spec.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.js",
+    "**/*/spec.jsx",
+    "**/*-e2e/**",
+    "**/__fixtures__/**",
+    "**/__mocks__/**",
+    "**/mocks/**"
+  ],
+  "extension": [".js", ".cjs", ".mjs", ".ts", ".tsx", ".jsx"],
+  "reporters": ["cobertura", "html-spa", "text-summary", "json-summary"],
+  "report-dir": "coverage-report",
+  "lines": 80,
+  "functions": 75,
+  "branches": 60,
+  "statements": 80,
+  "watermarks": {
+    "lines": [50, 80],
+    "functions": [50, 75],
+    "branches": [40, 60],
+    "statements": [50, 80]
+  }
+}

@@ -1,0 +1,20 @@
+.DateInput_input {
+  height: 38px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.DateInput_input__focused {
+  border-bottom-color: #03a5ef;
+}
+
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
+  background: #03a5ef;
+  border-color: #03a5ef;
+}
+
+.DayPickerKeyboardShortcuts_show__bottomRight::before {
+  border-right-color: #03a5ef;
+}

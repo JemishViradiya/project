@@ -1,0 +1,122 @@
+{
+  "endpoints": {
+    "sectionTitle": "자산",
+    "title": "변하기 쉬운 디바이스",
+    "grid": {
+      "all": "사용자 장치",
+      "actions": {
+        "removeMultiple": "모바일 장치 제거",
+        "removeEndpointsDescription": "{{count}} 모바일 디바이스를 삭제하시겠습니까?",
+        "remove": {
+          "success": "디바이스가 삭제되었습니다.",
+          "error": "디바이스를 삭제할 수 없습니다.",
+          "errorWithCount": "{{count}} 디바이스를 삭제할 수 없습니다."
+        }
+      }
+    },
+    "details": {
+      "error": {
+        "fetch": "디바이스를 검색할 수 없습니다."
+      }
+    }
+  },
+  "endpoint": {
+    "details": {
+      "agent": "에이전트",
+      "agentBundleId": {
+        "com_blackberry_protect": "BlackBerry Protect",
+        "com_blackberry_big": "BlackBerry Gateway 데스크탑",
+        "com_blackberry_big1": "BlackBerry Gateway 데스크탑",
+        "com_blackberry_big2": "BlackBerry Gateway 데스크탑",
+        "com_blackberry_big3": "BlackBerry Gateway 데스크탑"
+      },
+      "enrollment": "등록",
+      "error": {
+        "fetch": "디바이스를 검색할 수 없습니다.",
+        "notFound": "디바이스가 삭제되었습니다.",
+        "fetchUser": "사용자를 검색할 수 없습니다."
+      },
+      "lastOnline": "마지막 온라인",
+      "panels": {
+        "alerts": "알림",
+        "events": "이벤트",
+        "responseActions": "규정 준수"
+      },
+      "securityPatch": "보안 패치",
+      "title": "장치 세부 정보",
+      "actions": {
+        "deleteEndpoint": "디바이스 삭제",
+        "title": "액션"
+      },
+      "button": {
+        "more": "더 많은 장치 세부 정보",
+        "less": "장치 세부 정보 감소"
+      }
+    },
+    "fields": {
+      "riskLevelStatus": "위험 상태",
+      "device": "장치",
+      "userName": "사용자",
+      "userEmail": "이메일",
+      "os": "OS",
+      "osVersion": "OS 버전",
+      "agent": "에이전트",
+      "enrollment": "등록",
+      "application": "애플리케이션",
+      "platform": "플랫폼",
+      "allEndpoints": "엔드포인트",
+      "manufacturer": "제조업체",
+      "userId": "사용자 ID",
+      "endpointId": "엔드포인트 ID",
+      "displayName": "표시 이름",
+      "emailAddress": "이메일 주소",
+      "osSecurityPatch": "OS 보안 패치",
+      "emmConnections": "EMM 커넥션"
+    },
+    "columnPickerTitle": "테이블 열",
+    "resultsCount": "{{value}} 개의 결과",
+    "selectedCount": "{{value}} 선택됨",
+    "os": {
+      "ios": "iOS",
+      "android": "Android",
+      "windows": "Windows",
+      "macos": "macOS"
+    },
+    "risk": {
+      "HIGH": "높음",
+      "MEDIUM": "미디엄",
+      "SECURED": "보안",
+      "UNKNOWN": "불명",
+      "LOW": "낮음"
+    },
+    "events": {
+      "networkConnections": "네트워크 연결",
+      "networkTraffic": "네트워크 트래픽",
+      "networkAnomaly": "네트워크 이상"
+    },
+    "page": {
+      "title": "변하기 쉬운 장치 세부 정보"
+    },
+    "responseActions": {
+      "title": "블랙베리 Protect Mobile 규정 준수"
+    },
+    "threats": {
+      "mobileDevice": "Protect Mobile 알림"
+    },
+    "export": {
+      "emmConnections": "({{status}}) {{name}}"
+    }
+  },
+  "emmConnection": {
+    "type": {
+      "INTUNE": "Intune",
+      "UEM": "UEM",
+      "NULL": "정의되지 않음"
+    },
+    "status": {
+      "PENDING": "보류 중",
+      "ERROR": "오류"
+    },
+    "statusAriaLabel": "EMM 연결 상태: {{status}}"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "root": "apps/info",
+  "sourceRoot": "apps/info/src",
+  "projectType": "application",
+  "generators": {},
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "options": {
+        "baseHref": "..",
+        "deployUrl": "uc/info/",
+        "outputPath": "dist/uc/info",
+        "index": "tools/index.html",
+        "main": "apps/info/src/main.tsx",
+        "polyfills": "libs/behaviour/app-shell/src/polyfills.ts",
+        "tsConfig": "apps/info/tsconfig.app.json",
+        "assets": [],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "tools/webpack/app",
+        "maxWorkers": 1,
+        "memoryLimit": 1024
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            }
+          ],
+          "outputPath": "prod/info",
+          "maxWorkers": 1,
+          "memoryLimit": 2048
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "info:build",
+        "hmr": true,
+        "ssl": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "info:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/info/**/*.js",
+          "apps/info/**/*.jsx",
+          "apps/info/**/*.ts",
+          "apps/info/**/*.tsx",
+          "tools/nx/typings/image.d.ts",
+          "apps/info/**/*.spec.ts",
+          "apps/info/**/*.spec.tsx",
+          "apps/info/**/*.spec.js",
+          "apps/info/**/*.spec.jsx",
+          "apps/info/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/info/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/apps/info"]
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/app.sh info"
+      }
+    }
+  },
+  "tags": ["scope:app"]
+}

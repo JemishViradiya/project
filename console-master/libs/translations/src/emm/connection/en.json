@@ -1,0 +1,238 @@
+{
+  "emm": {
+    "page": {
+      "error": {
+        "deleteConnection": "{{connectionName}} connection could not be deleted.",
+        "retrieveConnections": "Connections could not be retrieved.",
+        "retrieveConnection": "{{type}} connection could not be retrieved.",
+        "default": "Error"
+      },
+      "title": "EMM connections",
+      "connection": {
+        "name": {
+          "intune": "Intune tenant",
+          "uem": "UEM tenant"
+        },
+        "type": {
+          "uem": "BlackBerry UEM",
+          "intune": "Microsoft Intune"
+        },
+        "add": "Add connection",
+        "generateAppConfigButton": "Generate app configuration"
+      },
+      "removeConnection": "Delete confirmation",
+      "deleteConnectionDialog": {
+        "confirm": "Do you want to delete this connection?"
+      },
+      "forceDeleteConnectionDialog": {
+        "title": "Force delete confirmation",
+        "confirm": "The connection could not be deleted. Retry using force delete?"
+      },
+      "description": "Configure Microsoft Intune connections.",
+      "menu": {
+        "uem": "BlackBerry UEM",
+        "intune": "Microsoft Intune"
+      }
+    },
+    "table": {
+      "tenant": "Tenant",
+      "type": "Connection type",
+      "status": "Connection status",
+      "data": {
+        "state": {
+          "success": "Successful",
+          "inProgress": "In progress",
+          "error": {
+            "default": "Error",
+            "message": {
+              "FAILURE_TO_AUTHORIZE_OIDC_CLIENT": "The UEM connection could not be authorized ({{uemTenantId}}).",
+              "FAILURE_TO_ENABLE_CONNECTION_WITHIN_UEM": "The connection to the UEM server could not be established ({{uemTenantId}}).",
+              "FAILURE_TO_ENABLE_UES_SERVICES": "The connection to the UEM server could not be completed ({{uemTenantId}})."
+            }
+          },
+          "retry": "Try again"
+        }
+      }
+    },
+    "intune": {
+      "add": {
+        "error": {
+          "consentError": "Administrator consent error - {{error}}",
+          "consentFailed": "Administrator consent failed",
+          "connectionExist": "Connection already exist for given tenant",
+          "setAppConfigError": "Failed to set app configuration",
+          "setAppConfigErrorWithCause": "Failed to set app configuration - {{cause}}",
+          "azureLoginFailure": "Azure login failed",
+          "invalidTargetApp": "Target app is not valid",
+          "appConfigPolicyExist": "App config policy already exists with same name",
+          "submit": "Failed to add intune connection"
+        },
+        "title": "Add Microsoft Intune connection",
+        "azureInfoTitle": "Azure Information",
+        "azureInfoDescription": "Enter the Azure tenant ID. The tenant ID cannot be changed after the connection is created.",
+        "tenantId": "Azure Tenant ID",
+        "adminConsent": "Administrator consent",
+        "integration": "Intune Integration",
+        "integrationDescription": "This option is available only when a connection is created. These settings cannot be changed.",
+        "mdmIntegration": "Use Intune to manage devices and their apps (Intune is the MDM provider)",
+        "mamIntegration": "Use Intune to manage device apps only (Intune is the MAM provider)",
+        "success": "The connection was added.",
+        "azureUserLogin": "Azure User Login"
+      }
+    },
+    "delete": {
+      "success": "The connection was deleted."
+    },
+    "uem": {
+      "title": "Add BlackBerry UEM connection",
+      "add": {
+        "tenantTitle": "Tenant Information",
+        "tenantDescription": "Add UEM tenant information.",
+        "srpid": "SRP ID",
+        "authKey": "Authentication key"
+      },
+      "success": "The connection was added."
+    },
+    "appConfig": {
+      "error": {
+        "submit": "The app configurations policies could not be added.",
+        "invalidTenant": "The tenant ID is invalid.",
+        "loadGroup": "Failed to load MDM Groups",
+        "loadGroupInvalidQuery": "Group search query {{searchQuery}} has unsupported characters"
+      },
+      "title": "Add Microsoft Intune app configuration policies",
+      "heading": "App Configuration Policies",
+      "description": "Add app configuration policies for iOS and Android. This setting is optional and applies only to Intune managed devices.",
+      "androidCheckBoxLabel": "Android",
+      "androidAppName": "Name",
+      "iosCheckBoxLabel": "iOS",
+      "androidTargetedApp": "Targeted app",
+      "iosTargetedApp": "Targeted app",
+      "iosAppName": "Name",
+      "success": "App configuration policies added.",
+      "groupAssignmentTitle": "Assign to groups",
+      "groupSwitchTitle": "All groups",
+      "groupLeftList": "Available groups",
+      "groupRightList": "Selected groups",
+      "multiStatusSuccess": "App configuration policies added for {{DEVICE_TYPE}}.",
+      "table": {
+        "group": "Group Name"
+      },
+      "groupAssignment": {
+        "title": "Add a group",
+        "description": "Select groups to add to the app config",
+        "searchText": "Search for groups",
+        "list": {
+          "noResults": "No results"
+        },
+        "cancelButton": "CANCEL",
+        "addButton": "ADD"
+      }
+    },
+    "validation": {
+      "emptyField": "This field is required."
+    }
+  },
+  "SettingsLabel": "Settings",
+  "noData": "No Data",
+  "noItem": "No Item",
+  "button": {
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "delete": "Delete",
+    "save": "Save",
+    "next": "Next",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "server": {
+    "error": {
+      "default": "An error occurred.",
+      "retry": {
+        "default": "Retry failed.",
+        "addFailed": "The connection is force deleted, but can't create a new one. Please try to add a new connection"
+      },
+      "intune": {
+        "add": {
+          "400": "The connection request is invalid.",
+          "500": "The connection could not be added.",
+          "7002": "Invalid authentication code.",
+          "11003": "You must enter credentials.",
+          "11004": "The Azure tenant ID is invalid.",
+          "11006": "The Intune connection request is invalid.",
+          "11013": "Multiple authenticate types were detected.",
+          "11014": "The tenant ID is invalid.",
+          "11021": "The EMM type is invalid.",
+          "11023": "Requests with multiple connections to the same EMM type are not supported.",
+          "11024": "The activation type is invalid.",
+          "11031": "Invalid Intune license.",
+          "13001": "The Azure tenant ID could not be found.",
+          "13002": "The Intune connection already exists.",
+          "13003": "The Intune connection already exists."
+        },
+        "addAppConfig": {
+          "500": "The app configuration policies could not be added.",
+          "11019": "The group search query length cannot exceed more than 120 characters",
+          "21005": "You do not have permission to access this Intune resource.",
+          "21016": "There are one or more groups in both included and excluded groups.",
+          "23001": "The Intune connection could not be found.",
+          "24010": "The {{platform}} app could not be found.",
+          "24014": "A policy with this name already exists.",
+          "24015": "The application policy could not be created.",
+          "27001": "You do not have permission to access this Intune resource."
+        }
+      },
+      "uem": {
+        "add": {
+          "500": "The connection could not be added.",
+          "11003": "You must enter credentials.",
+          "11004": "The UEM tenant ID is invalid.",
+          "11006": "The UEM connection request is invalid.",
+          "11013": "Multiple authenticate types were detected.",
+          "11014": "The tenant ID is invalid.",
+          "11021": "EMM type is invalid",
+          "11023": "Requests with multiple connections to the same EMM type are not supported.",
+          "11024": "The activation type is invalid.",
+          "13002": "The UEM connection already exists.",
+          "13003": "The UEM connection already exists.",
+          "15001": "The UEM tenant ID is not available within PCE for the requested organization.",
+          "31000": "The UEM tenant identifier could not be found.",
+          "31001": "The UEM tenant and organization do not match.",
+          "31002": "The UEM tenant or authentication key is invalid.",
+          "31003": "The UEM tenant is already associated.",
+          "31004": "The tenant no longer exists.",
+          "31500": "Unknown internal error",
+          "31510": "Intersect failure",
+          "31520": "PCE failure",
+          "31530": "Tenant service failure"
+        }
+      },
+      "tenantlist": {
+        "404": "The UEM tenants are not available.",
+        "500": "The UEM tenants could not be retrieved.",
+        "31500": "The UEM tenants could not be retrieved.",
+        "31510": "Intersect failure",
+        "31530": "Tenant service failure"
+      }
+    }
+  },
+  "PolicyAndIpAddress": {
+    "title": "Policy and IP Address",
+    "button": {
+      "policy": "Update Policy",
+      "tenantPolicy": "Update Tenant Policy",
+      "addIpaddressList": "Add IP Address List",
+      "updateIpaddressList": "Update IP Address List"
+    }
+  },
+  "emmConnection": {
+    "title": "EMM connection",
+    "registrationStatusMessage": {
+      "pending": "{{emmType}} activation pending",
+      "error": "{{emmType}} activation incomplete"
+    },
+    "error": {
+      "fetch": "The EMM connection could not be retrieved."
+    }
+  }
+}

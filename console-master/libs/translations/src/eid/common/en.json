@@ -1,0 +1,190 @@
+{
+  "authenticators": {
+    "title": "Authenticators",
+    "add": "Add Authenticator",
+    "type": "Authenticator Type",
+    "ENTERPRISE": "Enterprise",
+    "AD": "Active Directory",
+    "LDAP": "LDAP",
+    "CUR": "Blackberry Online Account",
+    "VENUE": "Cylance",
+    "OKTA": "Okta",
+    "PING": "Ping",
+    "summary": "Add authenticators to manage the types of authentication that users and administrators must complete to access the UES console, apps, or services.",
+    "edit": "Edit Authenticator",
+    "delete": "Delete Authenticator",
+    "general": "General Information",
+    "signing_type": "ID token signing algorithm",
+    "ES512": "ECDSA using P521 Curve and SHA-512",
+    "ES256": "ECDSA using P256 Curve and SHA-256",
+    "ES384": "ECDSA using P384 Curve and SHA-384",
+    "name": "Name",
+    "identityproviderclient": "Identity Provider Client",
+    "discovery_url": "OIDC discovery document URL",
+    "client_id": "Client ID",
+    "jwks": "Private key JWKS",
+    "DUO_MFA": "Duo MFA",
+    "DUO": "Duo",
+    "duomfaconfiguration": "Duo MFA Configuration",
+    "auth_integration_key": "Auth Integration Key",
+    "auth_secret_key": "Auth Secret Key",
+    "auth_api_hostname": "Auth API Hostname",
+    "admin_api_hostname": "Admin API Hostname",
+    "admin_secret_key": "Admin Secret Key",
+    "admin_integration_key": "Admin Integration Key",
+    "EMAIL": "Email",
+    "USERNAME": "User name",
+    "username_format": "User name format",
+    "OKTA_MFA": "Okta MFA",
+    "oktamfaconfiguration": "Okta MFA Configuration",
+    "auth_api_key": "Auth API Key",
+    "auth_domain": "Auth Domain",
+    "TOTP": "TOTP",
+    "totpconfiguration": "TOTP Configuration",
+    "window": "Window",
+    "windowHelperText": "Specify the maximum time drift that is allowed between the device and server."
+  },
+  "common": {
+    "name": "Name",
+    "type": "Type",
+    "delete": "Delete",
+    "deleteConfirm": "Do you want to delete the {{field}} authenticator?",
+    "add": "Add",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saveAs": "Save As",
+    "success": {
+      "create": "The authenticator was added.",
+      "update": "The authenticator was updated.",
+      "delete": "The authenticator was deleted."
+    },
+    "failure": {
+      "create": "The authenticator could not be added. Reason: {{reason}}",
+      "update": "The authenticator could not be updated. Reason: {{reason}}",
+      "delete": "The authenticator could not be deleted. Reason: {{reason}}",
+      "read": "The data could not be retrieved. Reason: {{reason}}"
+    },
+    "nodata": "No data"
+  },
+  "authentication": {
+    "title": "Authentication"
+  },
+  "policy": {
+    "list": {
+      "title": "Enterprise Identity policies",
+      "pageDescription": "Add a policy to specify the types of authentication that users and administrators must complete to access the UES console, apps, or services.",
+      "deleteSuccess": "The policies were deleted.",
+      "deleteError": "{{deleteErrorCount}} out of {{deleteCount}} delete operations failed"
+    },
+    "createPolicyPageTitle": "Add authentication policy",
+    "updatePolicyPageTitle": "Authentication",
+    "generalInformationLabel": "General Information",
+    "authenticationRulesLabel": "Authentication rules",
+    "applicationExceptionLabel": "Manage app exceptions",
+    "applicationExceptionDescription": "This setting will override any policies assigned to apps when it is assigned to users or groups. It does not apply if a policy is assigned as an app default policy.",
+    "name": "Name",
+    "description": "Description",
+    "update": {
+      "tab": {
+        "settingsLabel": "Settings",
+        "usersAndGroupsLabel": "Assigned users and groups"
+      }
+    },
+    "nameHelperText": "A policy with this name already exists.",
+    "nameHelperTextRequired": "This is a required field.",
+    "createPolicyAssignConfirmationDialog": {
+      "title": "Assign the authentication policy",
+      "description": "The policy has been created. Do you want to assign users or groups to this policy?",
+      "cancelButton": "Not now",
+      "confirmButton": "Yes"
+    },
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Unsaved changes",
+      "description": "Do you want to leave this page? Your changes have not been saved.",
+      "cancelButton": "Cancel",
+      "confirmButton": "Leave page"
+    },
+    "batchDeletePolicyConflictErrorConfirmationDialog": {
+      "title": "Delete failure",
+      "description": "The following policies could not be deleted because they are assigned to users or groups:",
+      "cancelButton": "Close"
+    },
+    "batchDeletePolicyErrorConfirmationDialog": {
+      "title": "Delete failure",
+      "description": "The following policies could not be deleted:",
+      "cancelButton": "Close"
+    },
+    "deletePolicyConfirmationDialog": {
+      "title": "Delete confirmation",
+      "description": "Do you want to delete the {{name}} policy?",
+      "deleteNote": "You must remove all users and groups associated with a policy before you delete it.",
+      "cancelButton": "Cancel",
+      "confirmButton": "Delete"
+    },
+    "serverError": {
+      "update": "The changes could not be saved.",
+      "delete": "The policy could not be deleted.",
+      "deleteWithUsers": "The policy could not be deleted because it is assigned to users.",
+      "deleteWithGroups": "The policy could not be deleted because it is assigned to groups.",
+      "deleteWithUsersAndGroups": "The policy could not be deleted because it is assigned to users and groups.",
+      "deletePolicies": "The policies could not be deleted.",
+      "multipleInternalAuthErrorMsg": "You cannot assign more than one internal authenticator type in a policy."
+    },
+    "riskFactorsLabel": "Risk scenarios",
+    "authenticatorsList": {
+      "addButton": "Add Authenticator",
+      "deleteButton": "Delete",
+      "orderButton": "Set order",
+      "deleteSelectedMsg": "{{selectedCnt}} selected",
+      "nameLabel": "Name",
+      "descriptionLabel": "Description",
+      "noData": "Click + to add items.",
+      "columns": {
+        "name": "Name",
+        "description": "Description"
+      }
+    },
+    "addAuthenticatorsDialog": {
+      "title": "Add authenticator",
+      "dropdownLabel": "Authenticator name",
+      "cancelButton": "Cancel",
+      "addButton": "Save"
+    },
+    "applicationExceptionButton": "Manage app exceptions",
+    "selectManagedExceptionDialog": {
+      "title": "Manage app exceptions",
+      "cancelButton": "Cancel",
+      "addButton": "Save",
+      "listLabel": "You can configure authentication levels for the selected services in the tabs at the bottom of the page after you select your services.",
+      "rightLabel": "Selected apps",
+      "leftLabel": "Available apps"
+    },
+    "applicationExceptionButtonGroup": "App exceptions",
+    "formSubmitSnackBarError": "Please correct {{count}} error(s)",
+    "authenticatorsRequired": "You must select at least one authenticator",
+    "authenticatorsLoadingErrorMessage": "Error loading authenticators",
+    "firstLoginFromBrowserLabel": "First login from browser",
+    "firstLoginFromBrowserNotSetLabel": "None",
+    "updatePolicyPageTitleHelperText": "Last updated: {{date, datetime-short}}",
+    "updateFormCopyPolicyTooltip": "Create a copy of this policy",
+    "updateFormDeletePolicyTooltip": "Delete policy",
+    "savePolicyPriorToCopyMessage": "Save policy before copying",
+    "unexpectedErrorMessage": "The request could not be processed.",
+    "unexpectedErrorWithHttpMessage": "The request could not be processed. Returned HTTP status: {{status}}",
+    "unexpectedErrorWithHttpSubcodeMessage": "The request could not be processed. Returned HTTP status: {{status}}, subcode: {{subcode}}",
+    "policyUpdatedMessage": "The policy was updated.",
+    "policyDeletedMessage": "The policy was deleted.",
+    "policyCreatedMessage": "The policy was created.",
+    "policyDeleteErrorMessage": "The policy could not be deleted.",
+    "policyUpdateErrorMessage": "The policy could not be updated.",
+    "policyCreateErrorMessage": "The policy could not be created.",
+    "busyLoading": "Loading policy ...",
+    "busyDeleting": "Deleting policy ...",
+    "busyUpdating": "Updating policy ...",
+    "busyCreating": "Creating policy ...",
+    "appsLoadErrorMesage": "The request could not be processed.",
+    "swTemplateLoadErrorMesage": "The request could not be processed.",
+    "authenticatorsLoadErrorMesage": "The request could not be processed.",
+    "policyLoadErrorMesage": "The request could not be processed."
+  }
+}

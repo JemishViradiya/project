@@ -1,0 +1,17 @@
+{
+  "projectId": "platform/policies-e2e",
+  "fileServerFolder": ".",
+  "fixturesFolder": "./src/fixtures",
+  "integrationFolder": "./src/integration",
+  "modifyObstructiveCode": false,
+  "pluginsFile": "../../../tools/cypress/plugins",
+  "supportFile": "./src/support/index.ts",
+  "video": false,
+  "videosFolder": "../../../dist/cypress/partials/platform/policies-e2e/videos",
+  "screenshotsFolder": "../../../dist/cypress/partials/platform/policies-e2e/screenshots",
+  "chromeWebSecurity": false,
+  "retries": 2,
+  "viewportHeight": 900,
+  "viewportWidth": 1440,
+  "defaultCommandTimeout": 6000
+}

@@ -1,0 +1,88 @@
+.table-filter {
+  display: inline-flex;
+  vertical-align: bottom;
+  .ui.input {
+    margin-top: 0 !important;
+    vertical-align: bottom;
+    input {
+      border-left: none;
+    }
+  }
+  > div + div {
+    display: inline-block;
+    height: 40px;
+    vertical-align: top;
+    width: fit-content;
+  }
+  .date-picker input {
+    white-space: nowrap !important;
+    margin-top: 0 !important;
+    border-radius: 0 !important;
+    height: 40px !important;
+    border: 1px solid #cdd0db !important;
+    background: #fff !important;
+    min-width: 0 !important;
+    min-height: 40px !important;
+    text-overflow: ellipsis !important;
+    padding-left: 36px !important;
+  }
+  .date-picker > div {
+    height: 40px !important;
+    & > div:first-child {
+      z-index: 2;
+      bottom: 8px !important;
+      left: 36px;
+      color: rgba(191, 191, 191, 0.87) !important;
+      pointer-events: none;
+    }
+    & > div:last-child {
+      display: none;
+    }
+  }
+  .ui.selection.dropdown {
+    width: 150px;
+  }
+  .Select {
+    width: 300px;
+    height: 40px;
+    border-radius: 0;
+  }
+  .Select-control,
+  .Select-input {
+    height: 38px;
+    border-radius: 0;
+  }
+
+  .Select-placeholder {
+    line-height: 40px;
+    font-weight: 400;
+  }
+  .Select-arrow {
+    border-style: solid;
+    border-width: 7px 6px 0 6px;
+    border-color: #000000 transparent transparent transparent;
+  }
+  .Select-arrow-zone {
+    width: 45px;
+  }
+  .Select-clear-zone {
+    padding-top: 5px;
+  }
+
+  .Select--single > .Select-control .Select-value {
+    line-height: 40px;
+    max-width: 80%;
+  }
+
+  .Select-option {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .Select-clear-zone {
+    display: none !important;
+  }
+}
+
+.MuiPickersDay-daySelected {
+  background-color: #69d03c;
+}

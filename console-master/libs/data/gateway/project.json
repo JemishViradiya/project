@@ -1,0 +1,39 @@
+{
+  "root": "libs/data/gateway",
+  "sourceRoot": "libs/data/gateway/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/gateway/**/*.js",
+          "libs/data/gateway/**/*.jsx",
+          "libs/data/gateway/**/*.ts",
+          "libs/data/gateway/**/*.tsx",
+          "libs/data/gateway/**/*.spec.ts",
+          "libs/data/gateway/**/*.spec.tsx",
+          "libs/data/gateway/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/gateway/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/libs/data/gateway"]
+    },
+    "test-pact": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/gateway/jest.config.pact.js",
+        "runInBand": true
+      },
+      "outputs": ["test-results/libs/data/gateway-pact"]
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

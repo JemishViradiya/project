@@ -1,0 +1,42 @@
+@keyframes animateHeight {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 300px;
+  }
+}
+
+.formik-error {
+  background: #e66a5e;
+  overflow: hidden;
+  max-height: 0;
+  height: 0;
+  p {
+    color: #fff;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 700;
+  }
+  &.field {
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  &.alert {
+    p {
+      padding-left: 10px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    margin-bottom: 24px;
+  }
+  &.active {
+    height: auto;
+    animation-name: animateHeight;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    animation-fill-mode: forwards;
+  }
+}

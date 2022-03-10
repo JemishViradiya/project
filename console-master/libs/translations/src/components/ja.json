@@ -1,0 +1,103 @@
+{
+  "transferList": {
+    "selectedCount": "{{selectedCount}} 個中 {{totalCount}} 個が選択されました。",
+    "selectAllLeftLabel": "選択されていないアイテムをすべて選択する",
+    "selectAllRightLabel": "選択したアイテムをすべて選択",
+    "transferItemsLeftLabel": "選択したアイテムを削除する",
+    "transferItemsRightLabel": "選択したアイテムを追加"
+  },
+  "pickers": {
+    "time": {
+      "invalidMessage": "時刻が無効です。",
+      "currentTime": "現在の時刻"
+    }
+  },
+  "fileUpload": {
+    "browseFilesButton": "ファイルをブラウズ"
+  },
+  "progressButton": {
+    "buttonText": "クリックして読み込む"
+  },
+  "button": {
+    "goBackText": "戻る"
+  },
+  "drawer": {
+    "formButtonPanel": "フォームボタンパネル"
+  },
+  "quickSearchFilter": {
+    "minimumCharactersRequired": "3 文字以上入力する必要があります。",
+    "settings": "検索フィルタ設定"
+  },
+  "inputGroups": {
+    "buttonAdd": "行を追加"
+  },
+  "maps": {
+    "common": {
+      "map": "地図"
+    },
+    "terrain": "地形",
+    "satellite": "サテライト",
+    "toggleMapTypes": "マップタイプの表示/非表示",
+    "label": "ラベル"
+  },
+  "helpLink": {
+    "helpLinkText": "ヘルプ"
+  },
+  "riskSlider": {
+    "ariaLabelSliderMin": "リスクスライダー最小",
+    "ariaLabelSliderMax": "リスクスライダーマックス",
+    "step": {
+      "0-0": "セキュリティで保護された",
+      "0-1": "セキュア-低",
+      "0-2": "セキュア-中",
+      "0-3": "セキュア-高",
+      "1-1": "低い",
+      "1-2": "低-中",
+      "1-3": "低-高",
+      "2-2": "ミディアム",
+      "2-3": "中-高",
+      "3-3": "高い"
+    }
+  },
+  "enhancedSearch": {
+    "and": "そして",
+    "applyButton": "適用する",
+    "chipDefinition": "{{label}} {{operator}} {{value}}",
+    "clearButton": "クリア",
+    "enterDate": "日付を入力",
+    "noOptionsText": "一致しない",
+    "comparisons": {
+      "contains": "次を含む",
+      "doesNotContain": "次を含まない",
+      "endsWith": "次で終わる",
+      "greater": "次より大きい",
+      "greaterOrEqual": "次より大きい、または等しい",
+      "less": "より小さい",
+      "lessOrEqual": "次より小さいか等しい",
+      "startsWith": "次で始まる"
+    }
+  },
+  "risk": {
+    "secured": "セキュア",
+    "low": "低",
+    "medium": "中",
+    "high": "高"
+  },
+  "autocompleteTags": {
+    "newTag": "新しいタグ",
+    "tagAlreadyExist": "このタグは既に追加されています"
+  },
+  "timeZonePicker": {
+    "searchPlaceholder": "国、都市、略語で検索",
+    "timeZone": "タイムゾーン"
+  },
+  "tabPanel": {
+    "ariaLabel": "{{name}} タブパネル"
+  },
+  "Creating": "作成中",
+  "Fetching": "フェッチ中",
+  "Updating": "アップデート中",
+  "Deleting": "削除中",
+  "Loading": "ロード中",
+  "Clear": "クリア"
+}

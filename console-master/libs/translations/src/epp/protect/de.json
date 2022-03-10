@@ -1,0 +1,27 @@
+{
+  "widget": {
+    "runningThreats": "Ausführen von Bedrohungen",
+    "autoRunThreats": "Bedrohungen automatisch ausführen",
+    "quarantinedThreats": "Bedrohungen in Quarantäne",
+    "uniqueToCylance": "Einzigartig bei Cylance",
+    "totalAnalyzedFiles": "Gesamtzahl der analysierten Dateien",
+    "threatProtection": "Schutz vor Bedrohungen",
+    "deviceProtection": "Geräte-Schutz",
+    "threatEvents": "Threat-Ereignisse",
+    "threatsByPriority": "Bedrohungen nach Priorität",
+    "topTenLists": "Die zehn besten Listen",
+    "threatClassifications": "Klassifizierungen von Bedrohungen"
+  },
+  "topTenLists": {
+    "Threats": "Bedrohungen",
+    "Devices": "Geräte",
+    "Zones": "Zonen",
+    "Threatsfoundonthemostdevices": "Bedrohungen auf den meisten Geräten",
+    "NoThreatsfound": "Keine Bedrohungen gefunden",
+    "Deviceswiththemostthreats": "Geräte mit den meisten Bedrohungen",
+    "NoDevicesfound": "Keine Geräte gefunden",
+    "Zoneswiththemostthreats": "Zonen mit den meisten Bedrohungen",
+    "NoZonesfound": "Keine Zonen gefunden"
+  },
+  "protectDashboard": "Dashboard Protect"
+}

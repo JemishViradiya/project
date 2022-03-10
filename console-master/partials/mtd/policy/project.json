@@ -1,0 +1,25 @@
+{
+  "root": "partials/mtd/policy",
+  "sourceRoot": "partials/mtd/policy/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/mtd/policy/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/mtd/policy"],
+      "options": {
+        "jestConfig": "partials/mtd/policy/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  },
+  "tags": ["scope:partial", "scope:mtd"]
+}

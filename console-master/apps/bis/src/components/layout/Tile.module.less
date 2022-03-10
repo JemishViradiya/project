@@ -1,0 +1,60 @@
+@import '../../theme/theme.less';
+
+.container {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding: 0 16px 16px;
+  border: 1px solid .mui.palette[ @divider];
+  border-radius: 1px;
+  box-sizing: border-box;
+  background: @backgroundDefault;
+  text-decoration: none;
+  color: inherit;
+  user-select: none;
+  -webkit-user-drag: none;
+
+  &.edit {
+    border: 1px dashed @colorLink;
+    cursor: move;
+  }
+}
+
+.title {
+  composes: .mui.typography[ @h3];
+  height: 50px;
+  padding: 14px 0;
+}
+
+.date {
+  font-size: @fontSizeSubtitle;
+}
+
+.contents {
+  text-align: center;
+}
+
+.edit > .contents {
+  pointer-events: none;
+}
+
+.editOverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: @colorLink;
+  opacity: @editModeOpacity;
+  pointer-events: none;
+}
+
+:global {
+  .react-resizable-handle {
+    pointer-events: auto;
+  }
+
+  .nodrag .react-resizable-handle {
+    display: none;
+  }
+}

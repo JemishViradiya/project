@@ -1,0 +1,10 @@
+type SORT_DIRECTION = 'asc' | 'desc'
+const SORT_DIRECTION = {
+  DESC: 'desc' as SORT_DIRECTION,
+  ASC: 'asc' as SORT_DIRECTION,
+} as const
+
+const DEFAULT_SORT = 'created'
+const DEFAULT_SORT_DIRECTION = SORT_DIRECTION.DESC
+
+export { DEFAULT_SORT, DEFAULT_SORT_DIRECTION, SORT_DIRECTION }

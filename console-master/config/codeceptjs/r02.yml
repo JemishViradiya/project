@@ -1,0 +1,33 @@
+runner:
+  mode: default
+  loglevel: debug
+  delay:
+    startup: 0
+  codecept:
+    show: true
+    writeScreenshots: true
+
+e2e:
+  config:
+    baseUrl: https://r02-protect.cylance.com
+
+    # see https://wikis.rim.net/pages/viewpage.action?pageId=909575392
+    users:
+      admin:
+        email: rbac-admin@ahem.cbbcps.com
+        password: 'Passw0rd'
+      rbac-admin:
+        email: rbac-admin@ahem.cbbcps.com
+        password: 'Passsw0rd'
+      rbac-read-only:
+        email: rbac-read-only@ahem.cbbcps.com
+        password: 'Passsw0rd'
+      rbac-create:
+        email: rbac-create@ahem.cbbcps.com
+        password: 'Passsw0rd'
+      rbac-update:
+        email: rbac-edit@ahem.cbbcps.com
+        password: 'Passsw0rd'
+      rbac-delete:
+        email: rbac-delete@ahem.cbbcps.com
+        password: 'Passsw0rd'

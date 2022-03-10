@@ -1,0 +1,7 @@
+{
+  "loading": "로드 중...",
+  "signInLink": "다시 로그인하려면 여기를 클릭하십시오.",
+  "loginFailed": "로그인 실패",
+  "logoutFailed": "로그아웃 실패",
+  "errorMessage": "요청을 완료할 수 없습니다."
+}

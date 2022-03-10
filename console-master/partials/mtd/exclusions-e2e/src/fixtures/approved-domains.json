@@ -1,0 +1,95 @@
+{
+  "validDomain1": {
+    "domainAddress": "google.com",
+    "description": "Description for e2e tests"
+  },
+  "responses": {
+    "POST": {
+      "duplicate": {
+        "subStatusCode": 510,
+        "message": "Web address with value test1.com already exists.",
+        "params": ["google.com"]
+      },
+      "successBody": {
+        "guid": "23e666a1-6afd-4034-83fa-65a09fcbc758",
+        "tenantGuid": "V10118177",
+        "type": "APPROVED",
+        "addressType": "HOST",
+        "value": "google.com",
+        "description": "Description for e2e tests",
+        "created": "2021-09-23T10:57:28.84791"
+      }
+    },
+    "GET": {
+      "successEmpty": {
+        "totals": {
+          "pages": 1,
+          "elements": 0
+        },
+        "navigation": {
+          "next": "next",
+          "previous": "prev"
+        },
+        "count": 0,
+        "elements": []
+      },
+      "success2Items": {
+        "totals": {
+          "pages": 1,
+          "elements": 2
+        },
+        "navigation": {
+          "next": "next",
+          "previous": "prev"
+        },
+        "count": 2,
+        "elements": [
+          {
+            "guid": "e9a2b066-d37c-4890-94c0-7953e717e630",
+            "type": "APPROVED",
+            "tenantGuid": "V10118177",
+            "addressType": "HOST",
+            "value": "approvedmockdomainsuccess1.com",
+            "description": "Mock approved description for domain 1",
+            "created": "2020-11-04T07:10:54.825"
+          },
+          {
+            "guid": "e4b1c014-d37c-4890-94c0-7953e717a121",
+            "type": "APPROVED",
+            "tenantGuid": "V10118177",
+            "addressType": "HOST",
+            "value": "approvedmockdomainsuccess2.com",
+            "description": "Mock approved description for domain 2",
+            "created": "2020-11-04T07:09:54.825"
+          }
+        ]
+      }
+    },
+    "DELETE": {
+      "deleteSingleRequestBody": ["e9a2b066-d37c-4890-94c0-7953e717e630"],
+      "deleteSingleResponseSuccess": {
+        "totalRequested": 1,
+        "totalProcessed": 1
+      }
+    },
+    "PUT": {
+      "editRequestBody": {
+        "guid": "e9a2b066-d37c-4890-94c0-7953e717e630",
+        "type": "APPROVED",
+        "tenantGuid": "V10118177",
+        "addressType": "HOST",
+        "value": "approvedmockdomainsuccess1.com",
+        "description": "Mock approved description for domain 1"
+      },
+      "editResponseSuccess": {
+        "guid": "e9a2b066-d37c-4890-94c0-7953e717e630",
+        "type": "APPROVED",
+        "tenantGuid": "V10118177",
+        "addressType": "HOST",
+        "value": "approvedmockdomainsuccess1.com",
+        "description": "Mock approved description for domain 1",
+        "created": "2020-11-04T07:10:54.825"
+      }
+    }
+  }
+}

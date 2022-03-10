@@ -1,0 +1,48 @@
+diff --git a/node_modules/@nrwl/web/src/utils/webpack/plugins/index-file/augment-index-html.js b/node_modules/@nrwl/web/src/utils/webpack/plugins/index-file/augment-index-html.js
+index 160846f..9a0bec2 100644
+--- a/node_modules/@nrwl/web/src/utils/webpack/plugins/index-file/augment-index-html.js
++++ b/node_modules/@nrwl/web/src/utils/webpack/plugins/index-file/augment-index-html.js
+@@ -21,11 +21,7 @@ function augmentIndexHtml(params) {
+         const scripts = new Set();
+         // Sort files in the order we want to insert them by entrypoint and dedupes duplicates
+         const mergedFiles = [...moduleFiles, ...noModuleFiles, ...files];
+-        for (const entrypoint of entrypoints) {
+             for (const { extension, file, name } of mergedFiles) {
+-                if (name !== entrypoint) {
+-                    continue;
+-                }
+                 switch (extension) {
+                     case '.js':
+                         scripts.add(file);
+@@ -35,7 +31,6 @@ function augmentIndexHtml(params) {
+                         break;
+                 }
+             }
+-        }
+         let scriptTags = [];
+         for (const script of scripts) {
+             const attrs = [`src="${deployUrl}${script}"`];
+diff --git a/node_modules/@nrwl/web/src/utils/webpack/write-index-html.js b/node_modules/@nrwl/web/src/utils/webpack/write-index-html.js
+index 05cf54a..60a281f 100644
+--- a/node_modules/@nrwl/web/src/utils/webpack/write-index-html.js
++++ b/node_modules/@nrwl/web/src/utils/webpack/write-index-html.js
+@@ -28,11 +28,7 @@ function augmentIndexHtml(params) {
+     const scripts = new Set();
+     // Sort files in the order we want to insert them by entrypoint and dedupes duplicates
+     const mergedFiles = [...moduleFiles, ...noModuleFiles, ...files];
+-    for (const entrypoint of entrypoints) {
+         for (const { extension, file, name } of mergedFiles) {
+-            if (name !== entrypoint) {
+-                continue;
+-            }
+             switch (extension) {
+                 case '.js':
+                     scripts.add(file);
+@@ -42,7 +38,6 @@ function augmentIndexHtml(params) {
+                     break;
+             }
+         }
+-    }
+     // Find the head and body elements
+     const treeAdapter = parse5.treeAdapters.default;
+     const document = parse5.parse(params.inputContent, {

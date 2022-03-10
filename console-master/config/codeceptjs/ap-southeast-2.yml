@@ -1,0 +1,22 @@
+runner:
+  mode: default
+  loglevel: debug
+  delay:
+    startup: 0
+  codecept:
+    show: true
+    writeScreenshots: true
+
+e2e:
+  config:
+    baseUrl: https://protect-au.cylance.com
+
+    users:
+      # see https://wikis.rim.net/pages/viewpage.action?pageId=909575392
+      admin:
+        # customer-id: 6808933264
+        # tenant: venueautesting-ues-t1
+        # venue-tenantid: D9BB3954-635F-4B60-A35A-BE9625CD262C
+        # srpid: S67166079
+        email: venueautesting@ahem.cbbcps.com
+        password: 'AUP@ss!!'

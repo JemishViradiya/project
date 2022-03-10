@@ -1,0 +1,29 @@
+{
+  "root": "partials/protect/deployments-e2e",
+  "sourceRoot": "partials/protect/deployments-e2e/src",
+  "projectType": "e2e",
+  "tags": ["scope:partial", "scope:protect"],
+  "implicitDependencies": ["protect/deployments"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/protect/deployments-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/protect/deployments-e2e/cypress.json",
+        "tsConfig": "partials/protect/deployments-e2e/tsconfig.json",
+        "devServerTarget": "protect/deployments:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "protect/deployments:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partial/protect/deployments-e2e"]
+    }
+  }
+}

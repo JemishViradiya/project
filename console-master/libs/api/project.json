@@ -1,0 +1,39 @@
+{
+  "root": "libs/api",
+  "sourceRoot": "libs/api/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/api.sh api"
+      }
+    },
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "assets": ["libs/api/src/* package.json"],
+        "outputPath": "dist/uc/api",
+        "output": "dist/uc/api",
+        "commands": [
+          {
+            "command": "set -x; rm -rf {args.output}; mkdir -v -p {args.output} && cp -v -f -r {args.assets} {args.output}/; echo build complete"
+          }
+        ]
+      },
+      "configurations": {
+        "production": {
+          "outputPath": "prod/api",
+          "output": "prod/api",
+          "commands": [
+            {
+              "command": "set -x; mkdir -p {args.output} && rsync -vrltDuh {args.assets} {args.output}/ && echo build complete"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "tags": ["scope:assets"]
+}

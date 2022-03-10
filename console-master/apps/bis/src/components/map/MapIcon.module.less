@@ -1,0 +1,43 @@
+@import '../../theme/theme.less';
+
+.shadow {
+  filter: drop-shadow(5px 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.circle {
+  fill: @colorRiskLow;
+  stroke: #fff;
+  stroke-width: @mapIconStrokeWidth;
+}
+
+.pin {
+  stroke: #fff;
+  stroke-width: @mapIconStrokeWidth;
+  fill: @colorRiskUnknown;
+
+  &[risk='CRITICAL'] {
+    fill: @colorRiskCritical;
+  }
+
+  &[risk='HIGH'] {
+    fill: @colorRiskHigh;
+  }
+
+  &[risk='MEDIUM'] {
+    fill: @colorRiskMedium;
+  }
+
+  &[risk='LOW'] {
+    fill: @colorRiskLow;
+  }
+}
+
+.large {
+  transform: scale(1.5);
+}
+
+.text {
+  text-anchor: middle;
+  font-size: @fontSizeSubtitle;
+  fill: #fff;
+}

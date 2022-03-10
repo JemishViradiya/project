@@ -1,0 +1,30 @@
+{
+  "root": "libs/cdn",
+  "sourceRoot": "libs/cdn",
+  "projectType": "application",
+  "generators": {},
+  "targets": {
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/cdn.sh"
+      }
+    }
+  },
+  "tags": ["scope:collect"],
+  "implicitDependencies": [
+    "bis",
+    "console",
+    "dashboard",
+    "deployments",
+    "gateway",
+    "gateway-settings",
+    "info",
+    "launcher",
+    "mtd",
+    "persona",
+    "platform",
+    "session-mgr",
+    "user-policies"
+  ]
+}

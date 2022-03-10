@@ -1,0 +1,322 @@
+{
+  "validDomain1": {
+    "domainAddress": "google.com",
+    "description": "Description for e2e tests"
+  },
+  "responses": {
+    "GET": {
+      "successEmpty": {
+        "totals": {
+          "pages": 1,
+          "elements": 0
+        },
+        "navigation": {
+          "next": "next",
+          "previous": "prev"
+        },
+        "count": 0,
+        "elements": []
+      },
+      "restricted_domain": {
+        "success2Items": {
+          "totals": {
+            "pages": 1,
+            "elements": 2
+          },
+          "navigation": {
+            "next": "next",
+            "previous": "prev"
+          },
+          "count": 2,
+          "elements": [
+            {
+              "guid": "e9a2b066-d37c-4890-94c0-7953e717e630",
+              "type": "RESTRICTED",
+              "tenantGuid": "V10118177",
+              "addressType": "HOST",
+              "value": "restrictedmockdomainsuccess1.com",
+              "description": "Mock restricted description for domain 1",
+              "created": "2020-11-04T07:10:54.825"
+            },
+            {
+              "guid": "e4b1c014-d37c-4890-94c0-7953e717a121",
+              "type": "RESTRICTED",
+              "tenantGuid": "V10118177",
+              "addressType": "HOST",
+              "value": "restrictedmockdomainsuccess2.com",
+              "description": "Mock restricted description for domain 2",
+              "created": "2020-11-04T07:09:54.825"
+            }
+          ]
+        }
+      },
+      "safe_domain": {
+        "success2Items": {
+          "totals": {
+            "pages": 1,
+            "elements": 2
+          },
+          "navigation": {
+            "next": "next",
+            "previous": "prev"
+          },
+          "count": 2,
+          "elements": [
+            {
+              "guid": "e9a2b066-d37c-4890-94c0-7953e717e630",
+              "type": "APPROVED",
+              "tenantGuid": "V10118177",
+              "addressType": "HOST",
+              "value": "approvedmockdomainsuccess1.com",
+              "description": "Mock safe description for domain 1",
+              "created": "2020-11-04T07:10:54.825"
+            },
+            {
+              "guid": "e4b1c014-d37c-4890-94c0-7953e717a121",
+              "type": "APPROVED",
+              "tenantGuid": "V10118177",
+              "addressType": "HOST",
+              "value": "approvedmockdomainsuccess2.com",
+              "description": "Mock safe description for domain 2",
+              "created": "2020-11-04T07:09:54.825"
+            }
+          ]
+        }
+      },
+      "restricted_ip": {
+        "success2Items": {
+          "totals": {
+            "pages": 1,
+            "elements": 2
+          },
+          "navigation": {
+            "next": "next",
+            "previous": "prev"
+          },
+          "count": 2,
+          "elements": [
+            {
+              "guid": "e9a2b066-d37c-4890-94c0-7953e717e630",
+              "type": "RESTRICTED",
+              "tenantGuid": "V10118177",
+              "addressType": "IP",
+              "value": "1.1.1.1",
+              "description": "Mock restricted description for ip 1",
+              "created": "2020-11-04T07:10:54.825"
+            },
+            {
+              "guid": "e4b1c014-d37c-4890-94c0-7953e717a121",
+              "type": "RESTRICTED",
+              "tenantGuid": "V10118177",
+              "addressType": "IP",
+              "value": "1.1.1.2-1.1.1.4",
+              "description": "Mock restricted description for ip 2",
+              "created": "2020-11-04T07:09:54.825"
+            }
+          ]
+        }
+      },
+      "safe_ip": {
+        "success2Items": {
+          "totals": {
+            "pages": 1,
+            "elements": 2
+          },
+          "navigation": {
+            "next": "next",
+            "previous": "prev"
+          },
+          "count": 2,
+          "elements": [
+            {
+              "guid": "e9a2b066-d37c-4890-94c0-7953e717e630",
+              "type": "APPROVED",
+              "tenantGuid": "V10118177",
+              "addressType": "IP",
+              "value": "1.1.1.1",
+              "description": "Mock description for safe ip 1",
+              "created": "2020-11-04T07:10:54.825"
+            },
+            {
+              "guid": "e4b1c014-d37c-4890-94c0-7953e717a121",
+              "type": "APPROVED",
+              "tenantGuid": "V10118177",
+              "addressType": "IP",
+              "value": "1.1.1.2-1.1.1.4",
+              "description": "Mock description for safe ip 2",
+              "created": "2020-11-04T07:09:54.825"
+            }
+          ]
+        }
+      },
+      "restricted_dev_cert": {
+        "success2Items": {
+          "totals": {
+            "pages": 1,
+            "elements": 2
+          },
+          "navigation": {
+            "next": "next",
+            "previous": "prev"
+          },
+          "count": 2,
+          "elements": [
+            {
+              "guid": "e9a2b066-d37c-4890-94c0-7953e717e635",
+              "name": "Restricted developer certificate 1",
+              "platform": "IOS",
+              "type": "RESTRICTED",
+              "tenantGuid": "3d55abd2-c00e-4f5f-abcf-01c92ac777b1",
+              "identifier": "e9a2b066-d37c-4890-94c0-7953e717e635",
+              "subject": "Mock restricted subject 1",
+              "issuer": "Mock restricted issuer 1",
+              "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+              "source": "MANUAL",
+              "created": "2020-11-04T07:18:54.825"
+            },
+            {
+              "guid": "e4b1c014-d37c-4890-94c0-7953e717a129",
+              "name": "Restricted developer certificate 2",
+              "platform": "ANDROID",
+              "type": "RESTRICTED",
+              "tenantGuid": "3d55abd2-c00e-4f5f-abcf-01c92ac777b1",
+              "identifier": "e4b1c014-d37c-4890-94c0-7953e717a129",
+              "subject": "Mock restricted subject 2",
+              "issuer": "Mock restricted issuer 2",
+              "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+              "source": "MANUAL",
+              "created": "2020-10-02T03:17:54.825"
+            }
+          ]
+        }
+      },
+      "safe_dev_cert": {
+        "success2Items": {
+          "totals": {
+            "pages": 1,
+            "elements": 2
+          },
+          "navigation": {
+            "next": "next",
+            "previous": "prev"
+          },
+          "count": 2,
+          "elements": [
+            {
+              "guid": "e9a2b066-d37c-4890-94c0-7953e717e635",
+              "name": "Approved developer certificate 1",
+              "platform": "IOS",
+              "type": "APPROVED",
+              "tenantGuid": "3d55abd2-c00e-4f5f-abcf-01c92ac777b1",
+              "identifier": "e9a2b066-d37c-4890-94c0-7953e717e635",
+              "subject": "Mock Approved subject 1",
+              "issuer": "Mock Approved issuer 1",
+              "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+              "source": "MANUAL",
+              "created": "2020-11-04T07:18:54.825"
+            },
+            {
+              "guid": "e4b1c014-d37c-4890-94c0-7953e717a129",
+              "name": "Approved developer certificate 2",
+              "platform": "ANDROID",
+              "type": "APPROVED",
+              "tenantGuid": "3d55abd2-c00e-4f5f-abcf-01c92ac777b1",
+              "identifier": "e4b1c014-d37c-4890-94c0-7953e717a129",
+              "subject": "Mock Approved subject 2",
+              "issuer": "Mock Approved issuer 2",
+              "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+              "source": "MANUAL",
+              "created": "2020-10-02T03:17:54.825"
+            }
+          ]
+        }
+      },
+      "restricted_app": {
+        "success2Items": {
+          "totals": {
+            "pages": 1,
+            "elements": 2
+          },
+          "navigation": {
+            "next": "next",
+            "previous": "prev"
+          },
+          "count": 2,
+          "elements": [
+            {
+              "guid": "e9a2b066-d37c-4890-94c0-7953e717e535",
+              "name": "Facebook as restricted",
+              "platform": "IOS",
+              "type": "RESTRICTED",
+              "tenantGuid": "V10118177",
+              "hash": "D160560AD3D5B8815A985BEA8552E98A2DEB8E88F2D833364AE009104E41BBB3",
+              "vendorName": "Facebook Inc.",
+              "version": "1.2.2",
+              "versionCode": "v1.1",
+              "description": "Lorem Ipsum is simply dummy text of the printing some other",
+              "source": "MANUAL",
+              "created": "2020-11-04T07:18:54.825"
+            },
+            {
+              "guid": "e4b1c014-d37c-4890-94c0-7953e717a128",
+              "name": "Gmail as restricted",
+              "platform": "ANDROID",
+              "type": "RESTRICTED",
+              "tenantGuid": "V10118177",
+              "hash": "D160560AD3D5B8815A985BEA8552E98A2DEB8E88F2D833364AE009104E41BBB4",
+              "vendorName": "Google Inc.",
+              "version": "5.9",
+              "versionCode": "v6.1",
+              "description": "Lorem Ipsum is simply dummy text of the printing and typesetting",
+              "source": "MANUAL",
+              "created": "2020-10-02T03:17:54.825"
+            }
+          ]
+        }
+      },
+      "safe_app": {
+        "success2Items": {
+          "totals": {
+            "pages": 1,
+            "elements": 2
+          },
+          "navigation": {
+            "next": "next",
+            "previous": "prev"
+          },
+          "count": 2,
+          "elements": [
+            {
+              "guid": "e9a2b066-d37c-4890-94c0-7953e717e635",
+              "name": "Facebook",
+              "platform": "IOS",
+              "type": "APPROVED",
+              "tenantGuid": "V10118177",
+              "hash": "D160560AD3D5B8815A985BEA8552E98A2DEB8E88F2D833364AE009104E41BBB1",
+              "vendorName": "Facebook Inc.",
+              "version": "1.2.2",
+              "versionCode": "v1.1",
+              "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+              "source": "MANUAL",
+              "created": "2020-11-04T07:18:54.825"
+            },
+            {
+              "guid": "e4b1c014-d37c-4890-94c0-7953e717a129",
+              "name": "Gmail",
+              "platform": "ANDROID",
+              "type": "APPROVED",
+              "tenantGuid": "V10118177",
+              "hash": "D160560AD3D5B8815A985BEA8552E98A2DEB8E88F2D833364AE009104E41BBB2",
+              "vendorName": "Google Inc.",
+              "version": "5.9",
+              "versionCode": "v6.1",
+              "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+              "source": "MANUAL",
+              "created": "2020-10-02T03:17:54.825"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

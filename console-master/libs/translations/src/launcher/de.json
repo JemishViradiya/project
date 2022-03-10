@@ -1,0 +1,8 @@
+{
+  "sessionExpiredTitle": "Sitzung ist abgelaufen",
+  "sessionExpiredMessage": "Ihre Sitzung ist abgelaufen.",
+  "help": "Hilfe",
+  "tenant": "Mieter",
+  "sessionStartTitle": "Anmelden",
+  "sessionStartAction": "Anmelden"
+}

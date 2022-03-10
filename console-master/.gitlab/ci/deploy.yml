@@ -1,0 +1,79 @@
+.deploy: &deploy
+  image: registry.rim.net/iac/ci-build-pipeline:loki-aws
+  resource_group: $CI_ENVIRONMENT_NAME
+  variables:
+    REGION: us-east-1
+  before_script:
+    - export AWS_DEFAULT_REGION=${REGION}
+    - env
+    - 'echo "Deploying to region: ${REGION} in ${S3_BUCKET}/${S3_TARGET_ENV} with tag ${DEPLOY_TAG}"'
+  script:
+    - make deploy
+
+.deploy_staging:
+  <<: *deploy
+  script:
+    - make deploy
+    - |
+      echo "Integrated into $CI_COMMIT_BRANCH branch as ${CI_COMMIT_SHORT_SHA} and deployed to [$CI_ENVIRONMENT_NAME]"'('"$CI_ENVIRONMENT_URL"')'"
+
+      " > COMMENT.txt
+    - bash .gitlab/ci/scripts/changelog.sh | tee CHANGELOG.txt
+    - bash .gitlab/ci/scripts/deployment-mr-comment.sh COMMENT.txt ${CI_DEPLOYBOT_TOKEN}
+
+.deploy_prod:
+  <<: *deploy
+  stage: regional rollout
+  environment:
+    name: production/$REGION
+  variables:
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID_prod}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY_prod}
+    REGION: us-east-1
+    S3_BUCKET: ues-${REGION}.cs.blackberry.com
+    S3_TARGET_ENV: prod
+    DEPLOY_FLAGS_SYNC: --size-only
+  script:
+    - |
+      if [ -z "${RELEASE_TAG}" ]
+      then
+        echo "No release provided for this pipeline" >&2
+        exit 30
+      fi
+
+    - |
+      export DEPLOYMENT_DESCRIPTION="Production Deployment ${RELEASE_TAG} to ${REGION}
+
+      Date: $RELEASE_DATE
+
+      Author: $RELEASE_AUTHOR
+
+      Merge Request: $RELEASE_MERGE_REQUEST_URL
+
+      Pipeline: $RELEASE_PIPELINE_URL
+
+      Release: $RELEASE_URL
+      "
+      echo -e "Tag: deployment/${REGION}\n"
+      echo -e "$DEPLOYMENT_DESCRIPTION"
+
+    - make deploy
+
+    - bash .gitlab/ci/scripts/deployment-tag.sh
+    - |
+      echo "Deployed to [${REGION}]"'('"$CI_ENVIRONMENT_URL"')'" as part of release [${RELEASE_TAG}]"'('"$RELEASE_URL"')'"
+
+      " > COMMENT.txt
+    - bash .gitlab/ci/scripts/deployment-mr-comment.sh COMMENT.txt ${CI_DEPLOYBOT_TOKEN}
+
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_DEPLOY_FREEZE != null
+      when: never
+    - if: $PRODUCTION_ENABLED == 'false'
+      when: never
+    - if: $CI_COMMIT_BRANCH != 'production'
+      when: never
+    - when: manual
+      allow_failure: true

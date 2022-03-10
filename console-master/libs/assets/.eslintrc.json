@@ -1,0 +1,57 @@
+{
+  "extends": ["../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*", "node_modules/**"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "globals": {
+    "process": "readonly",
+    "globalThis": "readonly"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "parserOptions": {
+        "project": ["libs/assets/tsconfig.*?.json"]
+      },
+      "rules": {}
+    },
+    {
+      "files": ["lib/**/*", "src/dsm/themes/*/templates/**/*", "tools/**/*", "node/**"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      },
+      "env": {
+        "browser": false,
+        "commonjs": true,
+        "es6": false,
+        "jest": true,
+        "node": true
+      }
+    },
+    {
+      "files": ["*.jsx", "*.tsx"],
+      "extends": ["../../tools/eslint/react.eslintrc.js"]
+    },
+    {
+      "files": "src/**/*.d.ts",
+      "parserOptions": {
+        "project": false
+      }
+    },
+    {
+      "files": "**/*.js",
+      "parserOptions": {
+        "project": false
+      }
+    },
+    {
+      "files": ["docs/**/*.tsx"],
+      "rules": {
+        "@typescript-eslint/ban-ts-comment": "off"
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "dashboardId": "networkDashboard",
+  "title": "networkDashboard",
+  "requiredServices": ["big.blackberry.com"],
+  "globalTime": "last24Hours",
+  "cardState": {
+    "public-network-access": { "chartId": "public-network-access" },
+    "private-network-access": { "chartId": "private-network-access" },
+    "egress-health-connector": { "chartId": "egress-health-connector" },
+    "public-top-network-destinations": { "chartId": "public-top-network-destinations" },
+    "private-top-network-destinations": { "chartId": "private-top-network-destinations" },
+    "network-traffic": { "chartId": "network-traffic" },
+    "transferred-bytes": { "chartId": "transferred-bytes" },
+    "total-active-users": { "chartId": "total-active-users" },
+    "BIS-identity-risk-alerts": { "chartId": "BIS-identity-risk-alerts" },
+    "BIS-top-actions": { "chartId": "BIS-top-actions" }
+  },
+  "layoutState": [
+    { "i": "public-network-access", "w": 9, "h": 9, "x": 15, "y": 0 },
+    { "i": "private-network-access", "w": 9, "h": 9, "x": 6, "y": 0 },
+    { "i": "egress-health-connector", "w": 9, "h": 10, "x": 0, "y": 16 },
+    { "i": "public-top-network-destinations", "w": 9, "h": 7, "x": 15, "y": 9 },
+    { "i": "private-top-network-destinations", "w": 9, "h": 7, "x": 6, "y": 9 },
+    { "i": "network-traffic", "w": 6, "h": 7, "x": 0, "y": 3 },
+    { "i": "transferred-bytes", "w": 6, "h": 6, "x": 0, "y": 10 },
+    { "i": "total-active-users", "w": 6, "h": 3, "x": 0, "y": 0 },
+    { "i": "BIS-identity-risk-alerts", "w": 9, "h": 10, "x": 9, "y": 16 },
+    { "i": "BIS-top-actions", "w": 6, "h": 10, "x": 18, "y": 16 }
+  ]
+}

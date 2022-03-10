@@ -1,0 +1,101 @@
+{
+  "responses": {
+    "list": {
+      "empty": {
+        "totals": {
+          "pages": 1,
+          "elements": 0
+        },
+        "navigation": {
+          "next": "next",
+          "previous": "prev"
+        },
+        "count": 0,
+        "elements": []
+      },
+      "default": {
+        "totals": {
+          "pages": 1,
+          "elements": 2
+        },
+        "navigation": {
+          "next": "next",
+          "previous": "prev"
+        },
+        "count": 2,
+        "elements": [
+          {
+            "guid": "e9a2b066-d37c-4890-94c0-7953e717e635",
+            "name": "Approved developer certificate 1",
+            "platform": "IOS",
+            "type": "APPROVED",
+            "tenantGuid": "3d55abd2-c00e-4f5f-abcf-01c92ac777b1",
+            "identifier": "e9a2b066-d37c-4890-94c0-7953e717e635",
+            "subject": "Mock approved subject 1",
+            "issuer": "Mock approved issuer 1",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "source": "MANUAL",
+            "created": "2020-11-04T07:18:54.825"
+          },
+          {
+            "guid": "e4b1c014-d37c-4890-94c0-7953e717a129",
+            "name": "Approved developer certificate 2",
+            "platform": "ANDROID",
+            "type": "APPROVED",
+            "tenantGuid": "3d55abd2-c00e-4f5f-abcf-01c92ac777b1",
+            "identifier": "e4b1c014-d37c-4890-94c0-7953e717a129",
+            "subject": "Mock approved subject 2",
+            "issuer": "Mock approved issuer 2",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "source": "MANUAL",
+            "created": "2020-10-02T03:17:54.825"
+          }
+        ]
+      },
+      "system": {
+        "totals": {
+          "pages": 1,
+          "elements": 2
+        },
+        "navigation": {
+          "next": "next",
+          "previous": "prev"
+        },
+        "count": 2,
+        "elements": [
+          {
+            "guid": "e9a2b066-d37c-4890-94c0-7953e717e635",
+            "name": "System safe developer certificate 1",
+            "platform": "IOS",
+            "type": "APPROVED",
+            "tenantGuid": "3d55abd2-c00e-4f5f-abcf-01c92ac777b1",
+            "identifier": "e9a2b066-d37c-4890-94c0-7953e717e635",
+            "subject": "Mock approved subject 1",
+            "issuer": "Mock approved issuer 1",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "source": "MANUAL",
+            "created": "2020-11-04T07:18:54.825"
+          },
+          {
+            "guid": "e4b1c014-d37c-4890-94c0-7953e717a129",
+            "name": "System safe developer certificate 2",
+            "platform": "ANDROID",
+            "type": "APPROVED",
+            "tenantGuid": "3d55abd2-c00e-4f5f-abcf-01c92ac777b1",
+            "identifier": "e4b1c014-d37c-4890-94c0-7953e717a129",
+            "subject": "Mock approved subject 2",
+            "issuer": "Mock approved issuer 2",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "source": "SYSTEM",
+            "created": "2020-10-02T03:17:54.825"
+          }
+        ]
+      }
+    },
+    "create": {
+      "success": {
+        "name": "Facebook"
+      }
+    }
+  }
+}

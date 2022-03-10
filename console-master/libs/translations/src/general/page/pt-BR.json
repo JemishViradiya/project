@@ -1,0 +1,7 @@
+{
+  "companyName": {
+    "blackBerry": "BlackBerry EUA",
+    "cylance": "Cylance PROTECT"
+  },
+  "title": "{{pageTitle}} | {{companyName}}"
+}

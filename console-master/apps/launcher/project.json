@@ -1,0 +1,101 @@
+{
+  "root": "apps/launcher",
+  "sourceRoot": "apps/launcher/src",
+  "projectType": "application",
+  "generators": {},
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "options": {
+        "baseHref": "..",
+        "deployUrl": "uc/launcher/",
+        "outputPath": "dist/uc/launcher",
+        "index": "tools/index.html",
+        "main": "apps/launcher/src/main.tsx",
+        "polyfills": "libs/behaviour/app-shell/src/polyfills.ts",
+        "tsConfig": "apps/launcher/tsconfig.app.json",
+        "assets": [],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "tools/webpack/app",
+        "maxWorkers": 1,
+        "memoryLimit": 1024
+      },
+      "configurations": {
+        "production": {
+          "outputPath": "prod/launcher",
+          "fileReplacements": [
+            {
+              "replace": "apps/launcher/src/environments/environment.ts",
+              "with": "apps/launcher/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            }
+          ],
+          "maxWorkers": 1,
+          "memoryLimit": 2048
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "hmr": true,
+        "buildTarget": "launcher:build",
+        "ssl": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "launcher:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/launcher/**/*.js",
+          "apps/launcher/**/*.jsx",
+          "apps/launcher/**/*.ts",
+          "apps/launcher/**/*.tsx",
+          "tools/nx/typings/image.d.ts",
+          "apps/launcher/**/*.spec.ts",
+          "apps/launcher/**/*.spec.tsx",
+          "apps/launcher/**/*.spec.js",
+          "apps/launcher/**/*.spec.jsx",
+          "apps/launcher/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/launcher/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/apps/launcher"]
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/app.sh launcher"
+      }
+    }
+  },
+  "tags": ["scope:app"],
+  "implicitDependencies": ["api", "pwa"]
+}

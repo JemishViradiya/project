@@ -1,0 +1,17 @@
+runner:
+  loglevel: LOG_LEVEL
+  codecept:
+    debug: CODECEPT_DEBUG
+    verbose: CODECEPT_VERBOSE
+    browser: CODECEPT_BROWSER
+    headless: HEADLESS
+    slow: SLOW
+    plugin: CODECEPT_EXECUTOR
+
+    WebDriver:
+      # common config alias to runner.codecept.browser
+      browser: CODECEPT_BROWSER
+      hostname: WEBDRIVER_HOST
+      port: WEBDRIVER_PORT
+      path: WEBDRIVER_PATH
+      protocol: WEBDRIVER_PROTOCOL

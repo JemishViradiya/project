@@ -1,0 +1,31 @@
+{
+  "root": "libs/data/reporting",
+  "sourceRoot": "libs/data/reporting/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/reporting/**/*.js",
+          "libs/data/reporting/**/*.jsx",
+          "libs/data/reporting/**/*.ts",
+          "libs/data/reporting/**/*.tsx",
+          "libs/data/reporting/**/*.spec.ts",
+          "libs/data/reporting/**/*.spec.tsx",
+          "libs/data/reporting/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/reporting/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/libs/data/reporting"]
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

@@ -1,0 +1,107 @@
+{
+  "navigation": {
+    "gateway": "ゲートウェイ",
+    "policies": "ポリシー",
+    "title": "ユーザーポリシー",
+    "user": "ユーザー",
+    "activation": {
+      "label": "エンロールメント"
+    },
+    "mobileDeviceThreats": {
+      "label": "Protect Mobile"
+    },
+    "networkAccessControl": {
+      "label": "ネットワークアクセス制御"
+    },
+    "gatewayService": {
+      "label": "ゲートウェイサービス"
+    },
+    "enterpriseIdentity": {
+      "label": "認証"
+    },
+    "adaptiveResponse": {
+      "label": "アダプティブレスポンス"
+    },
+    "riskDetection": {
+      "label": "リスク検出"
+    },
+    "dlpMobileThreads": {
+      "label": "モバイル Avert る"
+    },
+    "dlpContentThreads": {
+      "label": "情報保護"
+    }
+  },
+  "policy": {
+    "cancelButton": "キャンセル",
+    "deleteButton": "削除",
+    "saveButton": "保存",
+    "addButton": "追加",
+    "removeButton": "削除",
+    "list": {
+      "add": "ポリシーの追加",
+      "results": "{{value}} 件の結果",
+      "rank": "ランク",
+      "searchPlaceholder": "ポリシーを検索する",
+      "noData": "データなし",
+      "columns": {
+        "rank": "ランク",
+        "name": "ポリシー名",
+        "description": "説明",
+        "userCount": "ユーザー",
+        "groupCount": "ユーザーグループ",
+        "added": "登録日時",
+        "modified": "修正日時"
+      },
+      "columnPicker": "テーブル列",
+      "selected": "{{count}} が選択されました"
+    },
+    "delete": {
+      "title": "削除の確認",
+      "deleteSingle": "{{profile}} ポリシーを削除しますか?",
+      "multipleDelete": "これらのポリシーを削除しますか?",
+      "note": "ポリシーを削除する前に、ポリシーに関連付けられているすべてのユーザーおよびグループを削除する必要があります。",
+      "successMessage": "ポリシーが削除されました。"
+    },
+    "rank": {
+      "successfulUpdate": "ランキングが更新されました。"
+    },
+    "detail": {
+      "updated": "{{date, datetime}} に更新されました",
+      "appliedUsersAndGroups": "割り当てられたユーザーとグループ",
+      "settings": "設定",
+      "device": "デバイスポリシーの詳細",
+      "user": "ユーザーポリシーの詳細"
+    },
+    "assignment": {
+      "columns": {
+        "name": "表示名",
+        "email": "電子メール"
+      },
+      "add": "ユーザーまたはグループの追加",
+      "searchPlaceholder": "ユーザーとグループを検索する",
+      "userCount": "{{count}} 人のユーザー",
+      "dialog": {
+        "title": "ユーザーまたはグループを追加",
+        "description": "ユーザーまたはグループを検索します。同じポリシーに複数のユーザーおよびグループを割り当てることができます。",
+        "searchText": "ユーザーまたは、グループを検索",
+        "list": {
+          "noResults": "結果なし"
+        }
+      },
+      "unassign": {
+        "title": "ユーザーまたはグループを削除する",
+        "content": "次のアイテムを削除しますか?"
+      },
+      "successfulAssignment": "ユーザーまたはグループがポリシーに追加されました。",
+      "successfulUnassignment": "ユーザーまたはグループがポリシーから削除されました。"
+    },
+    "defaultPolicyName": "デフォルト"
+  },
+  "policies": {
+    "deletePoliciesSuccessMessage": "ポリシーは削除されました。",
+    "deletePoliciesErrorMessage": "ポリシーを削除できませんでした。",
+    "deletePolicyErrorMessage": "ポリシーを削除できませんでした。",
+    "deleteMultiplePoliciesErrorDescription": "次のポリシーはユーザーまたはグループに割り当てられているため削除できませんでした。"
+  }
+}

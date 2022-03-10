@@ -1,0 +1,37 @@
+{
+  "rules": {},
+  "parserOptions": {
+    "project": ["./libs/assets-e2e/tsconfig.*.json"]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "parserOptions": {
+        "project": ["libs/assets-e2e/tsconfig.*?.json"]
+      },
+      "rules": {}
+    },
+    {
+      "files": [".storybook/**/*.ts", ".storybook/**/*.tsx", ".storybook/**/*.js", ".storybook/**/*.jsx"],
+      "parserOptions": {
+        "project": ["libs/assets-e2e/.storybook/tsconfig.*?.json"]
+      },
+      "rules": {}
+    },
+    {
+      "files": ["src/plugins/index.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "no-undef": "off"
+      }
+    },
+    {
+      "files": "**/*.jsx?",
+      "parserOptions": {
+        "project": false
+      }
+    }
+  ],
+  "extends": ["plugin:cypress/recommended", "../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*"]
+}

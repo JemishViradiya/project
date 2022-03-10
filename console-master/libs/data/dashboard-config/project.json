@@ -1,0 +1,31 @@
+{
+  "root": "libs/data/dashboard-config",
+  "sourceRoot": "libs/data/dashboard-config/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/dashboard-config/**/*.js",
+          "libs/data/dashboard-config/**/*.jsx",
+          "libs/data/dashboard-config/**/*.ts",
+          "libs/data/dashboard-config/**/*.tsx",
+          "libs/data/dashboard-config/**/*.spec.ts",
+          "libs/data/dashboard-config/**/*.spec.tsx",
+          "libs/data/dashboard-config/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/dashboard-config/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/libs/data/dashboard-config"]
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

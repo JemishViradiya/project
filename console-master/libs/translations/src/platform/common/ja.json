@@ -1,0 +1,741 @@
+{
+  "on": "オン",
+  "off": "オフ",
+  "form": {
+    "to": "に",
+    "selectValue": "-選択-",
+    "success": "成功した"
+  },
+  "navigation": {
+    "gateway": "ゲートウェイ",
+    "assets": "資産"
+  },
+  "noData": "データなし",
+  "chosenItems": "選ばれたアイテム",
+  "button": {
+    "addLabel": "接続を追加",
+    "downloadActivationFile": "アクティベーションファイルのダウンロード",
+    "saveAndNew": "保存して新規作成",
+    "settings": "[設定]"
+  },
+  "sideNav": {
+    "companyDirectory": "会社ディレクトリ",
+    "intune": "マイクロソフトIntune",
+    "users": "ユーザー",
+    "settings": "設定",
+    "groups": "グループ"
+  },
+  "onlineStatus": {
+    "false": "オフライン",
+    "true": "オンライン"
+  },
+  "directory": {
+    "description": "接続されている会社のディレクトリの同期とオンボーディングの設定を構成します。Microsoft Azure Active Directory への接続をここで追加することもできます。オンプレミスの Microsoft Active Directory または LDAP ディレクトリへの接続を追加するには、BlackBerry Connectivity Nodeのオンプレミスインスタンスをインストールし、Connectivity Node の設定で接続を追加する必要があります。",
+    "noConnections": "接続は設定されていません",
+    "azureConnection": {
+      "add": {
+        "header": "ディレクトリ接続を追加",
+        "page": {
+          "title": "一般情報",
+          "description": "資格情報を使用して Microsoft Azure ディレクトリ接続を作成します。"
+        }
+      },
+      "edit": "ディレクトリ接続の編集",
+      "remove": "Microsoft Azure ディレクトリ接続の削除",
+      "sync": "同期を開始する"
+    },
+    "tableHeader": {
+      "connection": "ディレクトリ接続",
+      "type": "タイプ",
+      "lastSync": "前回の同期",
+      "sync": "同期スケジュール"
+    },
+    "tableTitle": "ディレクトリ接続",
+    "emptyTableMessage": "＋をクリックしてアイテムを追加",
+    "type": {
+      "AD": "Microsoft Active Directory 接続",
+      "AZURE": "Microsoft Azure Active Directory 接続",
+      "ACTIVE_DIRECTORY": "Microsoft Active Directory 接続",
+      "LDAP": "LDAP"
+    },
+    "error": {
+      "duplicateName": "この名前の接続は既に存在します。",
+      "createConnection": "接続を作成できませんでした。",
+      "deleteConnection": "接続を削除できませんでした。",
+      "duplicateSchedule": "このスケジュールとの接続は既に存在します。",
+      "retrieveConnections": "接続を取得できませんでした。",
+      "syncStatus": "ディレクトリ同期ステータスを取得できませんでした。",
+      "syncConnection": "同期を完了できませんでした。",
+      "syncConnectionPreview": "プレビューを完了できませんでした。",
+      "updateConnection": "接続を更新できませんでした。",
+      "syncCancel": "ディレクトリの同期をキャンセルできませんでした。",
+      "connectionNotFound": "ディレクトリ接続が見つかりませんでした",
+      "connectionIsBCNInstance": "ディレクトリ接続は、1 つ以上の BlackBerry Connectivity Nodeインスタンスに関連付けられているため、削除できませんでした。",
+      "connectionIsInvalid": "ディレクトリ接続が無効です。",
+      "connectionIsNotEmpty": "ディレクトリ接続を削除する前に、そのディレクトリ接続に関連付けられているすべてのユーザーとグループを削除する必要があります。"
+    },
+    "success": {
+      "deleteConnection": "接続は削除されました。"
+    },
+    "connectionName": "表示名",
+    "domain": "ドメイン",
+    "clientId": "クライアント ID",
+    "clientKey": "クライアントキー",
+    "removeConnection": "接続を削除する",
+    "deleteConnectionDialog": {
+      "confirm": "会社のディレクトリとの {{connectionName}} 接続を削除しますか?",
+      "deleteNote": "接続を削除する前に、接続に関連付けられているすべてのユーザーとグループを削除する必要があります。"
+    },
+    "sync": {
+      "action": {
+        "start": "同期を開始する",
+        "cancel": "同期をキャンセルする"
+      },
+      "dialogTitle": "ディレクトリの同期",
+      "confirm": "ディレクトリユーザーとディレクトリにリンクされたグループを同期しますか?次の同期タイプを選択して続行します。",
+      "state": {
+        "RUNNING": "進行中",
+        "CANCELED": "キャンセル済み",
+        "FAILED": "失敗",
+        "SUCCEEDED": "成功した"
+      }
+    },
+    "syncSettings": {
+      "tab": "設定同期",
+      "description": "会社のディレクトリグループの同期設定を構成します。",
+      "onboarding": "ディレクトリオンボーディング",
+      "forceSync": "同期を強制",
+      "limit": "同期",
+      "limitDescription": "同期制限の設定 (0 = 制限なし)",
+      "nestingLevel": "ネスティングレベル",
+      "nestingLevelDescription": "ディレクトリグループの最大ネストレベルを設定（-1=制限なし）",
+      "offboardingTitle": "オフボーディング",
+      "offboardingDescriptionDetail": "ユーザーがすべてのオンボーディングディレクトリグループから削除されたときに実行する強制アクションを選択します。",
+      "offboarding": "ユーザーがすべてのオンボーディングディレクトリグループから削除されたときにユーザーを削除",
+      "offboardingProtection": "オフボーディング保護",
+      "onboardingTitle": "オンボーディング"
+    },
+    "syncSchedule": {
+      "title": "同期スケジュール",
+      "description": "同期スケジュールを設定します。",
+      "add": "スケジュールの追加",
+      "addNew": "同期スケジュールの追加",
+      "days": "日数",
+      "everyNumMinutes": "{{minutes}} 分ごと",
+      "interval": {
+        "interval": "間隔",
+        "onceADay": "一日一回",
+        "noRecurrence": "再発なし"
+      },
+      "remove": "同期スケジュールの削除",
+      "recurrence": "繰り返し",
+      "setTime": "時間を設定*",
+      "scheduledDay": "予定日",
+      "scheduledDays": "スケジュールされた日数",
+      "syncBetween": "同期 (UTC) *",
+      "syncGroups": {
+        "all": "すべてのユーザーとグループ",
+        "onboarding": "オンボーディンググループ",
+        "linked": "ディレクトリにリンクされたグループ",
+        "userAttributes": "ユーザー属性"
+      },
+      "tab": "同期スケジュール",
+      "time": "時刻 (UTC)",
+      "type": "同期タイプ",
+      "emptyTableMessage": "＋をクリックしてアイテムを追加"
+    },
+    "actions": {
+      "add": "新しい接続を追加"
+    }
+  },
+  "signOut": "サインアウト",
+  "myAccount": "マイアカウント",
+  "help": "ヘルプ",
+  "signInLink": "ここをクリックして、もう一度サインインしてください。",
+  "signedOutMessage": "サインアウトしました。",
+  "signedOutSummary": "サインアウト",
+  "requestCanceled": "リクエストがキャンセルされました",
+  "users": {
+    "actions": {
+      "add": "ユーザーの追加",
+      "delete": "ユーザーを削除する",
+      "deleteUserDescription": "{{userCount}} ユーザーを削除しますか?",
+      "expirePasscode": "パスコードの期限切れ",
+      "resendInvitation": "招待を再送する",
+      "resendInvitationDescription": "招待状を {{userCount}} 人のユーザーに再送信しますか？"
+    },
+    "grid": {
+      "allUsers": "ユーザー",
+      "displayName": "表示名",
+      "emailAddress": "メールアドレス",
+      "user": "ユーザー",
+      "deleteUsersTitle": "ユーザーを削除する",
+      "resendInvitationTitle": "招待を再送する",
+      "dataSource": {
+        "header": "取得元"
+      },
+      "devices": "デバイス",
+      "passcodeExpiry": "パスコードの有効期限",
+      "expired": "期限切れ",
+      "selectedCount": "{{value}} が選択されました",
+      "resultsCount": "{{value}} 件の結果"
+    },
+    "add": {
+      "title": "ユーザーの追加",
+      "userDetails": "ユーザー詳細",
+      "additionalUserDetails": "追加のユーザー詳細",
+      "search": "検索",
+      "addNewUser": "新しいユーザーを手動で追加する",
+      "userFoundTitle": "ユーザーが見つかりました。",
+      "selectUserNote": "以下のいずれかをお選びください。",
+      "userCreatedMessage": "ユーザーが作成されました。",
+      "groups": {
+        "heading": "グループ",
+        "subHeading": "ユーザーをグループに割り当てます。",
+        "available": "使用可能なグループ",
+        "selectedGroups": "選択されたグループ"
+      },
+      "input": {
+        "search": "名前またはメールアドレスを入力",
+        "firstName": "名",
+        "lastName": "姓",
+        "displayName": "表示名",
+        "emailAddress": "メールアドレス",
+        "department": "部署",
+        "title": "作品名",
+        "company": "組織名",
+        "companyPhoneNumber": "職場の電話",
+        "homePhoneNumber": "自宅電話",
+        "mobilePhoneNumber": "モバイル",
+        "street": "番地",
+        "poBox": "私書箱",
+        "city": "市",
+        "state": "都道府県/州",
+        "postalCode": "郵便番号/郵便番号",
+        "country": "国名"
+      },
+      "dataSource": {
+        "cur": "BlackBerry Online",
+        "azure": "Microsoft Azure",
+        "ldap": "LDAP",
+        "active_directory": "Active Directory"
+      },
+      "directoryHelp": {
+        "link": "ディレクトリユーザーの追加について学ぶ"
+      },
+      "displayName": "{{firstName}} {{lastName}}",
+      "unsaved": {
+        "title": "未保存の変更",
+        "content": "このページから離れてもよろしいですか？変更内容は保存されていません"
+      }
+    },
+    "message": {
+      "noUsersFound": "ユーザーが見つかりませんでした",
+      "success": {
+        "create": "ユーザーが作成されました。",
+        "delete": "ユーザーは削除されました。",
+        "deletePlural": "ユーザーは削除されました。",
+        "resendInvitation": "招待状が再送信されました。",
+        "resendInvitationPartial": "招待状が再送信されました。招待状を一部のユーザーに配信できませんでした。"
+      },
+      "error": {
+        "fetch": "ユーザーを取得できませんでした。",
+        "submit": "ユーザーの送信中にエラーが発生しました",
+        "conflict": "ユーザーはすでに存在します。",
+        "delete": "ユーザーを削除できませんでした。",
+        "resend": "招待状を再送信できませんでした。"
+      }
+    },
+    "delete": {
+      "title": "ユーザーを削除する",
+      "description": "{{user}} を削除しますか?"
+    },
+    "expirePasscodes": {
+      "title": "パスコードの期限切れ",
+      "description": "{{userCount}} ユーザーのパスコードを期限切れにしますか？",
+      "success": "パスコードの有効期限が切れました。",
+      "error": "パスコードの有効期限が切れませんでした。",
+      "errorWithCount": "{{count}} パスコードを期限切れにできませんでした。"
+    },
+    "userTabs": "ユーザータブ",
+    "alertsTabs": "警告] タブ",
+    "eventsTabs": "イベント] タブ",
+    "details": {
+      "title": "ユーザー詳細",
+      "actions": {
+        "title": "アクション",
+        "viewUserDetails": "ユーザー詳細の表示",
+        "editUserDetails": "ユーザーの詳細を編集する",
+        "manageAssignments": "割り当てを管理する",
+        "manageDevices": "デバイスを管理する",
+        "generateStatusReport": "ステータスレポートの生成",
+        "deleteUser": "ユーザーを削除する",
+        "removeTOTPEnrollment": "TOTP 登録を削除する"
+      },
+      "panels": {
+        "alerts": "アラート",
+        "events": "イベント",
+        "devices": "デバイス",
+        "configuration": "構成"
+      },
+      "events": {
+        "tabs": {
+          "identity": "アイデンティティ",
+          "network": "ネットワーク"
+        },
+        "networkActivityTitle": "ネットワークアクティビティ",
+        "networkEventsTitle": "ネットワークイベント"
+      },
+      "devices": {
+        "title": "デバイス",
+        "label": "{{deviceName}} のデバイスの詳細",
+        "agent": "エージェント:{{agent}}",
+        "agentBundleId": {
+          "com_blackberry_protect": "ブラックベリープロテクト",
+          "com_blackberry_big": "ブラックベリーゲートウェイデスクトップ",
+          "com_blackberry_big1": "ブラックベリーゲートウェイデスクトップ",
+          "com_blackberry_big2": "ブラックベリーゲートウェイデスクトップ",
+          "com_blackberry_big3": "ブラックベリーゲートウェイデスクトップ"
+        },
+        "enrollmentDateTime": "登録:{{enrollmentDateTime}}",
+        "error": {
+          "fetch": "デバイスを取得できませんでした。",
+          "remove": "デバイスを削除できませんでした。"
+        },
+        "actions": {
+          "remove": "デバイスを削除する"
+        },
+        "dialogs": {
+          "remove": {
+            "title": "デバイスを削除する",
+            "description": "このデバイスを削除しますか?デバイスを削除すると、Gateway エージェントは無効になります。"
+          }
+        },
+        "success": {
+          "remove": "デバイスは削除されました。"
+        }
+      },
+      "edit": {
+        "title": "ユーザーの詳細を編集する",
+        "error": "ユーザーは編集できませんでした。",
+        "success": "ユーザーが編集されました。"
+      },
+      "configuration": {
+        "groups": {
+          "title": "割り当てられたユーザーグループ",
+          "description": "ユーザーをローカルグループまたは、ディレクトリグループに割り当てます。",
+          "assignButton": "ユーザーグループを割り当てる",
+          "userGroupName": "表示名",
+          "type": "タイプ",
+          "directoryGroup": "リンクされたディレクトリグループ",
+          "localGroup": "ローカルグループ",
+          "dialogs": {
+            "assign": {
+              "title": "ユーザーグループを割り当てる",
+              "description": "ユーザーに割り当てるグループを検索します。",
+              "searchText": "グループ名"
+            },
+            "unassign": {
+              "title": "[グループを割り当て解除]",
+              "description": "{{groupName}} を {{displayName}} から割り当て解除しますか？"
+            }
+          },
+          "success": {
+            "unassign": "グループは割り当てられていませんでした。",
+            "assign": {
+              "single": "グループは割り当てられました。",
+              "multiple": "グループは割り当てられました。"
+            }
+          },
+          "errors": {
+            "fetchUser": "ユーザーグループを取得できませんでした。",
+            "unassign": "グループの割り当てを解除できませんでした。",
+            "assign": "グループを割り当てることができませんでした。",
+            "search": "検索結果を取得できませんでした。"
+          }
+        },
+        "policies": {
+          "title": "割り当てられたユーザーポリシー",
+          "description": "ポリシーをユーザーに割り当てます。ポリシーは、ユーザーに直接割り当てることも、ユーザーがメンバーであるグループに割り当てることもできます。",
+          "assignButton": "ユーザーポリシーを割り当てる",
+          "policyName": "表示名",
+          "policyType": "タイプ",
+          "assignment": "割り当て",
+          "assignedViaGroup": "グループに割り当てられている",
+          "assignedViaOverride": "オーバーライドによる割り当て",
+          "assignedToUser": "ユーザーに割り当てられている",
+          "dialogs": {
+            "assign": {
+              "title": "ポリシーを割り当てる",
+              "replaceTitle": "ポリシーの置換",
+              "description": "ユーザーに割り当てるポリシーを検索します。",
+              "searchText": "ポリシー名"
+            },
+            "unassign": {
+              "title": "ポリシーの割り当て解除",
+              "description": "{{policyName}} から {{displayName}} の割り当てを解除しますか？"
+            }
+          },
+          "success": {
+            "unassign": "ポリシーは割り当てられていませんでした。",
+            "assign": {
+              "single": "ポリシーが割り当てられました。",
+              "multiple": "ポリシーが割り当てられました。"
+            }
+          },
+          "errors": {
+            "fetchPolicies": "割り当てられたユーザーポリシーを取得できませんでした。",
+            "fetchUser": "ユーザーポリシーを取得できませんでした。",
+            "fetchAll": "ポリシータイプを取得できませんでした。",
+            "unassign": "ポリシーの割り当てを解除できませんでした。",
+            "assign": "ポリシーを割り当てることができませんでした。"
+          }
+        }
+      },
+      "error": {
+        "fetch": "ユーザーを取得できませんでした。"
+      }
+    },
+    "totp": {
+      "fetchError": "TOTP 登録情報を取得できませんでした。",
+      "removeError": "TOTP 登録を削除できませんでした。",
+      "removeSuccess": "TOTP 登録が削除されました。"
+    },
+    "remove": {
+      "title": "TOTP 登録を削除する",
+      "description": "{{user}} の TOTP 登録を削除しますか？"
+    }
+  },
+  "itemsSelected": "選択されたアイテム",
+  "filter": "フィルタ",
+  "export": "エクスポート",
+  "apply": "適用",
+  "Users": "ユーザー",
+  "Customize columns": "列をカスタマイズする",
+  "Reset": "リセット",
+  "Unselect": "選択解除",
+  "Unselect All": "すべて選択解除",
+  "Select all entries": "すべてのエントリを選択",
+  "{{start}} - {{stop}} of {{total}}": "{{start}}-{{stop}} の {{total}}",
+  "companyDirectoryConnection": "会社のディレクトリ接続",
+  "companyDirectoryDescription": "Microsoft Active Directory または LDAP への接続を設定して、ディレクトリユーザをインポートし、ディレクトリグループを同期します。",
+  "groups": {
+    "title": "ユーザーグループ",
+    "enableOnboarding": "オンボーディングを有効",
+    "disableOnboarding": "オンボーディングを無効にする",
+    "confirmOnboarding": "オンボーディングを無効にしますか?",
+    "generalInformation": "一般情報",
+    "groupName": "グループ名",
+    "directorySource": "ディレクトリのソース",
+    "directoryGroupName": "ディレクトリのグループ名",
+    "description": "説明",
+    "onboarding": "オンボーディング",
+    "nestedDirectoryGroups": "ネストされたディレクトリグループ",
+    "tabs": {
+      "settings": "設定",
+      "users": "ユーザー"
+    },
+    "table": {
+      "columnPickerTitle": "テーブル列",
+      "optionsTitle": "グループ",
+      "groupName": "表示名",
+      "numUsers": "ユーザー",
+      "assignedProfiles": "割り当てられたポリシー",
+      "onboarding": "オンボーディング",
+      "directoryLink": "ディレクトリリンク",
+      "addGroup": "グループを追加",
+      "addLocalGroup": "ローカルグループ",
+      "addDirectoryGroup": "ディレクトリグループ",
+      "selectedCount": "{{value}} が選択されました",
+      "groupLoadFailure": "グループを取得できませんでした。"
+    },
+    "export": {
+      "title": "エクスポート",
+      "description": "エクスポートはバックグラウンドで生成されます。",
+      "everything": "全て",
+      "currentFilters": "現在のフィルタ",
+      "id": "ID",
+      "name": "表示名",
+      "isOnboardingEnabled": "オンボーディング",
+      "directoryLink": "ディレクトリリンク",
+      "userCount": "ユーザー",
+      "groupExportFailure": "グループをエクスポートできませんでした。"
+    },
+    "add": {
+      "local": {
+        "title": "ローカルグループを追加",
+        "required": "このフィールドは、必修です。"
+      },
+      "directory": {
+        "title": "ディレクトリグループの追加",
+        "searchPlaceholder": "ディレクトリグループを検索"
+      }
+    },
+    "delete": {
+      "titleSingle": "グループを削除",
+      "title": "グループを削除する",
+      "messageSingle": "{{name}} を削除しますか?",
+      "messageMultiple": "次のグループを削除しますか?",
+      "note": "ユーザー削除されません。",
+      "successMessage": "グループは削除されました。",
+      "errorMessage404": "グループはすでに削除されています。",
+      "errorMessage": "グループを削除できませんでした。"
+    },
+    "create": {
+      "successMessage": "グループが作成されました。",
+      "errorMessage": "グループを作成できませんでした。"
+    },
+    "policyAssign": {
+      "policies": "ポリシー",
+      "replace": "ポリシーの置換",
+      "assign": "ポリシーを割り当てる",
+      "addPolicy": "ポリシーの追加",
+      "policy": "ポリシー",
+      "notSelectedError": "少なくとも 1 つのポリシーを選択する必要があります。",
+      "name": "表示名",
+      "typeColumn": "タイプ",
+      "description": "説明",
+      "placeholder": "＋をクリックしてアイテムを追加",
+      "removePolicy": "ポリシーを削除する",
+      "removePolicyNote": "{{name}} {{type}} ポリシーをグループから削除しますか?",
+      "type": {
+        "NetworkAccessControl": "ネットワークアクセス制御",
+        "MTD": "Protect Mobile",
+        "ENROLLMENT": "エンロールメント",
+        "role": "役割",
+        "BisPolicy": "アダプティブレスポンス",
+        "ACTIVATION": "アクティベーション",
+        "GatewayApp": "ゲートウェイサービス",
+        "PrivateInternet": "プライベートインターネット",
+        "policy": "認証",
+        "BisDetectionPolicy": "リスクアセスメント",
+        "DLP": "BlackBerry Avert",
+        "MOBILE": "モバイル Avert る",
+        "CONTENT": "コンテンツをAvert"
+      },
+      "errorAssignMessage": "ポリシーを割り当てることができませんでした。",
+      "errorUnassignMessage": "ポリシーの割り当てを解除できませんでした。"
+    },
+    "update": {
+      "successMessage": "グループが更新されました。",
+      "errorMessage": "グループを更新できませんでした。"
+    },
+    "usersTable": {
+      "displayName": "表示名",
+      "emailAddress": "電子メール",
+      "addUser": "ユーザーの追加",
+      "loadFailure": "ユーザーを取得できませんでした。",
+      "searchPlaceholder": "表示名",
+      "addUserTitle": "{{name}} にユーザーを追加する",
+      "addUserSuccess": "ユーザーが追加されました。",
+      "addUserError": "ユーザーをグループに追加できませんでした。",
+      "delete": {
+        "title": "ユーザーを削除する",
+        "message": "次のユーザーをグループから削除しますか?",
+        "successMessage": "ユーザーは削除されました。",
+        "errorMessage": "ユーザーをグループから削除できませんでした。"
+      }
+    },
+    "titleDetails": "ユーザーグループの詳細"
+  },
+  "activationProfile": {
+    "list": {
+      "title": "登録ポリシー",
+      "addProfile": "ポリシーの追加",
+      "name": "ポリシー名",
+      "description": "説明",
+      "users": "適用されたユーザー",
+      "groups": "適用グループ",
+      "deleteSingle": "{{profile}} ポリシーを削除しますか?",
+      "multipleDelete": "これらのポリシーを削除しますか?",
+      "singleDeleteFailure": "ポリシーは、ユーザーまたはグループに割り当てられているため、削除できませんでした。",
+      "deleteFailure": "ポリシーを削除できませんでした。",
+      "multipleDeleteFailure": "次のポリシーは、ユーザーまたはグループに割り当てられているため、削除できませんでした:",
+      "pageDescription": "ユーザーがモバイルデバイスでは BlackBerry Protect アプリを、Windows および macOS デバイスでは BlackBerry Gateway エージェントをアクティベートできるようにするポリシーを追加します。",
+      "invalidEmailMessage": "ウェルカムメッセージは無効です。メッセージの書式と構文が正しいことを確認します。"
+    },
+    "add": {
+      "title": "エンロールメントポリシーの追加",
+      "successMessage": "ポリシーが作成されました。"
+    },
+    "copy": {
+      "title": "登録ポリシーのコピー"
+    },
+    "edit": {
+      "title": "登録ポリシーの編集",
+      "successMessage": "ポリシーが更新されました。"
+    },
+    "assignments": {
+      "add": "ユーザーまたはグループの追加",
+      "name": "表示名",
+      "email": "電子メール"
+    },
+    "delete": {
+      "title": "削除の確認",
+      "content": "{{profile}} ポリシーを削除しますか?",
+      "note": "ポリシーを削除する前に、ポリシーに関連付けられているすべてのユーザーおよびグループを削除する必要があります。",
+      "successMessage": "ポリシーが削除されました。"
+    },
+    "form": {
+      "generalInfo": "一般情報",
+      "name": "名前*",
+      "description": "説明",
+      "email": "電子メール",
+      "mobileTab": "モバイル",
+      "gatewayTab": "ゲートウェイデスクトップ",
+      "allowedPlatforms": "許可されるプラットフォーム",
+      "mobileIos": "iOS",
+      "mobileAndroid": "アンドロイド",
+      "desktopWin": "Windows",
+      "desktopMac": "MacOSの",
+      "required": "このフィールドは、必修です。",
+      "nameExists": "この名前のポリシーは既に存在します。",
+      "subject": "件名*",
+      "message": "メッセージ*",
+      "mobileWelcomeLabel": "UESモバイルウェルカムメール",
+      "desktopWelcomeLabel": "ウェルカムメール",
+      "settings": "設定"
+    },
+    "unsaved": {
+      "title": "保存されていない変更",
+      "content": "このページから退出しますか？変更内容は保存されていません。",
+      "submit": "ページを離れる"
+    },
+    "editResendEmailConfirmation": {
+      "title": "ユーザーにメールを再送信する",
+      "content": "ようこそメールを再送信しますか？"
+    },
+    "assignCreatedPolicyConfirmation": {
+      "title": "登録ポリシーを割り当てる",
+      "description": "ポリシーが作成されました。このポリシーにユーザーまたはグループを割り当てますか?",
+      "notNow": "今じゃない"
+    }
+  },
+  "addGroup": "グループを追加",
+  "addDirectoryGroup": "ディレクトリグループの追加",
+  "addLocalGroup": "ローカルグループを追加",
+  "alerts": {
+    "title": "ゲートウェイ",
+    "table": {
+      "title": "アラート"
+    },
+    "gatewayAlertTitle": "アラート",
+    "gatewayNetworkBehaviorAlertTitle": "ネットワーク動作アラート",
+    "mtdPageTitle": "Protect Mobile アラート"
+  },
+  "bcn": {
+    "generate": {
+      "pageTitle": "BlackBerry Connectivity Nodeを追加",
+      "title": "BlackBerry Connectivity Nodeのインストール",
+      "bcnStep1Title": "ステップ1：BlackBerry Connectivity Nodeをダウンロードしてインストール",
+      "bcnStep2Title": "ステップ 2: アクティベーションファイルの生成とダウンロード",
+      "bcnStep2Description": "アクティベーション認証情報を生成して、BlackBerry Connectivity Nodeと BlackBerry UES 間の通信を有効にします。アクティベーション認証情報は 1 回のみ使用でき、作成後 60 分間有効です。",
+      "bcnStep3Title": "ステップ 3: BlackBerry Connectivity Nodeをインストールして設定する",
+      "bcnStep3Description": "BlackBerry Connectivity Nodeオプションを使用して BlackBerry UES セットアップアプリケーションを実行します。インストールプロセスが完了したら、BlackBerry Connectivity Nodeを開いて設定します。"
+    },
+    "table": {
+      "serverName": "サーバー名",
+      "activationDate": "アクティベーション日時",
+      "service": "サービス",
+      "status": "ステータス",
+      "version": "バージョン",
+      "tableDescription": "",
+      "removeServer": "サーバーを削除する",
+      "removePopperText": "{{serverName}} サーバーを削除しますか?",
+      "infrastructureStatus": "インフラストラクチャのステータス:{{numberOfActiveConnections}} の {{numberOfConnections}} がアクティブ",
+      "emptyMessage": "＋をクリックしてアイテムを追加",
+      "emptyServices": "データなし",
+      "description": "BlackBerry Connectivity Nodeのオンプレミスインスタンスを追加および管理します。オンプレミスの Microsoft Active Directory または LDAP ディレクトリへの接続を追加するには、BlackBerry Connectivity Nodeをインストールする必要があります。オンプレミスディレクトリに接続を追加したら、[ディレクトリ接続] 設定でディレクトリの同期およびオンボーディング設定を構成します。",
+      "buttons": {
+        "add": "Connectivity Nodeの追加",
+        "settings": "設定"
+      },
+      "actions": {
+        "deleteButtonLabel": "BlackBerry Connectivity Nodeの削除"
+      },
+      "delete": {
+        "title": "削除を確定します。",
+        "description": "この操作により、この BlackBerry Connectivity Nodeが削除されます。",
+        "content": "{{name}} を削除しますか?"
+      },
+      "serviceStatus": {
+        "paused": "一時停止",
+        "running": "実行中"
+      }
+    },
+    "settings": {
+      "pageTitle": "Connectivity Node設定の編集",
+      "pageViewTitle": "Connectivity Nodeの設定の表示",
+      "title": "Connectivity Nodeのロギング",
+      "bcnLoggingDescription": "BlackBerry Connectivity Nodeイベントのロギングレベル、Syslog 情報、およびローカルファイル情報を指定します。",
+      "debugLevelInput": "サーバーのデバッグレベル",
+      "validation": {
+        "emptyField": "{{fieldName}} は必須です。",
+        "outOfRange": "値は {{min}} から {{max}} の間でなければなりません。",
+        "invalidField": "{{fieldName}} は無効です。",
+        "noNumbers": "{{fieldName}} には数字を含めることはできません。"
+      },
+      "debugLevels": {
+        "error": "エラー",
+        "warn": "警告",
+        "info": "情報",
+        "debug": "デバッグ",
+        "trace": "トレース"
+      },
+      "helperText": {
+        "host": "SysLog サーバの URL を指定します。",
+        "port": "SysLog サーバーのポートを指定します。",
+        "maximumLogFileSize": "ログファイルの最大サイズを MB 単位で指定します。",
+        "maximumServerLogFileAge": "サーバログファイルの最大保存期間を日数で指定します。"
+      },
+      "serverLogDebugLevels": "サーバーログのデバッグレベル",
+      "sysLog": "SysLog",
+      "host": "ホスト",
+      "port": "ポート",
+      "enableLocalFileDestination": "ローカルファイルのデスティネーションを有効",
+      "maximumLogFileSize": "ログファイルの最大サイズ",
+      "maximumServerLogFileAge": "サーバログファイルの最大保存期間",
+      "enableLoggingFolderCompression": "フォルダ圧縮を有効",
+      "pageDetailsTitle": "BlackBerry Connectivity Nodeの詳細"
+    },
+    "errors": {
+      "errorGettingBCN": "BlackBerry Connectivity Nodeに接続できませんでした。",
+      "errorDeletingBCN": "BlackBerry Connectivity Nodeを削除できませんでした。",
+      "errorGettingBCNSettings": "BlackBerry Connectivity Nodeを取得できませんでした。",
+      "errorUpdatingSettings": "BlackBerry Connectivity Nodeの設定を更新できませんでした。"
+    },
+    "success": {
+      "delete": "BlackBerry Connectivity Nodeが削除されました。"
+    }
+  },
+  "genericErrorMessage": "エラーが発生しました。もう一度お試しください。",
+  "noPermission": "許可が拒否されました",
+  "noAccessMessage": "このリソースを表示する権限がありません。",
+  "SettingsLabel": "設定",
+  "activationSettings": {
+    "title": {
+      "settings": "設定",
+      "activation": "アクティベーション"
+    },
+    "subTitle": "アクティベーション設定",
+    "passcodeTtl": {
+      "label": "パスワードの有効期限",
+      "helpLabel": "アクティベーションパスワードの有効期限を日数で指定します。有効期限は {{min}} ～ {{max}} 日の間でなければなりません。",
+      "error": {
+        "required": "このフィールドは、必修です。",
+        "outOfRange": "値は {{min}} から {{max}} の間でなければなりません。"
+      }
+    },
+    "success": {
+      "update": "アクティベーション設定が更新されました。"
+    },
+    "error": {
+      "errorGettingPasscodeTtl": "アクティベーション設定を取得できませんでした。",
+      "errorUpdatingPasscodeTtl": "アクティベーション設定を更新できませんでした。"
+    }
+  },
+  "message": {
+    "requestAccepted": "リクエストがバックグラウンドで処理されるまでに時間がかかる場合があります。このページから退出できます。"
+  },
+  "companyDirectoryConnectionDetails": "会社のディレクトリ接続の詳細"
+}

@@ -1,0 +1,646 @@
+{
+  "setting": {
+    "mainSection": {
+      "pageTitle": "데이터 손실 방지 설정",
+      "tabTitle": {
+        "dataCollection": "데이터 수집",
+        "whitelisting": "세이프 도메인",
+        "templates": "템플릿",
+        "dataTypes": "데이터 유형",
+        "trustedCertificates": "신뢰하는 인증서",
+        "notifications": "알림"
+      }
+    },
+    "buttons": {
+      "save": "저장",
+      "edit": "편집",
+      "enable": "활성화",
+      "disable": "비활성화",
+      "cancel": "취소",
+      "delete": "삭제"
+    },
+    "list": {
+      "noData": "데이터 없음"
+    },
+    "search": {
+      "region": "지역",
+      "infoType": "정보 유형"
+    },
+    "popover": {
+      "header": "테이블 열"
+    },
+    "template": {
+      "columns": {
+        "templateName": "템플릿 이름",
+        "description": "설명",
+        "source": "소스",
+        "type": "소스",
+        "status": "상태",
+        "regions": "지역",
+        "informationType": "정보 유형",
+        "infoTypes": "정보 유형",
+        "dataTypesIncluded": "포함된 데이터 유형",
+        "dataEntities": "포함된 데이터 유형",
+        "created": "생성됨",
+        "updated": "업데이트됨",
+        "guid": "ID"
+      },
+      "filter": {
+        "regions": "영역 필터",
+        "infoTypes": "정보 유형 필터",
+        "dataEntities": "데이터 엔터티 필터",
+        "name": "템플릿 이름 필터",
+        "description": "템플릿 설명 필터",
+        "source": "소스 필터",
+        "status": "소스 필터",
+        "inUse": "사용 중",
+        "dateCreated": "만든 날짜 필터",
+        "dateModified": "수정한 날짜 필터"
+      },
+      "buttons": {
+        "newTemplate": "새 템플릿",
+        "addToYourList": "목록에 추가",
+        "duplicate": "복제",
+        "removeFromYourList": "목록에서 제거",
+        "delete": "삭제"
+      },
+      "dialogs": {
+        "removeFromYourList": {
+          "title": "{{count}} 템플릿 제거",
+          "title_plural": "{{count}} 개의 템플릿 제거",
+          "cancelBtn": "취소",
+          "confirmBtn": "제거",
+          "remove": {
+            "can_be_remove": "'{{name}} '이 (가) 목록에서 제거됩니다.",
+            "can_not_be_remove": "'{{name}} '이 (가) 목록에 없습니다.",
+            "custom_can_not_be_remove": "'{{name}} '은 (는) 사용자 지정 템플릿이므로 목록에서 제거할 수 없습니다.영구적으로만 삭제할 수 있습니다."
+          },
+          "remove_singular": {
+            "can_be_remove": "'{{name}} '이 (가) 목록에서 제거됩니다. 계속하시겠습니까?"
+          },
+          "remove_plural": {
+            "can_not_be_remove": "{{count}} 개 이상이 목록에 없습니다.",
+            "can_be_remove": "{{count}} 템플릿이 목록에서 제거됩니다.",
+            "custom_can_not_be_remove": "{{count}} 사용자 지정 템플릿은 목록에서 제거할 수 없습니다.영구적으로만 삭제할 수 있습니다."
+          }
+        },
+        "addToYourList": {
+          "title": "{{count}} 템플릿 추가",
+          "title_plural": "{{count}} 개의 템플릿 추가",
+          "cancelBtn": "취소",
+          "confirmBtn": "추가",
+          "add": {
+            "can_be_add": "'{{name}} '이 (가) 목록에 추가됩니다.",
+            "can_not_be_add": "'{{name}} '이 (가) 이미 목록에 있습니다.",
+            "custom_can_not_be_add": "'{{name}} '은 (는) 사용자 지정 템플릿이며 이미 존재합니다."
+          },
+          "add_singular": {
+            "can_be_add": "'{{name}} '이 (가) 목록에 추가됩니다. 계속하시겠습니까?"
+          },
+          "add_plural": {
+            "can_not_be_add": "{{count}} 더 많은 것이 이미 있습니다.",
+            "can_be_add": "{{count}} 새 템플릿이 목록에 추가됩니다.",
+            "custom_can_not_be_add": "{{count}} 사용자 지정 템플릿이 이미 있습니다."
+          }
+        },
+        "duplicate": {
+          "title": "복제",
+          "cancelBtn": "취소",
+          "confirmBtn": "진행",
+          "singleItem": "단일 {{count}}",
+          "multipleItems": "복제할 항목: {{name}}"
+        },
+        "delete": {
+          "title": "{{count}} 템플릿 삭제",
+          "title_plural": "{{count}} 개의 템플릿 삭제",
+          "cancelBtn": "취소",
+          "confirmBtn": "삭제",
+          "delete_one": "'{{name}} '이 (가) 삭제됩니다.이 작업은 취소할 수 없습니다.계속 진행하시겠습니까?",
+          "delete_allowed": "{{name}} 사용자 지정 템플릿이 삭제됩니다.",
+          "delete_allowed_plural": "{{count}} 사용자 지정 템플릿이 삭제됩니다.",
+          "delete_protected": "{{name}} 시스템 템플릿은 언제든지 삭제할 수 없습니다.",
+          "delete_protected_plural": "{{count}} 시스템 템플릿은 언제든지 삭제할 수 없습니다."
+        },
+        "confirmation": {
+          "question": "계속 진행하시겠습니까?"
+        }
+      },
+      "error": {
+        "listview": "템플릿 목록 검색 오류",
+        "delete": "템플릿을 삭제할 수 없습니다.",
+        "addToYourList": "작업을 완료할 수 없습니다.",
+        "removeFromYourList": "작업을 완료할 수 없습니다."
+      },
+      "success": {
+        "delete": "템플릿이 삭제되었습니다.",
+        "addToYourList": "작업이 완료되었습니다.",
+        "removeFromYourList": "작업이 완료되었습니다."
+      }
+    },
+    "deleteConfirmationDialog": {
+      "title": "삭제",
+      "cancelButton": "취소",
+      "confirmButton": "삭제"
+    },
+    "createdConfirmationDialog": {
+      "title": "생성",
+      "description": "떠나고 싶니?변경 사항이 저장되지 않았습니다.",
+      "cancelButton": "취소",
+      "confirmButton": "확인"
+    },
+    "modifiedConfirmationDialog": {
+      "title": "수정",
+      "description": "떠나고 싶니?변경 사항이 저장되지 않았습니다.",
+      "cancelButton": "취소",
+      "confirmButton": "확인"
+    },
+    "disableConfirmationDialog": {
+      "title": "비활성화",
+      "cancelButton": "취소",
+      "confirmButton": "비활성화"
+    },
+    "enableConfirmationDialog": {
+      "title": "활성화",
+      "cancelButton": "취소",
+      "confirmButton": "활성화"
+    },
+    "general": {
+      "domain": {
+        "title": "안전 브라우저 도메인",
+        "description": "파일을 안전하게 업로드하는 데 사용할 수 있는 도메인을 지정합니다.민감한 파일 업로드를 검색하는 정책을 생성할 때 선택한 도메인은 정책 위반을 트리거하지 않습니다.",
+        "enabled": {
+          "tableTitle": "활성화된 도메인"
+        },
+        "dialog": {
+          "title": {
+            "newDomain": "안전 도메인 추가",
+            "edit": "안전 도메인 편집",
+            "delete": "{{count}} 도메인 삭제",
+            "delete_plural": "{{count}} 개의 도메인 삭제",
+            "disable": "{{count}} 도메인 비활성화",
+            "disable_plural": "{{count}} 도메인 비활성화",
+            "enable": "{{count}} 도메인 활성화",
+            "enable_plural": "{{count}} 개의 도메인 활성화"
+          },
+          "warning": {
+            "delete_zero": "계속하시겠습니까?",
+            "delete_one": "이 도메인을 삭제하시겠습니까?이 도메인은 현재 {{count}} Avert 정책에 의해 사용되고 있습니다.",
+            "delete_many": "이 도메인을 삭제하시겠습니까?이러한 도메인은 현재 {{count}} Avert 정책에서 사용되고 있습니다."
+          },
+          "success": {
+            "create": "브라우저 도메인 생성 성공",
+            "delete": "브라우저 도메인 삭제에 성공했습니다.",
+            "edit": "편집 성공"
+          },
+          "error": {
+            "create": "브라우저 도메인 생성에 실패했습니다.",
+            "delete": "브라우저 도메인 삭제에 실패했습니다.",
+            "edit": "편집 실패"
+          }
+        },
+        "disabled": {
+          "tableTitle": "비활성화된 도메인"
+        },
+        "buttons": {
+          "addNewDomain": "새 도메인 추가",
+          "verify": "확인",
+          "edit": "편집",
+          "enable": "활성화",
+          "disable": "비활성화",
+          "delete": "삭제",
+          "save": "저장",
+          "cancel": "취소",
+          "add": "추가"
+        },
+        "columns": {
+          "guid": "ID",
+          "domainName": "도메인 네임",
+          "description": "설명",
+          "policiesAssigned": "할당된 방침",
+          "enabled": "활성화됨",
+          "disabled": "비활성화됨",
+          "created": "생성됨",
+          "updated": "업데이트됨"
+        },
+        "filter": {
+          "name": "도메인 이름 필터",
+          "description": "도메인 설명 필터",
+          "policies": "방침 필터"
+        },
+        "validation": {
+          "invalidDomainName": "도메인 이름이 잘못되었습니다.",
+          "fileCARequired": "CA 파일이 필요합니다.",
+          "verificationToolTip": "이 도메인이 기존의 신뢰할 수 있는 인증서를 사용하는지 확인하려면 확인을 클릭합니다.설정 > 신뢰할 수 있는 인증서에서 인증서를 더 추가할 수 있습니다.",
+          "verificationFailedText": "확인을 완료할 수 없습니다.",
+          "unreachableDomainText": "도메인을 사용할 수 없습니다.",
+          "unknownError": "알려지지 않은 오류",
+          "verificationSuccessText": "{{date}} 확인됨",
+          "nameRequired": "도메인 이름이 필요합니다",
+          "verificationText": "서버에서 루트 CA를 사용하고 있는지 확인할 수 있습니다."
+        },
+        "enabledSwitcher": "도메인 활성화"
+      },
+      "whitelistEmailDomains": {
+        "title": "안전한 이메일 도메인",
+        "description": "내부 이메일 도메인을 지정합니다.다른 모든 도메인은 외부로 간주됩니다.중요한 데이터를 검색하는 정책을 만들 때 추가하는 도메인은 안전한 것으로 간주됩니다.",
+        "helperText": "쉼표를 사용하여 여러 도메인 구분",
+        "placeholder": "블랙베리닷컴",
+        "invalidValue": "도메인 이름이 잘못되었습니다."
+      },
+      "dataCollectionSettings": {
+        "title": "데이터 수집 설정",
+        "maxUploadLabel": "최대 업로드",
+        "ui_tenant_setting_isSnippetReported": {
+          "heading": "파일 스니펫",
+          "title": "파일 스니펫 생성",
+          "description": "민감한 콘텐츠가 포함된 파일 스니펫을 데이터 유출 이벤트의 일부로 포함합니다.이 콘텐츠는 민감한 파일 요약 보기 권한이 있는 사용자가 조직의 Avert Events에서 볼 수 있습니다."
+        },
+        "ui_tenant_setting_uploadEvidenceFile": {
+          "title": "증거 파일 수집 활성화",
+          "description": "정책을 통해 활성화된 경우 보안 인시던트를 트리거한 데이터의 전체 복사본을 감사 목적으로 수집 및 저장할 수 있습니다.데이터 수집 설정 관리:",
+          "heading": "증거 파일 수집"
+        },
+        "ui_tenant_setting_tempFileFolderSize": {
+          "description": "파일이 업로드를 위해 대기하는 임시 폴더에 사용되는 디스크 백분율"
+        },
+        "ui_tenant_setting_uploadOnMobileNetwork": {
+          "title": "Wi-Fi 또는 유선 네트워크에만 연결된 상태에서 파일 업로드",
+          "description": "모바일 네트워크에서 파일 업로드를 허용하지 않습니다."
+        },
+        "ui_tenant_setting_bandwidthLimit": {
+          "title": "파일 업로드를 위한 대역폭 제한",
+          "description": "파일 전송 속도를 제한하도록 대역폭 제한 구성",
+          "bandwidthLimit": "대역폭 사용량"
+        },
+        "ui_tenant_setting_transferWindowStartTime": {
+          "from": "출발",
+          "title": "데이터 전송 시간",
+          "description": "데이터 업로드가 발생할 시기를 예약합니다.특정 시간만 지정하면 관리자가 지정한 시간까지 데이터 유출 이벤트와 연결된 파일에 액세스할 수 없습니다.모든 시간은 파일을 업로드하는 기기의 로컬입니다."
+        },
+        "ui_tenant_setting_transferWindowEndTime": {
+          "to": "까지"
+        },
+        "validation": {
+          "percentValue": "값은 0에서 100 사이여야 합니다."
+        },
+        "ui_tenant_setting_uploadDirectlyToS3": {
+          "heading": "파일 업로드",
+          "description": "증거 파일 업로드에 사용할 방법 선택",
+          "s3_cloud_method": "S3 클라우드",
+          "local_dlp_file_service_method": "BlackBerry 프록시 서비스",
+          "title": "파일 업로드 방법"
+        },
+        "ui_file_setting_evidenceFileRetentionPeriod": {
+          "heading": "데이터 보존",
+          "description": "보안 인시던트에 관련된 데이터를 저장해야 하는 기간 구성",
+          "title": "데이터 보존",
+          "30_days": "삼십일",
+          "60_days": "육십일",
+          "90_days": "90일"
+        },
+        "description": "데이터 유출 이벤트에 대해 수집해야 하는 증거를 구성합니다.",
+        "diskSpaceLabel": "디스크 공간"
+      }
+    },
+    "unexpectedErrorMessage": "예기치 않은 오류가 발생했습니다.",
+    "domainNameErrorMessage": "이 이름의 도메인이 이미 있습니다.",
+    "table": {
+      "list": {
+        "noData": "데이터 없음",
+        "searchPlaceholder": "검색할 항목 입력"
+      }
+    },
+    "dataTypes": {
+      "columns": {
+        "name": "데이터 유형 이름",
+        "keywords": "키워드",
+        "informationType": "정보 유형",
+        "region": "지역",
+        "source": "출처"
+      },
+      "filter": {
+        "name": "데이터 유형 이름 필터",
+        "keywords": "키워드 필터",
+        "infoTypes": "정보 유형 필터",
+        "regions": "영역 필터",
+        "inUse": "사용 중",
+        "source": "소스 필터"
+      },
+      "buttons": {
+        "addToYourList": "목록에 추가",
+        "removeFromYourList": "목록에서 제거",
+        "newDataType": "새 데이터 유형"
+      },
+      "dialogs": {
+        "addToYourList": {
+          "title": "{{count}} 데이터 형식 추가",
+          "title_plural": "{{count}} 데이터 형식 추가",
+          "cancelBtn": "취소",
+          "confirmBtn": "추가",
+          "add_one": "'{{name}} '이 (가) 목록에 추가됩니다. 계속하시겠습니까?",
+          "add_new": "{{count}} 새 데이터 유형이 목록에 추가됩니다.",
+          "add_new_plural": "{{count}} 새 데이터 유형이 목록에 추가됩니다.",
+          "add_existing": "{{count}} 이 (가) 이미 존재합니다."
+        },
+        "removeFromYourList": {
+          "cancelBtn": "취소",
+          "confirmBtn": "제거",
+          "remove": "'{{name}} '이 (가) 목록에서 제거됩니다. 계속하시겠습니까?",
+          "title": "{{count}} 데이터 유형 제거",
+          "title_plural": "{{count}} 데이터 유형 제거",
+          "remove_plural": "다음 데이터 유형이 목록에서 제거됩니다."
+        },
+        "confirmation": {
+          "question": "계속 진행하시겠습니까?"
+        },
+        "delete": {
+          "title": "{{count}} 데이터 유형 삭제",
+          "title_plural": "{{count}} 데이터 유형 삭제",
+          "delete_one": "'{{name}} '이 (가) 삭제됩니다.이 작업은 취소할 수 없습니다.계속 진행하시겠습니까?",
+          "delete_allowed": "{{name}} 사용자 지정 데이터 유형이 삭제됩니다.",
+          "delete_allowed_plural": "{{count}} 사용자 지정 데이터 유형이 삭제됩니다.",
+          "delete_protected": "{{name}} 시스템 데이터 유형은 언제든지 삭제할 수 없습니다.",
+          "delete_protected_plural": "{{count}} 시스템 데이터 유형은 언제든지 삭제할 수 없습니다."
+        }
+      }
+    },
+    "dataType": {
+      "columns": {
+        "keywords": "키워드",
+        "status": "상태",
+        "regions": "지역",
+        "infoTypes": "정보 유형",
+        "parameters": ".데이터 형식. 열 설정. 매개 변수",
+        "type": "데이터 유형.열 설정. 유형"
+      },
+      "name": "이름",
+      "description": "설명",
+      "region": "지역",
+      "infoTypes": "정보 유형",
+      "algorithm": "검색 방법",
+      "keywords": "키워드",
+      "regex": "정규식",
+      "addDataType": "새 데이터 유형 추가",
+      "buttons": {
+        "create": "생성",
+        "cancel": "취소"
+      },
+      "error": {
+        "create": "데이터 형식을 만들 수 없습니다.오류: {{error}}",
+        "update": "데이터 유형을 업데이트할 수 없습니다.오류: {{error}}",
+        "remove": "즐겨찾기 목록에서 데이터 유형을 제거할 수 없습니다.오류: {{error}}",
+        "add": "즐겨찾기 목록에 데이터 유형을 추가할 수 없습니다.오류: {{error}}"
+      },
+      "success": {
+        "create": "데이터 유형이 생성되었습니다.",
+        "update": "데이터 유형이 업데이트되었습니다.",
+        "remove": "즐겨찾기 목록에서 데이터 유형이 제거되었습니다.",
+        "add": "데이터 유형이 즐겨찾기 목록에 추가되었습니다."
+      },
+      "detail": {
+        "updated": "{{date}} 에 업데이트됨"
+      }
+    },
+    "trustedCertificates": {
+      "columns": {
+        "subject": "주제",
+        "issuer": "발행자",
+        "addedDate": "추가된 날짜",
+        "expirationDate": "만료 날짜"
+      },
+      "buttons": {
+        "addNew": "인증서 추가",
+        "delete": "삭제"
+      },
+      "dialogs": {
+        "addToYourList": {
+          "title": "인증서 추가",
+          "subTitle": "업로드할 파일 선택",
+          "cancelBtn": "취소",
+          "confirmBtn": "추가"
+        },
+        "removeFromYourList": {
+          "title": "인증서 삭제",
+          "cancelBtn": "취소",
+          "confirmBtn": "삭제",
+          "title_plural": "저장소와 인증서를 사용하는 허용 목록에서 {{count}} 인증서를 삭제하시겠습니까?"
+        }
+      },
+      "error": {
+        "delete": "인증서를 삭제할 수 없습니다.",
+        "addToYourList": "인증서를 추가할 수 없습니다."
+      },
+      "success": {
+        "delete": "인증서가 삭제되었습니다.",
+        "addToYourList": "인증서가 추가되었습니다."
+      },
+      "title": "신뢰하는 인증서",
+      "description": "신뢰할 수 있는 인증서는 Avert 설정 추가한 허용된 도메인을 확인하는 데 사용됩니다."
+    },
+    "notifications": {
+      "title": "알림",
+      "switcherLabel": "이메일 알림 활성화",
+      "switcherDescription": "회사 정책과 충돌하는 감각적 데이터가 공유되면 알림 받기",
+      "emailRecipients": "이메일 수신자",
+      "emailRecipientsHelperText": "쉼표를 사용하여 여러 이메일 주소를 구분합니다.",
+      "success": "알림 설정이 업데이트되었습니다.",
+      "invalid": "이메일 수신자 값이 잘못되었습니다."
+    },
+    "unexpectedErrorWithHttpMessage": "요청을 처리할 수 없습니다.반환된 HTTP 상태: {{status}}"
+  },
+  "tableColumns": "테이블 열",
+  "noData": "데이터 없음",
+  "modifiedConfirmationDialog": {
+    "title": "타이틀",
+    "cancelButton": "취소",
+    "description": "기술",
+    "confirmButton": "확인"
+  },
+  "enterField": "이 필드는 필수입니다.",
+  "selected": "{{count}} 개 선택됨",
+  "pickers": {
+    "time": {
+      "invalidMessage": "시간이 잘못되었습니다."
+    }
+  },
+  "dashboard": {
+    "title": "대시보드",
+    "policiesTab": "정책",
+    "usersTab": "사용자",
+    "devicesTab": "장치",
+    "dataTypesTab": "데이터 유형",
+    "infoTypesTab": "정보 유형",
+    "fileTypesTab": "파일 유형",
+    "allTab": "모두",
+    "filesTab": "파일",
+    "totalSensitiveData": "민감한 파일 감지됨",
+    "exfiltrationEventTypes": {
+      "EMAIL": "이메일",
+      "BROWSER": "브라우저",
+      "REMOVABLE_MEDIA": "이동식 미디어"
+    },
+    "dataEntities": "데이터 유형",
+    "emailTab": "웹 도메인",
+    "browserTab": "이메일 도메인",
+    "usbTab": "이동식 미디어",
+    "evidenceLockerFiles": "증거 보관함에 있는 파일",
+    "connectedUsers": "연결된 Avert 사용자",
+    "connectedDevices": "연결된 Avert 장치",
+    "exfiltrationEventsByWidgetTitle": "정보 유출 이벤트",
+    "exfiltrationEventsByDestination": "위치별 상위 퇴출 이벤트",
+    "topEventsByWidgetTitle": "카테고리별 상위 퇴출 이벤트",
+    "sensitiveDataEndpoints": "범주별 파일 인벤토리",
+    "evidenceLockerFilesTitle": "증거 로커",
+    "totalSensitiveDataTitle": "파일 인벤토리"
+  },
+  "events": {
+    "title": "이벤트 Avert",
+    "columns": {
+      "detectionTime": "감지 시간",
+      "device": "장치",
+      "user": "사용자",
+      "activity": "액티비티",
+      "location": "위치",
+      "file": "파일",
+      "policy": "정책",
+      "dataEntityCount": "데이터 유형",
+      "noUserName": "이름 없음"
+    },
+    "serverError": {
+      "retrieveEvents": "이벤트 목록을 검색하지 못했습니다."
+    },
+    "filter": {
+      "detectionTime": "감지 시간 필터",
+      "device": "장치 이름 필터",
+      "user": "사용자 이름 필터",
+      "activity": "활동 필터",
+      "location": "위치 필터",
+      "file": "파일 이름 필터",
+      "policy": "정책 이름 필터",
+      "dataType": "데이터 유형 이름 필터"
+    },
+    "drawer": {
+      "accordion": {
+        "eventOverview": "이벤트 개요",
+        "eventUserDetails": "사용자 세부 정보",
+        "eventUserDetailsName": "{{name}} 업로드",
+        "eventFilesDetails": "파일 세부 정보 ({{count}})",
+        "eventPolicyViolations": "정책 위반 ({{count}})",
+        "fileDetails": "파일 세부 정보",
+        "userName": "이름",
+        "userEmail": "이메일",
+        "userTitle": "타이틀",
+        "userDepartment": "학과",
+        "typeLabel": "유형",
+        "detectionTimeLabel": "감지 시간",
+        "deviceLabel": "장치",
+        "locationLabel": "위치"
+      },
+      "fileSection": {
+        "sensitiveData": "민감한 데이터 유형 (발생 횟수)",
+        "contentSnippets": "스니펫 콘텐츠",
+        "emptySnippets": "스니펫 콘텐츠 목록이 비어 있습니다.",
+        "downloadFile": {
+          "error": "파일을 다운로드할 수 없습니다."
+        },
+        "txtFileFormat": "텍스트 문서",
+        "doc(x)FileFormat": "Microsoft 워드 문서",
+        "xlsxFileFormat": "Microsoft 엑셀 문서",
+        "pdfFileFormat": "Microsoft PDF 문서",
+        "defaultFileFormat": "{{format}} 문서"
+      },
+      "eventDetailsTitle": "이벤트 세부 정보",
+      "downloadEvidenceFile": "모두 다운로드"
+    }
+  },
+  "fileInventory": {
+    "title": "파일 재고",
+    "columns": {
+      "fileName": "파일 이름",
+      "fileSize": "파일 크기",
+      "infoTypes": "정보 유형",
+      "dataTypes": "데이터 유형",
+      "users": "사용자",
+      "devices": "장치",
+      "policies": "방침"
+    },
+    "filter": {
+      "fileName": "파일 이름",
+      "infoTypes": "정보 유형"
+    },
+    "error": {
+      "listview": "파일 인벤토리 목록을 검색할 수 없습니다."
+    },
+    "drawer": {
+      "fileDetails": {
+        "title": "파일 세부 정보",
+        "fileSize": "파일 크기",
+        "fileType": "파일 유형",
+        "evidenceFile": "증거 파일"
+      },
+      "users": {
+        "title": "파일에 액세스할 수 있는 사용자"
+      },
+      "devices": {
+        "title": "파일에 액세스할 수 있는 장치"
+      },
+      "dataTypes": {
+        "title": "데이터 유형",
+        "occurrences": "{{name}} ({{occurrences}})"
+      },
+      "policyViolations": {
+        "title": "정책 위반"
+      },
+      "seeMore": "+ {{count}} 더 보기"
+    }
+  },
+  "infoTypesValue": {
+    "privacy": "프라이버시",
+    "finance": "금융",
+    "custom": "커스텀",
+    "health": "건강",
+    "personal": "개인"
+  },
+  "labelDlp": "정보 보호",
+  "evidenceLocker": {
+    "title": "증거 보관함",
+    "columns": {
+      "created": "추가된 시간",
+      "fileName": "파일 이름",
+      "size": "파일 크기",
+      "events": "관련 이벤트",
+      "download": "다운로드"
+    },
+    "filter": {
+      "fileName": "파일 이름 필터",
+      "created": "시간 추가 필터",
+      "size": "파일 크기 필터"
+    },
+    "selected": "{{count}} 가 선택됨",
+    "sensitiveFilesStorage": {
+      "serverError": "{{error}}"
+    },
+    "memoryUsed": "{{totals}} 중요한 파일/ {{used}} 중 {{remains}} 이 (가) 사용되었습니다."
+  },
+  "users": {
+    "mainTitle": {
+      "assets": "자산",
+      "users": "사용자"
+    },
+    "buttons": {
+      "manageUsers": "사용자 관리"
+    },
+    "columns": {
+      "name": "이름",
+      "emailAddress": "이메일 주소",
+      "devices": "장치"
+    },
+    "error": {
+      "listView": "사용자 목록을 검색할 수 없습니다."
+    },
+    "devices": {
+      "agentVersion": "에이전트 버전 방지: {{version}}",
+      "osVersion": "{{name}} {{version}}"
+    }
+  }
+}

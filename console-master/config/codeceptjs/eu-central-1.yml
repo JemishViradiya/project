@@ -1,0 +1,22 @@
+runner:
+  mode: default
+  loglevel: debug
+  delay:
+    startup: 0
+  codecept:
+    show: true
+    writeScreenshots: true
+
+e2e:
+  config:
+    baseUrl: https://protect-euc1.cylance.com
+
+    users:
+      # see https://wikis.rim.net/pages/viewpage.action?pageId=909575392
+      admin:
+        # customer-id: 6808977854
+        # tenant: ucautotesting-euc
+        # venue-tenantid: 1EF362AC-6E52-4137-BD3E-D959717921BB
+        # srpid: S30809115
+        email: UCAdminEUC@ahem.cbbcps.com
+        password: 'UCp@$$11'

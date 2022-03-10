@@ -1,0 +1,107 @@
+@import '../theme/theme.less';
+
+@buttonWH: 32px;
+@slightlyOpaque: 0.85;
+
+.controls {
+  display: flex;
+  position: relative;
+  margin-right: 7px; // to align with streetview and other controls
+  margin-bottom: 7px; // to keep it away from the copyright, etc...
+}
+
+.controlButton {
+  display: flex;
+  align-items: center;
+  border-width: 0;
+  opacity: @slightlyOpaque;
+  max-width: @buttonWH;
+  min-width: @buttonWH;
+  max-height: @buttonWH;
+  min-height: @buttonWH;
+  background-color: @backgroundDefault;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.typeControl {
+  margin-bottom: 10px;
+}
+
+.typeList {
+  position: absolute;
+  right: 32px;
+  bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  line-height: 22px;
+  user-select: none;
+  margin-right: 10px;
+  padding: 15px;
+  opacity: @slightlyOpaque;
+  background-color: @backgroundDefault;
+  // smoothly fade in/out the map type list
+  transition: opacity @animHoverDuration @animHoverTimingFn;
+}
+
+.typeListHidden {
+  &:extend(.typeList); // stylelint-disable value-keyword-case
+
+  pointer-events: none;
+  opacity: 0;
+}
+
+.typeListInputRadio,
+.typeListInputCheckbox {
+  padding: 4px;
+}
+
+.typeListRadio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.typeListLabel {
+  height: calc(1rem + 6px);
+  margin-left: -6px;
+  white-space: nowrap;
+}
+
+.hRule {
+  // add an underline below the radio options
+  margin: 8px 0;
+  height: 1px;
+  min-width: 70px;
+  border-bottom: 1px solid @tableBorder;
+}
+
+.typeListOption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0;
+  border-top-color: @colorButtonBorder;
+  border-top-width: 1px;
+}
+
+.flipHorizontal {
+  transform: scaleX(-1) translateX(-1px);
+}
+
+.zoomButtons {
+  align-items: flex-end;
+  background-color: @backgroundDefault;
+  border-width: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.zoomButtons button:disabled,
+.zoomButtons button[disabled] {
+  color: @colorButtonDisabled;
+  cursor: default;
+}

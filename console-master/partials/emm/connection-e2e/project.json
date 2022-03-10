@@ -1,0 +1,29 @@
+{
+  "root": "partials/emm/connection-e2e",
+  "sourceRoot": "partials/emm/connection-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/emm/connection-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/emm/connection-e2e/cypress.json",
+        "tsConfig": "partials/emm/connection-e2e/tsconfig.json",
+        "devServerTarget": "emm/connection:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "emm/connection:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/emm/connection-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:emm"],
+  "implicitDependencies": ["emm/connection"]
+}

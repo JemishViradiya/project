@@ -1,0 +1,39 @@
+{
+  "operationBar": {
+    "search": {
+      "input": "위치 검색",
+      "iconAriaLabel": "검색"
+    },
+    "draw": {
+      "circle": "지오존 반경 생성",
+      "polygon": "지오존 모양 만들기"
+    }
+  },
+  "popupGeozone": {
+    "titleCircle": "지오존 반경",
+    "titlePolygon": "지오존 형상",
+    "inputName": "이름",
+    "inputRadius": "반지름",
+    "inputUnit": "단위",
+    "labelSize": "크기: {{value}} {{unit}}",
+    "buttonRemoveAriaLabel": "제거",
+    "buttonCancel": "취소",
+    "buttonSave": "저장",
+    "units": {
+      "km": "km",
+      "miles": "마일"
+    },
+    "errors": {
+      "invalidName": "잘못된 이름",
+      "invalidRadius": "잘못된 반지름"
+    }
+  },
+  "popupDrawOptions": {
+    "polygonOption": "지오존 모양 그리기",
+    "circleOption": "지오존 반경 그리기"
+  },
+  "marker": {
+    "zoneAriaLabel": "영역 마커 - {{name}}",
+    "searchAriaLabel": "검색 핀 - {{name}}"
+  }
+}

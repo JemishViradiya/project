@@ -1,0 +1,7 @@
+{
+  "loading": "Caricamento in corso...",
+  "signInLink": "Fai clic qui per accedere nuovamente.",
+  "loginFailed": "Accesso non riuscito",
+  "logoutFailed": "Disconnessione non riuscita",
+  "errorMessage": "La tua richiesta non può essere completata."
+}

@@ -1,0 +1,95 @@
+{
+  "root": "apps/mtd",
+  "sourceRoot": "apps/mtd/src",
+  "projectType": "application",
+  "generators": {},
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "options": {
+        "baseHref": "..",
+        "deployUrl": "uc/mtd/",
+        "outputPath": "dist/uc/mtd",
+        "index": "tools/index.html",
+        "main": "apps/mtd/src/main.tsx",
+        "polyfills": "libs/behaviour/app-shell/src/polyfills.ts",
+        "tsConfig": "apps/mtd/tsconfig.app.json",
+        "assets": [],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "tools/webpack/app",
+        "maxWorkers": 1,
+        "memoryLimit": 1024
+      },
+      "configurations": {
+        "production": {
+          "outputPath": "prod/mtd",
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            }
+          ],
+          "maxWorkers": 1,
+          "memoryLimit": 2048
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "mtd:build",
+        "hmr": true,
+        "ssl": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "mtd:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/mtd/**/*.js",
+          "apps/mtd/**/*.jsx",
+          "apps/mtd/**/*.ts",
+          "apps/mtd/**/*.tsx",
+          "tools/nx/typings/image.d.ts",
+          "apps/mtd/**/*.spec.ts",
+          "apps/mtd/**/*.spec.tsx",
+          "apps/mtd/**/*.spec.js",
+          "apps/mtd/**/*.spec.jsx",
+          "apps/mtd/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/mtd/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/apps/mtd"]
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/app.sh mtd"
+      }
+    }
+  },
+  "tags": ["scope:app"],
+  "implicitDependencies": ["api", "pwa"]
+}

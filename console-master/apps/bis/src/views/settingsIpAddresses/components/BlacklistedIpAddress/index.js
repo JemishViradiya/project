@@ -1,0 +1,3 @@
+import BlacklistedIpAddressContainer from './BlacklistedIpAddressContainer'
+
+export default BlacklistedIpAddressContainer

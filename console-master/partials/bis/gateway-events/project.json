@@ -1,0 +1,25 @@
+{
+  "root": "partials/bis/gateway-events",
+  "sourceRoot": "partials/bis/gateway-events/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/bis/gateway-events/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/bis/gateway-events"],
+      "options": {
+        "jestConfig": "partials/bis/gateway-events/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  },
+  "tags": ["scope:partial", "scope:bis"]
+}

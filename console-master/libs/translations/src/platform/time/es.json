@@ -1,0 +1,24 @@
+{
+  "monday": "lunes",
+  "tuesday": "martes",
+  "wednesday": "miércoles",
+  "thursday": "jueves",
+  "friday": "viernes",
+  "saturday": "sábado",
+  "sunday": "domingo",
+  "medium": {
+    "monday": "lun",
+    "tuesday": "mar",
+    "wednesday": "mié",
+    "thursday": "jue",
+    "friday": "vie",
+    "saturday": "sáb",
+    "sunday": "Sol"
+  },
+  "timePicker": {
+    "ampm": "verdadero",
+    "okLabel": "DE ACUERDO",
+    "cancelLabel": "Cancelar"
+  },
+  "timeRange": "({{from}} - {{to}})"
+}

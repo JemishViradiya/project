@@ -1,0 +1,48 @@
+{
+  "applied": {
+    "users": [
+      {
+        "id": "user1",
+        "info": {
+          "displayName": "Alvena Bayer",
+          "primaryEmail": "alvena48@gmail.com"
+        },
+        "__typename": "BIS_DirectoryUser"
+      },
+      {
+        "id": "user2",
+        "info": {
+          "displayName": "Nedra Rogahn",
+          "primaryEmail": "nedra20@hotmail.com"
+        },
+        "__typename": "BIS_DirectoryUser"
+      },
+      {
+        "id": "user3",
+        "info": {
+          "displayName": "Kristoffer McCullough",
+          "primaryEmail": "kristoffer.mccullough2@yahoo.com"
+        },
+        "__typename": "BIS_DirectoryUser"
+      },
+      {
+        "id": "user4",
+        "info": {
+          "displayName": "Keyon Marks",
+          "primaryEmail": "keyon81@yahoo.com"
+        },
+        "__typename": "BIS_DirectoryUser"
+      }
+    ],
+    "groups": [
+      {
+        "id": "group1",
+        "info": {
+          "name": "Group #1",
+          "description": "Awesome"
+        },
+        "__typename": "BIS_DirectoryGroup"
+      }
+    ]
+  }
+}

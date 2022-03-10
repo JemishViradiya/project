@@ -1,0 +1,436 @@
+workflow:
+  # Read more on when to use this template at https://docs.gitlab.com/ee/ci/yaml/#workflowrules
+  rules:
+    - if: $CI_MERGE_REQUEST_IID # Execute jobs in merge request context
+    # - if: $CI_COMMIT_BRANCH == 'master'            # Execute jobs when a new commit is pushed to master branch
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH # Execute jobs when a new commit is pushed to master branch
+    - if: $CI_COMMIT_BRANCH == 'production'
+    - if: $CI_COMMIT_BRANCH =~ /^epic\//
+    - if: $CI_PIPELINE_SOURCE == 'trigger' || $CI_PIPELINE_SOURCE == 'schedule' || $CI_PIPELINE_SOURCE == 'web'
+
+# load the standard jobs
+include: '.gitlab/ci/default.yml'
+
+# build stages, will be run sequentially
+stages:
+  - prepare
+  - build
+  # - unit-test
+  - test
+  - package
+  - review
+  # - service-testing
+  # - integration-testing
+  - release
+  - staging
+  - production
+  - regional rollout
+  - cleanup
+
+# environment variables that will be provided to the jobs
+variables:
+  GIT_CLEAN_FLAGS: -ffdxq -e '**/node_modules' -e node_modules -e '.*cache' '-e '.yarn'
+  CI_PROJECT_DIR: $CI_BUILDS_DIR/$CI_CONCURRENT_ID/$CI_PROJECT_PATH
+  XDG_CACHE_HOME: /cache/$CI_PROJECT_PATH_SLUG
+  CACHE_DIR: /cache/nx12-$CI_CONCURRENT_ID-$CI_PROJECT_PATH_SLUG
+  npm_config_devdir: /cache/devdir
+  CI_DOCKER_REGISTRY: ues-pipeline-su.devlab2k.testnet.rim.net
+  NODE_EXTRA_CA_CERTS: /base/builds/enterprise/UES/console/.yarn-registry.crt
+  CYPRESS_CACHE_FOLDER: /usr/local/share/Cypress
+  SHELL: bash
+  GET_SOURCES_ATTEMPTS: 3
+  CI_TRIGGER_TARGET:
+    value: 'none'
+    description: "The target to run in a triggered pipeline. Supported options are: 'codeceptjs' ."
+  NX_EXTRA_ARGS:
+    value: ''
+    description: "Additional args to 'nx' command line. Eg: to skip nx.dev caching change this to '--skip-nx-cache'"
+  GIT_CLONE_PATH: $CI_BUILDS_DIR/$CI_CONCURRENT_ID/$CI_PROJECT_PATH
+
+deploy_lab:
+  extends: .deploy
+  stage: staging
+  environment:
+    name: development
+    url: https://r00-protect.cylance.com/uc/gateway
+    deployment_tier: other
+  variables:
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID_lab}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY_lab}
+    S3_BUCKET: ues-r00.cs.labs.blackberry.com
+    S3_TARGET_ENV: dev
+    # DEPLOY_FLAGS: --s3-flags
+    DEPLOY_FLAGS_SYNC: --size-only
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_DEPLOY_FREEZE != null
+      when: never
+    - if: $DEPLOY_DEVELOPMENT == 'false' || $DEVELOPMENT_ENABLED == 'false'
+      when: never
+    - if: $DEPLOY_R00 == 'false' || $R00_ENABLED == 'false'
+      when: never
+    - if: $CI_COMMIT_BRANCH == 'master'
+
+deploy_qa2:
+  extends: .deploy_staging
+  stage: staging
+  environment:
+    name: staging-qa2
+    url: https://qa2-protect.cylance.com/uc/gateway
+    deployment_tier: staging
+  variables:
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID_staging}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY_staging}
+    S3_BUCKET: ues-qa2.cs.labs.blackberry.com
+    S3_TARGET_ENV: staging
+    # DEPLOY_FLAGS: --s3-flags
+    DEPLOY_FLAGS_SYNC: --size-only
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_DEPLOY_FREEZE != null
+      when: never
+    - if: $DEPLOY_STAGING == 'false' || $STAGING_ENABLED == 'false'
+      when: never
+    - if: $DEPLOY_QA2 == 'false' || $QA2_ENABLED == 'false'
+      when: never
+    - if: $CI_COMMIT_BRANCH == 'master'
+
+deploy_r01:
+  extends: .deploy_staging
+  stage: staging
+  environment:
+    name: staging-r01
+    url: https://r01-protect.cylance.com/uc/gateway
+    deployment_tier: other
+  variables:
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID_staging}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY_staging}
+    S3_BUCKET: ues-r01.cs.labs.blackberry.com
+    S3_TARGET_ENV: dev
+    # DEPLOY_FLAGS: --s3-flags
+    DEPLOY_FLAGS_SYNC: --size-only
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_DEPLOY_FREEZE != null
+      when: never
+    - if: $DEPLOY_STAGING == 'false' || $STAGING_ENABLED == 'false'
+      when: never
+    - if: $DEPLOY_R01 == 'false' || $R01_ENABLED == 'false'
+      when: never
+    - if: $CI_COMMIT_BRANCH == 'master'
+
+deploy_r02:
+  extends: .deploy_staging
+  stage: staging
+  environment:
+    name: staging-r02
+    url: https://r02-protect.cylance.com/uc/gateway
+    deployment_tier: development
+  variables:
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID_staging}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY_staging}
+    S3_BUCKET: ues-r02.cs.labs.blackberry.com
+    S3_TARGET_ENV: dev
+    # DEPLOY_FLAGS: --s3-flags
+    DEPLOY_FLAGS_SYNC: --size-only
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_DEPLOY_FREEZE != null
+      when: never
+    - if: $DEPLOY_STAGING == 'false' || $STAGING_ENABLED == 'false'
+      when: never
+    - if: $DEPLOY_R02 == 'false' || $R02_ENABLED == 'false'
+      when: never
+    - if: $CI_COMMIT_BRANCH == 'master'
+
+# regional production
+us-east-1:
+  extends: .deploy_prod
+  variables:
+    REGION: us-east-1
+  environment:
+    url: https://login.cylance.com
+    deployment_tier: production
+eu-central-1:
+  extends: .deploy_prod
+  variables:
+    REGION: eu-central-1
+  environment:
+    url: https://login-euc1.cylance.com
+    deployment_tier: production
+ap-northeast-1:
+  extends: .deploy_prod
+  variables:
+    REGION: ap-northeast-1
+  environment:
+    url: https://login-apne1.cylance.com
+    deployment_tier: production
+ap-southeast-2:
+  extends: .deploy_prod
+  variables:
+    REGION: ap-southeast-2
+  environment:
+    url: https://login-au.cylance.com
+    deployment_tier: production
+sa-east-1:
+  extends: .deploy_prod
+  variables:
+    REGION: sa-east-1
+  environment:
+    url: https://login-sae1.cylance.com
+    deployment_tier: production
+
+validate-production:
+  extends: .deploy_prod
+  stage: review
+  variables:
+    DEPLOY_FLAGS: --dryrun
+    REGION: us-east-1
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID_staging}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY_staging}
+    S3_BUCKET: ues-qa2.cs.labs.blackberry.com
+    S3_TARGET_ENV: ci/validate-production
+    CI_ENVIRONMENT_ACTION: prepare
+  environment:
+    action: prepare
+    url: https://login.cylance.com
+  resource_group: validate-$CI_ENVIRONMENT_NAME
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == 'production'
+    - if: $CI_MERGE_REQUEST_IID
+      changes:
+        - .gitlab-ci.yml
+        - .gitlab/ci/*
+        - '!.gitlab/ci/image-sha.yml'
+
+validate-staging:
+  extends: .deploy_staging
+  stage: review
+  variables:
+    DEPLOY_FLAGS: --dryrun
+    REGION: us-east-1
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID_staging}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY_staging}
+    S3_BUCKET: ues-qa2.cs.labs.blackberry.com
+    S3_TARGET_ENV: ci/validate-staging
+    CI_ENVIRONMENT_ACTION: prepare
+  environment:
+    action: prepare
+    name: staging
+    url: https://qa2-protect.cylance.com/uc/gateway
+  resource_group: validate-$CI_ENVIRONMENT_NAME
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_MERGE_REQUEST_IID
+      changes:
+        - .gitlab-ci.yml
+        - .gitlab/ci/*
+        - tools/deploy/*
+        - '!.gitlab/ci/image-sha.yml'
+
+# Releases
+validate-prepare_release:
+  extends: .prepare_release
+  environment:
+    name: development/release
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_MERGE_REQUEST_IID && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME != 'production'
+      changes:
+        - .gitlab-ci.yml
+        - .gitlab/ci/*
+        - '!.gitlab/ci/image-sha.yml'
+
+prepare_release:
+  extends: .prepare_release
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_COMMIT_BRANCH == 'production'
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == 'production'
+
+release:
+  extends: .release
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_COMMIT_BRANCH == 'production'
+
+# Deploy Reviews
+review:
+  extends: .review
+  variables:
+    DEPLOY_FLAGS_SYNC: --size-only
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: never
+    - if: $CI_COMMIT_BRANCH == "production"
+      when: never
+    - if: $CI_MERGE_REQUEST_IID
+      allow_failure: true
+
+master_review:
+  extends: .review
+  variables:
+    DEPLOY_FLAGS_SYNC: --size-only
+    S3_TARGET_ENV: protected-sites/$CI_COMMIT_REF_SLUG
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+production_review:
+  extends: .review
+  needs:
+    - job: build
+      artifacts: true
+    - job: prepare_release
+      artifacts: true
+  variables:
+    DEPLOY_FLAGS_SYNC: --size-only
+    S3_TARGET_ENV: protected-sites/$CI_COMMIT_REF_SLUG
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_COMMIT_BRANCH == "production"
+
+review_epic:
+  extends: .review
+  variables:
+    DEPLOY_FLAGS_SYNC: --size-only
+  environment:
+    auto_stop_in: 90 days
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_COMMIT_BRANCH =~ /^epic\//
+
+stop_review:
+  extends: .stop_review
+
+# Deploy Reviews
+stage:
+  extends: .stage
+  variables:
+    DEPLOY_FLAGS_SYNC: --size-only
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == 'production'
+      when: never
+    - if: $CI_MERGE_REQUEST_IID
+      allow_failure: true
+
+stage_epic:
+  extends: .stage
+  environment:
+    auto_stop_in: 90 days
+  variables:
+    CI_EPIC_BRANCH: 'true'
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_COMMIT_BRANCH =~ /^epic\//
+
+stop_stage:
+  extends: .stop_stage
+
+stage_production:
+  extends: .stage
+  environment:
+    name: production/staging/$CI_COMMIT_REF_SLUG
+    url: https://protect.cylance.com/uc/.stage/$CI_COMMIT_REF_SLUG/uc/dashboard
+    on_stop: stop_production
+  variables:
+    S3_TARGET_ENV: prod/uc/.stage/$CI_COMMIT_REF_SLUG
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID_prod}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY_prod}
+    REGION: us-east-1
+    S3_BUCKET: ues-${REGION}.cs.blackberry.com
+    DEPLOY_FLAGS: ''
+    DEPLOY_FLAGS_SYNC: --size-only
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME != 'production'
+      when: never
+    - if: $CI_MERGE_REQUEST_IID
+      allow_failure: true
+
+stop_production:
+  extends: .stop_stage
+  environment:
+    name: production/staging/$CI_COMMIT_REF_SLUG
+    action: stop
+  script:
+    - echo "nothing to do here yet"
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME != 'production'
+      when: never
+    - if: $CI_MERGE_REQUEST_IID
+      allow_failure: true
+
+us-east-1 e2e:
+  extends: .test-codeceptjs
+  variables:
+    CI_ENVIRONMENT_NAME: us-east-1
+    CI_ENVIRONMENT_TIER: production
+
+eu-central-1 e2e:
+  extends: .test-codeceptjs
+  variables:
+    CI_ENVIRONMENT_NAME: eu-central-1
+    CI_ENVIRONMENT_TIER: production
+
+ap-northeast-1 e2e:
+  extends: .test-codeceptjs
+  variables:
+    CI_ENVIRONMENT_NAME: ap-northeast-1
+    CI_ENVIRONMENT_TIER: production
+
+ap-southeast-2 e2e:
+  extends: .test-codeceptjs
+  variables:
+    CI_ENVIRONMENT_NAME: ap-southeast-2
+    CI_ENVIRONMENT_TIER: production
+
+sa-east-1 e2e:
+  extends: .test-codeceptjs
+  variables:
+    CI_ENVIRONMENT_NAME: sa-east-1
+    CI_ENVIRONMENT_TIER: production
+
+staging-qa2 e2e:
+  extends: .test-codeceptjs
+  variables:
+    CI_ENVIRONMENT_NAME: staging-qa2
+    CI_ENVIRONMENT_TIER: staging
+# staging-r00 e2e:
+#   extends: .test-codeceptjs
+#   variables:
+#     CI_ENVIRONMENT_NAME: staging-r00
+#     CI_ENVIRONMENT_TIER: development
+
+# staging-r01 e2e:
+#   extends: .test-codeceptjs
+#   variables:
+#     CI_ENVIRONMENT_NAME: staging-r01
+#     CI_ENVIRONMENT_TIER: development
+
+# staging-r02 e2e:
+#   extends: .test-codeceptjs
+#   variables:
+#     CI_ENVIRONMENT_NAME: staging-r02
+#     CI_ENVIRONMENT_TIER: development

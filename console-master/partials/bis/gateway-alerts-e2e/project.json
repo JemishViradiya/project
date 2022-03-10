@@ -1,0 +1,29 @@
+{
+  "root": "partials/bis/gateway-alerts-e2e",
+  "sourceRoot": "partials/bis/gateway-alerts-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/bis/gateway-alerts-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/bis/gateway-alerts-e2e/cypress.json",
+        "tsConfig": "partials/bis/gateway-alerts-e2e/tsconfig.json",
+        "devServerTarget": "platform:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "platform:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/bis/gateway-alerts-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:bis"],
+  "implicitDependencies": ["bis/gateway-alerts"]
+}

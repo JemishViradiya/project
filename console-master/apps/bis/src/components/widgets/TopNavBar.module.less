@@ -1,0 +1,95 @@
+@import '../../theme/theme.less';
+
+.bar {
+  composes: .mui.typography[ @body1];
+  position: fixed;
+  right: 40px;
+  top: -1px;
+  background: @backgroundLight;
+  height: 32px;
+  border: 1px solid @colorButtonBorder;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.link {
+  cursor: pointer;
+  transition: color @animHoverDuration @animHoverTimingFn;
+
+  &:hover {
+    color: @colorLink;
+    text-decoration: underline;
+  }
+}
+
+.separator {
+  height: 32px;
+  border-left: solid 1px @colorButtonBorder;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+  font-size: @fontSizeIcon;
+  transition: color @animHoverDuration @animHoverTimingFn;
+
+  &:hover {
+    color: @colorLink;
+    cursor: pointer;
+  }
+}
+
+.active {
+  color: @colorLink;
+}
+
+.small {
+  composes: .mui.typography[ @subtitle1];
+}
+
+.searchWrapper {
+  // FIXME: hide for version 2.0.
+  // display: contents;
+
+  display: none;
+}
+
+.operatingMode {
+  composes: .mui.typography[ @body2];
+  padding-right: 8px;
+}
+
+.search {
+  composes: .mui.typography[ @button];
+  height: 20px;
+  border: none;
+  background: inherit;
+}
+
+.userInfo {
+  position: fixed;
+  top: 31px;
+  right: 148px;
+  border: 1px solid @colorButtonBorder;
+  background: @backgroundDefault;
+  padding: 16px 0;
+  text-align: initial;
+  font-size: @fontSizeSubtitle;
+}
+
+.userButtonWrapper {
+  display: flex;
+}
+
+.normal {
+  margin: 2px 16px;
+}
+
+.bold {
+  .normal;
+
+  font-weight: 700;
+}

@@ -1,0 +1,29 @@
+{
+  "root": "partials/bis/dashboard-e2e",
+  "sourceRoot": "partials/bis/dashboard-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/bis/dashboard-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/bis/dashboard-e2e/cypress.json",
+        "tsConfig": "partials/bis/dashboard-e2e/tsconfig.json",
+        "devServerTarget": "bis/dashboard:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "bis/dashboard:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/bis/dashboard-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:bis"],
+  "implicitDependencies": ["bis/dashboard"]
+}

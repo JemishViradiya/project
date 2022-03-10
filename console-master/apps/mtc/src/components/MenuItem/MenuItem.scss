@@ -1,0 +1,48 @@
+@import '../../styles/_colors.scss';
+
+.menu-item {
+  border: 1px solid #d6d6d6;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  min-width: 200px;
+  padding: 10px;
+  &:hover {
+    background: darken($cylance-white, 3%);
+  }
+  .menu-info-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+    .menu-item-title,
+    .menu-item-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .menu-item-description {
+      font-size: 14px;
+    }
+  }
+  .menu-icon-container {
+    height: 50px;
+    margin-top: 13px;
+    width: 25px;
+    .menu-item-close-button {
+      &:hover {
+        color: $status-red;
+      }
+    }
+  }
+  &.disabled {
+    background: #f5f5f6;
+    color: #babbc0;
+    opacity: 1;
+    pointer-events: none;
+  }
+  &.selected {
+    background: darken($cylance-white, 5%);
+  }
+}

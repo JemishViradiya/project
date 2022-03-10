@@ -1,0 +1,22 @@
+{
+  "root": "libs/behaviour/hook-form",
+  "sourceRoot": "libs/behaviour/hook-form/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/behaviour/hook-form/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/behaviour/hook-form"],
+      "options": {
+        "jestConfig": "libs/behaviour/hook-form/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:behaviour", "scope:cdn"]
+}

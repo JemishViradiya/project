@@ -1,0 +1,20 @@
+{
+  "authentication": "인증",
+  "connectivityNode": "연결 노드",
+  "directoryConnection": "디렉터리 연결",
+  "networkSettings": "네트워크 설정",
+  "adaptiveResponse": "적응형 응답",
+  "labelGateway": "게이트웨이",
+  "labelSettings": "설정",
+  "directory": {
+    "actions": {
+      "add": "연결 추가"
+    },
+    "syncSchedule": {
+      "add": "일정 추가"
+    }
+  },
+  "form": {
+    "to": "에"
+  }
+}

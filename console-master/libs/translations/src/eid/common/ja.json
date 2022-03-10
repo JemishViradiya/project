@@ -1,0 +1,190 @@
+{
+  "authenticators": {
+    "title": "オーセンティケータ",
+    "add": "オーセンティケータの追加",
+    "type": "オーセンティケータタイプ",
+    "ENTERPRISE": "エンタープライズ",
+    "OKTA": "Okta",
+    "PING": "Ping",
+    "summary": "オーセンティケータを追加して、使用できる認証のタイプを管理します。",
+    "edit": "オーセンティケータの編集",
+    "delete": "オーセンティケータの削除",
+    "general": "一般情報",
+    "signing_type": "ID トークン署名アルゴリズム",
+    "ES512": "P521 CurveとSHA-512を使ったECDSA",
+    "ES256": "P256曲線とSHA-256を使用したECDSA",
+    "ES384": "P384 CurveとSHA-384を使ったECDSA",
+    "name": "表示名",
+    "identityproviderclient": "ID プロバイダークライアント",
+    "discovery_url": "OIDC ディスカバリドキュメントの URL",
+    "client_id": "クライアント ID",
+    "jwks": "プライベートキー JWKS",
+    "DUO_MFA": "Duo MFA",
+    "DUO": "Duo",
+    "duomfaconfiguration": "デュオ MFA コンフィギュレーション",
+    "auth_integration_key": "認証統合キー",
+    "auth_secret_key": "認証シークレットキー",
+    "auth_api_hostname": "認証 API ホスト名",
+    "admin_api_hostname": "管理 API ホスト名",
+    "admin_secret_key": "管理者シークレットキー",
+    "admin_integration_key": "管理者統合キー",
+    "EMAIL": "電子メール",
+    "USERNAME": "ユーザー名",
+    "username_format": "ユーザー名の形式",
+    "OKTA_MFA": "Okta MFA",
+    "oktamfaconfiguration": "Okta MFA コンフィギュレーション",
+    "auth_api_key": "認証 API キー",
+    "auth_domain": "認証ドメイン",
+    "TOTP": "TOTP",
+    "totpconfiguration": "TOTP コンフィギュレーション",
+    "window": "ウィンドウ",
+    "windowHelperText": "デバイスとサーバ間で許容される最大時間ドリフトを指定します。",
+    "AD": "Active Directory",
+    "LDAP": "LDAP",
+    "CUR": "ブラックベリー・オンライン・アカウント",
+    "VENUE": "Cylance"
+  },
+  "common": {
+    "name": "表示名",
+    "type": "タイプ",
+    "delete": "削除",
+    "deleteConfirm": "{{field}} オーセンティケータを削除しますか?",
+    "add": "追加",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "saveAs": "名前を付けて保存",
+    "success": {
+      "create": "オーセンティケータが追加されました。",
+      "update": "オーセンティケータが更新されました。",
+      "delete": "オーセンティケータは削除されました。"
+    },
+    "failure": {
+      "create": "オーセンティケータを追加できませんでした。理由:{{reason}}",
+      "update": "オーセンティケータを更新できませんでした。理由:{{reason}}",
+      "delete": "オーセンティケータを削除できませんでした。理由:{{reason}}",
+      "read": "データを取得できませんでした。理由:{{reason}}"
+    },
+    "nodata": "データなし"
+  },
+  "authentication": {
+    "title": "認証"
+  },
+  "policy": {
+    "list": {
+      "title": "エンタープライズ ID ポリシー",
+      "deleteSuccess": "ポリシーは削除されました。",
+      "deleteError": "{{deleteErrorCount}} のうち {{deleteCount}}} の削除操作が失敗しました",
+      "pageDescription": "ユーザーおよび管理者が UES コンソール、アプリ、またはサービスにアクセスするために完了する必要がある認証の種類を指定するポリシーを追加します。"
+    },
+    "createPolicyPageTitle": "認証ポリシーの追加",
+    "updatePolicyPageTitle": "認証",
+    "generalInformationLabel": "一般情報",
+    "authenticationRulesLabel": "認証規則",
+    "applicationExceptionLabel": "アプリの例外を管理する",
+    "name": "表示名",
+    "description": "説明",
+    "update": {
+      "tab": {
+        "settingsLabel": "設定",
+        "usersAndGroupsLabel": "割り当てられたユーザーとグループ"
+      }
+    },
+    "nameHelperText": "この名前のポリシーは既に存在します。",
+    "nameHelperTextRequired": "これは必須フィールドです。",
+    "createPolicyAssignConfirmationDialog": {
+      "title": "認証ポリシーを割り当てる",
+      "description": "ポリシーが作成されました。このポリシーにユーザーまたはグループを割り当てますか?",
+      "cancelButton": "今はない",
+      "confirmButton": "はい"
+    },
+    "modifiedPolicyConfirmationDialog": {
+      "title": "保存されていない変更",
+      "description": "このページから退出しますか？変更内容は保存されていません。",
+      "cancelButton": "キャンセル",
+      "confirmButton": "ページを離れる"
+    },
+    "batchDeletePolicyConflictErrorConfirmationDialog": {
+      "title": "削除失敗",
+      "cancelButton": "閉じる",
+      "description": "次のポリシーはユーザーまたはグループに割り当てられているため削除できませんでした。"
+    },
+    "batchDeletePolicyErrorConfirmationDialog": {
+      "title": "削除失敗",
+      "description": "次のポリシーを削除できませんでした:",
+      "cancelButton": "閉じる"
+    },
+    "deletePolicyConfirmationDialog": {
+      "title": "削除の確認",
+      "description": "{{name}} ポリシーを削除しますか?",
+      "deleteNote": "ポリシーを削除する前に、ポリシーに関連付けられているすべてのユーザーおよびグループを削除する必要があります。",
+      "cancelButton": "キャンセル",
+      "confirmButton": "削除"
+    },
+    "serverError": {
+      "update": "変更を保存できませんでした。",
+      "delete": "ポリシーを削除できませんでした。",
+      "deleteWithUsers": "ポリシーは、ユーザーに割り当てられているため、削除できませんでした。",
+      "deleteWithGroups": "ポリシーは、グループに割り当てられているため、削除できませんでした。",
+      "deleteWithUsersAndGroups": "ポリシーは、ユーザーおよびグループに割り当てられているため、削除できませんでした。",
+      "deletePolicies": "ポリシーを削除できませんでした。",
+      "multipleInternalAuthErrorMsg": "1 つのポリシーに複数の内部認証子タイプを割り当てることはできません。"
+    },
+    "riskFactorsLabel": "リスクシナリオ",
+    "authenticatorsList": {
+      "addButton": "オーセンティケータの追加",
+      "deleteButton": "削除",
+      "orderButton": "順序を設定",
+      "deleteSelectedMsg": "{{selectedCnt}} が選択されました",
+      "nameLabel": "表示名",
+      "descriptionLabel": "説明",
+      "noData": "＋をクリックしてアイテムを追加",
+      "columns": {
+        "name": "表示名",
+        "description": "説明"
+      }
+    },
+    "addAuthenticatorsDialog": {
+      "title": "オーセンティケータの追加",
+      "dropdownLabel": "オーセンティケータ名",
+      "cancelButton": "キャンセル",
+      "addButton": "保存"
+    },
+    "applicationExceptionButton": "アプリの例外を管理する",
+    "selectManagedExceptionDialog": {
+      "title": "アプリの例外を管理する",
+      "cancelButton": "キャンセル",
+      "addButton": "保存",
+      "listLabel": "サービスを選択した後、ページの下部にあるタブで選択したサービスの認証レベルを構成できます。",
+      "rightLabel": "選択したアプリ",
+      "leftLabel": "利用可能なアプリ"
+    },
+    "applicationExceptionButtonGroup": "アプリの例外",
+    "formSubmitSnackBarError": "{{count}} のエラーを修正してください",
+    "authenticatorsRequired": "少なくとも１つのオーセンティケータを選択する必要があります。",
+    "authenticatorsLoadingErrorMessage": "オーセンティケータのロード中にエラーが発生しました",
+    "firstLoginFromBrowserLabel": "ブラウザからの最初のログイン",
+    "firstLoginFromBrowserNotSetLabel": "なし",
+    "updatePolicyPageTitleHelperText": "最終更新日:{{date, datetime-short}}",
+    "updateFormCopyPolicyTooltip": "このポリシーのコピーを作成する",
+    "updateFormDeletePolicyTooltip": "ポリシーの削除",
+    "savePolicyPriorToCopyMessage": "コピーする前にポリシーを保存する",
+    "unexpectedErrorMessage": "要求を処理できませんでした。",
+    "unexpectedErrorWithHttpMessage": "要求を処理できませんでした。返された HTTP ステータス:{{status}}",
+    "unexpectedErrorWithHttpSubcodeMessage": "要求を処理できませんでした。返された HTTP ステータス:{{status}}、サブコード:{{subcode}}",
+    "policyUpdatedMessage": "ポリシーが更新されました。",
+    "policyDeletedMessage": "ポリシーが削除されました。",
+    "policyCreatedMessage": "ポリシーが作成されました。",
+    "policyDeleteErrorMessage": "ポリシーを削除できませんでした。",
+    "policyUpdateErrorMessage": "ポリシーを更新できませんでした。",
+    "policyCreateErrorMessage": "ポリシーを作成できませんでした。",
+    "busyLoading": "ポリシーを読み込んでいます...",
+    "busyDeleting": "ポリシーを削除しています...",
+    "busyUpdating": "ポリシーを更新中...",
+    "busyCreating": "ポリシーを作成中...",
+    "appsLoadErrorMesage": "要求を処理できませんでした。",
+    "swTemplateLoadErrorMesage": "要求を処理できませんでした。",
+    "authenticatorsLoadErrorMesage": "要求を処理できませんでした。",
+    "policyLoadErrorMesage": "要求を処理できませんでした。",
+    "applicationExceptionDescription": "この設定は、アプリがユーザーまたはグループに割り当てられると、アプリに割り当てられているすべてのポリシーよりも優先されます。ポリシーがアプリのデフォルトポリシーとして割り当てられている場合は適用されません。"
+  }
+}

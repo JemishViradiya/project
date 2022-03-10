@@ -1,0 +1,52 @@
+@import '../../theme/theme.less';
+
+.hint {
+  min-width: 160px;
+  background: @backgroundDefault;
+  color: .mui.palette[ @text-primary];
+  padding: 8px 16px;
+  border: 1px solid @tableBorder;
+
+  div {
+    text-align: left;
+  }
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+  padding-right: 8px;
+  text-underline-position: below;
+  // invisible unless we explicitly set the color
+  color: rgba(0, 0, 0, 0);
+}
+
+.row {
+  composes: .mui.typography[ @body1];
+  cursor: default;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  pointer-events: all;
+  transition: background-color @animHoverDuration @animHoverTimingFn;
+}
+
+.clickableRow {
+  .row;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: @backgroundLight;
+  }
+}
+
+.total {
+  border-top: 1px solid @tableHeaderBackground;
+  margin-top: 2px;
+}
+
+.noBorder {
+  border: none;
+}

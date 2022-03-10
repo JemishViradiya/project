@@ -1,0 +1,7 @@
+{
+  "loading": "Chargement...",
+  "signInLink": "Cliquez ici pour vous connecter à nouveau.",
+  "loginFailed": "Échec de la connexion",
+  "logoutFailed": "Échec de la déconnexion",
+  "errorMessage": "Votre demande n'a pas pu être traitée."
+}

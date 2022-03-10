@@ -1,0 +1,70 @@
+{
+  "root": "libs/behaviours-e2e",
+  "sourceRoot": "libs/behaviours-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/behaviours-e2e/cypress.json",
+        "tsConfig": "libs/behaviours-e2e/tsconfig.json",
+        "devServerTarget": "behaviours-e2e:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "behaviours-e2e:storybook:ci"
+        }
+      },
+      "outputs": ["cypress-results/libs/behaviours-e2e"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/behaviours-e2e/src/**/*.ts", "libs/behaviours-e2e/src/**/*.js"]
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "port": 4400,
+        "staticDir": ["dist"],
+        "config": {
+          "configFolder": "libs/behaviours-e2e/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "outputPath": "docs/behaviours",
+        "config": {
+          "configFolder": "libs/behaviours-e2e/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    }
+  },
+  "tags": [],
+  "implicitDependencies": [
+    "behaviours",
+    "behaviour/app-shell",
+    "behaviour/dashboard",
+    "behaviour/hook-form",
+    "behaviour/nav",
+    "behaviour/react",
+    "behaviour/rich-text-editor",
+    "behaviour/x-grid"
+  ]
+}

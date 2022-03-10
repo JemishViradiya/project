@@ -1,0 +1,39 @@
+{
+  "root": "libs/data/mtd",
+  "sourceRoot": "libs/data/mtd/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/mtd/**/*.js",
+          "libs/data/mtd/**/*.jsx",
+          "libs/data/mtd/**/*.ts",
+          "libs/data/mtd/**/*.tsx",
+          "libs/data/mtd/**/*.spec.ts",
+          "libs/data/mtd/**/*.spec.tsx",
+          "libs/data/mtd/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/mtd/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/libs/data/mtd"]
+    },
+    "test-pact": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/mtd/jest.config.pact.js",
+        "runInBand": true
+      },
+      "outputs": ["test-results/libs/data/mtd-pact"]
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

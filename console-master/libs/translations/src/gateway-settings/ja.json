@@ -1,0 +1,20 @@
+{
+  "authentication": "認証",
+  "connectivityNode": "Connectivity Node",
+  "directoryConnection": "ディレクトリ接続",
+  "networkSettings": "ネットワーク設定",
+  "adaptiveResponse": "アダプティブレスポンス",
+  "labelGateway": "ゲートウェイ",
+  "labelSettings": "設定",
+  "directory": {
+    "actions": {
+      "add": "接続を追加"
+    },
+    "syncSchedule": {
+      "add": "スケジュールの追加"
+    }
+  },
+  "form": {
+    "to": "に"
+  }
+}

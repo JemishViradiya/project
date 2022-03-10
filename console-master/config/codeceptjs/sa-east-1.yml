@@ -1,0 +1,22 @@
+runner:
+  mode: default
+  loglevel: debug
+  delay:
+    startup: 0
+  codecept:
+    show: true
+    writeScreenshots: true
+
+e2e:
+  config:
+    baseUrl: https://protect-sae1.cylance.com
+
+    users:
+      # see https://wikis.rim.net/pages/viewpage.action?pageId=909575392
+      admin:
+        # customer-id: 6808977854
+        # tenant: ucautotesting-sae
+        # venue-tenantid: 968357F5-8E02-4386-BC71-FC654F1497B0
+        # srpid: S97981832
+        email: UCAdminSAE@ahem.cbbcps.com
+        password: 'UCp@$$11'

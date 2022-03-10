@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "lib": ["es2017", "webworker"],
+    "types": ["jest", "node"]
+  },
+  "files": ["../../node_modules/jest-fetch-mock/types/index.d.ts"],
+  "exclude": ["assets/**"],
+  "include": ["**/__mocks__/*.ts", "**/*.spec.ts", "**/*.spec.tsx", "**/*.spec.js", "**/*.spec.jsx", "**/*.d.ts", "jest.config.js"]
+}

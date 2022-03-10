@@ -1,0 +1,107 @@
+{
+  "navigation": {
+    "gateway": "Passerelle",
+    "policies": "Politiques",
+    "title": "Stratégie utilisateur",
+    "user": "Utilisateur",
+    "activation": {
+      "label": "Inscription"
+    },
+    "mobileDeviceThreats": {
+      "label": "Protect Mobile"
+    },
+    "networkAccessControl": {
+      "label": "Contrôle d'accès réseau"
+    },
+    "gatewayService": {
+      "label": "Service de passerelle"
+    },
+    "enterpriseIdentity": {
+      "label": "authentification"
+    },
+    "adaptiveResponse": {
+      "label": "Réponse adaptative"
+    },
+    "riskDetection": {
+      "label": "Détections de risques"
+    },
+    "dlpMobileThreads": {
+      "label": "Avert Mobile"
+    },
+    "dlpContentThreads": {
+      "label": "Protection des informations"
+    }
+  },
+  "policy": {
+    "cancelButton": "Annuler",
+    "deleteButton": "Supprimer",
+    "saveButton": "Enregistrer",
+    "addButton": "Ajouter",
+    "removeButton": "Supprimer",
+    "list": {
+      "add": "Ajouter une stratégie",
+      "results": "Résultats de {{value}}",
+      "rank": "Classement",
+      "searchPlaceholder": "Rechercher des stratégies",
+      "noData": "Aucune donnée",
+      "columns": {
+        "rank": "Classement",
+        "name": "Nom Politique",
+        "description": "Description",
+        "userCount": "Utilisateurs",
+        "groupCount": "Groupes d'utilisateurs",
+        "added": "Ajouté",
+        "modified": "Modifié"
+      },
+      "columnPicker": "Colonnes de table",
+      "selected": "{{count}} sélectionné"
+    },
+    "delete": {
+      "title": "confirmation de suppression",
+      "deleteSingle": "Voulez-vous supprimer la stratégie {{profile}}?",
+      "multipleDelete": "Voulez-vous supprimer ces stratégies?",
+      "note": "Vous devez supprimer tous les utilisateurs et groupes associés à une stratégie avant de la supprimer.",
+      "successMessage": "La stratégie a été supprimée."
+    },
+    "rank": {
+      "successfulUpdate": "Le classement a été mis à jour."
+    },
+    "detail": {
+      "updated": "Mise à jour le {{date, datetime}}",
+      "appliedUsersAndGroups": "Utilisateurs et groupes affectés",
+      "settings": "Paramètres",
+      "device": "Détails de la stratégie d'appareil",
+      "user": "Détails de la stratégie utilisateur"
+    },
+    "assignment": {
+      "columns": {
+        "name": "Nom",
+        "email": "E-mail"
+      },
+      "add": "Ajouter un utilisateur ou un groupe",
+      "searchPlaceholder": "Rechercher des utilisateurs et des groupes",
+      "userCount": "Utilisateurs de {{count}}",
+      "dialog": {
+        "title": "Ajouter un utilisateur ou un groupe",
+        "description": "Recherchez des utilisateurs ou des groupes. Vous pouvez attribuer plusieurs utilisateurs et groupes à la même stratégie.",
+        "searchText": "Rechercher des utilisateurs ou des groupes",
+        "list": {
+          "noResults": "Aucun résultat"
+        }
+      },
+      "unassign": {
+        "title": "Supprimer des utilisateurs ou des groupes",
+        "content": "Souhaitez-vous supprimer les éléments suivants?"
+      },
+      "successfulAssignment": "Les utilisateurs ou les groupes ont été ajoutés à la stratégie.",
+      "successfulUnassignment": "Les utilisateurs ou les groupes ont été supprimés de la stratégie."
+    },
+    "defaultPolicyName": "Par défaut"
+  },
+  "policies": {
+    "deletePoliciesSuccessMessage": "Les stratégies ont été supprimées.",
+    "deletePoliciesErrorMessage": "Les stratégies n'ont pas pu être supprimées.",
+    "deletePolicyErrorMessage": "La stratégie n'a pas pu être supprimée.",
+    "deleteMultiplePoliciesErrorDescription": "Les stratégies suivantes n'ont pas pu être supprimées car elles sont attribuées à des utilisateurs ou des groupes :"
+  }
+}

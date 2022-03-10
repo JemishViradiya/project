@@ -1,0 +1,29 @@
+{
+  "root": "partials/protect/dashboard-e2e",
+  "sourceRoot": "partials/protect/dashboard-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/protect/dashboard-e2e/cypress.json",
+        "tsConfig": "partials/protect/dashboard-e2e/tsconfig.e2e.json",
+        "devServerTarget": "protect/dashboard:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "protect/dashboard:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/protect/dashboard-e2e"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/protect/dashboard-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["scope:partial", "scope:protect"],
+  "implicitDependencies": ["protect/dashboard"]
+}

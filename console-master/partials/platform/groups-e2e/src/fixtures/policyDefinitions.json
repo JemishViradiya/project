@@ -1,0 +1,39 @@
+{
+  "totals": {
+    "pages": 1,
+    "elements": 5
+  },
+  "count": 5,
+  "elements": [
+    {
+      "tenantId": "V73324241",
+      "serviceId": "com.blackberry.bis",
+      "entityType": "BisPolicy",
+      "reconciliationType": "RANKING"
+    },
+    {
+      "tenantId": "V73324241",
+      "serviceId": "big.blackberry.com",
+      "entityType": "GatewayApp",
+      "reconciliationType": "RANKING"
+    },
+    {
+      "tenantId": "V73324241",
+      "serviceId": "big.blackberry.com",
+      "entityType": "NetworkAccessControl",
+      "reconciliationType": "RANKING"
+    },
+    {
+      "tenantId": "V73324241",
+      "serviceId": "com.blackberry.mtd",
+      "entityType": "MTD",
+      "reconciliationType": "RANKING"
+    },
+    {
+      "tenantId": "V73324241",
+      "serviceId": "com.blackberry.ecs.ecm",
+      "entityType": "ENROLLMENT",
+      "reconciliationType": "RANKING"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+@import '../../theme/theme.less';
+
+.dialog {
+  composes: .mui.typography[ @body1];
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.list {
+  margin-top: 15px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.item {
+  margin-top: 5px;
+  font-weight: 700;
+}
+
+.hr {
+  width: 100%;
+  margin: 20px 0;
+  border-style: solid;
+  border-color: @colorButtonBorder;
+  border-width: 1px;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.actionBar {
+  display: flex;
+  justify-content: center;
+}

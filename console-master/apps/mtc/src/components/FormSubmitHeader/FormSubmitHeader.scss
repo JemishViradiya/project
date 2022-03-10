@@ -1,0 +1,12 @@
+@import '../../styles/_colors.scss';
+@import '../../styles/_utility.scss';
+
+.form-submit-header {
+  > div:first-child {
+    float: left;
+  }
+  > div:last-child {
+    float: right;
+    margin-right: 10px;
+  }
+}

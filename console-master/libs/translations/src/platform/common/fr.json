@@ -1,0 +1,742 @@
+{
+  "nothingYet": "Il n'y a rien ici. <1>Retournez</1>.",
+  "on": "Sur",
+  "off": "Off",
+  "form": {
+    "to": "pour",
+    "selectValue": "- Sélectionnez -",
+    "success": "Réussir"
+  },
+  "navigation": {
+    "gateway": "Passerelle",
+    "assets": "Inventaire"
+  },
+  "noData": "Aucune donnée",
+  "chosenItems": "Objets choisis",
+  "button": {
+    "addLabel": "Ajouter une connexion",
+    "downloadActivationFile": "Télécharger le fichier d'activation",
+    "saveAndNew": "Enregistrer et créer",
+    "settings": "Paramètres"
+  },
+  "sideNav": {
+    "companyDirectory": "Annuaire des entreprises",
+    "intune": "Microsoft Intune",
+    "users": "Utilisateurs",
+    "settings": "Paramètres",
+    "groups": "Groupes"
+  },
+  "onlineStatus": {
+    "false": "Hors ligne",
+    "true": "En ligne"
+  },
+  "directory": {
+    "description": "Configurez les paramètres de synchronisation et d'intégration de vos annuaires d'entreprise connectés. Vous pouvez également ajouter des connexions à Microsoft Azure Active Directory ici. Pour ajouter des connexions à un annuaire Microsoft Active Directory ou LDAP local, vous devez installer une instance locale de BlackBerry Connectivity Node et ajouter les connexions dans les paramètres de Connectivity Node.",
+    "noConnections": "Aucune connexion n'est configurée",
+    "azureConnection": {
+      "add": {
+        "header": "Ajouter une connexion à un annuaire",
+        "page": {
+          "title": "Informations générales",
+          "description": "Créez une connexion Microsoft Azure Directory à l'aide de vos informations d'identification."
+        }
+      },
+      "edit": "Modifier la connexion à un répertoire",
+      "remove": "Supprimer la connexion à Microsoft Azure Directory",
+      "sync": "Démarrer la synchronisation"
+    },
+    "tableHeader": {
+      "connection": "Connexion à un répertoire",
+      "type": "Type",
+      "lastSync": "Dernière synchronisation",
+      "sync": "Horaire de synchronisation"
+    },
+    "tableTitle": "Connexions au répertoire",
+    "emptyTableMessage": "Cliquez sur + pour ajouter des éléments.",
+    "type": {
+      "AD": "Connexion Microsoft Active Directory",
+      "AZURE": "Connexion Microsoft Azure Active Directory",
+      "ACTIVE_DIRECTORY": "Connexion Microsoft Active Directory",
+      "LDAP": "LDAP"
+    },
+    "error": {
+      "duplicateName": "Une connexion portant ce nom existe déjà.",
+      "createConnection": "La connexion n'a pas pu être créée.",
+      "deleteConnection": "La connexion n'a pas pu être supprimée.",
+      "duplicateSchedule": "Une connexion avec ce programme existe déjà.",
+      "retrieveConnections": "Les connexions n'ont pas pu être récupérées.",
+      "syncStatus": "L'état de la synchronisation d'annuaire n'a pas pu être récupéré.",
+      "syncConnection": "La synchronisation n'a pas pu être terminée.",
+      "syncConnectionPreview": "L'aperçu n'a pas pu être terminé.",
+      "updateConnection": "La connexion n'a pas pu être mise à jour.",
+      "syncCancel": "La synchronisation de l'annuaire n'a pas pu être annulée.",
+      "connectionNotFound": "La connexion à l'annuaire est introuvable",
+      "connectionIsBCNInstance": "La connexion à l'annuaire n'a pas pu être supprimée car elle est associée à une ou plusieurs instances de BlackBerry Connectivity Node.",
+      "connectionIsInvalid": "La connexion à l'annuaire n'est pas valide.",
+      "connectionIsNotEmpty": "Vous devez supprimer tous les utilisateurs et groupes associés à la connexion à l'annuaire avant de la supprimer."
+    },
+    "success": {
+      "deleteConnection": "La connexion a été supprimée."
+    },
+    "connectionName": "Nom",
+    "domain": "Domaine",
+    "clientId": "ID client",
+    "clientKey": "Clé client",
+    "removeConnection": "Supprimer la connexion",
+    "deleteConnectionDialog": {
+      "confirm": "Voulez-vous supprimer la connexion {{connectionName}} avec l'annuaire de votre entreprise?",
+      "deleteNote": "Vous devez supprimer tous les utilisateurs et groupes associés à une connexion avant de la supprimer."
+    },
+    "sync": {
+      "action": {
+        "start": "Démarrer la synchronisation",
+        "cancel": "Annuler la synchronisation"
+      },
+      "dialogTitle": "Synchroniser l'annuaire",
+      "confirm": "Voulez-vous synchroniser les utilisateurs de l'annuaire et les groupes liés à un annuaire? Sélectionnez le type de synchronisation ci-dessous pour continuer.",
+      "state": {
+        "RUNNING": "En cours",
+        "CANCELED": "Annulé",
+        "FAILED": "Echec",
+        "SUCCEEDED": "Réussir"
+      }
+    },
+    "syncSettings": {
+      "tab": "Paramètres de synchronisation",
+      "description": "Configurez les paramètres de synchronisation des groupes d'annuaires d'entreprise.",
+      "onboarding": "Intégration de l'annuaire",
+      "forceSync": "Synchronisation forcée",
+      "limit": "Synchronisation",
+      "limitDescription": "Définir la limite de synchronisation (0 = aucune limite)",
+      "nestingLevel": "Niveau d'imbrication",
+      "nestingLevelDescription": "Définir le niveau d'imbrication maximal des groupes de répertoires (-1 = aucune limite)",
+      "offboardingTitle": "Débarquement",
+      "offboardingDescriptionDetail": "Sélectionnez les actions d'application à effectuer lorsque des utilisateurs sont supprimés de tous les groupes d'annuaires d'intégration.",
+      "offboarding": "Supprimer l'utilisateur lorsque l'utilisateur est supprimé de tous les groupes d'annuaires d'intégration",
+      "offboardingProtection": "Protection contre le débarquement",
+      "onboardingTitle": "Intégration"
+    },
+    "syncSchedule": {
+      "title": "Horaire de synchronisation",
+      "description": "Configurez la planification de la synchronisation.",
+      "add": "Ajouter un calendrier",
+      "addNew": "Ajouter un calendrier de synchronisation",
+      "days": "Journées",
+      "everyNumMinutes": "Toutes les {{minutes}} minutes",
+      "interval": {
+        "interval": "Intervalle",
+        "onceADay": "Une fois par jour",
+        "noRecurrence": "Aucune récurrence"
+      },
+      "remove": "Supprimer le calendrier de synchronisation",
+      "recurrence": "Récurrence",
+      "setTime": "Réglez l'heure *",
+      "scheduledDay": "Journée programmée",
+      "scheduledDays": "Jours programmés",
+      "syncBetween": "Synchronisation entre (UTC) *",
+      "syncGroups": {
+        "all": "Tous les utilisateurs et groupes",
+        "onboarding": "Groupes d'intégration",
+        "linked": "Groupes liés à un annuaire",
+        "userAttributes": "Attributs utilisateur"
+      },
+      "tab": "Horaire de synchronisation",
+      "time": "Heure (UTC)",
+      "type": "Type de synchronisation",
+      "emptyTableMessage": "Cliquez sur + pour ajouter des éléments."
+    },
+    "actions": {
+      "add": "Ajouter une nouvelle connexion"
+    }
+  },
+  "signOut": "Déconnectez-vous",
+  "myAccount": "Mon compte",
+  "help": "Aide",
+  "signInLink": "Cliquez ici pour vous connecter à nouveau.",
+  "signedOutMessage": "Vous avez été déconnecté.",
+  "signedOutSummary": "Déconnecté",
+  "requestCanceled": "Demande annulée",
+  "users": {
+    "actions": {
+      "add": "Ajouter des utilisateurs",
+      "delete": "Supprimer des utilisateurs",
+      "deleteUserDescription": "Voulez-vous supprimer les utilisateurs {{userCount}}?",
+      "expirePasscode": "Code d'accès d'expiration",
+      "resendInvitation": "Renvoyer l'invitation",
+      "resendInvitationDescription": "Voulez-vous renvoyer l'invitation aux utilisateurs {{userCount}}?"
+    },
+    "grid": {
+      "allUsers": "Utilisateurs",
+      "displayName": "Nom",
+      "emailAddress": "Adresse e-mail",
+      "user": "Utilisateur",
+      "deleteUsersTitle": "Supprimer des utilisateurs",
+      "resendInvitationTitle": "Renvoyer l'invitation",
+      "dataSource": {
+        "header": "Source"
+      },
+      "devices": "Dispositifs",
+      "passcodeExpiry": "Expiration du code secret",
+      "expired": "Expiré",
+      "selectedCount": "{{value}} sélectionné",
+      "resultsCount": "Résultats de {{value}}"
+    },
+    "add": {
+      "title": "Ajouter des utilisateurs",
+      "userDetails": "Détails de l'utilisateur",
+      "additionalUserDetails": "Informations supplémentaires sur l'utilisateur",
+      "search": "Rechercher",
+      "addNewUser": "Ajouter un nouvel utilisateur manuellement",
+      "userFoundTitle": "L'utilisateur a été trouvé.",
+      "selectUserNote": "Veuillez choisir l'une des options suivantes.",
+      "userCreatedMessage": "L'utilisateur a été créé.",
+      "groups": {
+        "heading": "Groupes",
+        "subHeading": "Attribuez un utilisateur à des groupes.",
+        "available": "Groupes disponibles",
+        "selectedGroups": "Groupes sélectionnés"
+      },
+      "input": {
+        "search": "Saisissez un nom ou une adresse e-mail",
+        "firstName": "Prénom",
+        "lastName": "Nom de famille",
+        "displayName": "Nom d'affichage",
+        "emailAddress": "Adresse e-mail",
+        "department": "Département",
+        "title": "Titre",
+        "company": "Nom de l'organisation",
+        "companyPhoneNumber": "Téléphone professionnel",
+        "homePhoneNumber": "Téléphonie résidentielle",
+        "mobilePhoneNumber": "Mobile portable",
+        "street": "Adresse de rue",
+        "poBox": "Boîte postale",
+        "city": "Ville",
+        "state": "État/Province",
+        "postalCode": "Code postal",
+        "country": "Pays"
+      },
+      "dataSource": {
+        "cur": "BlackBerry Online",
+        "azure": "Microsoft Azure",
+        "ldap": "LDAP",
+        "active_directory": "Active Directory"
+      },
+      "directoryHelp": {
+        "link": "Pour en savoir plus sur l'ajout d'utilisateurs"
+      },
+      "displayName": "{{firstName}} {{lastName}}",
+      "unsaved": {
+        "title": "Modifications non enregistrées",
+        "content": "Voulez-vous quitter cette page ? Vos modifications n'ont pas été enregistrées"
+      }
+    },
+    "message": {
+      "noUsersFound": "Aucun utilisateur n'a été trouvé",
+      "success": {
+        "create": "L'utilisateur a été créé.",
+        "delete": "L'utilisateur a été supprimé.",
+        "deletePlural": "Les utilisateurs ont été supprimés.",
+        "resendInvitation": "Les invitations ont été renvoyées.",
+        "resendInvitationPartial": "Les invitations ont été renvoyées. L'invitation n'a pas pu être envoyée à certains utilisateurs."
+      },
+      "error": {
+        "fetch": "Les utilisateurs n'ont pas pu être récupérés.",
+        "submit": "Erreur lors de la soumission de l'utilisateur",
+        "conflict": "L'utilisateur existe déjà.",
+        "delete": "Impossible de supprimer l'utilisateur.",
+        "resend": "Les invitations n'ont pas pu être renvoyées."
+      }
+    },
+    "delete": {
+      "title": "Supprimer un utilisateur",
+      "description": "Voulez-vous supprimer {{user}}?"
+    },
+    "expirePasscodes": {
+      "title": "Code d'accès d'expiration",
+      "description": "Voulez-vous faire expirer le code d'accès pour les utilisateurs {{userCount}}?",
+      "success": "Les codes d'accès ont expiré.",
+      "error": "Les codes d'accès n'ont pas pu être expirés.",
+      "errorWithCount": "Impossible d'expirer les codes d'accès {{count}}."
+    },
+    "userTabs": "Onglets utilisateur",
+    "alertsTabs": "Onglets Alertes",
+    "eventsTabs": "Onglets Événements",
+    "details": {
+      "title": "Détails de l'utilisateur",
+      "actions": {
+        "title": "Actions",
+        "viewUserDetails": "Afficher les détails de l'utilisateur",
+        "editUserDetails": "Modifier les détails de l'utilisateur",
+        "manageAssignments": "Gérer les affectations",
+        "manageDevices": "Gérer les appareils",
+        "generateStatusReport": "Générer un rapport d'état",
+        "deleteUser": "Supprimer un utilisateur",
+        "removeTOTPEnrollment": "Supprimer l'inscription TOTP"
+      },
+      "panels": {
+        "alerts": "Alertes",
+        "events": "Événements",
+        "devices": "Dispositifs",
+        "configuration": "Configuration"
+      },
+      "events": {
+        "tabs": {
+          "identity": "Identité",
+          "network": "Réseau"
+        },
+        "networkActivityTitle": "Activité sur le réseau",
+        "networkEventsTitle": "Événements du réseau"
+      },
+      "devices": {
+        "title": "Dispositifs",
+        "label": "Détails de l'appareil pour {{deviceName}}",
+        "agent": "Agent: {{agent}}",
+        "agentBundleId": {
+          "com_blackberry_protect": "Protection BlackBerry",
+          "com_blackberry_big": "BlackBerry Gateway",
+          "com_blackberry_big1": "BlackBerry Gateway",
+          "com_blackberry_big2": "BlackBerry Gateway",
+          "com_blackberry_big3": "BlackBerry Gateway"
+        },
+        "enrollmentDateTime": "Inscription: {{enrollmentDateTime}}",
+        "error": {
+          "fetch": "Les appareils n'ont pas pu être récupérés.",
+          "remove": "Impossible de supprimer l'appareil."
+        },
+        "actions": {
+          "remove": "Supprimer l'appareil"
+        },
+        "dialogs": {
+          "remove": {
+            "title": "Supprimer l'appareil",
+            "description": "Voulez-vous supprimer cet appareil? Si vous supprimez l'appareil, l'agent Gateway sera désactivé."
+          }
+        },
+        "success": {
+          "remove": "L'appareil a été supprimé."
+        }
+      },
+      "edit": {
+        "title": "Modifier les détails de l'utilisateur",
+        "error": "L'utilisateur n'a pas pu être modifié.",
+        "success": "L'utilisateur a été édité."
+      },
+      "configuration": {
+        "groups": {
+          "title": "Groupes d'utilisateurs affectés",
+          "description": "Attribuez des utilisateurs à des groupes locaux ou d'annuaire.",
+          "assignButton": "Assigner des groupes d'utilisateurs",
+          "userGroupName": "Nom",
+          "type": "Type",
+          "directoryGroup": "Groupe d'annuaires liés",
+          "localGroup": "Groupe local",
+          "dialogs": {
+            "assign": {
+              "title": "Assigner des groupes d'utilisateurs",
+              "description": "Recherchez le groupe que vous souhaitez attribuer à l'utilisateur.",
+              "searchText": "Nom du groupe"
+            },
+            "unassign": {
+              "title": "Annuler l'affectation d'un groupe",
+              "description": "Voulez-vous annuler l'attribution de {{groupName}} de {{displayName}}?"
+            }
+          },
+          "success": {
+            "unassign": "Le groupe n'a pas été attribuée.",
+            "assign": {
+              "single": "Le groupe a été attribuée.",
+              "multiple": "Les groupes ont été attribuées."
+            }
+          },
+          "errors": {
+            "fetchUser": "Les groupes d'utilisateurs n'ont pas pu être récupérés.",
+            "unassign": "Le groupe n'a pas pu être désaffecté.",
+            "assign": "Les groupes n'ont pas pu être affectés.",
+            "search": "Les résultats de la recherche n'ont pas pu être récupérés."
+          }
+        },
+        "policies": {
+          "title": "Politiques d'utilisation attribuées",
+          "description": "Attribuez des stratégies aux utilisateurs. Vous pouvez attribuer des stratégies directement aux utilisateurs ou aux groupes dont l'utilisateur est membre.",
+          "assignButton": "Attribuer des stratégies utilisateur",
+          "policyName": "Nom",
+          "policyType": "Type",
+          "assignment": "Affectation",
+          "assignedViaGroup": "Affecté au groupe",
+          "assignedViaOverride": "Affecté par remplacement",
+          "assignedToUser": "Attribué à l'utilisateur",
+          "dialogs": {
+            "assign": {
+              "title": "Attribuer une stratégie",
+              "replaceTitle": "Stratégie de remplacement",
+              "description": "Recherchez la stratégie que vous souhaitez attribuer à l'utilisateur.",
+              "searchText": "Nom Politique"
+            },
+            "unassign": {
+              "title": "Stratégie de désaffectation",
+              "description": "Voulez-vous annuler l'attribution de {{policyName}} de {{displayName}}?"
+            }
+          },
+          "success": {
+            "unassign": "La stratégie n'a pas été attribuée.",
+            "assign": {
+              "single": "La stratégie a été attribuée.",
+              "multiple": "Les stratégies ont été attribuées."
+            }
+          },
+          "errors": {
+            "fetchPolicies": "Les stratégies utilisateur attribuées n'ont pas pu être récupérées.",
+            "fetchUser": "Les stratégies utilisateur n'ont pas pu être récupérées.",
+            "fetchAll": "Les types de stratégie n'ont pas pu être récupérés.",
+            "unassign": "La stratégie n'a pas pu être désaffectée.",
+            "assign": "Les stratégies n'ont pas pu être attribuées."
+          }
+        }
+      },
+      "error": {
+        "fetch": "L'utilisateur n'a pas pu être récupéré."
+      }
+    },
+    "totp": {
+      "fetchError": "Les informations d'inscription TOTP n'ont pas pu être récupérées.",
+      "removeError": "L'inscription TOTP n'a pas pu être supprimée.",
+      "removeSuccess": "L'inscription TOTP a été supprimée."
+    },
+    "remove": {
+      "title": "Supprimer l'inscription TOTP",
+      "description": "Voulez-vous supprimer l'inscription TOTP pour {{user}} ?"
+    }
+  },
+  "itemsSelected": "articles sélectionnés",
+  "filter": "Filtre",
+  "export": "Exporter",
+  "apply": "Appliquer",
+  "Users": "Utilisateurs",
+  "Customize columns": "Personnaliser les colonnes",
+  "Reset": "Réinitialiser",
+  "Unselect": "Désélectionner",
+  "Unselect All": "Tout désélectionner",
+  "Select all entries": "Sélectionnez toutes les entrées",
+  "{{start}} - {{stop}} of {{total}}": "{{start}} - {{stop}} sur {{total}}",
+  "companyDirectoryConnection": "Connexion au répertoire de l'entreprise",
+  "companyDirectoryDescription": "Configurez la connexion à Microsoft Active Directory ou LDAP pour importer des utilisateurs de l'annuaire et synchroniser les groupes d'annuaires.",
+  "groups": {
+    "title": "Groupes d'utilisateurs",
+    "enableOnboarding": "Activer l'intégration",
+    "disableOnboarding": "Désactiver l'intégration",
+    "confirmOnboarding": "Voulez-vous désactiver l'intégration?",
+    "generalInformation": "Informations générales",
+    "groupName": "Nom du groupe",
+    "directorySource": "Source du répertoire",
+    "directoryGroupName": "Nom du groupe d'annuaires",
+    "description": "Description",
+    "onboarding": "Intégration",
+    "nestedDirectoryGroups": "Groupes de répertoires imbriqués",
+    "tabs": {
+      "settings": "Paramètres",
+      "users": "Utilisateurs"
+    },
+    "table": {
+      "columnPickerTitle": "Colonnes de table",
+      "optionsTitle": "Groupes",
+      "groupName": "Nom",
+      "numUsers": "Utilisateurs",
+      "assignedProfiles": "Stratégies affectées",
+      "onboarding": "Intégration",
+      "directoryLink": "Lien vers le répertoire",
+      "addGroup": "Ajouter un groupe",
+      "addLocalGroup": "Groupe local",
+      "addDirectoryGroup": "Groupe de répertoires",
+      "selectedCount": "{{value}} sélectionné",
+      "groupLoadFailure": "Les groupes n'ont pas pu être récupérés."
+    },
+    "export": {
+      "title": "Exporter",
+      "description": "L'exportation sera générée en arrière-plan.",
+      "everything": "Tout",
+      "currentFilters": "Filtres actuels",
+      "id": "IDENTIFIANT",
+      "name": "Nom",
+      "isOnboardingEnabled": "Intégration",
+      "directoryLink": "Lien vers le répertoire",
+      "userCount": "Utilisateurs",
+      "groupExportFailure": "Les groupes n'ont pas pu être exportés."
+    },
+    "add": {
+      "local": {
+        "title": "Ajouter un groupe local",
+        "required": "Ce champ est obligatoire."
+      },
+      "directory": {
+        "title": "Ajouter un groupe d'annuaires",
+        "searchPlaceholder": "Rechercher un groupe d'annuaires"
+      }
+    },
+    "delete": {
+      "titleSingle": "Supprimer le groupe",
+      "title": "Supprimer des groupes",
+      "messageSingle": "Voulez-vous supprimer {{name}}?",
+      "messageMultiple": "Souhaitez-vous supprimer les groupes suivants?",
+      "note": "Utilisateurs ne seront pas supprimés.",
+      "successMessage": "Le groupe a été supprimé.",
+      "errorMessage404": "Le groupe a déjà été supprimé.",
+      "errorMessage": "Le groupe n'a pas pu être supprimé."
+    },
+    "create": {
+      "successMessage": "Le groupe a été créé.",
+      "errorMessage": "Le groupe n'a pas pu être créé."
+    },
+    "policyAssign": {
+      "policies": "Politiques",
+      "replace": "Stratégie de remplacement",
+      "assign": "Assigner une stratégie",
+      "addPolicy": "Ajouter une stratégie",
+      "policy": "Politique",
+      "notSelectedError": "Au moins une stratégie doit être sélectionnée.",
+      "name": "Nom",
+      "typeColumn": "Type",
+      "description": "Description",
+      "placeholder": "Cliquez sur + pour ajouter des éléments.",
+      "removePolicy": "Supprimer la stratégie",
+      "removePolicyNote": "Voulez-vous supprimer la stratégie {{name}} {{type}} du groupe?",
+      "type": {
+        "NetworkAccessControl": "Contrôle d'accès au réseau",
+        "MTD": "Protect Mobile",
+        "ENROLLMENT": "Inscription",
+        "role": "Rôle",
+        "BisPolicy": "Réponse adaptative",
+        "ACTIVATION": "Activation",
+        "GatewayApp": "Service de passerelle",
+        "PrivateInternet": "Internet privé",
+        "policy": "authentification",
+        "BisDetectionPolicy": "Évaluation des risques",
+        "DLP": "BlackBerry Avert",
+        "MOBILE": "Avert Mobile",
+        "CONTENT": "Contenu Avert"
+      },
+      "errorAssignMessage": "Les stratégies n'ont pas pu être attribuées.",
+      "errorUnassignMessage": "Les stratégies n'ont pas pu être désaffectées."
+    },
+    "update": {
+      "successMessage": "Le groupe a été mis à jour.",
+      "errorMessage": "Le groupe n'a pas pu être mis à jour."
+    },
+    "usersTable": {
+      "displayName": "Nom",
+      "emailAddress": "E-mail",
+      "addUser": "Ajouter un utilisateur",
+      "loadFailure": "Les utilisateurs n'ont pas pu être récupérés.",
+      "searchPlaceholder": "Nom",
+      "addUserTitle": "Ajouter des utilisateurs à {{name}}",
+      "addUserSuccess": "Les utilisateurs ont été ajoutés.",
+      "addUserError": "Les utilisateurs n'ont pas pu être ajoutés au groupe.",
+      "delete": {
+        "title": "Supprimer des utilisateurs",
+        "message": "Voulez-vous supprimer les utilisateurs suivants du groupe?",
+        "successMessage": "Les utilisateurs ont été supprimés.",
+        "errorMessage": "Les utilisateurs n'ont pas pu être supprimés du groupe."
+      }
+    },
+    "titleDetails": "Détails du groupe d'utilisateurs"
+  },
+  "activationProfile": {
+    "list": {
+      "title": "Stratégie d'inscription",
+      "addProfile": "Ajouter une stratégie",
+      "name": "Nom Politique",
+      "description": "Description",
+      "users": "Utilisateurs appliqués",
+      "groups": "Groupes appliqués",
+      "deleteSingle": "Voulez-vous supprimer la stratégie {{profile}}?",
+      "multipleDelete": "Voulez-vous supprimer ces stratégies?",
+      "singleDeleteFailure": "La stratégie n'a pas pu être supprimée car elle est affectée à des utilisateurs ou à des groupes.",
+      "deleteFailure": "La stratégie n'a pas pu être supprimée.",
+      "multipleDeleteFailure": "Les stratégies suivantes n'ont pas pu être supprimées car elles sont attribuées à des utilisateurs ou à des groupes:",
+      "pageDescription": "Ajoutez une stratégie pour permettre aux utilisateurs d'activer l'application BlackBerry Protect sur les terminaux mobiles et l'agent BlackBerry Gateway sur les terminaux Windows et macOS.",
+      "invalidEmailMessage": "Le message de bienvenue n'est pas valide. Vérifiez que la mise en forme et la syntaxe du message sont correctes."
+    },
+    "add": {
+      "title": "Ajouter une stratégie d'inscription",
+      "successMessage": "La stratégie a été créée."
+    },
+    "copy": {
+      "title": "Stratégie d'inscription de copie"
+    },
+    "edit": {
+      "title": "Modifier la stratégie d'inscription",
+      "successMessage": "La stratégie a été mise à jour."
+    },
+    "assignments": {
+      "add": "Ajouter un utilisateur ou un groupe",
+      "name": "Nom",
+      "email": "E-mail"
+    },
+    "delete": {
+      "title": "confirmation de suppression",
+      "content": "Voulez-vous supprimer la stratégie {{profile}}?",
+      "note": "Vous devez supprimer tous les utilisateurs et groupes associés à une stratégie avant de la supprimer.",
+      "successMessage": "La stratégie a été supprimée."
+    },
+    "form": {
+      "generalInfo": "Informations générales",
+      "name": "Nom*",
+      "description": "Description",
+      "email": "E-mail",
+      "mobileTab": "Mobile",
+      "gatewayTab": "Bureau Gateway",
+      "allowedPlatforms": "Plateformes autorisées",
+      "mobileIos": "iOS",
+      "mobileAndroid": "Android",
+      "desktopWin": "Fenêtres",
+      "desktopMac": "macOS",
+      "required": "Ce champ est obligatoire.",
+      "nameExists": "Une stratégie portant ce nom existe déjà.",
+      "subject": "Sujet*",
+      "message": "Message*",
+      "mobileWelcomeLabel": "E-mail de bienvenue UES Mobile",
+      "desktopWelcomeLabel": "E-mail de bienvenue",
+      "settings": "Paramètres"
+    },
+    "unsaved": {
+      "title": "Modifications non enregistrées",
+      "content": "Voulez-vous quitter cette page? Vos modifications n'ont pas été enregistrées.",
+      "submit": "Quitter la page"
+    },
+    "editResendEmailConfirmation": {
+      "title": "Renvoyer un e-mail aux utilisateurs",
+      "content": "Voulez-vous renvoyer l'e-mail de bienvenue?"
+    },
+    "assignCreatedPolicyConfirmation": {
+      "title": "Attribuer la stratégie d'inscription",
+      "description": "La stratégie a été créée. Voulez-vous attribuer des utilisateurs ou des groupes à cette stratégie?",
+      "notNow": "Pas maintenant"
+    }
+  },
+  "addGroup": "Ajouter un groupe",
+  "addDirectoryGroup": "Ajouter un groupe de répertoires",
+  "addLocalGroup": "Ajouter un groupe local",
+  "alerts": {
+    "title": "Passerelle",
+    "table": {
+      "title": "Alertes"
+    },
+    "gatewayAlertTitle": "Alertes",
+    "gatewayNetworkBehaviorAlertTitle": "Alertes de comportement réseau",
+    "mtdPageTitle": "Alertes Protect Mobile"
+  },
+  "bcn": {
+    "generate": {
+      "pageTitle": "Ajouter un nœud de connectivité BlackBerry",
+      "title": "Installer un BlackBerry Connectivity",
+      "bcnStep1Title": "Étape 1: Téléchargez et installez BlackBerry Connectivity Node",
+      "bcnStep2Title": "Étape 2: Générez et téléchargez le fichier d'activation",
+      "bcnStep2Description": "Générez les informations d'identification d'activation pour activer la communication entre BlackBerry Connectivity Node et BlackBerry UES. Les informations d'identification d'activation ne peuvent être utilisées qu'une seule fois et sont valides pendant 60 minutes après leur création.",
+      "bcnStep3Title": "Étape 3: Installation et configuration de BlackBerry Connectivity Node",
+      "bcnStep3Description": "Exécutez l'application de configuration BlackBerry UES avec l'option BlackBerry Connectivity Node. Une fois le processus d'installation terminé, ouvrez et configurez BlackBerry Connectivity Node."
+    },
+    "table": {
+      "serverName": "Nom du serveur",
+      "activationDate": "Date d'activation",
+      "service": "Service",
+      "status": "Statut",
+      "version": "Version",
+      "tableDescription": "",
+      "removeServer": "Supprimer le serveur",
+      "removePopperText": "Voulez-vous supprimer le serveur {{serverName}}?",
+      "infrastructureStatus": "État de l'infrastructure: {{numberOfActiveConnections}} sur {{numberOfConnections}} actif",
+      "emptyMessage": "Cliquez sur + pour ajouter des éléments.",
+      "emptyServices": "Aucune donnée",
+      "description": "Ajoutez et gérez des instances locales de BlackBerry Connectivity Node. Vous devez installer un BlackBerry Connectivity Node pour ajouter des connexions à un annuaire Microsoft Active Directory ou LDAP local. Après avoir ajouté des connexions à un annuaire local, configurez les paramètres de synchronisation et d'intégration pour l'annuaire dans les paramètres de connexion à l'annuaire.",
+      "buttons": {
+        "add": "Ajouter un nœud de connectivité",
+        "settings": "Paramètres"
+      },
+      "actions": {
+        "deleteButtonLabel": "Supprimer le BlackBerry Connectivity"
+      },
+      "delete": {
+        "title": "Confirmez la suppression.",
+        "description": "Cette action supprimera ce BlackBerry Connectivity Node.",
+        "content": "Voulez-vous supprimer {{name}}?"
+      },
+      "serviceStatus": {
+        "paused": "Pause",
+        "running": "En cours d'exécution"
+      }
+    },
+    "settings": {
+      "pageTitle": "Modifier les paramètres du nœud de connectivité",
+      "pageViewTitle": "Afficher les paramètres du nœud de connectivité",
+      "title": "Journalisation des nœuds de connectivité",
+      "bcnLoggingDescription": "Spécifiez le niveau de journalisation, les informations Syslog et les informations sur les fichiers locaux pour les événements BlackBerry Connectivity Node.",
+      "debugLevelInput": "niveaux de débogage du serveur",
+      "validation": {
+        "emptyField": "{{fieldName}} est obligatoire.",
+        "outOfRange": "La valeur doit être comprise entre {{min}} et {{max}}.",
+        "invalidField": "{{fieldName}} n'est pas valide.",
+        "noNumbers": "{{fieldName}} ne peut pas contenir de chiffres."
+      },
+      "debugLevels": {
+        "error": "Erreur",
+        "warn": "Avertir",
+        "info": "Info",
+        "debug": "Débogage",
+        "trace": "Trace"
+      },
+      "helperText": {
+        "host": "Spécifiez l'URL du serveur SysLog.",
+        "port": "Spécifiez le port du serveur SysLog.",
+        "maximumLogFileSize": "Spécifiez, en Mo, la taille maximale du fichier journal.",
+        "maximumServerLogFileAge": "Spécifiez, en jours, l'âge maximal du fichier journal du serveur."
+      },
+      "serverLogDebugLevels": "Niveau de débogage du journal du serveur",
+      "sysLog": "SysLog",
+      "host": "Hôte",
+      "port": "Port",
+      "enableLocalFileDestination": "Activer la destination des fichiers locaux",
+      "maximumLogFileSize": "Taille maximale du fichier journal",
+      "maximumServerLogFileAge": "Age maximal des fichiers journaux du serveur",
+      "enableLoggingFolderCompression": "Activer la compression des dossiers de journalisation",
+      "pageDetailsTitle": "Détails sur BlackBerry Connectivity"
+    },
+    "errors": {
+      "errorGettingBCN": "Connexion à BlackBerry Connectivity Node impossible.",
+      "errorDeletingBCN": "Le BlackBerry Connectivity Node n'a pas pu être supprimé.",
+      "errorGettingBCNSettings": "Le BlackBerry Connectivity Node n'a pas pu être récupéré.",
+      "errorUpdatingSettings": "Impossible de mettre à jour les paramètres de BlackBerry Connectivity Node."
+    },
+    "success": {
+      "delete": "Le nœud BlackBerry Connectivity a été supprimé."
+    }
+  },
+  "genericErrorMessage": "Une erreur est survenue. Veuillez réessayer.",
+  "noPermission": "Autorisation refusée",
+  "noAccessMessage": "Vous n'êtes pas autorisé à consulter cette ressource.",
+  "SettingsLabel": "Paramètres",
+  "activationSettings": {
+    "title": {
+      "settings": "Paramètres",
+      "activation": "Activation"
+    },
+    "subTitle": "Paramètres d'activation",
+    "passcodeTtl": {
+      "label": "Expiration du",
+      "helpLabel": "Spécifiez, en jours, la date d'expiration du mot de passe d'activation. La période d'expiration doit être comprise entre {{min}} et {{max}} jours.",
+      "error": {
+        "required": "Ce champ est obligatoire.",
+        "outOfRange": "La valeur doit être comprise entre {{min}} et {{max}}."
+      }
+    },
+    "success": {
+      "update": "Les paramètres d'activation ont été mis à jour."
+    },
+    "error": {
+      "errorGettingPasscodeTtl": "Les paramètres d'activation n'ont pas pu être récupérés.",
+      "errorUpdatingPasscodeTtl": "Les paramètres d'activation n'ont pas pu être mis à jour."
+    }
+  },
+  "message": {
+    "requestAccepted": "Le traitement de votre demande en arrière-plan peut prendre un certain temps. Vous pouvez quitter cette page."
+  },
+  "companyDirectoryConnectionDetails": "Détails de connexion au répertoire de l'entreprise"
+}

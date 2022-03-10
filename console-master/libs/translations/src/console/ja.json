@@ -1,0 +1,35 @@
+{
+  "common": {
+    "settings": "設定"
+  },
+  "authentication": {
+    "title": "認証"
+  },
+  "adaptiveSecurity": {
+    "title": "適応型セキュリティ",
+    "definedGeozones": {
+      "title": "定義済みジオゾーン"
+    },
+    "behavioralRisk": {
+      "title": "行動リスクモデルの設定"
+    },
+    "generalSettings": {
+      "title": "一般設定"
+    }
+  },
+  "directoryConnections": {
+    "title": "ディレクトリ接続",
+    "connections": {
+      "title": "ディレクトリ接続"
+    },
+    "connectivityNode": {
+      "title": "Connectivity Node"
+    }
+  },
+  "network": {
+    "title": "ネットワーク"
+  },
+  "protectGlobalListNew": {
+    "title": "グローバルリスト (モバイル)"
+  }
+}

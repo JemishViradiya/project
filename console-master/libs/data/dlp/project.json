@@ -1,0 +1,31 @@
+{
+  "root": "libs/data/dlp",
+  "sourceRoot": "libs/data/dlp/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/dlp/**/*.js",
+          "libs/data/dlp/**/*.jsx",
+          "libs/data/dlp/**/*.ts",
+          "libs/data/dlp/**/*.tsx",
+          "libs/data/dlp/**/*.spec.ts",
+          "libs/data/dlp/**/*.spec.tsx",
+          "libs/data/dlp/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/dlp/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/libs/data/dlp"]
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

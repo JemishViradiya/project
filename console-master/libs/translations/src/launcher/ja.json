@@ -1,0 +1,8 @@
+{
+  "sessionExpiredTitle": "セッションの有効期限切れ",
+  "sessionExpiredMessage": "セッションの有効期限が切れました。",
+  "help": "助けて",
+  "tenant": "テナント",
+  "sessionStartTitle": "サインイン",
+  "sessionStartAction": "サインイン"
+}

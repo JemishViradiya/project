@@ -1,0 +1,22 @@
+{
+  "root": "partials/mtd/compliance",
+  "sourceRoot": "partials/mtd/compliance/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/mtd/compliance/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/mtd/compliance"],
+      "options": {
+        "jestConfig": "partials/mtd/compliance/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:partial", "scope:mtd"]
+}

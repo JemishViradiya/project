@@ -1,0 +1,39 @@
+{
+  "root": "libs/data/platform",
+  "sourceRoot": "libs/data/platform/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/platform/**/*.js",
+          "libs/data/platform/**/*.jsx",
+          "libs/data/platform/**/*.ts",
+          "libs/data/platform/**/*.tsx",
+          "libs/data/platform/**/*.spec.ts",
+          "libs/data/platform/**/*.spec.tsx",
+          "libs/data/platform/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/platform/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/libs/data/platform"]
+    },
+    "test-pact": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/platform/jest.config.pact.js",
+        "runInBand": true
+      },
+      "outputs": ["test-results/libs/data/platform-pact"]
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

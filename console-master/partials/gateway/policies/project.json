@@ -1,0 +1,25 @@
+{
+  "root": "partials/gateway/policies",
+  "sourceRoot": "partials/gateway/policies/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/gateway/policies/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/gateway/policies"],
+      "options": {
+        "jestConfig": "partials/gateway/policies/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  },
+  "tags": ["scope:partial", "scope:gateway"]
+}

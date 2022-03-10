@@ -1,0 +1,16 @@
+.list-row {
+  margin: 18px 0;
+  > p {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    color: #5c5d66;
+    letter-spacing: 0;
+    line-height: 20px;
+    width: 30%;
+  }
+  > p:last-child {
+    margin-top: -5px;
+    width: 70%;
+  }
+}

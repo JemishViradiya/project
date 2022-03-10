@@ -1,0 +1,38 @@
+@import '../theme/theme.less';
+@import './MapCommon.module.less';
+
+.buttons {
+  position: absolute;
+  top: @inputTop;
+  left: calc(@inputLeft + @searchWidth + 16px);
+}
+
+.button {
+  height: @inputHeight;
+  width: 40px;
+  border: 1px solid @colorButtonBorder;
+  display: inline-flex;
+  background: @backgroundLight;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: .mui.palette[ @text-primary];
+  opacity: 0.85;
+
+  &:hover {
+    color: @colorLink;
+  }
+}
+
+.button + .button {
+  border-left: none;
+}
+
+.icon {
+  font-size: @fontSizeIcon;
+  pointer-events: none;
+}
+
+.selected {
+  color: @colorLink;
+}

@@ -1,0 +1,322 @@
+@import '../../theme/theme.less';
+
+@scrollbar-padding: 25px;
+
+.autosizeWrapper {
+  flex: 1 1 auto;
+}
+
+.table {
+  width: 100%;
+  outline: none;
+  border: 1px solid @tableBorder;
+  box-sizing: content-box;
+  composes: .mui.typography[ @body2];
+}
+
+.grid {
+  outline: none;
+}
+
+.headerColumn {
+  text-align: left;
+  text-transform: none;
+  outline: none;
+  padding: 10px 0;
+  border-right: 2px solid .mui.palette[ @divider];
+  color: .mui.palette[ @text-primary];
+}
+
+.headerColumn:last-of-type {
+  border-right: none;
+  padding-right: 10px;
+}
+
+.headerCell {
+  outline: none;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+
+  .headerLabel {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    margin-right: 5px;
+  }
+
+  .sortIndicator {
+    text-align: right;
+    margin-right: 20px;
+  }
+}
+
+.headerRow {
+  border-bottom: 1px solid .mui.palette[ @divider];
+  padding-right: 20px;
+  margin-bottom: 2px;
+  outline: none;
+  composes: .mui.typography[ @h5];
+  color: @colorFont;
+  background-color: .mui.palette[ @background-body];
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+
+  &.withScrollbar {
+    .headerColumn:last-of-type {
+      padding-right: @scrollbar-padding;
+    }
+
+    &.checkList .headerColumnChecklist .headerCell {
+      padding-right: @scrollbar-padding;
+    }
+  }
+
+  &.checkList {
+    cursor: pointer;
+    margin-bottom: unset;
+    text-transform: unset;
+    font-size: unset;
+    font-weight: unset;
+    padding-right: unset;
+    background-color: @backgroundDefault;
+
+    :global(.ReactVirtualized__Table__headerColumn:first-of-type) {
+      margin-right: 0;
+    }
+  }
+
+  &.innerHeader {
+    width: 100%;
+    height: 100%;
+    background-color: @backgroundDefault;
+
+    &.checkList {
+      &:hover {
+        background-color: @tableHighlight;
+      }
+    }
+  }
+}
+
+.row {
+  text-align: left;
+  cursor: pointer;
+
+  &.checkList {
+    :global(.ReactVirtualized__Table__rowColumn:first-of-type) {
+      margin-right: 0;
+    }
+
+    :global(.ReactVirtualized__Table__rowColumn:last-of-type) {
+      padding-right: 10px;
+    }
+  }
+
+  &.checkList.withScrollbar {
+    :global(.ReactVirtualized__Table__rowColumn:last-of-type) {
+      padding-right: @scrollbar-padding;
+    }
+  }
+}
+
+.evenRow {
+  background-color: @tableEvenBackground;
+}
+
+.oddRow {
+  background-color: @tableOddBackground;
+}
+
+.evenRow,
+.oddRow {
+  color: @colorFont;
+
+  &:hover {
+    background-color: @tableHighlight;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.hover,
+.selected {
+  outline: none;
+}
+
+.hover {
+  background-color: @tableHighlight;
+}
+
+.selected {
+  background-color: @tableSelected;
+}
+
+.noRowClick {
+  .evenRow,
+  .oddRow,
+  .hover,
+  .selected {
+    cursor: default;
+  }
+}
+
+.exampleColumn {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.listCheckbox {
+  position: absolute;
+  top: calc(50% - 18px);
+  left: 2px;
+  z-index: 0;
+}
+
+.noRows {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  color: #bdbdbd;
+}
+
+.moreColumnsIcon {
+  composes: .mui.typography[ @h1];
+}
+
+.menuContainer {
+  user-select: none;
+  font-size: @fontSizeSubtitle;
+  margin-top: 4px;
+  padding: 8px 16px;
+  border: 1px solid @colorButtonBorder;
+  background: @backgroundDefault;
+  z-index: 100;
+  box-shadow: 1px 1px 2px @colorButtonBorder;
+
+  .oneSection {
+    column-count: 1;
+  }
+
+  .allSections {
+    column-count: 2;
+  }
+
+  .section {
+    padding: 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .sectionContent {
+    display: grid;
+  }
+
+  .row {
+    height: calc(1rem + 6px);
+  }
+
+  .checkbox {
+    padding: 4px;
+  }
+
+  .label {
+    font-weight: 700;
+    text-align: left;
+    padding-top: 10px;
+    min-width: 160px;
+    display: inline-block;
+    font-size: @fontSizeSubtitle;
+    vertical-align: middle;
+    padding-bottom: 4px;
+  }
+
+  .apply {
+    font-size: @fontSizeSubtitle;
+    max-height: 30px;
+    margin: 25px 5px 5px 120px;
+    padding: 7px 22px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.count {
+  composes: .mui.typography[ @caption];
+  line-height: 1.1;
+  background: @colorFilterBackground;
+  padding: 0 2px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.bottomControls {
+  composes: .mui.typography[ @button];
+  display: flex;
+  float: right;
+  margin: 12px 9px;
+
+  .buttonLink {
+    color: @colorLink;
+    padding-top: 7px;
+    cursor: pointer;
+  }
+
+  .buttonLinkDisabled {
+    color: @colorFont;
+    padding-top: 7px;
+  }
+
+  .buttonLink + .buttonLink,
+  .buttonLink + .buttonLinkDisabled {
+    margin-left: 20px;
+  }
+
+  .buttonLink:hover {
+    text-decoration: underline;
+  }
+}
+
+.rowCounter {
+  white-space: nowrap;
+  position: absolute;
+  right: 32px;
+  top: -28px;
+  font-size: @fontSizeSubtitle;
+}
+
+.moreColumns {
+  position: -webkit-sticky;
+  position: sticky;
+  width: @tableHeaderMoreSize;
+  height: 32px;
+  top: 6px;
+  background: .mui.palette[ @background-body];
+  padding-bottom: 0;
+  padding-left: 2px;
+  margin-bottom: 4px;
+  border-left: 2px solid .mui.palette[ @divider];
+  left: 48px;
+  margin-top: -41px;
+  z-index: 1;
+  transition: color @animHoverDuration @animHoverTimingFn;
+}
+
+.moreColumns:hover {
+  color: @colorLink;
+  cursor: pointer;
+}

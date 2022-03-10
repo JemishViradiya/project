@@ -1,0 +1,48 @@
+@import '../theme/theme.less';
+
+.table {
+  composes: .mui.typography[ @body1];
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.row {
+  &:nth-child(even) {
+    background-color: @tableEvenBackground;
+  }
+
+  &:nth-child(odd) {
+    background-color: @tableOddBackground;
+  }
+
+  td {
+    height: 35px;
+    padding: 0 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.header {
+  tr th {
+    height: 35px;
+    border-bottom: 1px solid @tableBorder;
+    background-color: @tableHeaderBackground;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: @fontSizeSubtitle;
+    padding: 0 12px;
+
+    &:not(:first-child) {
+      border-left: 3px solid white;
+    }
+  }
+}
+
+.body {
+  position: relative;
+}

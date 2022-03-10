@@ -1,0 +1,29 @@
+@import '../../../theme/theme.less';
+
+.behavioral-indicator-background {
+  height: 4px;
+  background-color: #e0e0e0;
+  margin: 10px 0 4px;
+  position: relative;
+}
+
+.behavioral-indicator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 4px;
+}
+
+.risk-reduction-link {
+  align-self: flex-start;
+  color: @colorLink;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}

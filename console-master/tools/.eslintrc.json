@@ -1,0 +1,21 @@
+{
+  "extends": ["../.eslintrc.json"],
+  "ignorePatterns": ["!**/*"],
+  "env": {
+    "node": true,
+    "commonjs": true
+  },
+  "rules": {
+    "@typescript-eslint/no-var-requires": "off",
+    "sonarjs/no-duplicate-string": "off",
+    "sonarjs/cognitive-complexity": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.d.ts"],
+      "rules": {
+        "@typescript-eslint/ban-types": "off"
+      }
+    }
+  ]
+}

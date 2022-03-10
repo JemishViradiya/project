@@ -1,0 +1,114 @@
+{
+  "root": "apps/bis",
+  "sourceRoot": "apps/bis/src",
+  "projectType": "application",
+  "generators": {},
+  "targets": {
+    "build-webpack": {
+      "executor": "@nrwl/web:build",
+      "options": {
+        "baseHref": "..",
+        "deployUrl": "uc/bis/",
+        "outputPath": "dist/uc/bis",
+        "index": "tools/index.html",
+        "main": "apps/bis/src/main.tsx",
+        "polyfills": "libs/behaviour/app-shell/src/polyfills.ts",
+        "tsConfig": "apps/bis/tsconfig.app.json",
+        "assets": ["apps/bis/src/assets"],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "tools/webpack/app",
+        "maxWorkers": 1,
+        "memoryLimit": 1024
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/bis/src/environments/environment.ts",
+              "with": "apps/bis/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            }
+          ],
+          "outputPath": "prod/bis",
+          "maxWorkers": 1,
+          "memoryLimit": 2048
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "nx run bis:build-webpack",
+        "outputPath": "dist/uc/bis"
+      },
+      "configurations": {
+        "production": {
+          "command": "nx run bis:build-webpack:production && bash apps/bis/tools/scripts/change-title.sh",
+          "outputPath": "prod/bis"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "bis:build-webpack",
+        "hmr": true,
+        "ssl": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "bis:build-webpack:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/bis/**/*.js",
+          "apps/bis/**/*.jsx",
+          "apps/bis/**/*.ts",
+          "apps/bis/**/*.tsx",
+          "tools/nx/typings/image.d.ts",
+          "apps/bis/**/*.spec.ts",
+          "apps/bis/**/*.spec.tsx",
+          "apps/bis/**/*.spec.js",
+          "apps/bis/**/*.spec.jsx",
+          "apps/bis/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/bis/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/apps/bis"]
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/app.sh bis"
+      }
+    }
+  },
+  "tags": ["scope:app"],
+  "implicitDependencies": ["api", "pwa"]
+}

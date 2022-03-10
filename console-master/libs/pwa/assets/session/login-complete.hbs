@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UES Console</title>
+    <style type="text/css">
+      :focus {
+        outline: none;
+      }
+      html {
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      pre {
+        word-wrap: break-word;
+        white-space: pre-wrap;
+      }
+    </style>
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="charset" content="utf-8" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <script id="response" type="text/template">{{{response}}}</script>
+  </head>
+
+  <body>
+    <pre>{{{response}}}</pre>
+    <script type="text/javascript" async>
+      let response
+      try {
+        response = JSON.parse(document.getElementById('response').textContent)
+      } catch (error) {
+        throw error
+        // TODO: handle error
+      }
+
+      window.opener.postMessage(response, '{{{openerOrigin}}}')
+    </script>
+  </body>
+</html>

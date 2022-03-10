@@ -1,0 +1,30 @@
+@import '../theme/theme.less';
+
+.helpIcon {
+  composes: .mui.typography[ @body1];
+  display: inherit;
+  transition: color @animHoverDuration @animHoverTimingFn;
+  visibility: hidden;
+
+  &:hover {
+    color: @colorLink;
+    cursor: pointer;
+  }
+}
+
+.helpTip {
+  display: inline-flex;
+  align-items: center;
+
+  &:hover .helpIcon {
+    visibility: visible;
+  }
+}
+
+.popup {
+  z-index: 1;
+}
+
+.wrappedText {
+  margin-right: 0.25em;
+}

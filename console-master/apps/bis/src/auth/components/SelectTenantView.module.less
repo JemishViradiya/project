@@ -1,0 +1,32 @@
+@import '../../theme/theme.less';
+
+.message {
+  margin: 15px 0;
+  display: block;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  padding: 10px 6px;
+}
+
+.button {
+  width: 100%;
+  border-radius: 1px;
+  user-select: none;
+  cursor: pointer;
+  white-space: nowrap;
+  border-width: 0;
+  padding: 10px;
+  margin: 8px 0;
+  transition: background-color @animHoverDuration @animHoverTimingFn, color @animHoverDuration @animHoverTimingFn;
+  background-color: @colorLink;
+  color: white;
+  font-size: 14px;
+}
+
+.loading {
+  font-size: 40px;
+}

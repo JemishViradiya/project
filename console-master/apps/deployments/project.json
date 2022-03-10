@@ -1,0 +1,95 @@
+{
+  "root": "apps/deployments",
+  "sourceRoot": "apps/deployments/src",
+  "projectType": "application",
+  "tags": ["scope:app", "scope:venue"],
+  "implicitDependencies": ["api", "pwa"],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "options": {
+        "index": "tools/index.html",
+        "generateIndexHtml": false,
+        "baseHref": "..",
+        "deployUrl": "uc/deployments/",
+        "outputPath": "dist/uc/deployments",
+        "main": "apps/deployments/src/main.tsx",
+        "polyfills": "libs/behaviour/app-shell/src/venue-polyfills.ts",
+        "tsConfig": "apps/deployments/tsconfig.app.json",
+        "assets": [],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "tools/webpack/partial-venue",
+        "maxWorkers": 1,
+        "memoryLimit": 1024
+      },
+      "configurations": {
+        "production": {
+          "outputPath": "prod/deployments",
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            }
+          ],
+          "maxWorkers": 1,
+          "memoryLimit": 2048
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "deployments:build",
+        "hmr": true,
+        "ssl": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "deployments:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/deployments/**/*.js",
+          "apps/deployments/**/*.jsx",
+          "apps/deployments/**/*.ts",
+          "apps/deployments/**/*.tsx",
+          "tools/nx/typings/image.d.ts",
+          "apps/deployments/**/*.spec.ts",
+          "apps/deployments/**/*.spec.tsx",
+          "apps/deployments/**/*.spec.js",
+          "apps/deployments/**/*.spec.jsx",
+          "apps/deployments/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/deployments/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/apps/deployments"]
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/venue-partial.sh deployments"
+      }
+    }
+  }
+}

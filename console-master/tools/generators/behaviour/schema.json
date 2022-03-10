@@ -1,0 +1,15 @@
+{
+  "$id": "behaviour",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Behaviour name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    }
+  },
+  "required": ["name"]
+}

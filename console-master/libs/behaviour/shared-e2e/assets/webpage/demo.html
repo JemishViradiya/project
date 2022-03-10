@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>UI Demo Test</title>
+  </head>
+
+  <body>
+    <h1 class="pageTitle">Welcome To Demo Testing Page!!!</h1>
+    <script type="text/javascript" src="/scripts/script.js"></script>
+    <nav>
+      <button role="button" class="tablink" onclick="openPage('Elements', this, 'green')">Form</button>
+      <button role="button" class="tablink" onclick="openPage('Table', this, 'green')" id="defaultOpen">Table</button>
+      <button role="button" class="tablink" onclick="openPage('Contact', this, 'green')">Contact</button>
+      <button role="button" class="tablink" onclick="openPage('About', this, 'green')">About</button>
+    </nav>
+    <div id="Elements" class="tabcontent">
+      <div class="elementPanel">
+        <h2>Fill In Details and click Submit</h2>
+        <div id="userNameWrapper">
+          <div>
+            <label>
+              <div class="labelText">Full Name</div>
+              <input placeholder="Full Name" type="text" id="userName" class="singleLineTextbox" />
+            </label>
+          </div>
+        </div>
+        <br />
+        <div id="userEmailWrapper">
+          <div>
+            <label>
+              <div class="labelText">Email</div>
+              <input placeholder="name@example.com" type="email" id="userEmail" class="singleLineTextbox" />
+            </label>
+          </div>
+        </div>
+        <br />
+        <div>
+          <label>
+            <div class="labelText">
+              Mobile
+              <small> (10 Digits) </small>
+            </div>
+            <input required="" type="text" id="userNumber" class="singleLineTextbox" />
+          </label>
+        </div>
+        <br />
+        <div>
+          <div class="labelText">Gender</div>
+          <input name="gender" required="" type="radio" id="gender-radio-1" value="Male" />
+          <label for="gender-radio-1">Male</label>
+          <input name="gender" required="" type="radio" id="gender-radio-2" value="Female" />
+          <label for="gender-radio-2">Female</label>
+          <input name="gender" required="" type="radio" id="gender-radio-3" value="Other" />
+          <label for="gender-radio-3">Other</label>
+        </div>
+        <br />
+        <div>
+          <span>
+            <label class="labelText">Date of Birth</label>
+            <input type="text" id="dateOfBirthInput" value="07 Oct 2021" />
+          </span>
+        </div>
+        <br />
+        <div id="hobbiesWrapper">
+          <div>
+            <label class="labelText" id="subjects-label">Hobbies</label>
+            <input type="checkbox" id="hobbies-checkbox-1" value="1" />
+            <label for="hobbies-checkbox-1">Playing Games</label>
+            <input type="checkbox" id="hobbies-checkbox-2" value="2" />
+            <label for="hobbies-checkbox-2">Reading</label>
+            <input type="checkbox" id="hobbies-checkbox-3" value="3" />
+            <label for="hobbies-checkbox-3">Music</label>
+            <input type="checkbox" id="hobbies-checkbox-4" value="4" />
+            <label for="hobbies-checkbox-4">Dancing</label>
+          </div>
+        </div>
+        <br />
+        <div>
+          <div>
+            <label class="labelText" for="Country">Country</label>
+            <select name="Country" class="comboBox" onChange="changestate(this.value);" id="Country">
+              <option value="Select" selected>Select</option>
+              <option value="Australia">Australia</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Columbia">Columbia</option>
+              <option value="India">India</option>
+              <option value="UnitedStatesOfAmerica">United States Of America</option>
+            </select>
+          </div>
+          <br />
+          <div>
+            <label class="labelText" for="States">State</label>
+            <select name="State" class="comboBox" id="States">
+              <option value="" disabled selected>Select</option>
+            </select>
+          </div>
+        </div>
+        <br />
+        <div>
+          <button id="submit" type="button" class="btn">Submit</button>
+        </div>
+      </div>
+      <div class="alert success">
+        <span class="closebtn">&times;</span>
+        <strong>Success!</strong>Indicates a successful or positive action.
+      </div>
+      <div class="alert failure">
+        <span class="closebtn">&times;</span>
+        <strong>Failure!</strong>Details couldn't be saved.
+      </div>
+    </div>
+    <div id="Table" class="tabcontent">
+      <h3>List Of Policy Names</h3>
+      <p></p>
+    </div>
+    <div id="Contact" class="tabcontent">
+      <h3>Contact</h3>
+      <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+    <div id="About" class="tabcontent">
+      <h3>About</h3>
+      <p>Who we are and what we do.</p>
+    </div>
+  </body>
+</html>

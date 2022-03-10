@@ -1,0 +1,7 @@
+{
+  "loading": "Wird geladen...",
+  "signInLink": "Klicke hier, um dich erneut anzumelden.",
+  "loginFailed": "Die Anmeldung ist fehlgeschlagen",
+  "logoutFailed": "Abmeldung ist fehlgeschlagen",
+  "errorMessage": "Ihre Anfrage konnte nicht abgeschlossen werden."
+}

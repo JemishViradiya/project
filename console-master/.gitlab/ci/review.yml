@@ -1,0 +1,119 @@
+## Review
+.review:
+  image: registry.rim.net/iac/ci-build-pipeline:loki-aws
+  needs:
+    - job: build
+      artifacts: true
+    - job: storybook
+      artifacts: true
+    - job: dep-graph
+      artifacts: true
+  stage: review
+  resource_group: review_$CI_COMMIT_REF_SLUG
+  environment:
+    name: sites/$CI_COMMIT_REF_SLUG
+    url: https://ues-console-sites.sw.rim.net/s3/console/sites/$CI_COMMIT_REF_SLUG/index.html
+    auto_stop_in: 14 days
+    on_stop: stop_review
+  variables:
+    S3_TARGET_ENV: sites/$CI_COMMIT_REF_SLUG
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID_lab}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY_lab}
+    S3_BUCKET: ues-console-sites
+    DEPLOY_FLAGS_SYNC: --size-only
+  before_script:
+    - env
+  script:
+    - make all-review
+  retry:
+    max: 2
+    when:
+      - runner_system_failure
+      - stuck_or_timeout_failure
+
+.stop_review:
+  image: registry.rim.net/iac/ci-build-pipeline:loki-slim
+  stage: cleanup
+  needs: []
+  variables:
+    GIT_STRATEGY: none
+  environment:
+    name: sites/$CI_COMMIT_REF_SLUG
+    action: stop
+  before_script:
+    - env
+    - |
+      [ "$CI_DISPOSABLE_ENVIRONMENT" == "true" ] || exit 101
+    - |
+      ENVIRONMENT_ID=$(curl -s -H "PRIVATE-TOKEN: $CI_DEPLOYBOT_TOKEN" -X GET ${CI_API_V4_URL}/projects/$CI_PROJECT_ID/environments?states=available&name=${CI_ENVIRONMENT_NAME} | jq '.[0].id')
+      [ -n "$ENVIRONMENT_ID" ] || exit 201
+      echo "Environment $CI_ENVIRONMENT_NAME (id=$ENVIRONMENT_ID)"
+  script:
+    - echo "Removing environment $ENVIRONMENT_ID"
+  after_script:
+    - |
+      curl -s -w "%{http_code}" -H "PRIVATE-TOKEN: $CI_DEPLOYBOT_TOKEN" -X DELETE "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/environments/${ENVIRONMENT_ID}"
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_MERGE_REQUEST_IID
+      when: manual
+      allow_failure: true
+    - if: $CI_COMMIT_BRANCH =~ /^epic\//
+      when: manual
+
+## Stage
+# Deploy Reviews
+.stage:
+  image: registry.rim.net/iac/ci-build-pipeline:loki-aws
+  needs:
+    - job: build
+      artifacts: true
+  stage: review
+  resource_group: stage_$CI_COMMIT_REF_SLUG
+  environment:
+    name: staging/$CI_COMMIT_REF_SLUG
+    url: https://qa2-protect.cylance.com/uc/.stage/$CI_COMMIT_REF_SLUG/uc/dashboard
+    auto_stop_in: 14 days
+    on_stop: stop_stage
+  variables:
+    S3_TARGET_ENV: staging/uc/.stage/$CI_COMMIT_REF_SLUG
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID_staging}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY_staging}
+    S3_BUCKET: ues-qa2.cs.labs.blackberry.com
+    # DEPLOY_FLAGS: --s3-flags
+  before_script:
+    - env
+  script:
+    - if [ -z "$AFFECTED" ] ; then echo "No reviews to publish" >&2 ; exit 121 ; fi
+    - make all-stage
+    - |
+      echo "Integrated into $CI_COMMIT_BRANCH branch as ${CI_COMMIT_SHORT_SHA} and deployed to [$CI_ENVIRONMENT_NAME]"'('"$CI_ENVIRONMENT_URL"')
+
+      '> COMMENT.txt
+    - |
+      bash .gitlab/ci/scripts/changelog.sh | tee CHANGELOG.txt
+    - |
+      [ "$CI_EPIC_BRANCH" != "true" ] || bash .gitlab/ci/scripts/deployment-mr-comment.sh COMMENT.txt $CI_DEPLOYBOT_TOKEN
+  retry:
+    max: 2
+    when:
+      - runner_system_failure
+      - stuck_or_timeout_failure
+
+.stop_stage:
+  extends: .stop_review
+  stage: cleanup
+  environment:
+    name: staging/$CI_COMMIT_REF_SLUG
+    action: stop
+  script:
+    - echo "nothing to do here yet"
+  rules:
+    - if: $CI_TRIGGER_TARGET != 'none'
+      when: never
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == 'production'
+      when: never
+    - if: $CI_MERGE_REQUEST_IID
+      when: manual
+      allow_failure: true

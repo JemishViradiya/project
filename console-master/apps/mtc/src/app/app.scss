@@ -1,0 +1,366 @@
+@import '../styles/colors';
+@import '../styles/utility';
+@import '../styles/fonts';
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+::-ms-clear {
+  display: none;
+}
+// Remove MS specific clear button on input fields
+
+.group:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+body {
+  min-height: 100%;
+}
+
+.ui.loader {
+  background: transparent;
+}
+.ui.dropdown {
+  font-weight: 400;
+}
+
+html,
+#app,
+#app > div,
+.auth-container {
+  height: 100%;
+}
+
+body,
+html {
+  margin: 0;
+  background-color: #f3f3f3 !important;
+  color: #5c5d66;
+}
+
+body {
+  font-size: 16px;
+  display: block;
+  overflow-y: scroll;
+}
+
+.heading-four-box {
+  background: $dove-grey;
+  padding: 15px;
+}
+
+h1 {
+  color: $dove-grey;
+  font-size: 36px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: $dove-grey;
+  font-size: 28px;
+  text-align: left;
+}
+
+h3 {
+  color: $dove-grey;
+  font-size: 20px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 16px;
+  text-align: center;
+
+  &.active {
+    color: $ui-slate-gray;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $bg-silver;
+  }
+
+  &.selected,
+  &:active {
+    color: $cylance-white;
+  }
+
+  &:hover,
+  &.hover {
+    color: $ui-sea-buckthorn;
+  }
+}
+
+h5 {
+  color: $mine-shaft;
+  font-size: 14px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+h6 {
+  color: $dove-grey;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+a {
+  font-size: 12px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+footer h1,
+header h1 {
+  margin: 0;
+}
+
+.main-container {
+  padding-right: 50px;
+  padding-left: 116px;
+  margin-top: 88px;
+  .main-content {
+    min-height: 800px;
+    padding-top: 30px;
+  }
+}
+[id^='__lpform'] {
+  display: none !important;
+}
+
+.page-header-container + div {
+  .table-utility + div {
+    border: 1px solid #cdd0db;
+  }
+}
+
+.fields.error .field textarea,
+.fields.error .field select,
+.fields.error .field input:not([type]),
+.fields.error .field input[type='date'],
+.fields.error .field input[type='datetime-local'],
+.fields.error .field input[type='email'],
+.fields.error .field input[type='number'],
+.fields.error .field input[type='password'],
+.fields.error .field input[type='search'],
+.fields.error .field input[type='tel'],
+.fields.error .field input[type='time'],
+.fields.error .field input[type='text'],
+.fields.error .field input[type='file'],
+.fields.error .field input[type='url'],
+.field.error textarea,
+.field.error select,
+.field.error input:not([type]),
+.field.error input[type='date'],
+.field.error input[type='datetime-local'],
+.field.error input[type='email'],
+.field.error input[type='number'],
+.field.error input[type='password'],
+.field.error input[type='search'],
+.field.error input[type='tel'],
+.field.error input[type='time'],
+.field.error input[type='text'],
+.field.error input[type='file'],
+.field.error input[type='url'] {
+  background: #fff;
+  border: 1px solid #e66a5e;
+  &::-webkit-input-placeholder {
+    color: rgba(191, 191, 191, 0.87);
+  }
+}
+
+.fields.error .field .ui.dropdown,
+.fields.error .field .ui.dropdown .item,
+.field.error .ui.dropdown,
+.field.error .ui.dropdown .text,
+.field.error .ui.dropdown .item {
+  background: #fff;
+  color: #e66a5e;
+}
+
+.fields.error .listbox {
+  border: 1px solid #e66a5e;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 15px;
+  &.label > span {
+    top: 63px;
+  }
+  > span,
+  .ui.input > span,
+  .ui.input > div > span {
+    display: none;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 100%;
+    background: #e66a5e;
+    color: #fff;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    &.error-visible,
+    &.error {
+      display: block;
+    }
+  }
+  .ui.input input {
+    border-radius: 0;
+    outline: none;
+  }
+}
+
+.ui.input,
+.ui.input > *,
+.input-container input {
+  border-radius: 0 !important;
+}
+
+.ui.selection.dropdown > .dropdown.icon {
+  font-size: 21px;
+  right: 16px;
+  top: 6px;
+}
+
+.ui.radio.checkbox label {
+  color: #5c5d66;
+  height: 24px;
+  padding-top: 5px;
+  padding-left: 32px;
+  &:before {
+    width: 24px;
+    height: 24px;
+  }
+  &:after {
+    width: 12px;
+    height: 12px;
+    top: 7px;
+    left: 6px;
+    font-size: 12px;
+    color: #5c5d66;
+    transform: none !important;
+  }
+}
+
+.radio-row {
+  .field {
+    padding: 0;
+    margin-right: 16px !important;
+  }
+}
+
+.ui.disabled {
+  background: #f5f5f6;
+  color: #babbc0;
+  border: 1px solid #cdd0db;
+  opacity: 1;
+}
+
+.MuiDialog-paperWidthSm {
+  max-width: initial;
+}
+
+.ui.modal {
+  padding: 40px;
+  width: 640px;
+  margin: 0em 0em 0em -320px;
+  .header {
+    padding: 0;
+    border-bottom: 0;
+    height: auto;
+    margin-bottom: 20px;
+    &:after {
+      display: none;
+    }
+    h3 {
+      display: inline;
+      color: #5c5d66;
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 500;
+      opacity: 0.9;
+      text-transform: capitalize;
+    }
+    .icon-times {
+      float: right;
+      color: #5c5d66;
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 500;
+      opacity: 0.9;
+      &:hover {
+        color: #e66a5e;
+      }
+    }
+  }
+  .content {
+    padding: 0;
+    p {
+      font-size: 14px;
+      color: #5c5d66;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  .actions {
+    padding: 0;
+    border-top: 0;
+    background: #fff;
+  }
+}
+
+.grid-button-group {
+  display: inline-block;
+  button {
+    height: 40px;
+    &:last-child {
+      margin-left: 16px;
+    }
+  }
+}
+
+.data-grid-utility > .ui.button {
+  height: 40px;
+  margin-right: 16px;
+}
+
+.utility-link {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.MuiTooltip-tooltip {
+  font-size: 14px;
+}
+
+.MuiMenuItem-root,
+.MuiFormLabel-root,
+.MuiTypography-body1,
+.MuiTypography-body2 {
+  font-family: 'Open Sans', sans-serif !important;
+}

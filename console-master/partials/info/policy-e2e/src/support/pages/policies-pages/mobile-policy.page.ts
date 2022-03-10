@@ -1,0 +1,33 @@
+import { CONFIG_TYPE } from '@ues-data/dlp/mocks'
+
+import { BasePage } from '../base.page'
+
+const visit = () => I.visit(MobilePolicy.hash)
+
+const names = n => I.translate(`${BasePage.BASE_FLAGS.SECTIONS}.sparkMobileSettings.policyConfigNames.${n}`)
+
+const NAMES_CHECKBOXES = () => ({
+  ALLOW_COPY_BB_APPS_INTO_NON_BB_APPS:
+    CONFIG_TYPE.CONFIG_TYPE_ALLOW_COPY_BB_APPS_INTO_NON_BB_APPS + ' ' + names('CONFIG_TYPE_ALLOW_COPY_BB_APPS_INTO_NON_BB_APPS'),
+  ALLOW_COPY_NON_BB_APPS_INTO_BB_APPS:
+    CONFIG_TYPE.CONFIG_TYPE_ALLOW_COPY_NON_BB_APPS_INTO_BB_APPS + ' ' + names('CONFIG_TYPE_ALLOW_COPY_NON_BB_APPS_INTO_BB_APPS'),
+  ALLOW_DICTATION: CONFIG_TYPE.CONFIG_TYPE_ALLOW_DICTATION + ' ' + names('CONFIG_TYPE_ALLOW_DICTATION'),
+  ALLOW_INSECURE_VIDEO: CONFIG_TYPE.CONFIG_TYPE_ALLOW_INSECURE_VIDEO + ' ' + names('CONFIG_TYPE_ALLOW_INSECURE_VIDEO'),
+  ALLOW_SCREEN_RECORDING: CONFIG_TYPE.CONFIG_TYPE_ALLOW_SCREEN_RECORDING + ' ' + names('CONFIG_TYPE_ALLOW_SCREEN_RECORDING'),
+  ALLOW_KEYBOARDS: CONFIG_TYPE.CONFIG_TYPE_ALLOW_KEYBOARDS + ' ' + names('CONFIG_TYPE_ALLOW_KEYBOARDS'),
+  ADD_WATERMARK: CONFIG_TYPE.CONFIG_TYPE_ADD_WATERMARK + ' ' + names('CONFIG_TYPE_ADD_WATERMARK'),
+  ALLOW_RESTRICTED_MODE: CONFIG_TYPE.CONFIG_TYPE_ALLOW_RESTRICTED_MODE + ' ' + names('CONFIG_TYPE_ALLOW_RESTRICTED_MODE'),
+})
+
+const getPolicyNameField = () => BasePage.getTextFieldByName(BasePage.ARIA_LABELS.POLICY_NAME)
+
+const getDescriptionField = () => BasePage.getTextFieldByName(BasePage.ARIA_LABELS.DESCRIPTION)
+
+export const MobilePolicy = {
+  hash: '#/mobile/create',
+  visit,
+  NAMES_CHECKBOXES,
+  getPolicyNameField,
+  getDescriptionField,
+  ...BasePage,
+}

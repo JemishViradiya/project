@@ -1,0 +1,8 @@
+{
+  "selectAtLeastOneValue": "하나 이상의 값을 선택합니다.",
+  "emptyField": "{{fieldName}} 이 (가) 필요합니다.",
+  "outOfRange": "값은 {{min}} ~ {{max}} 사이여야 합니다.",
+  "invalidField": "{{fieldName}} 이 (가) 잘못되었습니다.",
+  "noNumbers": "{{fieldName}} 은 (는) 숫자를 포함할 수 없습니다.",
+  "maxLength": "{{fieldName}} 은 {{max}} 자 이하여야 합니다."
+}

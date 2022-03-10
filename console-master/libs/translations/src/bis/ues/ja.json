@@ -1,0 +1,557 @@
+{
+  "settings": {
+    "operatingMode": {
+      "title": "動作モード",
+      "description": "動作モードを指定します。パッシブモードは、アクションを起こさずにデータを収集し、個々のユーザーのリスクモデルを構築するために使用されます。アクティブモードでは、ポリシーで定義されているレスポンスアクションが適用されます。アラートは両方の動作モードで生成されます。最初のユーザーがアダプティブレスポンスポリシーに追加されると、アダプティブレスポンスのリスクモデルのトレーニング期間が開始され、次の条件が満たされるまで続きます。ユーザーのテナントについて1000件のイベントが収集され、14日が経過します。トレーニング期間中はアラートは生成されません。",
+      "options": {
+        "ACTIVE": "アクティブモード",
+        "PASSIVE": "パッシブモード"
+      }
+    },
+    "riskEngines": {
+      "title": "アイデンティティーリスクエンジンの設定",
+      "networkAnomaly": {
+        "title": "ネットワーク異常",
+        "description": "ネットワーク異常イベントのしきい値と、それらが高リスクとクリティカルリスクのどちらとして処理されるかを指定します。ネットワーク異常イベントは、Gateway ユーザーのネットワーク使用パターンが過去の動作と一致しない場合に検出されます。",
+        "riskFactor": "ネットワーク異常リスク"
+      },
+      "tableHeader": {
+        "factor": "リスク",
+        "detection": "検出",
+        "level": "リスクレベル"
+      }
+    },
+    "ipaddresses": {
+      "trusted": "信頼できる IP アドレス",
+      "untrusted": "信頼できない IP アドレス",
+      "ipAddressConfiguration": "IP アドレスの設定",
+      "name": "表示名",
+      "detail": "ディテール",
+      "noData": "データなし",
+      "deleteItem": "アイテムを削除する",
+      "cancel": "キャンセル",
+      "delete": "削除",
+      "trustedAddModalLabel": "安全なエンドポイント IP アドレスを追加する",
+      "trustedEditModalLabel": "安全なエンドポイント IP アドレスの編集",
+      "save": "保存",
+      "errorFieldRequired": "このフィールドは、必修です。",
+      "errorInvalidName": "このフィールドは無効です。",
+      "sourceLabel": "出典",
+      "specifiedAddresses": "IP アドレス、IP 範囲、または CIDR",
+      "ipAddressesLabel": "IP アドレス、IP 範囲、または CIDR",
+      "addNew": "IP アドレスの追加",
+      "search": "検索",
+      "invalidFormat": "フォーマットが無効です。",
+      "selectedAriaLabel": "選択した IP アドレス",
+      "selectedItemsCount": "{{count}} が選択されました",
+      "untrustedAddModalLabel": "制限付きエンドポイント IP アドレスを追加する",
+      "untrustedEditModalLabel": "制限付きエンドポイント IP アドレスの編集",
+      "more": "{{count}} もっと",
+      "results": "{{count}} 結果",
+      "ipaddress": "IP アドレス",
+      "results_plural": "{{count}} 件の結果",
+      "more_plural": "{{count}} もっと",
+      "deleteDialog": {
+        "title": "削除の確認",
+        "description": "選択した IP アドレスを削除しますか?",
+        "confirmButtonLabel": "削除",
+        "cancelButtonLabel": "キャンセル"
+      },
+      "trustedModalLabel": "安全なエンドポイント IP アドレス",
+      "untrustedModalLabel": "制限付きエンドポイント IP アドレス",
+      "ipAddressesSubLabel": "IP アドレス、IP 範囲、または CIDR を入力 (1 行に 1 つ)"
+    },
+    "ipAddress": {
+      "errorAddNew": "IP アドレス一覧を追加できませんでした",
+      "errorUpdate": "IP アドレス一覧を更新できませんでした",
+      "errorDelete": "IP アドレスリストを削除できませんでした"
+    },
+    "comingSoonMessage": {
+      "title": "近日公開",
+      "description": "適応型セキュリティ設定は、UES コンソールの今後のアップデートで利用できるようになります。"
+    }
+  },
+  "gatewayAlerts": {
+    "table": {
+      "headers": {
+        "risk": "リスク",
+        "type": "タイプ",
+        "detection": "検出",
+        "response": "レスポンス",
+        "device": "デバイス",
+        "user": "ユーザー",
+        "detectionTime": "検出時間",
+        "category": "カテゴリー",
+        "identityChallenge": "アイデンティティチャレンジ"
+      },
+      "filters": {
+        "risk": "リスクフィルタ",
+        "user": "ユーザーフィルタ",
+        "detection": "検出フィルタ",
+        "detectionTime": "検出時間フィルタ"
+      },
+      "toolbar": {
+        "totalResults": "{{total}} 件の結果"
+      },
+      "columnPicker": {
+        "title": "テーブル列"
+      },
+      "noDataInTrainingMode": "アダプティブレスポンスは、次の条件が満たされるまでのトレーニング期間を使用します。ユーザーのテナントについて 1000 件のイベントが収集され、14 日が経過します。トレーニング期間中はアラートは生成されません。",
+      "noDataPlaceholder": "過去 30 日間にアラートは生成されませんでした。",
+      "noDataWithFilters": "選択したフィルタのアラートは見つかりませんでした。",
+      "noDataInTrainingModeDP": "リスク評価ポリシーでは、次の条件が満たされるまでのトレーニング期間を使用します。ユーザーのテナントについて 1000 件のイベントが収集され、14 日が経過します。トレーニング期間中はアラートは生成されません。"
+    },
+    "columns": {
+      "response": {
+        "overrideNetworkAccessPolicy": "ネットワークアクセスコントロールポリシーを上書き:{{name}}",
+        "passiveModePrefix": "アクションは実行されませんでした:{{text}}",
+        "passiveModeTooltip": "応答アクションは、パッシブモードのユーザーには適用されません。",
+        "passiveModeTooltipArr": "パッシブ動作モードがオンになっている。ID チャレンジは、パッシブ動作モードでは送信されません。",
+        "passiveModeTooltipAriaLabel": "パッシブモードの情報",
+        "challengeState": {
+          "deny": "ID チャレンジ:ユーザーによって拒否されました",
+          "failed": "ID チャレンジ:エラー-未完了",
+          "in_progress": "アイデンティティチャレンジ:進行中",
+          "no_mfa": "ID チャレンジ:ポリシーで有効になっていない",
+          "mfa_skipped": "アイデンティティチャレンジ:バイパス",
+          "ok": "アイデンティティチャレンジ:検証済み",
+          "timeout": "アイデンティティチャレンジ:タイムアウト",
+          "unknown": "ID チャレンジ:エラー-未完了",
+          "fraud": "アイデンティティチャレンジ:詐欺"
+        }
+      },
+      "detection": {
+        "networkAnomaly": "ネットワーク異常"
+      },
+      "identityChallenge": {
+        "challengeState": {
+          "deny": "ユーザーにより拒否されました",
+          "failed": "エラー-未完了",
+          "in_progress": "進行中",
+          "no_mfa": "ポリシーでは有効になっていません",
+          "mfa_skipped": "バイパス",
+          "ok": "検証済み",
+          "timeout": "タイムアウト",
+          "unknown": "エラー-未完了",
+          "fraud": "不正行為"
+        }
+      },
+      "risk": {
+        "tooltipText": "行をクリックすると、イベントの詳細が表示されます。"
+      }
+    },
+    "alert": {
+      "passiveMode": {
+        "title": "パッシブ動作モードがオン",
+        "description": "自動応答アクションは、パッシブ動作モードでは実行されません。",
+        "settingsLink": "設定"
+      }
+    }
+  },
+  "gatewayAlertDetails": {
+    "titles": {
+      "drawerTitle": "ネットワーク異常",
+      "alertOverview": "アラートの概要",
+      "affectedAssets": "影響を受ける資産",
+      "responseActions": "レスポンスアクション",
+      "risk": "リスク",
+      "responseActionsSubtitle": "<0><1>{{policyName}}</1> アダプティブレスポンスポリシーによる</0>",
+      "identityChallenge": "アイデンティティチャレンジ",
+      "eventOverview": "イベント概要"
+    },
+    "labels": {
+      "assignedPolicy": "オーバーライドされたネットワークアクセスコントロールポリシー",
+      "description": "説明",
+      "detectionTime": "検出時間",
+      "device": "デバイス",
+      "eventDetails": "イベント詳細",
+      "eventId": "イベント ID",
+      "type": "タイプ",
+      "user": "ユーザー",
+      "automaticResponseReduction": "チャレンジステータス",
+      "userHyperlink": "ユーザーの詳細に移動",
+      "deviceHyperlink": "デバイス詳細の表示"
+    },
+    "values": {
+      "networkEvent": "異常なネットワークイベントが検出されました",
+      "riskType": "アイデンティティリスク",
+      "viewDetails": "詳細を表示"
+    },
+    "actions": {
+      "noActions": "現時点ではアクションは実行されませんでした"
+    },
+    "labelGateway": "ゲートウェイ",
+    "pageTitle": "アラート",
+    "pageTitleDpActor": "ネットワーク動作アラート"
+  },
+  "risk": {
+    "common": {
+      "identityRisk": "アイデンティティリスク",
+      "identityRiskResponseActions": "アイデンティティーリスクレスポンスアクション",
+      "networkAnomaly": "ネットワーク異常",
+      "generalInfo": "一般情報",
+      "automaticRiskReduction": "自動リスク軽減",
+      "automaticRiskReductionDescription": "ユーザーが再認証して身元を確認することでリスクレベルを下げることを許可する場合は、自動リスク軽減をオンにします。自動リスク軽減を使用するには、ユーザーまたはグループに割り当てられている認証ポリシーで多要素認証を構成する必要があります。",
+      "riskChanged": "リスクレベルが {{prevLevel}} から {{currentLevel}} に変更されました。"
+    }
+  },
+  "dashboard": {
+    "alertSummaryWidgetTitle": "アラートの概要",
+    "identityRiskAlertsWidgetTitle": "アイデンティティリスクアラート",
+    "geozoneRiskAlertsWidgetTitle": "ジオゾーンリスクアラート",
+    "topActionsWidgetTitle": "アダプティブレスポンスポリシー別上位アクション",
+    "realTimeAlertsWidgetTitle": "リアルタイムアラート",
+    "combinedRiskAlertsWidgetTitle": "アイデンティティリスクとジオゾーンのリスクアラート",
+    "combinedRiskAlertsIdentityTabTitle": "アイデンティティ",
+    "combinedRiskAlertsGeozoneTabTitle": "ジオゾーン",
+    "totalEventsWidgetTitle": "イベント合計",
+    "totalEventsWidgetDescription": "イベント合計",
+    "totalUsersWidgetTitle": "アクティブユーザー総数",
+    "totalUsersWidgetDescription": "アクティブユーザーの総数",
+    "networkAnomalyAlertsWidgetTitle": "ネットワーク異常アラート",
+    "networkAlertSummaryWidget": {
+      "title": "ネットワークアラートの概要",
+      "label": {
+        "high": "高ネットワーク異常アラート",
+        "critical": "クリティカルなネットワーク異常アラート",
+        "medium": "中程度のネットワーク異常アラート",
+        "low": "低ネットワーク異常アラート",
+        "unknown": "不明なネットワーク異常アラート"
+      }
+    },
+    "mapWidgetTitle": "マップ"
+  },
+  "actionType": {
+    "overrideNetworkAccessPolicy": "ネットワークアクセスコントロールポリシーの上書き"
+  },
+  "riskPolicies": {
+    "common": {
+      "tooltips": {
+        "copyPolicy": "コピー",
+        "deletePolicy": "削除"
+      }
+    },
+    "assessment": {
+      "info": {
+        "title": "リスク検出",
+        "paragraph": "検出をリスクレベルに割り当てて、ユーザーのリスクポスチャを設定します。リスクレベルは、ポリシーによってイベントの応答を決定するために使用されます。"
+      },
+      "buttons": {
+        "addDetections": "検出を追加する",
+        "useTemplate": "テンプレートを使う"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "検出をリスクレベルに割り当てて、ユーザーのリスクポスチャを設定するポリシーを追加します。リスクレベルは、ポリシーによってイベントの応答を決定するために使用されます。ユーザーにポリシーが割り当てられていない場合は、デフォルトのポリシーが使用されます。"
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "表示名",
+        "description": "説明"
+      },
+      "errorMessages": {
+        "required": "このフィールドは、必修です。",
+        "nameInvalid": "名前は無効です。",
+        "descriptionInvalid": "説明が無効です。"
+      }
+    },
+    "columns": {
+      "name": "ポリシー名"
+    },
+    "tableHeader": {
+      "risk": "リスク",
+      "detection": "検出"
+    },
+    "details": {
+      "title": "リスク検出",
+      "assignedUsersAndGroups": "割り当てられたユーザーとグループ"
+    },
+    "create": {
+      "title": "リスク検出ポリシーの追加",
+      "copyTitle": "リスク検出ポリシーのコピー",
+      "successTitle": "ポリシーが追加されました",
+      "successDescription": "このリスク検出ポリシーにユーザーまたはグループを割り当てますか?",
+      "successReject": "今はない",
+      "successAccept": "はい",
+      "error": "ポリシーを作成できませんでした。",
+      "policyConfirmationTitle": "リスク検出ポリシーを割り当てる",
+      "policyConfirmationDescription": "ポリシーが作成されました。このポリシーにユーザーまたはグループを割り当てますか?"
+    },
+    "delete": {
+      "deleteConfirmation": "削除の確認",
+      "deleteSingle": "{{name}} ポリシーを削除しますか?",
+      "deleteNote": "ポリシーを削除する前に、ポリシーに関連付けられているすべてのユーザーおよびグループを削除する必要があります。"
+    },
+    "updatedAt": "{{date, M/D/YYYY h:mm A}} によって {{updatedByUser}} に更新されました",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "保存されていない変更",
+      "description": "このページから退出しますか？変更内容は保存されていません。",
+      "cancelButton": "キャンセル",
+      "confirmButton": "ページを離れる"
+    },
+    "snackbars": {
+      "successfulUpdate": "ポリシーが更新されました。",
+      "successfulCreation": "ポリシーが作成されました。",
+      "successfulDeletion": "ポリシーが削除されました。"
+    },
+    "threats": {
+      "addDetectionsDrawer": {
+        "title": "検出を追加する",
+        "description": "検出を適用するリスクレベルに検出をドラッグアンドドロップします。"
+      },
+      "categories": {
+        "labels": {
+          "identity": "アイデンティティ"
+        }
+      },
+      "labels": {
+        "behavioralRisk": "行動リスク",
+        "networkAnomaly": "ネットワーク異常"
+      }
+    }
+  },
+  "policies": {
+    "common": {
+      "adaptiveOverridesGatewayInfo": "アダプティブレスポンスポリシーは、ユーザまたはグループに割り当てられているネットワークアクセスコントロールポリシーを上書きします。",
+      "tooltips": {
+        "copyPolicy": "コピー",
+        "deletePolicy": "削除"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "アダプティブレスポンスポリシーを作成して割り当てて、デバイスに適用されるリスクレスポンスアクションを指定します。$t(bis/ues:policies.common.adaptiveOverridesGatewayInfo)",
+        "link": "アダプティブレスポンスの設定"
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "表示名",
+        "description": "説明"
+      },
+      "errorMessages": {
+        "required": "このフィールドは、必修です。",
+        "nameInvalid": "名前は無効です。",
+        "descriptionInvalid": "説明が無効です。"
+      }
+    },
+    "columns": {
+      "name": "ポリシー名"
+    },
+    "tableHeader": {
+      "factor": "リスク",
+      "detection": "検出",
+      "responseActions": "レスポンスアクション"
+    },
+    "details": {
+      "title": "アダプティブレスポンス",
+      "assignedUsersAndGroups": "割り当てられたユーザーとグループ",
+      "addCustomActionRiskFactors": "ユーザーのネットワーク使用パターンが過去の動作と一致しない場合に実行するアクションを指定します。$t(bis/ues:policies.common.adaptiveOverridesGatewayInfo)"
+    },
+    "create": {
+      "title": "アダプティブレスポンスポリシーの追加",
+      "copyTitle": "アダプティブレスポンスポリシーのコピー",
+      "successTitle": "ポリシーが追加されました",
+      "successDescription": "この BlackBerry 個人設定分析ポリシーにユーザーまたはグループを割り当てますか?",
+      "successReject": "今はない",
+      "successAccept": "はい",
+      "error": "ポリシーを作成できませんでした。",
+      "policyConfirmationTitle": "アダプティブレスポンスポリシーを割り当てる",
+      "policyConfirmationDescription": "ポリシーが作成されました。このポリシーにユーザーまたはグループを割り当てますか?"
+    },
+    "delete": {
+      "deleteConfirmation": "削除の確認",
+      "deleteSingle": "{{name}} ポリシーを削除しますか?",
+      "deleteNote": "ポリシーを削除する前に、ポリシーに関連付けられているすべてのユーザーおよびグループを削除する必要があります。"
+    },
+    "updatedAt": "{{date, M/D/YYYY h:mm A}} によって {{updatedByUser}} に更新されました",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "保存されていない変更",
+      "description": "このページから退出しますか？変更内容は保存されていません。",
+      "cancelButton": "キャンセル",
+      "confirmButton": "ページを離れる"
+    },
+    "snackbars": {
+      "successfulUpdate": "ポリシーが更新されました。",
+      "successfulCreation": "ポリシーが作成されました。",
+      "successfulDeletion": "ポリシーが削除されました。"
+    }
+  },
+  "actions": {
+    "options": {
+      "networkAccessPolicy": "ネットワークアクセスコントロールポリシーの上書き"
+    },
+    "assignNetworkAccessPolicy": {
+      "dialog": {
+        "label": "ネットワークアクセスコントロールポリシーの選択",
+        "title": "ネットワークアクセスコントロールポリシーの上書き",
+        "noOptions": "利用可能なポリシーはありません"
+      },
+      "notAvailableError": "ネットワークアクセスコントロールポリシーのオーバーライドアクションは現在使用できません。管理者に連絡してください。"
+    },
+    "selected": {
+      "networkAccessPolicy": {
+        "chip": "ネットワークアクセスコントロールポリシーを上書き:{{name}}",
+        "chipPolicyMissing": "ネットワークアクセスコントロールポリシーの上書き",
+        "errorChip": "ポリシーは存在しません",
+        "errorSnackbar": "割り当てられたアクションの 1 つのポリシーが存在しなくなりました。"
+      }
+    }
+  },
+  "gatewayEvidence": {
+    "title": "アラートイベントの詳細",
+    "tableTitle": "アラートの詳細",
+    "eventTitle": "ネットワークイベントの詳細"
+  },
+  "detectionPolicies": {
+    "common": {
+      "tooltips": {
+        "copyPolicy": "コピー",
+        "deletePolicy": "削除"
+      }
+    },
+    "arr": {
+      "title": "自動リスク軽減のためのチャレンジアイデンティティ",
+      "description": "アイデンティティリスクの検出にのみ適用されます",
+      "selectLabel": "最小リスクレベル"
+    },
+    "assessment": {
+      "info": {
+        "title": "リスクアセスメント",
+        "paragraph": "検出をリスクレベルに割り当てて、ユーザーのリスクポスチャを設定します。リスクレベルは、ポリシーによってイベントの応答を決定するために使用されます。"
+      },
+      "buttons": {
+        "addDetections": "検出を追加する",
+        "useTemplate": "テンプレートを使う",
+        "detections": "[検出]"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "検出をリスクレベルに割り当てて、ユーザーのリスクポスチャを設定するポリシーを追加します。リスクレベルは、ポリシーによってイベントの応答を決定するために使用されます。ユーザーにポリシーが割り当てられていない場合は、デフォルトのポリシーが使用されます。"
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "表示名",
+        "description": "説明"
+      },
+      "errorMessages": {
+        "required": "このフィールドは、必修です。",
+        "nameInvalid": "名前は無効です。",
+        "descriptionInvalid": "説明が無効です。"
+      }
+    },
+    "columns": {
+      "name": "ポリシー名"
+    },
+    "tableHeader": {
+      "risk": "リスク",
+      "detection": "検出"
+    },
+    "details": {
+      "title": "リスクアセスメント",
+      "assignedUsersAndGroups": "割り当てられたユーザーとグループ"
+    },
+    "create": {
+      "title": "リスク評価ポリシーを追加する",
+      "copyTitle": "リスク評価ポリシーのコピー",
+      "successTitle": "ポリシーが追加されました",
+      "successDescription": "このリスクアセスメントポリシーにユーザーまたはグループを割り当てますか?",
+      "successReject": "今はない",
+      "successAccept": "はい",
+      "error": "ポリシーを作成できませんでした。",
+      "policyConfirmationTitle": "リスクアセスメントポリシーを割り当てる",
+      "policyConfirmationDescription": "ポリシーが作成されました。このポリシーにユーザーまたはグループを割り当てますか?"
+    },
+    "delete": {
+      "deleteConfirmation": "削除の確認",
+      "deleteSingle": "{{name}} ポリシーを削除しますか?",
+      "deleteNote": "ポリシーを削除する前に、ポリシーに関連付けられているすべてのユーザーおよびグループを削除する必要があります。"
+    },
+    "updatedAt": "{{date, M/D/YYYY h:mm A}} によって {{updatedByUser}} に更新されました",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "保存されていない変更",
+      "description": "このページから退出しますか？変更内容は保存されていません。",
+      "cancelButton": "キャンセル",
+      "confirmButton": "ページを離れる"
+    },
+    "snackbars": {
+      "successfulUpdate": "ポリシーが更新されました。",
+      "successfulCreation": "ポリシーが作成されました。",
+      "successfulDeletion": "ポリシーが削除されました。"
+    },
+    "threats": {
+      "addDetectionsDrawer": {
+        "title": "検出を追加する",
+        "description": "検出を適用するリスクレベルに検出をドラッグアンドドロップします。"
+      },
+      "categories": {
+        "labels": {
+          "identity": "アイデンティティ"
+        }
+      },
+      "labels": {
+        "behavioralRisk": "行動リスク",
+        "networkAnomaly": "ネットワーク異常"
+      }
+    }
+  },
+  "gatewayEvents": {
+    "labelGateway": "Gateway",
+    "pageTitle": "イベント",
+    "networkEvents": {
+      "label": "ネットワークイベント",
+      "pageTitle": "ネットワークイベント"
+    },
+    "networkActivity": {
+      "label": "ネットワークアクティビティ"
+    }
+  },
+  "deviceRiskAssessment": {
+    "deviceRiskDetails": "デバイスリスクの詳細",
+    "appliedRiskPolicy": "適用されたリスクポリシー:{{riskPolicyName}}",
+    "error": {
+      "fetch": "デバイスのリスク情報を取得できませんでした。"
+    }
+  },
+  "geozones": {
+    "table": {
+      "headers": {
+        "name": "名前",
+        "location": "ロケーション",
+        "size": "サイズ"
+      },
+      "columnPicker": "テーブルカラム",
+      "toolbar": {
+        "totalResults": "{{total}} 件の結果",
+        "totalSelected": "{{total}} が選択されました"
+      },
+      "cells": {
+        "size": "{{value}} {{unit}}"
+      }
+    },
+    "deleteDialog": {
+      "singleTitle": "ジオゾーンを削除",
+      "multiTitle": "ジオゾーンを削除",
+      "singleMessage": "<0><1>{{zone}} ジオゾーンを削除しますか</1>?</0>",
+      "multiMessage": "選択したジオゾーンを削除しますか?"
+    },
+    "operations": {
+      "update": {
+        "error": "ジオゾーンを更新できませんでした。",
+        "success": "ジオゾーンが更新されました。"
+      },
+      "create": {
+        "error": "ジオゾーンを作成できませんでした。",
+        "success": "ジオゾーンが作成されました。"
+      },
+      "delete": {
+        "error": "ジオゾーンを削除できませんでした。",
+        "success": "ジオゾーンは削除されました。"
+      }
+    }
+  }
+}

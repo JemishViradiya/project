@@ -1,0 +1,8 @@
+{
+  "sessionExpiredTitle": "Sesión caducada",
+  "sessionExpiredMessage": "Tu sesión ha caducado.",
+  "help": "ayudar",
+  "tenant": "Inquilino",
+  "sessionStartTitle": "Iniciar sesión",
+  "sessionStartAction": "Iniciar sesión"
+}

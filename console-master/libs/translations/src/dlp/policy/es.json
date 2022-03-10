@@ -1,0 +1,214 @@
+{
+  "policy": {
+    "pageTitle": "Avert",
+    "tabTitle": {
+      "mobile": "Móvil",
+      "content": "Contenido"
+    },
+    "serverError": {
+      "retrievePolicies": "{{error}}",
+      "deletePolicies": "No se han podido eliminar las directivas."
+    },
+    "table": {
+      "columns": {
+        "name": "Nombre",
+        "description": "Descripción",
+        "policyType": "Tipo Política",
+        "userCount": "Usuarios",
+        "groupCount": "Grupos",
+        "added": "Añadido",
+        "modified": "Modificado",
+        "rank": "Rango"
+      },
+      "tableColumns": "Columnas de tabla",
+      "noData": "Sin datos",
+      "filter": {
+        "name": "Por nombre",
+        "description": "Por descripción"
+      }
+    },
+    "dialogs": {
+      "setAsDefault": {
+        "title": "Establecer como confirmación predeterminada",
+        "cancelBtn": "Cancelar",
+        "confirmBtn": "Guardar",
+        "question": "¿Desea instalar la política como predeterminada?"
+      }
+    },
+    "buttons": {
+      "add": "Agregar política",
+      "delete": "Borrar",
+      "cancel": "Cancelar",
+      "save": "Guardar",
+      "continue": "Continuar",
+      "addNew": "Añadir",
+      "confirm": "Sí",
+      "rejectConfirm": "Ahora no",
+      "leavePage": "Abandonar página",
+      "resendMail": "Enviar",
+      "cancelResendMail": "No"
+    },
+    "search": {
+      "results": "{{value}} resultados",
+      "placeholder": "Búsqueda de políticas"
+    },
+    "sections": {
+      "requiredInput": "Este campo es obligatorio.",
+      "general": {
+        "title": "Información general",
+        "policyName": "Nombre de la política",
+        "description": "Descripción",
+        "setDefaultPolicy": "Establecer política predeterminada",
+        "type": {
+          "title": "Tipo Política",
+          "regulatory": "Reglamentario",
+          "organizational": "Organizacional"
+        },
+        "info": {
+          "description": "Especifique el tipo de política que desea crear. Las políticas de la organización se pueden utilizar para proteger la información de propiedad de su organización. Las políticas regulatorias se pueden utilizar para proteger la información confidencial relacionada con las regulaciones de la industria o del gobierno.",
+          "regulatoryDesc": "Cuando varias políticas reguladoras entran en conflicto para un usuario, BlackBerry conciliará automáticamente estas políticas aplicando los elementos más restrictivos de todas las políticas. Se seleccionará el número mínimo de ocurrencias de datos y se aplicará la acción correctiva más restrictiva.",
+          "organizationalDesc": "Cuando varias políticas de la organización entran en conflicto para un usuario, BlackBerry conciliará automáticamente estas políticas aplicando los elementos menos restrictivos de todas las políticas. Se seleccionará el número máximo de ocurrencias de datos y se aplicará la acción correctiva menos restrictiva."
+        }
+      },
+      "conditions": {
+        "title": "Condiciones",
+        "addFromTemplateDialog": {
+          "description": "Seleccione una plantilla de la lista a continuación para agregar automáticamente los datos confidenciales que desea proteger.",
+          "noTemplatesDescription": "No has agregado ninguna plantilla. Ve a la <0>configuración de Avert</0> para añadir plantillas predefinidas a tu lista.",
+          "searchText": "Buscar plantillas",
+          "confirmation": {
+            "title": "Confirmación de plantilla",
+            "description": "Al agregar una nueva plantilla, se anularán las condiciones existentes."
+          },
+          "title": "Agregar desde plantilla"
+        },
+        "table": {
+          "name": "Nombre",
+          "description": "Descripción",
+          "region": "Región"
+        },
+        "builder": {
+          "title": "Generador de condiciones",
+          "condition": {
+            "and": "Y",
+            "or": "o"
+          },
+          "label": "con apariciones mínimas de",
+          "buttons": {
+            "addRule": "Añadir artículo",
+            "addGroup": "Añadir grupo",
+            "deleteGroup": "Eliminar grupo"
+          },
+          "select": {
+            "placeholderText": "Seleccione el nombre del tipo de datos",
+            "searchText": "Buscar"
+          },
+          "occurrences": {
+            "rangeText": "El valor debe estar comprendido entre 1 y 10."
+          }
+        },
+        "description": "Defina los datos confidenciales que desea proteger y las condiciones que desencadenarán una infracción de la política. Puede empezar por utilizar una de las plantillas que ha seleccionado en la <0>configuración de Avert</0> o crear su propia política personalizada.",
+        "addFromTemplate": "Agregar desde plantilla"
+      },
+      "whitelist": {
+        "title": "Dominios de lista blanca",
+        "name": "Dominio",
+        "description": "Descripción",
+        "paragraph": "Especifique en qué dominios de navegador se puede confiar para cargar archivos de forma segura desde la lista que creó en <0>Ajustes de Avert</0>. La política no se aplicará a los dominios permitidos."
+      },
+      "emailSettings": {
+        "title": "Ajustes de correo electrónico",
+        "recipients": {
+          "none": "Ninguna",
+          "internal": "Solo destinatarios internos",
+          "all": "Todos los destinatarios"
+        },
+        "helperText": "Detecta cuándo se comparte contenido confidencial por correo electrónico.",
+        "description": "Especifique en qué destinatarios de correo electrónico se puede confiar al compartir datos confidenciales en función de la lista de dominios de correo electrónico internos permitidos que creó en la <0>Ajustes de Avert</0>. "
+      },
+      "actions": {
+        "policyRules": {
+          "ACTION_TYPE_NONE": "Ninguna",
+          "ACTION_TYPE_ALERT": "Informar y avisar",
+          "ACTIVITY_TYPE_BROWSER_UPLOAD": "Navegadores web (HTTP, HTTPS)",
+          "ACTIVITY_TYPE_USB_EXFILTRATE": "almacenamiento extraíble",
+          "ACTIVITY_TYPE_SCREEN_CAPTURE": "Captura de pantalla",
+          "ACTIVITY_TYPE_EMAIL_CLIENTS": "Clientes de correo"
+        },
+        "title": "Acciones",
+        "description": "Lorem ipsum"
+      },
+      "domains": {
+        "dialogs": {
+          "title": "Agregar dominio en la lista blanca",
+          "description": "Puede utilizar varios dominios incluidos en la lista blanca que están en voz alta para su uso de acuerdo con esta política. La lista inicial se configura en <5>Ajustes</5>",
+          "searchText": "Búsqueda de dominios"
+        },
+        "addDomain": "Haga clic en + para añadir artículos."
+      },
+      "sparkMobileSettings": {
+        "policyConfigNames": {
+          "CONFIG_TYPE_ALLOW_COPY_BB_APPS_INTO_NON_BB_APPS": "Permitir copiar datos de aplicaciones de BlackBerry Spark a aplicaciones que no sean de BlackBerry Spark",
+          "CONFIG_TYPE_ALLOW_COPY_NON_BB_APPS_INTO_BB_APPS": "Permitir copiar datos entre aplicaciones BlackBerry Spark",
+          "CONFIG_TYPE_ALLOW_DICTATION": "Permitir dictado",
+          "CONFIG_TYPE_ALLOW_INSECURE_VIDEO": "Permitir captura de pantalla y salida de vídeo insegura",
+          "CONFIG_TYPE_ALLOW_SCREEN_RECORDING": "Permitir grabar y compartir capturas de pantalla",
+          "CONFIG_TYPE_ALLOW_KEYBOARDS": "Permitir teclados personalizados",
+          "CONFIG_TYPE_ADD_WATERMARK": "Mostrar marca de agua",
+          "CONFIG_TYPE_ALLOW_RESTRICTED_MODE": "Activar el modo restringido de teclado Android"
+        },
+        "supportedOsTypesText": "Tipos de SO compatibles - ",
+        "title": "Configuración Mobile"
+      },
+      "iosSpecificSettings": {
+        "title": "Configuración específica de iOS",
+        "allowText": "Permitir",
+        "screenshotsInText": "capturas de pantalla en",
+        "intervalText": "días",
+        "rangeText": "El valor debe estar comprendido entre 1 y 14 días."
+      }
+    },
+    "error": {
+      "delete": "No se ha podido eliminar la política.",
+      "update": "No se ha podido actualizar la política. Error: {{error}} ",
+      "create": "No se pudo crear la política. Error: {{error}} "
+    },
+    "success": {
+      "create": "Se ha creado la política.",
+      "delete": "Se ha eliminado la política.",
+      "update": "La política se ha actualizado."
+    },
+    "updateFormDeletePolicyTooltip": "Eliminar política",
+    "deletePolicyConfirmationDialogTitle": "Confirmación Eliminar",
+    "deletePolicyConfirmationDialogDesc": "¿Desea eliminar esta política?",
+    "deleteNote": "Debe quitar todos los usuarios y grupos asociados a una política antes de eliminarla.",
+    "createContentPolicyConfirmationTitle": "Asignar la política de contenido",
+    "createMobilePolicyConfirmationTitle": "Asignar la politica de dispositivos moviles",
+    "createPolicyConfirmationDescription": "Se ha creado la política. ¿Desea asignar usuarios o grupos a esta política?",
+    "updatePolicyConfirmationTitle": "Reenviar correo electrónico a los usuarios",
+    "updatePolicyConfirmationDescription": "¿Desea volver a enviar el correo de bienvenida?",
+    "detail": {
+      "updated": "Actualizado el {{date, datetime}}",
+      "settings": "Ajustes",
+      "assignedUsersAndGroups": "Usuarios y grupos asignados"
+    },
+    "modifiedPolicyConfirmationDialogTitle": "Cambios no guardados",
+    "modifiedPolicyConfirmationDialogDesc": "¿Quieres salir de esta página? Los cambios no se han guardado.",
+    "addPolicyWithType": "Agregar política de protección de la información"
+  },
+  "navigation": {
+    "adaptiveResponse": {
+      "label": "Etiqueta",
+      "componentHeader": {
+        "link": "más info",
+        "paragraph": "Las políticas de contenido de Avert se utilizan para detectar los datos confidenciales de su organización y protegerse contra el uso compartido no autorizado. Si hay varias políticas en conflicto para un usuario, BlackBerry se reconciliará automáticamente en función del tipo de política."
+      }
+    },
+    "title": "Políticas",
+    "mobile": {
+      "componentHeader": {
+        "paragraph": "La configuración Mobile se aplica a todos los tipos de dispositivos, a menos que se especifique Si se asigna más de una política a un usuario, se aplica la política más alta."
+      }
+    }
+  }
+}

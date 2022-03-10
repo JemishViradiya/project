@@ -1,0 +1,26 @@
+@import '../theme/theme.less';
+
+.view {
+  // TODO: no longer needed when we fix jsbundle (-> relative)
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.topNavBar {
+  position: absolute;
+  z-index: @zIndexAppNavigation;
+}
+
+.content {
+  position: relative;
+  flex-grow: 1;
+  align-self: stretch;
+}

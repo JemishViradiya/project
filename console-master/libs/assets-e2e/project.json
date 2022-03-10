@@ -1,0 +1,60 @@
+{
+  "root": "libs/assets-e2e",
+  "sourceRoot": "libs/assets-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/assets-e2e/cypress.json",
+        "tsConfig": "libs/assets-e2e/tsconfig.json",
+        "devServerTarget": "assets-e2e:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "assets-e2e:storybook:ci"
+        }
+      },
+      "outputs": ["cypress-results/libs/assets-e2e"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/assets-e2e/src/**/*.ts", "libs/assets-e2e/src/**/*.js"]
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "port": 4400,
+        "config": {
+          "configFolder": "libs/assets-e2e/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "outputPath": "docs/assets",
+        "config": {
+          "configFolder": "libs/assets-e2e/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["assets"]
+}

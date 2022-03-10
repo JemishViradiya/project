@@ -1,0 +1,48 @@
+.cancel-button {
+  color: #03a5ef;
+  border: 1px solid #03a5ef;
+  background-color: #fff;
+  border-radius: 0;
+  padding: 5px 15px;
+  height: 40px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.cancel-button:hover {
+  background-color: rgba(3, 165, 239, 0.08);
+}
+
+.previous-button {
+  margin-right: 16px;
+}
+
+.next-button {
+  color: #fff;
+  border-radius: 0;
+  background-color: #03a5ef;
+  padding: 5px 15px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+.selectable {
+  opacity: 1;
+  pointer-events: visible;
+}
+.not-selectable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.show {
+  display: inline-block;
+}
+
+.hide {
+  display: none;
+}
+
+.step-container {
+  border: none;
+}

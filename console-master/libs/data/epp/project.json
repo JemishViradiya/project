@@ -1,0 +1,31 @@
+{
+  "root": "libs/data/epp",
+  "sourceRoot": "libs/data/epp/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data/epp/**/*.js",
+          "libs/data/epp/**/*.jsx",
+          "libs/data/epp/**/*.ts",
+          "libs/data/epp/**/*.tsx",
+          "libs/data/epp/**/*.spec.ts",
+          "libs/data/epp/**/*.spec.tsx",
+          "libs/data/epp/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/data/epp/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/libs/data/epp"]
+    }
+  },
+  "tags": ["scope:shared", "scope:data"]
+}

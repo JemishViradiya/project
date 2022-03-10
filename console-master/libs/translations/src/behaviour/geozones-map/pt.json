@@ -1,0 +1,39 @@
+{
+  "operationBar": {
+    "search": {
+      "input": "Procure um local",
+      "iconAriaLabel": "Pesquisar"
+    },
+    "draw": {
+      "circle": "Criar raio de zona geográfica",
+      "polygon": "Criar forma de zona geográfica"
+    }
+  },
+  "popupGeozone": {
+    "titleCircle": "Raio da zona geográfica",
+    "titlePolygon": "Forma da zona geográfica",
+    "inputName": "Nome",
+    "inputRadius": "Raio",
+    "inputUnit": "Unidade",
+    "labelSize": "Tamanho: {{value}} {{unit}}",
+    "buttonRemoveAriaLabel": "Remover",
+    "buttonCancel": "Cancelar",
+    "buttonSave": "Salvar",
+    "units": {
+      "km": "quilômetro",
+      "miles": "miles"
+    },
+    "errors": {
+      "invalidName": "Nome inválido",
+      "invalidRadius": "Raio inválido"
+    }
+  },
+  "popupDrawOptions": {
+    "polygonOption": "Desenhe uma forma de zona geográfica",
+    "circleOption": "Desenhe um raio de zona geográfica"
+  },
+  "marker": {
+    "zoneAriaLabel": "Marcador de zona - {{name}}",
+    "searchAriaLabel": "Pin de pesquisa - {{name}}"
+  }
+}

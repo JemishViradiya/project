@@ -1,0 +1,4 @@
+variables:
+  DOCKER_BUILDKIT: 'true' # enable buildkit functionality in docker
+  DOCKER_EXPERIMENTAL: 'enabled' # enables buildkit functionality in some older versions of docker
+  DOCKER_DRIVER: overlay2

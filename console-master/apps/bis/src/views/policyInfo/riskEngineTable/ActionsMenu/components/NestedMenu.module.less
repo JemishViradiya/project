@@ -1,0 +1,62 @@
+@import '../../../../../theme/theme.less';
+
+.menu {
+  composes: .mui.typography[ @body1];
+  z-index: 2;
+  background-color: @colorNestedMenuFill;
+  border: 1px solid @colorButtonBorder;
+  padding: 8px 0;
+  width: 280px;
+  text-align: center;
+  user-select: none;
+  overflow-y: auto;
+  max-height: 360px;
+}
+
+.itemWrapper {
+  width: 100%;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  text-align: left;
+
+  & .menuLabel {
+    flex: 1;
+    padding: 0 0.5em;
+  }
+
+  &:hover {
+    background-color: @colorNestedMenuHoverFill;
+  }
+}
+// create disabled menu item style, no hover, grey text
+.menuItemDisabled {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  text-align: left;
+  cursor: default;
+  color: .mui.palette[ @text-disabled];
+
+  & .menuLabel {
+    flex: 1;
+    padding: 0 0.5em;
+  }
+}
+
+.menuOption {
+  cursor: pointer;
+}
+
+.disabledOption {
+  color: .mui.palette[ @text-disabled];
+  pointer-events: none;
+}
+
+.menuIcon {
+  display: flex;
+  font-size: 18px;
+}

@@ -1,0 +1,38 @@
+.license-usage {
+  h3 {
+    margin-top: 20px;
+  }
+  > div {
+    display: flex;
+    > div,
+    > h3,
+    > p {
+      flex: 1;
+    }
+  }
+  h4 {
+    font-size: 14px;
+    color: #5c5d66;
+    line-height: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: left;
+    &:hover {
+      color: inherit;
+    }
+  }
+  .percent-used {
+    text-align: right;
+    margin-top: 20px;
+    color: #cdcdd2;
+    &.overused {
+      color: #e66a5e;
+    }
+  }
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cdd0db;
+  .license-usage-left-column {
+    display: flex;
+    flex-direction: column;
+  }
+}

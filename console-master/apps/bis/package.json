@@ -1,0 +1,29 @@
+{
+  "name": "@ues/bis",
+  "version": "3.1.0",
+  "private": true,
+  "dependencies": {
+    "d3-time-format": "^2.1.3",
+    "deferred": "^0.7.11",
+    "geokdbush": "^1.1.0",
+    "json2csv": "^4.5.1",
+    "kdbush": "^3.0.0",
+    "latlon-geohash": "^2.0.0",
+    "prop-types": ">=15.7.2",
+    "react-dates": "^21.3.2",
+    "react-popper-tooltip": "^2.8.3",
+    "react-splitter-layout": "^3.0.1",
+    "string-hash": "^1.1.3",
+    "validator": "^13.1.17"
+  },
+  "devDependencies": {
+    "mockdate": "^3.0.2",
+    "webpack-sources": "^3.0.2"
+  },
+  "scripts": {
+    "test": "jest --env=jsdom --watch",
+    "coverage": "jest --env=jsdom --coverage --coverageReporters=lcov",
+    "test:ci": "jest --env=jsdom --coverage",
+    "list-testids": "grep --color -oh -r --include=\\*.js '.data-testid=\"[^/\"?]*\"' ./ -RIn"
+  }
+}

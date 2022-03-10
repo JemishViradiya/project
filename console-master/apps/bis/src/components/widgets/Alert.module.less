@@ -1,0 +1,30 @@
+@import '../../theme/theme.less';
+
+.minimal {
+  vertical-align: baseline;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.box {
+  composes: minimal;
+  padding: 12px 16px;
+  background-color: .mui.palette[ @background-paper];
+  border: 1px solid .mui.palette[ @divider];
+}
+
+.icon {
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.content {
+  composes: .mui.typography[ @body1];
+  padding: 1px 0 0 6px;
+}
+
+.fullWidth {
+  width: 100%;
+}

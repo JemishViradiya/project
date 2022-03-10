@@ -1,0 +1,116 @@
+{
+  "emmConnection": {
+    "type": {
+      "INTUNE": "Intune",
+      "UEM": "UEM",
+      "NULL": "None defined"
+    },
+    "status": {
+      "PENDING": "Pending",
+      "ERROR": "Error"
+    },
+    "statusAriaLabel": "EMM connection status: {{status}}"
+  },
+  "endpoints": {
+    "sectionTitle": "Assets",
+    "title": "Mobile devices",
+    "grid": {
+      "all": "User Devices",
+      "actions": {
+        "removeMultiple": "Remove mobile devices",
+        "removeEndpointsDescription": "Do you want to delete {{count}} mobile devices?",
+        "remove": {
+          "success": "The devices were deleted.",
+          "error": "The devices could not be deleted.",
+          "errorWithCount": "{{count}} devices could not be deleted."
+        }
+      }
+    },
+    "details": {
+      "error": {
+        "fetch": "The devices could not be retrieved."
+      }
+    }
+  },
+  "endpoint": {
+    "details": {
+      "agent": "Agent",
+      "agentBundleId": {
+        "com_blackberry_protect": "BlackBerry Protect",
+        "com_blackberry_big": "BlackBerry Gateway Desktop",
+        "com_blackberry_big1": "BlackBerry Gateway Desktop",
+        "com_blackberry_big2": "BlackBerry Gateway Desktop",
+        "com_blackberry_big3": "BlackBerry Gateway Desktop"
+      },
+      "button": {
+        "more": "More device details",
+        "less": "Less device details"
+      },
+      "enrollment": "Enrollment",
+      "error": {
+        "fetch": "The device could not be retrieved.",
+        "notFound": "The device was deleted.",
+        "fetchUser": "The user could not be retrieved."
+      },
+      "lastOnline": "Last online",
+      "panels": {
+        "alerts": "Alerts",
+        "events": "Events",
+        "responseActions": "Compliance"
+      },
+      "securityPatch": "Security patch",
+      "title": "Device details",
+      "actions": {
+        "deleteEndpoint": "Delete device",
+        "title": "Actions"
+      }
+    },
+    "export": {
+      "emmConnections": "({{status}}) {{name}}"
+    },
+    "fields": {
+      "agent": "Agent",
+      "allEndpoints": "Endpoints",
+      "application": "Application",
+      "device": "Device",
+      "displayName": "Display Name",
+      "emailAddress": "Email Address",
+      "emmConnections": "EMM Connections",
+      "endpointId": "Endpoint ID",
+      "enrollment": "Enrollment",
+      "manufacturer": "Manufacturer",
+      "os": "OS",
+      "osSecurityPatch": "OS Security Patch",
+      "osVersion": "OS Version",
+      "platform": "Platform",
+      "riskLevelStatus": "Risk",
+      "userEmail": "Email",
+      "userId": "User ID",
+      "userName": "User"
+    },
+    "page": {
+      "title": "Mobile device details"
+    },
+    "responseActions": {
+      "title": "Protect Mobile Compliance"
+    },
+    "columnPickerTitle": "Table columns",
+    "resultsCount": "{{value}} results",
+    "selectedCount": "{{value}} selected",
+    "risk": {
+      "HIGH": "High",
+      "MEDIUM": "Medium",
+      "LOW": "Low",
+      "SECURED": "Secure",
+      "UNKNOWN": "Unknown"
+    },
+    "threats": {
+      "mobileDevice": "Protect Mobile Alerts"
+    },
+    "events": {
+      "networkConnections": "Network Connections",
+      "networkTraffic": "Network Traffic",
+      "networkAnomaly": "Network Anomaly"
+    }
+  }
+}

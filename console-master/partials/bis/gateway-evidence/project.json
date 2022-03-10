@@ -1,0 +1,25 @@
+{
+  "root": "partials/bis/gateway-evidence",
+  "sourceRoot": "partials/bis/gateway-evidence/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/bis/gateway-evidence/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/bis/gateway-evidence"],
+      "options": {
+        "jestConfig": "partials/bis/gateway-evidence/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  },
+  "tags": ["scope:partial", "scope:bis"]
+}

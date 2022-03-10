@@ -1,0 +1,29 @@
+{
+  "root": "apps/console-integration/integration",
+  "sourceRoot": "apps/console-integration/integration/src",
+  "projectType": "library",
+  "tags": ["scope:app", "scope:console-integration"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/console-integration/integration/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "integration": {
+      "executor": "./tools/executors/codeceptjs:run",
+      "options": {
+        "headless": false
+      },
+      "configurations": {
+        "ci": {
+          "headless": true
+        }
+      },
+      "outputs": ["codeceptjs-results/apps/console-integration/integration"]
+    }
+  },
+  "type": "integration",
+  "implicitDependencies": []
+}

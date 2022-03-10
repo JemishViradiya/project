@@ -1,0 +1,55 @@
+@import '../../../theme/theme.less';
+
+.container {
+  width: 280px;
+  max-height: 320px;
+  margin-right: -8px;
+  user-select: none;
+  padding: 5px 0;
+  background-color: @backgroundDefault;
+  z-index: 2;
+  border: 1px solid @colorButtonBorder;
+  box-shadow: 1px 1px 2px @colorButtonBorder;
+  overflow: auto;
+}
+
+.row-base {
+  composes: .mui.typography[ @body1];
+  padding: 5px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.row {
+  composes: row-base;
+  cursor: pointer;
+
+  &:hover {
+    background-color: .mui.palette.grey[ @100];
+  }
+}
+
+.disabled {
+  color: .mui.palette[ @text-disabled];
+  pointer-events: none;
+}
+
+.label {
+  padding-left: 5px;
+}
+
+.desc {
+  composes: .mui.typography[ @body2];
+  margin: 5px 12px;
+}
+
+.hr {
+  margin: 8px 12px;
+  border-top: 1px solid;
+  border-top-color: .mui.palette[ @divider];
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}

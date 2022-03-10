@@ -1,0 +1,190 @@
+{
+  "authenticators": {
+    "title": "Authentifikatoren",
+    "add": "Authenticator hinzufügen",
+    "type": "Authenticator-Typ",
+    "ENTERPRISE": "Enterprise",
+    "OKTA": "Okta",
+    "PING": "Ping",
+    "summary": "Fügen Sie Authentifikatoren hinzu, um die Arten der Authentifizierung zu verwalten, die verwendet werden können.",
+    "edit": "Authenticator bearbeiten",
+    "delete": "Authenticator löschen",
+    "general": "Allgemeine Informationen",
+    "signing_type": "ID-Token-Signaturalgorithmus",
+    "ES512": "ECDSA mit P521 Curve und SHA-512",
+    "ES256": "ECDSA mit P256 Curve und SHA-256",
+    "ES384": "ECDSA mit P384 Curve und SHA-384",
+    "name": "Name",
+    "identityproviderclient": "Identitätsanbieter-Client",
+    "discovery_url": "URL des OIDC-Discovery-Dokuments",
+    "client_id": "Kunden-ID",
+    "jwks": "Private Schlüssel JWKS",
+    "DUO_MFA": "Duo MFA",
+    "DUO": "Duo",
+    "duomfaconfiguration": "Duo MFA-Konfiguration",
+    "auth_integration_key": "Auth Integrationsschlüssel",
+    "auth_secret_key": "Auth Geheimer Schlüssel",
+    "auth_api_hostname": "Auth API Hostname",
+    "admin_api_hostname": "Admin-API-Hostname",
+    "admin_secret_key": "Geheimer Administratorschlüssel",
+    "admin_integration_key": "Admin Integrationsschlüssel",
+    "EMAIL": "E-mail",
+    "USERNAME": "Benutzername",
+    "username_format": "Format des Benutzernamens",
+    "OKTA_MFA": "Okta MFA",
+    "oktamfaconfiguration": "Okta MFA-Konfiguration",
+    "auth_api_key": "Auth API-Schlüssel",
+    "auth_domain": "Auth Domäne",
+    "TOTP": "TOTP",
+    "totpconfiguration": "TOTP-Konfiguration",
+    "window": "Fenster",
+    "windowHelperText": "Geben Sie die maximale Zeitverschiebung an, die zwischen dem Gerät und dem Server zulässig ist.",
+    "AD": "Active Directory",
+    "LDAP": "LDAP",
+    "CUR": "Blackberry-Online-Konto",
+    "VENUE": "Cylance"
+  },
+  "common": {
+    "name": "Name",
+    "type": "Typ",
+    "delete": "löschen",
+    "deleteConfirm": "Möchten Sie den {{field}} Authenticator löschen?",
+    "add": "Hinzufügen",
+    "cancel": "Stornieren",
+    "save": "Sparen",
+    "saveAs": "Speichern unter",
+    "success": {
+      "create": "Der Authentifikator wurde hinzugefügt.",
+      "update": "Der Authentifikator wurde aktualisiert.",
+      "delete": "Der Authentifikator wurde gelöscht."
+    },
+    "failure": {
+      "create": "Der Authentifikator konnte nicht hinzugefügt werden. Grund: {{reason}}",
+      "update": "Der Authentifikator konnte nicht aktualisiert werden. Grund: {{reason}}",
+      "delete": "Der Authentifikator konnte nicht gelöscht werden. Grund: {{reason}}",
+      "read": "Die Daten konnten nicht abgerufen werden. Grund: {{reason}}"
+    },
+    "nodata": "Keine Daten"
+  },
+  "authentication": {
+    "title": "Authentifizierung"
+  },
+  "policy": {
+    "list": {
+      "title": "Richtlinien für Unternehmensidentität",
+      "deleteSuccess": "Die Richtlinien wurden gelöscht.",
+      "deleteError": "{{deleteErrorCount}} von {{deleteCount}} Löschvorgänge sind fehlgeschlagen",
+      "pageDescription": "Fügen Sie eine Richtlinie hinzu, um anzugeben, welche Authentifizierungstypen Benutzer und Administratoren für den Zugriff auf die UES-Konsole, Apps oder Dienste ausführen müssen."
+    },
+    "createPolicyPageTitle": "Authentifizierungsrichtlinie hinzufügen",
+    "updatePolicyPageTitle": "Authentifizierung",
+    "generalInformationLabel": "Allgemeine Informationen",
+    "authenticationRulesLabel": "Regeln zur Authentifizierung",
+    "applicationExceptionLabel": "App-Ausnahmen verwalten",
+    "name": "Name",
+    "description": "Beschreibung",
+    "update": {
+      "tab": {
+        "settingsLabel": "Einstellungen",
+        "usersAndGroupsLabel": "Zugewiesene Benutzer und Gruppen"
+      }
+    },
+    "nameHelperText": "Eine Richtlinie mit diesem Namen existiert bereits.",
+    "nameHelperTextRequired": "Dies ist ein erforderliches Feld.",
+    "createPolicyAssignConfirmationDialog": {
+      "title": "Zuweisen der Authentifizierungsrichtlinie",
+      "description": "Die Richtlinie wurde erstellt. Möchten Sie dieser Richtlinie Benutzer oder Gruppen zuweisen?",
+      "cancelButton": "Jetzt nicht",
+      "confirmButton": "Ja"
+    },
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Ungespeicherte Änderungen",
+      "description": "Willst du diese Seite verlassen? Ihre Änderungen wurden nicht gespeichert.",
+      "cancelButton": "Stornieren",
+      "confirmButton": "Seite verlassen"
+    },
+    "batchDeletePolicyConflictErrorConfirmationDialog": {
+      "title": "Fehler beim Löschen",
+      "cancelButton": "Schliessen",
+      "description": "Die folgenden Richtlinien konnten nicht gelöscht werden, da sie Benutzern oder Gruppen zugewiesen sind:"
+    },
+    "batchDeletePolicyErrorConfirmationDialog": {
+      "title": "Fehler beim Löschen",
+      "description": "Die folgenden Richtlinien konnten nicht gelöscht werden:",
+      "cancelButton": "Schliessen"
+    },
+    "deletePolicyConfirmationDialog": {
+      "title": "Bestätigung löschen",
+      "description": "Möchten Sie die Richtlinie {{name}} löschen?",
+      "deleteNote": "Sie müssen alle mit einer Richtlinie verknüpften Benutzer und Gruppen entfernen, bevor Sie sie löschen.",
+      "cancelButton": "Stornieren",
+      "confirmButton": "löschen"
+    },
+    "serverError": {
+      "update": "Die Änderungen konnten nicht gespeichert werden.",
+      "delete": "Die Richtlinie konnte nicht gelöscht werden.",
+      "deleteWithUsers": "Die Richtlinie konnte nicht gelöscht werden, da sie Benutzern zugewiesen wurde.",
+      "deleteWithGroups": "Die Richtlinie konnte nicht gelöscht werden, da sie Gruppen zugewiesen wurde.",
+      "deleteWithUsersAndGroups": "Die Richtlinie konnte nicht gelöscht werden, da sie Benutzern und Gruppen zugewiesen wurde.",
+      "deletePolicies": "Die Richtlinien konnten nicht gelöscht werden.",
+      "multipleInternalAuthErrorMsg": "Sie können nicht mehr als einen internen Authentifikatortyp in einer Richtlinie zuweisen."
+    },
+    "riskFactorsLabel": "Risiko-Szenarien",
+    "authenticatorsList": {
+      "addButton": "Authenticator hinzufügen",
+      "deleteButton": "löschen",
+      "orderButton": "Reihenfolge festlegen",
+      "deleteSelectedMsg": "{{selectedCnt}} ausgewählt",
+      "nameLabel": "Name",
+      "descriptionLabel": "Beschreibung",
+      "noData": "Klicken Sie auf +, um Artikel hinzuzufügen.",
+      "columns": {
+        "name": "Name",
+        "description": "Beschreibung"
+      }
+    },
+    "addAuthenticatorsDialog": {
+      "title": "Authenticator hinzufügen",
+      "dropdownLabel": "Name des Authentifikators",
+      "cancelButton": "Stornieren",
+      "addButton": "Sparen"
+    },
+    "applicationExceptionButton": "App-Ausnahmen verwalten",
+    "selectManagedExceptionDialog": {
+      "title": "App-Ausnahmen verwalten",
+      "cancelButton": "Stornieren",
+      "addButton": "Sparen",
+      "listLabel": "Sie können Authentifizierungsebenen für die ausgewählten Dienste in den Registerkarten unten auf der Seite konfigurieren, nachdem Sie Ihre Dienste ausgewählt haben.",
+      "rightLabel": "Ausgewählte Apps",
+      "leftLabel": "Verfügbare Apps"
+    },
+    "applicationExceptionButtonGroup": "App-Ausnahmen",
+    "formSubmitSnackBarError": "Bitte korrigieren Sie {{count}} Fehler",
+    "authenticatorsRequired": "Sie müssen mindestens einen Authenticator auswählen",
+    "authenticatorsLoadingErrorMessage": "Fehler beim Laden von Authentifikatoren",
+    "firstLoginFromBrowserLabel": "Erstes Login vom Browser",
+    "firstLoginFromBrowserNotSetLabel": "Keine",
+    "updatePolicyPageTitleHelperText": "Letzte Aktualisierung: {{date, datetime-short}}",
+    "updateFormCopyPolicyTooltip": "Erstellen Sie eine Kopie dieser Richtlinie",
+    "updateFormDeletePolicyTooltip": "Richtlinie löschen",
+    "savePolicyPriorToCopyMessage": "Speichern Sie die Richtlinie vor dem Kopieren",
+    "unexpectedErrorMessage": "Die Anfrage konnte nicht bearbeitet werden.",
+    "unexpectedErrorWithHttpMessage": "Die Anfrage konnte nicht bearbeitet werden. HTTP-Status zurückgegeben: {{status}}",
+    "unexpectedErrorWithHttpSubcodeMessage": "Die Anfrage konnte nicht bearbeitet werden. HTTP-Status zurückgegeben: {{status}}, Subcode: {{subcode}}",
+    "policyUpdatedMessage": "Die Richtlinie wurde aktualisiert.",
+    "policyDeletedMessage": "Die Richtlinie wurde gelöscht.",
+    "policyCreatedMessage": "Die Richtlinie wurde erstellt.",
+    "policyDeleteErrorMessage": "Die Richtlinie konnte nicht gelöscht werden.",
+    "policyUpdateErrorMessage": "Die Richtlinie konnte nicht aktualisiert werden.",
+    "policyCreateErrorMessage": "Die Richtlinie konnte nicht erstellt werden.",
+    "busyLoading": "Richtlinie wird geladen...",
+    "busyDeleting": "Richtlinie wird gelöscht...",
+    "busyUpdating": "Richtlinie wird aktualisiert...",
+    "busyCreating": "Richtlinien erstellen...",
+    "appsLoadErrorMesage": "Die Anfrage konnte nicht bearbeitet werden.",
+    "swTemplateLoadErrorMesage": "Die Anfrage konnte nicht bearbeitet werden.",
+    "authenticatorsLoadErrorMesage": "Die Anfrage konnte nicht bearbeitet werden.",
+    "policyLoadErrorMesage": "Die Anfrage konnte nicht bearbeitet werden.",
+    "applicationExceptionDescription": "Diese Einstellung überschreibt alle Richtlinien, die Apps zugewiesen sind, wenn sie Benutzern oder Gruppen zugewiesen sind. Sie gilt nicht, wenn eine Richtlinie als App-Standardrichtlinie zugewiesen ist."
+  }
+}

@@ -1,0 +1,15 @@
+.badge {
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 16px;
+  padding: 4px 8px;
+  border-radius: 2px;
+  margin-left: 11px;
+  vertical-align: middle;
+  &.grey {
+    background: #9496a3;
+  }
+  &.green {
+    background: #58c5a3;
+  }
+}

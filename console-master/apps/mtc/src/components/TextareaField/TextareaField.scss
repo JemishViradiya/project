@@ -1,0 +1,47 @@
+@import '../../styles/_colors.scss';
+
+.textarea-input-container {
+  & > div {
+    position: relative;
+  }
+  textarea {
+    margin-top: 0;
+    border-radius: 0;
+    border: 1px solid #cdd0db;
+    min-width: 0;
+    min-height: 40px;
+    width: 100%;
+    padding-left: 8px;
+    &:disabled {
+      background: #f5f5f6;
+      font-size: 14px;
+      color: #babbc0;
+      letter-spacing: 0;
+      line-height: 20px;
+      opacity: 1;
+    }
+  }
+
+  span.error {
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 100%;
+    background: #e66a5e;
+    color: #fff;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  label {
+    font-size: 14px;
+    color: #5c5d66;
+    letter-spacing: 0;
+    line-height: 20px;
+    font-weight: 700;
+    padding-top: 8px;
+  }
+}

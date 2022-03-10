@@ -1,0 +1,24 @@
+{
+  "monday": "Lundi",
+  "tuesday": "mardi",
+  "wednesday": "mercredi",
+  "thursday": "jeudi",
+  "friday": "vendredi",
+  "saturday": "samedi",
+  "sunday": "dimanche",
+  "medium": {
+    "monday": "Lun",
+    "tuesday": "Mar",
+    "wednesday": "Mer",
+    "thursday": "jeu",
+    "friday": "Ven",
+    "saturday": "Sam",
+    "sunday": "Soleil"
+  },
+  "timePicker": {
+    "ampm": "vrai",
+    "okLabel": "OK.",
+    "cancelLabel": "Annuler"
+  },
+  "timeRange": "({{from}} - {{to}})"
+}

@@ -1,0 +1,22 @@
+@import '../theme/theme.less';
+@import './MapCommon.module.less';
+
+.input {
+  position: absolute;
+  top: @inputTop;
+  left: @inputLeft;
+  border-radius: 4px;
+  width: @searchWidth;
+  background-color: @backgroundDefault;
+  opacity: 0.85;
+
+  &:focus {
+    border-color: @colorLink;
+  }
+}
+
+.icon {
+  color: @colorLink;
+  font-size: @fontSizeIcon;
+  cursor: pointer;
+}

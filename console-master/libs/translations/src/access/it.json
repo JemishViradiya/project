@@ -1,0 +1,66 @@
+{
+  "errors": {
+    "noPermission": {
+      "title": "Nessuna autorizzazione",
+      "description": "Non si dispone dell'autorizzazione per visualizzare questa risorsa."
+    },
+    "notFound": {
+      "title": "Risorsa non trovata",
+      "description": "Siamo spiacenti, ma la risorsa che stai cercando non è stata trovata o non hai il permesso di visualizzarla."
+    },
+    "internal": {
+      "title": "Errore",
+      "description": "Siamo spiacenti, si è verificato un errore durante l'elaborazione della richiesta."
+    },
+    "generic": {
+      "title": "Qualcosa è andato storto",
+      "description": "Siamo spiacenti, si è verificato un errore. Riprova più tardi."
+    },
+    "noServiceEnabled": {
+      "title": "Servizio non disponibile",
+      "description": "Questo servizio non è stato abilitato per il tuo inquilino."
+    }
+  },
+  "Ues_Big_ACL_Read": "Visualizza i controlli di accesso alla rete",
+  "Ues_Big_GatewayAppProfile_Read": "Visualizza le policy del servizio Gateway",
+  "Ues_Big_NetworkAccessControlProfile_Read": "Visualizza i controlli di accesso alla rete",
+  "Ues_Big_NetworkServices_Read": "Visualizza i controlli di accesso alla rete",
+  "Ues_Big_Reporting_Read": "Visualizza report Gateway",
+  "Ues_Big_Tenant_Read": "Visualizza le impostazioni del gateway",
+  "Ues_Bip_Device_Read": "Visualizza l'identificatore del dispositivo Avert",
+  "Ues_Bip_Event_Read": "Visualizza gli eventi del dispositivo Avert",
+  "Ues_Bip_FileContent_Read": "Visualizza il contenuto del file Avert",
+  "Ues_Bip_FileSummary_Read": "Visualizza il riepilogo del file riservato di",
+  "Ues_Bip_Policy_Read": "Visualizza le politiche di Avert",
+  "Ues_Bip_RiskScore_Read": "Visualizza i punteggi di rischio Avert",
+  "Ues_Bip_Settings_Read": "Visualizza le impostazioni di Avert",
+  "Ues_Bis_Events_Read": "Visualizza gli eventi di rischio adattivo",
+  "Ues_Bis_EventsLocation_Read": "Visualizza gli eventi di localizzazione del rischio adattivo",
+  "Ues_Bis_RiskProfile_Read": "Visualizza le politiche di rischio adattive",
+  "Ues_Bis_Settings_Read": "Visualizza le impostazioni del rischio adattivo",
+  "Ues_Ecs_ActivationProfile_Read": "Visualizza le politiche di iscrizione",
+  "Ues_Ecs_ActivationSettings_Read": "Visualizza le impostazioni di attivazione",
+  "Ues_Ecs_Bcn_Read": "Visualizza nodo connettività",
+  "Ues_Ecs_Devices_Read": "Visualizza i dispositivi mobili",
+  "Ues_Ecs_Directory_Read": "Visualizza le connessioni alle directory",
+  "Ues_Ecs_Identity_Read": "Visualizza i controlli di autenticazione",
+  "Ues_Ecs_Mdm_Read": "Visualizza le connessioni EMM",
+  "Ues_Ecs_Mfa_Read": "Ues:Ecs:Mfa:Read",
+  "Ues_Ecs_Users_Read": "Visualizza utenti e gruppi",
+  "Ues_Ecs_Vulnerabilities_Read": "Visualizza le vulnerabilità",
+  "Ues_Mtd_Events_Read": "Visualizza gli eventi di Protect Mobile",
+  "Ues_Mtd_Policy_Read": "Visualizza le policy di Protect Mobile",
+  "Ues_Venue_Dashboard_Read": "Dashboard",
+  "Ues_Venue_DesktopPolicy_Read": "Visualizza i criteri per i dispositivi",
+  "Ues_Venue_DesktopReports_Read": "Visualizza i report",
+  "Ues_Venue_Devices_Read": "Visualizza i dispositivi",
+  "Ues_Venue_SettingsCertificates_Read": "Visualizza, crea, modifica, elimina certificati",
+  "Ues_Venue_SettingsGlobalList_Read": "Visualizza l'elenco globale",
+  "Ues_Venue_SettingsIntegrations_Read": "Visualizza, crea, modifica, elimina integrazioni",
+  "Ues_Venue_SettingsUpdate_Read": "Visualizzare, creare, modificare ed eliminare le impostazioni di aggiornamento dell'agente",
+  "Ues_Venue_ThreatProtection_Read": "Visualizza la protezione dalle minacce",
+  "Ues_Venue_Zones_Read": "Visualizza le zone",
+  "service": {
+    "big_blackberry_com": "Gateway"
+  }
+}

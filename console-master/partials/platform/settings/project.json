@@ -1,0 +1,26 @@
+{
+  "root": "partials/platform/settings",
+  "sourceRoot": "partials/platform/settings/src",
+  "projectType": "library",
+  "tags": ["scope:partial", "scope:platform"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["partials/platform/settings/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/partials/platform/settings"],
+      "options": {
+        "jestConfig": "partials/platform/settings/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "serve": {
+      "executor": "./tools/executors/partial-dev-server:serve"
+    }
+  }
+}

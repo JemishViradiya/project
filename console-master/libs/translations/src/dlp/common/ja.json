@@ -1,0 +1,646 @@
+{
+  "setting": {
+    "mainSection": {
+      "pageTitle": "データ損失保護の設定",
+      "tabTitle": {
+        "dataCollection": "データ収集",
+        "whitelisting": "セーフドメイン",
+        "templates": "テンプレート",
+        "dataTypes": "データ型",
+        "trustedCertificates": "信頼できる証明書",
+        "notifications": "通知"
+      }
+    },
+    "buttons": {
+      "save": "保存",
+      "edit": "編集",
+      "enable": "有効",
+      "disable": "無効にする",
+      "cancel": "キャンセル",
+      "delete": "削除"
+    },
+    "list": {
+      "noData": "データなし"
+    },
+    "search": {
+      "region": "リージョン",
+      "infoType": "情報タイプ"
+    },
+    "popover": {
+      "header": "テーブル列"
+    },
+    "template": {
+      "columns": {
+        "templateName": "テンプレート名",
+        "description": "説明",
+        "source": "出典",
+        "type": "出典",
+        "status": "ステータス",
+        "regions": "リージョン",
+        "informationType": "情報タイプ",
+        "infoTypes": "情報タイプ",
+        "dataTypesIncluded": "含まれるデータ型",
+        "dataEntities": "含まれるデータ型",
+        "created": "作成済み",
+        "updated": "更新しました",
+        "guid": "ID"
+      },
+      "filter": {
+        "regions": "リージョンフィルタ",
+        "infoTypes": "情報タイプフィルタ",
+        "dataEntities": "データエンティティフィルタ",
+        "name": "テンプレート名フィルタ",
+        "description": "テンプレート説明フィルタ",
+        "source": "ソースフィルタ",
+        "status": "ソースフィルタ",
+        "inUse": "使用中",
+        "dateCreated": "作成日フィルタ",
+        "dateModified": "日付変更フィルタ"
+      },
+      "buttons": {
+        "newTemplate": "新しいテンプレート",
+        "addToYourList": "リストに追加する",
+        "duplicate": "複製",
+        "removeFromYourList": "リストから削除する",
+        "delete": "削除"
+      },
+      "dialogs": {
+        "removeFromYourList": {
+          "title": "{{count}} テンプレートを削除",
+          "title_plural": "{{count}} 個のテンプレートを削除する",
+          "cancelBtn": "キャンセル",
+          "confirmBtn": "削除",
+          "remove": {
+            "can_be_remove": "'{{name}}' はリストから削除されます。",
+            "can_not_be_remove": "'{{name}}' はリストにありませんでした。",
+            "custom_can_not_be_remove": "'{{name}} 'はカスタムテンプレートなので、リストから削除することはできません。完全に削除することしかできません。"
+          },
+          "remove_singular": {
+            "can_be_remove": "'{{name}}' はリストから削除されます。続行しますか？"
+          },
+          "remove_plural": {
+            "can_not_be_remove": "{{count}} 個以上がリストにありませんでした:",
+            "can_be_remove": "{{count}} 個のテンプレートがリストから削除されます:",
+            "custom_can_not_be_remove": "{{count}} 個のカスタムテンプレートはリストから削除できません。これらは完全に削除することしかできません。"
+          }
+        },
+        "addToYourList": {
+          "title": "{{count}} テンプレートを追加",
+          "title_plural": "{{count}} 個のテンプレートを追加",
+          "cancelBtn": "キャンセル",
+          "confirmBtn": "追加",
+          "add": {
+            "can_be_add": "'{{name}}' がリストに追加されます。",
+            "can_not_be_add": "'{{name}}' は既にリストにあります。",
+            "custom_can_not_be_add": "'{{name}}' はカスタムテンプレートで、既に存在しています。"
+          },
+          "add_singular": {
+            "can_be_add": "'{{name}}' がリストに追加されます。続行しますか？"
+          },
+          "add_plural": {
+            "can_not_be_add": "{{count}} 以上が既に存在しています:",
+            "can_be_add": "{{count}} 個の新しいテンプレートがリストに追加されます:",
+            "custom_can_not_be_add": "{{count}} 個のカスタムテンプレートが既に存在しています:"
+          }
+        },
+        "duplicate": {
+          "title": "複製",
+          "cancelBtn": "キャンセル",
+          "confirmBtn": "続行",
+          "singleItem": "シングル {{count}}",
+          "multipleItems": "複製するには:{{name}}"
+        },
+        "delete": {
+          "title": "{{count}} テンプレートを削除",
+          "title_plural": "{{count}} 個のテンプレートを削除する",
+          "cancelBtn": "キャンセル",
+          "confirmBtn": "削除",
+          "delete_one": "'{{name}}' は削除されます。この操作は元に戻せません。続行しますか？",
+          "delete_allowed": "{{name}} 個のカスタムテンプレートは削除されます。",
+          "delete_allowed_plural": "{{count}} 個のカスタムテンプレートが削除されます:",
+          "delete_protected": "{{name}} システムテンプレートはいつでも削除できません。",
+          "delete_protected_plural": "{{count}} 個のシステムテンプレートはいつでも削除できません:"
+        },
+        "confirmation": {
+          "question": "続行しますか？"
+        }
+      },
+      "error": {
+        "listview": "テンプレートリストの取得エラー",
+        "delete": "テンプレートを削除できませんでした。",
+        "addToYourList": "操作を完了できませんでした。",
+        "removeFromYourList": "操作を完了できませんでした。"
+      },
+      "success": {
+        "delete": "テンプレートは削除されました。",
+        "addToYourList": "操作は完了しました。",
+        "removeFromYourList": "操作は完了しました。"
+      }
+    },
+    "deleteConfirmationDialog": {
+      "title": "削除",
+      "cancelButton": "キャンセル",
+      "confirmButton": "削除"
+    },
+    "createdConfirmationDialog": {
+      "title": "作成",
+      "description": "出て行きたい？変更内容は保存されていません。",
+      "cancelButton": "キャンセル",
+      "confirmButton": "確認"
+    },
+    "modifiedConfirmationDialog": {
+      "title": "修正",
+      "description": "出て行きたい？変更内容は保存されていません。",
+      "cancelButton": "キャンセル",
+      "confirmButton": "確認"
+    },
+    "disableConfirmationDialog": {
+      "title": "無効にする",
+      "cancelButton": "キャンセル",
+      "confirmButton": "無効にする"
+    },
+    "enableConfirmationDialog": {
+      "title": "有効",
+      "cancelButton": "キャンセル",
+      "confirmButton": "有効"
+    },
+    "general": {
+      "domain": {
+        "title": "セーフブラウザードメイン",
+        "description": "ファイルを安全にアップロードするために使用できるドメインを指定します。機密ファイルのアップロードをスキャンするポリシーを作成する場合、選択したドメインはポリシー違反をトリガーしません。",
+        "enabled": {
+          "tableTitle": "有効なドメイン"
+        },
+        "dialog": {
+          "title": {
+            "newDomain": "セーフドメインの追加",
+            "edit": "セーフドメインを編集する",
+            "delete": "{{count}} ドメインを削除する",
+            "delete_plural": "{{count}} 個のドメインを削除する",
+            "disable": "{{count}} ドメインを無効にする",
+            "disable_plural": "{{count}} ドメインを無効にする",
+            "enable": "{{count}} ドメインを有効にする",
+            "enable_plural": "{{count}} ドメインを有効にする"
+          },
+          "warning": {
+            "delete_zero": "続行しますか?",
+            "delete_one": "このドメインを削除してもよろしいですか？このドメインは現在 {{count}} Avert ポリシーで使用されています。",
+            "delete_many": "このドメインを削除してもよろしいですか？これらのドメインは現在 {{count}} Avert ポリシーで使用されています。"
+          },
+          "success": {
+            "create": "ブラウザドメインの作成に成功しました",
+            "delete": "ブラウザドメインの削除に成功しました",
+            "edit": "編集は成功しました"
+          },
+          "error": {
+            "create": "ブラウザドメインの作成に失敗しました",
+            "delete": "ブラウザドメインの削除に失敗しました",
+            "edit": "編集失敗"
+          }
+        },
+        "disabled": {
+          "tableTitle": "無効なドメイン"
+        },
+        "buttons": {
+          "addNewDomain": "新しいドメインの追加",
+          "verify": "検証する",
+          "edit": "編集",
+          "enable": "有効",
+          "disable": "無効にする",
+          "delete": "削除",
+          "save": "保存",
+          "cancel": "キャンセル",
+          "add": "追加"
+        },
+        "columns": {
+          "guid": "ID",
+          "domainName": "ドメイン名",
+          "description": "説明",
+          "policiesAssigned": "割り当てられたポリシー",
+          "enabled": "有効",
+          "disabled": "無効",
+          "created": "作成済み",
+          "updated": "更新しました"
+        },
+        "filter": {
+          "name": "ドメイン名フィルタ",
+          "description": "ドメイン記述フィルタ",
+          "policies": "ポリシーフィルタ"
+        },
+        "validation": {
+          "invalidDomainName": "ドメイン名が無効です",
+          "fileCARequired": "CA ファイルが必要です",
+          "verificationToolTip": "このドメインが既存の信頼された証明書を使用しているかどうかを確認するには、[確認] をクリックします。[設定] > [信頼できる証明書] で証明書をさらに追加できます。",
+          "verificationFailedText": "検証を完了できませんでした。",
+          "unreachableDomainText": "ドメインは使用できません。",
+          "unknownError": "不明なエラー",
+          "verificationSuccessText": "検証済み {{date}}",
+          "nameRequired": "ドメイン名は必須です",
+          "verificationText": "サーバがルート CA を使用しているかどうかを確認できます。"
+        },
+        "enabledSwitcher": "ドメイン有効"
+      },
+      "whitelistEmailDomains": {
+        "title": "安全な電子メールドメイン",
+        "description": "内部メールドメインを指定します。他のすべてのドメインは外部と見なされます。機密データをスキャンするポリシーを作成すると、追加するドメインは安全と見なされます。",
+        "helperText": "複数のドメインを区切るには、カンマを使用します。",
+        "placeholder": "blackberry.com",
+        "invalidValue": "ドメイン名が無効です。"
+      },
+      "dataCollectionSettings": {
+        "title": "データ収集設定",
+        "maxUploadLabel": "最大アップロード",
+        "ui_tenant_setting_isSnippetReported": {
+          "heading": "ファイルスニペット",
+          "title": "ファイルスニペットの生成",
+          "description": "機密コンテンツを含むファイルスニペットを、データ漏洩イベントの一部として含めます。このコンテンツは、機密ファイルの概要表示権限を持つユーザが、組織内の Avert Events で表示できます。"
+        },
+        "ui_tenant_setting_uploadEvidenceFile": {
+          "title": "証拠ファイルの収集を有効にする",
+          "description": "ポリシーで有効にすると、セキュリティインシデントを引き起こしたデータの完全なコピーを収集し、監査目的で保存できます。データ収集の設定を管理します。",
+          "heading": "証拠ファイル収集"
+        },
+        "ui_tenant_setting_tempFileFolderSize": {
+          "description": "ファイルがアップロード待ちになっている一時フォルダに使用されたディスクの割合"
+        },
+        "ui_tenant_setting_uploadOnMobileNetwork": {
+          "title": "Wi-Fi または有線ネットワークに接続しているときのみファイルをアップロードする",
+          "description": "モバイルネットワークでのファイルのアップロードを許可しない。"
+        },
+        "ui_tenant_setting_bandwidthLimit": {
+          "title": "ファイルアップロードの帯域幅を制限する",
+          "description": "ファイル転送速度を上限にする帯域幅制限を構成する",
+          "bandwidthLimit": "帯域幅使用量"
+        },
+        "ui_tenant_setting_transferWindowStartTime": {
+          "from": "から",
+          "title": "データ転送時間",
+          "description": "データのアップロードをいつ行うかをスケジュールします。特定の時間のみを指定した場合、管理者が指定した時間までデータ漏洩イベントに関連付けられたファイルにアクセスできなくなることに注意してください。すべての時刻は、ファイルをアップロードするデバイスのローカル時刻です。"
+        },
+        "ui_tenant_setting_transferWindowEndTime": {
+          "to": "へ"
+        },
+        "validation": {
+          "percentValue": "値は 0 から 100 の範囲で指定する必要があります。"
+        },
+        "ui_tenant_setting_uploadDirectlyToS3": {
+          "heading": "ファイルのアップロード",
+          "description": "証拠ファイルのアップロードに使用する方法を選択する",
+          "s3_cloud_method": "S3 クラウド",
+          "title": "ファイルアップロード方法",
+          "local_dlp_file_service_method": "BlackBerry 経由のプロキシ"
+        },
+        "ui_file_setting_evidenceFileRetentionPeriod": {
+          "heading": "データ保持",
+          "description": "セキュリティインシデントに関係するデータを保存する期間を構成する",
+          "title": "データ保持",
+          "30_days": "30日間",
+          "60_days": "60日間",
+          "90_days": "90日間"
+        },
+        "description": "データ漏出イベントについて収集する証拠を構成します。",
+        "diskSpaceLabel": "ディスク容量"
+      }
+    },
+    "unexpectedErrorMessage": "予期しないエラーが発生しました",
+    "domainNameErrorMessage": "この名前のドメインは既に存在します。",
+    "table": {
+      "list": {
+        "noData": "データなし",
+        "searchPlaceholder": "検索用に何かを入力する"
+      }
+    },
+    "dataTypes": {
+      "columns": {
+        "name": "データ型名",
+        "keywords": "キーワード",
+        "informationType": "情報タイプ",
+        "region": "リージョン",
+        "source": "ソース"
+      },
+      "filter": {
+        "name": "データ型名フィルタ",
+        "keywords": "キーワードフィルタ",
+        "infoTypes": "情報タイプフィルタ",
+        "regions": "リージョンフィルタ",
+        "inUse": "使用中",
+        "source": "ソースフィルタ"
+      },
+      "buttons": {
+        "addToYourList": "リストに追加する",
+        "removeFromYourList": "リストから削除する",
+        "newDataType": "新しいデータ型"
+      },
+      "dialogs": {
+        "addToYourList": {
+          "title": "{{count}} データ型を追加",
+          "title_plural": "{{count}} データ型を追加",
+          "cancelBtn": "キャンセル",
+          "confirmBtn": "追加",
+          "add_one": "'{{name}}' がリストに追加されます。続行しますか？",
+          "add_new": "{{count}} 個の新しいデータ型がリストに追加されます:",
+          "add_new_plural": "{{count}} 個の新しいデータ型がリストに追加されます:",
+          "add_existing": "{{count}} は既に存在しています:"
+        },
+        "removeFromYourList": {
+          "cancelBtn": "キャンセル",
+          "confirmBtn": "削除",
+          "remove": "'{{name}}' はリストから削除されます。続行しますか？",
+          "title": "{{count}} データ型を削除",
+          "title_plural": "{{count}} 個のデータ型を削除する",
+          "remove_plural": "次のデータ型はリストから削除されます。"
+        },
+        "confirmation": {
+          "question": "続行しますか？"
+        },
+        "delete": {
+          "title": "{{count}} 個のデータ型を削除する",
+          "title_plural": "{{count}} 個のデータ型を削除する",
+          "delete_one": "'{{name}}' は削除されます。この操作は元に戻せません。続行しますか？",
+          "delete_allowed": "{{name}} カスタムデータ型は削除されます。",
+          "delete_allowed_plural": "{{count}} 個のカスタムデータ型は削除されます。",
+          "delete_protected": "{{name}} システムデータ型はいつでも削除できません:",
+          "delete_protected_plural": "{{count}} 個のシステムデータ型はいつでも削除できません:"
+        }
+      }
+    },
+    "dataType": {
+      "columns": {
+        "keywords": "キーワード",
+        "status": "ステータス",
+        "regions": "リージョン",
+        "infoTypes": "情報タイプ",
+        "parameters": "dataType.columns.Parameters を設定する",
+        "type": "dataType.columns.Type を設定する"
+      },
+      "name": "表示名",
+      "description": "説明",
+      "region": "リージョン",
+      "infoTypes": "情報タイプ",
+      "algorithm": "検索方法",
+      "keywords": "キーワード",
+      "regex": "正規表現",
+      "addDataType": "新しいデータ型の追加",
+      "buttons": {
+        "create": "作成",
+        "cancel": "キャンセル"
+      },
+      "error": {
+        "create": "データ型を作成できませんでした。エラー:{{error}}",
+        "update": "データタイプを更新できませんでした。エラー:{{error}}",
+        "remove": "データ型をお気に入りリストから削除できませんでした。エラー:{{error}}",
+        "add": "データ型をお気に入りリストに追加できませんでした。エラー:{{error}}"
+      },
+      "success": {
+        "create": "データ型が作成されました。",
+        "update": "データ型が更新されました。",
+        "remove": "お気に入りリストからデータタイプが削除されました",
+        "add": "データタイプがお気に入りリストに追加されました"
+      },
+      "detail": {
+        "updated": "{{date}} に更新されました"
+      }
+    },
+    "trustedCertificates": {
+      "columns": {
+        "subject": "件名",
+        "issuer": "発行者",
+        "addedDate": "追加日",
+        "expirationDate": "有効期限"
+      },
+      "buttons": {
+        "addNew": "証明書の追加",
+        "delete": "削除"
+      },
+      "dialogs": {
+        "addToYourList": {
+          "title": "証明書の追加",
+          "subTitle": "アップロードするファイルを選択",
+          "cancelBtn": "キャンセル",
+          "confirmBtn": "追加"
+        },
+        "removeFromYourList": {
+          "title": "証明書を削除する",
+          "cancelBtn": "キャンセル",
+          "confirmBtn": "削除",
+          "title_plural": "リポジトリおよびそれを使用するセーフリストから {{count}} 個の証明書を削除しますか?"
+        }
+      },
+      "error": {
+        "delete": "証明書を削除できませんでした。",
+        "addToYourList": "証明書を追加できませんでした。"
+      },
+      "success": {
+        "delete": "証明書は削除されました。",
+        "addToYourList": "証明書が追加されました。"
+      },
+      "title": "信頼された証明書",
+      "description": "信頼された証明書は、Avert S設定で追加した許可されたドメインを検証するために使用されます。"
+    },
+    "notifications": {
+      "title": "通知",
+      "switcherLabel": "メール通知を有効にする",
+      "switcherDescription": "会社のポリシーと矛盾するセンシティブデータが共有されたときに通知を受け取る",
+      "emailRecipients": "メール受信者",
+      "emailRecipientsHelperText": "複数のEメールアドレスはカンマで区切ります",
+      "success": "通知設定が更新されました。",
+      "invalid": "電子メール受信者の値が無効です。"
+    },
+    "unexpectedErrorWithHttpMessage": "リクエストを処理できませんでした。返された HTTP ステータス:{{status}}"
+  },
+  "tableColumns": "テーブル列",
+  "noData": "データなし",
+  "modifiedConfirmationDialog": {
+    "title": "作品名",
+    "cancelButton": "キャンセル",
+    "description": "説明",
+    "confirmButton": "確認"
+  },
+  "enterField": "このフィールドは、必修です。",
+  "selected": "{{count}} が選択されました",
+  "pickers": {
+    "time": {
+      "invalidMessage": "時刻が無効です。"
+    }
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "policiesTab": "ポリシー",
+    "usersTab": "ユーザー",
+    "devicesTab": "デバイス",
+    "dataTypesTab": "データ型",
+    "infoTypesTab": "情報タイプ",
+    "fileTypesTab": "ファイルタイプ",
+    "allTab": "すべて",
+    "emailTab": "電子メール",
+    "browserTab": "ブラウザ",
+    "usbTab": "USB",
+    "filesTab": "ファイル",
+    "totalSensitiveData": "機密ファイルが検出されました",
+    "exfiltrationEventTypes": {
+      "EMAIL": "電子メール",
+      "BROWSER": "ブラウザ",
+      "REMOVABLE_MEDIA": "リムーバブルメディア"
+    },
+    "dataEntities": "データ型",
+    "evidenceLockerFiles": "証拠ロッカーのファイル",
+    "connectedUsers": "接続したユーザー避ける",
+    "connectedDevices": "接続したデバイス避ける",
+    "exfiltrationEventsByWidgetTitle": "情報流出イベント",
+    "exfiltrationEventsByDestination": "場所別の上位の流出イベント",
+    "topEventsByWidgetTitle": "カテゴリ別の上位の流出イベント",
+    "sensitiveDataEndpoints": "カテゴリー別ファイルインベントリ",
+    "evidenceLockerFilesTitle": "証拠ロッカー",
+    "totalSensitiveDataTitle": "ファイルインベントリ"
+  },
+  "events": {
+    "title": "イベントをAvert",
+    "columns": {
+      "detectionTime": "検出時間",
+      "device": "デバイス",
+      "user": "ユーザー",
+      "activity": "アクティビティ",
+      "location": "ロケーション",
+      "file": "ファイル",
+      "policy": "ポリシー",
+      "dataEntityCount": "データ型",
+      "noUserName": "名前なし"
+    },
+    "serverError": {
+      "retrieveEvents": "イベントリストの取得に失敗しました"
+    },
+    "filter": {
+      "detectionTime": "検出時間フィルタ",
+      "device": "デバイス名フィルタ",
+      "user": "ユーザー名フィルタ",
+      "activity": "アクティビティフィルタ",
+      "location": "ロケーションフィルタ",
+      "file": "ファイル名フィルタ",
+      "policy": "ポリシー名フィルタ",
+      "dataType": "データ型名フィルタ"
+    },
+    "drawer": {
+      "accordion": {
+        "eventOverview": "イベント概要",
+        "eventUserDetails": "ユーザー詳細",
+        "eventUserDetailsName": "{{name}} アップロード",
+        "eventFilesDetails": "ファイルの詳細 ({{count}})",
+        "eventPolicyViolations": "ポリシー違反 ({{count}})",
+        "fileDetails": "ファイルの詳細",
+        "userName": "表示名",
+        "userEmail": "電子メール",
+        "userTitle": "作品名",
+        "userDepartment": "部署",
+        "typeLabel": "タイプ",
+        "detectionTimeLabel": "検出時間",
+        "deviceLabel": "デバイス",
+        "locationLabel": "ロケーション"
+      },
+      "fileSection": {
+        "sensitiveData": "機密データの種類 (出現回数)",
+        "contentSnippets": "スニペットコンテンツ",
+        "emptySnippets": "スニペットのコンテンツリストが空です",
+        "downloadFile": {
+          "error": "ファイルをダウンロードできませんでした。"
+        },
+        "txtFileFormat": "テキストドキュメント",
+        "doc(x)FileFormat": "Microsoft Word 文書",
+        "xlsxFileFormat": "Microsoft エクセル文書",
+        "pdfFileFormat": "Microsoft PDFドキュメント",
+        "defaultFileFormat": "{{format}} ドキュメント"
+      },
+      "eventDetailsTitle": "イベント詳細",
+      "downloadEvidenceFile": "すべてダウンロード"
+    }
+  },
+  "fileInventory": {
+    "title": "ファイルインベントリ",
+    "columns": {
+      "fileName": "[ファイル名]",
+      "fileSize": "ファイルサイズ",
+      "infoTypes": "情報タイプ",
+      "dataTypes": "データ型",
+      "users": "ユーザー",
+      "devices": "デバイス",
+      "policies": "ポリシー"
+    },
+    "filter": {
+      "fileName": "[ファイル名]",
+      "infoTypes": "情報タイプ"
+    },
+    "error": {
+      "listview": "ファイルインベントリリストを取得できませんでした。"
+    },
+    "drawer": {
+      "fileDetails": {
+        "title": "ファイル詳細",
+        "fileSize": "ファイルサイズ",
+        "fileType": "ファイルタイプ",
+        "evidenceFile": "エビデンスファイル"
+      },
+      "users": {
+        "title": "ファイルへのアクセス権を持つユーザー"
+      },
+      "devices": {
+        "title": "ファイルにアクセスできるデバイス"
+      },
+      "dataTypes": {
+        "title": "データ型",
+        "occurrences": "{{name}} ({{occurrences}})"
+      },
+      "policyViolations": {
+        "title": "ポリシー違反"
+      },
+      "seeMore": "+ {{count}} もっと見る"
+    }
+  },
+  "infoTypesValue": {
+    "privacy": "プライバシー",
+    "finance": "金融",
+    "custom": "カスタム",
+    "health": "ヘルス",
+    "personal": "パーソナル"
+  },
+  "labelDlp": "情報保護",
+  "evidenceLocker": {
+    "title": "証拠ロッカー",
+    "columns": {
+      "created": "追加された時間",
+      "fileName": "[ファイル名]",
+      "size": "ファイルサイズ",
+      "events": "関連するイベント",
+      "download": "ダウンロード"
+    },
+    "filter": {
+      "fileName": "ファイル名フィルタ",
+      "created": "時間追加フィルタ",
+      "size": "ファイルサイズフィルタ"
+    },
+    "selected": "{{count}} が選択されました",
+    "sensitiveFilesStorage": {
+      "serverError": "{{error}}"
+    },
+    "memoryUsed": "{{totals}} 個の機密ファイル/{{used}} の {{remains}} が使用されています"
+  },
+  "users": {
+    "mainTitle": {
+      "assets": "資産",
+      "users": "ユーザー"
+    },
+    "buttons": {
+      "manageUsers": "ユーザーを管理する"
+    },
+    "columns": {
+      "name": "名前",
+      "emailAddress": "Eメールアドレス",
+      "devices": "デバイス"
+    },
+    "error": {
+      "listView": "ユーザーリストを取得できませんでした。"
+    },
+    "devices": {
+      "agentVersion": "Avert エージェントバージョン:{{version}}",
+      "osVersion": "{{name}} {{version}}"
+    }
+  }
+}

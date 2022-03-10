@@ -1,0 +1,6 @@
+{
+  "name": "@ues-behaviour/dashboard",
+  "version": "0.0.1",
+  "sideEffects": false,
+  "module": "./src/index.ts"
+}

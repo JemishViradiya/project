@@ -1,0 +1,60 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nrwl/nx"],
+  "extends": [
+    "./tools/eslint/nx.eslintrc.js",
+    "./tools/eslint/prettier.eslintrc.js",
+    "./tools/eslint/rules.eslintrc.js",
+    "./tools/eslint/import.eslintrc.js"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "prettier/prettier": "error",
+        "semi": "off",
+        "comma-dangle": "off",
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": ["@mtc/*"],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["tools/**/*.js"],
+      "env": {
+        "node": true,
+        "commonjs": true
+      }
+    },
+    {
+      "files": ["*.stories.*", "*.test.*", "*.spec.*", "src/storybook/**/*", "docs/**/*", "src/partial.ts", "x-grid.stories.tsx"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "allowCircularSelfDependency": true
+          }
+        ]
+      }
+    },
+    {
+      "files": [".storybook/**/*", "**/.storybook/*"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "sonarjs/no-duplicate-string": "off",
+        "sonarjs/cognitive-complexity": "off"
+      }
+    }
+  ]
+}

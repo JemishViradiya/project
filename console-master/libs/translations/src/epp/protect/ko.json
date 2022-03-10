@@ -1,0 +1,27 @@
+{
+  "widget": {
+    "runningThreats": "실행 중인 위협",
+    "autoRunThreats": "자동 실행 위협",
+    "quarantinedThreats": "격리된 위협",
+    "uniqueToCylance": "독특한 사일런스",
+    "totalAnalyzedFiles": "총 분석된 파일",
+    "threatProtection": "위협 보호",
+    "deviceProtection": "장치 보호",
+    "threatEvents": "위협 이벤트",
+    "threatsByPriority": "우선순위별 위협",
+    "topTenLists": "상위 10개 목록",
+    "threatClassifications": "위협 분류"
+  },
+  "topTenLists": {
+    "Threats": "위협",
+    "Devices": "장치",
+    "Zones": "구역",
+    "Threatsfoundonthemostdevices": "대부분의 장치에서 발견된 위협",
+    "NoThreatsfound": "위협을 찾을 수 없음",
+    "Deviceswiththemostthreats": "위협이 가장 많은 장치",
+    "NoDevicesfound": "디바이스를 찾을 수 없음",
+    "Zoneswiththemostthreats": "위협이 가장 많은 구역",
+    "NoZonesfound": "영역을 찾을 수 없음"
+  },
+  "protectDashboard": "대시보드 Protect"
+}

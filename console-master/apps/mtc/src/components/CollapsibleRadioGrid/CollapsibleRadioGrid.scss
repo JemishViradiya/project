@@ -1,0 +1,48 @@
+.accordion-header-card {
+  background: #eeeeee;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-right: 2rem;
+}
+
+.radio-grid-input-label {
+  font-size: 0.9rem;
+  margin: auto 0;
+}
+
+.radio-grid-input {
+  margin: auto;
+  padding-right: 3rem;
+  text-align: center;
+}
+
+.radio-grid-header-label {
+  margin: auto;
+  text-align: center;
+}
+
+.radio-grid-accordion-header {
+  background: #eeeeee;
+  font-size: 1rem;
+  margin: 15px 0 auto 0;
+
+  .MuiAccordionSummary-expandIcon {
+    top: 50%;
+    right: 8px;
+    position: absolute;
+    transform: translateY(-50%) rotate(0deg);
+
+    &.Mui-expanded {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
+
+.radio-grid-accordion-label {
+  margin: auto 0;
+}
+
+.radio-grid-accordion-subitem {
+  display: block;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,17 @@
+.retry-provisioning-cell {
+  display: flex;
+
+  .warning-icon {
+    margin: auto 0;
+  }
+
+  #button {
+    height: 30px;
+    margin: -2px 0 auto 0;
+
+    .MuiButton-label {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+}

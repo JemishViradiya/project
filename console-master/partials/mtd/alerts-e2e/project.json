@@ -1,0 +1,29 @@
+{
+  "root": "partials/mtd/alerts-e2e",
+  "sourceRoot": "partials/mtd/alerts-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/mtd/alerts-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/mtd/alerts-e2e/cypress.json",
+        "tsConfig": "partials/mtd/alerts-e2e/tsconfig.json",
+        "devServerTarget": "mtd/alerts:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "mtd/alerts:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/mtd/alerts-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:mtd"],
+  "implicitDependencies": ["mtd/alerts"]
+}

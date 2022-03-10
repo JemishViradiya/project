@@ -1,0 +1,101 @@
+{
+  "root": "apps/gateway",
+  "sourceRoot": "apps/gateway/src",
+  "projectType": "application",
+  "generators": {},
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "options": {
+        "baseHref": "..",
+        "deployUrl": "uc/gateway/",
+        "outputPath": "dist/uc/gateway",
+        "index": "tools/index.html",
+        "main": "apps/gateway/src/main.tsx",
+        "polyfills": "libs/behaviour/app-shell/src/polyfills.ts",
+        "tsConfig": "apps/gateway/tsconfig.app.json",
+        "assets": [],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "tools/webpack/app",
+        "maxWorkers": 1,
+        "memoryLimit": 1024
+      },
+      "configurations": {
+        "production": {
+          "outputPath": "prod/gateway",
+          "fileReplacements": [
+            {
+              "replace": "apps/gateway/src/environments/environment.js",
+              "with": "apps/gateway/src/environments/environment.prod.js"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            }
+          ],
+          "maxWorkers": 1,
+          "memoryLimit": 2048
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "gateway:build",
+        "hmr": true,
+        "ssl": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "gateway:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/gateway/**/*.js",
+          "apps/gateway/**/*.jsx",
+          "apps/gateway/**/*.ts",
+          "apps/gateway/**/*.tsx",
+          "tools/nx/typings/image.d.ts",
+          "apps/gateway/**/*.spec.ts",
+          "apps/gateway/**/*.spec.tsx",
+          "apps/gateway/**/*.spec.js",
+          "apps/gateway/**/*.spec.jsx",
+          "apps/gateway/**/*.d.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/gateway/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["test-results/apps/gateway"]
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "bash tools/deploy/app.sh gateway"
+      }
+    }
+  },
+  "tags": ["scope:app"],
+  "implicitDependencies": ["api", "pwa"]
+}

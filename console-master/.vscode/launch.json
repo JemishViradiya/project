@@ -1,0 +1,44 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug @nrwl/tao task",
+      "program": "${workspaceFolder}/node_modules/.bin/tao",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node",
+      "autoAttachChildProcesses": true,
+      "outputCapture": "std",
+      "console": "integratedTerminal",
+      "args": ["serve", "${input:projectName}"],
+      "env": {
+        "LOG_LEVEL": "debug"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Current Unit Test",
+      "program": "${workspaceFolder}/node_modules/.bin/nx",
+      "args": ["test", "${input:projectName}", "--test-file", "${fileBasenameNoExtension}"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+      },
+      "cwd": "${workspaceFolder}"
+    }
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "projectName",
+      "description": "Which project/partial are you running?",
+      "default": "bis"
+    }
+  ]
+}

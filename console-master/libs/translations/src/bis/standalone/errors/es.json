@@ -1,0 +1,15 @@
+{
+  "next": "Próximo",
+  "tenantID": "ID de arrendatarios",
+  "signIn": "Iniciar sesión",
+  "help": "Ayudar",
+  "signedOut": "Se ha cerrado sesión",
+  "signedOutMessage": "Se ha cerrado la sesión.",
+  "sessionExpired": "La sesión ha caducado",
+  "sessionExpiredMessage": "Tu sesión ha caducado.",
+  "signInAgainLink": "Haz clic aquí para volver a iniciar sesión.",
+  "tenantIdLabel": "Especifique su ID de inquilino:",
+  "loadingSessionLabel": "Cargando tu sesión...",
+  "loadingTenantLabel": "Cargando tu inquilino...",
+  "noTenantLabel": "No se pudo encontrar al inquilino «{{tenant}}»."
+}

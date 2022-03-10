@@ -1,0 +1,557 @@
+{
+  "settings": {
+    "operatingMode": {
+      "title": "Mode de fonctionnement",
+      "description": "Spécifiez un mode de fonctionnement. Le mode passif est utilisé pour collecter des données et créer des modèles de risque pour les utilisateurs individuels sans aucune action. En mode actif, les actions de réponse définies dans les stratégies sont appliquées. Les alertes sont générées dans les deux modes de fonctionnement. Lorsque le premier utilisateur est ajouté à une stratégie de réponse adaptative, une période de formation pour le modèle de risque de réponse adaptative démarre et dure jusqu'à ce que les conditions suivantes soient remplies: 1000 événements sont collectés pour le locataire de l'utilisateur et 14 jours calendaires s'écoulent. Les alertes ne sont pas générées pendant la période de formation.",
+      "options": {
+        "ACTIVE": "Mode actif",
+        "PASSIVE": "Mode passif"
+      }
+    },
+    "riskEngines": {
+      "title": "Paramètre du moteur de risque d'identité",
+      "networkAnomaly": {
+        "title": "Anomalie du réseau",
+        "description": "Spécifiez le seuil des événements d'anomalie réseau et indiquez s'ils sont traités comme un risque élevé ou critique. Les événements d'anomalie réseau sont détectés lorsque le modèle d'utilisation du réseau d'un utilisateur de passerelle n'est pas cohérent avec le comportement passé.",
+        "riskFactor": "Risque d'anomalie réseau"
+      },
+      "tableHeader": {
+        "factor": "Risques",
+        "detection": "Détection",
+        "level": "Niveau de risque"
+      }
+    },
+    "ipaddresses": {
+      "trusted": "Adresses IP de confiance",
+      "untrusted": "Adresses IP non fiables",
+      "ipAddressConfiguration": "Configuration de l'adresse IP",
+      "name": "Nom",
+      "detail": "Détail",
+      "noData": "Aucune donnée",
+      "deleteItem": "Supprimer un article",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "trustedAddModalLabel": "Ajouter des adresses IP de point de terminaison sécurisées",
+      "trustedEditModalLabel": "Modifier les adresses IP des points de terminaison sécurisés",
+      "save": "Enregistrer",
+      "errorFieldRequired": "Ce champ est obligatoire.",
+      "errorInvalidName": "Ce champ n'est pas valide.",
+      "sourceLabel": "Source",
+      "specifiedAddresses": "Adresses IP, plages IP ou CIDR",
+      "ipAddressesLabel": "Adresses IP, plages IP ou CIDR",
+      "addNew": "Ajouter une adresse IP",
+      "search": "Rechercher",
+      "invalidFormat": "Le format n'est pas valide.",
+      "selectedAriaLabel": "Adresses IP sélectionnées",
+      "selectedItemsCount": "{{count}} sélectionné",
+      "untrustedAddModalLabel": "Ajouter des adresses IP de terminaux restreintes",
+      "untrustedEditModalLabel": "Modifier les adresses IP des terminaux restreints",
+      "more": "{{count}} plus",
+      "results": "Résultat de {{count}}",
+      "ipaddress": "adresse IP",
+      "results_plural": "{{count}} résultats",
+      "more_plural": "{{count}} plus",
+      "deleteDialog": {
+        "title": "confirmation de suppression",
+        "description": "Voulez-vous supprimer les adresses IP sélectionnées?",
+        "confirmButtonLabel": "Supprimer",
+        "cancelButtonLabel": "Annuler"
+      },
+      "trustedModalLabel": "Adresses IP de point de terminaison sécurisées",
+      "untrustedModalLabel": "Adresses IP d'extrémité restreintes",
+      "ipAddressesSubLabel": "Entrez des adresses IP, des plages d'adresses IP ou des CIDR (un par ligne)"
+    },
+    "ipAddress": {
+      "errorAddNew": "La liste d'adresses IP n'a pas pu être ajoutée",
+      "errorUpdate": "La liste d'adresses IP n'a pas pu être mise à jour",
+      "errorDelete": "La liste d'adresses IP n'a pas pu être supprimée"
+    },
+    "comingSoonMessage": {
+      "title": "Bientôt disponible",
+      "description": "Les paramètres de sécurité adaptatifs seront disponibles dans une prochaine mise à jour de la console UES."
+    }
+  },
+  "gatewayAlerts": {
+    "table": {
+      "headers": {
+        "risk": "Risques",
+        "type": "Type",
+        "detection": "Détection",
+        "response": "Réponse",
+        "device": "Appareil",
+        "user": "Utilisateur",
+        "detectionTime": "Heure de détection",
+        "category": "Catégorie",
+        "identityChallenge": "Défi identitaire"
+      },
+      "filters": {
+        "risk": "Filtre de risque",
+        "user": "Filtre utilisateur",
+        "detection": "Filtre de détection",
+        "detectionTime": "Filtre de temps de détection"
+      },
+      "toolbar": {
+        "totalResults": "{{total}} résultats"
+      },
+      "columnPicker": {
+        "title": "Colonnes de table"
+      },
+      "noDataInTrainingMode": "La réponse adaptative utilise une période de formation jusqu'à ce que les conditions suivantes soient remplies: 1000 événements sont collectés pour le locataire d'un utilisateur et 14 jours calendaires s'écoulent. Les alertes ne sont pas générées pendant la période de formation.",
+      "noDataPlaceholder": "Aucune alerte n'a été générée au cours des 30 derniers jours.",
+      "noDataWithFilters": "Aucune alerte n'a été trouvée avec les filtres sélectionnés.",
+      "noDataInTrainingModeDP": "Les stratégies d'évaluation des risques utilisent une période de formation jusqu'à ce que les conditions suivantes soient remplies: 1000 événements sont collectés pour le locataire d'un utilisateur et 14 jours civils s'écoulent. Les alertes ne sont pas générées pendant la période de formation."
+    },
+    "columns": {
+      "response": {
+        "overrideNetworkAccessPolicy": "Remplacer la stratégie de contrôle d'accès réseau: {{name}}",
+        "passiveModePrefix": "Actions non exécutées: {{text}}",
+        "passiveModeTooltip": "Les actions de réponse ne sont pas appliquées aux utilisateurs en mode passif.",
+        "passiveModeTooltipArr": "Le mode de fonctionnement passif est activé. Les défis d'identité ne sont pas envoyés en mode de fonctionnement passif.",
+        "passiveModeTooltipAriaLabel": "Informations sur le mode passif",
+        "challengeState": {
+          "deny": "Défi d'identité: refusé par l'utilisateur",
+          "failed": "Défi d'identité: Erreur - Non terminé",
+          "in_progress": "Défi identitaire: En cours",
+          "no_mfa": "Défi d'identité: non activé dans la stratégie",
+          "mfa_skipped": "Défi identitaire: contourné",
+          "ok": "Défi d'identité: vérifié",
+          "timeout": "Défi identitaire: Timed out",
+          "unknown": "Défi d'identité: Erreur - Non terminé",
+          "fraud": "Défi d'identité : Fraude"
+        }
+      },
+      "detection": {
+        "networkAnomaly": "Anomalie du réseau"
+      },
+      "identityChallenge": {
+        "challengeState": {
+          "deny": "Refusé par utilisateur",
+          "failed": "Erreur - Non terminé",
+          "in_progress": "En cours",
+          "no_mfa": "Non activé dans la stratégie",
+          "mfa_skipped": "Conbypassé",
+          "ok": "Vérifié",
+          "timeout": "Temporisé",
+          "unknown": "Erreur - Non terminé",
+          "fraud": "Fraude"
+        }
+      },
+      "risk": {
+        "tooltipText": "Cliquez sur une ligne pour afficher les détails de l'événement."
+      }
+    },
+    "alert": {
+      "passiveMode": {
+        "title": "Mode de fonctionnement passif activé",
+        "description": "Les actions de réponse automatique ne seront pas prises en mode de fonctionnement passif.",
+        "settingsLink": "Paramètres"
+      }
+    }
+  },
+  "gatewayAlertDetails": {
+    "titles": {
+      "drawerTitle": "Anomalie du réseau",
+      "alertOverview": "Aperçu des alertes",
+      "affectedAssets": "Inventaire affectés",
+      "responseActions": "Actions de réponse",
+      "risk": "Risques",
+      "responseActionsSubtitle": "<0>par <1>{{policyName}}</1> Stratégie de réponse adaptative</0>",
+      "identityChallenge": "Défi Identity",
+      "eventOverview": "Aperçu de l'événement"
+    },
+    "labels": {
+      "assignedPolicy": "Stratégie de contrôle d'accès réseau remplacée",
+      "description": "Description",
+      "detectionTime": "Heure de détection",
+      "device": "Appareil",
+      "eventDetails": "Détails de l'événement",
+      "eventId": "ID d'événement",
+      "type": "Type",
+      "user": "Utilisateur",
+      "automaticResponseReduction": "État du défi",
+      "userHyperlink": "Accéder aux détails de l'utilisateur",
+      "deviceHyperlink": "Afficher les détails du dispositif"
+    },
+    "values": {
+      "networkEvent": "Événement réseau inhabituel détecté",
+      "riskType": "Risque d'identité",
+      "viewDetails": "Afficher les détails"
+    },
+    "actions": {
+      "noActions": "Aucune action n'a été prise pour le moment"
+    },
+    "labelGateway": "Passerelle",
+    "pageTitle": "Alertes",
+    "pageTitleDpActor": "Alertes de comportement réseau"
+  },
+  "risk": {
+    "common": {
+      "identityRisk": "Risque d'identité",
+      "identityRiskResponseActions": "Mesures de réponse au risque d'identité",
+      "networkAnomaly": "Anomalie du réseau",
+      "generalInfo": "Informations générales",
+      "automaticRiskReduction": "Réduction automatique des risques",
+      "automaticRiskReductionDescription": "Si vous souhaitez permettre aux utilisateurs de réduire leur niveau de risque en se réauthentifiant pour vérifier leur identité, activez la réduction automatique des risques. Vous devez configurer l'authentification multifacteur dans la stratégie d'authentification attribuée aux utilisateurs ou aux groupes avant de pouvoir utiliser la réduction automatique des risques.",
+      "riskChanged": "Le niveau de risque est passé de {{prevLevel}} à {{currentLevel}}."
+    }
+  },
+  "dashboard": {
+    "alertSummaryWidgetTitle": "Résumé des alertes",
+    "identityRiskAlertsWidgetTitle": "Alertes de risque d'identité",
+    "geozoneRiskAlertsWidgetTitle": "Alertes de risque Geozone",
+    "topActionsWidgetTitle": "Principales actions par Politique de réponse adaptative",
+    "realTimeAlertsWidgetTitle": "Alertes en temps réel",
+    "combinedRiskAlertsWidgetTitle": "Alertes de risque d'identité et de risque de géozone",
+    "combinedRiskAlertsIdentityTabTitle": "Identité",
+    "combinedRiskAlertsGeozoneTabTitle": "Geozone",
+    "totalEventsWidgetTitle": "Nombre total d'événements",
+    "totalEventsWidgetDescription": "événements totaux",
+    "totalUsersWidgetTitle": "Nombre total d'Utilisateurs actifs",
+    "totalUsersWidgetDescription": "nombre total d'utilisateurs actifs",
+    "networkAnomalyAlertsWidgetTitle": "Alertes d'anomalies réseau",
+    "networkAlertSummaryWidget": {
+      "title": "Synthèse des alertes réseau",
+      "label": {
+        "high": "Alertes d'anomalies réseau élevées",
+        "critical": "Alertes d'anomalies réseau critiques",
+        "medium": "Alertes d'anomalies réseau moyennes",
+        "low": "Alertes d'anomalies réseau faibles",
+        "unknown": "Alertes d'anomalies réseau inconnues"
+      }
+    },
+    "mapWidgetTitle": "Carte"
+  },
+  "actionType": {
+    "overrideNetworkAccessPolicy": "Remplacer la stratégie de contrôle d'accès réseau"
+  },
+  "riskPolicies": {
+    "common": {
+      "tooltips": {
+        "copyPolicy": "Copier",
+        "deletePolicy": "Supprimer"
+      }
+    },
+    "assessment": {
+      "info": {
+        "title": "Détections de risques",
+        "paragraph": "Attribuez des détections aux niveaux de risque pour configurer une posture de risque pour les utilisateurs. Le niveau de risque est utilisé par les stratégies pour déterminer les réponses aux événements."
+      },
+      "buttons": {
+        "addDetections": "Ajouter des détections",
+        "useTemplate": "Utiliser le modèle"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "Ajoutez une stratégie pour attribuer des détections aux niveaux de risque afin de configurer une posture de risque pour les utilisateurs. Le niveau de risque est utilisé par les stratégies pour déterminer les réponses aux événements. Si aucune stratégie n'est attribuée à un utilisateur, la stratégie par défaut est utilisée."
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Nom",
+        "description": "Description"
+      },
+      "errorMessages": {
+        "required": "Ce champ est obligatoire.",
+        "nameInvalid": "Le nom n'est pas valide.",
+        "descriptionInvalid": "La description n'est pas valide."
+      }
+    },
+    "columns": {
+      "name": "Nom Politique"
+    },
+    "tableHeader": {
+      "risk": "Risques",
+      "detection": "Détection"
+    },
+    "details": {
+      "title": "Détection des risques",
+      "assignedUsersAndGroups": "Utilisateurs et groupes affectés"
+    },
+    "create": {
+      "title": "Ajouter une stratégie de détection des risques",
+      "copyTitle": "Stratégie de détection des risques de copie",
+      "successTitle": "La stratégie a été ajoutée",
+      "successDescription": "Souhaitez-vous affecter des utilisateurs ou des groupes à cette stratégie de détection des risques?",
+      "successReject": "Pas maintenant",
+      "successAccept": "Oui",
+      "error": "La stratégie n'a pas pu être créée.",
+      "policyConfirmationTitle": "Attribuer la stratégie de détection des risques",
+      "policyConfirmationDescription": "La stratégie a été créée. Voulez-vous attribuer des utilisateurs ou des groupes à cette stratégie?"
+    },
+    "delete": {
+      "deleteConfirmation": "confirmation de suppression",
+      "deleteSingle": "Voulez-vous supprimer la stratégie {{name}}?",
+      "deleteNote": "Vous devez supprimer tous les utilisateurs et groupes associés à une stratégie avant de la supprimer."
+    },
+    "updatedAt": "Mise à jour le {{date, M/D/YYYY h:mm A}} par {{updatedByUser}}",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Modifications non enregistrées",
+      "description": "Voulez-vous quitter cette page? Vos modifications n'ont pas été enregistrées.",
+      "cancelButton": "Annuler",
+      "confirmButton": "Quitter la page"
+    },
+    "snackbars": {
+      "successfulUpdate": "La stratégie a été mise à jour.",
+      "successfulCreation": "La stratégie a été créée.",
+      "successfulDeletion": "La stratégie a été supprimée."
+    },
+    "threats": {
+      "addDetectionsDrawer": {
+        "title": "Ajouter des détections",
+        "description": "Faites glisser et déposez les détections jusqu'au niveau de risque que vous souhaitez leur appliquer."
+      },
+      "categories": {
+        "labels": {
+          "identity": "Identité"
+        }
+      },
+      "labels": {
+        "behavioralRisk": "Risques comportementaux",
+        "networkAnomaly": "Anomalie du réseau"
+      }
+    }
+  },
+  "policies": {
+    "common": {
+      "adaptiveOverridesGatewayInfo": "Les stratégies de réponse adaptative remplacent toutes les stratégies de contrôle d'accès réseau attribuées aux utilisateurs ou aux groupes.",
+      "tooltips": {
+        "copyPolicy": "Copier",
+        "deletePolicy": "Supprimer"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "Créez et affectez des stratégies de réponse adaptative pour spécifier les actions de réponse aux risques qui sont appliquées aux appareils. $t (bis/ues:policies.common.adaptive remplace les informations sur la passerelle)",
+        "link": "Paramètres de réponse adaptative"
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Nom",
+        "description": "Description"
+      },
+      "errorMessages": {
+        "required": "Ce champ est obligatoire.",
+        "nameInvalid": "Le nom n'est pas valide.",
+        "descriptionInvalid": "La description n'est pas valide."
+      }
+    },
+    "columns": {
+      "name": "Nom Politique"
+    },
+    "tableHeader": {
+      "factor": "Risques",
+      "detection": "Détection",
+      "responseActions": "Actions de réponse"
+    },
+    "details": {
+      "title": "Réponse adaptative",
+      "assignedUsersAndGroups": "Utilisateurs et groupes affectés",
+      "addCustomActionRiskFactors": "Spécifiez l'action à effectuer lorsque les modèles d'utilisation du réseau d'un utilisateur ne correspondent pas au comportement passé. $t (bis/ues:policies.common.adaptive remplace les informations sur la passerelle)"
+    },
+    "create": {
+      "title": "Ajouter une stratégie de réponse adaptative",
+      "copyTitle": "Stratégie de réponse adaptative de copie",
+      "successTitle": "La stratégie a été ajoutée",
+      "successDescription": "Souhaitez-vous attribuer des utilisateurs ou des groupes à cette stratégie BlackBerry Persona Analytics?",
+      "successReject": "Pas maintenant",
+      "successAccept": "Oui",
+      "error": "La stratégie n'a pas pu être créée.",
+      "policyConfirmationTitle": "Attribuer la stratégie de réponse adaptative",
+      "policyConfirmationDescription": "La stratégie a été créée. Voulez-vous attribuer des utilisateurs ou des groupes à cette stratégie?"
+    },
+    "delete": {
+      "deleteConfirmation": "confirmation de suppression",
+      "deleteSingle": "Voulez-vous supprimer la stratégie {{name}}?",
+      "deleteNote": "Vous devez supprimer tous les utilisateurs et groupes associés à une stratégie avant de la supprimer."
+    },
+    "updatedAt": "Mise à jour le {{date, M/D/YYYY h:mm A}} par {{updatedByUser}}",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Modifications non enregistrées",
+      "description": "Voulez-vous quitter cette page? Vos modifications n'ont pas été enregistrées.",
+      "cancelButton": "Annuler",
+      "confirmButton": "Quitter la page"
+    },
+    "snackbars": {
+      "successfulUpdate": "La stratégie a été mise à jour.",
+      "successfulCreation": "La stratégie a été créée.",
+      "successfulDeletion": "La stratégie a été supprimée."
+    }
+  },
+  "actions": {
+    "options": {
+      "networkAccessPolicy": "Remplacer la stratégie de contrôle d'accès réseau"
+    },
+    "assignNetworkAccessPolicy": {
+      "dialog": {
+        "label": "Sélectionnez la stratégie de contrôle d'accès réseau",
+        "title": "Remplacer la stratégie de contrôle d'accès réseau",
+        "noOptions": "Aucune politique n'est disponible"
+      },
+      "notAvailableError": "L'action de stratégie de remplacement du contrôle d'accès réseau n'est actuellement pas disponible. Veuillez contacter votre administrateur."
+    },
+    "selected": {
+      "networkAccessPolicy": {
+        "chip": "Remplacer la stratégie de contrôle d'accès réseau: {{name}}",
+        "chipPolicyMissing": "Remplacer la stratégie de contrôle d'accès réseau",
+        "errorChip": "Politique n'existe pas",
+        "errorSnackbar": "La stratégie de l'une des actions affectées n'existe plus."
+      }
+    }
+  },
+  "gatewayEvidence": {
+    "title": "Détails de l'événement Alert",
+    "tableTitle": "Détails de l'alerte",
+    "eventTitle": "Détails de l'événement réseau"
+  },
+  "detectionPolicies": {
+    "common": {
+      "tooltips": {
+        "copyPolicy": "Copier",
+        "deletePolicy": "Supprimer"
+      }
+    },
+    "arr": {
+      "title": "Identité de défi pour une réduction automatique des risques",
+      "description": "S'applique uniquement aux détections de risques d'identité",
+      "selectLabel": "Niveau de risque minimal"
+    },
+    "assessment": {
+      "info": {
+        "title": "Évaluation des risques",
+        "paragraph": "Attribuez des détections aux niveaux de risque pour configurer une posture de risque pour les utilisateurs. Le niveau de risque est utilisé par les stratégies pour déterminer les réponses aux événements."
+      },
+      "buttons": {
+        "addDetections": "Ajouter des détections",
+        "useTemplate": "Utiliser le modèle",
+        "detections": "Détections"
+      }
+    },
+    "list": {
+      "info": {
+        "paragraph": "Ajoutez une stratégie pour attribuer des détections aux niveaux de risque afin de configurer une posture de risque pour les utilisateurs. Le niveau de risque est utilisé par les stratégies pour déterminer les réponses aux événements. Si aucune stratégie n'est attribuée à un utilisateur, la stratégie par défaut est utilisée."
+      }
+    },
+    "form": {
+      "labels": {
+        "name": "Nom",
+        "description": "Description"
+      },
+      "errorMessages": {
+        "required": "Ce champ est obligatoire.",
+        "nameInvalid": "Le nom n'est pas valide.",
+        "descriptionInvalid": "La description n'est pas valide."
+      }
+    },
+    "columns": {
+      "name": "Nom Politique"
+    },
+    "tableHeader": {
+      "risk": "Risques",
+      "detection": "Détection"
+    },
+    "details": {
+      "title": "Évaluation des risques",
+      "assignedUsersAndGroups": "Utilisateurs et groupes affectés"
+    },
+    "create": {
+      "title": "Ajouter une politique d'évaluation des risques",
+      "copyTitle": "Copier la politique d'évaluation des risques",
+      "successTitle": "La stratégie a été ajoutée",
+      "successDescription": "Souhaitez-vous affecter des utilisateurs ou des groupes à cette stratégie d'évaluation des risques?",
+      "successReject": "Pas maintenant",
+      "successAccept": "Oui",
+      "error": "La stratégie n'a pas pu être créée.",
+      "policyConfirmationTitle": "Attribuer la politique d'évaluation des risques",
+      "policyConfirmationDescription": "La stratégie a été créée. Voulez-vous attribuer des utilisateurs ou des groupes à cette stratégie?"
+    },
+    "delete": {
+      "deleteConfirmation": "confirmation de suppression",
+      "deleteSingle": "Voulez-vous supprimer la stratégie {{name}}?",
+      "deleteNote": "Vous devez supprimer tous les utilisateurs et groupes associés à une stratégie avant de la supprimer."
+    },
+    "updatedAt": "Mise à jour le {{date, M/D/YYYY h:mm A}} par {{updatedByUser}}",
+    "modifiedPolicyConfirmationDialog": {
+      "title": "Modifications non enregistrées",
+      "description": "Voulez-vous quitter cette page? Vos modifications n'ont pas été enregistrées.",
+      "cancelButton": "Annuler",
+      "confirmButton": "Quitter la page"
+    },
+    "snackbars": {
+      "successfulUpdate": "La stratégie a été mise à jour.",
+      "successfulCreation": "La stratégie a été créée.",
+      "successfulDeletion": "La stratégie a été supprimée."
+    },
+    "threats": {
+      "addDetectionsDrawer": {
+        "title": "Ajouter des détections",
+        "description": "Faites glisser et déposez les détections jusqu'au niveau de risque que vous souhaitez leur appliquer."
+      },
+      "categories": {
+        "labels": {
+          "identity": "Identité"
+        }
+      },
+      "labels": {
+        "behavioralRisk": "Risques comportementaux",
+        "networkAnomaly": "Anomalie du réseau"
+      }
+    }
+  },
+  "gatewayEvents": {
+    "labelGateway": "Gateway",
+    "pageTitle": "Événements",
+    "networkEvents": {
+      "label": "Événements du réseau",
+      "pageTitle": "Événements du réseau"
+    },
+    "networkActivity": {
+      "label": "Activité sur le réseau"
+    }
+  },
+  "deviceRiskAssessment": {
+    "deviceRiskDetails": "Informations Appareil les risques liés",
+    "appliedRiskPolicy": "Politique de risque appliquée: {{riskPolicyName}}",
+    "error": {
+      "fetch": "Les informations de risque du périphérique n'ont pas pu être récupérées."
+    }
+  },
+  "geozones": {
+    "table": {
+      "headers": {
+        "name": "Nom",
+        "location": "Emplacement",
+        "size": "taille"
+      },
+      "columnPicker": "Colonnes de table",
+      "toolbar": {
+        "totalResults": "{{total}} résultats",
+        "totalSelected": "{{total}} sélectionné"
+      },
+      "cells": {
+        "size": "{{value}} {{unit}}"
+      }
+    },
+    "deleteDialog": {
+      "singleTitle": "Supprimer la géozone",
+      "multiTitle": "Supprimer les géozones",
+      "singleMessage": "<0>Voulez-vous supprimer la <1>géozone {{zone}}</1>? </0>",
+      "multiMessage": "Souhaitez-vous supprimer les géozones sélectionnées?"
+    },
+    "operations": {
+      "update": {
+        "error": "La géozone n'a pas pu être mise à jour.",
+        "success": "La géozone a été mise à jour."
+      },
+      "create": {
+        "error": "La géozone n'a pas pu être créée.",
+        "success": "La géozone a été créée."
+      },
+      "delete": {
+        "error": "La zone géographique n'a pas pu être supprimée.",
+        "success": "La géozone a été supprimée."
+      }
+    }
+  }
+}

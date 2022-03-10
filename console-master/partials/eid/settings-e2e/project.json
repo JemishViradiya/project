@@ -1,0 +1,29 @@
+{
+  "root": "partials/eid/settings-e2e",
+  "sourceRoot": "partials/eid/settings-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["partials/eid/settings-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "e2e": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "partials/eid/settings-e2e/cypress.json",
+        "tsConfig": "partials/eid/settings-e2e/tsconfig.json",
+        "devServerTarget": "eid/settings:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "eid/settings:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/partials/eid/settings-e2e"]
+    }
+  },
+  "tags": ["scope:partial", "scope:eid"],
+  "implicitDependencies": ["eid/settings"]
+}

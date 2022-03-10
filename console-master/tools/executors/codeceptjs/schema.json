@@ -1,0 +1,62 @@
+{
+  "title": "CodeceptJS Target",
+  "description": "CodeceptJS target option for Build Facade",
+  "type": "object",
+  "outputCapture": "pipe",
+  "cli": "nx",
+  "properties": {
+    "codeceptjsConfig": {
+      "type": "string",
+      "description": "The path of the CodeceptJS configuration json file."
+    },
+    "tsConfig": {
+      "type": "string",
+      "description": "The path of the typescript configuration json file if required."
+    },
+    "steps": {
+      "type": "boolean",
+      "description": "Show step-by-step execution.",
+      "default": false
+    },
+    "headless": {
+      "type": "boolean",
+      "description": "Whether or not to open the CodeceptJS application to run the tests. If set to 'true', will run in headless mode",
+      "default": false
+    },
+    "debug": {
+      "type": "boolean",
+      "description": "output additional information",
+      "default": false
+    },
+    "verbose": {
+      "type": "boolean",
+      "description": "output internal logging information",
+      "default": false
+    },
+    "browser": {
+      "type": "string",
+      "description": "The browser to run tests in."
+    },
+    "executor": {
+      "type": "string",
+      "description": "The helper to run tests wtith.",
+      "default": "Playwright"
+    },
+    "env": {
+      "type": "string",
+      "description": "A config environment to load from config/condecept/<env>.yml"
+    },
+    "command": {
+      "type": "string",
+      "description": "The codeceptjs command to execute (default=run)",
+      "default": "run"
+    },
+    "watch": {
+      "type": "boolean",
+      "description": "Launch the codecept-ui for live-reload of test scenarios",
+      "default": false
+    }
+  },
+  "additionalProperties": true,
+  "required": []
+}

@@ -1,0 +1,40 @@
+.shutdown-panel {
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  margin-bottom: 12px;
+  min-height: 70px;
+  padding: 24px;
+}
+
+#shutdown-tenant-info,
+#shutdown-button {
+  display: inline-block;
+  margin: 0 6px;
+  vertical-align: middle;
+}
+
+#shutdown-tenant-info {
+  width: 55%;
+}
+
+#shutdown-button {
+  text-align: right;
+  width: 40%;
+  .MuiButtonBase-root {
+    margin-right: 0px;
+  }
+}
+
+p#shutdown-tenant-name {
+  margin-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  a {
+    font-size: 16px;
+  }
+}
+
+p#grace-period-date {
+  font-size: 12px;
+}

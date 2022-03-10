@@ -1,0 +1,8 @@
+{
+  "selectAtLeastOneValue": "少なくとも 1 つの値を選択します。",
+  "emptyField": "{{fieldName}} は必須です。",
+  "outOfRange": "値は {{min}} から {{max}} の間でなければなりません。",
+  "invalidField": "{{fieldName}} は無効です。",
+  "noNumbers": "{{fieldName}} には数字を含めることはできません。",
+  "maxLength": "{{fieldName}} は {{max}} 文字以下でなければなりません。"
+}

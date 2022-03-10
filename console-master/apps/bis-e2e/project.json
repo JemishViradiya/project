@@ -1,0 +1,29 @@
+{
+  "root": "apps/bis-e2e",
+  "sourceRoot": "apps/bis-e2e/src",
+  "projectType": "e2e",
+  "targets": {
+    "e2e-pending": {
+      "executor": "./tools/executors/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/bis-e2e/cypress.json",
+        "tsConfig": "apps/bis-e2e/tsconfig.e2e.json",
+        "devServerTarget": "bis:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "bis:serve:production"
+        }
+      },
+      "outputs": ["cypress-results/apps/bis-e2e"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/bis-e2e/src/**/*.ts", "apps/bis-e2e/src/**/*.js"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["bis"]
+}

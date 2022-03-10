@@ -1,0 +1,43 @@
+@import '../../theme/theme.less';
+
+.simpleTable {
+  border: 1px solid @tableBorder;
+}
+
+.table {
+  background: @backgroundDefault;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-weight: normal;
+}
+
+.table-body {
+  display: table-row-group;
+}
+
+.table-cell {
+  padding: 8px;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.table-row {
+  color: inherit;
+  display: table-row;
+  outline: 0;
+  vertical-align: middle;
+  background-color: @backgroundDefault;
+
+  // background-color: @backgroundDefault;
+  will-change: background-color;
+  // // transition: background-color @animHoverDuration @animHoverTimingFn;
+
+  &:hover {
+    background-color: rgb(204, 216, 224) !important;
+  }
+
+  &:nth-of-type(odd) {
+    background-color: @backgroundLight;
+  }
+}

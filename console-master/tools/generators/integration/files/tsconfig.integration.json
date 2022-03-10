@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.json",
+  "ts-node": {
+    "transpileOnly": true,
+    "log-error": true,
+    "files": true
+  },
+  "compilerOptions": {
+    "target": "ES2018",
+    "lib": ["es2018", "es2017", "DOM"],
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "strictNullChecks": true,
+    "types": ["codeceptjs", "webdriverio/async", "chai"],
+    "outDir": "../../../dist/out-tsc"
+  },
+  "files": ["../../../libs/behaviour/shared-e2e/types/codeceptjs.d.ts"],
+  "exclude": ["src/cypress/**/*.ts", "src/cypress/**/*.tsx", "output/**"],
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
+}

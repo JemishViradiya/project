@@ -1,0 +1,31 @@
+{
+  "name": "settings",
+  "route": "/Application",
+  "navigation": [
+    {
+      "name": "protectGlobalListNew",
+      "route": "/uc/console#/settings/global-list",
+      "match": "/uc/console#/settings/global-list*"
+    },
+    {
+      "name": "personaForMobile",
+      "route": "/uc/console#/settings/adaptive-security",
+      "match": "/uc/console#/settings/adaptive-security*"
+    },
+    {
+      "name": "authentication",
+      "route": "/uc/console#/settings/authentication/authenticators",
+      "match": "/uc/console#/settings/authentication/authenticators*"
+    },
+    {
+      "name": "directoryConnections",
+      "route": "/uc/console#/settings/directory-connections",
+      "match": "/uc/console#/settings/directory-connections*"
+    },
+    {
+      "name": "network",
+      "route": "/uc/console#/settings/network",
+      "match": "/uc/console#/settings/network*"
+    }
+  ]
+}

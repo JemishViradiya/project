@@ -1,0 +1,45 @@
+.card__container {
+  position: relative;
+}
+
+.MuiPaper-root {
+  padding: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  border: 1px solid #cdd0db;
+}
+
+.card-form-controls {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  span {
+    font-size: 20px;
+    color: #babbc0;
+    cursor: pointer;
+    &:hover {
+      color: #03a5ef;
+    }
+  }
+  &.outlined {
+    width: 80px;
+    height: 40px;
+    border: 1px solid #03a5ef;
+    span {
+      color: #03a5ef;
+      height: 38px;
+      padding: 9px;
+      width: 40px;
+      font-size: 20px;
+      line-height: 40px;
+      &:nth-child(2) {
+        border-left: 1px solid #03a5ef;
+      }
+      &:hover {
+        color: #ffffff;
+        cursor: pointer;
+        background-color: #03a5ef;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "navigation": {
+    "gateway": "Gateway",
+    "policies": "Políticas",
+    "title": "Política de usuário",
+    "user": "Usuário",
+    "activation": {
+      "label": "Inscrição"
+    },
+    "mobileDeviceThreats": {
+      "label": "Protect Mobile"
+    },
+    "networkAccessControl": {
+      "label": "Controle de acesso à rede"
+    },
+    "gatewayService": {
+      "label": "Serviço de gateway"
+    },
+    "enterpriseIdentity": {
+      "label": "Autenticação"
+    },
+    "adaptiveResponse": {
+      "label": "Resposta adaptativa"
+    },
+    "riskDetection": {
+      "label": "Detecções de risco"
+    },
+    "dlpMobileThreads": {
+      "label": "Avert Móbil"
+    }
+  },
+  "policy": {
+    "cancelButton": "Cancelar",
+    "deleteButton": "Excluir",
+    "saveButton": "Salvar",
+    "addButton": "Adicionar",
+    "removeButton": "Remover",
+    "list": {
+      "add": "Adicionar política",
+      "results": "{{value}} resultados",
+      "rank": "Classificação",
+      "searchPlaceholder": "Pesquisar políticas",
+      "noData": "Sem dados",
+      "columns": {
+        "rank": "Classificação",
+        "name": "Nome da política",
+        "description": "Descrição",
+        "userCount": "Utilizadores",
+        "groupCount": "Grupos de usuários",
+        "added": "Adicionado",
+        "modified": "Modificado"
+      },
+      "columnPicker": "Colunas de tabela",
+      "selected": "{{count}} selecionado"
+    },
+    "delete": {
+      "title": "Excluir confirmação",
+      "deleteSingle": "Deseja excluir a política {{profile}}?",
+      "multipleDelete": "Deseja excluir essas políticas?",
+      "note": "Você deve remover todos os usuários e grupos associados a uma política antes de excluí-la.",
+      "successMessage": "A política foi excluída."
+    },
+    "rank": {
+      "successfulUpdate": "A classificação foi atualizada."
+    },
+    "detail": {
+      "updated": "Atualizado em {{date, datetime}}",
+      "appliedUsersAndGroups": "Usuários e grupos atribuídos",
+      "settings": "Definições",
+      "device": "Detalhes da política de Dispositivo",
+      "user": "Detalhes da política do usuário"
+    },
+    "assignment": {
+      "columns": {
+        "name": "Nome",
+        "email": "E-mail"
+      },
+      "add": "Adicionar usuário ou grupo",
+      "searchPlaceholder": "Pesquisar usuários e grupos",
+      "userCount": "{{count}} usuários",
+      "dialog": {
+        "title": "Adicionar um usuário ou grupo",
+        "description": "Pesquise usuários ou grupos. Você pode atribuir vários usuários e grupos à mesma política.",
+        "searchText": "Pesquisar usuários ou grupos",
+        "list": {
+          "noResults": "Sem resultados"
+        }
+      },
+      "unassign": {
+        "title": "Remover usuários ou grupos",
+        "content": "Deseja remover os seguintes itens?"
+      },
+      "successfulAssignment": "Os usuários ou grupos foram adicionados à política.",
+      "successfulUnassignment": "Os usuários ou grupos foram removidos da política."
+    },
+    "defaultPolicyName": "Padrão"
+  },
+  "policies": {
+    "deletePoliciesSuccessMessage": "As políticas foram excluídas.",
+    "deletePoliciesErrorMessage": "As políticas não puderam ser excluídas.",
+    "deletePolicyErrorMessage": "A política não pôde ser excluída."
+  }
+}

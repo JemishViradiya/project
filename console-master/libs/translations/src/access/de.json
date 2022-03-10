@@ -1,0 +1,66 @@
+{
+  "errors": {
+    "noPermission": {
+      "title": "Keine Erlaubnis",
+      "description": "Sie sind nicht berechtigt, diese Ressource anzuzeigen."
+    },
+    "notFound": {
+      "title": "Ressource wurde nicht gefunden",
+      "description": "Entschuldigung, aber die gesuchte Ressource wurde nicht gefunden oder Sie haben keine Berechtigung, sie anzuzeigen."
+    },
+    "internal": {
+      "title": "Fehler",
+      "description": "Leider ist bei der Bearbeitung Ihrer Anfrage ein Fehler aufgetreten."
+    },
+    "generic": {
+      "title": "Etwas ist schief gelaufen",
+      "description": "Entschuldigung, ein Fehler ist aufgetreten. Bitte versuchen Sie es später noch einmal."
+    },
+    "noServiceEnabled": {
+      "title": "Dienst nicht verfügbar",
+      "description": "Dieser Dienst wurde für Ihren Mandanten nicht aktiviert."
+    }
+  },
+  "Ues_Big_ACL_Read": "Netzwerkzugriffskontrollen anzeigen",
+  "Ues_Big_GatewayAppProfile_Read": "Gateway-Dienstrichtlinien",
+  "Ues_Big_NetworkAccessControlProfile_Read": "Netzwerkzugriffskontrollen anzeigen",
+  "Ues_Big_NetworkServices_Read": "Netzwerkzugriffskontrollen anzeigen",
+  "Ues_Big_Reporting_Read": "Gateway-Berichte anzeigen",
+  "Ues_Big_Tenant_Read": "Gateway-Einstellungen anzeigen",
+  "Ues_Bip_Device_Read": "Avert-Gerätekennung anzeigen",
+  "Ues_Bip_Event_Read": "Avert-Geräteereignisse anzeigen",
+  "Ues_Bip_FileContent_Read": "Avert-Dateiinhalt anzeigen",
+  "Ues_Bip_FileSummary_Read": "Zusammenfassung der sensiblen Avert-Datei anzeigen",
+  "Ues_Bip_Policy_Read": "Avert-Richtlinien anzeigen",
+  "Ues_Bip_RiskScore_Read": "Avert-Risikobewertungen anzeigen",
+  "Ues_Bip_Settings_Read": "Avert-Einstellungen anzeigen",
+  "Ues_Bis_Events_Read": "Anzeigen adaptiver Risikoereignisse",
+  "Ues_Bis_EventsLocation_Read": "Anzeigen adaptiver Risikostandortereignisse",
+  "Ues_Bis_RiskProfile_Read": "Anzeigen adaptiver Risikorichtlinien",
+  "Ues_Bis_Settings_Read": "Einstellungen für adaptives Risiko anzeigen",
+  "Ues_Ecs_ActivationProfile_Read": "Registrierungsrichtlinien anzeigen",
+  "Ues_Ecs_ActivationSettings_Read": "Aktivierungseinstellungen anzeigen",
+  "Ues_Ecs_Bcn_Read": "Konnektivitätsknoten anzeigen",
+  "Ues_Ecs_Devices_Read": "Mobilgeräte ansehen",
+  "Ues_Ecs_Directory_Read": "Anzeigen von Verzeichnisverbindungen",
+  "Ues_Ecs_Identity_Read": "Anzeigen von Authentifizierungssteuerungen",
+  "Ues_Ecs_Mdm_Read": "Anzeigen von EMM-Verbindungen",
+  "Ues_Ecs_Mfa_Read": "Ues:Ecs:Mfa:Read",
+  "Ues_Ecs_Users_Read": "Benutzer und Gruppen anzeigen",
+  "Ues_Ecs_Vulnerabilities_Read": "Schwachstellen anzeigen",
+  "Ues_Mtd_Events_Read": "Protect Mobile-Ereignisse anzeigen",
+  "Ues_Mtd_Policy_Read": "Richtlinien für Protect Mobile anzeigen",
+  "Ues_Venue_Dashboard_Read": "Dashboard",
+  "Ues_Venue_DesktopPolicy_Read": "Geräterichtlinien anzeigen",
+  "Ues_Venue_DesktopReports_Read": "Berichte ansehen",
+  "Ues_Venue_Devices_Read": "Geräte ansehen",
+  "Ues_Venue_SettingsCertificates_Read": "Anzeigen, Erstellen, Bearbeiten, Löschen von Zertifikaten",
+  "Ues_Venue_SettingsGlobalList_Read": "Globale Liste anzeigen",
+  "Ues_Venue_SettingsIntegrations_Read": "Integrationen anzeigen, erstellen, bearbeiten, löschen",
+  "Ues_Venue_SettingsUpdate_Read": "Anzeigen, Erstellen, Bearbeiten, Löschen von Agent-Update-Einstellungen",
+  "Ues_Venue_ThreatProtection_Read": "Bedrohungsschutz anzeigen",
+  "Ues_Venue_Zones_Read": "Zonen ansehen",
+  "service": {
+    "big_blackberry_com": "Gateway"
+  }
+}

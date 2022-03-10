@@ -1,0 +1,18 @@
+# enable docker buildkit support
+include:
+  - .gitlab/ci/docker-buildkit.yml
+  - .gitlab/ci/cache.yml
+  - .gitlab/ci/release.yml
+  - .gitlab/ci/review.yml
+  - .gitlab/ci/deploy.yml
+  - .gitlab/ci/common-nx-jobs.yml
+
+image: ${CI_DOCKER_REGISTRY}/enterprise/ues/console/ci-agent-nodejs:${DOCKER_IMAGE_SHA}
+variables:
+  CYPRESS_CI_IMAGE: ${CI_DOCKER_REGISTRY}/enterprise/ues/console/ci-agent-nodejs-cypress:${DOCKER_IMAGE_SHA}
+  CODECEPTJS_CI_IMAGE: ${CI_DOCKER_REGISTRY}/enterprise/ues/console/ci-agent-codeceptjs:${DOCKER_IMAGE_SHA}
+  GET_SOURCES_ATTEMPTS: 3
+  EXECUTOR_JOB_SECTION_ATTEMPTS: 3
+  ARTIFACT_DOWNLOAD_ATTEMPTS: 3
+  RESTORE_CACHE_ATTEMPTS: 2
+  TRANSFER_METER_FREQUENCY: 10s

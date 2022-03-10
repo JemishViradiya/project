@@ -1,0 +1,9 @@
+{
+  "name": "@ues-behaviour/rich-text-editor",
+  "version": "0.0.1",
+  "sideEffects": false,
+  "module": "./src/index.ts",
+  "dependencies": {
+    "image-type": "^4.1.0"
+  }
+}

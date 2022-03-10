@@ -1,0 +1,27 @@
+{
+  "protectDashboard": "Protect Dashboard",
+  "widget": {
+    "runningThreats": "Running Threats",
+    "autoRunThreats": "Auto-Run Threats",
+    "quarantinedThreats": "Quarantined Threats",
+    "uniqueToCylance": "Unique to Cylance",
+    "totalAnalyzedFiles": "Total Analyzed Files",
+    "threatProtection": "Threat Protection",
+    "deviceProtection": "Device Protection",
+    "threatEvents": "Threat Events",
+    "threatsByPriority": "Threats by Priority",
+    "topTenLists": "Top Ten Lists",
+    "threatClassifications": "Threat Classifications"
+  },
+  "topTenLists": {
+    "Threats": "Threats",
+    "Devices": "Devices",
+    "Zones": "Zones",
+    "Threatsfoundonthemostdevices": "Threats found on the most devices",
+    "NoThreatsfound": "No threats found",
+    "Deviceswiththemostthreats": "Devices with the most threats",
+    "NoDevicesfound": "No devices found",
+    "Zoneswiththemostthreats": "Zones with the most threats",
+    "NoZonesfound": "No zones found"
+  }
+}

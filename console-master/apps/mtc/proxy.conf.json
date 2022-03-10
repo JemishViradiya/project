@@ -1,0 +1,16 @@
+[
+  {
+    "logLevel": "info",
+    "context": ["/us/api", "/eu/api", "/au/api", "/jp/api", "/sp/api", "/gc/api"],
+    "target": "https://dev-admin.cylance.com",
+    "secure": true,
+    "ws": true,
+    "toProxy": false,
+    "changeOrigin": true,
+    "autoRewrite": true,
+    "preserveHeaderKeyCase": true,
+    "router": {
+      "local-admin.cylance.com:4200": "https://admin.cylance.com"
+    }
+  }
+]

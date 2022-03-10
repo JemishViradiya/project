@@ -1,0 +1,22 @@
+runner:
+  mode: default
+  loglevel: debug
+  delay:
+    startup: 0
+  codecept:
+    show: true
+    writeScreenshots: true
+
+e2e:
+  config:
+    baseUrl: https://protect-apne1.cylance.com
+
+    users:
+      # see https://wikis.rim.net/pages/viewpage.action?pageId=909575392
+      admin:
+        # customer-id: 6808977854
+        # tenant: ucautotesting-apne
+        # venue-tenantid: 134A6703-9425-4410-844B-797FA6CAA3EB
+        # srpid: S86712520
+        email: UCAdminAPNE@ahem.cbbcps.com
+        password: 'UCp@$$11'

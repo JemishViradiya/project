@@ -1,0 +1,55 @@
+diff --git a/node_modules/@codeceptjs/ui/lib/model/codeceptjs-factory.js b/node_modules/@codeceptjs/ui/lib/model/codeceptjs-factory.js
+index b3725c3..99bdb6d 100644
+--- a/node_modules/@codeceptjs/ui/lib/model/codeceptjs-factory.js
++++ b/node_modules/@codeceptjs/ui/lib/model/codeceptjs-factory.js
+@@ -107,17 +107,35 @@ module.exports = new class CodeceptjsFactory {
+     return instance;
+   }
+ 
+-  unrequireFile(filePath) {
+-    filePath = path.join(this.getRootDir(), filePath);
++  unrequireFile(inputPath) {
++    debug('unrequire', inputPath)
++    const filePath = path.isAbsolute(inputPath) ? inputPath : path.join(this.getRootDir(), inputPath);
+     let modulePath;
+     try {
+       modulePath = require.resolve(filePath);
+     } catch (err) {
+       return;
+     }
+-    if (require.cache[modulePath]) {
++    const mod = require.cache[modulePath]
++    if (mod) {
++      if (inputPath !== this.getConfigFile()) {
++        function unreq(modulePath) {
++          // skip node_modules
++          if (/[\\/]node_modules[\\/]/.test(modulePath)) return
++
++          const mod = require.cache[modulePath]
++          if (mod) {
++            debug('require.cache clear:', modulePath)
++            delete require.cache[modulePath]
++            if (mod.parent) unreq(mod.parent.filename)
++          }
++        }
++        unreq(modulePath)
++        // todo: check parents against tests
++      }
+       delete require.cache[modulePath];
+     }
++
+   }
+ 
+   resetSuites() {
+diff --git a/node_modules/@codeceptjs/ui/lib/model/scenario-repository.js b/node_modules/@codeceptjs/ui/lib/model/scenario-repository.js
+index 8299b83..925279a 100644
+--- a/node_modules/@codeceptjs/ui/lib/model/scenario-repository.js
++++ b/node_modules/@codeceptjs/ui/lib/model/scenario-repository.js
+@@ -66,6 +66,7 @@ const watchedFiles = () => {
+   watchFiles.push(config.get('tests'));
+   if (config.get('gherkin')) watchFiles.push(config.get().gherkin.features);
+   if (config.get('include')) watchFiles.push(...Object.values(config.get('include')));
++  if (config.get('watchFiles')) watchFiles.push(...config.get('watchFiles'));
+   debug('watching files', watchFiles);
+   return watchFiles.filter(f => !!f);
+ };

@@ -1,0 +1,31 @@
+.ci-agent:
+  stage: .pre
+  needs: []
+  image: registry.rim.net/iac/ci-build-pipeline:loki-docker
+  interruptible: true
+  script:
+    - make ci-agent-nodejs
+  artifacts:
+    reports:
+      dotenv: pipeline.env
+  retry:
+    max: 2
+    when:
+      - runner_system_failure
+      - stuck_or_timeout_failure
+
+ci-agent-nodejs:
+  extends: .ci-agent
+  script:
+    - make ci-agent-nodejs
+  rules:
+    - if: $CI_TRIGGER_TARGET == 'codeceptjs'
+      when: never
+    - when: always
+
+ci-agent-codeceptjs:
+  extends: .ci-agent
+  script:
+    - make ci-agent-codeceptjs
+  rules:
+    - if: $CI_TRIGGER_TARGET == 'codeceptjs'

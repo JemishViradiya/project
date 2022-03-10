@@ -1,0 +1,646 @@
+{
+  "setting": {
+    "mainSection": {
+      "pageTitle": "Configuración de protección contra pérdida de datos",
+      "tabTitle": {
+        "dataCollection": "Recogida de datos",
+        "whitelisting": "Dominios seguros",
+        "templates": "Plantillas",
+        "dataTypes": "Tipos de datos",
+        "trustedCertificates": "Certificados de confianza",
+        "notifications": "Notificaciones"
+      }
+    },
+    "buttons": {
+      "save": "Guardar",
+      "edit": "Editar",
+      "enable": "Habilitar",
+      "disable": "Deshabilitar",
+      "cancel": "Cancelar",
+      "delete": "Borrar"
+    },
+    "list": {
+      "noData": "Sin datos"
+    },
+    "search": {
+      "region": "Región",
+      "infoType": "Tipo de información"
+    },
+    "popover": {
+      "header": "Columnas de tabla"
+    },
+    "template": {
+      "columns": {
+        "templateName": "Nombre de plantilla",
+        "description": "Descripción",
+        "source": "Fuente",
+        "type": "Fuente",
+        "status": "Estado",
+        "regions": "Región",
+        "informationType": "Tipo de información",
+        "infoTypes": "Tipo de información",
+        "dataTypesIncluded": "Tipos de datos incluidos",
+        "dataEntities": "Tipos de datos incluidos",
+        "created": "Creado",
+        "updated": "Actualizado",
+        "guid": "ID"
+      },
+      "filter": {
+        "regions": "Filtro de región",
+        "infoTypes": "Filtro de tipos de información",
+        "dataEntities": "Filtro de entidades de datos",
+        "name": "Filtro de nombre de plantilla",
+        "description": "Filtro de descripción de plantilla",
+        "source": "Filtro de origen",
+        "status": "Filtro de origen",
+        "inUse": "En uso",
+        "dateCreated": "Filtro de fecha de creación",
+        "dateModified": "Filtro de fecha de modificación"
+      },
+      "buttons": {
+        "newTemplate": "Nueva plantilla",
+        "addToYourList": "Añadir a tu lista",
+        "duplicate": "Duplicado",
+        "removeFromYourList": "Quitar de tu lista",
+        "delete": "Borrar"
+      },
+      "dialogs": {
+        "removeFromYourList": {
+          "title": "Eliminar plantilla {{count}}",
+          "title_plural": "Eliminar plantillas {{count}}",
+          "cancelBtn": "Cancelar",
+          "confirmBtn": "Quitar",
+          "remove": {
+            "can_be_remove": "Se eliminará '{{name}}' de tu lista.",
+            "can_not_be_remove": "'{{name}}' no estaba en la lista.",
+            "custom_can_not_be_remove": "'{{name}}' es una plantilla personalizada y no se puede eliminar de tu lista. Solo se puede eliminar de forma permanente."
+          },
+          "remove_singular": {
+            "can_be_remove": "Se eliminará '{{name}}' de tu lista, ¿quieres continuar?"
+          },
+          "remove_plural": {
+            "can_not_be_remove": "{{count}} más no estaban en la lista:",
+            "can_be_remove": "Se eliminarán {{count}} plantillas de tu lista:",
+            "custom_can_not_be_remove": "Las plantillas personalizadas {{count}} no se pueden eliminar de tu lista. Solo se pueden eliminar de forma permanente."
+          }
+        },
+        "addToYourList": {
+          "title": "Añadir plantilla {{count}}",
+          "title_plural": "Añadir plantillas {{count}}",
+          "cancelBtn": "Cancelar",
+          "confirmBtn": "Añadir",
+          "add": {
+            "can_be_add": "Se añadirá '{{name}}' a tu lista.",
+            "can_not_be_add": "'{{name}}' ya está en la lista.",
+            "custom_can_not_be_add": "'{{name}}' es una plantilla personalizada y ya existe."
+          },
+          "add_singular": {
+            "can_be_add": "Se añadirá '{{name}}' a tu lista, ¿quieres continuar?"
+          },
+          "add_plural": {
+            "can_not_be_add": "{{count}} más ya están ahí:",
+            "can_be_add": "Se agregarán {{count}} nuevas plantillas a tu lista:",
+            "custom_can_not_be_add": "Ya existen {{count}} plantillas personalizadas:"
+          }
+        },
+        "duplicate": {
+          "title": "Duplicado",
+          "cancelBtn": "Cancelar",
+          "confirmBtn": "Proceder",
+          "singleItem": "single {{count}}",
+          "multipleItems": "Para duplicar: {{name}}"
+        },
+        "delete": {
+          "title": "Eliminar plantilla {{count}}",
+          "title_plural": "Eliminar plantillas de {{count}}",
+          "cancelBtn": "Cancelar",
+          "confirmBtn": "Borrar",
+          "delete_one": "Se eliminará '{{name}}'. Esta acción no se puede deshacer. ¿Quieres continuar?",
+          "delete_allowed": "Se eliminará la plantilla personalizada de {{name}}.",
+          "delete_allowed_plural": "Se eliminarán {{count}} plantillas personalizadas:",
+          "delete_protected": "La plantilla del sistema {{name}} no se puede eliminar en ningún momento.",
+          "delete_protected_plural": "Las plantillas del sistema {{count}} no se pueden eliminar en ningún momento:"
+        },
+        "confirmation": {
+          "question": "¿Quieres proceder?"
+        }
+      },
+      "error": {
+        "listview": "Error de recuperación de la lista de plantillas",
+        "delete": "No se ha podido eliminar la plantilla.",
+        "addToYourList": "No se ha podido completar la operación.",
+        "removeFromYourList": "No se ha podido completar la operación."
+      },
+      "success": {
+        "delete": "Se ha eliminado la plantilla.",
+        "addToYourList": "La operación se ha completado.",
+        "removeFromYourList": "La operación se ha completado."
+      }
+    },
+    "deleteConfirmationDialog": {
+      "title": "Borrar",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Borrar"
+    },
+    "createdConfirmationDialog": {
+      "title": "Crear",
+      "description": "¿Quieres irte? Los cambios no se han guardado.",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Confirmar"
+    },
+    "modifiedConfirmationDialog": {
+      "title": "Modificar",
+      "description": "¿Quieres irte? Los cambios no se han guardado.",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Confirmar"
+    },
+    "disableConfirmationDialog": {
+      "title": "Deshabilitar",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Deshabilitar"
+    },
+    "enableConfirmationDialog": {
+      "title": "Habilitar",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Habilitar"
+    },
+    "general": {
+      "domain": {
+        "title": "Dominios de navegador seguros",
+        "description": "Especifique qué dominios se pueden utilizar para cargar archivos de forma segura. Al crear políticas para buscar cargas de archivos confidenciales, los dominios seleccionados no desencadenarán infracciones de políticas.",
+        "enabled": {
+          "tableTitle": "Dominios habilitados"
+        },
+        "dialog": {
+          "title": {
+            "newDomain": "Añadir dominio seguro",
+            "edit": "Editar dominio seguro",
+            "delete": "Eliminar dominio {{count}}",
+            "delete_plural": "Eliminar dominios {{count}}",
+            "disable": "Deshabilitar el dominio {{count}}",
+            "disable_plural": "Deshabilitar dominios {{count}}",
+            "enable": "Habilitar dominio {{count}}",
+            "enable_plural": "Habilitar dominios {{count}}"
+          },
+          "warning": {
+            "delete_zero": "¿Quieres continuar?",
+            "delete_one": "¿Quieres eliminar este dominio? Este dominio está siendo utilizado por {{count}} políticas de Avert.",
+            "delete_many": "¿Quieres eliminar este dominio? Estos dominios están siendo utilizados actualmente por las políticas de {{count}} de Avert."
+          },
+          "success": {
+            "create": "Se ha realizado correctamente la creación del dominio del navegador",
+            "delete": "Se ha eliminado correctamente el dominio del navegador",
+            "edit": "Se ha realizado correctamente la edición"
+          },
+          "error": {
+            "create": "Error al crear BrowserDomain",
+            "delete": "Error al eliminar BrowserDomain",
+            "edit": "Error en la edición"
+          }
+        },
+        "disabled": {
+          "tableTitle": "Dominios deshabilitados"
+        },
+        "buttons": {
+          "addNewDomain": "Añadir nuevo dominio",
+          "verify": "Verificar",
+          "edit": "Editar",
+          "enable": "Habilitar",
+          "disable": "Deshabilitar",
+          "delete": "Borrar",
+          "save": "Guardar",
+          "cancel": "Cancelar",
+          "add": "Añadir"
+        },
+        "columns": {
+          "guid": "ID",
+          "domainName": "Nombre de dominio",
+          "description": "Descripción",
+          "policiesAssigned": "Políticas asignadas",
+          "enabled": "Habilitado",
+          "disabled": "Discapacitado",
+          "created": "Creado",
+          "updated": "Actualizado"
+        },
+        "filter": {
+          "name": "Filtro de nombres de dominio",
+          "description": "Filtro de descripción de dominio",
+          "policies": "Filtro de Políticas"
+        },
+        "validation": {
+          "invalidDomainName": "El nombre de dominio no es válido",
+          "fileCARequired": "Se requiere un archivo CA",
+          "verificationToolTip": "Para comprobar si este dominio utiliza un certificado de confianza existente, haga clic en Verificar. Puede añadir más certificados en Ajustes > Certificados de confianza.",
+          "verificationFailedText": "No se ha podido completar la verificación.",
+          "unreachableDomainText": "El dominio no está disponible.",
+          "unknownError": "Error desconocido",
+          "verificationSuccessText": "{{date}} verificado",
+          "nameRequired": "Se requiere un nombre de dominio",
+          "verificationText": "Puede comprobar si el servidor utiliza la CA raíz"
+        },
+        "enabledSwitcher": "Dominio habilitado"
+      },
+      "whitelistEmailDomains": {
+        "title": "Dominios de correo electrónico seguros",
+        "description": "Especifica tus dominios de correo electrónico internos. Todos los demás dominios se considerarán externos. Al crear políticas para buscar datos confidenciales, los dominios que agregue se considerarán seguros.",
+        "helperText": "Usa comas para separar varios dominios",
+        "placeholder": "blackberry.com",
+        "invalidValue": "El nombre de dominio no es válido."
+      },
+      "dataCollectionSettings": {
+        "title": "Ajustes de recopilación de datos",
+        "maxUploadLabel": "Carga máxima",
+        "ui_tenant_setting_isSnippetReported": {
+          "heading": "Fragmentos de archivos",
+          "title": "Generar fragmentos de archivos",
+          "description": "Incluya fragmentos de archivos que contengan contenido confidencial como parte de cualquier evento de exfiltración de datos. Los usuarios con permisos de visualización de resumen de archivos confidenciales podrán ver este contenido en los eventos de Avert de su organización."
+        },
+        "ui_tenant_setting_uploadEvidenceFile": {
+          "title": "Habilitar recopilación de archivos",
+          "description": "Una copia completa de los datos que desencadenaron un incidente de seguridad se puede recopilar y almacenar con fines de auditoría cuando se habilita mediante una política. Administrar configuración de recopilación de datos:",
+          "heading": "Colección de archivos de evidencia"
+        },
+        "ui_tenant_setting_tempFileFolderSize": {
+          "description": "Porcentaje de disco utilizado para la carpeta temporal en la que los archivos se ponen en cola para su carga"
+        },
+        "ui_tenant_setting_uploadOnMobileNetwork": {
+          "title": "Subir archivos mientras está conectado a una red Wi-Fi o cableada únicamente",
+          "description": "No permitir la carga de archivos en la red móvil."
+        },
+        "ui_tenant_setting_bandwidthLimit": {
+          "title": "Límite de ancho de banda para subir archivos",
+          "description": "Configurar el límite de ancho de banda para limitar la velocidad de transferencia",
+          "bandwidthLimit": "Uso del ancho de"
+        },
+        "ui_tenant_setting_transferWindowStartTime": {
+          "from": "Desde",
+          "title": "Tiempo de transferencia de datos",
+          "description": "Programe cuándo deben producirse las cargas de datos. Tenga en cuenta que si especifica solo ciertas horas, los administradores no podrán acceder a los archivos asociados con los eventos de exfiltración de datos hasta las horas que especifique. Todas las horas son locales para el dispositivo que carga los archivos."
+        },
+        "ui_tenant_setting_transferWindowEndTime": {
+          "to": "Para"
+        },
+        "validation": {
+          "percentValue": "El valor debe estar comprendido entre 0 y 100."
+        },
+        "ui_tenant_setting_uploadDirectlyToS3": {
+          "heading": "Subir archivos",
+          "description": "Seleccione el método que se utilizará para cargar el archivo de pruebas",
+          "s3_cloud_method": "Nube de S3",
+          "title": "Método de carga de archivos",
+          "local_dlp_file_service_method": "Proxy mediante BlackBerry"
+        },
+        "ui_file_setting_evidenceFileRetentionPeriod": {
+          "heading": "Conservación de datos",
+          "description": "Configurar durante cuánto tiempo deben almacenarse los datos implicados en un incidente de seguridad",
+          "title": "Conservación de datos",
+          "30_days": "30 días",
+          "60_days": "60 días",
+          "90_days": "90 días"
+        },
+        "description": "Configure qué pruebas se deben recopilar para los eventos de exfiltración de datos.",
+        "diskSpaceLabel": "Espacio en disco"
+      }
+    },
+    "unexpectedErrorMessage": "Se ha producido un error inesperado",
+    "domainNameErrorMessage": "Ya existe un dominio con este nombre.",
+    "table": {
+      "list": {
+        "noData": "Sin datos",
+        "searchPlaceholder": "Escriba algo para buscar"
+      }
+    },
+    "dataTypes": {
+      "columns": {
+        "name": "Nombre del tipo de datos",
+        "keywords": "Palabras clave",
+        "informationType": "Tipo de información",
+        "region": "Región",
+        "source": "Fuente"
+      },
+      "filter": {
+        "name": "Filtro de nombre de tipo de datos",
+        "keywords": "Filtro de palabras clave",
+        "infoTypes": "Filtro de tipo de información",
+        "regions": "Filtro de región",
+        "inUse": "En uso",
+        "source": "Filtro fuente"
+      },
+      "buttons": {
+        "addToYourList": "Añadir a tu lista",
+        "removeFromYourList": "Eliminar de tu lista",
+        "newDataType": "Nuevo tipo de datos"
+      },
+      "dialogs": {
+        "addToYourList": {
+          "cancelBtn": "Cancelar",
+          "confirmBtn": "Añadir",
+          "add_one": "Se añadirá '{{name}}' a tu lista, ¿quieres continuar?",
+          "title": "Añadir el tipo de datos {{count}}",
+          "title_plural": "Añadir {{count}} tipos de datos",
+          "add_new": "Se agregarán {{count}} nuevos tipos de datos a tu lista:",
+          "add_new_plural": "Se agregarán {{count}} nuevos tipos de datos a tu lista:",
+          "add_existing": "Ya existen {{count}} más:"
+        },
+        "removeFromYourList": {
+          "cancelBtn": "Cancelar",
+          "confirmBtn": "Quitar",
+          "remove": "Se eliminará '{{name}}' de tu lista, ¿quieres continuar?",
+          "title": "Eliminar el tipo de datos {{count}}",
+          "title_plural": "Eliminar tipos de datos {{count}}",
+          "remove_plural": "Los siguientes tipos de datos se eliminarán de la lista:"
+        },
+        "confirmation": {
+          "question": "¿Quieres proceder?"
+        },
+        "delete": {
+          "title": "Eliminar tipos de datos de {{count}}",
+          "title_plural": "Eliminar tipos de datos de {{count}}",
+          "delete_one": "Se eliminará '{{name}}'. Esta acción no se puede deshacer. ¿Quieres continuar?",
+          "delete_allowed": "Se eliminará el tipo de datos personalizados {{name}}.",
+          "delete_allowed_plural": "Se eliminarán los tipos de datos personalizados {{count}}.",
+          "delete_protected": "El tipo de datos del sistema {{name}} no se puede eliminar en ningún momento:",
+          "delete_protected_plural": "Los tipos de datos del sistema {{count}} no se pueden eliminar en ningún momento:"
+        }
+      }
+    },
+    "dataType": {
+      "columns": {
+        "keywords": "Palabras clave",
+        "status": "Estado",
+        "regions": "Regiones",
+        "infoTypes": "Tipos de información",
+        "parameters": "Configuración.dataType.Columns.Parameters",
+        "type": "configuración.datatype.columns.type"
+      },
+      "name": "Nombre",
+      "description": "Descripción",
+      "region": "Región",
+      "infoTypes": "Tipo de información",
+      "algorithm": "Método de búsqueda",
+      "keywords": "Palabras clave",
+      "regex": "Regex",
+      "addDataType": "Añadir nuevo tipo de datos",
+      "buttons": {
+        "create": "Crear",
+        "cancel": "Cancelar"
+      },
+      "error": {
+        "create": "No se ha podido crear el tipo de datos. Error: {{error}}",
+        "update": "El tipo de datos no se pudo actualizar. Error: {{error}}",
+        "remove": "El tipo de datos no se pudo eliminar de la lista de favoritos. Error: {{error}}",
+        "add": "El tipo de datos no se pudo añadir a la lista de favoritos. Error: {{error}}"
+      },
+      "success": {
+        "create": "Se ha creado el tipo de datos.",
+        "update": "Se actualizó el tipo de datos.",
+        "remove": "El tipo de datos se eliminó de la lista de favoritos",
+        "add": "El tipo de datos se agregó a la lista de favoritos"
+      },
+      "detail": {
+        "updated": "Actualizado el {{date}}"
+      }
+    },
+    "trustedCertificates": {
+      "columns": {
+        "subject": "Asunto",
+        "issuer": "Emisor",
+        "addedDate": "Fecha añadida",
+        "expirationDate": "Fecha caducidad"
+      },
+      "buttons": {
+        "addNew": "Agregar certificado",
+        "delete": "Borrar"
+      },
+      "dialogs": {
+        "addToYourList": {
+          "title": "Agregar certificado",
+          "subTitle": "Selecciona un archivo para subir",
+          "cancelBtn": "Cancelar",
+          "confirmBtn": "Añadir"
+        },
+        "removeFromYourList": {
+          "title": "Eliminar certificado",
+          "cancelBtn": "Cancelar",
+          "confirmBtn": "Borrar",
+          "title_plural": "¿Desea eliminar {{count}} certificados del repositorio y de cualquier lista segura que los use?"
+        }
+      },
+      "error": {
+        "delete": "No se ha podido eliminar el certificado.",
+        "addToYourList": "No se ha podido añadir el certificado."
+      },
+      "success": {
+        "delete": "Se ha eliminado el certificado.",
+        "addToYourList": "Se ha añadido el certificado."
+      },
+      "title": "Certificados de confianza",
+      "description": "Los certificados de confianza se utilizan para comprobar los dominios permitidos que ha agregado en la configuración de Avert."
+    },
+    "notifications": {
+      "title": "Notificaciones",
+      "switcherLabel": "Activar notificaciones por correo electrónico",
+      "switcherDescription": "Reciba notificaciones cuando se compartan datos sensibles que entran en conflicto con la política de la empresa",
+      "emailRecipients": "Destinatarios de correo",
+      "emailRecipientsHelperText": "Use comas para separar varias direcciones de correo electrónico",
+      "success": "Se actualizó la configuración de notificaciones.",
+      "invalid": "El valor del destinatario del correo electrónico no es válido."
+    },
+    "unexpectedErrorWithHttpMessage": "La solicitud no se ha podido procesar. Estado HTTP devuelto: {{status}}"
+  },
+  "tableColumns": "Columnas de tabla",
+  "noData": "Sin datos",
+  "modifiedConfirmationDialog": {
+    "title": "Título",
+    "cancelButton": "Cancelar",
+    "description": "descripción",
+    "confirmButton": "Confirmar"
+  },
+  "enterField": "Este campo es obligatorio.",
+  "selected": "{{count}} seleccionado",
+  "pickers": {
+    "time": {
+      "invalidMessage": "La hora no es válida."
+    }
+  },
+  "dashboard": {
+    "title": "Panel de mandos",
+    "policiesTab": "Política",
+    "usersTab": "Usuarios",
+    "devicesTab": "Dispositivos",
+    "dataTypesTab": "Tipos de datos",
+    "infoTypesTab": "Tipos de información",
+    "fileTypesTab": "Tipos de archivo",
+    "allTab": "Todos",
+    "filesTab": "Archivos",
+    "totalSensitiveData": "archivos confidenciales detectados",
+    "exfiltrationEventTypes": {
+      "EMAIL": "Correo",
+      "BROWSER": "Navegador",
+      "REMOVABLE_MEDIA": "Medios extraíbles"
+    },
+    "dataEntities": "Tipos de datos",
+    "emailTab": "Dominios web",
+    "browserTab": "Dominios de correo electrónico",
+    "usbTab": "Medios extraíbles",
+    "evidenceLockerFiles": "archivos en Evidence Locker",
+    "connectedUsers": "Usuarios de Avert conectados",
+    "connectedDevices": "dispositivos Avert Dispositivos",
+    "exfiltrationEventsByWidgetTitle": "Eventos de exfiltración de información",
+    "exfiltrationEventsByDestination": "Principales eventos de exfiltración por ubicación",
+    "topEventsByWidgetTitle": "Principales eventos de exfiltración por categoría",
+    "sensitiveDataEndpoints": "Inventario de archivos por categoría",
+    "evidenceLockerFilesTitle": "Locker de evidencia",
+    "totalSensitiveDataTitle": "Inventario de archivos"
+  },
+  "events": {
+    "title": "Eventos de Avert",
+    "columns": {
+      "detectionTime": "Tiempo de detección",
+      "device": "Dispositivo",
+      "user": "Usuario",
+      "activity": "Actividad",
+      "location": "Ubicación",
+      "file": "Archivo",
+      "policy": "Política",
+      "dataEntityCount": "Tipo de datos",
+      "noUserName": "Sin nombre"
+    },
+    "serverError": {
+      "retrieveEvents": "Error al recuperar la lista de sucesos"
+    },
+    "filter": {
+      "detectionTime": "Filtro de tiempo de detección",
+      "device": "Filtro de nombre de dispositivo",
+      "user": "Filtro de nombre de usuario",
+      "activity": "Filtro de actividad",
+      "location": "Filtro de ubicación",
+      "file": "Filtro de nombre de archivo",
+      "policy": "Filtro de nombres de directivas",
+      "dataType": "Filtro de nombre de tipo de datos"
+    },
+    "drawer": {
+      "accordion": {
+        "eventOverview": "Resumen del evento",
+        "eventUserDetails": "Datos de usuario",
+        "eventUserDetailsName": "{{name}} subida",
+        "eventFilesDetails": "Detalles del archivo ({{count}})",
+        "eventPolicyViolations": "Infracciones de Política ({{count}})",
+        "fileDetails": "Detalles del archivo",
+        "userName": "Nombre",
+        "userEmail": "Correo",
+        "userTitle": "Título",
+        "userDepartment": "Departamento",
+        "typeLabel": "Tipo",
+        "detectionTimeLabel": "Tiempo de detección",
+        "deviceLabel": "Dispositivo",
+        "locationLabel": "Ubicación"
+      },
+      "fileSection": {
+        "sensitiveData": "Tipos de datos confidenciales (número de incidencias)",
+        "contentSnippets": "Contenido de fragmentos",
+        "emptySnippets": "La lista de contenido de los fragmentos está vacía",
+        "downloadFile": {
+          "error": "No se ha podido descargar el archivo."
+        },
+        "txtFileFormat": "Documento de texto",
+        "doc(x)FileFormat": "Documento de Microsoft Word",
+        "xlsxFileFormat": "Documento de Microsoft Excel",
+        "pdfFileFormat": "Documento PDF de Microsoft",
+        "defaultFileFormat": "{{format}} documento"
+      },
+      "eventDetailsTitle": "Detalles del evento",
+      "downloadEvidenceFile": "descargar todo"
+    }
+  },
+  "fileInventory": {
+    "title": "Archivo de inventario",
+    "columns": {
+      "fileName": "Nombre del archivo",
+      "fileSize": "Tamaño del archivo",
+      "infoTypes": "Tipos de información",
+      "dataTypes": "Tipos de datos",
+      "users": "Usuarios",
+      "devices": "Dispositivos",
+      "policies": "Políticas"
+    },
+    "filter": {
+      "fileName": "Nombre del archivo",
+      "infoTypes": "Tipo de información"
+    },
+    "error": {
+      "listview": "No se ha podido recuperar la lista de inventario del fichero."
+    },
+    "drawer": {
+      "fileDetails": {
+        "title": "Detalles del archivo",
+        "fileSize": "Tamaño del archivo",
+        "fileType": "Tipo de archivo",
+        "evidenceFile": "Archivo de pruebas"
+      },
+      "users": {
+        "title": "Usuarios con acceso al archivo"
+      },
+      "devices": {
+        "title": "Dispositivos con acceso a archivos"
+      },
+      "dataTypes": {
+        "title": "Tipos de datos",
+        "occurrences": "{{name}} ({{occurrences}})"
+      },
+      "policyViolations": {
+        "title": "Infracciones Política"
+      },
+      "seeMore": "Ver + {{count}} más"
+    }
+  },
+  "infoTypesValue": {
+    "privacy": "Privacidad",
+    "finance": "Financiar",
+    "custom": "Personalizado",
+    "health": "Salud",
+    "personal": "Personal"
+  },
+  "labelDlp": "Protección de la información",
+  "evidenceLocker": {
+    "title": "Armario de evidencias",
+    "columns": {
+      "created": "Tiempo agregado",
+      "fileName": "Nombre del archivo",
+      "size": "Tamaño del archivo",
+      "events": "Eventos asociados",
+      "download": "Descargar"
+    },
+    "filter": {
+      "fileName": "Filtro de nombre de archivo",
+      "created": "Filtro de tiempo agregado",
+      "size": "Filtro de tamaño de archivo"
+    },
+    "selected": "{{count}} seleccionados",
+    "sensitiveFilesStorage": {
+      "serverError": "{{error}}"
+    },
+    "memoryUsed": "Se utilizan {{totals}} archivos confidenciales/{{used}} de {{remains}}"
+  },
+  "users": {
+    "mainTitle": {
+      "assets": "Bienes",
+      "users": "Usuarios"
+    },
+    "buttons": {
+      "manageUsers": "Administrar usuarios"
+    },
+    "columns": {
+      "name": "Nombre",
+      "emailAddress": "Dirección de correo electrónico",
+      "devices": "Dispositivos"
+    },
+    "error": {
+      "listView": "No se pudo recuperar la lista de usuarios."
+    },
+    "devices": {
+      "agentVersion": "Versión del agente de Avert: {{version}}",
+      "osVersion": "{{name}} {{version}}"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "errors": {
+    "noPermission": {
+      "title": "권한 없음",
+      "description": "이 리소스를 볼 수 있는 권한이 없습니다."
+    },
+    "notFound": {
+      "title": "리소스를 찾을 수 없음",
+      "description": "죄송합니다. 찾고 있는 리소스를 찾을 수 없거나 해당 리소스를 볼 수 있는 권한이 없습니다."
+    },
+    "internal": {
+      "title": "오류",
+      "description": "죄송합니다. 요청을 처리하는 동안 오류가 발생했습니다."
+    },
+    "generic": {
+      "title": "뭔가 잘못됐어",
+      "description": "죄송합니다. 오류가 발생했습니다.나중에 다시 시도하십시오."
+    },
+    "noServiceEnabled": {
+      "title": "서비스를 이용할 수 없음",
+      "description": "이 서비스는 테넌트에 대해 활성화되지 않았습니다."
+    }
+  },
+  "Ues_Big_ACL_Read": "네트워크 액세스 제어 보기",
+  "Ues_Big_GatewayAppProfile_Read": "게이트웨이 서비스 정책 보기",
+  "Ues_Big_NetworkAccessControlProfile_Read": "네트워크 액세스 제어 보기",
+  "Ues_Big_NetworkServices_Read": "네트워크 액세스 제어 보기",
+  "Ues_Big_Reporting_Read": "게이트웨이 보고 보기",
+  "Ues_Big_Tenant_Read": "게이트웨이 설정 보기",
+  "Ues_Bip_Device_Read": "Avert 장치 식별자 보기",
+  "Ues_Bip_Event_Read": "Avert 디바이스 이벤트 보기",
+  "Ues_Bip_FileContent_Read": "Avert 파일 내용 보기",
+  "Ues_Bip_FileSummary_Read": "Avert 민감한 파일 요약 보기",
+  "Ues_Bip_Policy_Read": "Avert 정책 보기",
+  "Ues_Bip_RiskScore_Read": "위험 점수 Avert 보기",
+  "Ues_Bip_Settings_Read": "Avert 설정 보기",
+  "Ues_Bis_Events_Read": "적응형 위험 이벤트 보기",
+  "Ues_Bis_EventsLocation_Read": "적응형 위험 위치 이벤트 보기",
+  "Ues_Bis_RiskProfile_Read": "적응형 위험 정책 보기",
+  "Ues_Bis_Settings_Read": "적응형 위험 설정 보기",
+  "Ues_Ecs_ActivationProfile_Read": "등록 정책 보기",
+  "Ues_Ecs_ActivationSettings_Read": "활성화 설정 보기",
+  "Ues_Ecs_Bcn_Read": "연결 노드 보기",
+  "Ues_Ecs_Devices_Read": "모바일 장치 보기",
+  "Ues_Ecs_Directory_Read": "디렉터리 연결 보기",
+  "Ues_Ecs_Identity_Read": "인증 컨트롤 보기",
+  "Ues_Ecs_Mdm_Read": "EMM 연결 보기",
+  "Ues_Ecs_Mfa_Read": "Ues:Ecs:Mfa:Read",
+  "Ues_Ecs_Users_Read": "사용자 및 그룹 보기",
+  "Ues_Ecs_Vulnerabilities_Read": "취약성 보기",
+  "Ues_Mtd_Events_Read": "Protect Mobile 이벤트 보기",
+  "Ues_Mtd_Policy_Read": "Protect Mobile 정책 보기",
+  "Ues_Venue_Dashboard_Read": "대시보드",
+  "Ues_Venue_DesktopPolicy_Read": "디바이스 정책 보기",
+  "Ues_Venue_DesktopReports_Read": "보고서 보기",
+  "Ues_Venue_Devices_Read": "디바이스 보기",
+  "Ues_Venue_SettingsCertificates_Read": "인증서 보기, 생성, 편집, 삭제",
+  "Ues_Venue_SettingsGlobalList_Read": "글로벌 리스트 보기",
+  "Ues_Venue_SettingsIntegrations_Read": "통합 보기, 생성, 편집, 삭제",
+  "Ues_Venue_SettingsUpdate_Read": "상담원 업데이트 설정 보기, 생성, 편집, 삭제",
+  "Ues_Venue_ThreatProtection_Read": "위협 보호 보기",
+  "Ues_Venue_Zones_Read": "보기 영역",
+  "service": {
+    "big_blackberry_com": "Gateway"
+  }
+}

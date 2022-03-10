@@ -1,0 +1,14 @@
+@import '../theme/theme.less';
+
+.series {
+  rect {
+    stroke: white;
+    fill: white;
+    opacity: 0;
+    transition: opacity @animHoverDuration @animHoverTimingFn;
+
+    &:hover {
+      opacity: 0.22;
+    }
+  }
+}

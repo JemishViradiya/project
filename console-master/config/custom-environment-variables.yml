@@ -1,0 +1,3 @@
+webpack:
+  devServer:
+    logLevel: LOG_LEVEL

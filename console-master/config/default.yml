@@ -1,0 +1,88 @@
+defaultUrl: /uc/launcher
+
+domain: qa2-ues.cylance.com
+
+allowedOrigins:
+  - 'https://local.personaanalytics.labs.blackberry.com:4000'
+  - local.personaanalytics.labs.blackberry.com
+  - local.personaanalytics.labs.blackberry.com:4200
+
+# source https://wikis.rim.net/display/UESUC/7.0+Labs+and+Environments
+# this must match the protect-console proxy service
+# https://gitlab.rim.net/platform-services/bff/protect-console/-/blob/master/config/default.yml
+authorities:
+  qa2-ues.cylance.com: qa2
+  r02-ues.cylance.com: r02
+  r00-ues.cylance.com: r00
+  r00-protect.cylance.com: r00
+  staging.ues.labs.blackberry.com: qa2
+  local-staging-ues.cylance.com: qa2
+  local-dev-ues.cylance.com: r00
+  localhost: us1
+  fallback: qa2
+  ues.cylance.com: us1
+  ues-euc1.cylance.com: eu1
+  ues-apne1.cylance.com: jp1
+  ues-sae1.cylance.com: br1
+
+venueProxy:
+  us1:
+    venueLogin:
+      target: https://login.cylance.com
+      prefix: /venue/session/
+      defaultLocation: /Login
+    venueProtect:
+      target: https://protect-origin.cylance.com
+      navigationUrl: /uc/venue-navigation
+  eu1:
+    venueLogin:
+      target: https://login-euc1.cylance.com
+      prefix: /venue/session/
+      defaultLocation: /Login
+    venueProtect:
+      target: https://protect-euc1-origin.cylance.com
+      navigationUrl: /uc/venue-navigation
+  jp1:
+    venueLogin:
+      target: https://login-apne1.cylance.com
+      prefix: /venue/session/
+      defaultLocation: /Login
+    venueProtect:
+      target: https://protect-apne1-origin.cylance.com
+      navigationUrl: /uc/venue-navigation
+  br1:
+    venueLogin:
+      target: https://login-sae1.cylance.com
+      prefix: /venue/session/
+      defaultLocation: /Login
+    venueProtect:
+      target: https://protect-sae1-origin.cylance.com
+      navigationUrl: /uc/venue-navigation
+  r02:
+    venueLogin:
+      target: https://r02-login.cylance.com
+      prefix: /venue/session/
+      defaultLocation: /Login
+    venueProtect:
+      target: https://r02-protect-origin.cylance.com
+      navigationUrl: /uc/venue-navigation
+  r00:
+    venueLogin:
+      target: https://r00-login.cylance.com
+      prefix: /venue/session/
+      defaultLocation: /Login
+    venueProtect:
+      target: https://r00-protect-origin.cylance.com
+      navigationUrl: /uc/venue-navigation
+  qa2:
+    venueLogin:
+      target: https://qa2-login.cylance.com
+      prefix: /venue/session/
+      defaultLocation: /Login
+    venueProtect:
+      target: https://qa2-protect-origin.cylance.com
+      navigationUrl: /uc/venue-navigation
+
+webpack:
+  devServer:
+    logLevel: debug

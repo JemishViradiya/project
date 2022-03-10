@@ -1,0 +1,217 @@
+{
+  "policy": {
+    "pageTitle": "Avert",
+    "tabTitle": {
+      "mobile": "변하기 쉬운",
+      "content": "콘텐츠"
+    },
+    "serverError": {
+      "retrievePolicies": "{{error}}",
+      "deletePolicies": "정책을 삭제할 수 없습니다."
+    },
+    "table": {
+      "columns": {
+        "name": "이름",
+        "description": "설명",
+        "policyType": "정책 유형",
+        "userCount": "사용자",
+        "groupCount": "그룹",
+        "added": "추가됨",
+        "modified": "수정됨",
+        "rank": "순위"
+      },
+      "tableColumns": "테이블 열",
+      "noData": "데이터 없음",
+      "filter": {
+        "name": "이름별",
+        "description": "설명 기준"
+      }
+    },
+    "dialogs": {
+      "setAsDefault": {
+        "title": "기본값으로 설정 확인",
+        "cancelBtn": "취소",
+        "confirmBtn": "저장",
+        "question": "정책을 기본값으로 설치하시겠습니까?"
+      }
+    },
+    "buttons": {
+      "add": "정책 추가",
+      "delete": "삭제",
+      "cancel": "취소",
+      "save": "저장",
+      "continue": "계속",
+      "addNew": "추가",
+      "confirm": "예",
+      "rejectConfirm": "지금은 아님",
+      "leavePage": "페이지 나가기",
+      "resendMail": "보내기",
+      "cancelResendMail": "아니요"
+    },
+    "search": {
+      "results": "{{value}} 개의 결과",
+      "placeholder": "정책 검색"
+    },
+    "sections": {
+      "requiredInput": "이 필드는 필수입니다.",
+      "general": {
+        "title": "일반 정보",
+        "policyName": "정책 이름",
+        "description": "설명",
+        "setDefaultPolicy": "기본 정책 설정",
+        "type": {
+          "title": "정책 유형",
+          "regulatory": "규제",
+          "organizational": "조직적"
+        },
+        "info": {
+          "description": "생성하려는 정책 유형을 지정합니다.조직 정책을 사용하여 조직의 독점 정보를 보호할 수 있습니다.규제 정책은 업계 또는 정부 규정과 관련된 민감한 정보를 보호하는 데 사용할 수 있습니다.",
+          "regulatoryDesc": "사용자에 대해 여러 규제 정책이 충돌하는 경우 BlackBerry는 모든 정책에서 가장 제한적인 요소를 적용하여 이러한 정책을 자동으로 조정합니다.최소 데이터 발생 횟수가 선택되고 가장 제한적인 수정 조치가 적용됩니다.",
+          "organizationalDesc": "사용자에 대해 여러 조직 정책이 충돌하는 경우 BlackBerry는 모든 정책에서 가장 제한적인 요소를 적용하여 이러한 정책을 자동으로 조정합니다.최대 데이터 발생 수가 선택되고 가장 제한적인 수정 조치가 적용됩니다."
+        }
+      },
+      "conditions": {
+        "title": "조건",
+        "addFromTemplateDialog": {
+          "description": "설정에서 미리 정의된 템플릿을 사용하여 데이터 형식에 대한 보호를 구성할 수 있습니다.",
+          "searchText": "템플릿 검색",
+          "confirmation": {
+            "title": "템플릿 확인",
+            "description": "새 템플릿을 추가하면 기존 조건이 무시됩니다."
+          },
+          "noTemplatesDescription": "템플릿을 추가하지 않았습니다.<0>Avert 설정으로</0> 이동하여 사전 정의된 템플릿을 목록에 추가합니다.",
+          "title": "템플릿에서 추가"
+        },
+        "table": {
+          "name": "이름",
+          "description": "설명",
+          "region": "지역"
+        },
+        "builder": {
+          "title": "조건 빌더",
+          "condition": {
+            "and": "그리고",
+            "or": "또는"
+          },
+          "label": "최소 발생 횟수",
+          "buttons": {
+            "addRule": "아이템 추가",
+            "addGroup": "그룹 추가",
+            "deleteGroup": "삭제 그룹"
+          },
+          "select": {
+            "placeholderText": "데이터 유형 이름 선택",
+            "searchText": "검색"
+          },
+          "occurrences": {
+            "rangeText": "값은 1에서 10 사이여야 합니다."
+          }
+        },
+        "description": "보호하려는 민감한 데이터와 정책 위반을 트리거할 조건을 정의합니다.<0>Avert 설정에서</0> 선택한 템플릿 중 하나를 사용하여 시작하거나 고유한 사용자 지정 정책을 만들 수 있습니다.",
+        "addFromTemplate": "템플릿에서 추가"
+      },
+      "whitelist": {
+        "title": "화이트리스트 도메인",
+        "name": "도메인",
+        "description": "설명",
+        "paragraph": "<0>Avert Settings에서</0> 만든 목록에서 파일을 안전하게 업로드하기 위해 신뢰할 수 있는 브라우저 도메인을 지정합니다.허용된 도메인에는 정책이 적용되지 않습니다."
+      },
+      "emailSettings": {
+        "title": "이메일 설정",
+        "noneDescription": "없음 (기본값) > 정책 모든 이메일 도메인 (내부 및 외부) 에 적용됩니다.",
+        "internalDomainsDescription": "내부 도메인 > 정책 외부 도메인에만 적용됩니다.",
+        "allDomainsDescription": "모든 도메인 > 정책 적용되지 않습니다.민감한 데이터는 이메일을 통해 공유할 수 있습니다.",
+        "helperText": "민감한 콘텐츠가 이메일로 공유되는 시점을 감지합니다.",
+        "recipients": {
+          "none": "없음",
+          "internal": "내부 수신자만",
+          "all": "모든 수신자"
+        },
+        "description": "Avert <0>Settings에서</0> 만든 허용된 내부 이메일 도메인 목록을 기반으로 민감한 데이터를 공유할 때 신뢰할 수 있는 이메일 수신자를 지정합니다. "
+      },
+      "actions": {
+        "policyRules": {
+          "ACTION_TYPE_NONE": "없음",
+          "ACTION_TYPE_ALERT": "보고 및 경고",
+          "ACTIVITY_TYPE_BROWSER_UPLOAD": "웹 브라우저 (HTTP, HTTPS)",
+          "ACTIVITY_TYPE_USB_EXFILTRATE": "이동식 스토리지",
+          "ACTIVITY_TYPE_SCREEN_CAPTURE": "화면 캡처",
+          "ACTIVITY_TYPE_EMAIL_CLIENTS": "이메일 클라이언트"
+        },
+        "title": "액션",
+        "description": "로렘 입숨"
+      },
+      "domains": {
+        "dialogs": {
+          "title": "화이트리스트 도메인 추가",
+          "description": "이 정책에 따라 큰 소리로 사용할 수 있는 여러 화이트리스트 도메인을 사용할 수 있습니다.초기 목록은 <5>설정</5> 구성됨",
+          "searchText": "도메인 검색"
+        },
+        "addDomain": "+를 클릭하여 항목을 추가합니다."
+      },
+      "sparkMobileSettings": {
+        "policyConfigNames": {
+          "CONFIG_TYPE_ALLOW_COPY_BB_APPS_INTO_NON_BB_APPS": "블랙베리 스파크 앱에서 비 블랙베리 스파크 앱으로 데이터 복사 허용",
+          "CONFIG_TYPE_ALLOW_COPY_NON_BB_APPS_INTO_BB_APPS": "블랙베리 스파크 앱 간 데이터 복사 허용",
+          "CONFIG_TYPE_ALLOW_DICTATION": "받아쓰기 허용",
+          "CONFIG_TYPE_ALLOW_INSECURE_VIDEO": "화면 캡처 및 안전하지 않은 비디오 출력 허용",
+          "CONFIG_TYPE_ALLOW_SCREEN_RECORDING": "화면 캡처 녹화 및 공유 허용",
+          "CONFIG_TYPE_ALLOW_KEYBOARDS": "사용자 지정 키보드 허용",
+          "CONFIG_TYPE_ADD_WATERMARK": "워터마크 표시",
+          "CONFIG_TYPE_ALLOW_RESTRICTED_MODE": "Android 키보드 제한 모드 사용"
+        },
+        "supportedOsTypesText": "지원되는 OS 유형 - ",
+        "title": "변하기 쉬운 설정"
+      },
+      "iosSpecificSettings": {
+        "title": "iOS 전용 설정",
+        "allowText": "허용",
+        "screenshotsInText": "스크린샷",
+        "intervalText": "일",
+        "rangeText": "값은 1일에서 14일 사이여야 합니다."
+      }
+    },
+    "error": {
+      "delete": "정책을 삭제할 수 없습니다.",
+      "update": "정책을 업데이트할 수 없습니다.오류: {{error}} ",
+      "create": "정책을 생성할 수 없습니다.오류: {{error}} "
+    },
+    "success": {
+      "create": "정책이 생성되었습니다.",
+      "delete": "정책이 삭제되었습니다.",
+      "update": "정책이 업데이트되었습니다."
+    },
+    "updateFormDeletePolicyTooltip": "정책 삭제",
+    "deletePolicyConfirmationDialogTitle": "삭제 확인",
+    "deletePolicyConfirmationDialogDesc": "이 정책을 삭제하시겠습니까?",
+    "deleteNote": "정책을 삭제하려면 먼저 정책과 연결된 모든 사용자 및 그룹을 제거해야 합니다.",
+    "createContentPolicyConfirmationTitle": "콘텐츠 정책 할당",
+    "createMobilePolicyConfirmationTitle": "변하기 쉬운 정책 할당",
+    "createPolicyConfirmationDescription": "정책이 생성되었습니다.이 정책에 사용자 또는 그룹을 할당하시겠습니까?",
+    "updatePolicyConfirmationTitle": "사용자에게 이메일 재전송",
+    "updatePolicyConfirmationDescription": "환영 이메일을 다시 보내시겠습니까?",
+    "detail": {
+      "updated": "{{date, datetime}} 에 업데이트되었습니다.",
+      "settings": "설정",
+      "assignedUsersAndGroups": "할당된 사용자 및 그룹"
+    },
+    "modifiedPolicyConfirmationDialogTitle": "저장되지 않은 변경 사항",
+    "modifiedPolicyConfirmationDialogDesc": "이 페이지에서 나가시겠습니까?변경 사항이 저장되지 않았습니다.",
+    "addPolicyWithType": "정보 보호 정책 추가"
+  },
+  "navigation": {
+    "adaptiveResponse": {
+      "label": "라벨",
+      "componentHeader": {
+        "link": "더 많은 정보",
+        "paragraph": "콘텐츠 차단 정책은 조직의 민감한 데이터를 감지하고 무단 공유로부터 보호하는 데 사용됩니다.한 사용자에 대해 여러 정책이 충돌하는 경우 BlackBerry는 정책 유형에 따라 자동으로 조정됩니다."
+      }
+    },
+    "title": "방침",
+    "mobile": {
+      "componentHeader": {
+        "paragraph": "변하기 쉬운 설정은 별도로 지정하지 않는 한 모든 장치 유형에 적용됩니다.한 사용자에게 둘 이상의 정책이 할당된 경우 순위가 가장 높은 정책이 적용됩니다."
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "authentication": "Autenticação",
+  "connectivityNode": "Nó de conectividade",
+  "directoryConnection": "Conexão de diretório",
+  "networkSettings": "Definições de rede",
+  "adaptiveResponse": "Resposta adaptativa",
+  "labelGateway": "Gateway",
+  "labelSettings": "Definições",
+  "directory": {
+    "actions": {
+      "add": "Adicionar conexão"
+    },
+    "syncSchedule": {
+      "add": "Adicionar cronograma"
+    }
+  },
+  "form": {
+    "to": "para"
+  }
+}

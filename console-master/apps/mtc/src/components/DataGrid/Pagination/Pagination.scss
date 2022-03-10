@@ -1,0 +1,29 @@
+.pagination {
+  margin-top: 25px;
+  width: 400px;
+  display: inline-block;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      text-align: center;
+      border-radius: 3px;
+      font-size: 14px;
+      line-height: 20px;
+      padding-top: 6px;
+      color: #2b99db;
+      margin-right: 5px;
+      &.active {
+        background: #03a5ef;
+        color: #fff;
+        width: 10%;
+      }
+    }
+  }
+}

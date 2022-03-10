@@ -1,0 +1,11 @@
+{
+  "DuplicateName": {
+    "timestamp": "2021-11-03T14:37:18.346+00:00",
+    "status": 409,
+    "error": "Conflict",
+    "path": "/v1/policies/fface7ed-e369-4306-b304-9a464347f8c5",
+    "subCode": 1,
+    "Message": "The policy name must be unique for tenant and policy type",
+    "docUrl": "https://dev.mtd.labs.blackberry.com/docs/services/policy/swagger.html#/"
+  }
+}

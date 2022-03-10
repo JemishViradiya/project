@@ -1,0 +1,96 @@
+.prepare_release:
+  stage: package
+  image: registry.rim.net/iac/ci-build-pipeline:loki-pipeline
+  variables:
+    RELEASE_TAG: r${CI_PIPELINE_ID}
+    PACKAGE_REGISTRY_URL: ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/site/1.0.0-r${CI_PIPELINE_ID}
+    CI_ENVIRONMENT_ACTION: prepare
+  environment:
+    name: production/release
+    action: prepare
+  script:
+    - env
+
+    - bash .gitlab/ci/scripts/release-metadata.sh
+
+    - |
+      export RELEASE_MERGE_REQUEST_IID=$CI_MERGE_REQUEST_IID
+      if [ -z "$RELEASE_MERGE_REQUEST_IID" ]; then RELEASE_MERGE_REQUEST_IID=$(echo "$CI_COMMIT_DESCRIPTION" | sed -n -e 's/^See merge request [^!]*!//gp'); fi
+
+    - |
+      cat <<EOF > RELEASE.txt
+      RELEASE_TAG=$RELEASE_TAG
+      RELEASE_DATE=$(date -u)
+      RELEASE_PIPELINE_URL=${CI_PIPELINE_URL}
+      RELEASE_MERGE_REQUEST_IID=${RELEASE_MERGE_REQUEST_IID}
+      RELEASE_MERGE_REQUEST_URL=${CI_PROJECT_URL}/-/merge_requests/${RELEASE_MERGE_REQUEST_IID}
+      RELEASE_AUTHOR=${GITLAB_USER_NAME} <${GITLAB_USER_EMAIL}>
+      RELEASE_ARTIFACTS_URL=${CI_JOB_URL}/artifacts/download
+      RELEASE_URL=${CI_PROJECT_URL}/-/releases/release%252F${RELEASE_TAG}
+      EOF
+
+    - bash .gitlab/ci/scripts/changelog.sh | tee CHANGELOG.txt
+
+    - |
+      if [ -n "${CI_MERGE_REQUEST_IID}" ]; then
+        echo "Production merge request created" > COMMENT.txt
+        COMMENT_TOKEN=${CI_PROMOTEBOT_TOKEN}
+      else
+        echo "Production release created [${RELEASE_TAG}]"'('"$RELEASE_URL"')' > COMMENT.txt
+        COMMENT_TOKEN=${CI_RELEASEBOT_TOKEN}
+      fi
+      echo '
+      Changelog:' >> COMMENT.txt
+    - sh .gitlab/ci/scripts/changelog-mr-comment.sh COMMENT.txt ${COMMENT_TOKEN}
+
+  artifacts:
+    expose_as: 'Release Artifacts'
+    name: r${CI_PIPELINE_ID}
+    expire_in: 1 year
+    paths:
+      - prod
+      - docs
+      - RELEASE.txt
+      - CHANGELOG.txt
+    reports:
+      dotenv: RELEASE.txt
+  retry:
+    max: 2
+    when:
+      - runner_system_failure
+      - stuck_or_timeout_failure
+
+.release:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  environment:
+    action: prepare
+    name: production/release
+  before_script:
+    - env
+  script:
+    - echo running release_job for $RELEASE_TAG
+
+    - |
+      release-cli create --name "Production Release $RELEASE_TAG" \
+      --tag-name "$RELEASE_TAG" \
+      --assets-link '{"name": "Artifacts", "url": "'"${RELEASE_ARTIFACTS_URL}"'", "link_type": "package"}' \
+      --description "Production Release $RELEASE_TAG
+
+      Date: $RELEASE_DATE
+
+      Author: $RELEASE_AUTHOR
+
+      Merge Request: $RELEASE_MERGE_REQUEST_URL
+
+      Pipeline: $RELEASE_PIPELINE_URL
+
+      Changelog:
+      $(cat CHANGELOG.txt)
+      "
+
+  retry:
+    max: 2
+    when:
+      - runner_system_failure
+      - stuck_or_timeout_failure

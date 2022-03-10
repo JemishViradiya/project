@@ -1,0 +1,37 @@
+{
+  "root": "libs/behaviour/app-shell",
+  "sourceRoot": "libs/behaviour/app-shell/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/behaviour/app-shell/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/behaviour/app-shell"],
+      "options": {
+        "jestConfig": "libs/behaviour/app-shell/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "partial-dev": {
+      "executor": "@nrwl/web:build",
+      "options": {
+        "baseHref": "..",
+        "outputPath": "dist/.partials",
+        "index": "tools/index.html",
+        "main": "libs/behaviour/app-shell/src/partial",
+        "polyfills": "libs/behaviour/app-shell/src/polyfills",
+        "webpackConfig": "tools/webpack/partial",
+        "styles": [],
+        "scripts": [],
+        "maxWorkers": 1,
+        "memoryLimit": 1024
+      }
+    }
+  },
+  "tags": ["scope:behaviour", "scope:cdn"]
+}

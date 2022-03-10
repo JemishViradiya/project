@@ -1,0 +1,238 @@
+{
+  "emm": {
+    "page": {
+      "error": {
+        "deleteConnection": "{{connectionName}} 接続を削除できませんでした。",
+        "retrieveConnections": "接続を取得できませんでした。",
+        "retrieveConnection": "{{type}} 接続を取得できませんでした。",
+        "default": "エラー"
+      },
+      "title": "EMM 接続",
+      "connection": {
+        "name": {
+          "intune": "Intune テナント",
+          "uem": "UEM テナント"
+        },
+        "type": {
+          "uem": "BlackBerry UEM",
+          "intune": "マイクロソフトIntune"
+        },
+        "add": "接続を追加",
+        "generateAppConfigButton": "アプリ設定の生成"
+      },
+      "removeConnection": "削除の確認",
+      "deleteConnectionDialog": {
+        "confirm": "この接続を削除しますか?"
+      },
+      "forceDeleteConnectionDialog": {
+        "title": "強制削除の確認",
+        "confirm": "接続を削除できませんでした。強制削除を使用して再試行しますか?"
+      },
+      "description": "Microsoft Intune 接続を構成します。",
+      "menu": {
+        "uem": "BlackBerry UEM",
+        "intune": "マイクロソフトIntune"
+      }
+    },
+    "table": {
+      "tenant": "テナント",
+      "type": "接続タイプ",
+      "status": "接続ステータス",
+      "data": {
+        "state": {
+          "success": "成功した",
+          "inProgress": "進行中",
+          "error": {
+            "default": "エラー",
+            "message": {
+              "FAILURE_TO_AUTHORIZE_OIDC_CLIENT": "UEM 接続を承認できませんでした（{{uemTenantId}}）。",
+              "FAILURE_TO_ENABLE_CONNECTION_WITHIN_UEM": "UEM サーバーへの接続を確立できませんでした（{{uemTenantId}}）。",
+              "FAILURE_TO_ENABLE_UES_SERVICES": "UEM サーバーへの接続を完了できませんでした（{{uemTenantId}}）。"
+            }
+          },
+          "retry": "もう一度やり直す"
+        }
+      }
+    },
+    "intune": {
+      "add": {
+        "error": {
+          "consentError": "管理者の同意エラー-{{error}}",
+          "consentFailed": "管理者の同意に失敗しました",
+          "connectionExist": "指定されたテナントにはすでに接続が存在します",
+          "setAppConfigError": "アプリ構成を設定できませんでした",
+          "setAppConfigErrorWithCause": "アプリの設定に失敗しました-{{cause}}",
+          "azureLoginFailure": "Azure ログインに失敗しました",
+          "invalidTargetApp": "ターゲットアプリは無効です",
+          "submit": "Intune 接続を追加できませんでした",
+          "appConfigPolicyExist": "同じ名前のアプリ設定ポリシーが既に存在しています"
+        },
+        "title": "Microsoft Intune 接続を追加する",
+        "azureInfoTitle": "Azure 情報",
+        "azureInfoDescription": "Azure テナント ID を入力します。テナント ID は、接続の作成後は変更できません。",
+        "tenantId": "Azure テナント ID",
+        "adminConsent": "管理者の同意",
+        "integration": "Intune インテグレーション",
+        "integrationDescription": "このオプションは、接続が作成された場合にのみ使用できます。これらの設定は変更できません。",
+        "success": "接続が追加されました。",
+        "azureUserLogin": "Azure ユーザーログイン",
+        "mdmIntegration": "Intune を使用してデバイスとそのアプリを管理する (Intune は MDM プロバイダーです)",
+        "mamIntegration": "Intune を使用してデバイスアプリのみを管理する (Intune は MAM プロバイダーです)"
+      }
+    },
+    "delete": {
+      "success": "接続は削除されました。"
+    },
+    "uem": {
+      "title": "BlackBerry UEM 接続を追加する",
+      "add": {
+        "tenantTitle": "テナント情報",
+        "tenantDescription": "UEM テナント情報を追加します。",
+        "srpid": "SRP ID",
+        "authKey": "認証キー"
+      },
+      "success": "接続が追加されました。"
+    },
+    "appConfig": {
+      "error": {
+        "submit": "アプリ構成ポリシーを追加できませんでした。",
+        "invalidTenant": "テナント ID が無効です。",
+        "loadGroup": "MDM グループの読み込みに失敗しました",
+        "loadGroupInvalidQuery": "グループ検索クエリ {{searchQuery}} にはサポートされていない文字が含まれています"
+      },
+      "title": "Microsoft Intune アプリ構成ポリシーの追加",
+      "heading": "アプリ構成ポリシー",
+      "description": "iOS および Android 用のアプリ構成ポリシーを追加します。この設定はオプションで、Intune 管理対象デバイスにのみ適用されます。",
+      "androidCheckBoxLabel": "アンドロイド",
+      "androidAppName": "表示名",
+      "iosCheckBoxLabel": "iOS",
+      "androidTargetedApp": "ターゲットアプリ",
+      "iosTargetedApp": "ターゲットアプリ",
+      "iosAppName": "表示名",
+      "success": "アプリ構成ポリシーが追加されました。",
+      "groupAssignmentTitle": "グループに割り当てる",
+      "groupSwitchTitle": "すべてのグループ",
+      "groupLeftList": "使用可能なグループ",
+      "groupRightList": "選択されたグループ",
+      "multiStatusSuccess": "{{DEVICE_TYPE}} のアプリ設定ポリシーが追加されました。",
+      "table": {
+        "group": "グループ名"
+      },
+      "groupAssignment": {
+        "title": "グループを追加する",
+        "description": "アプリ設定に追加するグループを選択",
+        "searchText": "グループを検索する",
+        "list": {
+          "noResults": "結果なし"
+        },
+        "cancelButton": "キャンセル",
+        "addButton": "追加"
+      }
+    },
+    "validation": {
+      "emptyField": "このフィールドは、必修です。"
+    }
+  },
+  "SettingsLabel": "設定",
+  "noData": "データなし",
+  "noItem": "アイテムなし",
+  "button": {
+    "cancel": "キャンセル",
+    "submit": "送信",
+    "delete": "削除",
+    "save": "保存",
+    "next": "次へ",
+    "yes": "はい",
+    "no": "いいえ"
+  },
+  "server": {
+    "error": {
+      "default": "エラーが発生しました。",
+      "retry": {
+        "default": "再試行に失敗しました。",
+        "addFailed": "接続は強制的に削除されますが、新しい接続を作成できません。新しい接続を追加してみてください。"
+      },
+      "intune": {
+        "add": {
+          "400": "接続要求は無効です。",
+          "500": "接続を追加できませんでした。",
+          "7002": "認証コードが無効です。",
+          "11003": "認証情報を入力する必要があります。",
+          "11004": "Azure テナント ID が無効です。",
+          "11006": "Intune 接続要求は無効です。",
+          "11013": "複数の認証タイプが検出されました。",
+          "11014": "テナント ID が無効です。",
+          "11021": "EMM タイプが無効です。",
+          "11023": "同じ EMM タイプへの複数の接続を持つ要求はサポートされていません。",
+          "11024": "アクティベーションタイプが無効です。",
+          "11031": "Intune ライセンスが無効です。",
+          "13001": "Azure テナント ID が見つかりませんでした。",
+          "13002": "Intune 接続は既に存在します。",
+          "13003": "Intune 接続は既に存在します。"
+        },
+        "addAppConfig": {
+          "500": "アプリ構成ポリシーを追加できませんでした。",
+          "11019": "グループ検索クエリの長さは 120 文字を超えることはできません",
+          "21005": "この Intune リソースにアクセスする権限がありません。",
+          "21016": "含まれるグループと除外されるグループの両方に 1 つ以上のグループがあります。",
+          "23001": "Intune 接続が見つかりませんでした。",
+          "24010": "アプリが見つかりませんでした。",
+          "24014": "この名前のポリシーは既に存在します。",
+          "24015": "アプリケーションポリシーを作成できませんでした。",
+          "27001": "この Intune リソースにアクセスする権限がありません。"
+        }
+      },
+      "uem": {
+        "add": {
+          "500": "接続を追加できませんでした。",
+          "11003": "認証情報を入力する必要があります。",
+          "11004": "UEM テナント ID が無効です。",
+          "11006": "UEM 接続要求は無効です。",
+          "11013": "複数の認証タイプが検出されました。",
+          "11014": "テナント ID が無効です。",
+          "11021": "EMM タイプが無効です",
+          "11023": "同じ EMM タイプへの複数の接続を持つ要求はサポートされていません。",
+          "11024": "アクティベーションタイプが無効です。",
+          "13002": "UEM 接続は既に存在しています。",
+          "13003": "UEM 接続は既に存在しています。",
+          "15001": "UEM テナント ID は、要求された組織の PCE 内では使用できません。",
+          "31000": "UEM テナント ID が見つかりませんでした。",
+          "31001": "UEM テナントと組織が一致しません。",
+          "31002": "UEM テナントまたは認証キーが無効です。",
+          "31003": "UEM テナントはすでに関連付けられています。",
+          "31004": "テナントは存在しなくなりました。",
+          "31500": "不明な内部エラー",
+          "31510": "インターセクト失敗",
+          "31520": "PCE 障害",
+          "31530": "テナントサービスの障害"
+        }
+      },
+      "tenantlist": {
+        "404": "UEM テナントは使用できません。",
+        "500": "UEM テナントを取得できませんでした。",
+        "31500": "UEM テナントを取得できませんでした。",
+        "31510": "インターセクト失敗",
+        "31530": "テナントサービスの障害"
+      }
+    }
+  },
+  "PolicyAndIpAddress": {
+    "title": "ポリシーと IP アドレス",
+    "button": {
+      "policy": "ポリシーの更新",
+      "tenantPolicy": "テナントポリシーの更新",
+      "addIpaddressList": "IP アドレス一覧の追加",
+      "updateIpaddressList": "IP アドレス一覧の更新"
+    }
+  },
+  "emmConnection": {
+    "title": "EMM 接続",
+    "registrationStatusMessage": {
+      "pending": "{{emmType}} アクティベーション保留中",
+      "error": "{{emmType}} アクティベーションが不完全です"
+    },
+    "error": {
+      "fetch": "EMM 接続を取得できませんでした。"
+    }
+  }
+}

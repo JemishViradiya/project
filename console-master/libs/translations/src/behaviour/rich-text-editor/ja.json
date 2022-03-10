@@ -1,0 +1,4 @@
+{
+  "uploadedFileSizeExceeded": "ファイルサイズが最大値 {{maxFileSizeMB}} MB を超えています。",
+  "uploadedFileUnrecognizedImage": "イメージは認識されたファイルタイプではありません。"
+}

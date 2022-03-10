@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "lib": ["es2017", "webworker"],
+    "types": ["webpack-env"]
+  },
+  "files": [],
+  "exclude": ["**/__mocks__/*.ts", "**/*.spec.ts", "**/*.spec.tsx", "assets/**", "src/client/**"],
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
+}

@@ -1,0 +1,39 @@
+{
+  "operationBar": {
+    "search": {
+      "input": "Cerca un luogo",
+      "iconAriaLabel": "Cerca"
+    },
+    "draw": {
+      "circle": "Crea raggio geozono",
+      "polygon": "Crea forma geozone"
+    }
+  },
+  "popupGeozone": {
+    "titleCircle": "Raggio geozono",
+    "titlePolygon": "Forma geozono",
+    "inputName": "Nome",
+    "inputRadius": "Raggio",
+    "inputUnit": "Unità",
+    "labelSize": "Dimensioni: {{value}} {{unit}}",
+    "buttonRemoveAriaLabel": "Rimuovi",
+    "buttonCancel": "Annulla",
+    "buttonSave": "Salva",
+    "units": {
+      "km": "km",
+      "miles": "miglia"
+    },
+    "errors": {
+      "invalidName": "Nome non valido",
+      "invalidRadius": "Raggio non valido"
+    }
+  },
+  "popupDrawOptions": {
+    "polygonOption": "Disegna una forma geozono",
+    "circleOption": "Disegna un raggio di geozono"
+  },
+  "marker": {
+    "zoneAriaLabel": "Indicatore di zona - {{name}}",
+    "searchAriaLabel": "Pin di ricerca - {{name}}"
+  }
+}

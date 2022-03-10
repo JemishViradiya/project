@@ -1,0 +1,38 @@
+.data-grid-utility {
+  .data-grid-buttons {
+    .split-button {
+      &:first-child {
+        margin-right: 16px;
+      }
+      .MuiPaper-root {
+        padding: 0;
+        margin: 5px 0 0;
+      }
+      .MuiButtonGroup-root {
+        box-shadow: none;
+        .MuiButton-root {
+          margin: 0;
+        }
+        .split-left {
+          min-width: 120px;
+          padding: 0 20px;
+          &:first-child > div {
+            border-right: 1px solid transparent;
+          }
+        }
+        .right-button {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
+
+.selectable {
+  opacity: 1;
+  pointer-events: visible;
+}
+.not-selectable {
+  opacity: 0.5;
+  pointer-events: none;
+}
